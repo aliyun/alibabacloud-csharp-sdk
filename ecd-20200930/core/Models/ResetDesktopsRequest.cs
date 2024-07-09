@@ -47,7 +47,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/436773.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -74,6 +76,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// *   1: resets only the system disk.
         /// *   2: resets only the user disk.
         /// *   3: resets the system disk and the user disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResetType")]
         [Validation(Required=false)]

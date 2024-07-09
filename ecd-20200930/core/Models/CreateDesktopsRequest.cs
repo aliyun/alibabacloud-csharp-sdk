@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             /// *   The name must be 1 to 64 characters in length.
             /// *   The name must start with a letter but cannot start with `http://` or `https://`.
-            /// *   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+            /// *   The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// *   The hostnames must be 2 to 15 characters in length.
             /// *   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
             /// 
-            /// When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.
+            /// When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.
             /// 
             /// *   `name_prefix`: the prefix of the hostname.
             /// *   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.
+            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](https://help.aliyun.com/document_detail/28951.html) operation to query the list of KMS keys.
             /// </summary>
             [NameInMap("VolumeEncryptionKey")]
             [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         /// *   The name must be 1 to 64 characters in length.
         /// *   The name must start with a letter but cannot start with `http://` or `https://`.
-        /// *   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+        /// *   The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
         /// </summary>
         [NameInMap("DesktopName")]
         [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// The cron expression for the scheduled task.
             /// 
-            /// >  The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7
+            /// >  The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \\* 1,2,3,4,5,6,7
             /// </summary>
             [NameInMap("CronExpression")]
             [Validation(Required=false)]
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// *   The hostnames must be 2 to 15 characters in length.
         /// *   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
         /// 
-        /// When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.
+        /// When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.
         /// 
         /// *   `name_prefix`: the prefix of the hostname.
         /// *   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.
@@ -331,18 +331,30 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Hostname { get; set; }
 
+        /// <summary>
+        /// > This parameter is not publicly available.
+        /// </summary>
         [NameInMap("MonthDesktopSetting")]
         [Validation(Required=false)]
         public CreateDesktopsRequestMonthDesktopSetting MonthDesktopSetting { get; set; }
         public class CreateDesktopsRequestMonthDesktopSetting : TeaModel {
+            /// <summary>
+            /// > This parameter is not publicly available.
+            /// </summary>
             [NameInMap("BuyerId")]
             [Validation(Required=false)]
             public long? BuyerId { get; set; }
 
+            /// <summary>
+            /// > This parameter is not publicly available.
+            /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
+            /// <summary>
+            /// > This parameter is not publicly available.
+            /// </summary>
             [NameInMap("UseDuration")]
             [Validation(Required=false)]
             public int? UseDuration { get; set; }
@@ -387,6 +399,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
@@ -400,7 +414,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -547,7 +563,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? VolumeEncryptionEnabled { get; set; }
 
         /// <summary>
-        /// The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+        /// The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](https://help.aliyun.com/document_detail/28951.html) operation to obtain a list of KMS keys.
         /// </summary>
         [NameInMap("VolumeEncryptionKey")]
         [Validation(Required=false)]

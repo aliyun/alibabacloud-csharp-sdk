@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// Valid values:
                 /// 
                 /// *   html5: web client
-                /// *   linux: WUYING hardware terminal
+                /// *   linux: Alibaba Cloud Workspace hardware terminal
                 /// *   android: Android client
                 /// *   windows: Windows client
                 /// *   ios: iOS client
@@ -197,6 +197,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("Clipboard")]
             [Validation(Required=false)]
             public string Clipboard { get; set; }
+
+            [NameInMap("ColorEnhancement")]
+            [Validation(Required=false)]
+            public string ColorEnhancement { get; set; }
 
             /// <summary>
             /// The CPU underclocking duration. Valid values: 30 to 120.
@@ -240,8 +244,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? CpuSingleRateLimit { get; set; }
 
+            [NameInMap("DisplayMode")]
+            [Validation(Required=false)]
+            public string DisplayMode { get; set; }
+
             /// <summary>
-            /// Indicates whether the access control for domain names is enabled. The domain names can contain wildcard characters (\*). Multiple domain names are separated by commas (,). Valid values:
+            /// Indicates whether the access control for domain names is enabled. The domain names can contain wildcard characters (\\*). Multiple domain names are separated by commas (,). Valid values:
             /// 
             /// *   off
             /// *   on
@@ -296,7 +304,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DomainResolveRuleType { get; set; }
 
             /// <summary>
-            /// The number of cloud desktops that are associated with the policy.\
+            /// The number of cloud desktops that are associated with the policy.\\
             /// This parameter is returned only for custom policies.
             /// </summary>
             [NameInMap("EdsCount")]
@@ -379,6 +387,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("LocalDrive")]
             [Validation(Required=false)]
             public string LocalDrive { get; set; }
+
+            [NameInMap("MaxReconnectTime")]
+            [Validation(Required=false)]
+            public int? MaxReconnectTime { get; set; }
 
             /// <summary>
             /// The duration required for underclocking memory by a single process. Valid values: 30 to 120.
@@ -542,6 +554,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string PrinterRedirection { get; set; }
 
+            [NameInMap("QualityEnhancement")]
+            [Validation(Required=false)]
+            public string QualityEnhancement { get; set; }
+
             /// <summary>
             /// Indicates whether the custom screen recording feature is enabled. Valid values:
             /// 
@@ -666,6 +682,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<string> ScopeValue { get; set; }
 
+            [NameInMap("SmoothEnhancement")]
+            [Validation(Required=false)]
+            public string SmoothEnhancement { get; set; }
+
+            [NameInMap("StreamingMode")]
+            [Validation(Required=false)]
+            public string StreamingMode { get; set; }
+
+            [NameInMap("TargetFps")]
+            [Validation(Required=false)]
+            public int? TargetFps { get; set; }
+
             /// <summary>
             /// Indicates whether the USB redirection feature is enabled.
             /// 
@@ -738,13 +766,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? UsbRuleType { get; set; }
 
                 /// <summary>
-                /// The vendor ID (VID). For more information, see [Valid USB VIDs](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).
+                /// The vendor ID (VID). For more information, see [Valid USB VIDs](https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf).
                 /// </summary>
                 [NameInMap("VendorId")]
                 [Validation(Required=false)]
                 public string VendorId { get; set; }
 
             }
+
+            [NameInMap("VideoEncAvgKbps")]
+            [Validation(Required=false)]
+            public int? VideoEncAvgKbps { get; set; }
+
+            [NameInMap("VideoEncMaxQP")]
+            [Validation(Required=false)]
+            public int? VideoEncMaxQP { get; set; }
+
+            [NameInMap("VideoEncMinQP")]
+            [Validation(Required=false)]
+            public int? VideoEncMinQP { get; set; }
+
+            [NameInMap("VideoEncPeakKbps")]
+            [Validation(Required=false)]
+            public int? VideoEncPeakKbps { get; set; }
+
+            [NameInMap("VideoEncPolicy")]
+            [Validation(Required=false)]
+            public string VideoEncPolicy { get; set; }
 
             /// <summary>
             /// Indicates whether the multimedia redirection feature is enabled. Valid values: on and off.

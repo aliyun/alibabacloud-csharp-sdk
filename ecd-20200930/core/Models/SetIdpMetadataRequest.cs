@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The metadata of the IdP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IdpMetadata")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

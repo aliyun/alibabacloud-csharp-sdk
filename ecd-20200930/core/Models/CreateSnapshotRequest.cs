@@ -18,20 +18,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the cloud computer.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (\_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+        /// The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotName")]
         [Validation(Required=false)]
@@ -57,6 +63,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         ///     <!-- -->
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceDiskType")]
         [Validation(Required=false)]

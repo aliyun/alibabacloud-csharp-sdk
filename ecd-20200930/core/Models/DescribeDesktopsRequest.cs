@@ -88,12 +88,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
+        [NameInMap("FillResourceGroup")]
+        [Validation(Required=false)]
+        public bool? FillResourceGroup { get; set; }
+
         /// <summary>
         /// Specifies whether to filter cloud desktops in the desktop group.
         /// </summary>
         [NameInMap("FilterDesktopGroup")]
         [Validation(Required=false)]
         public bool? FilterDesktopGroup { get; set; }
+
+        [NameInMap("GpuInstanceGroupId")]
+        [Validation(Required=false)]
+        public string GpuInstanceGroupId { get; set; }
 
         /// <summary>
         /// The ID of the desktop group.
@@ -177,6 +185,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
+        [NameInMap("QosRuleId")]
+        [Validation(Required=false)]
+        public string QosRuleId { get; set; }
+
         /// <summary>
         /// Specifies whether to query the information about image update of the cloud desktop.
         /// </summary>
@@ -186,10 +198,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         /// <summary>
         /// The ID of the snapshot policy.
@@ -198,8 +216,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string SnapshotPolicyId { get; set; }
 
+        [NameInMap("SubPayType")]
+        [Validation(Required=false)]
+        public string SubPayType { get; set; }
+
         /// <summary>
-        /// The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).
+        /// The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](https://help.aliyun.com/document_detail/203781.html).
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

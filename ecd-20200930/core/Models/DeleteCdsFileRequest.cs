@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class DeleteCdsFileRequest : TeaModel {
         /// <summary>
         /// The ID of the cloud disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the file. The ID is a unique identifier for the file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -38,7 +42,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

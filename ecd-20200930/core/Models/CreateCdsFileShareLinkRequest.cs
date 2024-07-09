@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class CreateCdsFileShareLinkRequest : TeaModel {
         /// <summary>
         /// The ID of the cloud disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]

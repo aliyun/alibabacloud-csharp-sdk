@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeFotaTasksResponseBodyFotaTasks> FotaTasks { get; set; }
         public class DescribeFotaTasksResponseBodyFotaTasks : TeaModel {
             /// <summary>
-            /// The image version. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.
+            /// The image version. You can call the [DescribeImages](https://help.aliyun.com/document_detail/188895.html) operation to obtain the value of this parameter.
             /// </summary>
             [NameInMap("AppVersion")]
             [Validation(Required=false)]

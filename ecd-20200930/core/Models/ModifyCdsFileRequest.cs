@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ModifyCdsFileRequest : TeaModel {
         /// <summary>
         /// The cloud disk ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     automatically renames a file if the file has the same name as another file. By default, the current point in time is appended. Example: xxx20060102\_150405.
+        ///     automatically renames a file if the file has the same name as another file. By default, the current point in time is appended. Example: xxx20060102_150405.
         /// 
         ///     <!-- -->
         /// 
@@ -70,6 +72,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -77,6 +81,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The file name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -90,7 +96,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

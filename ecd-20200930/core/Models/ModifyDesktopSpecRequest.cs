@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     You can log on to the WUYING Workspace console and complete the payment based on the order ID on the Orders page.
+        ///     You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.
         /// 
         ///     <!-- -->
         /// </summary>
@@ -46,7 +46,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The destination instance type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
+        /// The destination instance type. You can call the [DescribeDesktopTypes](https://help.aliyun.com/document_detail/188882.html) operation to query the instance types supported by cloud computers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopType")]
         [Validation(Required=false)]
@@ -60,11 +62,35 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceSpecs")]
+        [Validation(Required=false)]
+        public List<ModifyDesktopSpecRequestResourceSpecs> ResourceSpecs { get; set; }
+        public class ModifyDesktopSpecRequestResourceSpecs : TeaModel {
+            [NameInMap("DesktopId")]
+            [Validation(Required=false)]
+            public string DesktopId { get; set; }
+
+            [NameInMap("RootDiskSizeGib")]
+            [Validation(Required=false)]
+            public int? RootDiskSizeGib { get; set; }
+
+            [NameInMap("UserDiskSizeGib")]
+            [Validation(Required=false)]
+            public int? UserDiskSizeGib { get; set; }
+
+        }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
         /// <summary>
         /// The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.

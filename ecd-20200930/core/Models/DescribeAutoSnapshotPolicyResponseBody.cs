@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies> AutoSnapshotPolicies { get; set; }
         public class DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies : TeaModel {
             /// <summary>
-            /// The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.
+            /// The time when the automatic snapshot policy was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The cron expression that specifies when WUYING Workspace creates snapshots on the cloud computers.
+            /// The cron expression that specifies when Elastic Desktop Service creates snapshots on the cloud computers.
             /// </summary>
             [NameInMap("CronExpression")]
             [Validation(Required=false)]

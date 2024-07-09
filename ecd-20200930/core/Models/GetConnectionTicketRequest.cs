@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:
         /// 
-        /// *   appPath: the path of the application startup file. Example: `"C:\\Program Files (x86)\\000\\000.exe"`. Use double slashes (\\\) as the delimiter. Type of the parameter value: string.
+        /// *   appPath: the path of the application startup file. Example: `"C:\\\\Program Files (x86)\\\\000\\\\000.exe"`. Use double slashes (\\\\\\) as the delimiter. Type of the parameter value: string.
         /// *   appParameter: the startup arguments of the application. Example: `"meetingid 000 meetingname aaa"`. Separate multiple arguments with spaces. Type of the parameter value: string.
         /// </summary>
         [NameInMap("CommandContent")]
@@ -45,7 +45,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

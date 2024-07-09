@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ModifyDesktopHostNameRequest : TeaModel {
         /// <summary>
         /// The ID of the cloud computer.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -21,13 +23,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         /// *   The hostname must be 2 to 15 characters in length.
         /// *   The hostname can contain only letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewHostName")]
         [Validation(Required=false)]
         public string NewHostName { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

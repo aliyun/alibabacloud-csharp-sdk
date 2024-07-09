@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopSessionsRequest : TeaModel {
+        [NameInMap("CheckOsSession")]
+        [Validation(Required=false)]
+        public bool? CheckOsSession { get; set; }
+
         /// <summary>
-        /// The IDs of the cloud computers.
+        /// The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The workspace ID.
+        /// The ID of the office network.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
@@ -59,14 +63,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the regions supported by Elastic Desktop Service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The session status. Valid values:
+        /// The state of the session.
+        /// 
+        /// Valid values:
         /// 
         /// *   Connected
         /// *   Disconnected
@@ -81,6 +89,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("SubPayType")]
+        [Validation(Required=false)]
+        public string SubPayType { get; set; }
 
     }
 

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The usernames of AD users.\
+        /// The usernames of AD users.\\
         /// If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.
         /// </summary>
         [NameInMap("Users")]

@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class FilePermissionMember : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CdsIdentity")]
         [Validation(Required=false)]
         public FilePermissionMemberCdsIdentity CdsIdentity { get; set; }
         public class FilePermissionMemberCdsIdentity : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -31,6 +40,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public long? ExpireTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]
         public string RoleId { get; set; }

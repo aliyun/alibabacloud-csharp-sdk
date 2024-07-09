@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the cloud disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The file ID. You can call the CreateCdsFile operation to query the file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -77,13 +81,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the parent folder of the folder to which you want to copy the file. If you want to copy the file to the root directory, set this parameter to root.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParentFolderId")]
         [Validation(Required=false)]
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

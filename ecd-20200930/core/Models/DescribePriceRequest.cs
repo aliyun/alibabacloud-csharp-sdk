@@ -42,6 +42,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? Duration { get; set; }
 
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
+            [NameInMap("OsType")]
+            [Validation(Required=false)]
+            public string OsType { get; set; }
+
+            [NameInMap("RootDiskId")]
+            [Validation(Required=false)]
+            public string RootDiskId { get; set; }
+
+            [NameInMap("UserDiskId")]
+            [Validation(Required=false)]
+            public string UserDiskId { get; set; }
+
         }
 
         [NameInMap("EduCdsEnable")]
@@ -186,6 +202,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

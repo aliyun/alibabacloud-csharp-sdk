@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class AddFilePermissionShrinkRequest : TeaModel {
         /// <summary>
         /// The ID of the cloud disk whose folder you want to share.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -39,13 +43,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The members who are granted the folder permissions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MemberList")]
         [Validation(Required=false)]
         public string MemberListShrink { get; set; }
 
         /// <summary>
-        /// The region ID of the folder. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID of the folder. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

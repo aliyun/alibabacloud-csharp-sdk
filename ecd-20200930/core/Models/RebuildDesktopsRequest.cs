@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class RebuildDesktopsRequest : TeaModel {
         /// <summary>
         /// The IDs of the cloud computers. You can specify 1 to 20 IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -23,12 +25,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
         /// <summary>
         /// The operation type on the data disk.
         /// 
         /// >  This parameter is empty by default regardless of whether data disks are attached to the cloud computer.
         /// 
-        /// *   No data disks are attached to the cloud computer:\
+        /// *   No data disks are attached to the cloud computer:\\
         ///     No operation is performed on the data disks of the cloud computer regardless of the value of this parameter.
         /// 
         /// *   Data disks are attached to the cloud computer:
@@ -48,7 +54,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

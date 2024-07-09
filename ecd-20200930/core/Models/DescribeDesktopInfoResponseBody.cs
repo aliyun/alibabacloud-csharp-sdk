@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopInfoResponseBody : TeaModel {
         /// <summary>
-        /// Details of the cloud computers.
+        /// The basic information about cloud computers.
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]
         public List<DescribeDesktopInfoResponseBodyDesktops> Desktops { get; set; }
         public class DescribeDesktopInfoResponseBodyDesktops : TeaModel {
             /// <summary>
-            /// The connection status of the user. Valid values:
+            /// The connection status of the user.
+            /// 
+            /// Valid values:
             /// 
             /// *   Connected
             /// *   Disconnected
@@ -27,34 +29,39 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// The version of the image that is used by the cloud computer.
+            /// The version of the cloud computer image.
             /// </summary>
             [NameInMap("CurrentAppVersion")]
             [Validation(Required=false)]
             public string CurrentAppVersion { get; set; }
 
+            /// <summary>
+            /// The ID of the cloud computer pool.
+            /// </summary>
             [NameInMap("DesktopGroupId")]
             [Validation(Required=false)]
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// The cloud computer ID.
+            /// The ID of the cloud computer.
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The status of the cloud computer. Valid values:
+            /// The status of the cloud computer.
             /// 
-            /// *   Pending: The cloud computer is being created.
-            /// *   Starting: The cloud computer is being started.
-            /// *   Running: The cloud computer is running.
-            /// *   Stopping: The cloud computer is being stopped.
-            /// *   Stopped: The cloud computer is stopped.
-            /// *   Expired: The cloud computer is expired.
-            /// *   Deleted: The cloud computer is deleted.
-            /// *   Failed: Failed to create the cloud computer.
+            /// Valid values:
+            /// 
+            /// *   Stopped
+            /// *   Failed
+            /// *   Starting
+            /// *   Running
+            /// *   Stopping
+            /// *   Expired
+            /// *   Deleted
+            /// *   Pending
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
@@ -75,21 +82,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? NewAppSize { get; set; }
 
             /// <summary>
-            /// The destination version to which the image of the cloud computer can be updated.
+            /// The version number of the image that can be updated on the cloud computer.
             /// </summary>
             [NameInMap("NewAppVersion")]
             [Validation(Required=false)]
             public string NewAppVersion { get; set; }
 
             /// <summary>
-            /// The description of the destination version to which the image of the cloud computer can be updated.
+            /// The description of the image version that can be updated.
             /// </summary>
             [NameInMap("ReleaseNote")]
             [Validation(Required=false)]
             public string ReleaseNote { get; set; }
 
             /// <summary>
-            /// The first time when the cloud computer was started.
+            /// The time when the cloud computer was first started.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]

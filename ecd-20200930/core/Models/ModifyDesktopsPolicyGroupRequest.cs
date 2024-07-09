@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ModifyDesktopsPolicyGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the cloud desktop. You can specify one or more desktop IDs. The value is a JSON array.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         ///         "Ticket": "W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********",
         ///         "RequestId": "1CBAFFAB-B697-4049-A9B1-67E1FC5F****",
         ///     }
-        ///     f = open (\"xxx.ica\", \"w\")
-        ///     out = base64.b64decode(response[\"Ticket\"])
+        ///     f = open (\\"xxx.ica\\", \\"w\\")
+        ///     out = base64.b64decode(response[\\"Ticket\\"])
         ///     f.write(out)
         ///     f.close()
         /// </summary>

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class SetDirectorySsoStatusRequest : TeaModel {
         /// <summary>
         /// The AD directory ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         /// *   true: enables SSO.
         /// *   false: disables SSO.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnableSso")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

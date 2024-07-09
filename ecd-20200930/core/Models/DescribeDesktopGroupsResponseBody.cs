@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupName { get; set; }
 
             /// <summary>
-            /// The cloud computer type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of the cloud computer types supported by WUYING Workspace.
+            /// The cloud computer type. You can call the [DescribeDesktopTypes](https://help.aliyun.com/document_detail/188882.html) operation to query the IDs of the cloud computer types supported by WUYING Workspace.
             /// </summary>
             [NameInMap("DesktopType")]
             [Validation(Required=false)]
@@ -495,6 +495,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
+
+            /// <summary>
+            /// The tags attached to the cloud computer pool.
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeDesktopGroupsResponseBodyDesktopGroupsTags> Tags { get; set; }
+            public class DescribeDesktopGroupsResponseBodyDesktopGroupsTags : TeaModel {
+                /// <summary>
+                /// The key of the tag.
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// The value of the tag.
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// The version number of the cloud computer pool.

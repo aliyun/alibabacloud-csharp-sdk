@@ -43,7 +43,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopAccessType { get; set; }
 
         /// <summary>
-        /// The directory name. The name must be 2 to 255 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain digits, colons (:), underscores (\_), and hyphens (-).
+        /// The directory name. The name must be 2 to 255 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain digits, colons (:), underscores (_), and hyphens (-).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DirectoryName")]
         [Validation(Required=false)]
@@ -102,7 +104,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? EnableInternetAccess { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -110,6 +114,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The vSwitch IDs. You can configure only one vSwitch.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

@@ -98,6 +98,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            [NameInMap("AdHostname")]
+            [Validation(Required=false)]
+            public string AdHostname { get; set; }
+
+            [NameInMap("BackupDCHostname")]
+            [Validation(Required=false)]
+            public string BackupDCHostname { get; set; }
+
+            [NameInMap("BackupDns")]
+            [Validation(Required=false)]
+            public string BackupDns { get; set; }
+
             /// <summary>
             /// The time when the directory was created.
             /// </summary>
@@ -327,7 +339,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// Indicates whether two-step verification for logons is enabled. This parameter is returned only for directories of convenience account type.\
+            /// Indicates whether two-step verification for logons is enabled. This parameter is returned only for directories of convenience account type.\\
             /// If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
             /// </summary>
             [NameInMap("NeedVerifyLoginRisk")]

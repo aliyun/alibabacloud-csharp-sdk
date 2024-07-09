@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ModifyDesktopTimerRequest : TeaModel {
         /// <summary>
         /// The IDs of the cloud computers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -33,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// The cron expression of the schedule.
             /// 
-            /// > The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7
+            /// > The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \\* 1,2,3,4,5,6,7
             /// </summary>
             [NameInMap("CronExpression")]
             [Validation(Required=false)]
@@ -213,7 +215,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

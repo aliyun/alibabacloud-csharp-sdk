@@ -8,19 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class ResetNASDefaultMountTargetRequest : TeaModel {
+    public class SetDesktopMaintenanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the NAS file system.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("FileSystemId")]
+        [NameInMap("DesktopIds")]
         [Validation(Required=false)]
-        public string FileSystemId { get; set; }
+        public List<string> DesktopIds { get; set; }
 
         /// <summary>
-        /// The region ID.
-        /// 
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
+        /// <summary>
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

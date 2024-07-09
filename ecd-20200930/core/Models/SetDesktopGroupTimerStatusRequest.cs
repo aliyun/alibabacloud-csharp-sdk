@@ -11,13 +11,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class SetDesktopGroupTimerStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the cloud computer pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// *   2: scheduled startup
         /// *   3: scheduled stop
         /// *   4: scheduled restart
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TimerType")]
         [Validation(Required=false)]

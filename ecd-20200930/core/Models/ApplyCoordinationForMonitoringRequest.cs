@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         ///     <!-- -->
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CoordinatePolicyType")]
         [Validation(Required=false)]
@@ -52,6 +54,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The region ID. You can call the [DescribeRegions](https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -59,6 +63,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The list of cloud desktops that run the collaboration task at the same time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceCandidates")]
         [Validation(Required=false)]
@@ -66,6 +72,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public class ApplyCoordinationForMonitoringRequestResourceCandidates : TeaModel {
             /// <summary>
             /// The ID of the Alibaba Cloud account to which the current cloud desktop belongs.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("OwnerAliUid")]
             [Validation(Required=false)]
@@ -80,6 +88,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The ID of the cloud desktop.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -87,6 +97,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The name of the cloud desktop.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]
@@ -101,6 +113,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The region where the resource resides.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceRegionId")]
             [Validation(Required=false)]
@@ -118,6 +132,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             ///     <!-- -->
             /// 
             ///     <!-- -->
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -127,6 +143,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The universally unique identifier (UUID) of the device.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

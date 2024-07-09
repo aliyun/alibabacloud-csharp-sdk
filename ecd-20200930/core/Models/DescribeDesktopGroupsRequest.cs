@@ -148,7 +148,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the regions supported by WUYING Workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -166,6 +168,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
+
+        /// <summary>
+        /// The tags attached to the cloud computer pool. You can specify 1 to 20 tags.
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeDesktopGroupsRequestTag> Tag { get; set; }
+        public class DescribeDesktopGroupsRequestTag : TeaModel {
+            /// <summary>
+            /// The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

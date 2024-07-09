@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     You can log on to the WUYING Workspace console and complete the payment based on the order ID on the Orders page.
+        ///     You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.
         /// 
         ///     <!-- -->
         /// </summary>
@@ -38,8 +38,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
         /// <summary>
         /// The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -90,7 +96,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

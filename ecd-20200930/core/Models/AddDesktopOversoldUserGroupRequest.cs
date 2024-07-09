@@ -25,6 +25,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<AddDesktopOversoldUserGroupRequestTag> Tag { get; set; }
+        public class AddDesktopOversoldUserGroupRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

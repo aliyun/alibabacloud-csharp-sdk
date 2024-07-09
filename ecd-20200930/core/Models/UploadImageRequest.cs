@@ -51,7 +51,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GpuDriverType { get; set; }
 
         /// <summary>
-        /// The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The type of the license that is used to activate the operating system after the image is imported. Valid values:
         /// 
-        /// *   Auto: WUYING Workspace detects the operating system of the image and allocates a license to the operating system. In this mode, the system first checks whether a license allocated by an official Alibaba Cloud channel is specified in the `Platform`. If a license allocated by an official Alibaba Cloud channel is specified, the system allocates the license to the imported image. If no such license is specified, the BYOL (Bring Your Own License) mode is used.
+        /// *   Auto: Elastic Desktop Service detects the operating system of the image and allocates a license to the operating system. In this mode, the system first checks whether a license allocated by an official Alibaba Cloud channel is specified in the `Platform`. If a license allocated by an official Alibaba Cloud channel is specified, the system allocates the license to the imported image. If no such license is specified, the BYOL (Bring Your Own License) mode is used.
         /// *   Aliyun: The license that is allocated by an official Alibaba Cloud channel and is specified by `Platform` is used for the operating system distribution.
         /// *   BYOL: The license that comes with the source operating system is used. When you use the BYOL mode, make sure that your license key is supported by Alibaba Cloud.
         /// 
@@ -99,6 +101,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The object path of the image file in Object Storage Service (OSS).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OssObjectPath")]
         [Validation(Required=false)]
@@ -116,7 +120,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

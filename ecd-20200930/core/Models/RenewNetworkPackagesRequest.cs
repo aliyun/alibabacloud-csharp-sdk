@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     To make the payment, log on to the WUYING Workspace console, go to the Orders page, and find the order based on the order ID.
+        ///     To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.
         /// 
         ///     <!-- -->
         /// </summary>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The IDs of premium bandwidth plans. You can specify up to 100 IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkPackageId")]
         [Validation(Required=false)]
@@ -76,7 +78,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

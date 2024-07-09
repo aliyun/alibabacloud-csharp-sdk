@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the desktop group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The name of the NAS file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemName")]
         [Validation(Required=false)]
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -71,6 +79,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// *   Performance
         /// 
         /// Default value: Capacity.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

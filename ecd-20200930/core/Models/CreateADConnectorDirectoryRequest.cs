@@ -43,7 +43,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopAccessType { get; set; }
 
         /// <summary>
-        /// The directory name. The name must be 2 to 255 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The directory name. The name must be 2 to 255 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DirectoryName")]
         [Validation(Required=false)]
@@ -51,6 +53,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The IP address of the DNS server corresponding to the enterprise AD. You can specify only one IP address. Make sure that the specified IP address is accessible in the network of the selected vSwitch.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DnsAddress")]
         [Validation(Required=false)]
@@ -58,6 +62,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The fully qualified domain name (FQDN) of the enterprise AD system. The value must contain the hostname and the domain name. You can register each FQDN only once.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -65,6 +71,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The password of the domain administrator. The password can be up to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainPassword")]
         [Validation(Required=false)]
@@ -72,6 +80,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The username of the domain administrator. The username can be up to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainUserName")]
         [Validation(Required=false)]
@@ -132,7 +142,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? MfaEnabled { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -150,7 +162,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? Specification { get; set; }
 
         /// <summary>
-        /// The DNS address of the existing AD subdomain.\
+        /// The DNS address of the existing AD subdomain.\\
         /// If you specify the `SubDomainName` parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.
         /// </summary>
         [NameInMap("SubDomainDnsAddress")]
@@ -166,6 +178,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// Details of the vSwitch IDs. You can specify only one vSwitch ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

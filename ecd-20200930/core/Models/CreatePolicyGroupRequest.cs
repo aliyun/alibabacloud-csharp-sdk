@@ -173,15 +173,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// *   If you set the IpProtocol parameter to GRE, the start port number and the end port number are -1/-1.
             /// *   If you set the IpProtocol parameter to ALL, the start port number and the end port number are -1/-1.
             /// 
-            /// For more information about the common ports of applications, see [Common ports](~~40724~~).
+            /// For more information about the common ports of applications, see [Common ports](https://help.aliyun.com/document_detail/40724.html).
             /// </summary>
             [NameInMap("PortRange")]
             [Validation(Required=false)]
             public string PortRange { get; set; }
 
             /// <summary>
-            /// The priority of the security group rule. A smaller value specifies a higher priority.\
-            /// Valid values: 1 to 60.\
+            /// The priority of the security group rule. A smaller value specifies a higher priority.\\
+            /// Valid values: 1 to 60.\\
             /// Default value: 1.
             /// </summary>
             [NameInMap("Priority")]
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Clipboard { get; set; }
 
         /// <summary>
-        /// Access control for domain names. The wildcard character (\*) is supported for domain names. Separate multiple domain names with commas (,). Valid values:
+        /// Access control for domain names. The wildcard character (\\*) is supported for domain names. Separate multiple domain names with commas (,). Valid values:
         /// 
         /// *   off
         /// *   on
@@ -610,6 +610,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string LocalDrive { get; set; }
 
+        [NameInMap("MaxReconnectTime")]
+        [Validation(Required=false)]
+        public int? MaxReconnectTime { get; set; }
+
         /// <summary>
         /// The name of the policy.
         /// </summary>
@@ -823,6 +827,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -983,7 +989,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? UsbRuleType { get; set; }
 
             /// <summary>
-            /// The ID of the vendor. For more information, see [Valid USB Vendor IDs (VIDs)](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).
+            /// The ID of the vendor. For more information, see [Valid USB Vendor IDs (VIDs)](https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf).
             /// </summary>
             [NameInMap("VendorId")]
             [Validation(Required=false)]

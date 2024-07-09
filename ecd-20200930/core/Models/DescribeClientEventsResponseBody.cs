@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// The status of the event. If you set the EventType parameter to `DESKTOP_DISCONNECT` or `GET_CONNECTION_TICKET`, this parameter is returned. Valid values:
             /// 
-            /// *   200\. The value indicates that the request is successful.
+            /// *   200\\. The value indicates that the request is successful.
             /// *   An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.
             /// </summary>
             [NameInMap("Status")]

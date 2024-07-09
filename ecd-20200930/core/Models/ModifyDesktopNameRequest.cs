@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ModifyDesktopNameRequest : TeaModel {
         /// <summary>
         /// The ID of the cloud computer.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -21,14 +23,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         /// *   The name must be 1 to 64 characters in length.
         /// *   The name must start with a letter but cannot start with `http://` or `https://`.
-        /// *   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+        /// *   The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewDesktopName")]
         [Validation(Required=false)]
         public string NewDesktopName { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

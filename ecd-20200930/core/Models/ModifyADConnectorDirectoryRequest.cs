@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the directory.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
@@ -93,14 +95,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OUName { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The DNS address of the existing AD subdomain.\
+        /// The DNS address of the existing AD subdomain.\\
         /// If you specify the `SubDomainName` parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.
         /// </summary>
         [NameInMap("SubDomainDnsAddress")]

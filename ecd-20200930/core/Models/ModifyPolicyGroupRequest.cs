@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public class ModifyPolicyGroupRequestAuthorizeAccessPolicyRule : TeaModel {
             /// <summary>
             /// The CIDR block that the client can access.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("CidrIp")]
             [Validation(Required=false)]
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// *   When AuthorizeSecurityPolicyRule.N.IpProtocol is set to gre, set the value to -1/-1.
             /// *   When AuthorizeSecurityPolicyRule.N.IpProtocol is set to all, set the value to -1/-1.
             /// 
-            /// For more information about the common ports of typical applications, see [Common ports](~~40724~~).
+            /// For more information about the common ports of typical applications, see [Common ports](https://help.aliyun.com/document_detail/40724.html).
             /// </summary>
             [NameInMap("PortRange")]
             [Validation(Required=false)]
@@ -197,8 +199,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The domain blacklist or whitelist. Wildcard domains are supported. Separate domain names with commas (,). Valid values:
         /// 
-        /// *   \[black:],example1.com,example2.com: the domain name blacklist.
-        /// *   \[white:],example1.com,example2.com: the domain name whitelist.
+        /// *   [black:],example1.com,example2.com: the domain name blacklist.
+        /// *   [white:],example1.com,example2.com: the domain name whitelist.
         /// </summary>
         [NameInMap("DomainList")]
         [Validation(Required=false)]
@@ -338,6 +340,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string LocalDrive { get; set; }
 
+        [NameInMap("MaxReconnectTime")]
+        [Validation(Required=false)]
+        public int? MaxReconnectTime { get; set; }
+
         /// <summary>
         /// The name of the policy.
         /// </summary>
@@ -359,6 +365,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
@@ -486,6 +494,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the region where the cloud desktop resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string AdHostname { get; set; }
 
+        [NameInMap("BackupDCHostname")]
+        [Validation(Required=false)]
+        public string BackupDCHostname { get; set; }
+
+        [NameInMap("BackupDns")]
+        [Validation(Required=false)]
+        public string BackupDns { get; set; }
+
         /// <summary>
         /// Details of the IP addresses of the Domain Name System (DNS) servers that correspond to the enterprise AD system. You can specify only one IP address.
         /// </summary>
@@ -72,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? MfaEnabled { get; set; }
 
         /// <summary>
-        /// The name of the organizational unit (OU) in the AD domain. You can call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain OUs.
+        /// The name of the organizational unit (OU) in the AD domain. You can call the [ListUserAdOrganizationUnits](https://help.aliyun.com/document_detail/311259.html) operation to obtain OUs.
         /// </summary>
         [NameInMap("OUName")]
         [Validation(Required=false)]
@@ -80,20 +88,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The office network ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
+        /// The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("OfficeSiteName")]
         [Validation(Required=false)]
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class GetCoordinateTicketRequest : TeaModel {
         /// <summary>
         /// The ID of the stream collaboration. You can obtain the value of this parameter based on the value of `Coid` that is returned by the `ApplyCoordinationForMonitoring` operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CoId")]
         [Validation(Required=false)]
@@ -24,7 +26,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/436773.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         ///     <!-- -->
         /// 
         ///     specifies an administrator.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

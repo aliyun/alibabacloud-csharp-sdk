@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ConfigADConnectorUserRequest : TeaModel {
         /// <summary>
         /// The password of the AD user that has the permissions to join computers to domains.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainPassword")]
         [Validation(Required=false)]
@@ -20,13 +22,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// The username of the AD user that has the permissions to join computers to domains.
         /// 
         /// After the username is configured, the cloud desktops in the same AD workspace are joined to the specified OU.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainUserName")]
         [Validation(Required=false)]
         public string DomainUserName { get; set; }
 
         /// <summary>
-        /// The name of the OU in the AD domain. You can call the [ListUserAdOrganizationUnits](~~311259~~) to obtain the OU name.
+        /// The name of the OU in the AD domain. You can call the [ListUserAdOrganizationUnits](https://help.aliyun.com/document_detail/311259.html) to obtain the OU name.
         /// </summary>
         [NameInMap("OUName")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the AD workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

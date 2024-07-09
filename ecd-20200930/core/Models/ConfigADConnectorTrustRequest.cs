@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ConfigADConnectorTrustRequest : TeaModel {
         /// <summary>
         /// The ID of the enterprise AD office network.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
@@ -30,7 +32,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? RdsLicenseDomain { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The trust password. You can specify the password when you configure a trust relationship between the AD domain and the ecd.acs domain.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrustKey")]
         [Validation(Required=false)]

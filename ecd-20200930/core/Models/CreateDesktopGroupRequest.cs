@@ -71,6 +71,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the desktop template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BundleId")]
         [Validation(Required=false)]
@@ -85,6 +87,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The billing method of the cloud desktops in the desktop group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Classify { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -197,6 +201,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
@@ -240,6 +246,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
@@ -261,6 +269,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -290,6 +300,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? StopDuration { get; set; }
 
         /// <summary>
+        /// The tags that you want to attach to the cloud computer pool. You can specify 1 to 20 tags.
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateDesktopGroupRequestTag> Tag { get; set; }
+        public class CreateDesktopGroupRequestTag : TeaModel {
+            /// <summary>
+            /// The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.
+            /// 
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+            /// 
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <summary>
         /// Specifies whether to enable disk encryption.
         /// </summary>
         [NameInMap("VolumeEncryptionEnabled")]
@@ -297,7 +334,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? VolumeEncryptionEnabled { get; set; }
 
         /// <summary>
-        /// The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+        /// The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](https://help.aliyun.com/document_detail/28951.html) operation to obtain a list of KMS keys.
         /// </summary>
         [NameInMap("VolumeEncryptionKey")]
         [Validation(Required=false)]

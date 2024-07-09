@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDevicesResponseBody : TeaModel {
         /// <summary>
-        /// Details of the devices that are returned.
+        /// The information about devices that you queried.
         /// </summary>
         [NameInMap("Devices")]
         [Validation(Required=false)]
         public List<DescribeDevicesResponseBodyDevices> Devices { get; set; }
         public class DescribeDevicesResponseBodyDevices : TeaModel {
             /// <summary>
-            /// The ID of the device.
+            /// The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.
             /// </summary>
             [NameInMap("DeviceId")]
             [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<DescribeDevicesResponseBodyDevicesEndUserList> EndUserList { get; set; }
             public class DescribeDevicesResponseBodyDevicesEndUserList : TeaModel {
                 /// <summary>
-                /// The address of the AD workspace.
+                /// The address of the AD office network.
                 /// </summary>
                 [NameInMap("AdDomain")]
                 [Validation(Required=false)]
                 public string AdDomain { get; set; }
 
                 /// <summary>
-                /// The ID of the workspace.
+                /// The ID of the convenient office network.
                 /// </summary>
                 [NameInMap("DirectoryId")]
                 [Validation(Required=false)]
@@ -52,7 +52,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EndUserId { get; set; }
 
                 /// <summary>
-                /// The type of the account.
+                /// The account type of the user.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   AD: enterprise AD account.
+                /// *   SIMPLE: convenience account
                 /// </summary>
                 [NameInMap("UserType")]
                 [Validation(Required=false)]

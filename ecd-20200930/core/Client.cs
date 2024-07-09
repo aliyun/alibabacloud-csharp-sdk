@@ -39,11 +39,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
-          *
-          * @param request ActivateOfficeSiteRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ActivateOfficeSiteResponse
+         * @summary Unlocks a convenience office network that is automatically locked due to a long idle period of time.
+         *
+         * @description If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
+         *
+         * @param request ActivateOfficeSiteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ActivateOfficeSiteResponse
          */
         public ActivateOfficeSiteResponse ActivateOfficeSiteWithOptions(ActivateOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -77,11 +79,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
-          *
-          * @param request ActivateOfficeSiteRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ActivateOfficeSiteResponse
+         * @summary Unlocks a convenience office network that is automatically locked due to a long idle period of time.
+         *
+         * @description If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
+         *
+         * @param request ActivateOfficeSiteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ActivateOfficeSiteResponse
          */
         public async Task<ActivateOfficeSiteResponse> ActivateOfficeSiteWithOptionsAsync(ActivateOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -115,10 +119,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
-          *
-          * @param request ActivateOfficeSiteRequest
-          * @return ActivateOfficeSiteResponse
+         * @summary Unlocks a convenience office network that is automatically locked due to a long idle period of time.
+         *
+         * @description If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
+         *
+         * @param request ActivateOfficeSiteRequest
+         * @return ActivateOfficeSiteResponse
          */
         public ActivateOfficeSiteResponse ActivateOfficeSite(ActivateOfficeSiteRequest request)
         {
@@ -127,10 +133,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
-          *
-          * @param request ActivateOfficeSiteRequest
-          * @return ActivateOfficeSiteResponse
+         * @summary Unlocks a convenience office network that is automatically locked due to a long idle period of time.
+         *
+         * @description If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
+         *
+         * @param request ActivateOfficeSiteRequest
+         * @return ActivateOfficeSiteResponse
          */
         public async Task<ActivateOfficeSiteResponse> ActivateOfficeSiteAsync(ActivateOfficeSiteRequest request)
         {
@@ -138,6 +146,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ActivateOfficeSiteWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 添加桌面超卖用户组
+         *
+         * @param request AddDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddDesktopOversoldUserGroupResponse
+         */
         public AddDesktopOversoldUserGroupResponse AddDesktopOversoldUserGroupWithOptions(AddDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -158,6 +173,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["PolicyGroupId"] = request.PolicyGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -177,6 +196,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AddDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 添加桌面超卖用户组
+         *
+         * @param request AddDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddDesktopOversoldUserGroupResponse
+         */
         public async Task<AddDesktopOversoldUserGroupResponse> AddDesktopOversoldUserGroupWithOptionsAsync(AddDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -197,6 +223,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["PolicyGroupId"] = request.PolicyGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -216,12 +246,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AddDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 添加桌面超卖用户组
+         *
+         * @param request AddDesktopOversoldUserGroupRequest
+         * @return AddDesktopOversoldUserGroupResponse
+         */
         public AddDesktopOversoldUserGroupResponse AddDesktopOversoldUserGroup(AddDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDesktopOversoldUserGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 添加桌面超卖用户组
+         *
+         * @param request AddDesktopOversoldUserGroupRequest
+         * @return AddDesktopOversoldUserGroupResponse
+         */
         public async Task<AddDesktopOversoldUserGroupResponse> AddDesktopOversoldUserGroupAsync(AddDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -229,11 +271,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can add only one device to a tenant.
-          *
-          * @param request AddDevicesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddDevicesResponse
+         * @summary Adds trusted devices.
+         *
+         * @description Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.
+         *
+         * @param request AddDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddDevicesResponse
          */
         public AddDevicesResponse AddDevicesWithOptions(AddDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -271,11 +315,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can add only one device to a tenant.
-          *
-          * @param request AddDevicesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddDevicesResponse
+         * @summary Adds trusted devices.
+         *
+         * @description Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.
+         *
+         * @param request AddDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddDevicesResponse
          */
         public async Task<AddDevicesResponse> AddDevicesWithOptionsAsync(AddDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -313,10 +359,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can add only one device to a tenant.
-          *
-          * @param request AddDevicesRequest
-          * @return AddDevicesResponse
+         * @summary Adds trusted devices.
+         *
+         * @description Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.
+         *
+         * @param request AddDevicesRequest
+         * @return AddDevicesResponse
          */
         public AddDevicesResponse AddDevices(AddDevicesRequest request)
         {
@@ -325,10 +373,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can add only one device to a tenant.
-          *
-          * @param request AddDevicesRequest
-          * @return AddDevicesResponse
+         * @summary Adds trusted devices.
+         *
+         * @description Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.
+         *
+         * @param request AddDevicesRequest
+         * @return AddDevicesResponse
          */
         public async Task<AddDevicesResponse> AddDevicesAsync(AddDevicesRequest request)
         {
@@ -337,11 +387,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
-          *
-          * @param tmpReq AddFilePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddFilePermissionResponse
+         * @summary Shares a folder of a cloud disk with other users.
+         *
+         * @description You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+         *
+         * @param tmpReq AddFilePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddFilePermissionResponse
          */
         public AddFilePermissionResponse AddFilePermissionWithOptions(AddFilePermissionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -397,11 +449,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
-          *
-          * @param tmpReq AddFilePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddFilePermissionResponse
+         * @summary Shares a folder of a cloud disk with other users.
+         *
+         * @description You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+         *
+         * @param tmpReq AddFilePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddFilePermissionResponse
          */
         public async Task<AddFilePermissionResponse> AddFilePermissionWithOptionsAsync(AddFilePermissionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -457,10 +511,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
-          *
-          * @param request AddFilePermissionRequest
-          * @return AddFilePermissionResponse
+         * @summary Shares a folder of a cloud disk with other users.
+         *
+         * @description You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+         *
+         * @param request AddFilePermissionRequest
+         * @return AddFilePermissionResponse
          */
         public AddFilePermissionResponse AddFilePermission(AddFilePermissionRequest request)
         {
@@ -469,10 +525,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
-          *
-          * @param request AddFilePermissionRequest
-          * @return AddFilePermissionResponse
+         * @summary Shares a folder of a cloud disk with other users.
+         *
+         * @description You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+         *
+         * @param request AddFilePermissionRequest
+         * @return AddFilePermissionResponse
          */
         public async Task<AddFilePermissionResponse> AddFilePermissionAsync(AddFilePermissionRequest request)
         {
@@ -480,6 +538,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await AddFilePermissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Adds authorized end users of a desktop group.
+         *
+         * @param request AddUserToDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddUserToDesktopGroupResponse
+         */
         public AddUserToDesktopGroupResponse AddUserToDesktopGroupWithOptions(AddUserToDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -523,6 +588,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AddUserToDesktopGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds authorized end users of a desktop group.
+         *
+         * @param request AddUserToDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddUserToDesktopGroupResponse
+         */
         public async Task<AddUserToDesktopGroupResponse> AddUserToDesktopGroupWithOptionsAsync(AddUserToDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -566,18 +638,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AddUserToDesktopGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds authorized end users of a desktop group.
+         *
+         * @param request AddUserToDesktopGroupRequest
+         * @return AddUserToDesktopGroupResponse
+         */
         public AddUserToDesktopGroupResponse AddUserToDesktopGroup(AddUserToDesktopGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddUserToDesktopGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Adds authorized end users of a desktop group.
+         *
+         * @param request AddUserToDesktopGroupRequest
+         * @return AddUserToDesktopGroupResponse
+         */
         public async Task<AddUserToDesktopGroupResponse> AddUserToDesktopGroupAsync(AddUserToDesktopGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUserToDesktopGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 添加用户到超卖用户组
+         *
+         * @param request AddUserToDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddUserToDesktopOversoldUserGroupResponse
+         */
         public AddUserToDesktopOversoldUserGroupResponse AddUserToDesktopOversoldUserGroupWithOptions(AddUserToDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -617,6 +708,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AddUserToDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 添加用户到超卖用户组
+         *
+         * @param request AddUserToDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddUserToDesktopOversoldUserGroupResponse
+         */
         public async Task<AddUserToDesktopOversoldUserGroupResponse> AddUserToDesktopOversoldUserGroupWithOptionsAsync(AddUserToDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -656,12 +754,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AddUserToDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 添加用户到超卖用户组
+         *
+         * @param request AddUserToDesktopOversoldUserGroupRequest
+         * @return AddUserToDesktopOversoldUserGroupResponse
+         */
         public AddUserToDesktopOversoldUserGroupResponse AddUserToDesktopOversoldUserGroup(AddUserToDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddUserToDesktopOversoldUserGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 添加用户到超卖用户组
+         *
+         * @param request AddUserToDesktopOversoldUserGroupRequest
+         * @return AddUserToDesktopOversoldUserGroupResponse
+         */
         public async Task<AddUserToDesktopOversoldUserGroupResponse> AddUserToDesktopOversoldUserGroupAsync(AddUserToDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -669,12 +779,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-          * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.
-          *
-          * @param request ApplyAutoSnapshotPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ApplyAutoSnapshotPolicyResponse
+         * @summary Apply an automatic snapshot policy to cloud computers. After the automatic snapshot policy is applied to the cloud computers, Elastic Desktop Service automatically creates snapshots for the cloud computers based on the time specified in the automatic snapshot policy.
+         *
+         * @description You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
+         * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.
+         *
+         * @param request ApplyAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyAutoSnapshotPolicyResponse
          */
         public ApplyAutoSnapshotPolicyResponse ApplyAutoSnapshotPolicyWithOptions(ApplyAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -712,12 +824,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-          * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.
-          *
-          * @param request ApplyAutoSnapshotPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ApplyAutoSnapshotPolicyResponse
+         * @summary Apply an automatic snapshot policy to cloud computers. After the automatic snapshot policy is applied to the cloud computers, Elastic Desktop Service automatically creates snapshots for the cloud computers based on the time specified in the automatic snapshot policy.
+         *
+         * @description You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
+         * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.
+         *
+         * @param request ApplyAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyAutoSnapshotPolicyResponse
          */
         public async Task<ApplyAutoSnapshotPolicyResponse> ApplyAutoSnapshotPolicyWithOptionsAsync(ApplyAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -755,11 +869,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-          * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.
-          *
-          * @param request ApplyAutoSnapshotPolicyRequest
-          * @return ApplyAutoSnapshotPolicyResponse
+         * @summary Apply an automatic snapshot policy to cloud computers. After the automatic snapshot policy is applied to the cloud computers, Elastic Desktop Service automatically creates snapshots for the cloud computers based on the time specified in the automatic snapshot policy.
+         *
+         * @description You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
+         * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.
+         *
+         * @param request ApplyAutoSnapshotPolicyRequest
+         * @return ApplyAutoSnapshotPolicyResponse
          */
         public ApplyAutoSnapshotPolicyResponse ApplyAutoSnapshotPolicy(ApplyAutoSnapshotPolicyRequest request)
         {
@@ -768,11 +884,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-          * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.
-          *
-          * @param request ApplyAutoSnapshotPolicyRequest
-          * @return ApplyAutoSnapshotPolicyResponse
+         * @summary Apply an automatic snapshot policy to cloud computers. After the automatic snapshot policy is applied to the cloud computers, Elastic Desktop Service automatically creates snapshots for the cloud computers based on the time specified in the automatic snapshot policy.
+         *
+         * @description You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
+         * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.
+         *
+         * @param request ApplyAutoSnapshotPolicyRequest
+         * @return ApplyAutoSnapshotPolicyResponse
          */
         public async Task<ApplyAutoSnapshotPolicyResponse> ApplyAutoSnapshotPolicyAsync(ApplyAutoSnapshotPolicyRequest request)
         {
@@ -780,6 +898,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ApplyAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Applies for the coordinate permissions.
+         *
+         * @param request ApplyCoordinatePrivilegeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyCoordinatePrivilegeResponse
+         */
         public ApplyCoordinatePrivilegeResponse ApplyCoordinatePrivilegeWithOptions(ApplyCoordinatePrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -823,6 +948,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ApplyCoordinatePrivilegeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Applies for the coordinate permissions.
+         *
+         * @param request ApplyCoordinatePrivilegeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyCoordinatePrivilegeResponse
+         */
         public async Task<ApplyCoordinatePrivilegeResponse> ApplyCoordinatePrivilegeWithOptionsAsync(ApplyCoordinatePrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -866,18 +998,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ApplyCoordinatePrivilegeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Applies for the coordinate permissions.
+         *
+         * @param request ApplyCoordinatePrivilegeRequest
+         * @return ApplyCoordinatePrivilegeResponse
+         */
         public ApplyCoordinatePrivilegeResponse ApplyCoordinatePrivilege(ApplyCoordinatePrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ApplyCoordinatePrivilegeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Applies for the coordinate permissions.
+         *
+         * @param request ApplyCoordinatePrivilegeRequest
+         * @return ApplyCoordinatePrivilegeResponse
+         */
         public async Task<ApplyCoordinatePrivilegeResponse> ApplyCoordinatePrivilegeAsync(ApplyCoordinatePrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ApplyCoordinatePrivilegeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.
+         *
+         * @param request ApplyCoordinationForMonitoringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyCoordinationForMonitoringResponse
+         */
         public ApplyCoordinationForMonitoringResponse ApplyCoordinationForMonitoringWithOptions(ApplyCoordinationForMonitoringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -925,6 +1076,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ApplyCoordinationForMonitoringResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.
+         *
+         * @param request ApplyCoordinationForMonitoringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyCoordinationForMonitoringResponse
+         */
         public async Task<ApplyCoordinationForMonitoringResponse> ApplyCoordinationForMonitoringWithOptionsAsync(ApplyCoordinationForMonitoringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -972,12 +1130,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ApplyCoordinationForMonitoringResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.
+         *
+         * @param request ApplyCoordinationForMonitoringRequest
+         * @return ApplyCoordinationForMonitoringResponse
+         */
         public ApplyCoordinationForMonitoringResponse ApplyCoordinationForMonitoring(ApplyCoordinationForMonitoringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ApplyCoordinationForMonitoringWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.
+         *
+         * @param request ApplyCoordinationForMonitoringRequest
+         * @return ApplyCoordinationForMonitoringResponse
+         */
         public async Task<ApplyCoordinationForMonitoringResponse> ApplyCoordinationForMonitoringAsync(ApplyCoordinationForMonitoringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -985,11 +1155,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers for which you want to allow image updates must be in the Running state.
-          *
-          * @param request ApproveFotaUpdateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ApproveFotaUpdateResponse
+         * @summary Allows you to upgrade images.
+         *
+         * @description The cloud computers for which you want to allow image updates must be in the Running state.
+         *
+         * @param request ApproveFotaUpdateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApproveFotaUpdateResponse
          */
         public ApproveFotaUpdateResponse ApproveFotaUpdateWithOptions(ApproveFotaUpdateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1027,11 +1199,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers for which you want to allow image updates must be in the Running state.
-          *
-          * @param request ApproveFotaUpdateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ApproveFotaUpdateResponse
+         * @summary Allows you to upgrade images.
+         *
+         * @description The cloud computers for which you want to allow image updates must be in the Running state.
+         *
+         * @param request ApproveFotaUpdateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApproveFotaUpdateResponse
          */
         public async Task<ApproveFotaUpdateResponse> ApproveFotaUpdateWithOptionsAsync(ApproveFotaUpdateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1069,10 +1243,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers for which you want to allow image updates must be in the Running state.
-          *
-          * @param request ApproveFotaUpdateRequest
-          * @return ApproveFotaUpdateResponse
+         * @summary Allows you to upgrade images.
+         *
+         * @description The cloud computers for which you want to allow image updates must be in the Running state.
+         *
+         * @param request ApproveFotaUpdateRequest
+         * @return ApproveFotaUpdateResponse
          */
         public ApproveFotaUpdateResponse ApproveFotaUpdate(ApproveFotaUpdateRequest request)
         {
@@ -1081,10 +1257,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers for which you want to allow image updates must be in the Running state.
-          *
-          * @param request ApproveFotaUpdateRequest
-          * @return ApproveFotaUpdateResponse
+         * @summary Allows you to upgrade images.
+         *
+         * @description The cloud computers for which you want to allow image updates must be in the Running state.
+         *
+         * @param request ApproveFotaUpdateRequest
+         * @return ApproveFotaUpdateResponse
          */
         public async Task<ApproveFotaUpdateResponse> ApproveFotaUpdateAsync(ApproveFotaUpdateRequest request)
         {
@@ -1092,6 +1270,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ApproveFotaUpdateWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.
+         *
+         * @param request AssociateNetworkPackageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AssociateNetworkPackageResponse
+         */
         public AssociateNetworkPackageResponse AssociateNetworkPackageWithOptions(AssociateNetworkPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1127,6 +1312,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AssociateNetworkPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.
+         *
+         * @param request AssociateNetworkPackageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AssociateNetworkPackageResponse
+         */
         public async Task<AssociateNetworkPackageResponse> AssociateNetworkPackageWithOptionsAsync(AssociateNetworkPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1162,12 +1354,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AssociateNetworkPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.
+         *
+         * @param request AssociateNetworkPackageRequest
+         * @return AssociateNetworkPackageResponse
+         */
         public AssociateNetworkPackageResponse AssociateNetworkPackage(AssociateNetworkPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateNetworkPackageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.
+         *
+         * @param request AssociateNetworkPackageRequest
+         * @return AssociateNetworkPackageResponse
+         */
         public async Task<AssociateNetworkPackageResponse> AssociateNetworkPackageAsync(AssociateNetworkPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1175,14 +1379,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Prerequisites
-          * *   A CEN instance is created.
-          * *   The office network is an advanced office network, and the account system type is convenient account.
-          * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
-          *
-          * @param request AttachCenRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AttachCenResponse
+         * @summary Binds an advanced office network to a Cloud Enterprise Network (CEN) instance.
+         *
+         * @description Prerequisites
+         * *   A CEN instance is created.
+         * *   The office network is an advanced office network, and the account system type is convenient account.
+         * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
+         *
+         * @param request AttachCenRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachCenResponse
          */
         public AttachCenResponse AttachCenWithOptions(AttachCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1228,14 +1434,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Prerequisites
-          * *   A CEN instance is created.
-          * *   The office network is an advanced office network, and the account system type is convenient account.
-          * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
-          *
-          * @param request AttachCenRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AttachCenResponse
+         * @summary Binds an advanced office network to a Cloud Enterprise Network (CEN) instance.
+         *
+         * @description Prerequisites
+         * *   A CEN instance is created.
+         * *   The office network is an advanced office network, and the account system type is convenient account.
+         * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
+         *
+         * @param request AttachCenRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachCenResponse
          */
         public async Task<AttachCenResponse> AttachCenWithOptionsAsync(AttachCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1281,13 +1489,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Prerequisites
-          * *   A CEN instance is created.
-          * *   The office network is an advanced office network, and the account system type is convenient account.
-          * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
-          *
-          * @param request AttachCenRequest
-          * @return AttachCenResponse
+         * @summary Binds an advanced office network to a Cloud Enterprise Network (CEN) instance.
+         *
+         * @description Prerequisites
+         * *   A CEN instance is created.
+         * *   The office network is an advanced office network, and the account system type is convenient account.
+         * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
+         *
+         * @param request AttachCenRequest
+         * @return AttachCenResponse
          */
         public AttachCenResponse AttachCen(AttachCenRequest request)
         {
@@ -1296,13 +1506,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Prerequisites
-          * *   A CEN instance is created.
-          * *   The office network is an advanced office network, and the account system type is convenient account.
-          * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
-          *
-          * @param request AttachCenRequest
-          * @return AttachCenResponse
+         * @summary Binds an advanced office network to a Cloud Enterprise Network (CEN) instance.
+         *
+         * @description Prerequisites
+         * *   A CEN instance is created.
+         * *   The office network is an advanced office network, and the account system type is convenient account.
+         * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
+         *
+         * @param request AttachCenRequest
+         * @return AttachCenResponse
          */
         public async Task<AttachCenResponse> AttachCenAsync(AttachCenRequest request)
         {
@@ -1310,6 +1522,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await AttachCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Binds a hardware client to a user.
+         *
+         * @param request AttachEndUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachEndUserResponse
+         */
         public AttachEndUserResponse AttachEndUserWithOptions(AttachEndUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1361,6 +1580,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AttachEndUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Binds a hardware client to a user.
+         *
+         * @param request AttachEndUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachEndUserResponse
+         */
         public async Task<AttachEndUserResponse> AttachEndUserWithOptionsAsync(AttachEndUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1412,18 +1638,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AttachEndUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Binds a hardware client to a user.
+         *
+         * @param request AttachEndUserRequest
+         * @return AttachEndUserResponse
+         */
         public AttachEndUserResponse AttachEndUser(AttachEndUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachEndUserWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Binds a hardware client to a user.
+         *
+         * @param request AttachEndUserRequest
+         * @return AttachEndUserResponse
+         */
         public async Task<AttachEndUserResponse> AttachEndUserAsync(AttachEndUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachEndUserWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Cancels an automatic snapshot policy for cloud computers.
+         *
+         * @param request CancelAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelAutoSnapshotPolicyResponse
+         */
         public CancelAutoSnapshotPolicyResponse CancelAutoSnapshotPolicyWithOptions(CancelAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1459,6 +1704,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CancelAutoSnapshotPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Cancels an automatic snapshot policy for cloud computers.
+         *
+         * @param request CancelAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelAutoSnapshotPolicyResponse
+         */
         public async Task<CancelAutoSnapshotPolicyResponse> CancelAutoSnapshotPolicyWithOptionsAsync(CancelAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1494,18 +1746,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CancelAutoSnapshotPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Cancels an automatic snapshot policy for cloud computers.
+         *
+         * @param request CancelAutoSnapshotPolicyRequest
+         * @return CancelAutoSnapshotPolicyResponse
+         */
         public CancelAutoSnapshotPolicyResponse CancelAutoSnapshotPolicy(CancelAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelAutoSnapshotPolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Cancels an automatic snapshot policy for cloud computers.
+         *
+         * @param request CancelAutoSnapshotPolicyRequest
+         * @return CancelAutoSnapshotPolicyResponse
+         */
         public async Task<CancelAutoSnapshotPolicyResponse> CancelAutoSnapshotPolicyAsync(CancelAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Cancels a file sharing task.
+         *
+         * @param request CancelCdsFileShareLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelCdsFileShareLinkResponse
+         */
         public CancelCdsFileShareLinkResponse CancelCdsFileShareLinkWithOptions(CancelCdsFileShareLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1537,6 +1808,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CancelCdsFileShareLinkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Cancels a file sharing task.
+         *
+         * @param request CancelCdsFileShareLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelCdsFileShareLinkResponse
+         */
         public async Task<CancelCdsFileShareLinkResponse> CancelCdsFileShareLinkWithOptionsAsync(CancelCdsFileShareLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1568,18 +1846,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CancelCdsFileShareLinkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Cancels a file sharing task.
+         *
+         * @param request CancelCdsFileShareLinkRequest
+         * @return CancelCdsFileShareLinkResponse
+         */
         public CancelCdsFileShareLinkResponse CancelCdsFileShareLink(CancelCdsFileShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelCdsFileShareLinkWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Cancels a file sharing task.
+         *
+         * @param request CancelCdsFileShareLinkRequest
+         * @return CancelCdsFileShareLinkResponse
+         */
         public async Task<CancelCdsFileShareLinkResponse> CancelCdsFileShareLinkAsync(CancelCdsFileShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelCdsFileShareLinkWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Cancels monitoring on stream collaboration.
+         *
+         * @param request CancelCoordinationForMonitoringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelCoordinationForMonitoringResponse
+         */
         public CancelCoordinationForMonitoringResponse CancelCoordinationForMonitoringWithOptions(CancelCoordinationForMonitoringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1619,6 +1916,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CancelCoordinationForMonitoringResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Cancels monitoring on stream collaboration.
+         *
+         * @param request CancelCoordinationForMonitoringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelCoordinationForMonitoringResponse
+         */
         public async Task<CancelCoordinationForMonitoringResponse> CancelCoordinationForMonitoringWithOptionsAsync(CancelCoordinationForMonitoringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1658,18 +1962,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CancelCoordinationForMonitoringResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Cancels monitoring on stream collaboration.
+         *
+         * @param request CancelCoordinationForMonitoringRequest
+         * @return CancelCoordinationForMonitoringResponse
+         */
         public CancelCoordinationForMonitoringResponse CancelCoordinationForMonitoring(CancelCoordinationForMonitoringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelCoordinationForMonitoringWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Cancels monitoring on stream collaboration.
+         *
+         * @param request CancelCoordinationForMonitoringRequest
+         * @return CancelCoordinationForMonitoringResponse
+         */
         public async Task<CancelCoordinationForMonitoringResponse> CancelCoordinationForMonitoringAsync(CancelCoordinationForMonitoringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelCoordinationForMonitoringWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Cancels the operation of copying an image to another region.
+         *
+         * @param request CancelCopyImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelCopyImageResponse
+         */
         public CancelCopyImageResponse CancelCopyImageWithOptions(CancelCopyImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1701,6 +2024,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CancelCopyImageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Cancels the operation of copying an image to another region.
+         *
+         * @param request CancelCopyImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelCopyImageResponse
+         */
         public async Task<CancelCopyImageResponse> CancelCopyImageWithOptionsAsync(CancelCopyImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1732,18 +2062,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CancelCopyImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Cancels the operation of copying an image to another region.
+         *
+         * @param request CancelCopyImageRequest
+         * @return CancelCopyImageResponse
+         */
         public CancelCopyImageResponse CancelCopyImage(CancelCopyImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelCopyImageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Cancels the operation of copying an image to another region.
+         *
+         * @param request CancelCopyImageRequest
+         * @return CancelCopyImageResponse
+         */
         public async Task<CancelCopyImageResponse> CancelCopyImageAsync(CancelCopyImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelCopyImageWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Clones an existing policy.
+         *
+         * @param request ClonePolicyGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ClonePolicyGroupResponse
+         */
         public ClonePolicyGroupResponse ClonePolicyGroupWithOptions(ClonePolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1779,6 +2128,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ClonePolicyGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Clones an existing policy.
+         *
+         * @param request ClonePolicyGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ClonePolicyGroupResponse
+         */
         public async Task<ClonePolicyGroupResponse> ClonePolicyGroupWithOptionsAsync(ClonePolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1814,18 +2170,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ClonePolicyGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Clones an existing policy.
+         *
+         * @param request ClonePolicyGroupRequest
+         * @return ClonePolicyGroupResponse
+         */
         public ClonePolicyGroupResponse ClonePolicyGroup(ClonePolicyGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ClonePolicyGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Clones an existing policy.
+         *
+         * @param request ClonePolicyGroupRequest
+         * @return ClonePolicyGroupResponse
+         */
         public async Task<ClonePolicyGroupResponse> ClonePolicyGroupAsync(ClonePolicyGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ClonePolicyGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Completes a file uploading task.
+         *
+         * @param request CompleteCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CompleteCdsFileResponse
+         */
         public CompleteCdsFileResponse CompleteCdsFileWithOptions(CompleteCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1873,6 +2248,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CompleteCdsFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Completes a file uploading task.
+         *
+         * @param request CompleteCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CompleteCdsFileResponse
+         */
         public async Task<CompleteCdsFileResponse> CompleteCdsFileWithOptionsAsync(CompleteCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1920,18 +2302,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CompleteCdsFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Completes a file uploading task.
+         *
+         * @param request CompleteCdsFileRequest
+         * @return CompleteCdsFileResponse
+         */
         public CompleteCdsFileResponse CompleteCdsFile(CompleteCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CompleteCdsFileWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Completes a file uploading task.
+         *
+         * @param request CompleteCdsFileRequest
+         * @return CompleteCdsFileResponse
+         */
         public async Task<CompleteCdsFileResponse> CompleteCdsFileAsync(CompleteCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CompleteCdsFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.
+         *
+         * @param request ConfigADConnectorTrustRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigADConnectorTrustResponse
+         */
         public ConfigADConnectorTrustResponse ConfigADConnectorTrustWithOptions(ConfigADConnectorTrustRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1971,6 +2372,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ConfigADConnectorTrustResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.
+         *
+         * @param request ConfigADConnectorTrustRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigADConnectorTrustResponse
+         */
         public async Task<ConfigADConnectorTrustResponse> ConfigADConnectorTrustWithOptionsAsync(ConfigADConnectorTrustRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2010,18 +2418,35 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ConfigADConnectorTrustResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.
+         *
+         * @param request ConfigADConnectorTrustRequest
+         * @return ConfigADConnectorTrustResponse
+         */
         public ConfigADConnectorTrustResponse ConfigADConnectorTrust(ConfigADConnectorTrustRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigADConnectorTrustWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.
+         *
+         * @param request ConfigADConnectorTrustRequest
+         * @return ConfigADConnectorTrustResponse
+         */
         public async Task<ConfigADConnectorTrustResponse> ConfigADConnectorTrustAsync(ConfigADConnectorTrustRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigADConnectorTrustWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request ConfigADConnectorUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigADConnectorUserResponse
+         */
         public ConfigADConnectorUserResponse ConfigADConnectorUserWithOptions(ConfigADConnectorUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2065,6 +2490,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ConfigADConnectorUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request ConfigADConnectorUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigADConnectorUserResponse
+         */
         public async Task<ConfigADConnectorUserResponse> ConfigADConnectorUserWithOptionsAsync(ConfigADConnectorUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2108,18 +2538,33 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ConfigADConnectorUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request ConfigADConnectorUserRequest
+         * @return ConfigADConnectorUserResponse
+         */
         public ConfigADConnectorUserResponse ConfigADConnectorUser(ConfigADConnectorUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigADConnectorUserWithOptions(request, runtime);
         }
 
+        /**
+         * @param request ConfigADConnectorUserRequest
+         * @return ConfigADConnectorUserResponse
+         */
         public async Task<ConfigADConnectorUserResponse> ConfigADConnectorUserAsync(ConfigADConnectorUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigADConnectorUserWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Copies a file or a directory.
+         *
+         * @param request CopyCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CopyCdsFileResponse
+         */
         public CopyCdsFileResponse CopyCdsFileWithOptions(CopyCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2179,6 +2624,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CopyCdsFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Copies a file or a directory.
+         *
+         * @param request CopyCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CopyCdsFileResponse
+         */
         public async Task<CopyCdsFileResponse> CopyCdsFileWithOptionsAsync(CopyCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2238,18 +2690,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CopyCdsFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Copies a file or a directory.
+         *
+         * @param request CopyCdsFileRequest
+         * @return CopyCdsFileResponse
+         */
         public CopyCdsFileResponse CopyCdsFile(CopyCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CopyCdsFileWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Copies a file or a directory.
+         *
+         * @param request CopyCdsFileRequest
+         * @return CopyCdsFileResponse
+         */
         public async Task<CopyCdsFileResponse> CopyCdsFileAsync(CopyCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CopyCdsFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.
+         *
+         * @param request CopyImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CopyImageResponse
+         */
         public CopyImageResponse CopyImageWithOptions(CopyImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2293,6 +2764,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CopyImageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.
+         *
+         * @param request CopyImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CopyImageResponse
+         */
         public async Task<CopyImageResponse> CopyImageWithOptionsAsync(CopyImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2336,12 +2814,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CopyImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.
+         *
+         * @param request CopyImageRequest
+         * @return CopyImageResponse
+         */
         public CopyImageResponse CopyImage(CopyImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CopyImageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.
+         *
+         * @param request CopyImageRequest
+         * @return CopyImageResponse
+         */
         public async Task<CopyImageResponse> CopyImageAsync(CopyImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2349,11 +2839,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](~~188395~~).
-          *
-          * @param request CreateADConnectorDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateADConnectorDirectoryResponse
+         * @summary Creates a directory of the Active Directory (AD) type.
+         *
+         * @description An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         *
+         * @param request CreateADConnectorDirectoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateADConnectorDirectoryResponse
          */
         public CreateADConnectorDirectoryResponse CreateADConnectorDirectoryWithOptions(CreateADConnectorDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2431,11 +2923,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](~~188395~~).
-          *
-          * @param request CreateADConnectorDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateADConnectorDirectoryResponse
+         * @summary Creates a directory of the Active Directory (AD) type.
+         *
+         * @description An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         *
+         * @param request CreateADConnectorDirectoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateADConnectorDirectoryResponse
          */
         public async Task<CreateADConnectorDirectoryResponse> CreateADConnectorDirectoryWithOptionsAsync(CreateADConnectorDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2513,10 +3007,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](~~188395~~).
-          *
-          * @param request CreateADConnectorDirectoryRequest
-          * @return CreateADConnectorDirectoryResponse
+         * @summary Creates a directory of the Active Directory (AD) type.
+         *
+         * @description An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         *
+         * @param request CreateADConnectorDirectoryRequest
+         * @return CreateADConnectorDirectoryResponse
          */
         public CreateADConnectorDirectoryResponse CreateADConnectorDirectory(CreateADConnectorDirectoryRequest request)
         {
@@ -2525,10 +3021,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](~~188395~~).
-          *
-          * @param request CreateADConnectorDirectoryRequest
-          * @return CreateADConnectorDirectoryResponse
+         * @summary Creates a directory of the Active Directory (AD) type.
+         *
+         * @description An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         *
+         * @param request CreateADConnectorDirectoryRequest
+         * @return CreateADConnectorDirectoryResponse
          */
         public async Task<CreateADConnectorDirectoryResponse> CreateADConnectorDirectoryAsync(CreateADConnectorDirectoryRequest request)
         {
@@ -2537,17 +3035,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](~~188395~~).
-          * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
-          * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
-          * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship with the AD office network.
-          * 3.  Call the [ListUserAdOrganizationUnits](~~311259~~) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and administrator for the AD office network.
-          *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
-          * For more information, see [Create and manage enterprise AD office networks](~~214469~~).
-          *
-          * @param request CreateADConnectorOfficeSiteRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateADConnectorOfficeSiteResponse
+         * @summary Creates an enterprise Active Directory (AD) office network (formerly workspace). Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.
+         *
+         * @description When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
+         * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
+         * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](https://help.aliyun.com/document_detail/311258.html) operation to configure the trust relationship with the AD office network.
+         * 3.  Call the [ListUserAdOrganizationUnits](https://help.aliyun.com/document_detail/311259.html) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](https://help.aliyun.com/document_detail/311262.html) operation to specify an OU and administrator for the AD office network.
+         *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
+         * For more information, see [Create and manage enterprise AD office networks](https://help.aliyun.com/document_detail/214469.html).
+         *
+         * @param request CreateADConnectorOfficeSiteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateADConnectorOfficeSiteResponse
          */
         public CreateADConnectorOfficeSiteResponse CreateADConnectorOfficeSiteWithOptions(CreateADConnectorOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2556,6 +3056,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdHostname))
             {
                 query["AdHostname"] = request.AdHostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupDCHostname))
+            {
+                query["BackupDCHostname"] = request.BackupDCHostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupDns))
+            {
+                query["BackupDns"] = request.BackupDns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
             {
@@ -2653,17 +3161,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](~~188395~~).
-          * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
-          * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
-          * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship with the AD office network.
-          * 3.  Call the [ListUserAdOrganizationUnits](~~311259~~) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and administrator for the AD office network.
-          *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
-          * For more information, see [Create and manage enterprise AD office networks](~~214469~~).
-          *
-          * @param request CreateADConnectorOfficeSiteRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateADConnectorOfficeSiteResponse
+         * @summary Creates an enterprise Active Directory (AD) office network (formerly workspace). Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.
+         *
+         * @description When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
+         * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
+         * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](https://help.aliyun.com/document_detail/311258.html) operation to configure the trust relationship with the AD office network.
+         * 3.  Call the [ListUserAdOrganizationUnits](https://help.aliyun.com/document_detail/311259.html) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](https://help.aliyun.com/document_detail/311262.html) operation to specify an OU and administrator for the AD office network.
+         *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
+         * For more information, see [Create and manage enterprise AD office networks](https://help.aliyun.com/document_detail/214469.html).
+         *
+         * @param request CreateADConnectorOfficeSiteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateADConnectorOfficeSiteResponse
          */
         public async Task<CreateADConnectorOfficeSiteResponse> CreateADConnectorOfficeSiteWithOptionsAsync(CreateADConnectorOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2672,6 +3182,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdHostname))
             {
                 query["AdHostname"] = request.AdHostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupDCHostname))
+            {
+                query["BackupDCHostname"] = request.BackupDCHostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupDns))
+            {
+                query["BackupDns"] = request.BackupDns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
             {
@@ -2769,16 +3287,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](~~188395~~).
-          * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
-          * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
-          * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship with the AD office network.
-          * 3.  Call the [ListUserAdOrganizationUnits](~~311259~~) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and administrator for the AD office network.
-          *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
-          * For more information, see [Create and manage enterprise AD office networks](~~214469~~).
-          *
-          * @param request CreateADConnectorOfficeSiteRequest
-          * @return CreateADConnectorOfficeSiteResponse
+         * @summary Creates an enterprise Active Directory (AD) office network (formerly workspace). Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.
+         *
+         * @description When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
+         * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
+         * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](https://help.aliyun.com/document_detail/311258.html) operation to configure the trust relationship with the AD office network.
+         * 3.  Call the [ListUserAdOrganizationUnits](https://help.aliyun.com/document_detail/311259.html) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](https://help.aliyun.com/document_detail/311262.html) operation to specify an OU and administrator for the AD office network.
+         *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
+         * For more information, see [Create and manage enterprise AD office networks](https://help.aliyun.com/document_detail/214469.html).
+         *
+         * @param request CreateADConnectorOfficeSiteRequest
+         * @return CreateADConnectorOfficeSiteResponse
          */
         public CreateADConnectorOfficeSiteResponse CreateADConnectorOfficeSite(CreateADConnectorOfficeSiteRequest request)
         {
@@ -2787,16 +3307,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](~~188395~~).
-          * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
-          * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
-          * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship with the AD office network.
-          * 3.  Call the [ListUserAdOrganizationUnits](~~311259~~) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and administrator for the AD office network.
-          *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
-          * For more information, see [Create and manage enterprise AD office networks](~~214469~~).
-          *
-          * @param request CreateADConnectorOfficeSiteRequest
-          * @return CreateADConnectorOfficeSiteResponse
+         * @summary Creates an enterprise Active Directory (AD) office network (formerly workspace). Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.
+         *
+         * @description When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
+         * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
+         * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](https://help.aliyun.com/document_detail/311258.html) operation to configure the trust relationship with the AD office network.
+         * 3.  Call the [ListUserAdOrganizationUnits](https://help.aliyun.com/document_detail/311259.html) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](https://help.aliyun.com/document_detail/311262.html) operation to specify an OU and administrator for the AD office network.
+         *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
+         * For more information, see [Create and manage enterprise AD office networks](https://help.aliyun.com/document_detail/214469.html).
+         *
+         * @param request CreateADConnectorOfficeSiteRequest
+         * @return CreateADConnectorOfficeSiteResponse
          */
         public async Task<CreateADConnectorOfficeSiteResponse> CreateADConnectorOfficeSiteAsync(CreateADConnectorOfficeSiteRequest request)
         {
@@ -2804,6 +3326,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateADConnectorOfficeSiteWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates an Apsara File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.
+         *
+         * @param request CreateAndBindNasFileSystemRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAndBindNasFileSystemResponse
+         */
         public CreateAndBindNasFileSystemResponse CreateAndBindNasFileSystemWithOptions(CreateAndBindNasFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2859,6 +3388,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateAndBindNasFileSystemResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates an Apsara File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.
+         *
+         * @param request CreateAndBindNasFileSystemRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAndBindNasFileSystemResponse
+         */
         public async Task<CreateAndBindNasFileSystemResponse> CreateAndBindNasFileSystemWithOptionsAsync(CreateAndBindNasFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2914,12 +3450,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateAndBindNasFileSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates an Apsara File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.
+         *
+         * @param request CreateAndBindNasFileSystemRequest
+         * @return CreateAndBindNasFileSystemResponse
+         */
         public CreateAndBindNasFileSystemResponse CreateAndBindNasFileSystem(CreateAndBindNasFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAndBindNasFileSystemWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates an Apsara File Storage NAS (NAS) file system and mount the file system to the workspace in which a desktop group resides.
+         *
+         * @param request CreateAndBindNasFileSystemRequest
+         * @return CreateAndBindNasFileSystemResponse
+         */
         public async Task<CreateAndBindNasFileSystemResponse> CreateAndBindNasFileSystemAsync(CreateAndBindNasFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2927,11 +3475,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.
-          *
-          * @param request CreateAutoSnapshotPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAutoSnapshotPolicyResponse
+         * @summary Creates an automatic snapshot policy. WUYING WorkSpace automatically creates snapshots based on the time specified by the cron expression in the automatic snapshot policy.
+         *
+         * @description You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.
+         *
+         * @param request CreateAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAutoSnapshotPolicyResponse
          */
         public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicyWithOptions(CreateAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2973,11 +3523,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.
-          *
-          * @param request CreateAutoSnapshotPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAutoSnapshotPolicyResponse
+         * @summary Creates an automatic snapshot policy. WUYING WorkSpace automatically creates snapshots based on the time specified by the cron expression in the automatic snapshot policy.
+         *
+         * @description You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.
+         *
+         * @param request CreateAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAutoSnapshotPolicyResponse
          */
         public async Task<CreateAutoSnapshotPolicyResponse> CreateAutoSnapshotPolicyWithOptionsAsync(CreateAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3019,10 +3571,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.
-          *
-          * @param request CreateAutoSnapshotPolicyRequest
-          * @return CreateAutoSnapshotPolicyResponse
+         * @summary Creates an automatic snapshot policy. WUYING WorkSpace automatically creates snapshots based on the time specified by the cron expression in the automatic snapshot policy.
+         *
+         * @description You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.
+         *
+         * @param request CreateAutoSnapshotPolicyRequest
+         * @return CreateAutoSnapshotPolicyResponse
          */
         public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest request)
         {
@@ -3031,10 +3585,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.
-          *
-          * @param request CreateAutoSnapshotPolicyRequest
-          * @return CreateAutoSnapshotPolicyResponse
+         * @summary Creates an automatic snapshot policy. WUYING WorkSpace automatically creates snapshots based on the time specified by the cron expression in the automatic snapshot policy.
+         *
+         * @description You can call the operation to create an automatic snapshot policy based on a CRON expression. Then, the system automatically creates snapshots of a cloud desktop based on the policy.
+         *
+         * @param request CreateAutoSnapshotPolicyRequest
+         * @return CreateAutoSnapshotPolicyResponse
          */
         public async Task<CreateAutoSnapshotPolicyResponse> CreateAutoSnapshotPolicyAsync(CreateAutoSnapshotPolicyRequest request)
         {
@@ -3043,11 +3599,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
-          *
-          * @param request CreateBundleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateBundleResponse
+         * @summary Creates a custom cloud computer template.
+         *
+         * @description Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
+         *
+         * @param request CreateBundleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateBundleResponse
          */
         public CreateBundleResponse CreateBundleWithOptions(CreateBundleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3113,11 +3671,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
-          *
-          * @param request CreateBundleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateBundleResponse
+         * @summary Creates a custom cloud computer template.
+         *
+         * @description Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
+         *
+         * @param request CreateBundleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateBundleResponse
          */
         public async Task<CreateBundleResponse> CreateBundleWithOptionsAsync(CreateBundleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3183,10 +3743,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
-          *
-          * @param request CreateBundleRequest
-          * @return CreateBundleResponse
+         * @summary Creates a custom cloud computer template.
+         *
+         * @description Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
+         *
+         * @param request CreateBundleRequest
+         * @return CreateBundleResponse
          */
         public CreateBundleResponse CreateBundle(CreateBundleRequest request)
         {
@@ -3195,10 +3757,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
-          *
-          * @param request CreateBundleRequest
-          * @return CreateBundleResponse
+         * @summary Creates a custom cloud computer template.
+         *
+         * @description Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
+         *
+         * @param request CreateBundleRequest
+         * @return CreateBundleResponse
          */
         public async Task<CreateBundleResponse> CreateBundleAsync(CreateBundleRequest request)
         {
@@ -3207,11 +3771,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
-          *
-          * @param request CreateCdsFileRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCdsFileResponse
+         * @summary Uploads a file to a cloud disk.
+         *
+         * @description After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
+         *
+         * @param request CreateCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdsFileResponse
          */
         public CreateCdsFileResponse CreateCdsFileWithOptions(CreateCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3277,11 +3843,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
-          *
-          * @param request CreateCdsFileRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCdsFileResponse
+         * @summary Uploads a file to a cloud disk.
+         *
+         * @description After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
+         *
+         * @param request CreateCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdsFileResponse
          */
         public async Task<CreateCdsFileResponse> CreateCdsFileWithOptionsAsync(CreateCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3347,10 +3915,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
-          *
-          * @param request CreateCdsFileRequest
-          * @return CreateCdsFileResponse
+         * @summary Uploads a file to a cloud disk.
+         *
+         * @description After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
+         *
+         * @param request CreateCdsFileRequest
+         * @return CreateCdsFileResponse
          */
         public CreateCdsFileResponse CreateCdsFile(CreateCdsFileRequest request)
         {
@@ -3359,10 +3929,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
-          *
-          * @param request CreateCdsFileRequest
-          * @return CreateCdsFileResponse
+         * @summary Uploads a file to a cloud disk.
+         *
+         * @description After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
+         *
+         * @param request CreateCdsFileRequest
+         * @return CreateCdsFileResponse
          */
         public async Task<CreateCdsFileResponse> CreateCdsFileAsync(CreateCdsFileRequest request)
         {
@@ -3370,6 +3942,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateCdsFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a file sharing task.
+         *
+         * @param request CreateCdsFileShareLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdsFileShareLinkResponse
+         */
         public CreateCdsFileShareLinkResponse CreateCdsFileShareLinkWithOptions(CreateCdsFileShareLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3449,6 +4028,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCdsFileShareLinkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a file sharing task.
+         *
+         * @param request CreateCdsFileShareLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdsFileShareLinkResponse
+         */
         public async Task<CreateCdsFileShareLinkResponse> CreateCdsFileShareLinkWithOptionsAsync(CreateCdsFileShareLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3528,18 +4114,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCdsFileShareLinkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a file sharing task.
+         *
+         * @param request CreateCdsFileShareLinkRequest
+         * @return CreateCdsFileShareLinkResponse
+         */
         public CreateCdsFileShareLinkResponse CreateCdsFileShareLink(CreateCdsFileShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCdsFileShareLinkWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a file sharing task.
+         *
+         * @param request CreateCdsFileShareLinkRequest
+         * @return CreateCdsFileShareLinkResponse
+         */
         public async Task<CreateCdsFileShareLinkResponse> CreateCdsFileShareLinkAsync(CreateCdsFileShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCdsFileShareLinkWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a cloud disk.
+         *
+         * @param request CreateCloudDriveServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCloudDriveServiceResponse
+         */
         public CreateCloudDriveServiceResponse CreateCloudDriveServiceWithOptions(CreateCloudDriveServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3631,6 +4236,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCloudDriveServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a cloud disk.
+         *
+         * @param request CreateCloudDriveServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCloudDriveServiceResponse
+         */
         public async Task<CreateCloudDriveServiceResponse> CreateCloudDriveServiceWithOptionsAsync(CreateCloudDriveServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3722,18 +4334,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCloudDriveServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a cloud disk.
+         *
+         * @param request CreateCloudDriveServiceRequest
+         * @return CreateCloudDriveServiceResponse
+         */
         public CreateCloudDriveServiceResponse CreateCloudDriveService(CreateCloudDriveServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCloudDriveServiceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a cloud disk.
+         *
+         * @param request CreateCloudDriveServiceRequest
+         * @return CreateCloudDriveServiceResponse
+         */
         public async Task<CreateCloudDriveServiceResponse> CreateCloudDriveServiceAsync(CreateCloudDriveServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCloudDriveServiceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates the users of a cloud disk.
+         *
+         * @param request CreateCloudDriveUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCloudDriveUsersResponse
+         */
         public CreateCloudDriveUsersResponse CreateCloudDriveUsersWithOptions(CreateCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3773,6 +4404,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCloudDriveUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates the users of a cloud disk.
+         *
+         * @param request CreateCloudDriveUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCloudDriveUsersResponse
+         */
         public async Task<CreateCloudDriveUsersResponse> CreateCloudDriveUsersWithOptionsAsync(CreateCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3812,12 +4450,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCloudDriveUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates the users of a cloud disk.
+         *
+         * @param request CreateCloudDriveUsersRequest
+         * @return CreateCloudDriveUsersResponse
+         */
         public CreateCloudDriveUsersResponse CreateCloudDriveUsers(CreateCloudDriveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCloudDriveUsersWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates the users of a cloud disk.
+         *
+         * @param request CreateCloudDriveUsersRequest
+         * @return CreateCloudDriveUsersResponse
+         */
         public async Task<CreateCloudDriveUsersResponse> CreateCloudDriveUsersAsync(CreateCloudDriveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3825,13 +4475,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you call this operation to create a desktop group, make sure that the following operations are complete:
-          * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~) of desktop groups.
-          * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
-          *
-          * @param request CreateDesktopGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDesktopGroupResponse
+         * @summary Creates a cloud computer pool (formerly desktop group).
+         *
+         * @description Before you call this operation to create a desktop group, make sure that the following operations are complete:
+         * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](https://help.aliyun.com/document_detail/290959.html) of desktop groups.
+         * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
+         *
+         * @param request CreateDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDesktopGroupResponse
          */
         public CreateDesktopGroupResponse CreateDesktopGroupWithOptions(CreateDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3977,6 +4629,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["StopDuration"] = request.StopDuration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeEncryptionEnabled))
             {
                 query["VolumeEncryptionEnabled"] = request.VolumeEncryptionEnabled;
@@ -4009,13 +4665,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you call this operation to create a desktop group, make sure that the following operations are complete:
-          * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~) of desktop groups.
-          * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
-          *
-          * @param request CreateDesktopGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDesktopGroupResponse
+         * @summary Creates a cloud computer pool (formerly desktop group).
+         *
+         * @description Before you call this operation to create a desktop group, make sure that the following operations are complete:
+         * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](https://help.aliyun.com/document_detail/290959.html) of desktop groups.
+         * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
+         *
+         * @param request CreateDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDesktopGroupResponse
          */
         public async Task<CreateDesktopGroupResponse> CreateDesktopGroupWithOptionsAsync(CreateDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4161,6 +4819,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["StopDuration"] = request.StopDuration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeEncryptionEnabled))
             {
                 query["VolumeEncryptionEnabled"] = request.VolumeEncryptionEnabled;
@@ -4193,12 +4855,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you call this operation to create a desktop group, make sure that the following operations are complete:
-          * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~) of desktop groups.
-          * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
-          *
-          * @param request CreateDesktopGroupRequest
-          * @return CreateDesktopGroupResponse
+         * @summary Creates a cloud computer pool (formerly desktop group).
+         *
+         * @description Before you call this operation to create a desktop group, make sure that the following operations are complete:
+         * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](https://help.aliyun.com/document_detail/290959.html) of desktop groups.
+         * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
+         *
+         * @param request CreateDesktopGroupRequest
+         * @return CreateDesktopGroupResponse
          */
         public CreateDesktopGroupResponse CreateDesktopGroup(CreateDesktopGroupRequest request)
         {
@@ -4207,12 +4871,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you call this operation to create a desktop group, make sure that the following operations are complete:
-          * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~) of desktop groups.
-          * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
-          *
-          * @param request CreateDesktopGroupRequest
-          * @return CreateDesktopGroupResponse
+         * @summary Creates a cloud computer pool (formerly desktop group).
+         *
+         * @description Before you call this operation to create a desktop group, make sure that the following operations are complete:
+         * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](https://help.aliyun.com/document_detail/290959.html) of desktop groups.
+         * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
+         *
+         * @param request CreateDesktopGroupRequest
+         * @return CreateDesktopGroupResponse
          */
         public async Task<CreateDesktopGroupResponse> CreateDesktopGroupAsync(CreateDesktopGroupRequest request)
         {
@@ -4220,6 +4886,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateDesktopGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 创建桌面超卖组
+         *
+         * @param request CreateDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDesktopOversoldGroupResponse
+         */
         public CreateDesktopOversoldGroupResponse CreateDesktopOversoldGroupWithOptions(CreateDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4307,6 +4980,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建桌面超卖组
+         *
+         * @param request CreateDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDesktopOversoldGroupResponse
+         */
         public async Task<CreateDesktopOversoldGroupResponse> CreateDesktopOversoldGroupWithOptionsAsync(CreateDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4394,12 +5074,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建桌面超卖组
+         *
+         * @param request CreateDesktopOversoldGroupRequest
+         * @return CreateDesktopOversoldGroupResponse
+         */
         public CreateDesktopOversoldGroupResponse CreateDesktopOversoldGroup(CreateDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDesktopOversoldGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 创建桌面超卖组
+         *
+         * @param request CreateDesktopOversoldGroupRequest
+         * @return CreateDesktopOversoldGroupResponse
+         */
         public async Task<CreateDesktopOversoldGroupResponse> CreateDesktopOversoldGroupAsync(CreateDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4407,17 +5099,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you create cloud computers, complete the following preparations:
-          * *   An office network (formerly called workspace) and users are created. For more information, see:
-          *     *   Convenience office network: [CreateSimpleOfficeSite](~~215416~~) and [CreateUsers](~~437832~~).
-          *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](~~215417~~) and [Create an AD user](~~188619~~).
-          * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](~~188883~~) operation to create a template.
-          * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](~~188889~~) operation to create a policy.
-          * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
-          *
-          * @param request CreateDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDesktopsResponse
+         * @summary Creates cloud computers. If you specify end users when you create cloud computers, the cloud computers are assigned to the end users after the cloud computers are created.
+         *
+         * @description Before you create cloud computers, complete the following preparations:
+         * *   An office network (formerly called workspace) and users are created. For more information, see:
+         *     *   Convenience office network: [CreateSimpleOfficeSite](https://help.aliyun.com/document_detail/215416.html) and [CreateUsers](https://help.aliyun.com/document_detail/437832.html).
+         *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](https://help.aliyun.com/document_detail/215417.html) and [Create an AD user](https://help.aliyun.com/document_detail/188619.html).
+         * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](https://help.aliyun.com/document_detail/188883.html) operation to create a template.
+         * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](https://help.aliyun.com/document_detail/188889.html) operation to create a policy.
+         * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
+         *
+         * @param request CreateDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDesktopsResponse
          */
         public CreateDesktopsResponse CreateDesktopsWithOptions(CreateDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4555,17 +5249,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you create cloud computers, complete the following preparations:
-          * *   An office network (formerly called workspace) and users are created. For more information, see:
-          *     *   Convenience office network: [CreateSimpleOfficeSite](~~215416~~) and [CreateUsers](~~437832~~).
-          *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](~~215417~~) and [Create an AD user](~~188619~~).
-          * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](~~188883~~) operation to create a template.
-          * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](~~188889~~) operation to create a policy.
-          * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
-          *
-          * @param request CreateDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDesktopsResponse
+         * @summary Creates cloud computers. If you specify end users when you create cloud computers, the cloud computers are assigned to the end users after the cloud computers are created.
+         *
+         * @description Before you create cloud computers, complete the following preparations:
+         * *   An office network (formerly called workspace) and users are created. For more information, see:
+         *     *   Convenience office network: [CreateSimpleOfficeSite](https://help.aliyun.com/document_detail/215416.html) and [CreateUsers](https://help.aliyun.com/document_detail/437832.html).
+         *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](https://help.aliyun.com/document_detail/215417.html) and [Create an AD user](https://help.aliyun.com/document_detail/188619.html).
+         * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](https://help.aliyun.com/document_detail/188883.html) operation to create a template.
+         * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](https://help.aliyun.com/document_detail/188889.html) operation to create a policy.
+         * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
+         *
+         * @param request CreateDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDesktopsResponse
          */
         public async Task<CreateDesktopsResponse> CreateDesktopsWithOptionsAsync(CreateDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4703,16 +5399,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you create cloud computers, complete the following preparations:
-          * *   An office network (formerly called workspace) and users are created. For more information, see:
-          *     *   Convenience office network: [CreateSimpleOfficeSite](~~215416~~) and [CreateUsers](~~437832~~).
-          *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](~~215417~~) and [Create an AD user](~~188619~~).
-          * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](~~188883~~) operation to create a template.
-          * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](~~188889~~) operation to create a policy.
-          * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
-          *
-          * @param request CreateDesktopsRequest
-          * @return CreateDesktopsResponse
+         * @summary Creates cloud computers. If you specify end users when you create cloud computers, the cloud computers are assigned to the end users after the cloud computers are created.
+         *
+         * @description Before you create cloud computers, complete the following preparations:
+         * *   An office network (formerly called workspace) and users are created. For more information, see:
+         *     *   Convenience office network: [CreateSimpleOfficeSite](https://help.aliyun.com/document_detail/215416.html) and [CreateUsers](https://help.aliyun.com/document_detail/437832.html).
+         *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](https://help.aliyun.com/document_detail/215417.html) and [Create an AD user](https://help.aliyun.com/document_detail/188619.html).
+         * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](https://help.aliyun.com/document_detail/188883.html) operation to create a template.
+         * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](https://help.aliyun.com/document_detail/188889.html) operation to create a policy.
+         * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
+         *
+         * @param request CreateDesktopsRequest
+         * @return CreateDesktopsResponse
          */
         public CreateDesktopsResponse CreateDesktops(CreateDesktopsRequest request)
         {
@@ -4721,16 +5419,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you create cloud computers, complete the following preparations:
-          * *   An office network (formerly called workspace) and users are created. For more information, see:
-          *     *   Convenience office network: [CreateSimpleOfficeSite](~~215416~~) and [CreateUsers](~~437832~~).
-          *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](~~215417~~) and [Create an AD user](~~188619~~).
-          * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](~~188883~~) operation to create a template.
-          * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](~~188889~~) operation to create a policy.
-          * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
-          *
-          * @param request CreateDesktopsRequest
-          * @return CreateDesktopsResponse
+         * @summary Creates cloud computers. If you specify end users when you create cloud computers, the cloud computers are assigned to the end users after the cloud computers are created.
+         *
+         * @description Before you create cloud computers, complete the following preparations:
+         * *   An office network (formerly called workspace) and users are created. For more information, see:
+         *     *   Convenience office network: [CreateSimpleOfficeSite](https://help.aliyun.com/document_detail/215416.html) and [CreateUsers](https://help.aliyun.com/document_detail/437832.html).
+         *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](https://help.aliyun.com/document_detail/215417.html) and [Create an AD user](https://help.aliyun.com/document_detail/188619.html).
+         * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](https://help.aliyun.com/document_detail/188883.html) operation to create a template.
+         * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](https://help.aliyun.com/document_detail/188889.html) operation to create a policy.
+         * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
+         *
+         * @param request CreateDesktopsRequest
+         * @return CreateDesktopsResponse
          */
         public async Task<CreateDesktopsResponse> CreateDesktopsAsync(CreateDesktopsRequest request)
         {
@@ -4738,6 +5438,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateDesktopsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables the disk encryption feature and adds the service-linked role that is encrypted by Cloud Drive Service to a Resource Access Management (RAM) user.
+         *
+         * @param request CreateDiskEncryptionServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDiskEncryptionServiceResponse
+         */
         public CreateDiskEncryptionServiceResponse CreateDiskEncryptionServiceWithOptions(CreateDiskEncryptionServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4765,6 +5472,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateDiskEncryptionServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables the disk encryption feature and adds the service-linked role that is encrypted by Cloud Drive Service to a Resource Access Management (RAM) user.
+         *
+         * @param request CreateDiskEncryptionServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDiskEncryptionServiceResponse
+         */
         public async Task<CreateDiskEncryptionServiceResponse> CreateDiskEncryptionServiceWithOptionsAsync(CreateDiskEncryptionServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4792,18 +5506,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateDiskEncryptionServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables the disk encryption feature and adds the service-linked role that is encrypted by Cloud Drive Service to a Resource Access Management (RAM) user.
+         *
+         * @param request CreateDiskEncryptionServiceRequest
+         * @return CreateDiskEncryptionServiceResponse
+         */
         public CreateDiskEncryptionServiceResponse CreateDiskEncryptionService(CreateDiskEncryptionServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDiskEncryptionServiceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables the disk encryption feature and adds the service-linked role that is encrypted by Cloud Drive Service to a Resource Access Management (RAM) user.
+         *
+         * @param request CreateDiskEncryptionServiceRequest
+         * @return CreateDiskEncryptionServiceResponse
+         */
         public async Task<CreateDiskEncryptionServiceResponse> CreateDiskEncryptionServiceAsync(CreateDiskEncryptionServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDiskEncryptionServiceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a custom image based on a deployed cloud computer. Then, you can use the custom image to create cloud computers that have the same configurations. This prevents the repeated settings when you create cloud computers.
+         *
+         * @param request CreateImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateImageResponse
+         */
         public CreateImageResponse CreateImageWithOptions(CreateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4863,6 +5596,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateImageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a custom image based on a deployed cloud computer. Then, you can use the custom image to create cloud computers that have the same configurations. This prevents the repeated settings when you create cloud computers.
+         *
+         * @param request CreateImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateImageResponse
+         */
         public async Task<CreateImageResponse> CreateImageWithOptionsAsync(CreateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4922,18 +5662,35 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a custom image based on a deployed cloud computer. Then, you can use the custom image to create cloud computers that have the same configurations. This prevents the repeated settings when you create cloud computers.
+         *
+         * @param request CreateImageRequest
+         * @return CreateImageResponse
+         */
         public CreateImageResponse CreateImage(CreateImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateImageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a custom image based on a deployed cloud computer. Then, you can use the custom image to create cloud computers that have the same configurations. This prevents the repeated settings when you create cloud computers.
+         *
+         * @param request CreateImageRequest
+         * @return CreateImageResponse
+         */
         public async Task<CreateImageResponse> CreateImageAsync(CreateImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateImageWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request CreateNASFileSystemRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNASFileSystemResponse
+         */
         public CreateNASFileSystemResponse CreateNASFileSystemWithOptions(CreateNASFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4981,6 +5738,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateNASFileSystemResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request CreateNASFileSystemRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNASFileSystemResponse
+         */
         public async Task<CreateNASFileSystemResponse> CreateNASFileSystemWithOptionsAsync(CreateNASFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5028,18 +5790,33 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateNASFileSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request CreateNASFileSystemRequest
+         * @return CreateNASFileSystemResponse
+         */
         public CreateNASFileSystemResponse CreateNASFileSystem(CreateNASFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNASFileSystemWithOptions(request, runtime);
         }
 
+        /**
+         * @param request CreateNASFileSystemRequest
+         * @return CreateNASFileSystemResponse
+         */
         public async Task<CreateNASFileSystemResponse> CreateNASFileSystemAsync(CreateNASFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNASFileSystemWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a premium bandwidth plan for an office network.
+         *
+         * @param request CreateNetworkPackageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNetworkPackageResponse
+         */
         public CreateNetworkPackageResponse CreateNetworkPackageWithOptions(CreateNetworkPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5103,6 +5880,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateNetworkPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a premium bandwidth plan for an office network.
+         *
+         * @param request CreateNetworkPackageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNetworkPackageResponse
+         */
         public async Task<CreateNetworkPackageResponse> CreateNetworkPackageWithOptionsAsync(CreateNetworkPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5166,12 +5950,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateNetworkPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a premium bandwidth plan for an office network.
+         *
+         * @param request CreateNetworkPackageRequest
+         * @return CreateNetworkPackageResponse
+         */
         public CreateNetworkPackageResponse CreateNetworkPackage(CreateNetworkPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNetworkPackageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a premium bandwidth plan for an office network.
+         *
+         * @param request CreateNetworkPackageRequest
+         * @return CreateNetworkPackageResponse
+         */
         public async Task<CreateNetworkPackageResponse> CreateNetworkPackageAsync(CreateNetworkPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5179,11 +5975,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see [Policy overview](~~189345~~).
-          *
-          * @param request CreatePolicyGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreatePolicyGroupResponse
+         * @summary Creates a policy.
+         *
+         * @description A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see [Policy overview](https://help.aliyun.com/document_detail/189345.html).
+         *
+         * @param request CreatePolicyGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreatePolicyGroupResponse
          */
         public CreatePolicyGroupResponse CreatePolicyGroupWithOptions(CreatePolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5256,6 +6054,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 query["LocalDrive"] = request.LocalDrive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReconnectTime))
+            {
+                query["MaxReconnectTime"] = request.MaxReconnectTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -5421,11 +6223,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see [Policy overview](~~189345~~).
-          *
-          * @param request CreatePolicyGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreatePolicyGroupResponse
+         * @summary Creates a policy.
+         *
+         * @description A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see [Policy overview](https://help.aliyun.com/document_detail/189345.html).
+         *
+         * @param request CreatePolicyGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreatePolicyGroupResponse
          */
         public async Task<CreatePolicyGroupResponse> CreatePolicyGroupWithOptionsAsync(CreatePolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5498,6 +6302,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 query["LocalDrive"] = request.LocalDrive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReconnectTime))
+            {
+                query["MaxReconnectTime"] = request.MaxReconnectTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -5663,10 +6471,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see [Policy overview](~~189345~~).
-          *
-          * @param request CreatePolicyGroupRequest
-          * @return CreatePolicyGroupResponse
+         * @summary Creates a policy.
+         *
+         * @description A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see [Policy overview](https://help.aliyun.com/document_detail/189345.html).
+         *
+         * @param request CreatePolicyGroupRequest
+         * @return CreatePolicyGroupResponse
          */
         public CreatePolicyGroupResponse CreatePolicyGroup(CreatePolicyGroupRequest request)
         {
@@ -5675,10 +6485,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see [Policy overview](~~189345~~).
-          *
-          * @param request CreatePolicyGroupRequest
-          * @return CreatePolicyGroupResponse
+         * @summary Creates a policy.
+         *
+         * @description A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see [Policy overview](https://help.aliyun.com/document_detail/189345.html).
+         *
+         * @param request CreatePolicyGroupRequest
+         * @return CreatePolicyGroupResponse
          */
         public async Task<CreatePolicyGroupResponse> CreatePolicyGroupAsync(CreatePolicyGroupRequest request)
         {
@@ -5687,13 +6499,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you create a RAM directory, complete the following preparations:
-          * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by WUYING Workspace.
-          * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by WUYING Workspace. You can call the [DescribeZones](~~196648~~) operation to obtain the most recent zone list for a region supported by WUYING Workspace.
-          *
-          * @param request CreateRAMDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateRAMDirectoryResponse
+         * @summary Creates a Resource Access Management (RAM) directory.
+         *
+         * @description Before you create a RAM directory, complete the following preparations:
+         * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.
+         * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the [DescribeZones](https://help.aliyun.com/document_detail/196648.html) operation to obtain the most recent zone list for a region supported by Elastic Desktop Service
+         *
+         * @param request CreateRAMDirectoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRAMDirectoryResponse
          */
         public CreateRAMDirectoryResponse CreateRAMDirectoryWithOptions(CreateRAMDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5743,13 +6557,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you create a RAM directory, complete the following preparations:
-          * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by WUYING Workspace.
-          * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by WUYING Workspace. You can call the [DescribeZones](~~196648~~) operation to obtain the most recent zone list for a region supported by WUYING Workspace.
-          *
-          * @param request CreateRAMDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateRAMDirectoryResponse
+         * @summary Creates a Resource Access Management (RAM) directory.
+         *
+         * @description Before you create a RAM directory, complete the following preparations:
+         * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.
+         * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the [DescribeZones](https://help.aliyun.com/document_detail/196648.html) operation to obtain the most recent zone list for a region supported by Elastic Desktop Service
+         *
+         * @param request CreateRAMDirectoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRAMDirectoryResponse
          */
         public async Task<CreateRAMDirectoryResponse> CreateRAMDirectoryWithOptionsAsync(CreateRAMDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5799,12 +6615,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you create a RAM directory, complete the following preparations:
-          * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by WUYING Workspace.
-          * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by WUYING Workspace. You can call the [DescribeZones](~~196648~~) operation to obtain the most recent zone list for a region supported by WUYING Workspace.
-          *
-          * @param request CreateRAMDirectoryRequest
-          * @return CreateRAMDirectoryResponse
+         * @summary Creates a Resource Access Management (RAM) directory.
+         *
+         * @description Before you create a RAM directory, complete the following preparations:
+         * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.
+         * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the [DescribeZones](https://help.aliyun.com/document_detail/196648.html) operation to obtain the most recent zone list for a region supported by Elastic Desktop Service
+         *
+         * @param request CreateRAMDirectoryRequest
+         * @return CreateRAMDirectoryResponse
          */
         public CreateRAMDirectoryResponse CreateRAMDirectory(CreateRAMDirectoryRequest request)
         {
@@ -5813,12 +6631,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you create a RAM directory, complete the following preparations:
-          * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by WUYING Workspace.
-          * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by WUYING Workspace. You can call the [DescribeZones](~~196648~~) operation to obtain the most recent zone list for a region supported by WUYING Workspace.
-          *
-          * @param request CreateRAMDirectoryRequest
-          * @return CreateRAMDirectoryResponse
+         * @summary Creates a Resource Access Management (RAM) directory.
+         *
+         * @description Before you create a RAM directory, complete the following preparations:
+         * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.
+         * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the [DescribeZones](https://help.aliyun.com/document_detail/196648.html) operation to obtain the most recent zone list for a region supported by Elastic Desktop Service
+         *
+         * @param request CreateRAMDirectoryRequest
+         * @return CreateRAMDirectoryResponse
          */
         public async Task<CreateRAMDirectoryResponse> CreateRAMDirectoryAsync(CreateRAMDirectoryRequest request)
         {
@@ -5826,6 +6646,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateRAMDirectoryWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates an office network of the convenience account type. Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.
+         *
+         * @param request CreateSimpleOfficeSiteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSimpleOfficeSiteResponse
+         */
         public CreateSimpleOfficeSiteResponse CreateSimpleOfficeSiteWithOptions(CreateSimpleOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5905,6 +6732,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateSimpleOfficeSiteResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates an office network of the convenience account type. Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.
+         *
+         * @param request CreateSimpleOfficeSiteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSimpleOfficeSiteResponse
+         */
         public async Task<CreateSimpleOfficeSiteResponse> CreateSimpleOfficeSiteWithOptionsAsync(CreateSimpleOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5984,12 +6818,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateSimpleOfficeSiteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates an office network of the convenience account type. Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.
+         *
+         * @param request CreateSimpleOfficeSiteRequest
+         * @return CreateSimpleOfficeSiteResponse
+         */
         public CreateSimpleOfficeSiteResponse CreateSimpleOfficeSite(CreateSimpleOfficeSiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSimpleOfficeSiteWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates an office network of the convenience account type. Elastic Desktop Service supports the following types of accounts: convenience accounts and enterprise AD accounts.
+         *
+         * @param request CreateSimpleOfficeSiteRequest
+         * @return CreateSimpleOfficeSiteResponse
+         */
         public async Task<CreateSimpleOfficeSiteResponse> CreateSimpleOfficeSiteAsync(CreateSimpleOfficeSiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5997,11 +6843,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer must be in the **Running** or **Stopped** state.
-          *
-          * @param request CreateSnapshotRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSnapshotResponse
+         * @summary Create a snapshot for a disk of a cloud computer to back up or restore the data on the disk.
+         *
+         * @description The cloud computer must be in the **Running** or **Stopped** state.
+         *
+         * @param request CreateSnapshotRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSnapshotResponse
          */
         public CreateSnapshotResponse CreateSnapshotWithOptions(CreateSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6047,11 +6895,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer must be in the **Running** or **Stopped** state.
-          *
-          * @param request CreateSnapshotRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSnapshotResponse
+         * @summary Create a snapshot for a disk of a cloud computer to back up or restore the data on the disk.
+         *
+         * @description The cloud computer must be in the **Running** or **Stopped** state.
+         *
+         * @param request CreateSnapshotRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSnapshotResponse
          */
         public async Task<CreateSnapshotResponse> CreateSnapshotWithOptionsAsync(CreateSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6097,10 +6947,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer must be in the **Running** or **Stopped** state.
-          *
-          * @param request CreateSnapshotRequest
-          * @return CreateSnapshotResponse
+         * @summary Create a snapshot for a disk of a cloud computer to back up or restore the data on the disk.
+         *
+         * @description The cloud computer must be in the **Running** or **Stopped** state.
+         *
+         * @param request CreateSnapshotRequest
+         * @return CreateSnapshotResponse
          */
         public CreateSnapshotResponse CreateSnapshot(CreateSnapshotRequest request)
         {
@@ -6109,10 +6961,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer must be in the **Running** or **Stopped** state.
-          *
-          * @param request CreateSnapshotRequest
-          * @return CreateSnapshotResponse
+         * @summary Create a snapshot for a disk of a cloud computer to back up or restore the data on the disk.
+         *
+         * @description The cloud computer must be in the **Running** or **Stopped** state.
+         *
+         * @param request CreateSnapshotRequest
+         * @return CreateSnapshotResponse
          */
         public async Task<CreateSnapshotResponse> CreateSnapshotAsync(CreateSnapshotRequest request)
         {
@@ -6120,6 +6974,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateSnapshotWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes an automatic snapshot policy.
+         *
+         * @param request DeleteAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAutoSnapshotPolicyResponse
+         */
         public DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicyWithOptions(DeleteAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6151,6 +7012,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteAutoSnapshotPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes an automatic snapshot policy.
+         *
+         * @param request DeleteAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAutoSnapshotPolicyResponse
+         */
         public async Task<DeleteAutoSnapshotPolicyResponse> DeleteAutoSnapshotPolicyWithOptionsAsync(DeleteAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6182,18 +7050,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteAutoSnapshotPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes an automatic snapshot policy.
+         *
+         * @param request DeleteAutoSnapshotPolicyRequest
+         * @return DeleteAutoSnapshotPolicyResponse
+         */
         public DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAutoSnapshotPolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes an automatic snapshot policy.
+         *
+         * @param request DeleteAutoSnapshotPolicyRequest
+         * @return DeleteAutoSnapshotPolicyResponse
+         */
         public async Task<DeleteAutoSnapshotPolicyResponse> DeleteAutoSnapshotPolicyAsync(DeleteAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes custom cloud computer templates.
+         *
+         * @param request DeleteBundlesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteBundlesResponse
+         */
         public DeleteBundlesResponse DeleteBundlesWithOptions(DeleteBundlesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6225,6 +7112,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteBundlesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes custom cloud computer templates.
+         *
+         * @param request DeleteBundlesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteBundlesResponse
+         */
         public async Task<DeleteBundlesResponse> DeleteBundlesWithOptionsAsync(DeleteBundlesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6256,18 +7150,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteBundlesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes custom cloud computer templates.
+         *
+         * @param request DeleteBundlesRequest
+         * @return DeleteBundlesResponse
+         */
         public DeleteBundlesResponse DeleteBundles(DeleteBundlesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteBundlesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes custom cloud computer templates.
+         *
+         * @param request DeleteBundlesRequest
+         * @return DeleteBundlesResponse
+         */
         public async Task<DeleteBundlesResponse> DeleteBundlesAsync(DeleteBundlesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteBundlesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a file from a cloud disk in Cloud Drive Service.
+         *
+         * @param request DeleteCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCdsFileResponse
+         */
         public DeleteCdsFileResponse DeleteCdsFileWithOptions(DeleteCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6311,6 +7224,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteCdsFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a file from a cloud disk in Cloud Drive Service.
+         *
+         * @param request DeleteCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCdsFileResponse
+         */
         public async Task<DeleteCdsFileResponse> DeleteCdsFileWithOptionsAsync(DeleteCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6354,18 +7274,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteCdsFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a file from a cloud disk in Cloud Drive Service.
+         *
+         * @param request DeleteCdsFileRequest
+         * @return DeleteCdsFileResponse
+         */
         public DeleteCdsFileResponse DeleteCdsFile(DeleteCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCdsFileWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a file from a cloud disk in Cloud Drive Service.
+         *
+         * @param request DeleteCdsFileRequest
+         * @return DeleteCdsFileResponse
+         */
         public async Task<DeleteCdsFileResponse> DeleteCdsFileAsync(DeleteCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCdsFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes team spaces.
+         *
+         * @param request DeleteCloudDriveGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCloudDriveGroupsResponse
+         */
         public DeleteCloudDriveGroupsResponse DeleteCloudDriveGroupsWithOptions(DeleteCloudDriveGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6401,6 +7340,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteCloudDriveGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes team spaces.
+         *
+         * @param request DeleteCloudDriveGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCloudDriveGroupsResponse
+         */
         public async Task<DeleteCloudDriveGroupsResponse> DeleteCloudDriveGroupsWithOptionsAsync(DeleteCloudDriveGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6436,18 +7382,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteCloudDriveGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes team spaces.
+         *
+         * @param request DeleteCloudDriveGroupsRequest
+         * @return DeleteCloudDriveGroupsResponse
+         */
         public DeleteCloudDriveGroupsResponse DeleteCloudDriveGroups(DeleteCloudDriveGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCloudDriveGroupsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes team spaces.
+         *
+         * @param request DeleteCloudDriveGroupsRequest
+         * @return DeleteCloudDriveGroupsResponse
+         */
         public async Task<DeleteCloudDriveGroupsResponse> DeleteCloudDriveGroupsAsync(DeleteCloudDriveGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCloudDriveGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 删除无影网盘中的终端用户
+         *
+         * @param request DeleteCloudDriveUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCloudDriveUsersResponse
+         */
         public DeleteCloudDriveUsersResponse DeleteCloudDriveUsersWithOptions(DeleteCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6483,6 +7448,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteCloudDriveUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除无影网盘中的终端用户
+         *
+         * @param request DeleteCloudDriveUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCloudDriveUsersResponse
+         */
         public async Task<DeleteCloudDriveUsersResponse> DeleteCloudDriveUsersWithOptionsAsync(DeleteCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6518,12 +7490,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteCloudDriveUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除无影网盘中的终端用户
+         *
+         * @param request DeleteCloudDriveUsersRequest
+         * @return DeleteCloudDriveUsersResponse
+         */
         public DeleteCloudDriveUsersResponse DeleteCloudDriveUsers(DeleteCloudDriveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCloudDriveUsersWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 删除无影网盘中的终端用户
+         *
+         * @param request DeleteCloudDriveUsersRequest
+         * @return DeleteCloudDriveUsersResponse
+         */
         public async Task<DeleteCloudDriveUsersResponse> DeleteCloudDriveUsersAsync(DeleteCloudDriveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6531,13 +7515,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
-          * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
-          * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
-          *
-          * @param request DeleteDesktopGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDesktopGroupResponse
+         * @summary Releases a desktop group.
+         *
+         * @description *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
+         * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
+         * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
+         *
+         * @param request DeleteDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDesktopGroupResponse
          */
         public DeleteDesktopGroupResponse DeleteDesktopGroupWithOptions(DeleteDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6571,13 +7557,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
-          * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
-          * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
-          *
-          * @param request DeleteDesktopGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDesktopGroupResponse
+         * @summary Releases a desktop group.
+         *
+         * @description *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
+         * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
+         * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
+         *
+         * @param request DeleteDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDesktopGroupResponse
          */
         public async Task<DeleteDesktopGroupResponse> DeleteDesktopGroupWithOptionsAsync(DeleteDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6611,12 +7599,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
-          * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
-          * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
-          *
-          * @param request DeleteDesktopGroupRequest
-          * @return DeleteDesktopGroupResponse
+         * @summary Releases a desktop group.
+         *
+         * @description *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
+         * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
+         * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
+         *
+         * @param request DeleteDesktopGroupRequest
+         * @return DeleteDesktopGroupResponse
          */
         public DeleteDesktopGroupResponse DeleteDesktopGroup(DeleteDesktopGroupRequest request)
         {
@@ -6625,12 +7615,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
-          * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
-          * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
-          *
-          * @param request DeleteDesktopGroupRequest
-          * @return DeleteDesktopGroupResponse
+         * @summary Releases a desktop group.
+         *
+         * @description *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
+         * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
+         * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
+         *
+         * @param request DeleteDesktopGroupRequest
+         * @return DeleteDesktopGroupResponse
          */
         public async Task<DeleteDesktopGroupResponse> DeleteDesktopGroupAsync(DeleteDesktopGroupRequest request)
         {
@@ -6638,6 +7630,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteDesktopGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Releases pay-as-you-go cloud computers or expired subscription cloud computers.
+         *
+         * @param request DeleteDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDesktopsResponse
+         */
         public DeleteDesktopsResponse DeleteDesktopsWithOptions(DeleteDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6669,6 +7668,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteDesktopsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Releases pay-as-you-go cloud computers or expired subscription cloud computers.
+         *
+         * @param request DeleteDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDesktopsResponse
+         */
         public async Task<DeleteDesktopsResponse> DeleteDesktopsWithOptionsAsync(DeleteDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6700,12 +7706,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteDesktopsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Releases pay-as-you-go cloud computers or expired subscription cloud computers.
+         *
+         * @param request DeleteDesktopsRequest
+         * @return DeleteDesktopsResponse
+         */
         public DeleteDesktopsResponse DeleteDesktops(DeleteDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDesktopsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Releases pay-as-you-go cloud computers or expired subscription cloud computers.
+         *
+         * @param request DeleteDesktopsRequest
+         * @return DeleteDesktopsResponse
+         */
         public async Task<DeleteDesktopsResponse> DeleteDesktopsAsync(DeleteDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6713,11 +7731,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the operation to manage client devices.
-          *
-          * @param request DeleteDevicesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDevicesResponse
+         * @summary Deletes trusted devices.
+         *
+         * @description You can call the operation to manage client devices.
+         *
+         * @param request DeleteDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDevicesResponse
          */
         public DeleteDevicesResponse DeleteDevicesWithOptions(DeleteDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6759,11 +7779,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the operation to manage client devices.
-          *
-          * @param request DeleteDevicesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDevicesResponse
+         * @summary Deletes trusted devices.
+         *
+         * @description You can call the operation to manage client devices.
+         *
+         * @param request DeleteDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDevicesResponse
          */
         public async Task<DeleteDevicesResponse> DeleteDevicesWithOptionsAsync(DeleteDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6805,10 +7827,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the operation to manage client devices.
-          *
-          * @param request DeleteDevicesRequest
-          * @return DeleteDevicesResponse
+         * @summary Deletes trusted devices.
+         *
+         * @description You can call the operation to manage client devices.
+         *
+         * @param request DeleteDevicesRequest
+         * @return DeleteDevicesResponse
          */
         public DeleteDevicesResponse DeleteDevices(DeleteDevicesRequest request)
         {
@@ -6817,10 +7841,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the operation to manage client devices.
-          *
-          * @param request DeleteDevicesRequest
-          * @return DeleteDevicesResponse
+         * @summary Deletes trusted devices.
+         *
+         * @description You can call the operation to manage client devices.
+         *
+         * @param request DeleteDevicesRequest
+         * @return DeleteDevicesResponse
          */
         public async Task<DeleteDevicesResponse> DeleteDevicesAsync(DeleteDevicesRequest request)
         {
@@ -6829,11 +7855,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You cannot delete a directory that has a cloud computer or is used by a cloud computer.
-          *
-          * @param request DeleteDirectoriesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDirectoriesResponse
+         * @summary Deletes one or more directories.
+         *
+         * @description You cannot delete a directory that has a cloud computer or is used by a cloud computer.
+         *
+         * @param request DeleteDirectoriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDirectoriesResponse
          */
         public DeleteDirectoriesResponse DeleteDirectoriesWithOptions(DeleteDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6867,11 +7895,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You cannot delete a directory that has a cloud computer or is used by a cloud computer.
-          *
-          * @param request DeleteDirectoriesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDirectoriesResponse
+         * @summary Deletes one or more directories.
+         *
+         * @description You cannot delete a directory that has a cloud computer or is used by a cloud computer.
+         *
+         * @param request DeleteDirectoriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDirectoriesResponse
          */
         public async Task<DeleteDirectoriesResponse> DeleteDirectoriesWithOptionsAsync(DeleteDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6905,10 +7935,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You cannot delete a directory that has a cloud computer or is used by a cloud computer.
-          *
-          * @param request DeleteDirectoriesRequest
-          * @return DeleteDirectoriesResponse
+         * @summary Deletes one or more directories.
+         *
+         * @description You cannot delete a directory that has a cloud computer or is used by a cloud computer.
+         *
+         * @param request DeleteDirectoriesRequest
+         * @return DeleteDirectoriesResponse
          */
         public DeleteDirectoriesResponse DeleteDirectories(DeleteDirectoriesRequest request)
         {
@@ -6917,10 +7949,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You cannot delete a directory that has a cloud computer or is used by a cloud computer.
-          *
-          * @param request DeleteDirectoriesRequest
-          * @return DeleteDirectoriesResponse
+         * @summary Deletes one or more directories.
+         *
+         * @description You cannot delete a directory that has a cloud computer or is used by a cloud computer.
+         *
+         * @param request DeleteDirectoriesRequest
+         * @return DeleteDirectoriesResponse
          */
         public async Task<DeleteDirectoriesResponse> DeleteDirectoriesAsync(DeleteDirectoriesRequest request)
         {
@@ -6928,6 +7962,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteDirectoriesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DeleteEduRoomRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEduRoomResponse
+         */
         public DeleteEduRoomResponse DeleteEduRoomWithOptions(DeleteEduRoomRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6959,6 +7998,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteEduRoomResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DeleteEduRoomRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEduRoomResponse
+         */
         public async Task<DeleteEduRoomResponse> DeleteEduRoomWithOptionsAsync(DeleteEduRoomRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6990,12 +8034,20 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteEduRoomResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DeleteEduRoomRequest
+         * @return DeleteEduRoomResponse
+         */
         public DeleteEduRoomResponse DeleteEduRoom(DeleteEduRoomRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteEduRoomWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DeleteEduRoomRequest
+         * @return DeleteEduRoomResponse
+         */
         public async Task<DeleteEduRoomResponse> DeleteEduRoomAsync(DeleteEduRoomRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7003,12 +8055,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](~~436972~~) operation to delete the cloud computer template before you delete the image.
-          *
-          * @param request DeleteImagesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteImagesResponse
+         * @summary Deletes one or more custom images.
+         *
+         * @description *   Images include system images and custom images. System images cannot be deleted.
+         * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](https://help.aliyun.com/document_detail/436972.html) operation to delete the cloud computer template before you delete the image.
+         *
+         * @param request DeleteImagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteImagesResponse
          */
         public DeleteImagesResponse DeleteImagesWithOptions(DeleteImagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7046,12 +8100,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](~~436972~~) operation to delete the cloud computer template before you delete the image.
-          *
-          * @param request DeleteImagesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteImagesResponse
+         * @summary Deletes one or more custom images.
+         *
+         * @description *   Images include system images and custom images. System images cannot be deleted.
+         * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](https://help.aliyun.com/document_detail/436972.html) operation to delete the cloud computer template before you delete the image.
+         *
+         * @param request DeleteImagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteImagesResponse
          */
         public async Task<DeleteImagesResponse> DeleteImagesWithOptionsAsync(DeleteImagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7089,11 +8145,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](~~436972~~) operation to delete the cloud computer template before you delete the image.
-          *
-          * @param request DeleteImagesRequest
-          * @return DeleteImagesResponse
+         * @summary Deletes one or more custom images.
+         *
+         * @description *   Images include system images and custom images. System images cannot be deleted.
+         * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](https://help.aliyun.com/document_detail/436972.html) operation to delete the cloud computer template before you delete the image.
+         *
+         * @param request DeleteImagesRequest
+         * @return DeleteImagesResponse
          */
         public DeleteImagesResponse DeleteImages(DeleteImagesRequest request)
         {
@@ -7102,11 +8160,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](~~436972~~) operation to delete the cloud computer template before you delete the image.
-          *
-          * @param request DeleteImagesRequest
-          * @return DeleteImagesResponse
+         * @summary Deletes one or more custom images.
+         *
+         * @description *   Images include system images and custom images. System images cannot be deleted.
+         * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](https://help.aliyun.com/document_detail/436972.html) operation to delete the cloud computer template before you delete the image.
+         *
+         * @param request DeleteImagesRequest
+         * @return DeleteImagesResponse
          */
         public async Task<DeleteImagesResponse> DeleteImagesAsync(DeleteImagesRequest request)
         {
@@ -7115,12 +8175,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
-          * ><warning>If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.></warning>
-          *
-          * @param request DeleteNASFileSystemsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteNASFileSystemsResponse
+         * @summary Deletes NAS file systems.
+         *
+         * @description Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
+         * >Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+         *
+         * @param request DeleteNASFileSystemsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNASFileSystemsResponse
          */
         public DeleteNASFileSystemsResponse DeleteNASFileSystemsWithOptions(DeleteNASFileSystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7154,12 +8216,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
-          * ><warning>If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.></warning>
-          *
-          * @param request DeleteNASFileSystemsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteNASFileSystemsResponse
+         * @summary Deletes NAS file systems.
+         *
+         * @description Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
+         * >Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+         *
+         * @param request DeleteNASFileSystemsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNASFileSystemsResponse
          */
         public async Task<DeleteNASFileSystemsResponse> DeleteNASFileSystemsWithOptionsAsync(DeleteNASFileSystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7193,11 +8257,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
-          * ><warning>If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.></warning>
-          *
-          * @param request DeleteNASFileSystemsRequest
-          * @return DeleteNASFileSystemsResponse
+         * @summary Deletes NAS file systems.
+         *
+         * @description Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
+         * >Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+         *
+         * @param request DeleteNASFileSystemsRequest
+         * @return DeleteNASFileSystemsResponse
          */
         public DeleteNASFileSystemsResponse DeleteNASFileSystems(DeleteNASFileSystemsRequest request)
         {
@@ -7206,11 +8272,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
-          * ><warning>If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.></warning>
-          *
-          * @param request DeleteNASFileSystemsRequest
-          * @return DeleteNASFileSystemsResponse
+         * @summary Deletes NAS file systems.
+         *
+         * @description Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
+         * >Warning: If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+         *
+         * @param request DeleteNASFileSystemsRequest
+         * @return DeleteNASFileSystemsResponse
          */
         public async Task<DeleteNASFileSystemsResponse> DeleteNASFileSystemsAsync(DeleteNASFileSystemsRequest request)
         {
@@ -7218,6 +8286,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteNASFileSystemsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes one or more premium bandwidth plans.
+         *
+         * @param request DeleteNetworkPackagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNetworkPackagesResponse
+         */
         public DeleteNetworkPackagesResponse DeleteNetworkPackagesWithOptions(DeleteNetworkPackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7249,6 +8324,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteNetworkPackagesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes one or more premium bandwidth plans.
+         *
+         * @param request DeleteNetworkPackagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNetworkPackagesResponse
+         */
         public async Task<DeleteNetworkPackagesResponse> DeleteNetworkPackagesWithOptionsAsync(DeleteNetworkPackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7280,12 +8362,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteNetworkPackagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes one or more premium bandwidth plans.
+         *
+         * @param request DeleteNetworkPackagesRequest
+         * @return DeleteNetworkPackagesResponse
+         */
         public DeleteNetworkPackagesResponse DeleteNetworkPackages(DeleteNetworkPackagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNetworkPackagesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes one or more premium bandwidth plans.
+         *
+         * @param request DeleteNetworkPackagesRequest
+         * @return DeleteNetworkPackagesResponse
+         */
         public async Task<DeleteNetworkPackagesResponse> DeleteNetworkPackagesAsync(DeleteNetworkPackagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7293,14 +8387,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete an office network, make sure that the following operations are complete:
-          * *   All cloud computers in the office network are released.
-          * *   The data that you want to retain is backed up.
-          * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
-          *
-          * @param request DeleteOfficeSitesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteOfficeSitesResponse
+         * @summary Deletes office networks (formerly workspaces).
+         *
+         * @description Before you delete an office network, make sure that the following operations are complete:
+         * *   All cloud computers in the office network are released.
+         * *   The data that you want to retain is backed up.
+         * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
+         *
+         * @param request DeleteOfficeSitesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteOfficeSitesResponse
          */
         public DeleteOfficeSitesResponse DeleteOfficeSitesWithOptions(DeleteOfficeSitesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7334,14 +8430,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete an office network, make sure that the following operations are complete:
-          * *   All cloud computers in the office network are released.
-          * *   The data that you want to retain is backed up.
-          * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
-          *
-          * @param request DeleteOfficeSitesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteOfficeSitesResponse
+         * @summary Deletes office networks (formerly workspaces).
+         *
+         * @description Before you delete an office network, make sure that the following operations are complete:
+         * *   All cloud computers in the office network are released.
+         * *   The data that you want to retain is backed up.
+         * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
+         *
+         * @param request DeleteOfficeSitesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteOfficeSitesResponse
          */
         public async Task<DeleteOfficeSitesResponse> DeleteOfficeSitesWithOptionsAsync(DeleteOfficeSitesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7375,13 +8473,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete an office network, make sure that the following operations are complete:
-          * *   All cloud computers in the office network are released.
-          * *   The data that you want to retain is backed up.
-          * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
-          *
-          * @param request DeleteOfficeSitesRequest
-          * @return DeleteOfficeSitesResponse
+         * @summary Deletes office networks (formerly workspaces).
+         *
+         * @description Before you delete an office network, make sure that the following operations are complete:
+         * *   All cloud computers in the office network are released.
+         * *   The data that you want to retain is backed up.
+         * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
+         *
+         * @param request DeleteOfficeSitesRequest
+         * @return DeleteOfficeSitesResponse
          */
         public DeleteOfficeSitesResponse DeleteOfficeSites(DeleteOfficeSitesRequest request)
         {
@@ -7390,13 +8490,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete an office network, make sure that the following operations are complete:
-          * *   All cloud computers in the office network are released.
-          * *   The data that you want to retain is backed up.
-          * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
-          *
-          * @param request DeleteOfficeSitesRequest
-          * @return DeleteOfficeSitesResponse
+         * @summary Deletes office networks (formerly workspaces).
+         *
+         * @description Before you delete an office network, make sure that the following operations are complete:
+         * *   All cloud computers in the office network are released.
+         * *   The data that you want to retain is backed up.
+         * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
+         *
+         * @param request DeleteOfficeSitesRequest
+         * @return DeleteOfficeSitesResponse
          */
         public async Task<DeleteOfficeSitesResponse> DeleteOfficeSitesAsync(DeleteOfficeSitesRequest request)
         {
@@ -7404,6 +8506,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteOfficeSitesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes one or more custom policies.
+         *
+         * @param request DeletePolicyGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeletePolicyGroupsResponse
+         */
         public DeletePolicyGroupsResponse DeletePolicyGroupsWithOptions(DeletePolicyGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7435,6 +8544,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeletePolicyGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes one or more custom policies.
+         *
+         * @param request DeletePolicyGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeletePolicyGroupsResponse
+         */
         public async Task<DeletePolicyGroupsResponse> DeletePolicyGroupsWithOptionsAsync(DeletePolicyGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7466,12 +8582,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeletePolicyGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes one or more custom policies.
+         *
+         * @param request DeletePolicyGroupsRequest
+         * @return DeletePolicyGroupsResponse
+         */
         public DeletePolicyGroupsResponse DeletePolicyGroups(DeletePolicyGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeletePolicyGroupsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes one or more custom policies.
+         *
+         * @param request DeletePolicyGroupsRequest
+         * @return DeletePolicyGroupsResponse
+         */
         public async Task<DeletePolicyGroupsResponse> DeletePolicyGroupsAsync(DeletePolicyGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7479,11 +8607,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If the IDs of the snapshots that you specify do not exist, requests are ignored.
-          *
-          * @param request DeleteSnapshotRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteSnapshotResponse
+         * @summary Deletes one or more snapshots.
+         *
+         * @description If the IDs of the snapshots that you specify do not exist, requests are ignored.
+         *
+         * @param request DeleteSnapshotRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSnapshotResponse
          */
         public DeleteSnapshotResponse DeleteSnapshotWithOptions(DeleteSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7517,11 +8647,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If the IDs of the snapshots that you specify do not exist, requests are ignored.
-          *
-          * @param request DeleteSnapshotRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteSnapshotResponse
+         * @summary Deletes one or more snapshots.
+         *
+         * @description If the IDs of the snapshots that you specify do not exist, requests are ignored.
+         *
+         * @param request DeleteSnapshotRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSnapshotResponse
          */
         public async Task<DeleteSnapshotResponse> DeleteSnapshotWithOptionsAsync(DeleteSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7555,10 +8687,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If the IDs of the snapshots that you specify do not exist, requests are ignored.
-          *
-          * @param request DeleteSnapshotRequest
-          * @return DeleteSnapshotResponse
+         * @summary Deletes one or more snapshots.
+         *
+         * @description If the IDs of the snapshots that you specify do not exist, requests are ignored.
+         *
+         * @param request DeleteSnapshotRequest
+         * @return DeleteSnapshotResponse
          */
         public DeleteSnapshotResponse DeleteSnapshot(DeleteSnapshotRequest request)
         {
@@ -7567,10 +8701,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If the IDs of the snapshots that you specify do not exist, requests are ignored.
-          *
-          * @param request DeleteSnapshotRequest
-          * @return DeleteSnapshotResponse
+         * @summary Deletes one or more snapshots.
+         *
+         * @description If the IDs of the snapshots that you specify do not exist, requests are ignored.
+         *
+         * @param request DeleteSnapshotRequest
+         * @return DeleteSnapshotResponse
          */
         public async Task<DeleteSnapshotResponse> DeleteSnapshotAsync(DeleteSnapshotRequest request)
         {
@@ -7579,11 +8715,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
-          *
-          * @param request DeleteVirtualMFADeviceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteVirtualMFADeviceResponse
+         * @summary Delete virtual multi-factor authentication (MFA) devices.
+         *
+         * @description If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
+         *
+         * @param request DeleteVirtualMFADeviceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteVirtualMFADeviceResponse
          */
         public DeleteVirtualMFADeviceResponse DeleteVirtualMFADeviceWithOptions(DeleteVirtualMFADeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7617,11 +8755,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
-          *
-          * @param request DeleteVirtualMFADeviceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteVirtualMFADeviceResponse
+         * @summary Delete virtual multi-factor authentication (MFA) devices.
+         *
+         * @description If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
+         *
+         * @param request DeleteVirtualMFADeviceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteVirtualMFADeviceResponse
          */
         public async Task<DeleteVirtualMFADeviceResponse> DeleteVirtualMFADeviceWithOptionsAsync(DeleteVirtualMFADeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7655,10 +8795,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
-          *
-          * @param request DeleteVirtualMFADeviceRequest
-          * @return DeleteVirtualMFADeviceResponse
+         * @summary Delete virtual multi-factor authentication (MFA) devices.
+         *
+         * @description If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
+         *
+         * @param request DeleteVirtualMFADeviceRequest
+         * @return DeleteVirtualMFADeviceResponse
          */
         public DeleteVirtualMFADeviceResponse DeleteVirtualMFADevice(DeleteVirtualMFADeviceRequest request)
         {
@@ -7667,10 +8809,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
-          *
-          * @param request DeleteVirtualMFADeviceRequest
-          * @return DeleteVirtualMFADeviceResponse
+         * @summary Delete virtual multi-factor authentication (MFA) devices.
+         *
+         * @description If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
+         *
+         * @param request DeleteVirtualMFADeviceRequest
+         * @return DeleteVirtualMFADeviceResponse
          */
         public async Task<DeleteVirtualMFADeviceResponse> DeleteVirtualMFADeviceAsync(DeleteVirtualMFADeviceRequest request)
         {
@@ -7678,6 +8822,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteVirtualMFADeviceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of an access control list (ACL) of an office network or a cloud computer.
+         *
+         * @param request DescribeAclEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAclEntriesResponse
+         */
         public DescribeAclEntriesResponse DescribeAclEntriesWithOptions(DescribeAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7721,6 +8872,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeAclEntriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of an access control list (ACL) of an office network or a cloud computer.
+         *
+         * @param request DescribeAclEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAclEntriesResponse
+         */
         public async Task<DescribeAclEntriesResponse> DescribeAclEntriesWithOptionsAsync(DescribeAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7764,12 +8922,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeAclEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of an access control list (ACL) of an office network or a cloud computer.
+         *
+         * @param request DescribeAclEntriesRequest
+         * @return DescribeAclEntriesResponse
+         */
         public DescribeAclEntriesResponse DescribeAclEntries(DescribeAclEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAclEntriesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of an access control list (ACL) of an office network or a cloud computer.
+         *
+         * @param request DescribeAclEntriesRequest
+         * @return DescribeAclEntriesResponse
+         */
         public async Task<DescribeAclEntriesResponse> DescribeAclEntriesAsync(DescribeAclEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7777,11 +8947,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
-          *
-          * @param request DescribeAutoSnapshotPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAutoSnapshotPolicyResponse
+         * @summary Queries the automatic snapshot policy.
+         *
+         * @description You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
+         *
+         * @param request DescribeAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAutoSnapshotPolicyResponse
          */
         public DescribeAutoSnapshotPolicyResponse DescribeAutoSnapshotPolicyWithOptions(DescribeAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7827,11 +8999,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
-          *
-          * @param request DescribeAutoSnapshotPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAutoSnapshotPolicyResponse
+         * @summary Queries the automatic snapshot policy.
+         *
+         * @description You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
+         *
+         * @param request DescribeAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAutoSnapshotPolicyResponse
          */
         public async Task<DescribeAutoSnapshotPolicyResponse> DescribeAutoSnapshotPolicyWithOptionsAsync(DescribeAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7877,10 +9051,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
-          *
-          * @param request DescribeAutoSnapshotPolicyRequest
-          * @return DescribeAutoSnapshotPolicyResponse
+         * @summary Queries the automatic snapshot policy.
+         *
+         * @description You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
+         *
+         * @param request DescribeAutoSnapshotPolicyRequest
+         * @return DescribeAutoSnapshotPolicyResponse
          */
         public DescribeAutoSnapshotPolicyResponse DescribeAutoSnapshotPolicy(DescribeAutoSnapshotPolicyRequest request)
         {
@@ -7889,10 +9065,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
-          *
-          * @param request DescribeAutoSnapshotPolicyRequest
-          * @return DescribeAutoSnapshotPolicyResponse
+         * @summary Queries the automatic snapshot policy.
+         *
+         * @description You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
+         *
+         * @param request DescribeAutoSnapshotPolicyRequest
+         * @return DescribeAutoSnapshotPolicyResponse
          */
         public async Task<DescribeAutoSnapshotPolicyResponse> DescribeAutoSnapshotPolicyAsync(DescribeAutoSnapshotPolicyRequest request)
         {
@@ -7900,6 +9078,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of cloud computer templates.
+         *
+         * @param request DescribeBundlesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBundlesResponse
+         */
         public DescribeBundlesResponse DescribeBundlesWithOptions(DescribeBundlesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8003,6 +9188,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeBundlesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of cloud computer templates.
+         *
+         * @param request DescribeBundlesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBundlesResponse
+         */
         public async Task<DescribeBundlesResponse> DescribeBundlesWithOptionsAsync(DescribeBundlesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8106,18 +9298,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeBundlesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of cloud computer templates.
+         *
+         * @param request DescribeBundlesRequest
+         * @return DescribeBundlesResponse
+         */
         public DescribeBundlesResponse DescribeBundles(DescribeBundlesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBundlesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of cloud computer templates.
+         *
+         * @param request DescribeBundlesRequest
+         * @return DescribeBundlesResponse
+         */
         public async Task<DescribeBundlesResponse> DescribeBundlesAsync(DescribeBundlesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBundlesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries file sharing links of a cloud disk in Cloud Drive Service.
+         *
+         * @param request DescribeCdsFileShareLinksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdsFileShareLinksResponse
+         */
         public DescribeCdsFileShareLinksResponse DescribeCdsFileShareLinksWithOptions(DescribeCdsFileShareLinksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8169,6 +9380,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCdsFileShareLinksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries file sharing links of a cloud disk in Cloud Drive Service.
+         *
+         * @param request DescribeCdsFileShareLinksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdsFileShareLinksResponse
+         */
         public async Task<DescribeCdsFileShareLinksResponse> DescribeCdsFileShareLinksWithOptionsAsync(DescribeCdsFileShareLinksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8220,18 +9438,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCdsFileShareLinksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries file sharing links of a cloud disk in Cloud Drive Service.
+         *
+         * @param request DescribeCdsFileShareLinksRequest
+         * @return DescribeCdsFileShareLinksResponse
+         */
         public DescribeCdsFileShareLinksResponse DescribeCdsFileShareLinks(DescribeCdsFileShareLinksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCdsFileShareLinksWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries file sharing links of a cloud disk in Cloud Drive Service.
+         *
+         * @param request DescribeCdsFileShareLinksRequest
+         * @return DescribeCdsFileShareLinksResponse
+         */
         public async Task<DescribeCdsFileShareLinksResponse> DescribeCdsFileShareLinksAsync(DescribeCdsFileShareLinksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCdsFileShareLinksWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of all Cloud Enterprise Network (CEN) instances within an Alibaba Cloud account.
+         *
+         * @param request DescribeCensRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCensResponse
+         */
         public DescribeCensResponse DescribeCensWithOptions(DescribeCensRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8267,6 +9504,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCensResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of all Cloud Enterprise Network (CEN) instances within an Alibaba Cloud account.
+         *
+         * @param request DescribeCensRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCensResponse
+         */
         public async Task<DescribeCensResponse> DescribeCensWithOptionsAsync(DescribeCensRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8302,12 +9546,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCensResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of all Cloud Enterprise Network (CEN) instances within an Alibaba Cloud account.
+         *
+         * @param request DescribeCensRequest
+         * @return DescribeCensResponse
+         */
         public DescribeCensResponse DescribeCens(DescribeCensRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCensWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of all Cloud Enterprise Network (CEN) instances within an Alibaba Cloud account.
+         *
+         * @param request DescribeCensRequest
+         * @return DescribeCensResponse
+         */
         public async Task<DescribeCensResponse> DescribeCensAsync(DescribeCensRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8315,11 +9571,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
-          *
-          * @param request DescribeClientEventsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClientEventsResponse
+         * @summary Queries the operation logs of end users. For example, the logs record the events that end users start and stop cloud desktops, and disconnect desktop sessions.
+         *
+         * @description You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+         *
+         * @param request DescribeClientEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClientEventsResponse
          */
         public DescribeClientEventsResponse DescribeClientEventsWithOptions(DescribeClientEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8401,11 +9659,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
-          *
-          * @param request DescribeClientEventsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClientEventsResponse
+         * @summary Queries the operation logs of end users. For example, the logs record the events that end users start and stop cloud desktops, and disconnect desktop sessions.
+         *
+         * @description You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+         *
+         * @param request DescribeClientEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClientEventsResponse
          */
         public async Task<DescribeClientEventsResponse> DescribeClientEventsWithOptionsAsync(DescribeClientEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8487,10 +9747,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
-          *
-          * @param request DescribeClientEventsRequest
-          * @return DescribeClientEventsResponse
+         * @summary Queries the operation logs of end users. For example, the logs record the events that end users start and stop cloud desktops, and disconnect desktop sessions.
+         *
+         * @description You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+         *
+         * @param request DescribeClientEventsRequest
+         * @return DescribeClientEventsResponse
          */
         public DescribeClientEventsResponse DescribeClientEvents(DescribeClientEventsRequest request)
         {
@@ -8499,10 +9761,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
-          *
-          * @param request DescribeClientEventsRequest
-          * @return DescribeClientEventsResponse
+         * @summary Queries the operation logs of end users. For example, the logs record the events that end users start and stop cloud desktops, and disconnect desktop sessions.
+         *
+         * @description You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+         *
+         * @param request DescribeClientEventsRequest
+         * @return DescribeClientEventsResponse
          */
         public async Task<DescribeClientEventsResponse> DescribeClientEventsAsync(DescribeClientEventsRequest request)
         {
@@ -8510,6 +9774,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeClientEventsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of authorized team spaces.
+         *
+         * @param request DescribeCloudDriveGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCloudDriveGroupsResponse
+         */
         public DescribeCloudDriveGroupsResponse DescribeCloudDriveGroupsWithOptions(DescribeCloudDriveGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8581,6 +9852,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCloudDriveGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of authorized team spaces.
+         *
+         * @param request DescribeCloudDriveGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCloudDriveGroupsResponse
+         */
         public async Task<DescribeCloudDriveGroupsResponse> DescribeCloudDriveGroupsWithOptionsAsync(DescribeCloudDriveGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8652,18 +9930,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCloudDriveGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of authorized team spaces.
+         *
+         * @param request DescribeCloudDriveGroupsRequest
+         * @return DescribeCloudDriveGroupsResponse
+         */
         public DescribeCloudDriveGroupsResponse DescribeCloudDriveGroups(DescribeCloudDriveGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudDriveGroupsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of authorized team spaces.
+         *
+         * @param request DescribeCloudDriveGroupsRequest
+         * @return DescribeCloudDriveGroupsResponse
+         */
         public async Task<DescribeCloudDriveGroupsResponse> DescribeCloudDriveGroupsAsync(DescribeCloudDriveGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudDriveGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询pds用户权限
+         *
+         * @param request DescribeCloudDrivePermissionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCloudDrivePermissionsResponse
+         */
         public DescribeCloudDrivePermissionsResponse DescribeCloudDrivePermissionsWithOptions(DescribeCloudDrivePermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8695,6 +9992,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCloudDrivePermissionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询pds用户权限
+         *
+         * @param request DescribeCloudDrivePermissionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCloudDrivePermissionsResponse
+         */
         public async Task<DescribeCloudDrivePermissionsResponse> DescribeCloudDrivePermissionsWithOptionsAsync(DescribeCloudDrivePermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8726,18 +10030,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCloudDrivePermissionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询pds用户权限
+         *
+         * @param request DescribeCloudDrivePermissionsRequest
+         * @return DescribeCloudDrivePermissionsResponse
+         */
         public DescribeCloudDrivePermissionsResponse DescribeCloudDrivePermissions(DescribeCloudDrivePermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudDrivePermissionsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询pds用户权限
+         *
+         * @param request DescribeCloudDrivePermissionsRequest
+         * @return DescribeCloudDrivePermissionsResponse
+         */
         public async Task<DescribeCloudDrivePermissionsResponse> DescribeCloudDrivePermissionsAsync(DescribeCloudDrivePermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudDrivePermissionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询所有无影网盘终端用户的信息
+         *
+         * @param request DescribeCloudDriveUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCloudDriveUsersResponse
+         */
         public DescribeCloudDriveUsersResponse DescribeCloudDriveUsersWithOptions(DescribeCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8781,6 +10104,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCloudDriveUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询所有无影网盘终端用户的信息
+         *
+         * @param request DescribeCloudDriveUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCloudDriveUsersResponse
+         */
         public async Task<DescribeCloudDriveUsersResponse> DescribeCloudDriveUsersWithOptionsAsync(DescribeCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8824,18 +10154,35 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCloudDriveUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询所有无影网盘终端用户的信息
+         *
+         * @param request DescribeCloudDriveUsersRequest
+         * @return DescribeCloudDriveUsersResponse
+         */
         public DescribeCloudDriveUsersResponse DescribeCloudDriveUsers(DescribeCloudDriveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudDriveUsersWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询所有无影网盘终端用户的信息
+         *
+         * @param request DescribeCloudDriveUsersRequest
+         * @return DescribeCloudDriveUsersResponse
+         */
         public async Task<DescribeCloudDriveUsersResponse> DescribeCloudDriveUsersAsync(DescribeCloudDriveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudDriveUsersWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeCustomizedListHeadersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCustomizedListHeadersResponse
+         */
         public DescribeCustomizedListHeadersResponse DescribeCustomizedListHeadersWithOptions(DescribeCustomizedListHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8871,6 +10218,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCustomizedListHeadersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeCustomizedListHeadersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCustomizedListHeadersResponse
+         */
         public async Task<DescribeCustomizedListHeadersResponse> DescribeCustomizedListHeadersWithOptionsAsync(DescribeCustomizedListHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8906,18 +10258,33 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeCustomizedListHeadersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeCustomizedListHeadersRequest
+         * @return DescribeCustomizedListHeadersResponse
+         */
         public DescribeCustomizedListHeadersResponse DescribeCustomizedListHeaders(DescribeCustomizedListHeadersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCustomizedListHeadersWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeCustomizedListHeadersRequest
+         * @return DescribeCustomizedListHeadersResponse
+         */
         public async Task<DescribeCustomizedListHeadersResponse> DescribeCustomizedListHeadersAsync(DescribeCustomizedListHeadersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCustomizedListHeadersWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries sessions in a desktop group.
+         *
+         * @param request DescribeDesktopGroupSessionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopGroupSessionsResponse
+         */
         public DescribeDesktopGroupSessionsResponse DescribeDesktopGroupSessionsWithOptions(DescribeDesktopGroupSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8973,6 +10340,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopGroupSessionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries sessions in a desktop group.
+         *
+         * @param request DescribeDesktopGroupSessionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopGroupSessionsResponse
+         */
         public async Task<DescribeDesktopGroupSessionsResponse> DescribeDesktopGroupSessionsWithOptionsAsync(DescribeDesktopGroupSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9028,18 +10402,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopGroupSessionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries sessions in a desktop group.
+         *
+         * @param request DescribeDesktopGroupSessionsRequest
+         * @return DescribeDesktopGroupSessionsResponse
+         */
         public DescribeDesktopGroupSessionsResponse DescribeDesktopGroupSessions(DescribeDesktopGroupSessionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDesktopGroupSessionsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries sessions in a desktop group.
+         *
+         * @param request DescribeDesktopGroupSessionsRequest
+         * @return DescribeDesktopGroupSessionsResponse
+         */
         public async Task<DescribeDesktopGroupSessionsResponse> DescribeDesktopGroupSessionsAsync(DescribeDesktopGroupSessionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDesktopGroupSessionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of desktop groups.
+         *
+         * @param request DescribeDesktopGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopGroupsResponse
+         */
         public DescribeDesktopGroupsResponse DescribeDesktopGroupsWithOptions(DescribeDesktopGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9108,6 +10501,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9127,6 +10524,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of desktop groups.
+         *
+         * @param request DescribeDesktopGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopGroupsResponse
+         */
         public async Task<DescribeDesktopGroupsResponse> DescribeDesktopGroupsWithOptionsAsync(DescribeDesktopGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9195,6 +10599,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9214,18 +10622,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of desktop groups.
+         *
+         * @param request DescribeDesktopGroupsRequest
+         * @return DescribeDesktopGroupsResponse
+         */
         public DescribeDesktopGroupsResponse DescribeDesktopGroups(DescribeDesktopGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDesktopGroupsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of desktop groups.
+         *
+         * @param request DescribeDesktopGroupsRequest
+         * @return DescribeDesktopGroupsResponse
+         */
         public async Task<DescribeDesktopGroupsResponse> DescribeDesktopGroupsAsync(DescribeDesktopGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDesktopGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the basic information about cloud computers.
+         *
+         * @param request DescribeDesktopInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopInfoResponse
+         */
         public DescribeDesktopInfoResponse DescribeDesktopInfoWithOptions(DescribeDesktopInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9257,6 +10684,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the basic information about cloud computers.
+         *
+         * @param request DescribeDesktopInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopInfoResponse
+         */
         public async Task<DescribeDesktopInfoResponse> DescribeDesktopInfoWithOptionsAsync(DescribeDesktopInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9288,18 +10722,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the basic information about cloud computers.
+         *
+         * @param request DescribeDesktopInfoRequest
+         * @return DescribeDesktopInfoResponse
+         */
         public DescribeDesktopInfoResponse DescribeDesktopInfo(DescribeDesktopInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDesktopInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the basic information about cloud computers.
+         *
+         * @param request DescribeDesktopInfoRequest
+         * @return DescribeDesktopInfoResponse
+         */
         public async Task<DescribeDesktopInfoResponse> DescribeDesktopInfoAsync(DescribeDesktopInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDesktopInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询超卖组
+         *
+         * @param request DescribeDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopOversoldGroupResponse
+         */
         public DescribeDesktopOversoldGroupResponse DescribeDesktopOversoldGroupWithOptions(DescribeDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9335,6 +10788,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询超卖组
+         *
+         * @param request DescribeDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopOversoldGroupResponse
+         */
         public async Task<DescribeDesktopOversoldGroupResponse> DescribeDesktopOversoldGroupWithOptionsAsync(DescribeDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9370,18 +10830,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询超卖组
+         *
+         * @param request DescribeDesktopOversoldGroupRequest
+         * @return DescribeDesktopOversoldGroupResponse
+         */
         public DescribeDesktopOversoldGroupResponse DescribeDesktopOversoldGroup(DescribeDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDesktopOversoldGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询超卖组
+         *
+         * @param request DescribeDesktopOversoldGroupRequest
+         * @return DescribeDesktopOversoldGroupResponse
+         */
         public async Task<DescribeDesktopOversoldGroupResponse> DescribeDesktopOversoldGroupAsync(DescribeDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDesktopOversoldGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询超卖组用户
+         *
+         * @param request DescribeDesktopOversoldUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopOversoldUserResponse
+         */
         public DescribeDesktopOversoldUserResponse DescribeDesktopOversoldUserWithOptions(DescribeDesktopOversoldUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9433,6 +10912,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopOversoldUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询超卖组用户
+         *
+         * @param request DescribeDesktopOversoldUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopOversoldUserResponse
+         */
         public async Task<DescribeDesktopOversoldUserResponse> DescribeDesktopOversoldUserWithOptionsAsync(DescribeDesktopOversoldUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9484,18 +10970,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopOversoldUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询超卖组用户
+         *
+         * @param request DescribeDesktopOversoldUserRequest
+         * @return DescribeDesktopOversoldUserResponse
+         */
         public DescribeDesktopOversoldUserResponse DescribeDesktopOversoldUser(DescribeDesktopOversoldUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDesktopOversoldUserWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询超卖组用户
+         *
+         * @param request DescribeDesktopOversoldUserRequest
+         * @return DescribeDesktopOversoldUserResponse
+         */
         public async Task<DescribeDesktopOversoldUserResponse> DescribeDesktopOversoldUserAsync(DescribeDesktopOversoldUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDesktopOversoldUserWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询超卖用户组
+         *
+         * @param request DescribeDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopOversoldUserGroupResponse
+         */
         public DescribeDesktopOversoldUserGroupResponse DescribeDesktopOversoldUserGroupWithOptions(DescribeDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9535,6 +11040,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询超卖用户组
+         *
+         * @param request DescribeDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopOversoldUserGroupResponse
+         */
         public async Task<DescribeDesktopOversoldUserGroupResponse> DescribeDesktopOversoldUserGroupWithOptionsAsync(DescribeDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9574,12 +11086,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询超卖用户组
+         *
+         * @param request DescribeDesktopOversoldUserGroupRequest
+         * @return DescribeDesktopOversoldUserGroupResponse
+         */
         public DescribeDesktopOversoldUserGroupResponse DescribeDesktopOversoldUserGroup(DescribeDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDesktopOversoldUserGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询超卖用户组
+         *
+         * @param request DescribeDesktopOversoldUserGroupRequest
+         * @return DescribeDesktopOversoldUserGroupResponse
+         */
         public async Task<DescribeDesktopOversoldUserGroupResponse> DescribeDesktopOversoldUserGroupAsync(DescribeDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9587,16 +11111,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can query data within the last 30 days.
-          *
-          * @param request DescribeDesktopSessionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDesktopSessionsResponse
+         * @summary Queries the detailed session information of a cloud computer.
+         *
+         * @description You can only query data within the last 30 days.
+         *
+         * @param request DescribeDesktopSessionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopSessionsResponse
          */
         public DescribeDesktopSessionsResponse DescribeDesktopSessionsWithOptions(DescribeDesktopSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckOsSession))
+            {
+                query["CheckOsSession"] = request.CheckOsSession;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -9636,6 +11166,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubPayType))
+            {
+                query["SubPayType"] = request.SubPayType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9657,16 +11191,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can query data within the last 30 days.
-          *
-          * @param request DescribeDesktopSessionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDesktopSessionsResponse
+         * @summary Queries the detailed session information of a cloud computer.
+         *
+         * @description You can only query data within the last 30 days.
+         *
+         * @param request DescribeDesktopSessionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopSessionsResponse
          */
         public async Task<DescribeDesktopSessionsResponse> DescribeDesktopSessionsWithOptionsAsync(DescribeDesktopSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckOsSession))
+            {
+                query["CheckOsSession"] = request.CheckOsSession;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -9707,6 +11247,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubPayType))
+            {
+                query["SubPayType"] = request.SubPayType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9727,10 +11271,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can query data within the last 30 days.
-          *
-          * @param request DescribeDesktopSessionsRequest
-          * @return DescribeDesktopSessionsResponse
+         * @summary Queries the detailed session information of a cloud computer.
+         *
+         * @description You can only query data within the last 30 days.
+         *
+         * @param request DescribeDesktopSessionsRequest
+         * @return DescribeDesktopSessionsResponse
          */
         public DescribeDesktopSessionsResponse DescribeDesktopSessions(DescribeDesktopSessionsRequest request)
         {
@@ -9739,10 +11285,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can query data within the last 30 days.
-          *
-          * @param request DescribeDesktopSessionsRequest
-          * @return DescribeDesktopSessionsResponse
+         * @summary Queries the detailed session information of a cloud computer.
+         *
+         * @description You can only query data within the last 30 days.
+         *
+         * @param request DescribeDesktopSessionsRequest
+         * @return DescribeDesktopSessionsResponse
          */
         public async Task<DescribeDesktopSessionsResponse> DescribeDesktopSessionsAsync(DescribeDesktopSessionsRequest request)
         {
@@ -9751,11 +11299,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
-          *
-          * @param request DescribeDesktopTypesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDesktopTypesResponse
+         * @summary Queries the instance types of cloud computers.
+         *
+         * @description When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+         *
+         * @param request DescribeDesktopTypesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopTypesResponse
          */
         public DescribeDesktopTypesResponse DescribeDesktopTypesWithOptions(DescribeDesktopTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9821,11 +11371,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
-          *
-          * @param request DescribeDesktopTypesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDesktopTypesResponse
+         * @summary Queries the instance types of cloud computers.
+         *
+         * @description When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+         *
+         * @param request DescribeDesktopTypesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopTypesResponse
          */
         public async Task<DescribeDesktopTypesResponse> DescribeDesktopTypesWithOptionsAsync(DescribeDesktopTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9891,10 +11443,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
-          *
-          * @param request DescribeDesktopTypesRequest
-          * @return DescribeDesktopTypesResponse
+         * @summary Queries the instance types of cloud computers.
+         *
+         * @description When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+         *
+         * @param request DescribeDesktopTypesRequest
+         * @return DescribeDesktopTypesResponse
          */
         public DescribeDesktopTypesResponse DescribeDesktopTypes(DescribeDesktopTypesRequest request)
         {
@@ -9903,10 +11457,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
-          *
-          * @param request DescribeDesktopTypesRequest
-          * @return DescribeDesktopTypesResponse
+         * @summary Queries the instance types of cloud computers.
+         *
+         * @description When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+         *
+         * @param request DescribeDesktopTypesRequest
+         * @return DescribeDesktopTypesResponse
          */
         public async Task<DescribeDesktopTypesResponse> DescribeDesktopTypesAsync(DescribeDesktopTypesRequest request)
         {
@@ -9914,6 +11470,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeDesktopTypesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Query the details of the cloud desktop.
+         *
+         * @param request DescribeDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopsResponse
+         */
         public DescribeDesktopsResponse DescribeDesktopsWithOptions(DescribeDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9962,9 +11525,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ExpiredTime"] = request.ExpiredTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FillResourceGroup))
+            {
+                query["FillResourceGroup"] = request.FillResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterDesktopGroup))
             {
                 query["FilterDesktopGroup"] = request.FilterDesktopGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuInstanceGroupId))
+            {
+                query["GpuInstanceGroupId"] = request.GpuInstanceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
@@ -10010,6 +11581,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ProtocolType"] = request.ProtocolType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFotaUpdate))
             {
                 query["QueryFotaUpdate"] = request.QueryFotaUpdate;
@@ -10018,9 +11593,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotPolicyId))
             {
                 query["SnapshotPolicyId"] = request.SnapshotPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubPayType))
+            {
+                query["SubPayType"] = request.SubPayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -10049,6 +11632,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Query the details of the cloud desktop.
+         *
+         * @param request DescribeDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopsResponse
+         */
         public async Task<DescribeDesktopsResponse> DescribeDesktopsWithOptionsAsync(DescribeDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10097,9 +11687,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ExpiredTime"] = request.ExpiredTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FillResourceGroup))
+            {
+                query["FillResourceGroup"] = request.FillResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterDesktopGroup))
             {
                 query["FilterDesktopGroup"] = request.FilterDesktopGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuInstanceGroupId))
+            {
+                query["GpuInstanceGroupId"] = request.GpuInstanceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
@@ -10145,6 +11743,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ProtocolType"] = request.ProtocolType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFotaUpdate))
             {
                 query["QueryFotaUpdate"] = request.QueryFotaUpdate;
@@ -10153,9 +11755,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotPolicyId))
             {
                 query["SnapshotPolicyId"] = request.SnapshotPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubPayType))
+            {
+                query["SubPayType"] = request.SubPayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -10184,18 +11794,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Query the details of the cloud desktop.
+         *
+         * @param request DescribeDesktopsRequest
+         * @return DescribeDesktopsResponse
+         */
         public DescribeDesktopsResponse DescribeDesktops(DescribeDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDesktopsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Query the details of the cloud desktop.
+         *
+         * @param request DescribeDesktopsRequest
+         * @return DescribeDesktopsResponse
+         */
         public async Task<DescribeDesktopsResponse> DescribeDesktopsAsync(DescribeDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDesktopsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the cloud computers in a cloud computer pool by billing method.
+         *
+         * @param request DescribeDesktopsInGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopsInGroupResponse
+         */
         public DescribeDesktopsInGroupResponse DescribeDesktopsInGroupWithOptions(DescribeDesktopsInGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10243,6 +11872,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopsInGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the cloud computers in a cloud computer pool by billing method.
+         *
+         * @param request DescribeDesktopsInGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDesktopsInGroupResponse
+         */
         public async Task<DescribeDesktopsInGroupResponse> DescribeDesktopsInGroupWithOptionsAsync(DescribeDesktopsInGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10290,18 +11926,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopsInGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the cloud computers in a cloud computer pool by billing method.
+         *
+         * @param request DescribeDesktopsInGroupRequest
+         * @return DescribeDesktopsInGroupResponse
+         */
         public DescribeDesktopsInGroupResponse DescribeDesktopsInGroup(DescribeDesktopsInGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDesktopsInGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the cloud computers in a cloud computer pool by billing method.
+         *
+         * @param request DescribeDesktopsInGroupRequest
+         * @return DescribeDesktopsInGroupResponse
+         */
         public async Task<DescribeDesktopsInGroupResponse> DescribeDesktopsInGroupAsync(DescribeDesktopsInGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDesktopsInGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the list of trusted devices.
+         *
+         * @param request DescribeDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDevicesResponse
+         */
         public DescribeDevicesResponse DescribeDevicesWithOptions(DescribeDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10361,6 +12016,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the list of trusted devices.
+         *
+         * @param request DescribeDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDevicesResponse
+         */
         public async Task<DescribeDevicesResponse> DescribeDevicesWithOptionsAsync(DescribeDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10420,18 +12082,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the list of trusted devices.
+         *
+         * @param request DescribeDevicesRequest
+         * @return DescribeDevicesResponse
+         */
         public DescribeDevicesResponse DescribeDevices(DescribeDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDevicesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the list of trusted devices.
+         *
+         * @param request DescribeDevicesRequest
+         * @return DescribeDevicesResponse
+         */
         public async Task<DescribeDevicesResponse> DescribeDevicesAsync(DescribeDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDevicesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of directories.
+         *
+         * @param request DescribeDirectoriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDirectoriesResponse
+         */
         public DescribeDirectoriesResponse DescribeDirectoriesWithOptions(DescribeDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10483,6 +12164,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDirectoriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of directories.
+         *
+         * @param request DescribeDirectoriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDirectoriesResponse
+         */
         public async Task<DescribeDirectoriesResponse> DescribeDirectoriesWithOptionsAsync(DescribeDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10534,18 +12222,35 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDirectoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of directories.
+         *
+         * @param request DescribeDirectoriesRequest
+         * @return DescribeDirectoriesResponse
+         */
         public DescribeDirectoriesResponse DescribeDirectories(DescribeDirectoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDirectoriesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of directories.
+         *
+         * @param request DescribeDirectoriesRequest
+         * @return DescribeDirectoriesResponse
+         */
         public async Task<DescribeDirectoriesResponse> DescribeDirectoriesAsync(DescribeDirectoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDirectoriesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeFlowMetricRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFlowMetricResponse
+         */
         public DescribeFlowMetricResponse DescribeFlowMetricWithOptions(DescribeFlowMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10597,6 +12302,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeFlowMetricResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeFlowMetricRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFlowMetricResponse
+         */
         public async Task<DescribeFlowMetricResponse> DescribeFlowMetricWithOptionsAsync(DescribeFlowMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10648,12 +12358,20 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeFlowMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeFlowMetricRequest
+         * @return DescribeFlowMetricResponse
+         */
         public DescribeFlowMetricResponse DescribeFlowMetric(DescribeFlowMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFlowMetricWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeFlowMetricRequest
+         * @return DescribeFlowMetricResponse
+         */
         public async Task<DescribeFlowMetricResponse> DescribeFlowMetricAsync(DescribeFlowMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10661,11 +12379,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can query only the traffic data in the last 90 days.
-          *
-          * @param request DescribeFlowStatisticRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeFlowStatisticResponse
+         * @summary Queries cloud computer-level traffic statistics of a single office network.
+         *
+         * @description > You can query only the traffic data in the last 90 days.
+         *
+         * @param request DescribeFlowStatisticRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFlowStatisticResponse
          */
         public DescribeFlowStatisticResponse DescribeFlowStatisticWithOptions(DescribeFlowStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10715,11 +12435,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can query only the traffic data in the last 90 days.
-          *
-          * @param request DescribeFlowStatisticRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeFlowStatisticResponse
+         * @summary Queries cloud computer-level traffic statistics of a single office network.
+         *
+         * @description > You can query only the traffic data in the last 90 days.
+         *
+         * @param request DescribeFlowStatisticRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFlowStatisticResponse
          */
         public async Task<DescribeFlowStatisticResponse> DescribeFlowStatisticWithOptionsAsync(DescribeFlowStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10769,10 +12491,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can query only the traffic data in the last 90 days.
-          *
-          * @param request DescribeFlowStatisticRequest
-          * @return DescribeFlowStatisticResponse
+         * @summary Queries cloud computer-level traffic statistics of a single office network.
+         *
+         * @description > You can query only the traffic data in the last 90 days.
+         *
+         * @param request DescribeFlowStatisticRequest
+         * @return DescribeFlowStatisticResponse
          */
         public DescribeFlowStatisticResponse DescribeFlowStatistic(DescribeFlowStatisticRequest request)
         {
@@ -10781,10 +12505,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can query only the traffic data in the last 90 days.
-          *
-          * @param request DescribeFlowStatisticRequest
-          * @return DescribeFlowStatisticResponse
+         * @summary Queries cloud computer-level traffic statistics of a single office network.
+         *
+         * @description > You can query only the traffic data in the last 90 days.
+         *
+         * @param request DescribeFlowStatisticRequest
+         * @return DescribeFlowStatisticResponse
          */
         public async Task<DescribeFlowStatisticResponse> DescribeFlowStatisticAsync(DescribeFlowStatisticRequest request)
         {
@@ -10792,6 +12518,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeFlowStatisticWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries information about the cloud computers whose images can be and are pending to be updated to the specified version.
+         *
+         * @param request DescribeFotaPendingDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFotaPendingDesktopsResponse
+         */
         public DescribeFotaPendingDesktopsResponse DescribeFotaPendingDesktopsWithOptions(DescribeFotaPendingDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10815,6 +12548,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeFotaPendingDesktopsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about the cloud computers whose images can be and are pending to be updated to the specified version.
+         *
+         * @param request DescribeFotaPendingDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFotaPendingDesktopsResponse
+         */
         public async Task<DescribeFotaPendingDesktopsResponse> DescribeFotaPendingDesktopsWithOptionsAsync(DescribeFotaPendingDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10838,18 +12578,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeFotaPendingDesktopsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about the cloud computers whose images can be and are pending to be updated to the specified version.
+         *
+         * @param request DescribeFotaPendingDesktopsRequest
+         * @return DescribeFotaPendingDesktopsResponse
+         */
         public DescribeFotaPendingDesktopsResponse DescribeFotaPendingDesktops(DescribeFotaPendingDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFotaPendingDesktopsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries information about the cloud computers whose images can be and are pending to be updated to the specified version.
+         *
+         * @param request DescribeFotaPendingDesktopsRequest
+         * @return DescribeFotaPendingDesktopsResponse
+         */
         public async Task<DescribeFotaPendingDesktopsResponse> DescribeFotaPendingDesktopsAsync(DescribeFotaPendingDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFotaPendingDesktopsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of update tasks.
+         *
+         * @param request DescribeFotaTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFotaTasksResponse
+         */
         public DescribeFotaTasksResponse DescribeFotaTasksWithOptions(DescribeFotaTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10901,6 +12660,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeFotaTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of update tasks.
+         *
+         * @param request DescribeFotaTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFotaTasksResponse
+         */
         public async Task<DescribeFotaTasksResponse> DescribeFotaTasksWithOptionsAsync(DescribeFotaTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10952,18 +12718,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeFotaTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of update tasks.
+         *
+         * @param request DescribeFotaTasksRequest
+         * @return DescribeFotaTasksResponse
+         */
         public DescribeFotaTasksResponse DescribeFotaTasks(DescribeFotaTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFotaTasksWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of update tasks.
+         *
+         * @param request DescribeFotaTasksRequest
+         * @return DescribeFotaTasksResponse
+         */
         public async Task<DescribeFotaTasksResponse> DescribeFotaTasksAsync(DescribeFotaTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFotaTasksWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the applications and their processes of an end user.
+         *
+         * @param request DescribeGuestApplicationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeGuestApplicationsResponse
+         */
         public DescribeGuestApplicationsResponse DescribeGuestApplicationsWithOptions(DescribeGuestApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10999,6 +12784,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeGuestApplicationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the applications and their processes of an end user.
+         *
+         * @param request DescribeGuestApplicationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeGuestApplicationsResponse
+         */
         public async Task<DescribeGuestApplicationsResponse> DescribeGuestApplicationsWithOptionsAsync(DescribeGuestApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11034,18 +12826,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeGuestApplicationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the applications and their processes of an end user.
+         *
+         * @param request DescribeGuestApplicationsRequest
+         * @return DescribeGuestApplicationsResponse
+         */
         public DescribeGuestApplicationsResponse DescribeGuestApplications(DescribeGuestApplicationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGuestApplicationsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the applications and their processes of an end user.
+         *
+         * @param request DescribeGuestApplicationsRequest
+         * @return DescribeGuestApplicationsResponse
+         */
         public async Task<DescribeGuestApplicationsResponse> DescribeGuestApplicationsAsync(DescribeGuestApplicationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGuestApplicationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the image modification records of cloud computers.
+         *
+         * @param request DescribeImageModifiedRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeImageModifiedRecordsResponse
+         */
         public DescribeImageModifiedRecordsResponse DescribeImageModifiedRecordsWithOptions(DescribeImageModifiedRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11085,6 +12896,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeImageModifiedRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the image modification records of cloud computers.
+         *
+         * @param request DescribeImageModifiedRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeImageModifiedRecordsResponse
+         */
         public async Task<DescribeImageModifiedRecordsResponse> DescribeImageModifiedRecordsWithOptionsAsync(DescribeImageModifiedRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11124,12 +12942,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeImageModifiedRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the image modification records of cloud computers.
+         *
+         * @param request DescribeImageModifiedRecordsRequest
+         * @return DescribeImageModifiedRecordsResponse
+         */
         public DescribeImageModifiedRecordsResponse DescribeImageModifiedRecords(DescribeImageModifiedRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeImageModifiedRecordsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the image modification records of cloud computers.
+         *
+         * @param request DescribeImageModifiedRecordsRequest
+         * @return DescribeImageModifiedRecordsResponse
+         */
         public async Task<DescribeImageModifiedRecordsResponse> DescribeImageModifiedRecordsAsync(DescribeImageModifiedRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11137,11 +12967,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the [ModifyImagePermission](~~436982~~) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
-          *
-          * @param request DescribeImagePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeImagePermissionResponse
+         * @summary Queries the recipient Alibaba Cloud accounts with which an image is shared.
+         *
+         * @description You can call the [ModifyImagePermission](https://help.aliyun.com/document_detail/436982.html) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
+         *
+         * @param request DescribeImagePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeImagePermissionResponse
          */
         public DescribeImagePermissionResponse DescribeImagePermissionWithOptions(DescribeImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11175,11 +13007,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the [ModifyImagePermission](~~436982~~) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
-          *
-          * @param request DescribeImagePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeImagePermissionResponse
+         * @summary Queries the recipient Alibaba Cloud accounts with which an image is shared.
+         *
+         * @description You can call the [ModifyImagePermission](https://help.aliyun.com/document_detail/436982.html) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
+         *
+         * @param request DescribeImagePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeImagePermissionResponse
          */
         public async Task<DescribeImagePermissionResponse> DescribeImagePermissionWithOptionsAsync(DescribeImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11213,10 +13047,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the [ModifyImagePermission](~~436982~~) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
-          *
-          * @param request DescribeImagePermissionRequest
-          * @return DescribeImagePermissionResponse
+         * @summary Queries the recipient Alibaba Cloud accounts with which an image is shared.
+         *
+         * @description You can call the [ModifyImagePermission](https://help.aliyun.com/document_detail/436982.html) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
+         *
+         * @param request DescribeImagePermissionRequest
+         * @return DescribeImagePermissionResponse
          */
         public DescribeImagePermissionResponse DescribeImagePermission(DescribeImagePermissionRequest request)
         {
@@ -11225,10 +13061,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the [ModifyImagePermission](~~436982~~) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
-          *
-          * @param request DescribeImagePermissionRequest
-          * @return DescribeImagePermissionResponse
+         * @summary Queries the recipient Alibaba Cloud accounts with which an image is shared.
+         *
+         * @description You can call the [ModifyImagePermission](https://help.aliyun.com/document_detail/436982.html) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
+         *
+         * @param request DescribeImagePermissionRequest
+         * @return DescribeImagePermissionResponse
          */
         public async Task<DescribeImagePermissionResponse> DescribeImagePermissionAsync(DescribeImagePermissionRequest request)
         {
@@ -11236,6 +13074,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeImagePermissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about images.
+         *
+         * @param request DescribeImagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeImagesResponse
+         */
         public DescribeImagesResponse DescribeImagesWithOptions(DescribeImagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11319,6 +13164,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeImagesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about images.
+         *
+         * @param request DescribeImagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeImagesResponse
+         */
         public async Task<DescribeImagesResponse> DescribeImagesWithOptionsAsync(DescribeImagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11402,12 +13254,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeImagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about images.
+         *
+         * @param request DescribeImagesRequest
+         * @return DescribeImagesResponse
+         */
         public DescribeImagesResponse DescribeImages(DescribeImagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeImagesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about images.
+         *
+         * @param request DescribeImagesRequest
+         * @return DescribeImagesResponse
+         */
         public async Task<DescribeImagesResponse> DescribeImagesAsync(DescribeImagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11415,12 +13279,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
-          * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
-          *
-          * @param request DescribeInvocationsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInvocationsResponse
+         * @description *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+         * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
+         *
+         * @param request DescribeInvocationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInvocationsResponse
          */
         public DescribeInvocationsResponse DescribeInvocationsWithOptions(DescribeInvocationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11490,12 +13354,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
-          * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
-          *
-          * @param request DescribeInvocationsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInvocationsResponse
+         * @description *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+         * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
+         *
+         * @param request DescribeInvocationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInvocationsResponse
          */
         public async Task<DescribeInvocationsResponse> DescribeInvocationsWithOptionsAsync(DescribeInvocationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11565,11 +13429,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
-          * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
-          *
-          * @param request DescribeInvocationsRequest
-          * @return DescribeInvocationsResponse
+         * @description *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+         * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
+         *
+         * @param request DescribeInvocationsRequest
+         * @return DescribeInvocationsResponse
          */
         public DescribeInvocationsResponse DescribeInvocations(DescribeInvocationsRequest request)
         {
@@ -11578,11 +13442,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
-          * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
-          *
-          * @param request DescribeInvocationsRequest
-          * @return DescribeInvocationsResponse
+         * @description *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+         * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
+         *
+         * @param request DescribeInvocationsRequest
+         * @return DescribeInvocationsResponse
          */
         public async Task<DescribeInvocationsResponse> DescribeInvocationsAsync(DescribeInvocationsRequest request)
         {
@@ -11590,6 +13454,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeInvocationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries Key Management Service (KMS) keys of users. The first time you call this operation, you can try to create a service key for Elastic Desktop Service (EDS) and call the operation to return results.
+         *
+         * @param request DescribeKmsKeysRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeKmsKeysResponse
+         */
         public DescribeKmsKeysResponse DescribeKmsKeysWithOptions(DescribeKmsKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11617,6 +13488,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeKmsKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries Key Management Service (KMS) keys of users. The first time you call this operation, you can try to create a service key for Elastic Desktop Service (EDS) and call the operation to return results.
+         *
+         * @param request DescribeKmsKeysRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeKmsKeysResponse
+         */
         public async Task<DescribeKmsKeysResponse> DescribeKmsKeysWithOptionsAsync(DescribeKmsKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11644,18 +13522,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeKmsKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries Key Management Service (KMS) keys of users. The first time you call this operation, you can try to create a service key for Elastic Desktop Service (EDS) and call the operation to return results.
+         *
+         * @param request DescribeKmsKeysRequest
+         * @return DescribeKmsKeysResponse
+         */
         public DescribeKmsKeysResponse DescribeKmsKeys(DescribeKmsKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeKmsKeysWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries Key Management Service (KMS) keys of users. The first time you call this operation, you can try to create a service key for Elastic Desktop Service (EDS) and call the operation to return results.
+         *
+         * @param request DescribeKmsKeysRequest
+         * @return DescribeKmsKeysResponse
+         */
         public async Task<DescribeKmsKeysResponse> DescribeKmsKeysAsync(DescribeKmsKeysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeKmsKeysWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about Apsara File Storage NAS (NAS) file systems.
+         *
+         * @param request DescribeNASFileSystemsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNASFileSystemsResponse
+         */
         public DescribeNASFileSystemsResponse DescribeNASFileSystemsWithOptions(DescribeNASFileSystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11703,6 +13600,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeNASFileSystemsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about Apsara File Storage NAS (NAS) file systems.
+         *
+         * @param request DescribeNASFileSystemsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNASFileSystemsResponse
+         */
         public async Task<DescribeNASFileSystemsResponse> DescribeNASFileSystemsWithOptionsAsync(DescribeNASFileSystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11750,18 +13654,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeNASFileSystemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about Apsara File Storage NAS (NAS) file systems.
+         *
+         * @param request DescribeNASFileSystemsRequest
+         * @return DescribeNASFileSystemsResponse
+         */
         public DescribeNASFileSystemsResponse DescribeNASFileSystems(DescribeNASFileSystemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNASFileSystemsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about Apsara File Storage NAS (NAS) file systems.
+         *
+         * @param request DescribeNASFileSystemsRequest
+         * @return DescribeNASFileSystemsResponse
+         */
         public async Task<DescribeNASFileSystemsResponse> DescribeNASFileSystemsAsync(DescribeNASFileSystemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNASFileSystemsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of one or more premium bandwidth plans.
+         *
+         * @param request DescribeNetworkPackagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNetworkPackagesResponse
+         */
         public DescribeNetworkPackagesResponse DescribeNetworkPackagesWithOptions(DescribeNetworkPackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11805,6 +13728,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeNetworkPackagesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of one or more premium bandwidth plans.
+         *
+         * @param request DescribeNetworkPackagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNetworkPackagesResponse
+         */
         public async Task<DescribeNetworkPackagesResponse> DescribeNetworkPackagesWithOptionsAsync(DescribeNetworkPackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11848,18 +13778,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeNetworkPackagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of one or more premium bandwidth plans.
+         *
+         * @param request DescribeNetworkPackagesRequest
+         * @return DescribeNetworkPackagesResponse
+         */
         public DescribeNetworkPackagesResponse DescribeNetworkPackages(DescribeNetworkPackagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNetworkPackagesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of one or more premium bandwidth plans.
+         *
+         * @param request DescribeNetworkPackagesRequest
+         * @return DescribeNetworkPackagesResponse
+         */
         public async Task<DescribeNetworkPackagesResponse> DescribeNetworkPackagesAsync(DescribeNetworkPackagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNetworkPackagesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries office network properties, including office network ID, name, status, and creation time.
+         *
+         * @param request DescribeOfficeSitesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOfficeSitesResponse
+         */
         public DescribeOfficeSitesResponse DescribeOfficeSitesWithOptions(DescribeOfficeSitesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11907,6 +13856,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeOfficeSitesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries office network properties, including office network ID, name, status, and creation time.
+         *
+         * @param request DescribeOfficeSitesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOfficeSitesResponse
+         */
         public async Task<DescribeOfficeSitesResponse> DescribeOfficeSitesWithOptionsAsync(DescribeOfficeSitesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11954,18 +13910,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeOfficeSitesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries office network properties, including office network ID, name, status, and creation time.
+         *
+         * @param request DescribeOfficeSitesRequest
+         * @return DescribeOfficeSitesResponse
+         */
         public DescribeOfficeSitesResponse DescribeOfficeSites(DescribeOfficeSitesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeOfficeSitesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries office network properties, including office network ID, name, status, and creation time.
+         *
+         * @param request DescribeOfficeSitesRequest
+         * @return DescribeOfficeSitesResponse
+         */
         public async Task<DescribeOfficeSitesResponse> DescribeOfficeSitesAsync(DescribeOfficeSitesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeOfficeSitesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about one or more policies.
+         *
+         * @param request DescribePolicyGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyGroupsResponse
+         */
         public DescribePolicyGroupsResponse DescribePolicyGroupsWithOptions(DescribePolicyGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12009,6 +13984,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribePolicyGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about one or more policies.
+         *
+         * @param request DescribePolicyGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyGroupsResponse
+         */
         public async Task<DescribePolicyGroupsResponse> DescribePolicyGroupsWithOptionsAsync(DescribePolicyGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12052,12 +14034,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribePolicyGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about one or more policies.
+         *
+         * @param request DescribePolicyGroupsRequest
+         * @return DescribePolicyGroupsResponse
+         */
         public DescribePolicyGroupsResponse DescribePolicyGroups(DescribePolicyGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePolicyGroupsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about one or more policies.
+         *
+         * @param request DescribePolicyGroupsRequest
+         * @return DescribePolicyGroupsResponse
+         */
         public async Task<DescribePolicyGroupsResponse> DescribePolicyGroupsAsync(DescribePolicyGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12065,16 +14059,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Usage notes
-          * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
-          * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
-          * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
-          * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
-          * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
-          *
-          * @param request DescribePriceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePriceResponse
+         * @summary Queries the price information of desktop resources in Elastic Desktop Service (EDS).
+         *
+         * @description ## Usage notes
+         * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
+         * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
+         * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
+         * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
+         * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](https://help.aliyun.com/document_detail/188609.html).
+         *
+         * @param request DescribePriceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceResponse
          */
         public DescribePriceResponse DescribePriceWithOptions(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12228,16 +14224,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Usage notes
-          * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
-          * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
-          * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
-          * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
-          * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
-          *
-          * @param request DescribePriceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePriceResponse
+         * @summary Queries the price information of desktop resources in Elastic Desktop Service (EDS).
+         *
+         * @description ## Usage notes
+         * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
+         * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
+         * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
+         * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
+         * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](https://help.aliyun.com/document_detail/188609.html).
+         *
+         * @param request DescribePriceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceResponse
          */
         public async Task<DescribePriceResponse> DescribePriceWithOptionsAsync(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12391,15 +14389,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Usage notes
-          * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
-          * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
-          * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
-          * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
-          * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
-          *
-          * @param request DescribePriceRequest
-          * @return DescribePriceResponse
+         * @summary Queries the price information of desktop resources in Elastic Desktop Service (EDS).
+         *
+         * @description ## Usage notes
+         * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
+         * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
+         * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
+         * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
+         * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](https://help.aliyun.com/document_detail/188609.html).
+         *
+         * @param request DescribePriceRequest
+         * @return DescribePriceResponse
          */
         public DescribePriceResponse DescribePrice(DescribePriceRequest request)
         {
@@ -12408,15 +14408,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Usage notes
-          * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
-          * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
-          * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
-          * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
-          * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
-          *
-          * @param request DescribePriceRequest
-          * @return DescribePriceResponse
+         * @summary Queries the price information of desktop resources in Elastic Desktop Service (EDS).
+         *
+         * @description ## Usage notes
+         * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
+         * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
+         * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
+         * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
+         * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](https://help.aliyun.com/document_detail/188609.html).
+         *
+         * @param request DescribePriceRequest
+         * @return DescribePriceResponse
          */
         public async Task<DescribePriceResponse> DescribePriceAsync(DescribePriceRequest request)
         {
@@ -12424,6 +14426,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribePriceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询价格用于创建超卖组
+         *
+         * @param request DescribePriceForCreateDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceForCreateDesktopOversoldGroupResponse
+         */
         public DescribePriceForCreateDesktopOversoldGroupResponse DescribePriceForCreateDesktopOversoldGroupWithOptions(DescribePriceForCreateDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12475,6 +14484,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribePriceForCreateDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询价格用于创建超卖组
+         *
+         * @param request DescribePriceForCreateDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceForCreateDesktopOversoldGroupResponse
+         */
         public async Task<DescribePriceForCreateDesktopOversoldGroupResponse> DescribePriceForCreateDesktopOversoldGroupWithOptionsAsync(DescribePriceForCreateDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12526,18 +14542,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribePriceForCreateDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询价格用于创建超卖组
+         *
+         * @param request DescribePriceForCreateDesktopOversoldGroupRequest
+         * @return DescribePriceForCreateDesktopOversoldGroupResponse
+         */
         public DescribePriceForCreateDesktopOversoldGroupResponse DescribePriceForCreateDesktopOversoldGroup(DescribePriceForCreateDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePriceForCreateDesktopOversoldGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询价格用于创建超卖组
+         *
+         * @param request DescribePriceForCreateDesktopOversoldGroupRequest
+         * @return DescribePriceForCreateDesktopOversoldGroupResponse
+         */
         public async Task<DescribePriceForCreateDesktopOversoldGroupResponse> DescribePriceForCreateDesktopOversoldGroupAsync(DescribePriceForCreateDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePriceForCreateDesktopOversoldGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询价格用于变配超卖组
+         *
+         * @param request DescribePriceForModifyDesktopOversoldGroupSaleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceForModifyDesktopOversoldGroupSaleResponse
+         */
         public DescribePriceForModifyDesktopOversoldGroupSaleResponse DescribePriceForModifyDesktopOversoldGroupSaleWithOptions(DescribePriceForModifyDesktopOversoldGroupSaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12573,6 +14608,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribePriceForModifyDesktopOversoldGroupSaleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询价格用于变配超卖组
+         *
+         * @param request DescribePriceForModifyDesktopOversoldGroupSaleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceForModifyDesktopOversoldGroupSaleResponse
+         */
         public async Task<DescribePriceForModifyDesktopOversoldGroupSaleResponse> DescribePriceForModifyDesktopOversoldGroupSaleWithOptionsAsync(DescribePriceForModifyDesktopOversoldGroupSaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12608,18 +14650,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribePriceForModifyDesktopOversoldGroupSaleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询价格用于变配超卖组
+         *
+         * @param request DescribePriceForModifyDesktopOversoldGroupSaleRequest
+         * @return DescribePriceForModifyDesktopOversoldGroupSaleResponse
+         */
         public DescribePriceForModifyDesktopOversoldGroupSaleResponse DescribePriceForModifyDesktopOversoldGroupSale(DescribePriceForModifyDesktopOversoldGroupSaleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePriceForModifyDesktopOversoldGroupSaleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询价格用于变配超卖组
+         *
+         * @param request DescribePriceForModifyDesktopOversoldGroupSaleRequest
+         * @return DescribePriceForModifyDesktopOversoldGroupSaleResponse
+         */
         public async Task<DescribePriceForModifyDesktopOversoldGroupSaleResponse> DescribePriceForModifyDesktopOversoldGroupSaleAsync(DescribePriceForModifyDesktopOversoldGroupSaleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePriceForModifyDesktopOversoldGroupSaleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询价格用于续费超卖组
+         *
+         * @param request DescribePriceForRenewDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceForRenewDesktopOversoldGroupResponse
+         */
         public DescribePriceForRenewDesktopOversoldGroupResponse DescribePriceForRenewDesktopOversoldGroupWithOptions(DescribePriceForRenewDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12655,6 +14716,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribePriceForRenewDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询价格用于续费超卖组
+         *
+         * @param request DescribePriceForRenewDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceForRenewDesktopOversoldGroupResponse
+         */
         public async Task<DescribePriceForRenewDesktopOversoldGroupResponse> DescribePriceForRenewDesktopOversoldGroupWithOptionsAsync(DescribePriceForRenewDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12690,18 +14758,35 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribePriceForRenewDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询价格用于续费超卖组
+         *
+         * @param request DescribePriceForRenewDesktopOversoldGroupRequest
+         * @return DescribePriceForRenewDesktopOversoldGroupResponse
+         */
         public DescribePriceForRenewDesktopOversoldGroupResponse DescribePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePriceForRenewDesktopOversoldGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询价格用于续费超卖组
+         *
+         * @param request DescribePriceForRenewDesktopOversoldGroupRequest
+         * @return DescribePriceForRenewDesktopOversoldGroupResponse
+         */
         public async Task<DescribePriceForRenewDesktopOversoldGroupResponse> DescribePriceForRenewDesktopOversoldGroupAsync(DescribePriceForRenewDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePriceForRenewDesktopOversoldGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeRecordingsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRecordingsResponse
+         */
         public DescribeRecordingsResponse DescribeRecordingsWithOptions(DescribeRecordingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12761,6 +14846,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeRecordingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeRecordingsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRecordingsResponse
+         */
         public async Task<DescribeRecordingsResponse> DescribeRecordingsWithOptionsAsync(DescribeRecordingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12820,18 +14910,33 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeRecordingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeRecordingsRequest
+         * @return DescribeRecordingsResponse
+         */
         public DescribeRecordingsResponse DescribeRecordings(DescribeRecordingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRecordingsWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeRecordingsRequest
+         * @return DescribeRecordingsResponse
+         */
         public async Task<DescribeRecordingsResponse> DescribeRecordingsAsync(DescribeRecordingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRecordingsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the Alibaba Cloud regions that are available for Elastic Desktop Service (EDS).
+         *
+         * @param request DescribeRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12863,6 +14968,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Alibaba Cloud regions that are available for Elastic Desktop Service (EDS).
+         *
+         * @param request DescribeRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12894,12 +15006,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Alibaba Cloud regions that are available for Elastic Desktop Service (EDS).
+         *
+         * @param request DescribeRegionsRequest
+         * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the Alibaba Cloud regions that are available for Elastic Desktop Service (EDS).
+         *
+         * @param request DescribeRegionsRequest
+         * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12907,12 +15031,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
-          * *   You can query session statistics for the past hour.
-          *
-          * @param request DescribeSessionStatisticRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSessionStatisticResponse
+         * @summary Queries the session statistics of a region.
+         *
+         * @description *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+         * *   You can query session statistics for the past hour.
+         *
+         * @param request DescribeSessionStatisticRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSessionStatisticResponse
          */
         public DescribeSessionStatisticResponse DescribeSessionStatisticWithOptions(DescribeSessionStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12962,12 +15088,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
-          * *   You can query session statistics for the past hour.
-          *
-          * @param request DescribeSessionStatisticRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSessionStatisticResponse
+         * @summary Queries the session statistics of a region.
+         *
+         * @description *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+         * *   You can query session statistics for the past hour.
+         *
+         * @param request DescribeSessionStatisticRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSessionStatisticResponse
          */
         public async Task<DescribeSessionStatisticResponse> DescribeSessionStatisticWithOptionsAsync(DescribeSessionStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13017,11 +15145,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
-          * *   You can query session statistics for the past hour.
-          *
-          * @param request DescribeSessionStatisticRequest
-          * @return DescribeSessionStatisticResponse
+         * @summary Queries the session statistics of a region.
+         *
+         * @description *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+         * *   You can query session statistics for the past hour.
+         *
+         * @param request DescribeSessionStatisticRequest
+         * @return DescribeSessionStatisticResponse
          */
         public DescribeSessionStatisticResponse DescribeSessionStatistic(DescribeSessionStatisticRequest request)
         {
@@ -13030,11 +15160,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
-          * *   You can query session statistics for the past hour.
-          *
-          * @param request DescribeSessionStatisticRequest
-          * @return DescribeSessionStatisticResponse
+         * @summary Queries the session statistics of a region.
+         *
+         * @description *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+         * *   You can query session statistics for the past hour.
+         *
+         * @param request DescribeSessionStatisticRequest
+         * @return DescribeSessionStatisticResponse
          */
         public async Task<DescribeSessionStatisticResponse> DescribeSessionStatisticAsync(DescribeSessionStatisticRequest request)
         {
@@ -13042,6 +15174,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeSessionStatisticWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the snapshots that are created based on a cloud computer and the details of the snapshots.
+         *
+         * @param request DescribeSnapshotsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSnapshotsResponse
+         */
         public DescribeSnapshotsResponse DescribeSnapshotsWithOptions(DescribeSnapshotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13113,6 +15252,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeSnapshotsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the snapshots that are created based on a cloud computer and the details of the snapshots.
+         *
+         * @param request DescribeSnapshotsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSnapshotsResponse
+         */
         public async Task<DescribeSnapshotsResponse> DescribeSnapshotsWithOptionsAsync(DescribeSnapshotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13184,18 +15330,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeSnapshotsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the snapshots that are created based on a cloud computer and the details of the snapshots.
+         *
+         * @param request DescribeSnapshotsRequest
+         * @return DescribeSnapshotsResponse
+         */
         public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSnapshotsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the snapshots that are created based on a cloud computer and the details of the snapshots.
+         *
+         * @param request DescribeSnapshotsRequest
+         * @return DescribeSnapshotsResponse
+         */
         public async Task<DescribeSnapshotsResponse> DescribeSnapshotsAsync(DescribeSnapshotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSnapshotsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询超卖组中用户连接数据
+         *
+         * @param request DescribeUserConnectTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserConnectTimeResponse
+         */
         public DescribeUserConnectTimeResponse DescribeUserConnectTimeWithOptions(DescribeUserConnectTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13251,6 +15416,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUserConnectTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询超卖组中用户连接数据
+         *
+         * @param request DescribeUserConnectTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserConnectTimeResponse
+         */
         public async Task<DescribeUserConnectTimeResponse> DescribeUserConnectTimeWithOptionsAsync(DescribeUserConnectTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13306,18 +15478,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUserConnectTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询超卖组中用户连接数据
+         *
+         * @param request DescribeUserConnectTimeRequest
+         * @return DescribeUserConnectTimeResponse
+         */
         public DescribeUserConnectTimeResponse DescribeUserConnectTime(DescribeUserConnectTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserConnectTimeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询超卖组中用户连接数据
+         *
+         * @param request DescribeUserConnectTimeRequest
+         * @return DescribeUserConnectTimeResponse
+         */
         public async Task<DescribeUserConnectTimeResponse> DescribeUserConnectTimeAsync(DescribeUserConnectTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserConnectTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the connection records of an authorized user to cloud computers in a cloud computer pool.
+         *
+         * @param request DescribeUserConnectionRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserConnectionRecordsResponse
+         */
         public DescribeUserConnectionRecordsResponse DescribeUserConnectionRecordsWithOptions(DescribeUserConnectionRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13393,6 +15584,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUserConnectionRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the connection records of an authorized user to cloud computers in a cloud computer pool.
+         *
+         * @param request DescribeUserConnectionRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserConnectionRecordsResponse
+         */
         public async Task<DescribeUserConnectionRecordsResponse> DescribeUserConnectionRecordsWithOptionsAsync(DescribeUserConnectionRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13468,18 +15666,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUserConnectionRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the connection records of an authorized user to cloud computers in a cloud computer pool.
+         *
+         * @param request DescribeUserConnectionRecordsRequest
+         * @return DescribeUserConnectionRecordsResponse
+         */
         public DescribeUserConnectionRecordsResponse DescribeUserConnectionRecords(DescribeUserConnectionRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserConnectionRecordsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the connection records of an authorized user to cloud computers in a cloud computer pool.
+         *
+         * @param request DescribeUserConnectionRecordsRequest
+         * @return DescribeUserConnectionRecordsResponse
+         */
         public async Task<DescribeUserConnectionRecordsResponse> DescribeUserConnectionRecordsAsync(DescribeUserConnectionRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserConnectionRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the configurations of the user profile management (UPM) directory blacklist and whitelist.
+         *
+         * @param request DescribeUserProfilePathRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserProfilePathRulesResponse
+         */
         public DescribeUserProfilePathRulesResponse DescribeUserProfilePathRulesWithOptions(DescribeUserProfilePathRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13515,6 +15732,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUserProfilePathRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the configurations of the user profile management (UPM) directory blacklist and whitelist.
+         *
+         * @param request DescribeUserProfilePathRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserProfilePathRulesResponse
+         */
         public async Task<DescribeUserProfilePathRulesResponse> DescribeUserProfilePathRulesWithOptionsAsync(DescribeUserProfilePathRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13550,18 +15774,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUserProfilePathRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the configurations of the user profile management (UPM) directory blacklist and whitelist.
+         *
+         * @param request DescribeUserProfilePathRulesRequest
+         * @return DescribeUserProfilePathRulesResponse
+         */
         public DescribeUserProfilePathRulesResponse DescribeUserProfilePathRules(DescribeUserProfilePathRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserProfilePathRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the configurations of the user profile management (UPM) directory blacklist and whitelist.
+         *
+         * @param request DescribeUserProfilePathRulesRequest
+         * @return DescribeUserProfilePathRulesResponse
+         */
         public async Task<DescribeUserProfilePathRulesResponse> DescribeUserProfilePathRulesAsync(DescribeUserProfilePathRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserProfilePathRulesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.
+         *
+         * @param request DescribeUsersInGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUsersInGroupResponse
+         */
         public DescribeUsersInGroupResponse DescribeUsersInGroupWithOptions(DescribeUsersInGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13625,6 +15868,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUsersInGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.
+         *
+         * @param request DescribeUsersInGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUsersInGroupResponse
+         */
         public async Task<DescribeUsersInGroupResponse> DescribeUsersInGroupWithOptionsAsync(DescribeUsersInGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13688,18 +15938,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUsersInGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.
+         *
+         * @param request DescribeUsersInGroupRequest
+         * @return DescribeUsersInGroupResponse
+         */
         public DescribeUsersInGroupResponse DescribeUsersInGroup(DescribeUsersInGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUsersInGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.
+         *
+         * @param request DescribeUsersInGroupRequest
+         * @return DescribeUsersInGroupResponse
+         */
         public async Task<DescribeUsersInGroupResponse> DescribeUsersInGroupAsync(DescribeUsersInGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUsersInGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the passwords of authorized users of a cloud computer.
+         *
+         * @param request DescribeUsersPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUsersPasswordResponse
+         */
         public DescribeUsersPasswordResponse DescribeUsersPasswordWithOptions(DescribeUsersPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13731,6 +16000,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUsersPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the passwords of authorized users of a cloud computer.
+         *
+         * @param request DescribeUsersPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUsersPasswordResponse
+         */
         public async Task<DescribeUsersPasswordResponse> DescribeUsersPasswordWithOptionsAsync(DescribeUsersPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13762,18 +16038,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeUsersPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the passwords of authorized users of a cloud computer.
+         *
+         * @param request DescribeUsersPasswordRequest
+         * @return DescribeUsersPasswordResponse
+         */
         public DescribeUsersPasswordResponse DescribeUsersPassword(DescribeUsersPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUsersPasswordWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the passwords of authorized users of a cloud computer.
+         *
+         * @param request DescribeUsersPasswordRequest
+         * @return DescribeUsersPasswordResponse
+         */
         public async Task<DescribeUsersPasswordResponse> DescribeUsersPasswordAsync(DescribeUsersPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUsersPasswordWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries multi-factor authentication (MFA) devices that are bound to an Active Directory (AD) account.
+         *
+         * @param request DescribeVirtualMFADevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVirtualMFADevicesResponse
+         */
         public DescribeVirtualMFADevicesResponse DescribeVirtualMFADevicesWithOptions(DescribeVirtualMFADevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13817,6 +16112,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeVirtualMFADevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries multi-factor authentication (MFA) devices that are bound to an Active Directory (AD) account.
+         *
+         * @param request DescribeVirtualMFADevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVirtualMFADevicesResponse
+         */
         public async Task<DescribeVirtualMFADevicesResponse> DescribeVirtualMFADevicesWithOptionsAsync(DescribeVirtualMFADevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13860,18 +16162,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeVirtualMFADevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries multi-factor authentication (MFA) devices that are bound to an Active Directory (AD) account.
+         *
+         * @param request DescribeVirtualMFADevicesRequest
+         * @return DescribeVirtualMFADevicesResponse
+         */
         public DescribeVirtualMFADevicesResponse DescribeVirtualMFADevices(DescribeVirtualMFADevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVirtualMFADevicesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries multi-factor authentication (MFA) devices that are bound to an Active Directory (AD) account.
+         *
+         * @param request DescribeVirtualMFADevicesRequest
+         * @return DescribeVirtualMFADevicesResponse
+         */
         public async Task<DescribeVirtualMFADevicesResponse> DescribeVirtualMFADevicesAsync(DescribeVirtualMFADevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVirtualMFADevicesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the zones in a region in which Elastic Desktop Service is supported.
+         *
+         * @param request DescribeZonesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeZonesResponse
+         */
         public DescribeZonesResponse DescribeZonesWithOptions(DescribeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13903,6 +16224,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeZonesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the zones in a region in which Elastic Desktop Service is supported.
+         *
+         * @param request DescribeZonesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeZonesResponse
+         */
         public async Task<DescribeZonesResponse> DescribeZonesWithOptionsAsync(DescribeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13934,18 +16262,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the zones in a region in which Elastic Desktop Service is supported.
+         *
+         * @param request DescribeZonesRequest
+         * @return DescribeZonesResponse
+         */
         public DescribeZonesResponse DescribeZones(DescribeZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeZonesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the zones in a region in which Elastic Desktop Service is supported.
+         *
+         * @param request DescribeZonesRequest
+         * @return DescribeZonesResponse
+         */
         public async Task<DescribeZonesResponse> DescribeZonesAsync(DescribeZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeZonesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Unbinds an advanced office network from a CEN instance.
+         *
+         * @param request DetachCenRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DetachCenResponse
+         */
         public DetachCenResponse DetachCenWithOptions(DetachCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13977,6 +16324,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DetachCenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Unbinds an advanced office network from a CEN instance.
+         *
+         * @param request DetachCenRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DetachCenResponse
+         */
         public async Task<DetachCenResponse> DetachCenWithOptionsAsync(DetachCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14008,18 +16362,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DetachCenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Unbinds an advanced office network from a CEN instance.
+         *
+         * @param request DetachCenRequest
+         * @return DetachCenResponse
+         */
         public DetachCenResponse DetachCen(DetachCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachCenWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Unbinds an advanced office network from a CEN instance.
+         *
+         * @param request DetachCenRequest
+         * @return DetachCenResponse
+         */
         public async Task<DetachCenResponse> DetachCenAsync(DetachCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Unbinds a hardware client from a user.
+         *
+         * @param request DetachEndUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DetachEndUserResponse
+         */
         public DetachEndUserResponse DetachEndUserWithOptions(DetachEndUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14067,6 +16440,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DetachEndUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Unbinds a hardware client from a user.
+         *
+         * @param request DetachEndUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DetachEndUserResponse
+         */
         public async Task<DetachEndUserResponse> DetachEndUserWithOptionsAsync(DetachEndUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14114,18 +16494,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DetachEndUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Unbinds a hardware client from a user.
+         *
+         * @param request DetachEndUserRequest
+         * @return DetachEndUserResponse
+         */
         public DetachEndUserResponse DetachEndUser(DetachEndUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachEndUserWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Unbinds a hardware client from a user.
+         *
+         * @param request DetachEndUserRequest
+         * @return DetachEndUserResponse
+         */
         public async Task<DetachEndUserResponse> DetachEndUserAsync(DetachEndUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachEndUserWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Disables cloud desktops in a desktop group.
+         *
+         * @param request DisableDesktopsInGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableDesktopsInGroupResponse
+         */
         public DisableDesktopsInGroupResponse DisableDesktopsInGroupWithOptions(DisableDesktopsInGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14161,6 +16560,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DisableDesktopsInGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables cloud desktops in a desktop group.
+         *
+         * @param request DisableDesktopsInGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableDesktopsInGroupResponse
+         */
         public async Task<DisableDesktopsInGroupResponse> DisableDesktopsInGroupWithOptionsAsync(DisableDesktopsInGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14196,18 +16602,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DisableDesktopsInGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables cloud desktops in a desktop group.
+         *
+         * @param request DisableDesktopsInGroupRequest
+         * @return DisableDesktopsInGroupResponse
+         */
         public DisableDesktopsInGroupResponse DisableDesktopsInGroup(DisableDesktopsInGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableDesktopsInGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Disables cloud desktops in a desktop group.
+         *
+         * @param request DisableDesktopsInGroupRequest
+         * @return DisableDesktopsInGroupResponse
+         */
         public async Task<DisableDesktopsInGroupResponse> DisableDesktopsInGroupAsync(DisableDesktopsInGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableDesktopsInGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Disconnects from desktop sessions.
+         *
+         * @param request DisconnectDesktopSessionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisconnectDesktopSessionsResponse
+         */
         public DisconnectDesktopSessionsResponse DisconnectDesktopSessionsWithOptions(DisconnectDesktopSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14243,6 +16668,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DisconnectDesktopSessionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Disconnects from desktop sessions.
+         *
+         * @param request DisconnectDesktopSessionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisconnectDesktopSessionsResponse
+         */
         public async Task<DisconnectDesktopSessionsResponse> DisconnectDesktopSessionsWithOptionsAsync(DisconnectDesktopSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14278,18 +16710,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DisconnectDesktopSessionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Disconnects from desktop sessions.
+         *
+         * @param request DisconnectDesktopSessionsRequest
+         * @return DisconnectDesktopSessionsResponse
+         */
         public DisconnectDesktopSessionsResponse DisconnectDesktopSessions(DisconnectDesktopSessionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisconnectDesktopSessionsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Disconnects from desktop sessions.
+         *
+         * @param request DisconnectDesktopSessionsRequest
+         * @return DisconnectDesktopSessionsResponse
+         */
         public async Task<DisconnectDesktopSessionsResponse> DisconnectDesktopSessionsAsync(DisconnectDesktopSessionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisconnectDesktopSessionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Unbinds a premium bandwidth plan from an office network.
+         *
+         * @param request DissociateNetworkPackageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DissociateNetworkPackageResponse
+         */
         public DissociateNetworkPackageResponse DissociateNetworkPackageWithOptions(DissociateNetworkPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14321,6 +16772,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DissociateNetworkPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Unbinds a premium bandwidth plan from an office network.
+         *
+         * @param request DissociateNetworkPackageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DissociateNetworkPackageResponse
+         */
         public async Task<DissociateNetworkPackageResponse> DissociateNetworkPackageWithOptionsAsync(DissociateNetworkPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14352,18 +16810,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DissociateNetworkPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Unbinds a premium bandwidth plan from an office network.
+         *
+         * @param request DissociateNetworkPackageRequest
+         * @return DissociateNetworkPackageResponse
+         */
         public DissociateNetworkPackageResponse DissociateNetworkPackage(DissociateNetworkPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DissociateNetworkPackageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Unbinds a premium bandwidth plan from an office network.
+         *
+         * @param request DissociateNetworkPackageRequest
+         * @return DissociateNetworkPackageResponse
+         */
         public async Task<DissociateNetworkPackageResponse> DissociateNetworkPackageAsync(DissociateNetworkPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DissociateNetworkPackageWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Exports events that occur on a cloud desktop from an Alibaba Cloud Workspace client.
+         *
+         * @param request ExportClientEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportClientEventsResponse
+         */
         public ExportClientEventsResponse ExportClientEventsWithOptions(ExportClientEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14435,6 +16912,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ExportClientEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Exports events that occur on a cloud desktop from an Alibaba Cloud Workspace client.
+         *
+         * @param request ExportClientEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportClientEventsResponse
+         */
         public async Task<ExportClientEventsResponse> ExportClientEventsWithOptionsAsync(ExportClientEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14506,18 +16990,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ExportClientEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Exports events that occur on a cloud desktop from an Alibaba Cloud Workspace client.
+         *
+         * @param request ExportClientEventsRequest
+         * @return ExportClientEventsResponse
+         */
         public ExportClientEventsResponse ExportClientEvents(ExportClientEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExportClientEventsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Exports events that occur on a cloud desktop from an Alibaba Cloud Workspace client.
+         *
+         * @param request ExportClientEventsRequest
+         * @return ExportClientEventsResponse
+         */
         public async Task<ExportClientEventsResponse> ExportClientEventsAsync(ExportClientEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExportClientEventsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.
+         *
+         * @param request ExportDesktopGroupInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportDesktopGroupInfoResponse
+         */
         public ExportDesktopGroupInfoResponse ExportDesktopGroupInfoWithOptions(ExportDesktopGroupInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14566,6 +17069,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14585,6 +17092,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ExportDesktopGroupInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.
+         *
+         * @param request ExportDesktopGroupInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportDesktopGroupInfoResponse
+         */
         public async Task<ExportDesktopGroupInfoResponse> ExportDesktopGroupInfoWithOptionsAsync(ExportDesktopGroupInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14633,6 +17147,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14652,12 +17170,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ExportDesktopGroupInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.
+         *
+         * @param request ExportDesktopGroupInfoRequest
+         * @return ExportDesktopGroupInfoResponse
+         */
         public ExportDesktopGroupInfoResponse ExportDesktopGroupInfo(ExportDesktopGroupInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExportDesktopGroupInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.
+         *
+         * @param request ExportDesktopGroupInfoRequest
+         * @return ExportDesktopGroupInfoResponse
+         */
         public async Task<ExportDesktopGroupInfoResponse> ExportDesktopGroupInfoAsync(ExportDesktopGroupInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14665,26 +17195,28 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
-          * *   Cloud computer ID and name
-          * *   Office network ID and name
-          * *   The instance type, OS and protocol of the cloud computer
-          * *   System disk and data disk of the cloud computer
-          * *   The status
-          * *   Purchase method
-          * *   The time when the cloud computer expires
-          * *   Remaining duration and total duration
-          * *   Number of assigned users and number of current users
-          * *   Office network type
-          * *   The time when the cloud computer was created
-          * *   Tags
-          * *   Encryption status
-          * *   IP
-          * *   The hostname
-          *
-          * @param request ExportDesktopListInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ExportDesktopListInfoResponse
+         * @summary Exports a cloud computer list as a CSV file.
+         *
+         * @description The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
+         * *   Cloud computer ID and name
+         * *   Office network ID and name
+         * *   The instance type, OS and protocol of the cloud computer
+         * *   System disk and data disk of the cloud computer
+         * *   The status
+         * *   Purchase method
+         * *   The time when the cloud computer expires
+         * *   Remaining duration and total duration
+         * *   Number of assigned users and number of current users
+         * *   Office network type
+         * *   The time when the cloud computer was created
+         * *   Tags
+         * *   Encryption status
+         * *   IP
+         * *   The hostname
+         *
+         * @param request ExportDesktopListInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportDesktopListInfoResponse
          */
         public ExportDesktopListInfoResponse ExportDesktopListInfoWithOptions(ExportDesktopListInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14770,26 +17302,28 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
-          * *   Cloud computer ID and name
-          * *   Office network ID and name
-          * *   The instance type, OS and protocol of the cloud computer
-          * *   System disk and data disk of the cloud computer
-          * *   The status
-          * *   Purchase method
-          * *   The time when the cloud computer expires
-          * *   Remaining duration and total duration
-          * *   Number of assigned users and number of current users
-          * *   Office network type
-          * *   The time when the cloud computer was created
-          * *   Tags
-          * *   Encryption status
-          * *   IP
-          * *   The hostname
-          *
-          * @param request ExportDesktopListInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ExportDesktopListInfoResponse
+         * @summary Exports a cloud computer list as a CSV file.
+         *
+         * @description The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
+         * *   Cloud computer ID and name
+         * *   Office network ID and name
+         * *   The instance type, OS and protocol of the cloud computer
+         * *   System disk and data disk of the cloud computer
+         * *   The status
+         * *   Purchase method
+         * *   The time when the cloud computer expires
+         * *   Remaining duration and total duration
+         * *   Number of assigned users and number of current users
+         * *   Office network type
+         * *   The time when the cloud computer was created
+         * *   Tags
+         * *   Encryption status
+         * *   IP
+         * *   The hostname
+         *
+         * @param request ExportDesktopListInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportDesktopListInfoResponse
          */
         public async Task<ExportDesktopListInfoResponse> ExportDesktopListInfoWithOptionsAsync(ExportDesktopListInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14875,25 +17409,27 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
-          * *   Cloud computer ID and name
-          * *   Office network ID and name
-          * *   The instance type, OS and protocol of the cloud computer
-          * *   System disk and data disk of the cloud computer
-          * *   The status
-          * *   Purchase method
-          * *   The time when the cloud computer expires
-          * *   Remaining duration and total duration
-          * *   Number of assigned users and number of current users
-          * *   Office network type
-          * *   The time when the cloud computer was created
-          * *   Tags
-          * *   Encryption status
-          * *   IP
-          * *   The hostname
-          *
-          * @param request ExportDesktopListInfoRequest
-          * @return ExportDesktopListInfoResponse
+         * @summary Exports a cloud computer list as a CSV file.
+         *
+         * @description The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
+         * *   Cloud computer ID and name
+         * *   Office network ID and name
+         * *   The instance type, OS and protocol of the cloud computer
+         * *   System disk and data disk of the cloud computer
+         * *   The status
+         * *   Purchase method
+         * *   The time when the cloud computer expires
+         * *   Remaining duration and total duration
+         * *   Number of assigned users and number of current users
+         * *   Office network type
+         * *   The time when the cloud computer was created
+         * *   Tags
+         * *   Encryption status
+         * *   IP
+         * *   The hostname
+         *
+         * @param request ExportDesktopListInfoRequest
+         * @return ExportDesktopListInfoResponse
          */
         public ExportDesktopListInfoResponse ExportDesktopListInfo(ExportDesktopListInfoRequest request)
         {
@@ -14902,25 +17438,27 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
-          * *   Cloud computer ID and name
-          * *   Office network ID and name
-          * *   The instance type, OS and protocol of the cloud computer
-          * *   System disk and data disk of the cloud computer
-          * *   The status
-          * *   Purchase method
-          * *   The time when the cloud computer expires
-          * *   Remaining duration and total duration
-          * *   Number of assigned users and number of current users
-          * *   Office network type
-          * *   The time when the cloud computer was created
-          * *   Tags
-          * *   Encryption status
-          * *   IP
-          * *   The hostname
-          *
-          * @param request ExportDesktopListInfoRequest
-          * @return ExportDesktopListInfoResponse
+         * @summary Exports a cloud computer list as a CSV file.
+         *
+         * @description The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
+         * *   Cloud computer ID and name
+         * *   Office network ID and name
+         * *   The instance type, OS and protocol of the cloud computer
+         * *   System disk and data disk of the cloud computer
+         * *   The status
+         * *   Purchase method
+         * *   The time when the cloud computer expires
+         * *   Remaining duration and total duration
+         * *   Number of assigned users and number of current users
+         * *   Office network type
+         * *   The time when the cloud computer was created
+         * *   Tags
+         * *   Encryption status
+         * *   IP
+         * *   The hostname
+         *
+         * @param request ExportDesktopListInfoRequest
+         * @return ExportDesktopListInfoResponse
          */
         public async Task<ExportDesktopListInfoResponse> ExportDesktopListInfoAsync(ExportDesktopListInfoRequest request)
         {
@@ -14928,6 +17466,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ExportDesktopListInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Obtains the information about an asynchronous task based on the value of the AsyncTaskId parameter that you obtain by calling the CopyCdsFile operation.
+         *
+         * @param request GetAsyncTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAsyncTaskResponse
+         */
         public GetAsyncTaskResponse GetAsyncTaskWithOptions(GetAsyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14959,6 +17504,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetAsyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the information about an asynchronous task based on the value of the AsyncTaskId parameter that you obtain by calling the CopyCdsFile operation.
+         *
+         * @param request GetAsyncTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAsyncTaskResponse
+         */
         public async Task<GetAsyncTaskResponse> GetAsyncTaskWithOptionsAsync(GetAsyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14990,12 +17542,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the information about an asynchronous task based on the value of the AsyncTaskId parameter that you obtain by calling the CopyCdsFile operation.
+         *
+         * @param request GetAsyncTaskRequest
+         * @return GetAsyncTaskResponse
+         */
         public GetAsyncTaskResponse GetAsyncTask(GetAsyncTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAsyncTaskWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Obtains the information about an asynchronous task based on the value of the AsyncTaskId parameter that you obtain by calling the CopyCdsFile operation.
+         *
+         * @param request GetAsyncTaskRequest
+         * @return GetAsyncTaskResponse
+         */
         public async Task<GetAsyncTaskResponse> GetAsyncTaskAsync(GetAsyncTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15003,11 +17567,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer must be in the Running state.
-          *
-          * @param request GetConnectionTicketRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetConnectionTicketResponse
+         * @summary Obtains the credential that is used to connect to a cloud desktop.
+         *
+         * @description The cloud computer must be in the Running state.
+         *
+         * @param request GetConnectionTicketRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetConnectionTicketResponse
          */
         public GetConnectionTicketResponse GetConnectionTicketWithOptions(GetConnectionTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15073,11 +17639,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer must be in the Running state.
-          *
-          * @param request GetConnectionTicketRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetConnectionTicketResponse
+         * @summary Obtains the credential that is used to connect to a cloud desktop.
+         *
+         * @description The cloud computer must be in the Running state.
+         *
+         * @param request GetConnectionTicketRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetConnectionTicketResponse
          */
         public async Task<GetConnectionTicketResponse> GetConnectionTicketWithOptionsAsync(GetConnectionTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15143,10 +17711,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer must be in the Running state.
-          *
-          * @param request GetConnectionTicketRequest
-          * @return GetConnectionTicketResponse
+         * @summary Obtains the credential that is used to connect to a cloud desktop.
+         *
+         * @description The cloud computer must be in the Running state.
+         *
+         * @param request GetConnectionTicketRequest
+         * @return GetConnectionTicketResponse
          */
         public GetConnectionTicketResponse GetConnectionTicket(GetConnectionTicketRequest request)
         {
@@ -15155,10 +17725,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computer must be in the Running state.
-          *
-          * @param request GetConnectionTicketRequest
-          * @return GetConnectionTicketResponse
+         * @summary Obtains the credential that is used to connect to a cloud desktop.
+         *
+         * @description The cloud computer must be in the Running state.
+         *
+         * @param request GetConnectionTicketRequest
+         * @return GetConnectionTicketResponse
          */
         public async Task<GetConnectionTicketResponse> GetConnectionTicketAsync(GetConnectionTicketRequest request)
         {
@@ -15166,6 +17738,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await GetConnectionTicketWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Obtains the credentials of the stream collaboration
+         *
+         * @param request GetCoordinateTicketRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetCoordinateTicketResponse
+         */
         public GetCoordinateTicketResponse GetCoordinateTicketWithOptions(GetCoordinateTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15209,6 +17788,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetCoordinateTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the credentials of the stream collaboration
+         *
+         * @param request GetCoordinateTicketRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetCoordinateTicketResponse
+         */
         public async Task<GetCoordinateTicketResponse> GetCoordinateTicketWithOptionsAsync(GetCoordinateTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15252,18 +17838,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetCoordinateTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the credentials of the stream collaboration
+         *
+         * @param request GetCoordinateTicketRequest
+         * @return GetCoordinateTicketResponse
+         */
         public GetCoordinateTicketResponse GetCoordinateTicket(GetCoordinateTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetCoordinateTicketWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Obtains the credentials of the stream collaboration
+         *
+         * @param request GetCoordinateTicketRequest
+         * @return GetCoordinateTicketResponse
+         */
         public async Task<GetCoordinateTicketResponse> GetCoordinateTicketAsync(GetCoordinateTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCoordinateTicketWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about a cloud computer pool.
+         *
+         * @param request GetDesktopGroupDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDesktopGroupDetailResponse
+         */
         public GetDesktopGroupDetailResponse GetDesktopGroupDetailWithOptions(GetDesktopGroupDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15295,6 +17900,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetDesktopGroupDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a cloud computer pool.
+         *
+         * @param request GetDesktopGroupDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDesktopGroupDetailResponse
+         */
         public async Task<GetDesktopGroupDetailResponse> GetDesktopGroupDetailWithOptionsAsync(GetDesktopGroupDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15326,18 +17938,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetDesktopGroupDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a cloud computer pool.
+         *
+         * @param request GetDesktopGroupDetailRequest
+         * @return GetDesktopGroupDetailResponse
+         */
         public GetDesktopGroupDetailResponse GetDesktopGroupDetail(GetDesktopGroupDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDesktopGroupDetailWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about a cloud computer pool.
+         *
+         * @param request GetDesktopGroupDetailRequest
+         * @return GetDesktopGroupDetailResponse
+         */
         public async Task<GetDesktopGroupDetailResponse> GetDesktopGroupDetailAsync(GetDesktopGroupDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDesktopGroupDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries whether single sign-on (SSO) is enabled for a workspace.
+         *
+         * @param request GetOfficeSiteSsoStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetOfficeSiteSsoStatusResponse
+         */
         public GetOfficeSiteSsoStatusResponse GetOfficeSiteSsoStatusWithOptions(GetOfficeSiteSsoStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15369,6 +18000,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetOfficeSiteSsoStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether single sign-on (SSO) is enabled for a workspace.
+         *
+         * @param request GetOfficeSiteSsoStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetOfficeSiteSsoStatusResponse
+         */
         public async Task<GetOfficeSiteSsoStatusResponse> GetOfficeSiteSsoStatusWithOptionsAsync(GetOfficeSiteSsoStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15400,12 +18038,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetOfficeSiteSsoStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether single sign-on (SSO) is enabled for a workspace.
+         *
+         * @param request GetOfficeSiteSsoStatusRequest
+         * @return GetOfficeSiteSsoStatusResponse
+         */
         public GetOfficeSiteSsoStatusResponse GetOfficeSiteSsoStatus(GetOfficeSiteSsoStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetOfficeSiteSsoStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries whether single sign-on (SSO) is enabled for a workspace.
+         *
+         * @param request GetOfficeSiteSsoStatusRequest
+         * @return GetOfficeSiteSsoStatusResponse
+         */
         public async Task<GetOfficeSiteSsoStatusResponse> GetOfficeSiteSsoStatusAsync(GetOfficeSiteSsoStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15413,11 +18063,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-          *
-          * @param request GetSpMetadataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSpMetadataResponse
+         * @summary Obtains the metadata of a Security Assertion Markup Language (SAML) 2.0-based service provider (SP).
+         *
+         * @description You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
+         *
+         * @param request GetSpMetadataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSpMetadataResponse
          */
         public GetSpMetadataResponse GetSpMetadataWithOptions(GetSpMetadataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15455,11 +18107,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-          *
-          * @param request GetSpMetadataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSpMetadataResponse
+         * @summary Obtains the metadata of a Security Assertion Markup Language (SAML) 2.0-based service provider (SP).
+         *
+         * @description You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
+         *
+         * @param request GetSpMetadataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSpMetadataResponse
          */
         public async Task<GetSpMetadataResponse> GetSpMetadataWithOptionsAsync(GetSpMetadataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15497,10 +18151,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-          *
-          * @param request GetSpMetadataRequest
-          * @return GetSpMetadataResponse
+         * @summary Obtains the metadata of a Security Assertion Markup Language (SAML) 2.0-based service provider (SP).
+         *
+         * @description You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
+         *
+         * @param request GetSpMetadataRequest
+         * @return GetSpMetadataResponse
          */
         public GetSpMetadataResponse GetSpMetadata(GetSpMetadataRequest request)
         {
@@ -15509,10 +18165,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-          *
-          * @param request GetSpMetadataRequest
-          * @return GetSpMetadataResponse
+         * @summary Obtains the metadata of a Security Assertion Markup Language (SAML) 2.0-based service provider (SP).
+         *
+         * @description You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
+         *
+         * @param request GetSpMetadataRequest
+         * @return GetSpMetadataResponse
          */
         public async Task<GetSpMetadataResponse> GetSpMetadataAsync(GetSpMetadataRequest request)
         {
@@ -15521,11 +18179,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
-          *
-          * @param request HibernateDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return HibernateDesktopsResponse
+         * @summary Hibernates cloud desktops.
+         *
+         * @description Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+         *
+         * @param request HibernateDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HibernateDesktopsResponse
          */
         public HibernateDesktopsResponse HibernateDesktopsWithOptions(HibernateDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15559,11 +18219,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
-          *
-          * @param request HibernateDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return HibernateDesktopsResponse
+         * @summary Hibernates cloud desktops.
+         *
+         * @description Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+         *
+         * @param request HibernateDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HibernateDesktopsResponse
          */
         public async Task<HibernateDesktopsResponse> HibernateDesktopsWithOptionsAsync(HibernateDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15597,10 +18259,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
-          *
-          * @param request HibernateDesktopsRequest
-          * @return HibernateDesktopsResponse
+         * @summary Hibernates cloud desktops.
+         *
+         * @description Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+         *
+         * @param request HibernateDesktopsRequest
+         * @return HibernateDesktopsResponse
          */
         public HibernateDesktopsResponse HibernateDesktops(HibernateDesktopsRequest request)
         {
@@ -15609,10 +18273,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
-          *
-          * @param request HibernateDesktopsRequest
-          * @return HibernateDesktopsResponse
+         * @summary Hibernates cloud desktops.
+         *
+         * @description Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+         *
+         * @param request HibernateDesktopsRequest
+         * @return HibernateDesktopsResponse
          */
         public async Task<HibernateDesktopsResponse> HibernateDesktopsAsync(HibernateDesktopsRequest request)
         {
@@ -15620,6 +18286,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await HibernateDesktopsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the files in a cloud disk.
+         *
+         * @param tmpReq ListCdsFilesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListCdsFilesResponse
+         */
         public ListCdsFilesResponse ListCdsFilesWithOptions(ListCdsFilesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -15689,6 +18362,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListCdsFilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the files in a cloud disk.
+         *
+         * @param tmpReq ListCdsFilesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListCdsFilesResponse
+         */
         public async Task<ListCdsFilesResponse> ListCdsFilesWithOptionsAsync(ListCdsFilesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -15758,12 +18438,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListCdsFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the files in a cloud disk.
+         *
+         * @param request ListCdsFilesRequest
+         * @return ListCdsFilesResponse
+         */
         public ListCdsFilesResponse ListCdsFiles(ListCdsFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCdsFilesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the files in a cloud disk.
+         *
+         * @param request ListCdsFilesRequest
+         * @return ListCdsFilesResponse
+         */
         public async Task<ListCdsFilesResponse> ListCdsFilesAsync(ListCdsFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15771,11 +18463,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
-          *
-          * @param request ListDirectoryUsersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListDirectoryUsersResponse
+         * @summary Obtains the user information in the AD system if you use an AD directory to connect to an AD system.
+         *
+         * @description If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
+         *
+         * @param request ListDirectoryUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDirectoryUsersResponse
          */
         public ListDirectoryUsersResponse ListDirectoryUsersWithOptions(ListDirectoryUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15825,11 +18519,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
-          *
-          * @param request ListDirectoryUsersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListDirectoryUsersResponse
+         * @summary Obtains the user information in the AD system if you use an AD directory to connect to an AD system.
+         *
+         * @description If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
+         *
+         * @param request ListDirectoryUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDirectoryUsersResponse
          */
         public async Task<ListDirectoryUsersResponse> ListDirectoryUsersWithOptionsAsync(ListDirectoryUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15879,10 +18575,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
-          *
-          * @param request ListDirectoryUsersRequest
-          * @return ListDirectoryUsersResponse
+         * @summary Obtains the user information in the AD system if you use an AD directory to connect to an AD system.
+         *
+         * @description If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
+         *
+         * @param request ListDirectoryUsersRequest
+         * @return ListDirectoryUsersResponse
          */
         public ListDirectoryUsersResponse ListDirectoryUsers(ListDirectoryUsersRequest request)
         {
@@ -15891,10 +18589,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
-          *
-          * @param request ListDirectoryUsersRequest
-          * @return ListDirectoryUsersResponse
+         * @summary Obtains the user information in the AD system if you use an AD directory to connect to an AD system.
+         *
+         * @description If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
+         *
+         * @param request ListDirectoryUsersRequest
+         * @return ListDirectoryUsersResponse
          */
         public async Task<ListDirectoryUsersResponse> ListDirectoryUsersAsync(ListDirectoryUsersRequest request)
         {
@@ -15902,6 +18602,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ListDirectoryUsersWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about shared files of cloud disks.
+         *
+         * @param request ListFilePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFilePermissionResponse
+         */
         public ListFilePermissionResponse ListFilePermissionWithOptions(ListFilePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15945,6 +18652,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListFilePermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about shared files of cloud disks.
+         *
+         * @param request ListFilePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFilePermissionResponse
+         */
         public async Task<ListFilePermissionResponse> ListFilePermissionWithOptionsAsync(ListFilePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15988,18 +18702,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListFilePermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about shared files of cloud disks.
+         *
+         * @param request ListFilePermissionRequest
+         * @return ListFilePermissionResponse
+         */
         public ListFilePermissionResponse ListFilePermission(ListFilePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListFilePermissionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about shared files of cloud disks.
+         *
+         * @param request ListFilePermissionRequest
+         * @return ListFilePermissionResponse
+         */
         public async Task<ListFilePermissionResponse> ListFilePermissionAsync(ListFilePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFilePermissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries information about an office network, including its status, cloud computer quantity, virtual private cloud (VPC) type, and more.
+         *
+         * @param request ListOfficeSiteOverviewRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListOfficeSiteOverviewResponse
+         */
         public ListOfficeSiteOverviewResponse ListOfficeSiteOverviewWithOptions(ListOfficeSiteOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16047,6 +18780,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListOfficeSiteOverviewResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about an office network, including its status, cloud computer quantity, virtual private cloud (VPC) type, and more.
+         *
+         * @param request ListOfficeSiteOverviewRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListOfficeSiteOverviewResponse
+         */
         public async Task<ListOfficeSiteOverviewResponse> ListOfficeSiteOverviewWithOptionsAsync(ListOfficeSiteOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16094,18 +18834,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListOfficeSiteOverviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about an office network, including its status, cloud computer quantity, virtual private cloud (VPC) type, and more.
+         *
+         * @param request ListOfficeSiteOverviewRequest
+         * @return ListOfficeSiteOverviewResponse
+         */
         public ListOfficeSiteOverviewResponse ListOfficeSiteOverview(ListOfficeSiteOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOfficeSiteOverviewWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries information about an office network, including its status, cloud computer quantity, virtual private cloud (VPC) type, and more.
+         *
+         * @param request ListOfficeSiteOverviewRequest
+         * @return ListOfficeSiteOverviewResponse
+         */
         public async Task<ListOfficeSiteOverviewResponse> ListOfficeSiteOverviewAsync(ListOfficeSiteOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListOfficeSiteOverviewWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries information about Active Directory (AD) users after an enterprise AD office network (formerly workspace) interconnects to an AD domain.
+         *
+         * @param request ListOfficeSiteUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListOfficeSiteUsersResponse
+         */
         public ListOfficeSiteUsersResponse ListOfficeSiteUsersWithOptions(ListOfficeSiteUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16153,6 +18912,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListOfficeSiteUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about Active Directory (AD) users after an enterprise AD office network (formerly workspace) interconnects to an AD domain.
+         *
+         * @param request ListOfficeSiteUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListOfficeSiteUsersResponse
+         */
         public async Task<ListOfficeSiteUsersResponse> ListOfficeSiteUsersWithOptionsAsync(ListOfficeSiteUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16200,12 +18966,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListOfficeSiteUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about Active Directory (AD) users after an enterprise AD office network (formerly workspace) interconnects to an AD domain.
+         *
+         * @param request ListOfficeSiteUsersRequest
+         * @return ListOfficeSiteUsersResponse
+         */
         public ListOfficeSiteUsersResponse ListOfficeSiteUsers(ListOfficeSiteUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOfficeSiteUsersWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries information about Active Directory (AD) users after an enterprise AD office network (formerly workspace) interconnects to an AD domain.
+         *
+         * @param request ListOfficeSiteUsersRequest
+         * @return ListOfficeSiteUsersResponse
+         */
         public async Task<ListOfficeSiteUsersResponse> ListOfficeSiteUsersAsync(ListOfficeSiteUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16213,11 +18991,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
-          *
-          * @param request ListTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagResourcesResponse
+         * @summary Queries the tags of cloud computers.
+         *
+         * @description You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
+         *
+         * @param request ListTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
          */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16267,11 +19047,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
-          *
-          * @param request ListTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagResourcesResponse
+         * @summary Queries the tags of cloud computers.
+         *
+         * @description You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
+         *
+         * @param request ListTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
          */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16321,10 +19103,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
-          *
-          * @param request ListTagResourcesRequest
-          * @return ListTagResourcesResponse
+         * @summary Queries the tags of cloud computers.
+         *
+         * @description You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
          */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
@@ -16333,10 +19117,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
-          *
-          * @param request ListTagResourcesRequest
-          * @return ListTagResourcesResponse
+         * @summary Queries the tags of cloud computers.
+         *
+         * @description You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
          */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
@@ -16344,6 +19130,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Obtains the organizational units (OUs) of an Active Directory (AD) domain that is connected to an enterprise AD office network (formerly workspace).
+         *
+         * @param request ListUserAdOrganizationUnitsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUserAdOrganizationUnitsResponse
+         */
         public ListUserAdOrganizationUnitsResponse ListUserAdOrganizationUnitsWithOptions(ListUserAdOrganizationUnitsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16387,6 +19180,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListUserAdOrganizationUnitsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the organizational units (OUs) of an Active Directory (AD) domain that is connected to an enterprise AD office network (formerly workspace).
+         *
+         * @param request ListUserAdOrganizationUnitsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUserAdOrganizationUnitsResponse
+         */
         public async Task<ListUserAdOrganizationUnitsResponse> ListUserAdOrganizationUnitsWithOptionsAsync(ListUserAdOrganizationUnitsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16430,12 +19230,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ListUserAdOrganizationUnitsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the organizational units (OUs) of an Active Directory (AD) domain that is connected to an enterprise AD office network (formerly workspace).
+         *
+         * @param request ListUserAdOrganizationUnitsRequest
+         * @return ListUserAdOrganizationUnitsResponse
+         */
         public ListUserAdOrganizationUnitsResponse ListUserAdOrganizationUnits(ListUserAdOrganizationUnitsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserAdOrganizationUnitsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Obtains the organizational units (OUs) of an Active Directory (AD) domain that is connected to an enterprise AD office network (formerly workspace).
+         *
+         * @param request ListUserAdOrganizationUnitsRequest
+         * @return ListUserAdOrganizationUnitsResponse
+         */
         public async Task<ListUserAdOrganizationUnitsResponse> ListUserAdOrganizationUnitsAsync(ListUserAdOrganizationUnitsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16443,11 +19255,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
-          *
-          * @param request LockVirtualMFADeviceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return LockVirtualMFADeviceResponse
+         * @summary Locks a multi-factor authentication (MFA) device that is in the NORMAL state.
+         *
+         * @description After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](https://help.aliyun.com/document_detail/206212.html) operation to unlock the device.
+         *
+         * @param request LockVirtualMFADeviceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LockVirtualMFADeviceResponse
          */
         public LockVirtualMFADeviceResponse LockVirtualMFADeviceWithOptions(LockVirtualMFADeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16481,11 +19295,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
-          *
-          * @param request LockVirtualMFADeviceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return LockVirtualMFADeviceResponse
+         * @summary Locks a multi-factor authentication (MFA) device that is in the NORMAL state.
+         *
+         * @description After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](https://help.aliyun.com/document_detail/206212.html) operation to unlock the device.
+         *
+         * @param request LockVirtualMFADeviceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LockVirtualMFADeviceResponse
          */
         public async Task<LockVirtualMFADeviceResponse> LockVirtualMFADeviceWithOptionsAsync(LockVirtualMFADeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16519,10 +19335,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
-          *
-          * @param request LockVirtualMFADeviceRequest
-          * @return LockVirtualMFADeviceResponse
+         * @summary Locks a multi-factor authentication (MFA) device that is in the NORMAL state.
+         *
+         * @description After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](https://help.aliyun.com/document_detail/206212.html) operation to unlock the device.
+         *
+         * @param request LockVirtualMFADeviceRequest
+         * @return LockVirtualMFADeviceResponse
          */
         public LockVirtualMFADeviceResponse LockVirtualMFADevice(LockVirtualMFADeviceRequest request)
         {
@@ -16531,10 +19349,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
-          *
-          * @param request LockVirtualMFADeviceRequest
-          * @return LockVirtualMFADeviceResponse
+         * @summary Locks a multi-factor authentication (MFA) device that is in the NORMAL state.
+         *
+         * @description After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](https://help.aliyun.com/document_detail/206212.html) operation to unlock the device.
+         *
+         * @param request LockVirtualMFADeviceRequest
+         * @return LockVirtualMFADeviceResponse
          */
         public async Task<LockVirtualMFADeviceResponse> LockVirtualMFADeviceAsync(LockVirtualMFADeviceRequest request)
         {
@@ -16542,6 +19362,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await LockVirtualMFADeviceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Migrates cloud computers from the current office network (formerly called workspace) to the new office network.
+         *
+         * @param request MigrateDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MigrateDesktopsResponse
+         */
         public MigrateDesktopsResponse MigrateDesktopsWithOptions(MigrateDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16577,6 +19404,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<MigrateDesktopsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Migrates cloud computers from the current office network (formerly called workspace) to the new office network.
+         *
+         * @param request MigrateDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MigrateDesktopsResponse
+         */
         public async Task<MigrateDesktopsResponse> MigrateDesktopsWithOptionsAsync(MigrateDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16612,18 +19446,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<MigrateDesktopsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Migrates cloud computers from the current office network (formerly called workspace) to the new office network.
+         *
+         * @param request MigrateDesktopsRequest
+         * @return MigrateDesktopsResponse
+         */
         public MigrateDesktopsResponse MigrateDesktops(MigrateDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MigrateDesktopsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Migrates cloud computers from the current office network (formerly called workspace) to the new office network.
+         *
+         * @param request MigrateDesktopsRequest
+         * @return MigrateDesktopsResponse
+         */
         public async Task<MigrateDesktopsResponse> MigrateDesktopsAsync(MigrateDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MigrateDesktopsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Update the protocols of images to Adaptive Streaming Protocol (ASP).
+         *
+         * @param request MigrateImageProtocolRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MigrateImageProtocolResponse
+         */
         public MigrateImageProtocolResponse MigrateImageProtocolWithOptions(MigrateImageProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16659,6 +19512,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<MigrateImageProtocolResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Update the protocols of images to Adaptive Streaming Protocol (ASP).
+         *
+         * @param request MigrateImageProtocolRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MigrateImageProtocolResponse
+         */
         public async Task<MigrateImageProtocolResponse> MigrateImageProtocolWithOptionsAsync(MigrateImageProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16694,12 +19554,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<MigrateImageProtocolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Update the protocols of images to Adaptive Streaming Protocol (ASP).
+         *
+         * @param request MigrateImageProtocolRequest
+         * @return MigrateImageProtocolResponse
+         */
         public MigrateImageProtocolResponse MigrateImageProtocol(MigrateImageProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MigrateImageProtocolWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Update the protocols of images to Adaptive Streaming Protocol (ASP).
+         *
+         * @param request MigrateImageProtocolRequest
+         * @return MigrateImageProtocolResponse
+         */
         public async Task<MigrateImageProtocolResponse> MigrateImageProtocolAsync(MigrateImageProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16707,11 +19579,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
-          *
-          * @param request ModifyADConnectorDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyADConnectorDirectoryResponse
+         * @summary Modifies an Active Directory (AD) directory.
+         *
+         * @description You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
+         *
+         * @param request ModifyADConnectorDirectoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyADConnectorDirectoryResponse
          */
         public ModifyADConnectorDirectoryResponse ModifyADConnectorDirectoryWithOptions(ModifyADConnectorDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16785,11 +19659,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
-          *
-          * @param request ModifyADConnectorDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyADConnectorDirectoryResponse
+         * @summary Modifies an Active Directory (AD) directory.
+         *
+         * @description You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
+         *
+         * @param request ModifyADConnectorDirectoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyADConnectorDirectoryResponse
          */
         public async Task<ModifyADConnectorDirectoryResponse> ModifyADConnectorDirectoryWithOptionsAsync(ModifyADConnectorDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16863,10 +19739,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
-          *
-          * @param request ModifyADConnectorDirectoryRequest
-          * @return ModifyADConnectorDirectoryResponse
+         * @summary Modifies an Active Directory (AD) directory.
+         *
+         * @description You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
+         *
+         * @param request ModifyADConnectorDirectoryRequest
+         * @return ModifyADConnectorDirectoryResponse
          */
         public ModifyADConnectorDirectoryResponse ModifyADConnectorDirectory(ModifyADConnectorDirectoryRequest request)
         {
@@ -16875,10 +19753,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
-          *
-          * @param request ModifyADConnectorDirectoryRequest
-          * @return ModifyADConnectorDirectoryResponse
+         * @summary Modifies an Active Directory (AD) directory.
+         *
+         * @description You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
+         *
+         * @param request ModifyADConnectorDirectoryRequest
+         * @return ModifyADConnectorDirectoryResponse
          */
         public async Task<ModifyADConnectorDirectoryResponse> ModifyADConnectorDirectoryAsync(ModifyADConnectorDirectoryRequest request)
         {
@@ -16887,11 +19767,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
-          *
-          * @param request ModifyADConnectorOfficeSiteRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyADConnectorOfficeSiteResponse
+         * @summary Modifies the basic properties of an enterprise Active Directory (AD) office network, such as the office network name and domain names of the enterprise AD subdomains.
+         *
+         * @description You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
+         *
+         * @param request ModifyADConnectorOfficeSiteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyADConnectorOfficeSiteResponse
          */
         public ModifyADConnectorOfficeSiteResponse ModifyADConnectorOfficeSiteWithOptions(ModifyADConnectorOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16900,6 +19782,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdHostname))
             {
                 query["AdHostname"] = request.AdHostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupDCHostname))
+            {
+                query["BackupDCHostname"] = request.BackupDCHostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupDns))
+            {
+                query["BackupDns"] = request.BackupDns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsAddress))
             {
@@ -16965,11 +19855,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
-          *
-          * @param request ModifyADConnectorOfficeSiteRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyADConnectorOfficeSiteResponse
+         * @summary Modifies the basic properties of an enterprise Active Directory (AD) office network, such as the office network name and domain names of the enterprise AD subdomains.
+         *
+         * @description You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
+         *
+         * @param request ModifyADConnectorOfficeSiteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyADConnectorOfficeSiteResponse
          */
         public async Task<ModifyADConnectorOfficeSiteResponse> ModifyADConnectorOfficeSiteWithOptionsAsync(ModifyADConnectorOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16978,6 +19870,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdHostname))
             {
                 query["AdHostname"] = request.AdHostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupDCHostname))
+            {
+                query["BackupDCHostname"] = request.BackupDCHostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupDns))
+            {
+                query["BackupDns"] = request.BackupDns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsAddress))
             {
@@ -17043,10 +19943,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
-          *
-          * @param request ModifyADConnectorOfficeSiteRequest
-          * @return ModifyADConnectorOfficeSiteResponse
+         * @summary Modifies the basic properties of an enterprise Active Directory (AD) office network, such as the office network name and domain names of the enterprise AD subdomains.
+         *
+         * @description You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
+         *
+         * @param request ModifyADConnectorOfficeSiteRequest
+         * @return ModifyADConnectorOfficeSiteResponse
          */
         public ModifyADConnectorOfficeSiteResponse ModifyADConnectorOfficeSite(ModifyADConnectorOfficeSiteRequest request)
         {
@@ -17055,10 +19957,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
-          *
-          * @param request ModifyADConnectorOfficeSiteRequest
-          * @return ModifyADConnectorOfficeSiteResponse
+         * @summary Modifies the basic properties of an enterprise Active Directory (AD) office network, such as the office network name and domain names of the enterprise AD subdomains.
+         *
+         * @description You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
+         *
+         * @param request ModifyADConnectorOfficeSiteRequest
+         * @return ModifyADConnectorOfficeSiteResponse
          */
         public async Task<ModifyADConnectorOfficeSiteResponse> ModifyADConnectorOfficeSiteAsync(ModifyADConnectorOfficeSiteRequest request)
         {
@@ -17067,11 +19971,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
-          *
-          * @param request ModifyAclEntriesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAclEntriesResponse
+         * @summary Modify the Internet access control policy on the office network or cloud computer granularity.
+         *
+         * @description You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
+         *
+         * @param request ModifyAclEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAclEntriesResponse
          */
         public ModifyAclEntriesResponse ModifyAclEntriesWithOptions(ModifyAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17113,11 +20019,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
-          *
-          * @param request ModifyAclEntriesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAclEntriesResponse
+         * @summary Modify the Internet access control policy on the office network or cloud computer granularity.
+         *
+         * @description You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
+         *
+         * @param request ModifyAclEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAclEntriesResponse
          */
         public async Task<ModifyAclEntriesResponse> ModifyAclEntriesWithOptionsAsync(ModifyAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17159,10 +20067,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
-          *
-          * @param request ModifyAclEntriesRequest
-          * @return ModifyAclEntriesResponse
+         * @summary Modify the Internet access control policy on the office network or cloud computer granularity.
+         *
+         * @description You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
+         *
+         * @param request ModifyAclEntriesRequest
+         * @return ModifyAclEntriesResponse
          */
         public ModifyAclEntriesResponse ModifyAclEntries(ModifyAclEntriesRequest request)
         {
@@ -17171,10 +20081,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
-          *
-          * @param request ModifyAclEntriesRequest
-          * @return ModifyAclEntriesResponse
+         * @summary Modify the Internet access control policy on the office network or cloud computer granularity.
+         *
+         * @description You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
+         *
+         * @param request ModifyAclEntriesRequest
+         * @return ModifyAclEntriesResponse
          */
         public async Task<ModifyAclEntriesResponse> ModifyAclEntriesAsync(ModifyAclEntriesRequest request)
         {
@@ -17182,6 +20094,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyAclEntriesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the parameters of an automatic snapshot policy, such as the policy name and snapshot retention period.
+         *
+         * @param request ModifyAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAutoSnapshotPolicyResponse
+         */
         public ModifyAutoSnapshotPolicyResponse ModifyAutoSnapshotPolicyWithOptions(ModifyAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17225,6 +20144,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyAutoSnapshotPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the parameters of an automatic snapshot policy, such as the policy name and snapshot retention period.
+         *
+         * @param request ModifyAutoSnapshotPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAutoSnapshotPolicyResponse
+         */
         public async Task<ModifyAutoSnapshotPolicyResponse> ModifyAutoSnapshotPolicyWithOptionsAsync(ModifyAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17268,12 +20194,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyAutoSnapshotPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the parameters of an automatic snapshot policy, such as the policy name and snapshot retention period.
+         *
+         * @param request ModifyAutoSnapshotPolicyRequest
+         * @return ModifyAutoSnapshotPolicyResponse
+         */
         public ModifyAutoSnapshotPolicyResponse ModifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAutoSnapshotPolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the parameters of an automatic snapshot policy, such as the policy name and snapshot retention period.
+         *
+         * @param request ModifyAutoSnapshotPolicyRequest
+         * @return ModifyAutoSnapshotPolicyResponse
+         */
         public async Task<ModifyAutoSnapshotPolicyResponse> ModifyAutoSnapshotPolicyAsync(ModifyAutoSnapshotPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17281,11 +20219,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Only custom desktop templates can be modified.
-          *
-          * @param request ModifyBundleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyBundleResponse
+         * @summary Modifies a custom cloud computer template.
+         *
+         * @description Only custom desktop templates can be modified.
+         *
+         * @param request ModifyBundleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBundleResponse
          */
         public ModifyBundleResponse ModifyBundleWithOptions(ModifyBundleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17335,11 +20275,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Only custom desktop templates can be modified.
-          *
-          * @param request ModifyBundleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyBundleResponse
+         * @summary Modifies a custom cloud computer template.
+         *
+         * @description Only custom desktop templates can be modified.
+         *
+         * @param request ModifyBundleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBundleResponse
          */
         public async Task<ModifyBundleResponse> ModifyBundleWithOptionsAsync(ModifyBundleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17389,10 +20331,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Only custom desktop templates can be modified.
-          *
-          * @param request ModifyBundleRequest
-          * @return ModifyBundleResponse
+         * @summary Modifies a custom cloud computer template.
+         *
+         * @description Only custom desktop templates can be modified.
+         *
+         * @param request ModifyBundleRequest
+         * @return ModifyBundleResponse
          */
         public ModifyBundleResponse ModifyBundle(ModifyBundleRequest request)
         {
@@ -17401,10 +20345,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Only custom desktop templates can be modified.
-          *
-          * @param request ModifyBundleRequest
-          * @return ModifyBundleResponse
+         * @summary Modifies a custom cloud computer template.
+         *
+         * @description Only custom desktop templates can be modified.
+         *
+         * @param request ModifyBundleRequest
+         * @return ModifyBundleResponse
          */
         public async Task<ModifyBundleResponse> ModifyBundleAsync(ModifyBundleRequest request)
         {
@@ -17412,6 +20358,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyBundleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the files in a cloud disk.
+         *
+         * @param request ModifyCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdsFileResponse
+         */
         public ModifyCdsFileResponse ModifyCdsFileWithOptions(ModifyCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17463,6 +20416,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCdsFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the files in a cloud disk.
+         *
+         * @param request ModifyCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdsFileResponse
+         */
         public async Task<ModifyCdsFileResponse> ModifyCdsFileWithOptionsAsync(ModifyCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17514,18 +20474,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCdsFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the files in a cloud disk.
+         *
+         * @param request ModifyCdsFileRequest
+         * @return ModifyCdsFileResponse
+         */
         public ModifyCdsFileResponse ModifyCdsFile(ModifyCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCdsFileWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the files in a cloud disk.
+         *
+         * @param request ModifyCdsFileRequest
+         * @return ModifyCdsFileResponse
+         */
         public async Task<ModifyCdsFileResponse> ModifyCdsFileAsync(ModifyCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCdsFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the link for file sharing.
+         *
+         * @param request ModifyCdsFileShareLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdsFileShareLinkResponse
+         */
         public ModifyCdsFileShareLinkResponse ModifyCdsFileShareLinkWithOptions(ModifyCdsFileShareLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17621,6 +20600,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCdsFileShareLinkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the link for file sharing.
+         *
+         * @param request ModifyCdsFileShareLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdsFileShareLinkResponse
+         */
         public async Task<ModifyCdsFileShareLinkResponse> ModifyCdsFileShareLinkWithOptionsAsync(ModifyCdsFileShareLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17716,18 +20702,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCdsFileShareLinkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the link for file sharing.
+         *
+         * @param request ModifyCdsFileShareLinkRequest
+         * @return ModifyCdsFileShareLinkResponse
+         */
         public ModifyCdsFileShareLinkResponse ModifyCdsFileShareLink(ModifyCdsFileShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCdsFileShareLinkWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the link for file sharing.
+         *
+         * @param request ModifyCdsFileShareLinkRequest
+         * @return ModifyCdsFileShareLinkResponse
+         */
         public async Task<ModifyCdsFileShareLinkResponse> ModifyCdsFileShareLinkAsync(ModifyCdsFileShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCdsFileShareLinkWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies team spaces.
+         *
+         * @param request ModifyCloudDriveGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCloudDriveGroupsResponse
+         */
         public ModifyCloudDriveGroupsResponse ModifyCloudDriveGroupsWithOptions(ModifyCloudDriveGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17771,6 +20776,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCloudDriveGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies team spaces.
+         *
+         * @param request ModifyCloudDriveGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCloudDriveGroupsResponse
+         */
         public async Task<ModifyCloudDriveGroupsResponse> ModifyCloudDriveGroupsWithOptionsAsync(ModifyCloudDriveGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17814,18 +20826,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCloudDriveGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies team spaces.
+         *
+         * @param request ModifyCloudDriveGroupsRequest
+         * @return ModifyCloudDriveGroupsResponse
+         */
         public ModifyCloudDriveGroupsResponse ModifyCloudDriveGroups(ModifyCloudDriveGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCloudDriveGroupsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies team spaces.
+         *
+         * @param request ModifyCloudDriveGroupsRequest
+         * @return ModifyCloudDriveGroupsResponse
+         */
         public async Task<ModifyCloudDriveGroupsResponse> ModifyCloudDriveGroupsAsync(ModifyCloudDriveGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCloudDriveGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the user permissions on Cloud Drive Service, and configures users who have the download permissions and upload and download permissions. By default, the users that are not configured the preceding permissions only have the upload permissions.
+         *
+         * @param request ModifyCloudDrivePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCloudDrivePermissionResponse
+         */
         public ModifyCloudDrivePermissionResponse ModifyCloudDrivePermissionWithOptions(ModifyCloudDrivePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17865,6 +20896,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCloudDrivePermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the user permissions on Cloud Drive Service, and configures users who have the download permissions and upload and download permissions. By default, the users that are not configured the preceding permissions only have the upload permissions.
+         *
+         * @param request ModifyCloudDrivePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCloudDrivePermissionResponse
+         */
         public async Task<ModifyCloudDrivePermissionResponse> ModifyCloudDrivePermissionWithOptionsAsync(ModifyCloudDrivePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17904,18 +20942,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCloudDrivePermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the user permissions on Cloud Drive Service, and configures users who have the download permissions and upload and download permissions. By default, the users that are not configured the preceding permissions only have the upload permissions.
+         *
+         * @param request ModifyCloudDrivePermissionRequest
+         * @return ModifyCloudDrivePermissionResponse
+         */
         public ModifyCloudDrivePermissionResponse ModifyCloudDrivePermission(ModifyCloudDrivePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCloudDrivePermissionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the user permissions on Cloud Drive Service, and configures users who have the download permissions and upload and download permissions. By default, the users that are not configured the preceding permissions only have the upload permissions.
+         *
+         * @param request ModifyCloudDrivePermissionRequest
+         * @return ModifyCloudDrivePermissionResponse
+         */
         public async Task<ModifyCloudDrivePermissionResponse> ModifyCloudDrivePermissionAsync(ModifyCloudDrivePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCloudDrivePermissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 修改无影网盘终端用户的属性
+         *
+         * @param request ModifyCloudDriveUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCloudDriveUsersResponse
+         */
         public ModifyCloudDriveUsersResponse ModifyCloudDriveUsersWithOptions(ModifyCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17959,6 +21016,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCloudDriveUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改无影网盘终端用户的属性
+         *
+         * @param request ModifyCloudDriveUsersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCloudDriveUsersResponse
+         */
         public async Task<ModifyCloudDriveUsersResponse> ModifyCloudDriveUsersWithOptionsAsync(ModifyCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18002,18 +21066,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCloudDriveUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改无影网盘终端用户的属性
+         *
+         * @param request ModifyCloudDriveUsersRequest
+         * @return ModifyCloudDriveUsersResponse
+         */
         public ModifyCloudDriveUsersResponse ModifyCloudDriveUsers(ModifyCloudDriveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCloudDriveUsersWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 修改无影网盘终端用户的属性
+         *
+         * @param request ModifyCloudDriveUsersRequest
+         * @return ModifyCloudDriveUsersResponse
+         */
         public async Task<ModifyCloudDriveUsersResponse> ModifyCloudDriveUsersAsync(ModifyCloudDriveUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCloudDriveUsersWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the layouts of cloud computer list headers, such as the required fields and the display and hide settings.
+         *
+         * @param request ModifyCustomizedListHeadersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCustomizedListHeadersResponse
+         */
         public ModifyCustomizedListHeadersResponse ModifyCustomizedListHeadersWithOptions(ModifyCustomizedListHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18049,6 +21132,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCustomizedListHeadersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the layouts of cloud computer list headers, such as the required fields and the display and hide settings.
+         *
+         * @param request ModifyCustomizedListHeadersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCustomizedListHeadersResponse
+         */
         public async Task<ModifyCustomizedListHeadersResponse> ModifyCustomizedListHeadersWithOptionsAsync(ModifyCustomizedListHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18084,12 +21174,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyCustomizedListHeadersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the layouts of cloud computer list headers, such as the required fields and the display and hide settings.
+         *
+         * @param request ModifyCustomizedListHeadersRequest
+         * @return ModifyCustomizedListHeadersResponse
+         */
         public ModifyCustomizedListHeadersResponse ModifyCustomizedListHeaders(ModifyCustomizedListHeadersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCustomizedListHeadersWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the layouts of cloud computer list headers, such as the required fields and the display and hide settings.
+         *
+         * @param request ModifyCustomizedListHeadersRequest
+         * @return ModifyCustomizedListHeadersResponse
+         */
         public async Task<ModifyCustomizedListHeadersResponse> ModifyCustomizedListHeadersAsync(ModifyCustomizedListHeadersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18097,13 +21199,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](~~188395~~).
-          * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
-          *
-          * @param request ModifyDesktopChargeTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopChargeTypeResponse
+         * @summary Changes the billing method of cloud computers to subscription or pay-as-you-go.
+         *
+         * @description *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
+         * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
+         *
+         * @param request ModifyDesktopChargeTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopChargeTypeResponse
          */
         public ModifyDesktopChargeTypeResponse ModifyDesktopChargeTypeWithOptions(ModifyDesktopChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18161,13 +21265,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](~~188395~~).
-          * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
-          *
-          * @param request ModifyDesktopChargeTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopChargeTypeResponse
+         * @summary Changes the billing method of cloud computers to subscription or pay-as-you-go.
+         *
+         * @description *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
+         * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
+         *
+         * @param request ModifyDesktopChargeTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopChargeTypeResponse
          */
         public async Task<ModifyDesktopChargeTypeResponse> ModifyDesktopChargeTypeWithOptionsAsync(ModifyDesktopChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18225,12 +21331,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](~~188395~~).
-          * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
-          *
-          * @param request ModifyDesktopChargeTypeRequest
-          * @return ModifyDesktopChargeTypeResponse
+         * @summary Changes the billing method of cloud computers to subscription or pay-as-you-go.
+         *
+         * @description *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
+         * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
+         *
+         * @param request ModifyDesktopChargeTypeRequest
+         * @return ModifyDesktopChargeTypeResponse
          */
         public ModifyDesktopChargeTypeResponse ModifyDesktopChargeType(ModifyDesktopChargeTypeRequest request)
         {
@@ -18239,12 +21347,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](~~188395~~).
-          * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
-          *
-          * @param request ModifyDesktopChargeTypeRequest
-          * @return ModifyDesktopChargeTypeResponse
+         * @summary Changes the billing method of cloud computers to subscription or pay-as-you-go.
+         *
+         * @description *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](https://help.aliyun.com/document_detail/188395.html).
+         * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
+         * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
+         *
+         * @param request ModifyDesktopChargeTypeRequest
+         * @return ModifyDesktopChargeTypeResponse
          */
         public async Task<ModifyDesktopChargeTypeResponse> ModifyDesktopChargeTypeAsync(ModifyDesktopChargeTypeRequest request)
         {
@@ -18253,11 +21363,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
-          *
-          * @param request ModifyDesktopGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopGroupResponse
+         * @summary Modifies the configurations of a cloud computer pool.
+         *
+         * @description After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
+         *
+         * @param request ModifyDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopGroupResponse
          */
         public ModifyDesktopGroupResponse ModifyDesktopGroupWithOptions(ModifyDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18387,11 +21499,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
-          *
-          * @param request ModifyDesktopGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopGroupResponse
+         * @summary Modifies the configurations of a cloud computer pool.
+         *
+         * @description After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
+         *
+         * @param request ModifyDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopGroupResponse
          */
         public async Task<ModifyDesktopGroupResponse> ModifyDesktopGroupWithOptionsAsync(ModifyDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18521,10 +21635,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
-          *
-          * @param request ModifyDesktopGroupRequest
-          * @return ModifyDesktopGroupResponse
+         * @summary Modifies the configurations of a cloud computer pool.
+         *
+         * @description After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
+         *
+         * @param request ModifyDesktopGroupRequest
+         * @return ModifyDesktopGroupResponse
          */
         public ModifyDesktopGroupResponse ModifyDesktopGroup(ModifyDesktopGroupRequest request)
         {
@@ -18533,10 +21649,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
-          *
-          * @param request ModifyDesktopGroupRequest
-          * @return ModifyDesktopGroupResponse
+         * @summary Modifies the configurations of a cloud computer pool.
+         *
+         * @description After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
+         *
+         * @param request ModifyDesktopGroupRequest
+         * @return ModifyDesktopGroupResponse
          */
         public async Task<ModifyDesktopGroupResponse> ModifyDesktopGroupAsync(ModifyDesktopGroupRequest request)
         {
@@ -18545,11 +21663,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
-          *
-          * @param request ModifyDesktopHostNameRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopHostNameResponse
+         * @summary Modifies the hostname of a Windows cloud computer in the Active Directory (AD) office network.
+         *
+         * @description The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
+         *
+         * @param request ModifyDesktopHostNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopHostNameResponse
          */
         public ModifyDesktopHostNameResponse ModifyDesktopHostNameWithOptions(ModifyDesktopHostNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18587,11 +21707,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
-          *
-          * @param request ModifyDesktopHostNameRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopHostNameResponse
+         * @summary Modifies the hostname of a Windows cloud computer in the Active Directory (AD) office network.
+         *
+         * @description The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
+         *
+         * @param request ModifyDesktopHostNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopHostNameResponse
          */
         public async Task<ModifyDesktopHostNameResponse> ModifyDesktopHostNameWithOptionsAsync(ModifyDesktopHostNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18629,10 +21751,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
-          *
-          * @param request ModifyDesktopHostNameRequest
-          * @return ModifyDesktopHostNameResponse
+         * @summary Modifies the hostname of a Windows cloud computer in the Active Directory (AD) office network.
+         *
+         * @description The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
+         *
+         * @param request ModifyDesktopHostNameRequest
+         * @return ModifyDesktopHostNameResponse
          */
         public ModifyDesktopHostNameResponse ModifyDesktopHostName(ModifyDesktopHostNameRequest request)
         {
@@ -18641,10 +21765,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
-          *
-          * @param request ModifyDesktopHostNameRequest
-          * @return ModifyDesktopHostNameResponse
+         * @summary Modifies the hostname of a Windows cloud computer in the Active Directory (AD) office network.
+         *
+         * @description The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
+         *
+         * @param request ModifyDesktopHostNameRequest
+         * @return ModifyDesktopHostNameResponse
          */
         public async Task<ModifyDesktopHostNameResponse> ModifyDesktopHostNameAsync(ModifyDesktopHostNameRequest request)
         {
@@ -18652,6 +21778,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyDesktopHostNameWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Changes the name of a cloud computer to a new name.
+         *
+         * @param request ModifyDesktopNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopNameResponse
+         */
         public ModifyDesktopNameResponse ModifyDesktopNameWithOptions(ModifyDesktopNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18687,6 +21820,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopNameResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the name of a cloud computer to a new name.
+         *
+         * @param request ModifyDesktopNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopNameResponse
+         */
         public async Task<ModifyDesktopNameResponse> ModifyDesktopNameWithOptionsAsync(ModifyDesktopNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18722,18 +21862,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the name of a cloud computer to a new name.
+         *
+         * @param request ModifyDesktopNameRequest
+         * @return ModifyDesktopNameResponse
+         */
         public ModifyDesktopNameResponse ModifyDesktopName(ModifyDesktopNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDesktopNameWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Changes the name of a cloud computer to a new name.
+         *
+         * @param request ModifyDesktopNameRequest
+         * @return ModifyDesktopNameResponse
+         */
         public async Task<ModifyDesktopNameResponse> ModifyDesktopNameAsync(ModifyDesktopNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDesktopNameWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 修改桌面超卖组
+         *
+         * @param request ModifyDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopOversoldGroupResponse
+         */
         public ModifyDesktopOversoldGroupResponse ModifyDesktopOversoldGroupWithOptions(ModifyDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18801,6 +21960,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改桌面超卖组
+         *
+         * @param request ModifyDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopOversoldGroupResponse
+         */
         public async Task<ModifyDesktopOversoldGroupResponse> ModifyDesktopOversoldGroupWithOptionsAsync(ModifyDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18868,18 +22034,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改桌面超卖组
+         *
+         * @param request ModifyDesktopOversoldGroupRequest
+         * @return ModifyDesktopOversoldGroupResponse
+         */
         public ModifyDesktopOversoldGroupResponse ModifyDesktopOversoldGroup(ModifyDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDesktopOversoldGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 修改桌面超卖组
+         *
+         * @param request ModifyDesktopOversoldGroupRequest
+         * @return ModifyDesktopOversoldGroupResponse
+         */
         public async Task<ModifyDesktopOversoldGroupResponse> ModifyDesktopOversoldGroupAsync(ModifyDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDesktopOversoldGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 修改桌面超卖组售卖数据
+         *
+         * @param request ModifyDesktopOversoldGroupSaleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopOversoldGroupSaleResponse
+         */
         public ModifyDesktopOversoldGroupSaleResponse ModifyDesktopOversoldGroupSaleWithOptions(ModifyDesktopOversoldGroupSaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18915,6 +22100,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopOversoldGroupSaleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改桌面超卖组售卖数据
+         *
+         * @param request ModifyDesktopOversoldGroupSaleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopOversoldGroupSaleResponse
+         */
         public async Task<ModifyDesktopOversoldGroupSaleResponse> ModifyDesktopOversoldGroupSaleWithOptionsAsync(ModifyDesktopOversoldGroupSaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18950,18 +22142,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopOversoldGroupSaleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改桌面超卖组售卖数据
+         *
+         * @param request ModifyDesktopOversoldGroupSaleRequest
+         * @return ModifyDesktopOversoldGroupSaleResponse
+         */
         public ModifyDesktopOversoldGroupSaleResponse ModifyDesktopOversoldGroupSale(ModifyDesktopOversoldGroupSaleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDesktopOversoldGroupSaleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 修改桌面超卖组售卖数据
+         *
+         * @param request ModifyDesktopOversoldGroupSaleRequest
+         * @return ModifyDesktopOversoldGroupSaleResponse
+         */
         public async Task<ModifyDesktopOversoldGroupSaleResponse> ModifyDesktopOversoldGroupSaleAsync(ModifyDesktopOversoldGroupSaleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDesktopOversoldGroupSaleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 修改桌面超卖用户组
+         *
+         * @param request ModifyDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopOversoldUserGroupResponse
+         */
         public ModifyDesktopOversoldUserGroupResponse ModifyDesktopOversoldUserGroupWithOptions(ModifyDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19005,6 +22216,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改桌面超卖用户组
+         *
+         * @param request ModifyDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopOversoldUserGroupResponse
+         */
         public async Task<ModifyDesktopOversoldUserGroupResponse> ModifyDesktopOversoldUserGroupWithOptionsAsync(ModifyDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19048,12 +22266,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改桌面超卖用户组
+         *
+         * @param request ModifyDesktopOversoldUserGroupRequest
+         * @return ModifyDesktopOversoldUserGroupResponse
+         */
         public ModifyDesktopOversoldUserGroupResponse ModifyDesktopOversoldUserGroup(ModifyDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDesktopOversoldUserGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 修改桌面超卖用户组
+         *
+         * @param request ModifyDesktopOversoldUserGroupRequest
+         * @return ModifyDesktopOversoldUserGroupResponse
+         */
         public async Task<ModifyDesktopOversoldUserGroupResponse> ModifyDesktopOversoldUserGroupAsync(ModifyDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19061,20 +22291,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
-          * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](~~188609~~). You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
-          * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
-          *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
-          *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
-          *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
-          *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
-          *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
-          *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
-          * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
-          *
-          * @param request ModifyDesktopSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopSpecResponse
+         * @summary Changes the instance type of a cloud computer and scales up the disks of the cloud computer.
+         *
+         * @description Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
+         * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](https://help.aliyun.com/document_detail/188609.html). You can call the [DescribeDesktopTypes](https://help.aliyun.com/document_detail/188882.html) operation to query the instance types supported by cloud computers.
+         * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
+         *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
+         *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
+         *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
+         *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
+         *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
+         *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
+         * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
+         *
+         * @param request ModifyDesktopSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopSpecResponse
          */
         public ModifyDesktopSpecResponse ModifyDesktopSpecWithOptions(ModifyDesktopSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19099,6 +22331,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpecs))
+            {
+                query["ResourceSpecs"] = request.ResourceSpecs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskSizeGib))
             {
@@ -19132,20 +22372,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
-          * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](~~188609~~). You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
-          * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
-          *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
-          *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
-          *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
-          *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
-          *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
-          *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
-          * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
-          *
-          * @param request ModifyDesktopSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopSpecResponse
+         * @summary Changes the instance type of a cloud computer and scales up the disks of the cloud computer.
+         *
+         * @description Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
+         * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](https://help.aliyun.com/document_detail/188609.html). You can call the [DescribeDesktopTypes](https://help.aliyun.com/document_detail/188882.html) operation to query the instance types supported by cloud computers.
+         * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
+         *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
+         *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
+         *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
+         *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
+         *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
+         *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
+         * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
+         *
+         * @param request ModifyDesktopSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopSpecResponse
          */
         public async Task<ModifyDesktopSpecResponse> ModifyDesktopSpecWithOptionsAsync(ModifyDesktopSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19170,6 +22412,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpecs))
+            {
+                query["ResourceSpecs"] = request.ResourceSpecs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskSizeGib))
             {
@@ -19203,19 +22453,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
-          * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](~~188609~~). You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
-          * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
-          *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
-          *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
-          *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
-          *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
-          *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
-          *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
-          * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
-          *
-          * @param request ModifyDesktopSpecRequest
-          * @return ModifyDesktopSpecResponse
+         * @summary Changes the instance type of a cloud computer and scales up the disks of the cloud computer.
+         *
+         * @description Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
+         * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](https://help.aliyun.com/document_detail/188609.html). You can call the [DescribeDesktopTypes](https://help.aliyun.com/document_detail/188882.html) operation to query the instance types supported by cloud computers.
+         * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
+         *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
+         *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
+         *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
+         *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
+         *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
+         *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
+         * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
+         *
+         * @param request ModifyDesktopSpecRequest
+         * @return ModifyDesktopSpecResponse
          */
         public ModifyDesktopSpecResponse ModifyDesktopSpec(ModifyDesktopSpecRequest request)
         {
@@ -19224,19 +22476,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
-          * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](~~188609~~). You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
-          * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
-          *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
-          *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
-          *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
-          *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
-          *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
-          *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
-          * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
-          *
-          * @param request ModifyDesktopSpecRequest
-          * @return ModifyDesktopSpecResponse
+         * @summary Changes the instance type of a cloud computer and scales up the disks of the cloud computer.
+         *
+         * @description Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
+         * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](https://help.aliyun.com/document_detail/188609.html). You can call the [DescribeDesktopTypes](https://help.aliyun.com/document_detail/188882.html) operation to query the instance types supported by cloud computers.
+         * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
+         *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
+         *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
+         *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
+         *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
+         *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
+         *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
+         * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
+         *
+         * @param request ModifyDesktopSpecRequest
+         * @return ModifyDesktopSpecResponse
          */
         public async Task<ModifyDesktopSpecResponse> ModifyDesktopSpecAsync(ModifyDesktopSpecRequest request)
         {
@@ -19244,6 +22498,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyDesktopSpecWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates or modifies scheduled tasks on cloud computers, such as starting, stopping, restarting, and resetting cloud computers on schedule.
+         *
+         * @param request ModifyDesktopTimerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopTimerResponse
+         */
         public ModifyDesktopTimerResponse ModifyDesktopTimerWithOptions(ModifyDesktopTimerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19283,6 +22544,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopTimerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates or modifies scheduled tasks on cloud computers, such as starting, stopping, restarting, and resetting cloud computers on schedule.
+         *
+         * @param request ModifyDesktopTimerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopTimerResponse
+         */
         public async Task<ModifyDesktopTimerResponse> ModifyDesktopTimerWithOptionsAsync(ModifyDesktopTimerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19322,12 +22590,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyDesktopTimerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates or modifies scheduled tasks on cloud computers, such as starting, stopping, restarting, and resetting cloud computers on schedule.
+         *
+         * @param request ModifyDesktopTimerRequest
+         * @return ModifyDesktopTimerResponse
+         */
         public ModifyDesktopTimerResponse ModifyDesktopTimer(ModifyDesktopTimerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDesktopTimerWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates or modifies scheduled tasks on cloud computers, such as starting, stopping, restarting, and resetting cloud computers on schedule.
+         *
+         * @param request ModifyDesktopTimerRequest
+         * @return ModifyDesktopTimerResponse
+         */
         public async Task<ModifyDesktopTimerResponse> ModifyDesktopTimerAsync(ModifyDesktopTimerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19335,11 +22615,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
-          *
-          * @param request ModifyDesktopsPolicyGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopsPolicyGroupResponse
+         * @summary Modifies the policies that are configured for a cloud desktop.
+         *
+         * @description The cloud desktops that you want to restart by calling this operation must be in the Running state.
+         *
+         * @param request ModifyDesktopsPolicyGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopsPolicyGroupResponse
          */
         public ModifyDesktopsPolicyGroupResponse ModifyDesktopsPolicyGroupWithOptions(ModifyDesktopsPolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19381,11 +22663,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
-          *
-          * @param request ModifyDesktopsPolicyGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDesktopsPolicyGroupResponse
+         * @summary Modifies the policies that are configured for a cloud desktop.
+         *
+         * @description The cloud desktops that you want to restart by calling this operation must be in the Running state.
+         *
+         * @param request ModifyDesktopsPolicyGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDesktopsPolicyGroupResponse
          */
         public async Task<ModifyDesktopsPolicyGroupResponse> ModifyDesktopsPolicyGroupWithOptionsAsync(ModifyDesktopsPolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19427,10 +22711,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
-          *
-          * @param request ModifyDesktopsPolicyGroupRequest
-          * @return ModifyDesktopsPolicyGroupResponse
+         * @summary Modifies the policies that are configured for a cloud desktop.
+         *
+         * @description The cloud desktops that you want to restart by calling this operation must be in the Running state.
+         *
+         * @param request ModifyDesktopsPolicyGroupRequest
+         * @return ModifyDesktopsPolicyGroupResponse
          */
         public ModifyDesktopsPolicyGroupResponse ModifyDesktopsPolicyGroup(ModifyDesktopsPolicyGroupRequest request)
         {
@@ -19439,10 +22725,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
-          *
-          * @param request ModifyDesktopsPolicyGroupRequest
-          * @return ModifyDesktopsPolicyGroupResponse
+         * @summary Modifies the policies that are configured for a cloud desktop.
+         *
+         * @description The cloud desktops that you want to restart by calling this operation must be in the Running state.
+         *
+         * @param request ModifyDesktopsPolicyGroupRequest
+         * @return ModifyDesktopsPolicyGroupResponse
          */
         public async Task<ModifyDesktopsPolicyGroupResponse> ModifyDesktopsPolicyGroupAsync(ModifyDesktopsPolicyGroupRequest request)
         {
@@ -19451,20 +22739,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
-          * *   Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.
-          * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-          * 1\\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-          * 2\\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-          * 3\\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-          * 4\\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-          * 5\\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-          * 6\\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.
-          * *   The changes do not affect your personal data on the cloud desktop.
-          *
-          * @param request ModifyDiskSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDiskSpecResponse
+         * @summary Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.
+         *
+         * @description You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
+         * *   Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.
+         * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
+         * 1\\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
+         * 2\\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
+         * 3\\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
+         * 4\\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
+         * 5\\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
+         * 6\\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.
+         * *   The changes do not affect your personal data on the cloud desktop.
+         *
+         * @param request ModifyDiskSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDiskSpecResponse
          */
         public ModifyDiskSpecResponse ModifyDiskSpecWithOptions(ModifyDiskSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19514,20 +22804,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
-          * *   Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.
-          * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-          * 1\\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-          * 2\\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-          * 3\\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-          * 4\\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-          * 5\\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-          * 6\\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.
-          * *   The changes do not affect your personal data on the cloud desktop.
-          *
-          * @param request ModifyDiskSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDiskSpecResponse
+         * @summary Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.
+         *
+         * @description You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
+         * *   Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.
+         * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
+         * 1\\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
+         * 2\\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
+         * 3\\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
+         * 4\\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
+         * 5\\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
+         * 6\\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.
+         * *   The changes do not affect your personal data on the cloud desktop.
+         *
+         * @param request ModifyDiskSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDiskSpecResponse
          */
         public async Task<ModifyDiskSpecResponse> ModifyDiskSpecWithOptionsAsync(ModifyDiskSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19577,19 +22869,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
-          * *   Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.
-          * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-          * 1\\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-          * 2\\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-          * 3\\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-          * 4\\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-          * 5\\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-          * 6\\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.
-          * *   The changes do not affect your personal data on the cloud desktop.
-          *
-          * @param request ModifyDiskSpecRequest
-          * @return ModifyDiskSpecResponse
+         * @summary Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.
+         *
+         * @description You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
+         * *   Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.
+         * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
+         * 1\\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
+         * 2\\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
+         * 3\\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
+         * 4\\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
+         * 5\\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
+         * 6\\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.
+         * *   The changes do not affect your personal data on the cloud desktop.
+         *
+         * @param request ModifyDiskSpecRequest
+         * @return ModifyDiskSpecResponse
          */
         public ModifyDiskSpecResponse ModifyDiskSpec(ModifyDiskSpecRequest request)
         {
@@ -19598,19 +22892,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
-          * *   Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.
-          * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-          * 1\\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-          * 2\\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-          * 3\\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-          * 4\\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-          * 5\\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-          * 6\\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.
-          * *   The changes do not affect your personal data on the cloud desktop.
-          *
-          * @param request ModifyDiskSpecRequest
-          * @return ModifyDiskSpecResponse
+         * @summary Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.
+         *
+         * @description You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
+         * *   Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.
+         * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
+         * 1\\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
+         * 2\\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
+         * 3\\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
+         * 4\\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
+         * 5\\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
+         * 6\\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.
+         * *   The changes do not affect your personal data on the cloud desktop.
+         *
+         * @param request ModifyDiskSpecRequest
+         * @return ModifyDiskSpecResponse
          */
         public async Task<ModifyDiskSpecResponse> ModifyDiskSpecAsync(ModifyDiskSpecRequest request)
         {
@@ -19619,13 +22915,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   The cloud computer must be in the Running state.
-          * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](~~436815~~) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
-          * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
-          *
-          * @param request ModifyEntitlementRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyEntitlementResponse
+         * @summary Assigns a cloud computer to end users and removes all original end users of the cloud computer.
+         *
+         * @description *   The cloud computer must be in the Running state.
+         * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](https://help.aliyun.com/document_detail/436815.html) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
+         * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
+         *
+         * @param request ModifyEntitlementRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyEntitlementResponse
          */
         public ModifyEntitlementResponse ModifyEntitlementWithOptions(ModifyEntitlementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19663,13 +22961,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   The cloud computer must be in the Running state.
-          * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](~~436815~~) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
-          * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
-          *
-          * @param request ModifyEntitlementRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyEntitlementResponse
+         * @summary Assigns a cloud computer to end users and removes all original end users of the cloud computer.
+         *
+         * @description *   The cloud computer must be in the Running state.
+         * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](https://help.aliyun.com/document_detail/436815.html) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
+         * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
+         *
+         * @param request ModifyEntitlementRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyEntitlementResponse
          */
         public async Task<ModifyEntitlementResponse> ModifyEntitlementWithOptionsAsync(ModifyEntitlementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19707,12 +23007,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   The cloud computer must be in the Running state.
-          * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](~~436815~~) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
-          * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
-          *
-          * @param request ModifyEntitlementRequest
-          * @return ModifyEntitlementResponse
+         * @summary Assigns a cloud computer to end users and removes all original end users of the cloud computer.
+         *
+         * @description *   The cloud computer must be in the Running state.
+         * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](https://help.aliyun.com/document_detail/436815.html) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
+         * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
+         *
+         * @param request ModifyEntitlementRequest
+         * @return ModifyEntitlementResponse
          */
         public ModifyEntitlementResponse ModifyEntitlement(ModifyEntitlementRequest request)
         {
@@ -19721,12 +23023,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   The cloud computer must be in the Running state.
-          * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](~~436815~~) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
-          * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
-          *
-          * @param request ModifyEntitlementRequest
-          * @return ModifyEntitlementResponse
+         * @summary Assigns a cloud computer to end users and removes all original end users of the cloud computer.
+         *
+         * @description *   The cloud computer must be in the Running state.
+         * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](https://help.aliyun.com/document_detail/436815.html) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
+         * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
+         *
+         * @param request ModifyEntitlementRequest
+         * @return ModifyEntitlementResponse
          */
         public async Task<ModifyEntitlementResponse> ModifyEntitlementAsync(ModifyEntitlementRequest request)
         {
@@ -19735,11 +23039,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to modify the attributes of only custom images that are in the Available state.
-          *
-          * @param request ModifyImageAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyImageAttributeResponse
+         * @summary Modifies the attributes of an image, including the name and description of the image.
+         *
+         * @description You can call this operation to modify the attributes of only custom images that are in the Available state.
+         *
+         * @param request ModifyImageAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyImageAttributeResponse
          */
         public ModifyImageAttributeResponse ModifyImageAttributeWithOptions(ModifyImageAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19781,11 +23087,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to modify the attributes of only custom images that are in the Available state.
-          *
-          * @param request ModifyImageAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyImageAttributeResponse
+         * @summary Modifies the attributes of an image, including the name and description of the image.
+         *
+         * @description You can call this operation to modify the attributes of only custom images that are in the Available state.
+         *
+         * @param request ModifyImageAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyImageAttributeResponse
          */
         public async Task<ModifyImageAttributeResponse> ModifyImageAttributeWithOptionsAsync(ModifyImageAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19827,10 +23135,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to modify the attributes of only custom images that are in the Available state.
-          *
-          * @param request ModifyImageAttributeRequest
-          * @return ModifyImageAttributeResponse
+         * @summary Modifies the attributes of an image, including the name and description of the image.
+         *
+         * @description You can call this operation to modify the attributes of only custom images that are in the Available state.
+         *
+         * @param request ModifyImageAttributeRequest
+         * @return ModifyImageAttributeResponse
          */
         public ModifyImageAttributeResponse ModifyImageAttribute(ModifyImageAttributeRequest request)
         {
@@ -19839,10 +23149,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to modify the attributes of only custom images that are in the Available state.
-          *
-          * @param request ModifyImageAttributeRequest
-          * @return ModifyImageAttributeResponse
+         * @summary Modifies the attributes of an image, including the name and description of the image.
+         *
+         * @description You can call this operation to modify the attributes of only custom images that are in the Available state.
+         *
+         * @param request ModifyImageAttributeRequest
+         * @return ModifyImageAttributeResponse
          */
         public async Task<ModifyImageAttributeResponse> ModifyImageAttributeAsync(ModifyImageAttributeRequest request)
         {
@@ -19851,23 +23163,25 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ### [](#)Security of shared images
-          * WUYING Workspace cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
-          * ### [](#)Quota and billing
-          * *   A shared image does not count against the image quotas of principals to which the image is shared.
-          * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
-          * *   You are not charged for shared images.
-          * ### [](#)Supported sharing behaviors
-          * *   You can share custom images with other Alibaba Cloud accounts.
-          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
-          * ### [](#)Unsupported sharing behaviors
-          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
-          * *   You cannot share encrypted images.
-          * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](~~436978~~).
-          *
-          * @param request ModifyImagePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyImagePermissionResponse
+         * @summary Shares an image with other Alibaba Cloud accounts, or unshares an image from the recipient Alibaba Cloud accounts.
+         *
+         * @description ### [](#)Security of shared images
+         * Elastic Desktop Service cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
+         * ### [](#)Quota and billing
+         * *   A shared image does not count against the image quotas of principals to which the image is shared.
+         * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
+         * *   You are not charged for shared images.
+         * ### [](#)Supported sharing behaviors
+         * *   You can share custom images with other Alibaba Cloud accounts.
+         * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
+         * ### [](#)Unsupported sharing behaviors
+         * *   You cannot share images that are shared by other Alibaba Cloud accounts.
+         * *   You cannot share encrypted images.
+         * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](https://help.aliyun.com/document_detail/436978.html).
+         *
+         * @param request ModifyImagePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyImagePermissionResponse
          */
         public ModifyImagePermissionResponse ModifyImagePermissionWithOptions(ModifyImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19909,23 +23223,25 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ### [](#)Security of shared images
-          * WUYING Workspace cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
-          * ### [](#)Quota and billing
-          * *   A shared image does not count against the image quotas of principals to which the image is shared.
-          * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
-          * *   You are not charged for shared images.
-          * ### [](#)Supported sharing behaviors
-          * *   You can share custom images with other Alibaba Cloud accounts.
-          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
-          * ### [](#)Unsupported sharing behaviors
-          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
-          * *   You cannot share encrypted images.
-          * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](~~436978~~).
-          *
-          * @param request ModifyImagePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyImagePermissionResponse
+         * @summary Shares an image with other Alibaba Cloud accounts, or unshares an image from the recipient Alibaba Cloud accounts.
+         *
+         * @description ### [](#)Security of shared images
+         * Elastic Desktop Service cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
+         * ### [](#)Quota and billing
+         * *   A shared image does not count against the image quotas of principals to which the image is shared.
+         * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
+         * *   You are not charged for shared images.
+         * ### [](#)Supported sharing behaviors
+         * *   You can share custom images with other Alibaba Cloud accounts.
+         * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
+         * ### [](#)Unsupported sharing behaviors
+         * *   You cannot share images that are shared by other Alibaba Cloud accounts.
+         * *   You cannot share encrypted images.
+         * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](https://help.aliyun.com/document_detail/436978.html).
+         *
+         * @param request ModifyImagePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyImagePermissionResponse
          */
         public async Task<ModifyImagePermissionResponse> ModifyImagePermissionWithOptionsAsync(ModifyImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19967,22 +23283,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ### [](#)Security of shared images
-          * WUYING Workspace cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
-          * ### [](#)Quota and billing
-          * *   A shared image does not count against the image quotas of principals to which the image is shared.
-          * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
-          * *   You are not charged for shared images.
-          * ### [](#)Supported sharing behaviors
-          * *   You can share custom images with other Alibaba Cloud accounts.
-          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
-          * ### [](#)Unsupported sharing behaviors
-          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
-          * *   You cannot share encrypted images.
-          * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](~~436978~~).
-          *
-          * @param request ModifyImagePermissionRequest
-          * @return ModifyImagePermissionResponse
+         * @summary Shares an image with other Alibaba Cloud accounts, or unshares an image from the recipient Alibaba Cloud accounts.
+         *
+         * @description ### [](#)Security of shared images
+         * Elastic Desktop Service cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
+         * ### [](#)Quota and billing
+         * *   A shared image does not count against the image quotas of principals to which the image is shared.
+         * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
+         * *   You are not charged for shared images.
+         * ### [](#)Supported sharing behaviors
+         * *   You can share custom images with other Alibaba Cloud accounts.
+         * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
+         * ### [](#)Unsupported sharing behaviors
+         * *   You cannot share images that are shared by other Alibaba Cloud accounts.
+         * *   You cannot share encrypted images.
+         * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](https://help.aliyun.com/document_detail/436978.html).
+         *
+         * @param request ModifyImagePermissionRequest
+         * @return ModifyImagePermissionResponse
          */
         public ModifyImagePermissionResponse ModifyImagePermission(ModifyImagePermissionRequest request)
         {
@@ -19991,22 +23309,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ### [](#)Security of shared images
-          * WUYING Workspace cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
-          * ### [](#)Quota and billing
-          * *   A shared image does not count against the image quotas of principals to which the image is shared.
-          * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
-          * *   You are not charged for shared images.
-          * ### [](#)Supported sharing behaviors
-          * *   You can share custom images with other Alibaba Cloud accounts.
-          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
-          * ### [](#)Unsupported sharing behaviors
-          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
-          * *   You cannot share encrypted images.
-          * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](~~436978~~).
-          *
-          * @param request ModifyImagePermissionRequest
-          * @return ModifyImagePermissionResponse
+         * @summary Shares an image with other Alibaba Cloud accounts, or unshares an image from the recipient Alibaba Cloud accounts.
+         *
+         * @description ### [](#)Security of shared images
+         * Elastic Desktop Service cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
+         * ### [](#)Quota and billing
+         * *   A shared image does not count against the image quotas of principals to which the image is shared.
+         * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
+         * *   You are not charged for shared images.
+         * ### [](#)Supported sharing behaviors
+         * *   You can share custom images with other Alibaba Cloud accounts.
+         * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
+         * ### [](#)Unsupported sharing behaviors
+         * *   You cannot share images that are shared by other Alibaba Cloud accounts.
+         * *   You cannot share encrypted images.
+         * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](https://help.aliyun.com/document_detail/436978.html).
+         *
+         * @param request ModifyImagePermissionRequest
+         * @return ModifyImagePermissionResponse
          */
         public async Task<ModifyImagePermissionResponse> ModifyImagePermissionAsync(ModifyImagePermissionRequest request)
         {
@@ -20015,11 +23335,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
-          *
-          * @param request ModifyNASDefaultMountTargetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyNASDefaultMountTargetResponse
+         * @summary Modifies the mount target of an Apsara File Storage NAS (NAS) file system.
+         *
+         * @description When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](https://help.aliyun.com/document_detail/62621.html) operation to create a mount target.
+         *
+         * @param request ModifyNASDefaultMountTargetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNASDefaultMountTargetResponse
          */
         public ModifyNASDefaultMountTargetResponse ModifyNASDefaultMountTargetWithOptions(ModifyNASDefaultMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -20057,11 +23379,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
-          *
-          * @param request ModifyNASDefaultMountTargetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyNASDefaultMountTargetResponse
+         * @summary Modifies the mount target of an Apsara File Storage NAS (NAS) file system.
+         *
+         * @description When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](https://help.aliyun.com/document_detail/62621.html) operation to create a mount target.
+         *
+         * @param request ModifyNASDefaultMountTargetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNASDefaultMountTargetResponse
          */
         public async Task<ModifyNASDefaultMountTargetResponse> ModifyNASDefaultMountTargetWithOptionsAsync(ModifyNASDefaultMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -20099,10 +23423,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
-          *
-          * @param request ModifyNASDefaultMountTargetRequest
-          * @return ModifyNASDefaultMountTargetResponse
+         * @summary Modifies the mount target of an Apsara File Storage NAS (NAS) file system.
+         *
+         * @description When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](https://help.aliyun.com/document_detail/62621.html) operation to create a mount target.
+         *
+         * @param request ModifyNASDefaultMountTargetRequest
+         * @return ModifyNASDefaultMountTargetResponse
          */
         public ModifyNASDefaultMountTargetResponse ModifyNASDefaultMountTarget(ModifyNASDefaultMountTargetRequest request)
         {
@@ -20111,10 +23437,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
-          *
-          * @param request ModifyNASDefaultMountTargetRequest
-          * @return ModifyNASDefaultMountTargetResponse
+         * @summary Modifies the mount target of an Apsara File Storage NAS (NAS) file system.
+         *
+         * @description When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](https://help.aliyun.com/document_detail/62621.html) operation to create a mount target.
+         *
+         * @param request ModifyNASDefaultMountTargetRequest
+         * @return ModifyNASDefaultMountTargetResponse
          */
         public async Task<ModifyNASDefaultMountTargetResponse> ModifyNASDefaultMountTargetAsync(ModifyNASDefaultMountTargetRequest request)
         {
@@ -20122,6 +23450,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyNASDefaultMountTargetWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the bandwidth of a premium bandwidth plan.
+         *
+         * @param request ModifyNetworkPackageBandwidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNetworkPackageBandwidthResponse
+         */
         public ModifyNetworkPackageBandwidthResponse ModifyNetworkPackageBandwidthWithOptions(ModifyNetworkPackageBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20165,6 +23500,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyNetworkPackageBandwidthResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the bandwidth of a premium bandwidth plan.
+         *
+         * @param request ModifyNetworkPackageBandwidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNetworkPackageBandwidthResponse
+         */
         public async Task<ModifyNetworkPackageBandwidthResponse> ModifyNetworkPackageBandwidthWithOptionsAsync(ModifyNetworkPackageBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20208,12 +23550,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyNetworkPackageBandwidthResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the bandwidth of a premium bandwidth plan.
+         *
+         * @param request ModifyNetworkPackageBandwidthRequest
+         * @return ModifyNetworkPackageBandwidthResponse
+         */
         public ModifyNetworkPackageBandwidthResponse ModifyNetworkPackageBandwidth(ModifyNetworkPackageBandwidthRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyNetworkPackageBandwidthWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the bandwidth of a premium bandwidth plan.
+         *
+         * @param request ModifyNetworkPackageBandwidthRequest
+         * @return ModifyNetworkPackageBandwidthResponse
+         */
         public async Task<ModifyNetworkPackageBandwidthResponse> ModifyNetworkPackageBandwidthAsync(ModifyNetworkPackageBandwidthRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20221,11 +23575,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
-          *
-          * @param request ModifyNetworkPackageEnabledRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyNetworkPackageEnabledResponse
+         * @summary Restores or disables a premium bandwidth plan.
+         *
+         * @description If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
+         *
+         * @param request ModifyNetworkPackageEnabledRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNetworkPackageEnabledResponse
          */
         public ModifyNetworkPackageEnabledResponse ModifyNetworkPackageEnabledWithOptions(ModifyNetworkPackageEnabledRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -20263,11 +23619,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
-          *
-          * @param request ModifyNetworkPackageEnabledRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyNetworkPackageEnabledResponse
+         * @summary Restores or disables a premium bandwidth plan.
+         *
+         * @description If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
+         *
+         * @param request ModifyNetworkPackageEnabledRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNetworkPackageEnabledResponse
          */
         public async Task<ModifyNetworkPackageEnabledResponse> ModifyNetworkPackageEnabledWithOptionsAsync(ModifyNetworkPackageEnabledRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -20305,10 +23663,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
-          *
-          * @param request ModifyNetworkPackageEnabledRequest
-          * @return ModifyNetworkPackageEnabledResponse
+         * @summary Restores or disables a premium bandwidth plan.
+         *
+         * @description If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
+         *
+         * @param request ModifyNetworkPackageEnabledRequest
+         * @return ModifyNetworkPackageEnabledResponse
          */
         public ModifyNetworkPackageEnabledResponse ModifyNetworkPackageEnabled(ModifyNetworkPackageEnabledRequest request)
         {
@@ -20317,10 +23677,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
-          *
-          * @param request ModifyNetworkPackageEnabledRequest
-          * @return ModifyNetworkPackageEnabledResponse
+         * @summary Restores or disables a premium bandwidth plan.
+         *
+         * @description If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
+         *
+         * @param request ModifyNetworkPackageEnabledRequest
+         * @return ModifyNetworkPackageEnabledResponse
          */
         public async Task<ModifyNetworkPackageEnabledResponse> ModifyNetworkPackageEnabledAsync(ModifyNetworkPackageEnabledRequest request)
         {
@@ -20328,6 +23690,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyNetworkPackageEnabledWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the basic properties of an office network, including the name and local administrator permission settings.
+         *
+         * @param request ModifyOfficeSiteAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyOfficeSiteAttributeResponse
+         */
         public ModifyOfficeSiteAttributeResponse ModifyOfficeSiteAttributeWithOptions(ModifyOfficeSiteAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20379,6 +23748,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyOfficeSiteAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the basic properties of an office network, including the name and local administrator permission settings.
+         *
+         * @param request ModifyOfficeSiteAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyOfficeSiteAttributeResponse
+         */
         public async Task<ModifyOfficeSiteAttributeResponse> ModifyOfficeSiteAttributeWithOptionsAsync(ModifyOfficeSiteAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20430,18 +23806,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyOfficeSiteAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the basic properties of an office network, including the name and local administrator permission settings.
+         *
+         * @param request ModifyOfficeSiteAttributeRequest
+         * @return ModifyOfficeSiteAttributeResponse
+         */
         public ModifyOfficeSiteAttributeResponse ModifyOfficeSiteAttribute(ModifyOfficeSiteAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyOfficeSiteAttributeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the basic properties of an office network, including the name and local administrator permission settings.
+         *
+         * @param request ModifyOfficeSiteAttributeRequest
+         * @return ModifyOfficeSiteAttributeResponse
+         */
         public async Task<ModifyOfficeSiteAttributeResponse> ModifyOfficeSiteAttributeAsync(ModifyOfficeSiteAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyOfficeSiteAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the communication between cloud computers in an office network (formerly workspace). If you enable the communication between cloud computers in an office network, the cloud computers can access each other.
+         *
+         * @param request ModifyOfficeSiteCrossDesktopAccessRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyOfficeSiteCrossDesktopAccessResponse
+         */
         public ModifyOfficeSiteCrossDesktopAccessResponse ModifyOfficeSiteCrossDesktopAccessWithOptions(ModifyOfficeSiteCrossDesktopAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20477,6 +23872,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyOfficeSiteCrossDesktopAccessResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the communication between cloud computers in an office network (formerly workspace). If you enable the communication between cloud computers in an office network, the cloud computers can access each other.
+         *
+         * @param request ModifyOfficeSiteCrossDesktopAccessRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyOfficeSiteCrossDesktopAccessResponse
+         */
         public async Task<ModifyOfficeSiteCrossDesktopAccessResponse> ModifyOfficeSiteCrossDesktopAccessWithOptionsAsync(ModifyOfficeSiteCrossDesktopAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20512,18 +23914,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyOfficeSiteCrossDesktopAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the communication between cloud computers in an office network (formerly workspace). If you enable the communication between cloud computers in an office network, the cloud computers can access each other.
+         *
+         * @param request ModifyOfficeSiteCrossDesktopAccessRequest
+         * @return ModifyOfficeSiteCrossDesktopAccessResponse
+         */
         public ModifyOfficeSiteCrossDesktopAccessResponse ModifyOfficeSiteCrossDesktopAccess(ModifyOfficeSiteCrossDesktopAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyOfficeSiteCrossDesktopAccessWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the communication between cloud computers in an office network (formerly workspace). If you enable the communication between cloud computers in an office network, the cloud computers can access each other.
+         *
+         * @param request ModifyOfficeSiteCrossDesktopAccessRequest
+         * @return ModifyOfficeSiteCrossDesktopAccessResponse
+         */
         public async Task<ModifyOfficeSiteCrossDesktopAccessResponse> ModifyOfficeSiteCrossDesktopAccessAsync(ModifyOfficeSiteCrossDesktopAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyOfficeSiteCrossDesktopAccessWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables multi-factor authentication (MFA) for an enterprise Active Directory (AD) office network (formerly workspace).
+         *
+         * @param request ModifyOfficeSiteMfaEnabledRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyOfficeSiteMfaEnabledResponse
+         */
         public ModifyOfficeSiteMfaEnabledResponse ModifyOfficeSiteMfaEnabledWithOptions(ModifyOfficeSiteMfaEnabledRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20559,6 +23980,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyOfficeSiteMfaEnabledResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables multi-factor authentication (MFA) for an enterprise Active Directory (AD) office network (formerly workspace).
+         *
+         * @param request ModifyOfficeSiteMfaEnabledRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyOfficeSiteMfaEnabledResponse
+         */
         public async Task<ModifyOfficeSiteMfaEnabledResponse> ModifyOfficeSiteMfaEnabledWithOptionsAsync(ModifyOfficeSiteMfaEnabledRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20594,18 +24022,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyOfficeSiteMfaEnabledResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables multi-factor authentication (MFA) for an enterprise Active Directory (AD) office network (formerly workspace).
+         *
+         * @param request ModifyOfficeSiteMfaEnabledRequest
+         * @return ModifyOfficeSiteMfaEnabledResponse
+         */
         public ModifyOfficeSiteMfaEnabledResponse ModifyOfficeSiteMfaEnabled(ModifyOfficeSiteMfaEnabledRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyOfficeSiteMfaEnabledWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables multi-factor authentication (MFA) for an enterprise Active Directory (AD) office network (formerly workspace).
+         *
+         * @param request ModifyOfficeSiteMfaEnabledRequest
+         * @return ModifyOfficeSiteMfaEnabledResponse
+         */
         public async Task<ModifyOfficeSiteMfaEnabledResponse> ModifyOfficeSiteMfaEnabledAsync(ModifyOfficeSiteMfaEnabledRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyOfficeSiteMfaEnabledWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies a policy.
+         *
+         * @param request ModifyPolicyGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPolicyGroupResponse
+         */
         public ModifyPolicyGroupResponse ModifyPolicyGroupWithOptions(ModifyPolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20677,6 +24124,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 query["LocalDrive"] = request.LocalDrive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReconnectTime))
+            {
+                query["MaxReconnectTime"] = request.MaxReconnectTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -20853,6 +24304,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyPolicyGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies a policy.
+         *
+         * @param request ModifyPolicyGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPolicyGroupResponse
+         */
         public async Task<ModifyPolicyGroupResponse> ModifyPolicyGroupWithOptionsAsync(ModifyPolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20924,6 +24382,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 query["LocalDrive"] = request.LocalDrive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReconnectTime))
+            {
+                query["MaxReconnectTime"] = request.MaxReconnectTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -21100,12 +24562,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyPolicyGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies a policy.
+         *
+         * @param request ModifyPolicyGroupRequest
+         * @return ModifyPolicyGroupResponse
+         */
         public ModifyPolicyGroupResponse ModifyPolicyGroup(ModifyPolicyGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPolicyGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies a policy.
+         *
+         * @param request ModifyPolicyGroupRequest
+         * @return ModifyPolicyGroupResponse
+         */
         public async Task<ModifyPolicyGroupResponse> ModifyPolicyGroupAsync(ModifyPolicyGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21113,11 +24587,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify end users only for cloud computers that are in the Running state.
-          *
-          * @param request ModifyUserEntitlementRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyUserEntitlementResponse
+         * @summary Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.
+         *
+         * @description You can modify end users only for cloud computers that are in the Running state.
+         *
+         * @param request ModifyUserEntitlementRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyUserEntitlementResponse
          */
         public ModifyUserEntitlementResponse ModifyUserEntitlementWithOptions(ModifyUserEntitlementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -21159,11 +24635,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify end users only for cloud computers that are in the Running state.
-          *
-          * @param request ModifyUserEntitlementRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyUserEntitlementResponse
+         * @summary Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.
+         *
+         * @description You can modify end users only for cloud computers that are in the Running state.
+         *
+         * @param request ModifyUserEntitlementRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyUserEntitlementResponse
          */
         public async Task<ModifyUserEntitlementResponse> ModifyUserEntitlementWithOptionsAsync(ModifyUserEntitlementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -21205,10 +24683,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify end users only for cloud computers that are in the Running state.
-          *
-          * @param request ModifyUserEntitlementRequest
-          * @return ModifyUserEntitlementResponse
+         * @summary Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.
+         *
+         * @description You can modify end users only for cloud computers that are in the Running state.
+         *
+         * @param request ModifyUserEntitlementRequest
+         * @return ModifyUserEntitlementResponse
          */
         public ModifyUserEntitlementResponse ModifyUserEntitlement(ModifyUserEntitlementRequest request)
         {
@@ -21217,10 +24697,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify end users only for cloud computers that are in the Running state.
-          *
-          * @param request ModifyUserEntitlementRequest
-          * @return ModifyUserEntitlementResponse
+         * @summary Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.
+         *
+         * @description You can modify end users only for cloud computers that are in the Running state.
+         *
+         * @param request ModifyUserEntitlementRequest
+         * @return ModifyUserEntitlementResponse
          */
         public async Task<ModifyUserEntitlementResponse> ModifyUserEntitlementAsync(ModifyUserEntitlementRequest request)
         {
@@ -21228,6 +24710,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyUserEntitlementWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Changes the end users of a cloud computer pool into new end users.
+         *
+         * @param request ModifyUserToDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyUserToDesktopGroupResponse
+         */
         public ModifyUserToDesktopGroupResponse ModifyUserToDesktopGroupWithOptions(ModifyUserToDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21267,6 +24756,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyUserToDesktopGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the end users of a cloud computer pool into new end users.
+         *
+         * @param request ModifyUserToDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyUserToDesktopGroupResponse
+         */
         public async Task<ModifyUserToDesktopGroupResponse> ModifyUserToDesktopGroupWithOptionsAsync(ModifyUserToDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21306,18 +24802,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyUserToDesktopGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the end users of a cloud computer pool into new end users.
+         *
+         * @param request ModifyUserToDesktopGroupRequest
+         * @return ModifyUserToDesktopGroupResponse
+         */
         public ModifyUserToDesktopGroupResponse ModifyUserToDesktopGroup(ModifyUserToDesktopGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyUserToDesktopGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Changes the end users of a cloud computer pool into new end users.
+         *
+         * @param request ModifyUserToDesktopGroupRequest
+         * @return ModifyUserToDesktopGroupResponse
+         */
         public async Task<ModifyUserToDesktopGroupResponse> ModifyUserToDesktopGroupAsync(ModifyUserToDesktopGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyUserToDesktopGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Move files or folders.
+         *
+         * @param request MoveCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MoveCdsFileResponse
+         */
         public MoveCdsFileResponse MoveCdsFileWithOptions(MoveCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21369,6 +24884,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<MoveCdsFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Move files or folders.
+         *
+         * @param request MoveCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MoveCdsFileResponse
+         */
         public async Task<MoveCdsFileResponse> MoveCdsFileWithOptionsAsync(MoveCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21420,12 +24942,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<MoveCdsFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Move files or folders.
+         *
+         * @param request MoveCdsFileRequest
+         * @return MoveCdsFileResponse
+         */
         public MoveCdsFileResponse MoveCdsFile(MoveCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MoveCdsFileWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Move files or folders.
+         *
+         * @param request MoveCdsFileRequest
+         * @return MoveCdsFileResponse
+         */
         public async Task<MoveCdsFileResponse> MoveCdsFileAsync(MoveCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21433,11 +24967,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to restart must be in the Running state.
-          *
-          * @param request RebootDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RebootDesktopsResponse
+         * @summary Restart cloud computers.
+         *
+         * @description The cloud computers that you want to restart must be in the Running state.
+         *
+         * @param request RebootDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebootDesktopsResponse
          */
         public RebootDesktopsResponse RebootDesktopsWithOptions(RebootDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -21471,11 +25007,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to restart must be in the Running state.
-          *
-          * @param request RebootDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RebootDesktopsResponse
+         * @summary Restart cloud computers.
+         *
+         * @description The cloud computers that you want to restart must be in the Running state.
+         *
+         * @param request RebootDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebootDesktopsResponse
          */
         public async Task<RebootDesktopsResponse> RebootDesktopsWithOptionsAsync(RebootDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -21509,10 +25047,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to restart must be in the Running state.
-          *
-          * @param request RebootDesktopsRequest
-          * @return RebootDesktopsResponse
+         * @summary Restart cloud computers.
+         *
+         * @description The cloud computers that you want to restart must be in the Running state.
+         *
+         * @param request RebootDesktopsRequest
+         * @return RebootDesktopsResponse
          */
         public RebootDesktopsResponse RebootDesktops(RebootDesktopsRequest request)
         {
@@ -21521,10 +25061,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to restart must be in the Running state.
-          *
-          * @param request RebootDesktopsRequest
-          * @return RebootDesktopsResponse
+         * @summary Restart cloud computers.
+         *
+         * @description The cloud computers that you want to restart must be in the Running state.
+         *
+         * @param request RebootDesktopsRequest
+         * @return RebootDesktopsResponse
          */
         public async Task<RebootDesktopsResponse> RebootDesktopsAsync(RebootDesktopsRequest request)
         {
@@ -21533,16 +25075,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you change the image of a cloud computer, take note of the following limits:
-          * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
-          * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
-          * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
-          * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
-          * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
-          *
-          * @param request RebuildDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RebuildDesktopsResponse
+         * @summary Recreates cloud computers.
+         *
+         * @description Before you change the image of a cloud computer, take note of the following limits:
+         * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
+         * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
+         * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
+         * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
+         * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
+         *
+         * @param request RebuildDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebuildDesktopsResponse
          */
         public RebuildDesktopsResponse RebuildDesktopsWithOptions(RebuildDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -21555,6 +25099,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
             {
@@ -21584,16 +25132,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you change the image of a cloud computer, take note of the following limits:
-          * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
-          * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
-          * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
-          * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
-          * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
-          *
-          * @param request RebuildDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RebuildDesktopsResponse
+         * @summary Recreates cloud computers.
+         *
+         * @description Before you change the image of a cloud computer, take note of the following limits:
+         * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
+         * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
+         * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
+         * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
+         * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
+         *
+         * @param request RebuildDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebuildDesktopsResponse
          */
         public async Task<RebuildDesktopsResponse> RebuildDesktopsWithOptionsAsync(RebuildDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -21606,6 +25156,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
             {
@@ -21635,15 +25189,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you change the image of a cloud computer, take note of the following limits:
-          * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
-          * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
-          * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
-          * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
-          * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
-          *
-          * @param request RebuildDesktopsRequest
-          * @return RebuildDesktopsResponse
+         * @summary Recreates cloud computers.
+         *
+         * @description Before you change the image of a cloud computer, take note of the following limits:
+         * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
+         * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
+         * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
+         * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
+         * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
+         *
+         * @param request RebuildDesktopsRequest
+         * @return RebuildDesktopsResponse
          */
         public RebuildDesktopsResponse RebuildDesktops(RebuildDesktopsRequest request)
         {
@@ -21652,15 +25208,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you change the image of a cloud computer, take note of the following limits:
-          * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
-          * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
-          * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
-          * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
-          * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
-          *
-          * @param request RebuildDesktopsRequest
-          * @return RebuildDesktopsResponse
+         * @summary Recreates cloud computers.
+         *
+         * @description Before you change the image of a cloud computer, take note of the following limits:
+         * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
+         * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
+         * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
+         * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
+         * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
+         *
+         * @param request RebuildDesktopsRequest
+         * @return RebuildDesktopsResponse
          */
         public async Task<RebuildDesktopsResponse> RebuildDesktopsAsync(RebuildDesktopsRequest request)
         {
@@ -21668,6 +25226,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await RebuildDesktopsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Removes the file sharing feature of a folder in a cloud disk.
+         *
+         * @param tmpReq RemoveFilePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveFilePermissionResponse
+         */
         public RemoveFilePermissionResponse RemoveFilePermissionWithOptions(RemoveFilePermissionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -21721,6 +25286,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RemoveFilePermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes the file sharing feature of a folder in a cloud disk.
+         *
+         * @param tmpReq RemoveFilePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveFilePermissionResponse
+         */
         public async Task<RemoveFilePermissionResponse> RemoveFilePermissionWithOptionsAsync(RemoveFilePermissionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -21774,18 +25346,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RemoveFilePermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes the file sharing feature of a folder in a cloud disk.
+         *
+         * @param request RemoveFilePermissionRequest
+         * @return RemoveFilePermissionResponse
+         */
         public RemoveFilePermissionResponse RemoveFilePermission(RemoveFilePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveFilePermissionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Removes the file sharing feature of a folder in a cloud disk.
+         *
+         * @param request RemoveFilePermissionRequest
+         * @return RemoveFilePermissionResponse
+         */
         public async Task<RemoveFilePermissionResponse> RemoveFilePermissionAsync(RemoveFilePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveFilePermissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.
+         *
+         * @param request RemoveUserFromDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveUserFromDesktopGroupResponse
+         */
         public RemoveUserFromDesktopGroupResponse RemoveUserFromDesktopGroupWithOptions(RemoveUserFromDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21825,6 +25416,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RemoveUserFromDesktopGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.
+         *
+         * @param request RemoveUserFromDesktopGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveUserFromDesktopGroupResponse
+         */
         public async Task<RemoveUserFromDesktopGroupResponse> RemoveUserFromDesktopGroupWithOptionsAsync(RemoveUserFromDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21864,18 +25462,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RemoveUserFromDesktopGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.
+         *
+         * @param request RemoveUserFromDesktopGroupRequest
+         * @return RemoveUserFromDesktopGroupResponse
+         */
         public RemoveUserFromDesktopGroupResponse RemoveUserFromDesktopGroup(RemoveUserFromDesktopGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveUserFromDesktopGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.
+         *
+         * @param request RemoveUserFromDesktopGroupRequest
+         * @return RemoveUserFromDesktopGroupResponse
+         */
         public async Task<RemoveUserFromDesktopGroupResponse> RemoveUserFromDesktopGroupAsync(RemoveUserFromDesktopGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveUserFromDesktopGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 移除超卖用户组用户
+         *
+         * @param request RemoveUserFromDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveUserFromDesktopOversoldUserGroupResponse
+         */
         public RemoveUserFromDesktopOversoldUserGroupResponse RemoveUserFromDesktopOversoldUserGroupWithOptions(RemoveUserFromDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21915,6 +25532,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RemoveUserFromDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 移除超卖用户组用户
+         *
+         * @param request RemoveUserFromDesktopOversoldUserGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveUserFromDesktopOversoldUserGroupResponse
+         */
         public async Task<RemoveUserFromDesktopOversoldUserGroupResponse> RemoveUserFromDesktopOversoldUserGroupWithOptionsAsync(RemoveUserFromDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21954,18 +25578,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RemoveUserFromDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 移除超卖用户组用户
+         *
+         * @param request RemoveUserFromDesktopOversoldUserGroupRequest
+         * @return RemoveUserFromDesktopOversoldUserGroupResponse
+         */
         public RemoveUserFromDesktopOversoldUserGroupResponse RemoveUserFromDesktopOversoldUserGroup(RemoveUserFromDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveUserFromDesktopOversoldUserGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 移除超卖用户组用户
+         *
+         * @param request RemoveUserFromDesktopOversoldUserGroupRequest
+         * @return RemoveUserFromDesktopOversoldUserGroupResponse
+         */
         public async Task<RemoveUserFromDesktopOversoldUserGroupResponse> RemoveUserFromDesktopOversoldUserGroupAsync(RemoveUserFromDesktopOversoldUserGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveUserFromDesktopOversoldUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 续费桌面超卖组
+         *
+         * @param request RenewDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewDesktopOversoldGroupResponse
+         */
         public RenewDesktopOversoldGroupResponse RenewDesktopOversoldGroupWithOptions(RenewDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22001,6 +25644,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RenewDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 续费桌面超卖组
+         *
+         * @param request RenewDesktopOversoldGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewDesktopOversoldGroupResponse
+         */
         public async Task<RenewDesktopOversoldGroupResponse> RenewDesktopOversoldGroupWithOptionsAsync(RenewDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22036,18 +25686,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RenewDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 续费桌面超卖组
+         *
+         * @param request RenewDesktopOversoldGroupRequest
+         * @return RenewDesktopOversoldGroupResponse
+         */
         public RenewDesktopOversoldGroupResponse RenewDesktopOversoldGroup(RenewDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewDesktopOversoldGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 续费桌面超卖组
+         *
+         * @param request RenewDesktopOversoldGroupRequest
+         * @return RenewDesktopOversoldGroupResponse
+         */
         public async Task<RenewDesktopOversoldGroupResponse> RenewDesktopOversoldGroupAsync(RenewDesktopOversoldGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenewDesktopOversoldGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Renew subscription cloud computers.
+         *
+         * @param request RenewDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewDesktopsResponse
+         */
         public RenewDesktopsResponse RenewDesktopsWithOptions(RenewDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22055,6 +25724,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
@@ -22099,6 +25772,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RenewDesktopsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Renew subscription cloud computers.
+         *
+         * @param request RenewDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewDesktopsResponse
+         */
         public async Task<RenewDesktopsResponse> RenewDesktopsWithOptionsAsync(RenewDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22106,6 +25786,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
@@ -22150,18 +25834,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RenewDesktopsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Renew subscription cloud computers.
+         *
+         * @param request RenewDesktopsRequest
+         * @return RenewDesktopsResponse
+         */
         public RenewDesktopsResponse RenewDesktops(RenewDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewDesktopsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Renew subscription cloud computers.
+         *
+         * @param request RenewDesktopsRequest
+         * @return RenewDesktopsResponse
+         */
         public async Task<RenewDesktopsResponse> RenewDesktopsAsync(RenewDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenewDesktopsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Renews premium bandwidth plans.
+         *
+         * @param request RenewNetworkPackagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewNetworkPackagesResponse
+         */
         public RenewNetworkPackagesResponse RenewNetworkPackagesWithOptions(RenewNetworkPackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22209,6 +25912,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RenewNetworkPackagesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Renews premium bandwidth plans.
+         *
+         * @param request RenewNetworkPackagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewNetworkPackagesResponse
+         */
         public async Task<RenewNetworkPackagesResponse> RenewNetworkPackagesWithOptionsAsync(RenewNetworkPackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22256,12 +25966,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RenewNetworkPackagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Renews premium bandwidth plans.
+         *
+         * @param request RenewNetworkPackagesRequest
+         * @return RenewNetworkPackagesResponse
+         */
         public RenewNetworkPackagesResponse RenewNetworkPackages(RenewNetworkPackagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewNetworkPackagesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Renews premium bandwidth plans.
+         *
+         * @param request RenewNetworkPackagesRequest
+         * @return RenewNetworkPackagesResponse
+         */
         public async Task<RenewNetworkPackagesResponse> RenewNetworkPackagesAsync(RenewNetworkPackagesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -22269,11 +25991,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to reset only cloud computers in a cloud computer pool.
-          *
-          * @param request ResetDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetDesktopsResponse
+         * @summary Resets cloud computers.
+         *
+         * @description > You can call this operation to reset only cloud computers in a cloud computer pool.
+         *
+         * @param request ResetDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetDesktopsResponse
          */
         public ResetDesktopsResponse ResetDesktopsWithOptions(ResetDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22331,11 +26055,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to reset only cloud computers in a cloud computer pool.
-          *
-          * @param request ResetDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetDesktopsResponse
+         * @summary Resets cloud computers.
+         *
+         * @description > You can call this operation to reset only cloud computers in a cloud computer pool.
+         *
+         * @param request ResetDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetDesktopsResponse
          */
         public async Task<ResetDesktopsResponse> ResetDesktopsWithOptionsAsync(ResetDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22393,10 +26119,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to reset only cloud computers in a cloud computer pool.
-          *
-          * @param request ResetDesktopsRequest
-          * @return ResetDesktopsResponse
+         * @summary Resets cloud computers.
+         *
+         * @description > You can call this operation to reset only cloud computers in a cloud computer pool.
+         *
+         * @param request ResetDesktopsRequest
+         * @return ResetDesktopsResponse
          */
         public ResetDesktopsResponse ResetDesktops(ResetDesktopsRequest request)
         {
@@ -22405,10 +26133,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to reset only cloud computers in a cloud computer pool.
-          *
-          * @param request ResetDesktopsRequest
-          * @return ResetDesktopsResponse
+         * @summary Resets cloud computers.
+         *
+         * @description > You can call this operation to reset only cloud computers in a cloud computer pool.
+         *
+         * @param request ResetDesktopsRequest
+         * @return ResetDesktopsResponse
          */
         public async Task<ResetDesktopsResponse> ResetDesktopsAsync(ResetDesktopsRequest request)
         {
@@ -22417,11 +26147,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
-          *
-          * @param request ResetNASDefaultMountTargetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetNASDefaultMountTargetResponse
+         * @summary Resets the mount target of an Apsara File Storage NAS (NAS) file system.
+         *
+         * @description When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
+         *
+         * @param request ResetNASDefaultMountTargetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetNASDefaultMountTargetResponse
          */
         public ResetNASDefaultMountTargetResponse ResetNASDefaultMountTargetWithOptions(ResetNASDefaultMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22455,11 +26187,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
-          *
-          * @param request ResetNASDefaultMountTargetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetNASDefaultMountTargetResponse
+         * @summary Resets the mount target of an Apsara File Storage NAS (NAS) file system.
+         *
+         * @description When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
+         *
+         * @param request ResetNASDefaultMountTargetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetNASDefaultMountTargetResponse
          */
         public async Task<ResetNASDefaultMountTargetResponse> ResetNASDefaultMountTargetWithOptionsAsync(ResetNASDefaultMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22493,10 +26227,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
-          *
-          * @param request ResetNASDefaultMountTargetRequest
-          * @return ResetNASDefaultMountTargetResponse
+         * @summary Resets the mount target of an Apsara File Storage NAS (NAS) file system.
+         *
+         * @description When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
+         *
+         * @param request ResetNASDefaultMountTargetRequest
+         * @return ResetNASDefaultMountTargetResponse
          */
         public ResetNASDefaultMountTargetResponse ResetNASDefaultMountTarget(ResetNASDefaultMountTargetRequest request)
         {
@@ -22505,10 +26241,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
-          *
-          * @param request ResetNASDefaultMountTargetRequest
-          * @return ResetNASDefaultMountTargetResponse
+         * @summary Resets the mount target of an Apsara File Storage NAS (NAS) file system.
+         *
+         * @description When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
+         *
+         * @param request ResetNASDefaultMountTargetRequest
+         * @return ResetNASDefaultMountTargetResponse
          */
         public async Task<ResetNASDefaultMountTargetResponse> ResetNASDefaultMountTargetAsync(ResetNASDefaultMountTargetRequest request)
         {
@@ -22517,14 +26255,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you call this operation, make sure that the following operations are performed:
-          * *   The data that you want to retain is backed up.
-          *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
-          * *   The cloud computer to which the disk belongs is stopped.
-          *
-          * @param request ResetSnapshotRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetSnapshotResponse
+         * @summary Restores the data of a disk from a snapshot.
+         *
+         * @description Before you call this operation, make sure that the following operations are performed:
+         * *   The data that you want to retain is backed up.
+         *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
+         * *   The cloud computer to which the disk belongs is stopped.
+         *
+         * @param request ResetSnapshotRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetSnapshotResponse
          */
         public ResetSnapshotResponse ResetSnapshotWithOptions(ResetSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22558,14 +26298,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you call this operation, make sure that the following operations are performed:
-          * *   The data that you want to retain is backed up.
-          *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
-          * *   The cloud computer to which the disk belongs is stopped.
-          *
-          * @param request ResetSnapshotRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetSnapshotResponse
+         * @summary Restores the data of a disk from a snapshot.
+         *
+         * @description Before you call this operation, make sure that the following operations are performed:
+         * *   The data that you want to retain is backed up.
+         *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
+         * *   The cloud computer to which the disk belongs is stopped.
+         *
+         * @param request ResetSnapshotRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetSnapshotResponse
          */
         public async Task<ResetSnapshotResponse> ResetSnapshotWithOptionsAsync(ResetSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22599,13 +26341,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you call this operation, make sure that the following operations are performed:
-          * *   The data that you want to retain is backed up.
-          *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
-          * *   The cloud computer to which the disk belongs is stopped.
-          *
-          * @param request ResetSnapshotRequest
-          * @return ResetSnapshotResponse
+         * @summary Restores the data of a disk from a snapshot.
+         *
+         * @description Before you call this operation, make sure that the following operations are performed:
+         * *   The data that you want to retain is backed up.
+         *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
+         * *   The cloud computer to which the disk belongs is stopped.
+         *
+         * @param request ResetSnapshotRequest
+         * @return ResetSnapshotResponse
          */
         public ResetSnapshotResponse ResetSnapshot(ResetSnapshotRequest request)
         {
@@ -22614,13 +26358,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you call this operation, make sure that the following operations are performed:
-          * *   The data that you want to retain is backed up.
-          *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
-          * *   The cloud computer to which the disk belongs is stopped.
-          *
-          * @param request ResetSnapshotRequest
-          * @return ResetSnapshotResponse
+         * @summary Restores the data of a disk from a snapshot.
+         *
+         * @description Before you call this operation, make sure that the following operations are performed:
+         * *   The data that you want to retain is backed up.
+         *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
+         * *   The cloud computer to which the disk belongs is stopped.
+         *
+         * @param request ResetSnapshotRequest
+         * @return ResetSnapshotResponse
          */
         public async Task<ResetSnapshotResponse> ResetSnapshotAsync(ResetSnapshotRequest request)
         {
@@ -22628,6 +26374,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ResetSnapshotWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Revokes the coordinate permissions.
+         *
+         * @param request RevokeCoordinatePrivilegeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RevokeCoordinatePrivilegeResponse
+         */
         public RevokeCoordinatePrivilegeResponse RevokeCoordinatePrivilegeWithOptions(RevokeCoordinatePrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22671,6 +26424,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RevokeCoordinatePrivilegeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Revokes the coordinate permissions.
+         *
+         * @param request RevokeCoordinatePrivilegeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RevokeCoordinatePrivilegeResponse
+         */
         public async Task<RevokeCoordinatePrivilegeResponse> RevokeCoordinatePrivilegeWithOptionsAsync(RevokeCoordinatePrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22714,12 +26474,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RevokeCoordinatePrivilegeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Revokes the coordinate permissions.
+         *
+         * @param request RevokeCoordinatePrivilegeRequest
+         * @return RevokeCoordinatePrivilegeResponse
+         */
         public RevokeCoordinatePrivilegeResponse RevokeCoordinatePrivilege(RevokeCoordinatePrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RevokeCoordinatePrivilegeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Revokes the coordinate permissions.
+         *
+         * @param request RevokeCoordinatePrivilegeRequest
+         * @return RevokeCoordinatePrivilegeResponse
+         */
         public async Task<RevokeCoordinatePrivilegeResponse> RevokeCoordinatePrivilegeAsync(RevokeCoordinatePrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -22727,11 +26499,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
-          *
-          * @param request RunCommandRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RunCommandResponse
+         * @summary Runs a PowerShell or batch (.bat) script on Windows cloud desktops.
+         *
+         * @description You can use the RunCommand operation to run scripts only on Windows cloud desktops.
+         *
+         * @param request RunCommandRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunCommandResponse
          */
         public RunCommandResponse RunCommandWithOptions(RunCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22785,11 +26559,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
-          *
-          * @param request RunCommandRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RunCommandResponse
+         * @summary Runs a PowerShell or batch (.bat) script on Windows cloud desktops.
+         *
+         * @description You can use the RunCommand operation to run scripts only on Windows cloud desktops.
+         *
+         * @param request RunCommandRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunCommandResponse
          */
         public async Task<RunCommandResponse> RunCommandWithOptionsAsync(RunCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22843,10 +26619,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
-          *
-          * @param request RunCommandRequest
-          * @return RunCommandResponse
+         * @summary Runs a PowerShell or batch (.bat) script on Windows cloud desktops.
+         *
+         * @description You can use the RunCommand operation to run scripts only on Windows cloud desktops.
+         *
+         * @param request RunCommandRequest
+         * @return RunCommandResponse
          */
         public RunCommandResponse RunCommand(RunCommandRequest request)
         {
@@ -22855,10 +26633,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
-          *
-          * @param request RunCommandRequest
-          * @return RunCommandResponse
+         * @summary Runs a PowerShell or batch (.bat) script on Windows cloud desktops.
+         *
+         * @description You can use the RunCommand operation to run scripts only on Windows cloud desktops.
+         *
+         * @param request RunCommandRequest
+         * @return RunCommandResponse
          */
         public async Task<RunCommandResponse> RunCommandAsync(RunCommandRequest request)
         {
@@ -22867,11 +26647,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
-          *
-          * @param request SendVerifyCodeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SendVerifyCodeResponse
+         * @summary Obtains the verification code that is required when you bind an advanced office network to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.
+         *
+         * @description You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
+         *
+         * @param request SendVerifyCodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendVerifyCodeResponse
          */
         public SendVerifyCodeResponse SendVerifyCodeWithOptions(SendVerifyCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22909,11 +26691,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
-          *
-          * @param request SendVerifyCodeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SendVerifyCodeResponse
+         * @summary Obtains the verification code that is required when you bind an advanced office network to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.
+         *
+         * @description You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
+         *
+         * @param request SendVerifyCodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendVerifyCodeResponse
          */
         public async Task<SendVerifyCodeResponse> SendVerifyCodeWithOptionsAsync(SendVerifyCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22951,10 +26735,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
-          *
-          * @param request SendVerifyCodeRequest
-          * @return SendVerifyCodeResponse
+         * @summary Obtains the verification code that is required when you bind an advanced office network to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.
+         *
+         * @description You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
+         *
+         * @param request SendVerifyCodeRequest
+         * @return SendVerifyCodeResponse
          */
         public SendVerifyCodeResponse SendVerifyCode(SendVerifyCodeRequest request)
         {
@@ -22963,10 +26749,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
-          *
-          * @param request SendVerifyCodeRequest
-          * @return SendVerifyCodeResponse
+         * @summary Obtains the verification code that is required when you bind an advanced office network to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.
+         *
+         * @description You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
+         *
+         * @param request SendVerifyCodeRequest
+         * @return SendVerifyCodeResponse
          */
         public async Task<SendVerifyCodeResponse> SendVerifyCodeAsync(SendVerifyCodeRequest request)
         {
@@ -22974,6 +26762,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await SendVerifyCodeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Configures an auto scaling policy for a multi-session cloud computer. Elastic Desktop Service allows multiple end users to share a cloud computer in a multi-session cloud computer pool. This helps save costs.
+         *
+         * @param request SetDesktopGroupScaleTimerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDesktopGroupScaleTimerResponse
+         */
         public SetDesktopGroupScaleTimerResponse SetDesktopGroupScaleTimerWithOptions(SetDesktopGroupScaleTimerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23009,6 +26804,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetDesktopGroupScaleTimerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures an auto scaling policy for a multi-session cloud computer. Elastic Desktop Service allows multiple end users to share a cloud computer in a multi-session cloud computer pool. This helps save costs.
+         *
+         * @param request SetDesktopGroupScaleTimerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDesktopGroupScaleTimerResponse
+         */
         public async Task<SetDesktopGroupScaleTimerResponse> SetDesktopGroupScaleTimerWithOptionsAsync(SetDesktopGroupScaleTimerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23044,18 +26846,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetDesktopGroupScaleTimerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures an auto scaling policy for a multi-session cloud computer. Elastic Desktop Service allows multiple end users to share a cloud computer in a multi-session cloud computer pool. This helps save costs.
+         *
+         * @param request SetDesktopGroupScaleTimerRequest
+         * @return SetDesktopGroupScaleTimerResponse
+         */
         public SetDesktopGroupScaleTimerResponse SetDesktopGroupScaleTimer(SetDesktopGroupScaleTimerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDesktopGroupScaleTimerWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures an auto scaling policy for a multi-session cloud computer. Elastic Desktop Service allows multiple end users to share a cloud computer in a multi-session cloud computer pool. This helps save costs.
+         *
+         * @param request SetDesktopGroupScaleTimerRequest
+         * @return SetDesktopGroupScaleTimerResponse
+         */
         public async Task<SetDesktopGroupScaleTimerResponse> SetDesktopGroupScaleTimerAsync(SetDesktopGroupScaleTimerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDesktopGroupScaleTimerWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.
+         *
+         * @param request SetDesktopGroupTimerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDesktopGroupTimerResponse
+         */
         public SetDesktopGroupTimerResponse SetDesktopGroupTimerWithOptions(SetDesktopGroupTimerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23103,6 +26924,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetDesktopGroupTimerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.
+         *
+         * @param request SetDesktopGroupTimerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDesktopGroupTimerResponse
+         */
         public async Task<SetDesktopGroupTimerResponse> SetDesktopGroupTimerWithOptionsAsync(SetDesktopGroupTimerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23150,18 +26978,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetDesktopGroupTimerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.
+         *
+         * @param request SetDesktopGroupTimerRequest
+         * @return SetDesktopGroupTimerResponse
+         */
         public SetDesktopGroupTimerResponse SetDesktopGroupTimer(SetDesktopGroupTimerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDesktopGroupTimerWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.
+         *
+         * @param request SetDesktopGroupTimerRequest
+         * @return SetDesktopGroupTimerResponse
+         */
         public async Task<SetDesktopGroupTimerResponse> SetDesktopGroupTimerAsync(SetDesktopGroupTimerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDesktopGroupTimerWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.
+         *
+         * @param request SetDesktopGroupTimerStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDesktopGroupTimerStatusResponse
+         */
         public SetDesktopGroupTimerStatusResponse SetDesktopGroupTimerStatusWithOptions(SetDesktopGroupTimerStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23201,6 +27048,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetDesktopGroupTimerStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.
+         *
+         * @param request SetDesktopGroupTimerStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDesktopGroupTimerStatusResponse
+         */
         public async Task<SetDesktopGroupTimerStatusResponse> SetDesktopGroupTimerStatusWithOptionsAsync(SetDesktopGroupTimerStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23240,12 +27094,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetDesktopGroupTimerStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.
+         *
+         * @param request SetDesktopGroupTimerStatusRequest
+         * @return SetDesktopGroupTimerStatusResponse
+         */
         public SetDesktopGroupTimerStatusResponse SetDesktopGroupTimerStatus(SetDesktopGroupTimerStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDesktopGroupTimerStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.
+         *
+         * @param request SetDesktopGroupTimerStatusRequest
+         * @return SetDesktopGroupTimerStatusResponse
+         */
         public async Task<SetDesktopGroupTimerStatusResponse> SetDesktopGroupTimerStatusAsync(SetDesktopGroupTimerStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -23253,11 +27119,121 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * This operation is supported only for AD directories, not for RAM directories.
-          *
-          * @param request SetDirectorySsoStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDirectorySsoStatusResponse
+         * @summary 设置桌面维护模式
+         *
+         * @param request SetDesktopMaintenanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDesktopMaintenanceResponse
+         */
+        public SetDesktopMaintenanceResponse SetDesktopMaintenanceWithOptions(SetDesktopMaintenanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIds))
+            {
+                query["DesktopIds"] = request.DesktopIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDesktopMaintenance",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDesktopMaintenanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 设置桌面维护模式
+         *
+         * @param request SetDesktopMaintenanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDesktopMaintenanceResponse
+         */
+        public async Task<SetDesktopMaintenanceResponse> SetDesktopMaintenanceWithOptionsAsync(SetDesktopMaintenanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIds))
+            {
+                query["DesktopIds"] = request.DesktopIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDesktopMaintenance",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDesktopMaintenanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 设置桌面维护模式
+         *
+         * @param request SetDesktopMaintenanceRequest
+         * @return SetDesktopMaintenanceResponse
+         */
+        public SetDesktopMaintenanceResponse SetDesktopMaintenance(SetDesktopMaintenanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetDesktopMaintenanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 设置桌面维护模式
+         *
+         * @param request SetDesktopMaintenanceRequest
+         * @return SetDesktopMaintenanceResponse
+         */
+        public async Task<SetDesktopMaintenanceResponse> SetDesktopMaintenanceAsync(SetDesktopMaintenanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetDesktopMaintenanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Configures the single sign-on (SSO) status of an Active Directory (AD) directory.
+         *
+         * @description This operation is supported only for AD directories, not for RAM directories.
+         *
+         * @param request SetDirectorySsoStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDirectorySsoStatusResponse
          */
         public SetDirectorySsoStatusResponse SetDirectorySsoStatusWithOptions(SetDirectorySsoStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23295,11 +27271,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * This operation is supported only for AD directories, not for RAM directories.
-          *
-          * @param request SetDirectorySsoStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDirectorySsoStatusResponse
+         * @summary Configures the single sign-on (SSO) status of an Active Directory (AD) directory.
+         *
+         * @description This operation is supported only for AD directories, not for RAM directories.
+         *
+         * @param request SetDirectorySsoStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDirectorySsoStatusResponse
          */
         public async Task<SetDirectorySsoStatusResponse> SetDirectorySsoStatusWithOptionsAsync(SetDirectorySsoStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23337,10 +27315,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * This operation is supported only for AD directories, not for RAM directories.
-          *
-          * @param request SetDirectorySsoStatusRequest
-          * @return SetDirectorySsoStatusResponse
+         * @summary Configures the single sign-on (SSO) status of an Active Directory (AD) directory.
+         *
+         * @description This operation is supported only for AD directories, not for RAM directories.
+         *
+         * @param request SetDirectorySsoStatusRequest
+         * @return SetDirectorySsoStatusResponse
          */
         public SetDirectorySsoStatusResponse SetDirectorySsoStatus(SetDirectorySsoStatusRequest request)
         {
@@ -23349,10 +27329,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * This operation is supported only for AD directories, not for RAM directories.
-          *
-          * @param request SetDirectorySsoStatusRequest
-          * @return SetDirectorySsoStatusResponse
+         * @summary Configures the single sign-on (SSO) status of an Active Directory (AD) directory.
+         *
+         * @description This operation is supported only for AD directories, not for RAM directories.
+         *
+         * @param request SetDirectorySsoStatusRequest
+         * @return SetDirectorySsoStatusResponse
          */
         public async Task<SetDirectorySsoStatusResponse> SetDirectorySsoStatusAsync(SetDirectorySsoStatusRequest request)
         {
@@ -23361,11 +27343,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-          *
-          * @param request SetIdpMetadataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetIdpMetadataResponse
+         * @summary Uploads the metadata of a Security Assertion Markup Language (SAML) 2.0-based identity provider (IdP).
+         *
+         * @description You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
+         *
+         * @param request SetIdpMetadataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetIdpMetadataResponse
          */
         public SetIdpMetadataResponse SetIdpMetadataWithOptions(SetIdpMetadataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23407,11 +27391,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-          *
-          * @param request SetIdpMetadataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetIdpMetadataResponse
+         * @summary Uploads the metadata of a Security Assertion Markup Language (SAML) 2.0-based identity provider (IdP).
+         *
+         * @description You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
+         *
+         * @param request SetIdpMetadataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetIdpMetadataResponse
          */
         public async Task<SetIdpMetadataResponse> SetIdpMetadataWithOptionsAsync(SetIdpMetadataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23453,10 +27439,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-          *
-          * @param request SetIdpMetadataRequest
-          * @return SetIdpMetadataResponse
+         * @summary Uploads the metadata of a Security Assertion Markup Language (SAML) 2.0-based identity provider (IdP).
+         *
+         * @description You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
+         *
+         * @param request SetIdpMetadataRequest
+         * @return SetIdpMetadataResponse
          */
         public SetIdpMetadataResponse SetIdpMetadata(SetIdpMetadataRequest request)
         {
@@ -23465,10 +27453,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
-          *
-          * @param request SetIdpMetadataRequest
-          * @return SetIdpMetadataResponse
+         * @summary Uploads the metadata of a Security Assertion Markup Language (SAML) 2.0-based identity provider (IdP).
+         *
+         * @description You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
+         *
+         * @param request SetIdpMetadataRequest
+         * @return SetIdpMetadataResponse
          */
         public async Task<SetIdpMetadataResponse> SetIdpMetadataAsync(SetIdpMetadataRequest request)
         {
@@ -23476,6 +27466,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await SetIdpMetadataWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables single sign-on (SSO) for a workspace.
+         *
+         * @param request SetOfficeSiteSsoStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetOfficeSiteSsoStatusResponse
+         */
         public SetOfficeSiteSsoStatusResponse SetOfficeSiteSsoStatusWithOptions(SetOfficeSiteSsoStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23511,6 +27508,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetOfficeSiteSsoStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables single sign-on (SSO) for a workspace.
+         *
+         * @param request SetOfficeSiteSsoStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetOfficeSiteSsoStatusResponse
+         */
         public async Task<SetOfficeSiteSsoStatusResponse> SetOfficeSiteSsoStatusWithOptionsAsync(SetOfficeSiteSsoStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23546,18 +27550,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetOfficeSiteSsoStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables single sign-on (SSO) for a workspace.
+         *
+         * @param request SetOfficeSiteSsoStatusRequest
+         * @return SetOfficeSiteSsoStatusResponse
+         */
         public SetOfficeSiteSsoStatusResponse SetOfficeSiteSsoStatus(SetOfficeSiteSsoStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetOfficeSiteSsoStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables single sign-on (SSO) for a workspace.
+         *
+         * @param request SetOfficeSiteSsoStatusRequest
+         * @return SetOfficeSiteSsoStatusResponse
+         */
         public async Task<SetOfficeSiteSsoStatusResponse> SetOfficeSiteSsoStatusAsync(SetOfficeSiteSsoStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetOfficeSiteSsoStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Configures directories in the blacklist and whitelist based on the user profile management (UPM) feature.
+         *
+         * @param tmpReq SetUserProfilePathRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetUserProfilePathRulesResponse
+         */
         public SetUserProfilePathRulesResponse SetUserProfilePathRulesWithOptions(SetUserProfilePathRulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -23603,6 +27626,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetUserProfilePathRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures directories in the blacklist and whitelist based on the user profile management (UPM) feature.
+         *
+         * @param tmpReq SetUserProfilePathRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetUserProfilePathRulesResponse
+         */
         public async Task<SetUserProfilePathRulesResponse> SetUserProfilePathRulesWithOptionsAsync(SetUserProfilePathRulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -23648,12 +27678,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetUserProfilePathRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures directories in the blacklist and whitelist based on the user profile management (UPM) feature.
+         *
+         * @param request SetUserProfilePathRulesRequest
+         * @return SetUserProfilePathRulesResponse
+         */
         public SetUserProfilePathRulesResponse SetUserProfilePathRules(SetUserProfilePathRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetUserProfilePathRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures directories in the blacklist and whitelist based on the user profile management (UPM) feature.
+         *
+         * @param request SetUserProfilePathRulesRequest
+         * @return SetUserProfilePathRulesResponse
+         */
         public async Task<SetUserProfilePathRulesResponse> SetUserProfilePathRulesAsync(SetUserProfilePathRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -23661,11 +27703,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to start must be in the Stopped state.
-          *
-          * @param request StartDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartDesktopsResponse
+         * @summary Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.
+         *
+         * @description The cloud computers that you want to start must be in the Stopped state.
+         *
+         * @param request StartDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartDesktopsResponse
          */
         public StartDesktopsResponse StartDesktopsWithOptions(StartDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23699,11 +27743,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to start must be in the Stopped state.
-          *
-          * @param request StartDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartDesktopsResponse
+         * @summary Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.
+         *
+         * @description The cloud computers that you want to start must be in the Stopped state.
+         *
+         * @param request StartDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartDesktopsResponse
          */
         public async Task<StartDesktopsResponse> StartDesktopsWithOptionsAsync(StartDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23737,10 +27783,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to start must be in the Stopped state.
-          *
-          * @param request StartDesktopsRequest
-          * @return StartDesktopsResponse
+         * @summary Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.
+         *
+         * @description The cloud computers that you want to start must be in the Stopped state.
+         *
+         * @param request StartDesktopsRequest
+         * @return StartDesktopsResponse
          */
         public StartDesktopsResponse StartDesktops(StartDesktopsRequest request)
         {
@@ -23749,10 +27797,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to start must be in the Stopped state.
-          *
-          * @param request StartDesktopsRequest
-          * @return StartDesktopsResponse
+         * @summary Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.
+         *
+         * @description The cloud computers that you want to start must be in the Stopped state.
+         *
+         * @param request StartDesktopsRequest
+         * @return StartDesktopsResponse
          */
         public async Task<StartDesktopsResponse> StartDesktopsAsync(StartDesktopsRequest request)
         {
@@ -23761,11 +27811,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to stop must be in the Running state.
-          *
-          * @param request StopDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopDesktopsResponse
+         * @summary Stop cloud computers that are in the Running state. After the operation is successfully called, the cloud computers enter the Stopped state.
+         *
+         * @description The cloud computers that you want to stop must be in the Running state.
+         *
+         * @param request StopDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopDesktopsResponse
          */
         public StopDesktopsResponse StopDesktopsWithOptions(StopDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23803,11 +27855,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to stop must be in the Running state.
-          *
-          * @param request StopDesktopsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopDesktopsResponse
+         * @summary Stop cloud computers that are in the Running state. After the operation is successfully called, the cloud computers enter the Stopped state.
+         *
+         * @description The cloud computers that you want to stop must be in the Running state.
+         *
+         * @param request StopDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopDesktopsResponse
          */
         public async Task<StopDesktopsResponse> StopDesktopsWithOptionsAsync(StopDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23845,10 +27899,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to stop must be in the Running state.
-          *
-          * @param request StopDesktopsRequest
-          * @return StopDesktopsResponse
+         * @summary Stop cloud computers that are in the Running state. After the operation is successfully called, the cloud computers enter the Stopped state.
+         *
+         * @description The cloud computers that you want to stop must be in the Running state.
+         *
+         * @param request StopDesktopsRequest
+         * @return StopDesktopsResponse
          */
         public StopDesktopsResponse StopDesktops(StopDesktopsRequest request)
         {
@@ -23857,10 +27913,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud computers that you want to stop must be in the Running state.
-          *
-          * @param request StopDesktopsRequest
-          * @return StopDesktopsResponse
+         * @summary Stop cloud computers that are in the Running state. After the operation is successfully called, the cloud computers enter the Stopped state.
+         *
+         * @description The cloud computers that you want to stop must be in the Running state.
+         *
+         * @param request StopDesktopsRequest
+         * @return StopDesktopsResponse
          */
         public async Task<StopDesktopsResponse> StopDesktopsAsync(StopDesktopsRequest request)
         {
@@ -23869,11 +27927,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
-          *
-          * @param request StopInvocationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopInvocationResponse
+         * @summary Stops a Cloud Assistant command that is running on one or more cloud desktops.
+         *
+         * @description When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+         *
+         * @param request StopInvocationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopInvocationResponse
          */
         public StopInvocationResponse StopInvocationWithOptions(StopInvocationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23911,11 +27971,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
-          *
-          * @param request StopInvocationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopInvocationResponse
+         * @summary Stops a Cloud Assistant command that is running on one or more cloud desktops.
+         *
+         * @description When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+         *
+         * @param request StopInvocationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopInvocationResponse
          */
         public async Task<StopInvocationResponse> StopInvocationWithOptionsAsync(StopInvocationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23953,10 +28015,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
-          *
-          * @param request StopInvocationRequest
-          * @return StopInvocationResponse
+         * @summary Stops a Cloud Assistant command that is running on one or more cloud desktops.
+         *
+         * @description When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+         *
+         * @param request StopInvocationRequest
+         * @return StopInvocationResponse
          */
         public StopInvocationResponse StopInvocation(StopInvocationRequest request)
         {
@@ -23965,10 +28029,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
-          *
-          * @param request StopInvocationRequest
-          * @return StopInvocationResponse
+         * @summary Stops a Cloud Assistant command that is running on one or more cloud desktops.
+         *
+         * @description When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+         *
+         * @param request StopInvocationRequest
+         * @return StopInvocationResponse
          */
         public async Task<StopInvocationResponse> StopInvocationAsync(StopInvocationRequest request)
         {
@@ -23977,11 +28043,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If TagKey is specified, the new TagValue value overrides the original TagValue value.
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
+         * @summary Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.
+         *
+         * @description If TagKey is specified, the new TagValue value overrides the original TagValue value.
+         *
+         * @param request TagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
          */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -24023,11 +28091,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If TagKey is specified, the new TagValue value overrides the original TagValue value.
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
+         * @summary Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.
+         *
+         * @description If TagKey is specified, the new TagValue value overrides the original TagValue value.
+         *
+         * @param request TagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
          */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -24069,10 +28139,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If TagKey is specified, the new TagValue value overrides the original TagValue value.
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
+         * @summary Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.
+         *
+         * @description If TagKey is specified, the new TagValue value overrides the original TagValue value.
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
          */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
@@ -24081,10 +28153,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If TagKey is specified, the new TagValue value overrides the original TagValue value.
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
+         * @summary Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.
+         *
+         * @description If TagKey is specified, the new TagValue value overrides the original TagValue value.
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
          */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
@@ -24092,6 +28166,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 解绑用户桌面
+         *
+         * @param request UnbindUserDesktopRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnbindUserDesktopResponse
+         */
         public UnbindUserDesktopResponse UnbindUserDesktopWithOptions(UnbindUserDesktopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24139,6 +28220,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<UnbindUserDesktopResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 解绑用户桌面
+         *
+         * @param request UnbindUserDesktopRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnbindUserDesktopResponse
+         */
         public async Task<UnbindUserDesktopResponse> UnbindUserDesktopWithOptionsAsync(UnbindUserDesktopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24186,18 +28274,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<UnbindUserDesktopResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 解绑用户桌面
+         *
+         * @param request UnbindUserDesktopRequest
+         * @return UnbindUserDesktopResponse
+         */
         public UnbindUserDesktopResponse UnbindUserDesktop(UnbindUserDesktopRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnbindUserDesktopWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 解绑用户桌面
+         *
+         * @param request UnbindUserDesktopRequest
+         * @return UnbindUserDesktopResponse
+         */
         public async Task<UnbindUserDesktopResponse> UnbindUserDesktopAsync(UnbindUserDesktopRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnbindUserDesktopWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Unlocks a virtual multi-factor authentication (MFA) device that is in the LOCKED state.
+         *
+         * @param request UnlockVirtualMFADeviceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnlockVirtualMFADeviceResponse
+         */
         public UnlockVirtualMFADeviceResponse UnlockVirtualMFADeviceWithOptions(UnlockVirtualMFADeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24229,6 +28336,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<UnlockVirtualMFADeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Unlocks a virtual multi-factor authentication (MFA) device that is in the LOCKED state.
+         *
+         * @param request UnlockVirtualMFADeviceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnlockVirtualMFADeviceResponse
+         */
         public async Task<UnlockVirtualMFADeviceResponse> UnlockVirtualMFADeviceWithOptionsAsync(UnlockVirtualMFADeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24260,18 +28374,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<UnlockVirtualMFADeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Unlocks a virtual multi-factor authentication (MFA) device that is in the LOCKED state.
+         *
+         * @param request UnlockVirtualMFADeviceRequest
+         * @return UnlockVirtualMFADeviceResponse
+         */
         public UnlockVirtualMFADeviceResponse UnlockVirtualMFADevice(UnlockVirtualMFADeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnlockVirtualMFADeviceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Unlocks a virtual multi-factor authentication (MFA) device that is in the LOCKED state.
+         *
+         * @param request UnlockVirtualMFADeviceRequest
+         * @return UnlockVirtualMFADeviceResponse
+         */
         public async Task<UnlockVirtualMFADeviceResponse> UnlockVirtualMFADeviceAsync(UnlockVirtualMFADeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnlockVirtualMFADeviceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.
+         *
+         * @param request UntagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24315,6 +28448,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.
+         *
+         * @param request UntagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24358,12 +28498,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -24371,11 +28523,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the WUYING Workspace console and choose **Operations > Image Updates** in the left-side navigation pane.
-          *
-          * @param request UpdateFotaTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateFotaTaskResponse
+         * @summary Enables or disables the auto-push feature for an image update task.
+         *
+         * @description You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the Elastic Desktop Service console and choose **Operations > Image Updates** in the left-side navigation pane.
+         *
+         * @param request UpdateFotaTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateFotaTaskResponse
          */
         public UpdateFotaTaskResponse UpdateFotaTaskWithOptions(UpdateFotaTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -24413,11 +28567,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the WUYING Workspace console and choose **Operations > Image Updates** in the left-side navigation pane.
-          *
-          * @param request UpdateFotaTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateFotaTaskResponse
+         * @summary Enables or disables the auto-push feature for an image update task.
+         *
+         * @description You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the Elastic Desktop Service console and choose **Operations > Image Updates** in the left-side navigation pane.
+         *
+         * @param request UpdateFotaTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateFotaTaskResponse
          */
         public async Task<UpdateFotaTaskResponse> UpdateFotaTaskWithOptionsAsync(UpdateFotaTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -24455,10 +28611,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the WUYING Workspace console and choose **Operations > Image Updates** in the left-side navigation pane.
-          *
-          * @param request UpdateFotaTaskRequest
-          * @return UpdateFotaTaskResponse
+         * @summary Enables or disables the auto-push feature for an image update task.
+         *
+         * @description You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the Elastic Desktop Service console and choose **Operations > Image Updates** in the left-side navigation pane.
+         *
+         * @param request UpdateFotaTaskRequest
+         * @return UpdateFotaTaskResponse
          */
         public UpdateFotaTaskResponse UpdateFotaTask(UpdateFotaTaskRequest request)
         {
@@ -24467,10 +28625,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the WUYING Workspace console and choose **Operations > Image Updates** in the left-side navigation pane.
-          *
-          * @param request UpdateFotaTaskRequest
-          * @return UpdateFotaTaskResponse
+         * @summary Enables or disables the auto-push feature for an image update task.
+         *
+         * @description You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the Elastic Desktop Service console and choose **Operations > Image Updates** in the left-side navigation pane.
+         *
+         * @param request UpdateFotaTaskRequest
+         * @return UpdateFotaTaskResponse
          */
         public async Task<UpdateFotaTaskResponse> UpdateFotaTaskAsync(UpdateFotaTaskRequest request)
         {
@@ -24479,11 +28639,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * >  You can upload only Windows images.
-          *
-          * @param request UploadImageRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UploadImageResponse
+         * @summary Uploads your custom Windows image.
+         *
+         * @description >  You can upload only Windows images.
+         *
+         * @param request UploadImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UploadImageResponse
          */
         public UploadImageResponse UploadImageWithOptions(UploadImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -24553,11 +28715,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * >  You can upload only Windows images.
-          *
-          * @param request UploadImageRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UploadImageResponse
+         * @summary Uploads your custom Windows image.
+         *
+         * @description >  You can upload only Windows images.
+         *
+         * @param request UploadImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UploadImageResponse
          */
         public async Task<UploadImageResponse> UploadImageWithOptionsAsync(UploadImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -24627,10 +28791,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * >  You can upload only Windows images.
-          *
-          * @param request UploadImageRequest
-          * @return UploadImageResponse
+         * @summary Uploads your custom Windows image.
+         *
+         * @description >  You can upload only Windows images.
+         *
+         * @param request UploadImageRequest
+         * @return UploadImageResponse
          */
         public UploadImageResponse UploadImage(UploadImageRequest request)
         {
@@ -24639,10 +28805,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * >  You can upload only Windows images.
-          *
-          * @param request UploadImageRequest
-          * @return UploadImageResponse
+         * @summary Uploads your custom Windows image.
+         *
+         * @description >  You can upload only Windows images.
+         *
+         * @param request UploadImageRequest
+         * @return UploadImageResponse
          */
         public async Task<UploadImageResponse> UploadImageAsync(UploadImageRequest request)
         {
@@ -24650,6 +28818,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await UploadImageWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Verifies the ID of a Cloud Enterprise Network (CEN) instance and the ID of the Alibaba Cloud account to which the instance belongs and checks whether a CIDR block conflict exists between the routes of the instance and the IPv4 CIDR blocks of the associated office network.
+         *
+         * @param request VerifyCenRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VerifyCenResponse
+         */
         public VerifyCenResponse VerifyCenWithOptions(VerifyCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24693,6 +28868,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<VerifyCenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Verifies the ID of a Cloud Enterprise Network (CEN) instance and the ID of the Alibaba Cloud account to which the instance belongs and checks whether a CIDR block conflict exists between the routes of the instance and the IPv4 CIDR blocks of the associated office network.
+         *
+         * @param request VerifyCenRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VerifyCenResponse
+         */
         public async Task<VerifyCenResponse> VerifyCenWithOptionsAsync(VerifyCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24736,18 +28918,35 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<VerifyCenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Verifies the ID of a Cloud Enterprise Network (CEN) instance and the ID of the Alibaba Cloud account to which the instance belongs and checks whether a CIDR block conflict exists between the routes of the instance and the IPv4 CIDR blocks of the associated office network.
+         *
+         * @param request VerifyCenRequest
+         * @return VerifyCenResponse
+         */
         public VerifyCenResponse VerifyCen(VerifyCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return VerifyCenWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Verifies the ID of a Cloud Enterprise Network (CEN) instance and the ID of the Alibaba Cloud account to which the instance belongs and checks whether a CIDR block conflict exists between the routes of the instance and the IPv4 CIDR blocks of the associated office network.
+         *
+         * @param request VerifyCenRequest
+         * @return VerifyCenResponse
+         */
         public async Task<VerifyCenResponse> VerifyCenAsync(VerifyCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await VerifyCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request WakeupDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return WakeupDesktopsResponse
+         */
         public WakeupDesktopsResponse WakeupDesktopsWithOptions(WakeupDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24779,6 +28978,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<WakeupDesktopsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request WakeupDesktopsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return WakeupDesktopsResponse
+         */
         public async Task<WakeupDesktopsResponse> WakeupDesktopsWithOptionsAsync(WakeupDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24810,12 +29014,20 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<WakeupDesktopsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request WakeupDesktopsRequest
+         * @return WakeupDesktopsResponse
+         */
         public WakeupDesktopsResponse WakeupDesktops(WakeupDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return WakeupDesktopsWithOptions(request, runtime);
         }
 
+        /**
+         * @param request WakeupDesktopsRequest
+         * @return WakeupDesktopsResponse
+         */
         public async Task<WakeupDesktopsResponse> WakeupDesktopsAsync(WakeupDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// *   PL2
                 /// *   PL3
                 /// 
-                /// For more information about the differences among ESSDs at different PLs, see [Enhanced SSDs](~~122389~~).
+                /// For more information about the differences among ESSDs at different PLs, see [Enhanced SSDs](https://help.aliyun.com/document_detail/122389.html).
                 /// </summary>
                 [NameInMap("PerformanceLevel")]
                 [Validation(Required=false)]
@@ -574,6 +574,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
+            [NameInMap("ResourceGroups")]
+            [Validation(Required=false)]
+            public List<DescribeDesktopsResponseBodyDesktopsResourceGroups> ResourceGroups { get; set; }
+            public class DescribeDesktopsResponseBodyDesktopsResourceGroups : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
             /// The type of the session.
             /// 
@@ -702,7 +716,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.
+            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](https://help.aliyun.com/document_detail/28951.html) operation to query the list of KMS keys.
             /// </summary>
             [NameInMap("VolumeEncryptionKey")]
             [Validation(Required=false)]

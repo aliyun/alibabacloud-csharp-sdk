@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// The OS that the client runs.
+            /// The client OS.
             /// </summary>
             [NameInMap("ClientOS")]
             [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientVersion { get; set; }
 
             /// <summary>
-            /// The cloud desktop ID.
+            /// The ID of the cloud computer.
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The cloud desktop name.
+            /// The name of the cloud computer.
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
@@ -73,38 +73,46 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The duration of the latest session. Unit: seconds.
+            /// The duration of the last connection to the cloud computer. Unit: seconds.
             /// </summary>
             [NameInMap("LatestConnectionTime")]
             [Validation(Required=false)]
             public long? LatestConnectionTime { get; set; }
 
             /// <summary>
-            /// The workspace ID.
+            /// The ID of the office network.
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// The workspace name.
+            /// The name of the office network.
             /// </summary>
             [NameInMap("OfficeSiteName")]
             [Validation(Required=false)]
             public string OfficeSiteName { get; set; }
 
+            [NameInMap("OsSessionStatus")]
+            [Validation(Required=false)]
+            public string OsSessionStatus { get; set; }
+
             /// <summary>
-            /// The OS. Valid values:
+            /// The OS.
             /// 
-            /// *   Windows
+            /// Valid values:
+            /// 
             /// *   Linux
+            /// *   Windows
             /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
 
             /// <summary>
-            /// The protocol type that is supported by the cloud desktop. Valid values:
+            /// The protocol type.
+            /// 
+            /// Valid values:
             /// 
             /// *   HDX
             /// *   ASP
@@ -135,7 +143,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SessionStartTime { get; set; }
 
             /// <summary>
-            /// The session status. Valid values:
+            /// The state of the session.
+            /// 
+            /// Valid values:
             /// 
             /// *   Connected
             /// *   Disconnected
@@ -144,8 +154,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string SessionStatus { get; set; }
 
+            [NameInMap("SubPayType")]
+            [Validation(Required=false)]
+            public string SubPayType { get; set; }
+
             /// <summary>
-            /// The total session duration. Unit: seconds.
+            /// The total connection duration. Unit: seconds.
             /// </summary>
             [NameInMap("TotalConnectionTime")]
             [Validation(Required=false)]

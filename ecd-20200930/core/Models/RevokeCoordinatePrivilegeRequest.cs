@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class RevokeCoordinatePrivilegeRequest : TeaModel {
         /// <summary>
         /// The ID of the stream coordination task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CoId")]
         [Validation(Required=false)]
@@ -24,7 +26,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// The type of user who requires the coordinate permissions.
         /// 
         /// Set the value to TENANT_ADMIN. Only tenant administrators can be granted with the coordinate permissions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

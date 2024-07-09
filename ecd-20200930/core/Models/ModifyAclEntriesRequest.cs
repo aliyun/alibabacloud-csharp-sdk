@@ -17,13 +17,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// *   allow: allows access to the Internet.
         /// 
         /// *   disable: forbids access to the Internet.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The instance IDs (office network IDs or cloud computer IDs) to which the Internet access control policy is applicable.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// *   desktop: cloud computer granularity.
         /// 
         /// *   vpc: office network granularity.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

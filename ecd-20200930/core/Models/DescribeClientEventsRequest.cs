@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\
+        /// The end of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\\
         /// If you do not specify a value for this parameter, the current time is used.
         /// </summary>
         [NameInMap("EndTime")]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> EventTypes { get; set; }
 
         /// <summary>
-        /// The number of entries per page.\
+        /// The number of entries per page.\\
         /// Default value: 100.
         /// </summary>
         [NameInMap("MaxResults")]
@@ -162,14 +162,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\
+        /// The beginning of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\\
         /// If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for `EndTime` are queried.
         /// </summary>
         [NameInMap("StartTime")]
