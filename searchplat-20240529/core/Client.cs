@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529
 
 
         /**
-         * @summary 创建异步提取任务
+         * @summary 创建文档解析异步提取任务
          *
          * @param request CreateDocumentAnalyzeTaskRequest
          * @param headers map
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         }
 
         /**
-         * @summary 创建异步提取任务
+         * @summary 创建文档解析异步提取任务
          *
          * @param request CreateDocumentAnalyzeTaskRequest
          * @param headers map
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         }
 
         /**
-         * @summary 创建异步提取任务
+         * @summary 创建文档解析异步提取任务
          *
          * @param request CreateDocumentAnalyzeTaskRequest
          * @return CreateDocumentAnalyzeTaskResponse
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         }
 
         /**
-         * @summary 创建异步提取任务
+         * @summary 创建文档解析异步提取任务
          *
          * @param request CreateDocumentAnalyzeTaskRequest
          * @return CreateDocumentAnalyzeTaskResponse
@@ -131,7 +131,105 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         }
 
         /**
-         * @summary 获取异步提取任务状态
+         * @summary 创建图片解析异步提取任务
+         *
+         * @param request CreateImageAnalyzeTaskRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateImageAnalyzeTaskResponse
+         */
+        public CreateImageAnalyzeTaskResponse CreateImageAnalyzeTaskWithOptions(string workspaceName, string serviceId, CreateImageAnalyzeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Document))
+            {
+                body["document"] = request.Document;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateImageAnalyzeTask",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/image-analyze/" + serviceId + "/async",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateImageAnalyzeTaskResponse>(Execute(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建图片解析异步提取任务
+         *
+         * @param request CreateImageAnalyzeTaskRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateImageAnalyzeTaskResponse
+         */
+        public async Task<CreateImageAnalyzeTaskResponse> CreateImageAnalyzeTaskWithOptionsAsync(string workspaceName, string serviceId, CreateImageAnalyzeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Document))
+            {
+                body["document"] = request.Document;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateImageAnalyzeTask",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/image-analyze/" + serviceId + "/async",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateImageAnalyzeTaskResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建图片解析异步提取任务
+         *
+         * @param request CreateImageAnalyzeTaskRequest
+         * @return CreateImageAnalyzeTaskResponse
+         */
+        public CreateImageAnalyzeTaskResponse CreateImageAnalyzeTask(string workspaceName, string serviceId, CreateImageAnalyzeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateImageAnalyzeTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建图片解析异步提取任务
+         *
+         * @param request CreateImageAnalyzeTaskRequest
+         * @return CreateImageAnalyzeTaskResponse
+         */
+        public async Task<CreateImageAnalyzeTaskResponse> CreateImageAnalyzeTaskAsync(string workspaceName, string serviceId, CreateImageAnalyzeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateImageAnalyzeTaskWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取文档解析异步提取任务状态
          *
          * @param request GetDocumentAnalyzeTaskStatusRequest
          * @param headers map
@@ -167,7 +265,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         }
 
         /**
-         * @summary 获取异步提取任务状态
+         * @summary 获取文档解析异步提取任务状态
          *
          * @param request GetDocumentAnalyzeTaskStatusRequest
          * @param headers map
@@ -203,7 +301,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         }
 
         /**
-         * @summary 获取异步提取任务状态
+         * @summary 获取文档解析异步提取任务状态
          *
          * @param request GetDocumentAnalyzeTaskStatusRequest
          * @return GetDocumentAnalyzeTaskStatusResponse
@@ -216,7 +314,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         }
 
         /**
-         * @summary 获取异步提取任务状态
+         * @summary 获取文档解析异步提取任务状态
          *
          * @param request GetDocumentAnalyzeTaskStatusRequest
          * @return GetDocumentAnalyzeTaskStatusResponse
@@ -438,6 +536,210 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetDocumentSplitWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取图片解析异步提取任务状态
+         *
+         * @param request GetImageAnalyzeTaskStatusRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetImageAnalyzeTaskStatusResponse
+         */
+        public GetImageAnalyzeTaskStatusResponse GetImageAnalyzeTaskStatusWithOptions(string workspaceName, string serviceId, GetImageAnalyzeTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["task_id"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageAnalyzeTaskStatus",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/image-analyze/" + serviceId + "/async/task-status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageAnalyzeTaskStatusResponse>(Execute(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取图片解析异步提取任务状态
+         *
+         * @param request GetImageAnalyzeTaskStatusRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetImageAnalyzeTaskStatusResponse
+         */
+        public async Task<GetImageAnalyzeTaskStatusResponse> GetImageAnalyzeTaskStatusWithOptionsAsync(string workspaceName, string serviceId, GetImageAnalyzeTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["task_id"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageAnalyzeTaskStatus",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/image-analyze/" + serviceId + "/async/task-status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageAnalyzeTaskStatusResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取图片解析异步提取任务状态
+         *
+         * @param request GetImageAnalyzeTaskStatusRequest
+         * @return GetImageAnalyzeTaskStatusResponse
+         */
+        public GetImageAnalyzeTaskStatusResponse GetImageAnalyzeTaskStatus(string workspaceName, string serviceId, GetImageAnalyzeTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetImageAnalyzeTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取图片解析异步提取任务状态
+         *
+         * @param request GetImageAnalyzeTaskStatusRequest
+         * @return GetImageAnalyzeTaskStatusResponse
+         */
+        public async Task<GetImageAnalyzeTaskStatusResponse> GetImageAnalyzeTaskStatusAsync(string workspaceName, string serviceId, GetImageAnalyzeTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetImageAnalyzeTaskStatusWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取query分析结果
+         *
+         * @param request GetQueryAnalysisRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetQueryAnalysisResponse
+         */
+        public GetQueryAnalysisResponse GetQueryAnalysisWithOptions(string workspaceName, string serviceId, GetQueryAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
+            {
+                body["history"] = request.History;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQueryAnalysis",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/query-analyze/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQueryAnalysisResponse>(Execute(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取query分析结果
+         *
+         * @param request GetQueryAnalysisRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetQueryAnalysisResponse
+         */
+        public async Task<GetQueryAnalysisResponse> GetQueryAnalysisWithOptionsAsync(string workspaceName, string serviceId, GetQueryAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
+            {
+                body["history"] = request.History;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQueryAnalysis",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/query-analyze/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQueryAnalysisResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取query分析结果
+         *
+         * @param request GetQueryAnalysisRequest
+         * @return GetQueryAnalysisResponse
+         */
+        public GetQueryAnalysisResponse GetQueryAnalysis(string workspaceName, string serviceId, GetQueryAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetQueryAnalysisWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取query分析结果
+         *
+         * @param request GetQueryAnalysisRequest
+         * @return GetQueryAnalysisResponse
+         */
+        public async Task<GetQueryAnalysisResponse> GetQueryAnalysisAsync(string workspaceName, string serviceId, GetQueryAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetQueryAnalysisWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
         /**
