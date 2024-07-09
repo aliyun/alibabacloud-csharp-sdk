@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceInstanceId { get; set; }
 
+        [NameInMap("ResourceInstanceName")]
+        [Validation(Required=false)]
+        public string ResourceInstanceName { get; set; }
+
         /// <summary>
         /// The ID of the Alibaba Cloud resource group.
         /// </summary>
@@ -84,6 +88,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ResourceName { get; set; }
 
         /// <summary>

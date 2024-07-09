@@ -30,11 +30,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string ResourceInstanceId { get; set; }
 
+            [NameInMap("ResourceInstanceIp")]
+            [Validation(Required=false)]
+            public string ResourceInstanceIp { get; set; }
+
+            [NameInMap("ResourceInstanceName")]
+            [Validation(Required=false)]
+            public string ResourceInstanceName { get; set; }
+
             /// <summary>
             /// The public IP address of the instance.
             /// </summary>
             [NameInMap("ResourceIp")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ResourceIp { get; set; }
 
             /// <summary>
@@ -42,6 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ResourceName { get; set; }
 
             /// <summary>

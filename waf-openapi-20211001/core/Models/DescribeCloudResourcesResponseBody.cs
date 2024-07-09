@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public List<DescribeCloudResourcesResponseBodyCloudResources> CloudResources { get; set; }
         public class DescribeCloudResourcesResponseBodyCloudResources : TeaModel {
+            [NameInMap("HttpPortCount")]
+            [Validation(Required=false)]
+            public int? HttpPortCount { get; set; }
+
+            [NameInMap("HttpsPortCount")]
+            [Validation(Required=false)]
+            public int? HttpsPortCount { get; set; }
+
             /// <summary>
             /// The ID of the Alibaba Cloud account to which the resource belongs.
             /// </summary>
@@ -42,13 +50,27 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("ResourceInstance")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ResourceInstance { get; set; }
+
+            [NameInMap("ResourceInstanceId")]
+            [Validation(Required=false)]
+            public string ResourceInstanceId { get; set; }
+
+            [NameInMap("ResourceInstanceIp")]
+            [Validation(Required=false)]
+            public string ResourceInstanceIp { get; set; }
+
+            [NameInMap("ResourceInstanceName")]
+            [Validation(Required=false)]
+            public string ResourceInstanceName { get; set; }
 
             /// <summary>
             /// The name of the resource.
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ResourceName { get; set; }
 
             /// <summary>

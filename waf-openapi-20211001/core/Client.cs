@@ -3807,6 +3807,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceInstanceId"] = request.ResourceInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceInstanceName))
+            {
+                query["ResourceInstanceName"] = request.ResourceInstanceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
@@ -3889,6 +3893,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceInstanceId"] = request.ResourceInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceInstanceName))
+            {
+                query["ResourceInstanceName"] = request.ResourceInstanceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
@@ -3950,6 +3958,114 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询Cname接入的数量
+         *
+         * @param request DescribeCnameCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCnameCountResponse
+         */
+        public DescribeCnameCountResponse DescribeCnameCountWithOptions(DescribeCnameCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCnameCount",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCnameCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询Cname接入的数量
+         *
+         * @param request DescribeCnameCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCnameCountResponse
+         */
+        public async Task<DescribeCnameCountResponse> DescribeCnameCountWithOptionsAsync(DescribeCnameCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCnameCount",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCnameCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询Cname接入的数量
+         *
+         * @param request DescribeCnameCountRequest
+         * @return DescribeCnameCountResponse
+         */
+        public DescribeCnameCountResponse DescribeCnameCount(DescribeCnameCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCnameCountWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询Cname接入的数量
+         *
+         * @param request DescribeCnameCountRequest
+         * @return DescribeCnameCountResponse
+         */
+        public async Task<DescribeCnameCountResponse> DescribeCnameCountAsync(DescribeCnameCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCnameCountWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -7519,6 +7635,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceInstanceId"] = request.ResourceInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceInstanceIp))
+            {
+                query["ResourceInstanceIp"] = request.ResourceInstanceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceInstanceName))
+            {
+                query["ResourceInstanceName"] = request.ResourceInstanceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIp))
             {
                 query["ResourceIp"] = request.ResourceIp;
@@ -7592,6 +7716,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceInstanceId))
             {
                 query["ResourceInstanceId"] = request.ResourceInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceInstanceIp))
+            {
+                query["ResourceInstanceIp"] = request.ResourceInstanceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceInstanceName))
+            {
+                query["ResourceInstanceName"] = request.ResourceInstanceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIp))
             {
@@ -13205,7 +13337,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 释放实例
+         * @summary Releases a Web Application Firewall (WAF) 3.0 instance.
          *
          * @param request ReleaseInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13247,7 +13379,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 释放实例
+         * @summary Releases a Web Application Firewall (WAF) 3.0 instance.
          *
          * @param request ReleaseInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13289,7 +13421,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 释放实例
+         * @summary Releases a Web Application Firewall (WAF) 3.0 instance.
          *
          * @param request ReleaseInstanceRequest
          * @return ReleaseInstanceResponse
@@ -13301,7 +13433,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 释放实例
+         * @summary Releases a Web Application Firewall (WAF) 3.0 instance.
          *
          * @param request ReleaseInstanceRequest
          * @return ReleaseInstanceResponse
