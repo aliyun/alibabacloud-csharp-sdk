@@ -794,6 +794,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             }
 
+            [NameInMap("ram_role_name")]
+            [Validation(Required=false)]
+            public string RamRoleName { get; set; }
+
             /// <summary>
             /// The ApsaraDB RDS instances.
             /// </summary>

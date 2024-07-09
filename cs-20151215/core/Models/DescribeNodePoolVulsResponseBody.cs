@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeNodePoolVulsResponseBodyVulRecords> VulRecords { get; set; }
         public class DescribeNodePoolVulsResponseBodyVulRecords : TeaModel {
             /// <summary>
-            /// The node ID.
+            /// The ID of the node.
             /// </summary>
             [NameInMap("instance_id")]
             [Validation(Required=false)]
@@ -63,14 +63,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// 
                 /// Valid values:
                 /// 
-                /// *   nntf: You can ignore the vulnerability
-                /// *   later: You can fix the vulnerability later
-                /// *   asap: You need to fix the vulnerability at the earliest opportunity
+                /// *   nntf: You can ignore the vulnerability.
+                /// *   later: You can fix the vulnerability later.
+                /// *   asap: You need to fix the vulnerability at the earliest opportunity.
                 /// </summary>
                 [NameInMap("necessity")]
                 [Validation(Required=false)]
                 public string Necessity { get; set; }
 
+                /// <summary>
+                /// Indicates whether a restart is required.
+                /// </summary>
                 [NameInMap("need_reboot")]
                 [Validation(Required=false)]
                 public bool? NeedReboot { get; set; }

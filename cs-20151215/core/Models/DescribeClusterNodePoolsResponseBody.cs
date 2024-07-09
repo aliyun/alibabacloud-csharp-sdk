@@ -709,6 +709,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public string RamPolicy { get; set; }
 
+                [NameInMap("ram_role_name")]
+                [Validation(Required=false)]
+                public string RamRoleName { get; set; }
+
                 /// <summary>
                 /// The ApsaraDB RDS instances. If you specify the list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.
                 /// </summary>

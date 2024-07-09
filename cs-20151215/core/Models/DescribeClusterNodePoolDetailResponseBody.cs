@@ -682,6 +682,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string RamPolicy { get; set; }
 
+            [NameInMap("ram_role_name")]
+            [Validation(Required=false)]
+            public string RamRoleName { get; set; }
+
             /// <summary>
             /// After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.
             /// </summary>
