@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string IpAddrList { get; set; }
 
+        /// <summary>
+        /// The language of the query results. Valid values:
+        /// 
+        /// *   **zh** (default): Simplified Chinese.
+        /// *   **en**: English.
+        /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }

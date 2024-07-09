@@ -5396,6 +5396,206 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
+         * @summary 获取海量封禁全量配置
+         *
+         * @param request DescribeCdnFullDomainsBlockIPConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnFullDomainsBlockIPConfigResponse
+         */
+        public DescribeCdnFullDomainsBlockIPConfigResponse DescribeCdnFullDomainsBlockIPConfigWithOptions(DescribeCdnFullDomainsBlockIPConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPList))
+            {
+                body["IPList"] = request.IPList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCdnFullDomainsBlockIPConfig",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCdnFullDomainsBlockIPConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取海量封禁全量配置
+         *
+         * @param request DescribeCdnFullDomainsBlockIPConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnFullDomainsBlockIPConfigResponse
+         */
+        public async Task<DescribeCdnFullDomainsBlockIPConfigResponse> DescribeCdnFullDomainsBlockIPConfigWithOptionsAsync(DescribeCdnFullDomainsBlockIPConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPList))
+            {
+                body["IPList"] = request.IPList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCdnFullDomainsBlockIPConfig",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCdnFullDomainsBlockIPConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取海量封禁全量配置
+         *
+         * @param request DescribeCdnFullDomainsBlockIPConfigRequest
+         * @return DescribeCdnFullDomainsBlockIPConfigResponse
+         */
+        public DescribeCdnFullDomainsBlockIPConfigResponse DescribeCdnFullDomainsBlockIPConfig(DescribeCdnFullDomainsBlockIPConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCdnFullDomainsBlockIPConfigWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取海量封禁全量配置
+         *
+         * @param request DescribeCdnFullDomainsBlockIPConfigRequest
+         * @return DescribeCdnFullDomainsBlockIPConfigResponse
+         */
+        public async Task<DescribeCdnFullDomainsBlockIPConfigResponse> DescribeCdnFullDomainsBlockIPConfigAsync(DescribeCdnFullDomainsBlockIPConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCdnFullDomainsBlockIPConfigWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询用户海量封禁历史
+         *
+         * @param request DescribeCdnFullDomainsBlockIPHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnFullDomainsBlockIPHistoryResponse
+         */
+        public DescribeCdnFullDomainsBlockIPHistoryResponse DescribeCdnFullDomainsBlockIPHistoryWithOptions(DescribeCdnFullDomainsBlockIPHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPList))
+            {
+                body["IPList"] = request.IPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCdnFullDomainsBlockIPHistory",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCdnFullDomainsBlockIPHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询用户海量封禁历史
+         *
+         * @param request DescribeCdnFullDomainsBlockIPHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnFullDomainsBlockIPHistoryResponse
+         */
+        public async Task<DescribeCdnFullDomainsBlockIPHistoryResponse> DescribeCdnFullDomainsBlockIPHistoryWithOptionsAsync(DescribeCdnFullDomainsBlockIPHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPList))
+            {
+                body["IPList"] = request.IPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCdnFullDomainsBlockIPHistory",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCdnFullDomainsBlockIPHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询用户海量封禁历史
+         *
+         * @param request DescribeCdnFullDomainsBlockIPHistoryRequest
+         * @return DescribeCdnFullDomainsBlockIPHistoryResponse
+         */
+        public DescribeCdnFullDomainsBlockIPHistoryResponse DescribeCdnFullDomainsBlockIPHistory(DescribeCdnFullDomainsBlockIPHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCdnFullDomainsBlockIPHistoryWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询用户海量封禁历史
+         *
+         * @param request DescribeCdnFullDomainsBlockIPHistoryRequest
+         * @return DescribeCdnFullDomainsBlockIPHistoryResponse
+         */
+        public async Task<DescribeCdnFullDomainsBlockIPHistoryResponse> DescribeCdnFullDomainsBlockIPHistoryAsync(DescribeCdnFullDomainsBlockIPHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCdnFullDomainsBlockIPHistoryWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the information about SSL certificates that belong to your Alibaba Cloud account.
          *
          * @description > You can call this operation up to 100 times per second per account.
@@ -19541,6 +19741,122 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetCdnDomainStagingConfigWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 配置CDN上的海量封禁功能
+         *
+         * @param request SetCdnFullDomainsBlockIPRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnFullDomainsBlockIPResponse
+         */
+        public SetCdnFullDomainsBlockIPResponse SetCdnFullDomainsBlockIPWithOptions(SetCdnFullDomainsBlockIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlockInterval))
+            {
+                body["BlockInterval"] = request.BlockInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPList))
+            {
+                body["IPList"] = request.IPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                body["OperationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
+            {
+                body["UpdateType"] = request.UpdateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetCdnFullDomainsBlockIP",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetCdnFullDomainsBlockIPResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 配置CDN上的海量封禁功能
+         *
+         * @param request SetCdnFullDomainsBlockIPRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnFullDomainsBlockIPResponse
+         */
+        public async Task<SetCdnFullDomainsBlockIPResponse> SetCdnFullDomainsBlockIPWithOptionsAsync(SetCdnFullDomainsBlockIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlockInterval))
+            {
+                body["BlockInterval"] = request.BlockInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPList))
+            {
+                body["IPList"] = request.IPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                body["OperationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
+            {
+                body["UpdateType"] = request.UpdateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetCdnFullDomainsBlockIP",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetCdnFullDomainsBlockIPResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 配置CDN上的海量封禁功能
+         *
+         * @param request SetCdnFullDomainsBlockIPRequest
+         * @return SetCdnFullDomainsBlockIPResponse
+         */
+        public SetCdnFullDomainsBlockIPResponse SetCdnFullDomainsBlockIP(SetCdnFullDomainsBlockIPRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetCdnFullDomainsBlockIPWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 配置CDN上的海量封禁功能
+         *
+         * @param request SetCdnFullDomainsBlockIPRequest
+         * @return SetCdnFullDomainsBlockIPResponse
+         */
+        public async Task<SetCdnFullDomainsBlockIPResponse> SetCdnFullDomainsBlockIPAsync(SetCdnFullDomainsBlockIPRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetCdnFullDomainsBlockIPWithOptionsAsync(request, runtime);
         }
 
         /**

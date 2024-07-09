@@ -35,16 +35,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             /// </summary>
             [NameInMap("Points")]
             [Validation(Required=false)]
-            public List<DescribeEsExceptionDataResponseBodyContentsPoints> Points { get; set; }
-            public class DescribeEsExceptionDataResponseBodyContentsPoints : TeaModel {
-                /// <summary>
-                /// The data points.
-                /// </summary>
-                [NameInMap("Points")]
-                [Validation(Required=false)]
-                public List<string> Points { get; set; }
-
-            }
+            public List<string> Points { get; set; }
 
         }
 
