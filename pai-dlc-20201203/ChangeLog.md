@@ -1,3 +1,7 @@
+2024-07-09 Version: 1.5.11
+- Update API GetJob: update response param.
+
+
 2024-07-05 Version: 1.5.10
 - Update API CreateJob: update param body.
 
