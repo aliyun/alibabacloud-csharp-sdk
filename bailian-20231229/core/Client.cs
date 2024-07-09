@@ -896,6 +896,148 @@ namespace AlibabaCloud.SDK.Bailian20231229
         }
 
         /**
+         * @summary 知识索引
+         *
+         * @param tmpReq SubmitIndexAddDocumentsJobRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitIndexAddDocumentsJobResponse
+         */
+        public SubmitIndexAddDocumentsJobResponse SubmitIndexAddDocumentsJobWithOptions(string WorkspaceId, SubmitIndexAddDocumentsJobRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitIndexAddDocumentsJobShrinkRequest request = new SubmitIndexAddDocumentsJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CategoryIds))
+            {
+                request.CategoryIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CategoryIds, "CategoryIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocumentIds))
+            {
+                request.DocumentIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentIds, "DocumentIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryIdsShrink))
+            {
+                query["CategoryIds"] = request.CategoryIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIdsShrink))
+            {
+                query["DocumentIds"] = request.DocumentIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitIndexAddDocumentsJob",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/add_documents_to_index",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitIndexAddDocumentsJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 知识索引
+         *
+         * @param tmpReq SubmitIndexAddDocumentsJobRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitIndexAddDocumentsJobResponse
+         */
+        public async Task<SubmitIndexAddDocumentsJobResponse> SubmitIndexAddDocumentsJobWithOptionsAsync(string WorkspaceId, SubmitIndexAddDocumentsJobRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitIndexAddDocumentsJobShrinkRequest request = new SubmitIndexAddDocumentsJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CategoryIds))
+            {
+                request.CategoryIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CategoryIds, "CategoryIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocumentIds))
+            {
+                request.DocumentIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentIds, "DocumentIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryIdsShrink))
+            {
+                query["CategoryIds"] = request.CategoryIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIdsShrink))
+            {
+                query["DocumentIds"] = request.DocumentIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitIndexAddDocumentsJob",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/add_documents_to_index",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitIndexAddDocumentsJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 知识索引
+         *
+         * @param request SubmitIndexAddDocumentsJobRequest
+         * @return SubmitIndexAddDocumentsJobResponse
+         */
+        public SubmitIndexAddDocumentsJobResponse SubmitIndexAddDocumentsJob(string WorkspaceId, SubmitIndexAddDocumentsJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitIndexAddDocumentsJobWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 知识索引
+         *
+         * @param request SubmitIndexAddDocumentsJobRequest
+         * @return SubmitIndexAddDocumentsJobResponse
+         */
+        public async Task<SubmitIndexAddDocumentsJobResponse> SubmitIndexAddDocumentsJobAsync(string WorkspaceId, SubmitIndexAddDocumentsJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitIndexAddDocumentsJobWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 提交索引任务
          *
          * @param request SubmitIndexJobRequest
