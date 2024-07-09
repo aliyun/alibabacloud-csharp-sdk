@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeResolverEndpointRequest : TeaModel {
+        /// <summary>
+        /// The endpoint ID.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
+        /// <summary>
+        /// The language.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeResolverRuleRequest : TeaModel {
+        /// <summary>
+        /// The language.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The forwarding rule ID.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }
