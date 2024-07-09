@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
 
+        [NameInMap("ImageAuth")]
+        [Validation(Required=false)]
+        public string ImageAuth { get; set; }
+
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
