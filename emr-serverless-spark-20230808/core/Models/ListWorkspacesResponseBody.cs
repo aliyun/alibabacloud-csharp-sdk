@@ -10,131 +10,155 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListWorkspacesResponseBody : TeaModel {
         /// <summary>
-        /// 一次获取的最大记录数。
+        /// The maximum number of entries returned.
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 下一页TOKEN。
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 记录总数。
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// The workspaces.
+        /// </summary>
         [NameInMap("workspaces")]
         [Validation(Required=false)]
         public List<ListWorkspacesResponseBodyWorkspaces> Workspaces { get; set; }
         public class ListWorkspacesResponseBodyWorkspaces : TeaModel {
             /// <summary>
-            /// 是否自动续费(pre付费类型必须)。
+            /// Indicates whether auto-renewal is enabled. This parameter is required only if the paymentType parameter is set to Subscription.
             /// </summary>
             [NameInMap("autoRenew")]
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// 自动续费时长(pre付费类型必须)。
+            /// The auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.
             /// </summary>
             [NameInMap("autoRenewPeriod")]
             [Validation(Required=false)]
             public int? AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// 自动续费周期(pre付费类型必须)。
+            /// The unit of the auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.
             /// </summary>
             [NameInMap("autoRenewPeriodUnit")]
             [Validation(Required=false)]
             public string AutoRenewPeriodUnit { get; set; }
 
+            /// <summary>
+            /// The time when the workspace was created.
+            /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// dlf catalog 信息。
+            /// The information of the Data Lake Formation (DLF) catalog.
             /// </summary>
             [NameInMap("dlfCatalogId")]
             [Validation(Required=false)]
             public string DlfCatalogId { get; set; }
 
             /// <summary>
-            /// 订购周期数量(pre付费类型必须)。
+            /// The subscription period. This parameter is required only if the paymentType parameter is set to Subscription.
             /// </summary>
             [NameInMap("duration")]
             [Validation(Required=false)]
             public int? Duration { get; set; }
 
+            /// <summary>
+            /// The time when the workspace was released.
+            /// </summary>
             [NameInMap("endTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// 失败原因。
+            /// The reason for the failure.
             /// </summary>
             [NameInMap("failReason")]
             [Validation(Required=false)]
             public string FailReason { get; set; }
 
             /// <summary>
-            /// 订购周期(pre付费类型必须)。
+            /// The unit of the subscription duration. This parameter is required only if the paymentType parameter is set to Subscription.
             /// </summary>
             [NameInMap("paymentDurationUnit")]
             [Validation(Required=false)]
             public string PaymentDurationUnit { get; set; }
 
             /// <summary>
-            /// 支付状态。
+            /// The status of the payment.
             /// </summary>
             [NameInMap("paymentStatus")]
             [Validation(Required=false)]
             public string PaymentStatus { get; set; }
 
             /// <summary>
-            /// 付费类型。
+            /// The payment type.
             /// </summary>
             [NameInMap("paymentType")]
             [Validation(Required=false)]
             public string PaymentType { get; set; }
 
+            /// <summary>
+            /// The region ID.
+            /// </summary>
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The reason why the workspace is released.
+            /// </summary>
             [NameInMap("releaseType")]
             [Validation(Required=false)]
             public string ReleaseType { get; set; }
 
             /// <summary>
-            /// 资源规格。
+            /// The resource specifications.
             /// </summary>
             [NameInMap("resourceSpec")]
             [Validation(Required=false)]
             public string ResourceSpec { get; set; }
 
+            /// <summary>
+            /// The information about the workspace status change.
+            /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
             public ListWorkspacesResponseBodyWorkspacesStateChangeReason StateChangeReason { get; set; }
             public class ListWorkspacesResponseBodyWorkspacesStateChangeReason : TeaModel {
+                /// <summary>
+                /// The error code.
+                /// </summary>
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                /// <summary>
+                /// The error message.
+                /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
@@ -142,28 +166,28 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// oss 路径。
+            /// The Object Storage Service (OSS) path.
             /// </summary>
             [NameInMap("storage")]
             [Validation(Required=false)]
             public string Storage { get; set; }
 
             /// <summary>
-            /// Workspace Id。
+            /// The workspace ID.
             /// </summary>
             [NameInMap("workspaceId")]
             [Validation(Required=false)]
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// 工作空间名称。
+            /// The name of the workspace.
             /// </summary>
             [NameInMap("workspaceName")]
             [Validation(Required=false)]
             public string WorkspaceName { get; set; }
 
             /// <summary>
-            /// 工作空间状态。
+            /// The workspace status.
             /// </summary>
             [NameInMap("workspaceStatus")]
             [Validation(Required=false)]

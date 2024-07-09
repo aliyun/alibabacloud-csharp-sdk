@@ -17,12 +17,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> MemberArns { get; set; }
 
         /// <summary>
+        /// The workspace ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

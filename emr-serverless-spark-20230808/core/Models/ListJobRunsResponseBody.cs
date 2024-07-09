@@ -9,21 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListJobRunsResponseBody : TeaModel {
+        /// <summary>
+        /// The list of Spark jobs.
+        /// </summary>
         [NameInMap("jobRuns")]
         [Validation(Required=false)]
         public List<ListJobRunsResponseBodyJobRuns> JobRuns { get; set; }
         public class ListJobRunsResponseBodyJobRuns : TeaModel {
             /// <summary>
-            /// 作业代码类型。
+            /// The code type of the job. Valid values:
+            /// 
+            /// SQL
+            /// 
+            /// JAR
+            /// 
+            /// PYTHON
             /// </summary>
             [NameInMap("codeType")]
             [Validation(Required=false)]
             public string CodeType { get; set; }
 
+            /// <summary>
+            /// The advanced configurations of Spark.
+            /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
             public ListJobRunsResponseBodyJobRunsConfigurationOverrides ConfigurationOverrides { get; set; }
             public class ListJobRunsResponseBodyJobRunsConfigurationOverrides : TeaModel {
+                /// <summary>
+                /// The SparkConf objects.
+                /// </summary>
                 [NameInMap("configurations")]
                 [Validation(Required=false)]
                 public List<Configuration> Configurations { get; set; }
@@ -31,67 +46,85 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// 创建用户Uid。
+            /// The ID of the user who created the job.
             /// </summary>
             [NameInMap("creator")]
             [Validation(Required=false)]
             public string Creator { get; set; }
 
             /// <summary>
-            /// 作业结束时间。
+            /// The end time of the job.
             /// </summary>
             [NameInMap("endTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// 运行超时时间。
+            /// The timeout period of the job.
             /// </summary>
             [NameInMap("executionTimeoutSeconds")]
             [Validation(Required=false)]
             public int? ExecutionTimeoutSeconds { get; set; }
 
+            /// <summary>
+            /// The information about Spark Driver.
+            /// </summary>
             [NameInMap("jobDriver")]
             [Validation(Required=false)]
             public JobDriver JobDriver { get; set; }
 
             /// <summary>
-            /// 任务实例ID。
+            /// The job ID.
             /// </summary>
             [NameInMap("jobRunId")]
             [Validation(Required=false)]
             public string JobRunId { get; set; }
 
+            /// <summary>
+            /// The path where the operational logs are stored.
+            /// </summary>
             [NameInMap("log")]
             [Validation(Required=false)]
             public RunLog Log { get; set; }
 
             /// <summary>
-            /// 作业实例名称。
+            /// The job name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The version of Spark on which the jobs run.
+            /// </summary>
             [NameInMap("releaseVersion")]
             [Validation(Required=false)]
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// 作业状态。
+            /// The job state.
             /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// The reason of the job status change.
+            /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
             public ListJobRunsResponseBodyJobRunsStateChangeReason StateChangeReason { get; set; }
             public class ListJobRunsResponseBodyJobRunsStateChangeReason : TeaModel {
+                /// <summary>
+                /// The error code.
+                /// </summary>
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                /// <summary>
+                /// The error message.
+                /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
@@ -99,28 +132,28 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// 作业提交时间。
+            /// The time when the job was submitted.
             /// </summary>
             [NameInMap("submitTime")]
             [Validation(Required=false)]
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// 标签。
+            /// The tags of the job.
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// 作业web ui。
+            /// The web UI of the job.
             /// </summary>
             [NameInMap("webUI")]
             [Validation(Required=false)]
             public string WebUI { get; set; }
 
             /// <summary>
-            /// 工作空间id。
+            /// The workspace ID.
             /// </summary>
             [NameInMap("workspaceId")]
             [Validation(Required=false)]
@@ -129,28 +162,28 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// 本次请求所返回的最大记录条数。
+        /// The maximum number of entries returned.
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 返回读取到的数据位置，空代表数据已经读取完毕。
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 本次请求条件下的数据总量。
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

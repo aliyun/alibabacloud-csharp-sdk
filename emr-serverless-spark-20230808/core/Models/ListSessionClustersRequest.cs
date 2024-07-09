@@ -9,30 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListSessionClustersRequest : TeaModel {
+        [NameInMap("kind")]
+        [Validation(Required=false)]
+        public string Kind { get; set; }
+
         /// <summary>
-        /// 一次获取的最大记录数。
+        /// The maximum number of entries to return.
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 标记当前开始读取的位置，置空表示从头开始。
+        /// The pagination token that is used in the request to retrieve a new page of results.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The name of the queue.
+        /// </summary>
         [NameInMap("queueName")]
         [Validation(Required=false)]
         public string QueueName { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 作业名称。
+        /// The name of the job.
         /// </summary>
         [NameInMap("sessionClusterId")]
         [Validation(Required=false)]

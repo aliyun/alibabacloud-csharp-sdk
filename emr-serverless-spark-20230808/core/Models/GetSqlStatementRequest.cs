@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetSqlStatementRequest : TeaModel {
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

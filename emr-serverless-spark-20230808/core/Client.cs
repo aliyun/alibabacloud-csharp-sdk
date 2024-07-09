@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 添加用户
+         * @summary Adds a RAM user or RAM role to a workspace as a member.
          *
          * @param request AddMembersRequest
          * @param headers map
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 添加用户
+         * @summary Adds a RAM user or RAM role to a workspace as a member.
          *
          * @param request AddMembersRequest
          * @param headers map
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 添加用户
+         * @summary Adds a RAM user or RAM role to a workspace as a member.
          *
          * @param request AddMembersRequest
          * @return AddMembersResponse
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 添加用户
+         * @summary Adds a RAM user or RAM role to a workspace as a member.
          *
          * @param request AddMembersRequest
          * @return AddMembersResponse
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 取消jobRun作业
+         * @summary Terminates a Spark job.
          *
          * @param request CancelJobRunRequest
          * @param headers map
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 取消jobRun作业
+         * @summary Terminates a Spark job.
          *
          * @param request CancelJobRunRequest
          * @param headers map
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 取消jobRun作业
+         * @summary Terminates a Spark job.
          *
          * @param request CancelJobRunRequest
          * @return CancelJobRunResponse
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 取消jobRun作业
+         * @summary Terminates a Spark job.
          *
          * @param request CancelJobRunRequest
          * @return CancelJobRunResponse
@@ -396,7 +396,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取任务
+         * @summary Obtain the job details.
          *
          * @param request GetJobRunRequest
          * @param headers map
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取任务
+         * @summary Obtain the job details.
          *
          * @param request GetJobRunRequest
          * @param headers map
@@ -468,7 +468,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取任务
+         * @summary Obtain the job details.
          *
          * @param request GetJobRunRequest
          * @return GetJobRunResponse
@@ -481,7 +481,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取任务
+         * @summary Obtain the job details.
          *
          * @param request GetJobRunRequest
          * @return GetJobRunResponse
@@ -592,7 +592,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 给用户授权Role列表
+         * @summary Assigns a specified role to users.
          *
          * @param request GrantRoleToUsersRequest
          * @param headers map
@@ -638,7 +638,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 给用户授权Role列表
+         * @summary Assigns a specified role to users.
          *
          * @param request GrantRoleToUsersRequest
          * @param headers map
@@ -684,7 +684,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 给用户授权Role列表
+         * @summary Assigns a specified role to users.
          *
          * @param request GrantRoleToUsersRequest
          * @return GrantRoleToUsersResponse
@@ -697,7 +697,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 给用户授权Role列表
+         * @summary Assigns a specified role to users.
          *
          * @param request GrantRoleToUsersRequest
          * @return GrantRoleToUsersResponse
@@ -710,7 +710,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 查询run列表
+         * @summary Queries a list of Spark jobs.
          *
          * @param tmpReq ListJobRunsRequest
          * @param headers map
@@ -808,7 +808,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 查询run列表
+         * @summary Queries a list of Spark jobs.
          *
          * @param tmpReq ListJobRunsRequest
          * @param headers map
@@ -906,7 +906,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 查询run列表
+         * @summary Queries a list of Spark jobs.
          *
          * @param request ListJobRunsRequest
          * @return ListJobRunsResponse
@@ -919,7 +919,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 查询run列表
+         * @summary Queries a list of Spark jobs.
          *
          * @param request ListJobRunsRequest
          * @return ListJobRunsResponse
@@ -1065,6 +1065,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                query["kind"] = request.Kind;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -1117,6 +1121,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                query["kind"] = request.Kind;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -1290,7 +1298,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 查看工作空间列表
+         * @summary Queries a list of workspaces.
          *
          * @param request ListWorkspacesRequest
          * @param headers map
@@ -1342,7 +1350,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 查看工作空间列表
+         * @summary Queries a list of workspaces.
          *
          * @param request ListWorkspacesRequest
          * @param headers map
@@ -1394,7 +1402,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 查看工作空间列表
+         * @summary Queries a list of workspaces.
          *
          * @param request ListWorkspacesRequest
          * @return ListWorkspacesResponse
@@ -1407,7 +1415,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 查看工作空间列表
+         * @summary Queries a list of workspaces.
          *
          * @param request ListWorkspacesRequest
          * @return ListWorkspacesResponse
@@ -1420,7 +1428,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 启动作业
+         * @summary Starts a Spark job.
          *
          * @param request StartJobRunRequest
          * @param headers map
@@ -1498,7 +1506,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 启动作业
+         * @summary Starts a Spark job.
          *
          * @param request StartJobRunRequest
          * @param headers map
@@ -1576,7 +1584,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 启动作业
+         * @summary Starts a Spark job.
          *
          * @param request StartJobRunRequest
          * @return StartJobRunResponse
@@ -1589,7 +1597,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 启动作业
+         * @summary Starts a Spark job.
          *
          * @param request StartJobRunRequest
          * @return StartJobRunResponse

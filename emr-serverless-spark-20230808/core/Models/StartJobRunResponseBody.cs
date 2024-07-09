@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StartJobRunResponseBody : TeaModel {
+        /// <summary>
+        /// The job ID.
+        /// </summary>
         [NameInMap("jobRunId")]
         [Validation(Required=false)]
         public string JobRunId { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

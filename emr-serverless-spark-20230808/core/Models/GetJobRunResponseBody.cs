@@ -9,21 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetJobRunResponseBody : TeaModel {
+        /// <summary>
+        /// The details of the job.
+        /// </summary>
         [NameInMap("jobRun")]
         [Validation(Required=false)]
         public GetJobRunResponseBodyJobRun JobRun { get; set; }
         public class GetJobRunResponseBodyJobRun : TeaModel {
             /// <summary>
-            /// 作业代码类型。
+            /// The code type of the job. Valid values:
+            /// 
+            /// *   SQL
+            /// *   JAR
+            /// *   PYTHON
             /// </summary>
             [NameInMap("codeType")]
             [Validation(Required=false)]
             public string CodeType { get; set; }
 
+            /// <summary>
+            /// The task configurations of Spark.
+            /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
             public GetJobRunResponseBodyJobRunConfigurationOverrides ConfigurationOverrides { get; set; }
             public class GetJobRunResponseBodyJobRunConfigurationOverrides : TeaModel {
+                /// <summary>
+                /// The configurations.
+                /// </summary>
                 [NameInMap("configurations")]
                 [Validation(Required=false)]
                 public List<Configuration> Configurations { get; set; }
@@ -31,71 +44,92 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// 作业结束时间。
+            /// The end time of the job.
             /// </summary>
             [NameInMap("endTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// 运行超时时间。
+            /// The timeout period of the job.
             /// </summary>
             [NameInMap("executionTimeoutSeconds")]
             [Validation(Required=false)]
             public int? ExecutionTimeoutSeconds { get; set; }
 
+            /// <summary>
+            /// The information about Spark Driver.
+            /// </summary>
             [NameInMap("jobDriver")]
             [Validation(Required=false)]
             public JobDriver JobDriver { get; set; }
 
             /// <summary>
-            /// 任务实例ID。
+            /// The job ID.
             /// </summary>
             [NameInMap("jobRunId")]
             [Validation(Required=false)]
             public string JobRunId { get; set; }
 
+            /// <summary>
+            /// The path where the operational logs are stored.
+            /// </summary>
             [NameInMap("log")]
             [Validation(Required=false)]
             public RunLog Log { get; set; }
 
             /// <summary>
-            /// 作业实例名称。
+            /// The job name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The version of the Spark engine on which the job runs.
+            /// </summary>
             [NameInMap("releaseVersion")]
             [Validation(Required=false)]
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// 创建用户Uid。
+            /// The ID of the user who created the job.
             /// </summary>
             [NameInMap("resourceOwnerId")]
             [Validation(Required=false)]
             public string ResourceOwnerId { get; set; }
 
+            /// <summary>
+            /// The name of the queue on which the job runs.
+            /// </summary>
             [NameInMap("resourceQueueId")]
             [Validation(Required=false)]
             public string ResourceQueueId { get; set; }
 
             /// <summary>
-            /// 作业状态。
+            /// The job state.
             /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// The reason of the job status change.
+            /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
             public GetJobRunResponseBodyJobRunStateChangeReason StateChangeReason { get; set; }
             public class GetJobRunResponseBodyJobRunStateChangeReason : TeaModel {
+                /// <summary>
+                /// The error code.
+                /// </summary>
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                /// <summary>
+                /// The error message.
+                /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
@@ -103,28 +137,28 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// 作业提交时间。
+            /// The time when the job was submitted.
             /// </summary>
             [NameInMap("submitTime")]
             [Validation(Required=false)]
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// 标签。
+            /// The tags of the job.
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// 作业web ui。
+            /// The web UI of the job.
             /// </summary>
             [NameInMap("webUI")]
             [Validation(Required=false)]
             public string WebUI { get; set; }
 
             /// <summary>
-            /// 工作空间id。
+            /// The workspace ID.
             /// </summary>
             [NameInMap("workspaceId")]
             [Validation(Required=false)]
@@ -133,7 +167,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

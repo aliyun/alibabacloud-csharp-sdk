@@ -10,60 +10,63 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListWorkspaceQueuesResponseBody : TeaModel {
         /// <summary>
-        /// 一次获取的最大记录数。
+        /// The maximum number of entries returned.
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 下一页TOKEN。
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The list of queues.
+        /// </summary>
         [NameInMap("queues")]
         [Validation(Required=false)]
         public List<ListWorkspaceQueuesResponseBodyQueues> Queues { get; set; }
         public class ListWorkspaceQueuesResponseBodyQueues : TeaModel {
             /// <summary>
-            /// 队列允许的操作
+            /// The operations allowed for the queue.
             /// </summary>
             [NameInMap("allowActions")]
             [Validation(Required=false)]
             public List<ListWorkspaceQueuesResponseBodyQueuesAllowActions> AllowActions { get; set; }
             public class ListWorkspaceQueuesResponseBodyQueuesAllowActions : TeaModel {
                 /// <summary>
-                /// 行为 arn。
+                /// The Alibaba Cloud Resource Name (ARN) of a behavior.
                 /// </summary>
                 [NameInMap("actionArn")]
                 [Validation(Required=false)]
                 public string ActionArn { get; set; }
 
                 /// <summary>
-                /// 权限名称。
+                /// The name of the permission.
                 /// </summary>
                 [NameInMap("actionName")]
                 [Validation(Required=false)]
                 public string ActionName { get; set; }
 
                 /// <summary>
-                /// action 依赖列表。
+                /// The dependencies of the operation.
                 /// </summary>
                 [NameInMap("dependencies")]
                 [Validation(Required=false)]
                 public List<string> Dependencies { get; set; }
 
                 /// <summary>
-                /// action 描述。
+                /// The description of the operation.
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// 权限展示名称。
+                /// The display name of the permission.
                 /// </summary>
                 [NameInMap("displayName")]
                 [Validation(Required=false)]
@@ -71,76 +74,85 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            /// <summary>
+            /// The ID of the user who created the queue.
+            /// </summary>
             [NameInMap("creator")]
             [Validation(Required=false)]
             public string Creator { get; set; }
 
+            /// <summary>
+            /// The environment types of the queue.
+            /// </summary>
             [NameInMap("environments")]
             [Validation(Required=false)]
             public List<string> Environments { get; set; }
 
             /// <summary>
-            /// 队列资源最大容量
+            /// The maximum capacity of resources that can be used in the queue.
             /// </summary>
             [NameInMap("maxResource")]
             [Validation(Required=false)]
             public string MaxResource { get; set; }
 
             /// <summary>
-            /// 队列资源最小容量
+            /// The minimum capacity of resources that can be used in the queue.
             /// </summary>
             [NameInMap("minResource")]
             [Validation(Required=false)]
             public string MinResource { get; set; }
 
             /// <summary>
-            /// 队列Label
+            /// The queue label.
             /// </summary>
             [NameInMap("properties")]
             [Validation(Required=false)]
             public string Properties { get; set; }
 
             /// <summary>
-            /// 队列名称。
+            /// The name of the queue.
             /// </summary>
             [NameInMap("queueName")]
             [Validation(Required=false)]
             public string QueueName { get; set; }
 
             /// <summary>
-            /// 队列架构
+            /// The queue architecture.
             /// </summary>
             [NameInMap("queueScope")]
             [Validation(Required=false)]
             public string QueueScope { get; set; }
 
+            /// <summary>
+            /// The status of the queue.
+            /// </summary>
             [NameInMap("queueStatus")]
             [Validation(Required=false)]
             public string QueueStatus { get; set; }
 
             /// <summary>
-            /// 队列类型
+            /// The queue type.
             /// </summary>
             [NameInMap("queueType")]
             [Validation(Required=false)]
             public string QueueType { get; set; }
 
             /// <summary>
-            /// regionId。
+            /// The region ID.
             /// </summary>
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// 队列资源使用容量
+            /// The capacity of resources that are used in the queue.
             /// </summary>
             [NameInMap("usedResource")]
             [Validation(Required=false)]
             public string UsedResource { get; set; }
 
             /// <summary>
-            /// 工作空间id。
+            /// The workspace ID.
             /// </summary>
             [NameInMap("workspaceId")]
             [Validation(Required=false)]
@@ -149,14 +161,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// 请求ID。
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 记录总数。
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]
