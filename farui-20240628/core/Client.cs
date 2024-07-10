@@ -324,6 +324,258 @@ namespace AlibabaCloud.SDK.FaRui20240628
         }
 
         /**
+         * @summary 生成合同审查结果
+         *
+         * @param tmpReq RunContractResultGenerationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunContractResultGenerationResponse
+         */
+        public RunContractResultGenerationResponse RunContractResultGenerationWithOptions(string workspaceId, RunContractResultGenerationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunContractResultGenerationShrinkRequest request = new RunContractResultGenerationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Assistant))
+            {
+                request.AssistantShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Assistant, "assistant", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantShrink))
+            {
+                body["assistant"] = request.AssistantShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunContractResultGeneration",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/farui/contract/result/genarate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunContractResultGenerationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 生成合同审查结果
+         *
+         * @param tmpReq RunContractResultGenerationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunContractResultGenerationResponse
+         */
+        public async Task<RunContractResultGenerationResponse> RunContractResultGenerationWithOptionsAsync(string workspaceId, RunContractResultGenerationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunContractResultGenerationShrinkRequest request = new RunContractResultGenerationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Assistant))
+            {
+                request.AssistantShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Assistant, "assistant", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantShrink))
+            {
+                body["assistant"] = request.AssistantShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunContractResultGeneration",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/farui/contract/result/genarate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunContractResultGenerationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 生成合同审查结果
+         *
+         * @param request RunContractResultGenerationRequest
+         * @return RunContractResultGenerationResponse
+         */
+        public RunContractResultGenerationResponse RunContractResultGeneration(string workspaceId, RunContractResultGenerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunContractResultGenerationWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 生成合同审查结果
+         *
+         * @param request RunContractResultGenerationRequest
+         * @return RunContractResultGenerationResponse
+         */
+        public async Task<RunContractResultGenerationResponse> RunContractResultGenerationAsync(string workspaceId, RunContractResultGenerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunContractResultGenerationWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 生成合同审查规则
+         *
+         * @param tmpReq RunContractRuleGenerationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunContractRuleGenerationResponse
+         */
+        public RunContractRuleGenerationResponse RunContractRuleGenerationWithOptions(string workspaceId, RunContractRuleGenerationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunContractRuleGenerationShrinkRequest request = new RunContractRuleGenerationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Assistant))
+            {
+                request.AssistantShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Assistant, "assistant", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantShrink))
+            {
+                body["assistant"] = request.AssistantShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunContractRuleGeneration",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/farui/contract/rule/genarate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunContractRuleGenerationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 生成合同审查规则
+         *
+         * @param tmpReq RunContractRuleGenerationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunContractRuleGenerationResponse
+         */
+        public async Task<RunContractRuleGenerationResponse> RunContractRuleGenerationWithOptionsAsync(string workspaceId, RunContractRuleGenerationRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunContractRuleGenerationShrinkRequest request = new RunContractRuleGenerationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Assistant))
+            {
+                request.AssistantShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Assistant, "assistant", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantShrink))
+            {
+                body["assistant"] = request.AssistantShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunContractRuleGeneration",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/farui/contract/rule/genarate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunContractRuleGenerationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 生成合同审查规则
+         *
+         * @param request RunContractRuleGenerationRequest
+         * @return RunContractRuleGenerationResponse
+         */
+        public RunContractRuleGenerationResponse RunContractRuleGeneration(string workspaceId, RunContractRuleGenerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunContractRuleGenerationWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 生成合同审查规则
+         *
+         * @param request RunContractRuleGenerationRequest
+         * @return RunContractRuleGenerationResponse
+         */
+        public async Task<RunContractRuleGenerationResponse> RunContractRuleGenerationAsync(string workspaceId, RunContractRuleGenerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunContractRuleGenerationWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 法律咨询
          *
          * @param tmpReq RunLegalAdviceConsultationRequest
