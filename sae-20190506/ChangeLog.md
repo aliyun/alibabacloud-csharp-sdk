@@ -24,6 +24,32 @@
 - Support API UpdateWebCustomDomain.
 
 
+2024-07-10 Version: 1.22.0
+- Support API CreateWebApplication.
+- Support API CreateWebCustomDomain.
+- Support API DeleteWebApplication.
+- Support API DeleteWebApplicationRevision.
+- Support API DeleteWebCustomDomain.
+- Support API DescribeWebApplication.
+- Support API DescribeWebApplicationResourceStatics.
+- Support API DescribeWebApplicationRevision.
+- Support API DescribeWebApplicationScalingConfig.
+- Support API DescribeWebApplicationTrafficConfig.
+- Support API DescribeWebCustomDomain.
+- Support API DescribeWebInstanceLogs.
+- Support API ListWebApplicationInstances.
+- Support API ListWebApplicationRevisions.
+- Support API ListWebApplications.
+- Support API ListWebCustomDomains.
+- Support API PublishWebApplicationRevision.
+- Support API StartWebApplication.
+- Support API StopWebApplication.
+- Support API UpdateWebApplication.
+- Support API UpdateWebApplicationScalingConfig.
+- Support API UpdateWebApplicationTrafficConfig.
+- Support API UpdateWebCustomDomain.
+
+
 2024-06-18 Version: 1.21.10
 - Update API DescribeApplicationSlbs: update response param.
 
