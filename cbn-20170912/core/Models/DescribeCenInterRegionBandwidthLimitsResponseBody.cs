@@ -34,6 +34,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public string BandwidthPackageId { get; set; }
 
+                /// <summary>
+                /// The bandwidth allocation method. Valid values:
+                /// 
+                /// *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+                /// *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
+                /// </summary>
                 [NameInMap("BandwidthType")]
                 [Validation(Required=false)]
                 public string BandwidthType { get; set; }
