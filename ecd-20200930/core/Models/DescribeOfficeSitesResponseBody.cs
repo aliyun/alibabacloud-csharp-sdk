@@ -409,6 +409,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string RdsLicenseStatus { get; set; }
 
+            [NameInMap("SecurityProtection")]
+            [Validation(Required=false)]
+            public string SecurityProtection { get; set; }
+
             /// <summary>
             /// Indicates whether single sign-on (SSO) is enabled.
             /// </summary>
@@ -520,6 +524,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 
