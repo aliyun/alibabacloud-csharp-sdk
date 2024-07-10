@@ -2654,6 +2654,206 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary 创建应用
+         *
+         * @param request CreateWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWebApplicationResponse
+         */
+        public CreateWebApplicationResponse CreateWebApplicationWithOptions(CreateWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWebApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建应用
+         *
+         * @param request CreateWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWebApplicationResponse
+         */
+        public async Task<CreateWebApplicationResponse> CreateWebApplicationWithOptionsAsync(CreateWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWebApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建应用
+         *
+         * @param request CreateWebApplicationRequest
+         * @return CreateWebApplicationResponse
+         */
+        public CreateWebApplicationResponse CreateWebApplication(CreateWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateWebApplicationWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建应用
+         *
+         * @param request CreateWebApplicationRequest
+         * @return CreateWebApplicationResponse
+         */
+        public async Task<CreateWebApplicationResponse> CreateWebApplicationAsync(CreateWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateWebApplicationWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 新建自定义域名
+         *
+         * @param request CreateWebCustomDomainRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWebCustomDomainResponse
+         */
+        public CreateWebCustomDomainResponse CreateWebCustomDomainWithOptions(CreateWebCustomDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWebCustomDomain",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWebCustomDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 新建自定义域名
+         *
+         * @param request CreateWebCustomDomainRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWebCustomDomainResponse
+         */
+        public async Task<CreateWebCustomDomainResponse> CreateWebCustomDomainWithOptionsAsync(CreateWebCustomDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWebCustomDomain",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWebCustomDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 新建自定义域名
+         *
+         * @param request CreateWebCustomDomainRequest
+         * @return CreateWebCustomDomainResponse
+         */
+        public CreateWebCustomDomainResponse CreateWebCustomDomain(CreateWebCustomDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateWebCustomDomainWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 新建自定义域名
+         *
+         * @param request CreateWebCustomDomainRequest
+         * @return CreateWebCustomDomainResponse
+         */
+        public async Task<CreateWebCustomDomainResponse> CreateWebCustomDomainAsync(CreateWebCustomDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateWebCustomDomainWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @param request DeleteApplicationRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -3533,6 +3733,300 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteSecretWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除应用
+         *
+         * @param request DeleteWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebApplicationResponse
+         */
+        public DeleteWebApplicationResponse DeleteWebApplicationWithOptions(string ApplicationId, DeleteWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWebApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除应用
+         *
+         * @param request DeleteWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebApplicationResponse
+         */
+        public async Task<DeleteWebApplicationResponse> DeleteWebApplicationWithOptionsAsync(string ApplicationId, DeleteWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWebApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除应用
+         *
+         * @param request DeleteWebApplicationRequest
+         * @return DeleteWebApplicationResponse
+         */
+        public DeleteWebApplicationResponse DeleteWebApplication(string ApplicationId, DeleteWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除应用
+         *
+         * @param request DeleteWebApplicationRequest
+         * @return DeleteWebApplicationResponse
+         */
+        public async Task<DeleteWebApplicationResponse> DeleteWebApplicationAsync(string ApplicationId, DeleteWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteWebApplicationWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除应用版本
+         *
+         * @param request DeleteWebApplicationRevisionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebApplicationRevisionResponse
+         */
+        public DeleteWebApplicationRevisionResponse DeleteWebApplicationRevisionWithOptions(string ApplicationId, string RevisionId, DeleteWebApplicationRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWebApplicationRevision",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RevisionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWebApplicationRevisionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除应用版本
+         *
+         * @param request DeleteWebApplicationRevisionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebApplicationRevisionResponse
+         */
+        public async Task<DeleteWebApplicationRevisionResponse> DeleteWebApplicationRevisionWithOptionsAsync(string ApplicationId, string RevisionId, DeleteWebApplicationRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWebApplicationRevision",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RevisionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWebApplicationRevisionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除应用版本
+         *
+         * @param request DeleteWebApplicationRevisionRequest
+         * @return DeleteWebApplicationRevisionResponse
+         */
+        public DeleteWebApplicationRevisionResponse DeleteWebApplicationRevision(string ApplicationId, string RevisionId, DeleteWebApplicationRevisionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteWebApplicationRevisionWithOptions(ApplicationId, RevisionId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除应用版本
+         *
+         * @param request DeleteWebApplicationRevisionRequest
+         * @return DeleteWebApplicationRevisionResponse
+         */
+        public async Task<DeleteWebApplicationRevisionResponse> DeleteWebApplicationRevisionAsync(string ApplicationId, string RevisionId, DeleteWebApplicationRevisionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteWebApplicationRevisionWithOptionsAsync(ApplicationId, RevisionId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除自定义域名
+         *
+         * @param request DeleteWebCustomDomainRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebCustomDomainResponse
+         */
+        public DeleteWebCustomDomainResponse DeleteWebCustomDomainWithOptions(string DomainName, DeleteWebCustomDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWebCustomDomain",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DomainName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWebCustomDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除自定义域名
+         *
+         * @param request DeleteWebCustomDomainRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebCustomDomainResponse
+         */
+        public async Task<DeleteWebCustomDomainResponse> DeleteWebCustomDomainWithOptionsAsync(string DomainName, DeleteWebCustomDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWebCustomDomain",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DomainName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWebCustomDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除自定义域名
+         *
+         * @param request DeleteWebCustomDomainRequest
+         * @return DeleteWebCustomDomainResponse
+         */
+        public DeleteWebCustomDomainResponse DeleteWebCustomDomain(string DomainName, DeleteWebCustomDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteWebCustomDomainWithOptions(DomainName, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除自定义域名
+         *
+         * @param request DeleteWebCustomDomainRequest
+         * @return DeleteWebCustomDomainResponse
+         */
+        public async Task<DeleteWebCustomDomainResponse> DeleteWebCustomDomainAsync(string DomainName, DeleteWebCustomDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteWebCustomDomainWithOptionsAsync(DomainName, request, headers, runtime);
         }
 
         /**
@@ -6912,6 +7406,716 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary 获取应用信息
+         *
+         * @param request DescribeWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationResponse
+         */
+        public DescribeWebApplicationResponse DescribeWebApplicationWithOptions(string ApplicationId, DescribeWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取应用信息
+         *
+         * @param request DescribeWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationResponse
+         */
+        public async Task<DescribeWebApplicationResponse> DescribeWebApplicationWithOptionsAsync(string ApplicationId, DescribeWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取应用信息
+         *
+         * @param request DescribeWebApplicationRequest
+         * @return DescribeWebApplicationResponse
+         */
+        public DescribeWebApplicationResponse DescribeWebApplication(string ApplicationId, DescribeWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取应用信息
+         *
+         * @param request DescribeWebApplicationRequest
+         * @return DescribeWebApplicationResponse
+         */
+        public async Task<DescribeWebApplicationResponse> DescribeWebApplicationAsync(string ApplicationId, DescribeWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeWebApplicationWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 应用资源用量统计
+         *
+         * @param request DescribeWebApplicationResourceStaticsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationResourceStaticsResponse
+         */
+        public DescribeWebApplicationResourceStaticsResponse DescribeWebApplicationResourceStaticsWithOptions(string ApplicationId, DescribeWebApplicationResourceStaticsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplicationResourceStatics",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications-observability/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/resource",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationResourceStaticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 应用资源用量统计
+         *
+         * @param request DescribeWebApplicationResourceStaticsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationResourceStaticsResponse
+         */
+        public async Task<DescribeWebApplicationResourceStaticsResponse> DescribeWebApplicationResourceStaticsWithOptionsAsync(string ApplicationId, DescribeWebApplicationResourceStaticsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplicationResourceStatics",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications-observability/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/resource",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationResourceStaticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 应用资源用量统计
+         *
+         * @param request DescribeWebApplicationResourceStaticsRequest
+         * @return DescribeWebApplicationResourceStaticsResponse
+         */
+        public DescribeWebApplicationResourceStaticsResponse DescribeWebApplicationResourceStatics(string ApplicationId, DescribeWebApplicationResourceStaticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeWebApplicationResourceStaticsWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 应用资源用量统计
+         *
+         * @param request DescribeWebApplicationResourceStaticsRequest
+         * @return DescribeWebApplicationResourceStaticsResponse
+         */
+        public async Task<DescribeWebApplicationResourceStaticsResponse> DescribeWebApplicationResourceStaticsAsync(string ApplicationId, DescribeWebApplicationResourceStaticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeWebApplicationResourceStaticsWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取应用版本
+         *
+         * @param request DescribeWebApplicationRevisionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationRevisionResponse
+         */
+        public DescribeWebApplicationRevisionResponse DescribeWebApplicationRevisionWithOptions(string ApplicationId, string RevisionId, DescribeWebApplicationRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplicationRevision",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RevisionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationRevisionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取应用版本
+         *
+         * @param request DescribeWebApplicationRevisionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationRevisionResponse
+         */
+        public async Task<DescribeWebApplicationRevisionResponse> DescribeWebApplicationRevisionWithOptionsAsync(string ApplicationId, string RevisionId, DescribeWebApplicationRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplicationRevision",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RevisionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationRevisionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取应用版本
+         *
+         * @param request DescribeWebApplicationRevisionRequest
+         * @return DescribeWebApplicationRevisionResponse
+         */
+        public DescribeWebApplicationRevisionResponse DescribeWebApplicationRevision(string ApplicationId, string RevisionId, DescribeWebApplicationRevisionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeWebApplicationRevisionWithOptions(ApplicationId, RevisionId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取应用版本
+         *
+         * @param request DescribeWebApplicationRevisionRequest
+         * @return DescribeWebApplicationRevisionResponse
+         */
+        public async Task<DescribeWebApplicationRevisionResponse> DescribeWebApplicationRevisionAsync(string ApplicationId, string RevisionId, DescribeWebApplicationRevisionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeWebApplicationRevisionWithOptionsAsync(ApplicationId, RevisionId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 弹性配置详情
+         *
+         * @param request DescribeWebApplicationScalingConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationScalingConfigResponse
+         */
+        public DescribeWebApplicationScalingConfigResponse DescribeWebApplicationScalingConfigWithOptions(string ApplicationId, DescribeWebApplicationScalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplicationScalingConfig",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-scaling/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationScalingConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 弹性配置详情
+         *
+         * @param request DescribeWebApplicationScalingConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationScalingConfigResponse
+         */
+        public async Task<DescribeWebApplicationScalingConfigResponse> DescribeWebApplicationScalingConfigWithOptionsAsync(string ApplicationId, DescribeWebApplicationScalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplicationScalingConfig",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-scaling/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationScalingConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 弹性配置详情
+         *
+         * @param request DescribeWebApplicationScalingConfigRequest
+         * @return DescribeWebApplicationScalingConfigResponse
+         */
+        public DescribeWebApplicationScalingConfigResponse DescribeWebApplicationScalingConfig(string ApplicationId, DescribeWebApplicationScalingConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeWebApplicationScalingConfigWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 弹性配置详情
+         *
+         * @param request DescribeWebApplicationScalingConfigRequest
+         * @return DescribeWebApplicationScalingConfigResponse
+         */
+        public async Task<DescribeWebApplicationScalingConfigResponse> DescribeWebApplicationScalingConfigAsync(string ApplicationId, DescribeWebApplicationScalingConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeWebApplicationScalingConfigWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 流量配置详情
+         *
+         * @param request DescribeWebApplicationTrafficConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationTrafficConfigResponse
+         */
+        public DescribeWebApplicationTrafficConfigResponse DescribeWebApplicationTrafficConfigWithOptions(string ApplicationId, DescribeWebApplicationTrafficConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplicationTrafficConfig",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-traffic/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationTrafficConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 流量配置详情
+         *
+         * @param request DescribeWebApplicationTrafficConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebApplicationTrafficConfigResponse
+         */
+        public async Task<DescribeWebApplicationTrafficConfigResponse> DescribeWebApplicationTrafficConfigWithOptionsAsync(string ApplicationId, DescribeWebApplicationTrafficConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebApplicationTrafficConfig",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-traffic/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebApplicationTrafficConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 流量配置详情
+         *
+         * @param request DescribeWebApplicationTrafficConfigRequest
+         * @return DescribeWebApplicationTrafficConfigResponse
+         */
+        public DescribeWebApplicationTrafficConfigResponse DescribeWebApplicationTrafficConfig(string ApplicationId, DescribeWebApplicationTrafficConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeWebApplicationTrafficConfigWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 流量配置详情
+         *
+         * @param request DescribeWebApplicationTrafficConfigRequest
+         * @return DescribeWebApplicationTrafficConfigResponse
+         */
+        public async Task<DescribeWebApplicationTrafficConfigResponse> DescribeWebApplicationTrafficConfigAsync(string ApplicationId, DescribeWebApplicationTrafficConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeWebApplicationTrafficConfigWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取域名.
+         *
+         * @param request DescribeWebCustomDomainRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCustomDomainResponse
+         */
+        public DescribeWebCustomDomainResponse DescribeWebCustomDomainWithOptions(string DomainName, DescribeWebCustomDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebCustomDomain",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DomainName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebCustomDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取域名.
+         *
+         * @param request DescribeWebCustomDomainRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCustomDomainResponse
+         */
+        public async Task<DescribeWebCustomDomainResponse> DescribeWebCustomDomainWithOptionsAsync(string DomainName, DescribeWebCustomDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebCustomDomain",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DomainName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebCustomDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取域名.
+         *
+         * @param request DescribeWebCustomDomainRequest
+         * @return DescribeWebCustomDomainResponse
+         */
+        public DescribeWebCustomDomainResponse DescribeWebCustomDomain(string DomainName, DescribeWebCustomDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeWebCustomDomainWithOptions(DomainName, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取域名.
+         *
+         * @param request DescribeWebCustomDomainRequest
+         * @return DescribeWebCustomDomainResponse
+         */
+        public async Task<DescribeWebCustomDomainResponse> DescribeWebCustomDomainAsync(string DomainName, DescribeWebCustomDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeWebCustomDomainWithOptionsAsync(DomainName, request, headers, runtime);
+        }
+
+        /**
+         * @summary 应用实例日志
+         *
+         * @param request DescribeWebInstanceLogsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebInstanceLogsResponse
+         */
+        public DescribeWebInstanceLogsResponse DescribeWebInstanceLogsWithOptions(string ApplicationId, string InstanceId, DescribeWebInstanceLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebInstanceLogs",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications-observability/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebInstanceLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 应用实例日志
+         *
+         * @param request DescribeWebInstanceLogsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebInstanceLogsResponse
+         */
+        public async Task<DescribeWebInstanceLogsResponse> DescribeWebInstanceLogsWithOptionsAsync(string ApplicationId, string InstanceId, DescribeWebInstanceLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebInstanceLogs",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications-observability/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebInstanceLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 应用实例日志
+         *
+         * @param request DescribeWebInstanceLogsRequest
+         * @return DescribeWebInstanceLogsResponse
+         */
+        public DescribeWebInstanceLogsResponse DescribeWebInstanceLogs(string ApplicationId, string InstanceId, DescribeWebInstanceLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeWebInstanceLogsWithOptions(ApplicationId, InstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 应用实例日志
+         *
+         * @param request DescribeWebInstanceLogsRequest
+         * @return DescribeWebInstanceLogsResponse
+         */
+        public async Task<DescribeWebInstanceLogsResponse> DescribeWebInstanceLogsAsync(string ApplicationId, string InstanceId, DescribeWebInstanceLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeWebInstanceLogsWithOptionsAsync(ApplicationId, InstanceId, request, headers, runtime);
+        }
+
+        /**
          * @param request DisableApplicationScalingRuleRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -9774,6 +10978,546 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary 应用实例列表
+         *
+         * @param tmpReq ListWebApplicationInstancesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListWebApplicationInstancesResponse
+         */
+        public ListWebApplicationInstancesResponse ListWebApplicationInstancesWithOptions(string ApplicationId, ListWebApplicationInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListWebApplicationInstancesShrinkRequest request = new ListWebApplicationInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VersionIds))
+            {
+                request.VersionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VersionIds, "VersionIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusesShrink))
+            {
+                query["Statuses"] = request.StatusesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionIdsShrink))
+            {
+                query["VersionIds"] = request.VersionIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWebApplicationInstances",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications-observability/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/instances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWebApplicationInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 应用实例列表
+         *
+         * @param tmpReq ListWebApplicationInstancesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListWebApplicationInstancesResponse
+         */
+        public async Task<ListWebApplicationInstancesResponse> ListWebApplicationInstancesWithOptionsAsync(string ApplicationId, ListWebApplicationInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListWebApplicationInstancesShrinkRequest request = new ListWebApplicationInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VersionIds))
+            {
+                request.VersionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VersionIds, "VersionIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusesShrink))
+            {
+                query["Statuses"] = request.StatusesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionIdsShrink))
+            {
+                query["VersionIds"] = request.VersionIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWebApplicationInstances",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications-observability/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/instances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWebApplicationInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 应用实例列表
+         *
+         * @param request ListWebApplicationInstancesRequest
+         * @return ListWebApplicationInstancesResponse
+         */
+        public ListWebApplicationInstancesResponse ListWebApplicationInstances(string ApplicationId, ListWebApplicationInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListWebApplicationInstancesWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 应用实例列表
+         *
+         * @param request ListWebApplicationInstancesRequest
+         * @return ListWebApplicationInstancesResponse
+         */
+        public async Task<ListWebApplicationInstancesResponse> ListWebApplicationInstancesAsync(string ApplicationId, ListWebApplicationInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListWebApplicationInstancesWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 版本列表
+         *
+         * @param request ListWebApplicationRevisionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListWebApplicationRevisionsResponse
+         */
+        public ListWebApplicationRevisionsResponse ListWebApplicationRevisionsWithOptions(string ApplicationId, ListWebApplicationRevisionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWebApplicationRevisions",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/revisions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWebApplicationRevisionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 版本列表
+         *
+         * @param request ListWebApplicationRevisionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListWebApplicationRevisionsResponse
+         */
+        public async Task<ListWebApplicationRevisionsResponse> ListWebApplicationRevisionsWithOptionsAsync(string ApplicationId, ListWebApplicationRevisionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWebApplicationRevisions",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/revisions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWebApplicationRevisionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 版本列表
+         *
+         * @param request ListWebApplicationRevisionsRequest
+         * @return ListWebApplicationRevisionsResponse
+         */
+        public ListWebApplicationRevisionsResponse ListWebApplicationRevisions(string ApplicationId, ListWebApplicationRevisionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListWebApplicationRevisionsWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 版本列表
+         *
+         * @param request ListWebApplicationRevisionsRequest
+         * @return ListWebApplicationRevisionsResponse
+         */
+        public async Task<ListWebApplicationRevisionsResponse> ListWebApplicationRevisionsAsync(string ApplicationId, ListWebApplicationRevisionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListWebApplicationRevisionsWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 应用列表
+         *
+         * @param request ListWebApplicationsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListWebApplicationsResponse
+         */
+        public ListWebApplicationsResponse ListWebApplicationsWithOptions(ListWebApplicationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
+            {
+                query["Prefix"] = request.Prefix;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWebApplications",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWebApplicationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 应用列表
+         *
+         * @param request ListWebApplicationsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListWebApplicationsResponse
+         */
+        public async Task<ListWebApplicationsResponse> ListWebApplicationsWithOptionsAsync(ListWebApplicationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
+            {
+                query["Prefix"] = request.Prefix;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWebApplications",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWebApplicationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 应用列表
+         *
+         * @param request ListWebApplicationsRequest
+         * @return ListWebApplicationsResponse
+         */
+        public ListWebApplicationsResponse ListWebApplications(ListWebApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListWebApplicationsWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 应用列表
+         *
+         * @param request ListWebApplicationsRequest
+         * @return ListWebApplicationsResponse
+         */
+        public async Task<ListWebApplicationsResponse> ListWebApplicationsAsync(ListWebApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListWebApplicationsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 自定义域名列表.
+         *
+         * @param request ListWebCustomDomainsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListWebCustomDomainsResponse
+         */
+        public ListWebCustomDomainsResponse ListWebCustomDomainsWithOptions(ListWebCustomDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
+            {
+                query["Prefix"] = request.Prefix;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWebCustomDomains",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWebCustomDomainsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 自定义域名列表.
+         *
+         * @param request ListWebCustomDomainsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListWebCustomDomainsResponse
+         */
+        public async Task<ListWebCustomDomainsResponse> ListWebCustomDomainsWithOptionsAsync(ListWebCustomDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
+            {
+                query["Prefix"] = request.Prefix;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWebCustomDomains",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWebCustomDomainsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 自定义域名列表.
+         *
+         * @param request ListWebCustomDomainsRequest
+         * @return ListWebCustomDomainsResponse
+         */
+        public ListWebCustomDomainsResponse ListWebCustomDomains(ListWebCustomDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListWebCustomDomainsWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 自定义域名列表.
+         *
+         * @param request ListWebCustomDomainsRequest
+         * @return ListWebCustomDomainsResponse
+         */
+        public async Task<ListWebCustomDomainsResponse> ListWebCustomDomainsAsync(ListWebCustomDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListWebCustomDomainsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary Activates the Serverless App Engine (SAE) service for free.
          *
          * @description > Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
@@ -9859,6 +11603,106 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await OpenSaeServiceWithOptionsAsync(headers, runtime);
+        }
+
+        /**
+         * @summary 新建版本
+         *
+         * @param request PublishWebApplicationRevisionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PublishWebApplicationRevisionResponse
+         */
+        public PublishWebApplicationRevisionResponse PublishWebApplicationRevisionWithOptions(string ApplicationId, PublishWebApplicationRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishWebApplicationRevision",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/revisions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishWebApplicationRevisionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 新建版本
+         *
+         * @param request PublishWebApplicationRevisionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PublishWebApplicationRevisionResponse
+         */
+        public async Task<PublishWebApplicationRevisionResponse> PublishWebApplicationRevisionWithOptionsAsync(string ApplicationId, PublishWebApplicationRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishWebApplicationRevision",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-revisions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/revisions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishWebApplicationRevisionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 新建版本
+         *
+         * @param request PublishWebApplicationRevisionRequest
+         * @return PublishWebApplicationRevisionResponse
+         */
+        public PublishWebApplicationRevisionResponse PublishWebApplicationRevision(string ApplicationId, PublishWebApplicationRevisionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PublishWebApplicationRevisionWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 新建版本
+         *
+         * @param request PublishWebApplicationRevisionRequest
+         * @return PublishWebApplicationRevisionResponse
+         */
+        public async Task<PublishWebApplicationRevisionResponse> PublishWebApplicationRevisionAsync(string ApplicationId, PublishWebApplicationRevisionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PublishWebApplicationRevisionWithOptionsAsync(ApplicationId, request, headers, runtime);
         }
 
         /**
@@ -10782,6 +12626,104 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary 启动应用
+         *
+         * @param request StartWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartWebApplicationResponse
+         */
+        public StartWebApplicationResponse StartWebApplicationWithOptions(string ApplicationId, StartWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-ops/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartWebApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启动应用
+         *
+         * @param request StartWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartWebApplicationResponse
+         */
+        public async Task<StartWebApplicationResponse> StartWebApplicationWithOptionsAsync(string ApplicationId, StartWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-ops/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartWebApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启动应用
+         *
+         * @param request StartWebApplicationRequest
+         * @return StartWebApplicationResponse
+         */
+        public StartWebApplicationResponse StartWebApplication(string ApplicationId, StartWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StartWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 启动应用
+         *
+         * @param request StartWebApplicationRequest
+         * @return StartWebApplicationResponse
+         */
+        public async Task<StartWebApplicationResponse> StartWebApplicationAsync(string ApplicationId, StartWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StartWebApplicationWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
          * @summary 0099b7be-5f5b-4512-a7fc-56049ef1\\*\\*\\*\\*
          *
          * @param request StopApplicationRequest
@@ -10877,6 +12819,104 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await StopApplicationWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止应用
+         *
+         * @param request StopWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopWebApplicationResponse
+         */
+        public StopWebApplicationResponse StopWebApplicationWithOptions(string ApplicationId, StopWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-ops/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopWebApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止应用
+         *
+         * @param request StopWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopWebApplicationResponse
+         */
+        public async Task<StopWebApplicationResponse> StopWebApplicationWithOptionsAsync(string ApplicationId, StopWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-ops/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopWebApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止应用
+         *
+         * @param request StopWebApplicationRequest
+         * @return StopWebApplicationResponse
+         */
+        public StopWebApplicationResponse StopWebApplication(string ApplicationId, StopWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止应用
+         *
+         * @param request StopWebApplicationRequest
+         * @return StopWebApplicationResponse
+         */
+        public async Task<StopWebApplicationResponse> StopWebApplicationAsync(string ApplicationId, StopWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopWebApplicationWithOptionsAsync(ApplicationId, request, headers, runtime);
         }
 
         /**
@@ -13047,6 +15087,406 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateSecretWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新应用
+         *
+         * @param request UpdateWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateWebApplicationResponse
+         */
+        public UpdateWebApplicationResponse UpdateWebApplicationWithOptions(string ApplicationId, UpdateWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWebApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新应用
+         *
+         * @param request UpdateWebApplicationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateWebApplicationResponse
+         */
+        public async Task<UpdateWebApplicationResponse> UpdateWebApplicationWithOptionsAsync(string ApplicationId, UpdateWebApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWebApplication",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/applications/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWebApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新应用
+         *
+         * @param request UpdateWebApplicationRequest
+         * @return UpdateWebApplicationResponse
+         */
+        public UpdateWebApplicationResponse UpdateWebApplication(string ApplicationId, UpdateWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新应用
+         *
+         * @param request UpdateWebApplicationRequest
+         * @return UpdateWebApplicationResponse
+         */
+        public async Task<UpdateWebApplicationResponse> UpdateWebApplicationAsync(string ApplicationId, UpdateWebApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateWebApplicationWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新弹性配置
+         *
+         * @param request UpdateWebApplicationScalingConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateWebApplicationScalingConfigResponse
+         */
+        public UpdateWebApplicationScalingConfigResponse UpdateWebApplicationScalingConfigWithOptions(string ApplicationId, UpdateWebApplicationScalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWebApplicationScalingConfig",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-scaling/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWebApplicationScalingConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新弹性配置
+         *
+         * @param request UpdateWebApplicationScalingConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateWebApplicationScalingConfigResponse
+         */
+        public async Task<UpdateWebApplicationScalingConfigResponse> UpdateWebApplicationScalingConfigWithOptionsAsync(string ApplicationId, UpdateWebApplicationScalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWebApplicationScalingConfig",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-scaling/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWebApplicationScalingConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新弹性配置
+         *
+         * @param request UpdateWebApplicationScalingConfigRequest
+         * @return UpdateWebApplicationScalingConfigResponse
+         */
+        public UpdateWebApplicationScalingConfigResponse UpdateWebApplicationScalingConfig(string ApplicationId, UpdateWebApplicationScalingConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateWebApplicationScalingConfigWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新弹性配置
+         *
+         * @param request UpdateWebApplicationScalingConfigRequest
+         * @return UpdateWebApplicationScalingConfigResponse
+         */
+        public async Task<UpdateWebApplicationScalingConfigResponse> UpdateWebApplicationScalingConfigAsync(string ApplicationId, UpdateWebApplicationScalingConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateWebApplicationScalingConfigWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新流量配置
+         *
+         * @param request UpdateWebApplicationTrafficConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateWebApplicationTrafficConfigResponse
+         */
+        public UpdateWebApplicationTrafficConfigResponse UpdateWebApplicationTrafficConfigWithOptions(string ApplicationId, UpdateWebApplicationTrafficConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWebApplicationTrafficConfig",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-traffic/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWebApplicationTrafficConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新流量配置
+         *
+         * @param request UpdateWebApplicationTrafficConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateWebApplicationTrafficConfigResponse
+         */
+        public async Task<UpdateWebApplicationTrafficConfigResponse> UpdateWebApplicationTrafficConfigWithOptionsAsync(string ApplicationId, UpdateWebApplicationTrafficConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWebApplicationTrafficConfig",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/application-traffic/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ApplicationId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWebApplicationTrafficConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新流量配置
+         *
+         * @param request UpdateWebApplicationTrafficConfigRequest
+         * @return UpdateWebApplicationTrafficConfigResponse
+         */
+        public UpdateWebApplicationTrafficConfigResponse UpdateWebApplicationTrafficConfig(string ApplicationId, UpdateWebApplicationTrafficConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateWebApplicationTrafficConfigWithOptions(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新流量配置
+         *
+         * @param request UpdateWebApplicationTrafficConfigRequest
+         * @return UpdateWebApplicationTrafficConfigResponse
+         */
+        public async Task<UpdateWebApplicationTrafficConfigResponse> UpdateWebApplicationTrafficConfigAsync(string ApplicationId, UpdateWebApplicationTrafficConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateWebApplicationTrafficConfigWithOptionsAsync(ApplicationId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新自定义域名.
+         *
+         * @param request UpdateWebCustomDomainRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateWebCustomDomainResponse
+         */
+        public UpdateWebCustomDomainResponse UpdateWebCustomDomainWithOptions(string DomainName, UpdateWebCustomDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWebCustomDomain",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DomainName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWebCustomDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新自定义域名.
+         *
+         * @param request UpdateWebCustomDomainRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateWebCustomDomainResponse
+         */
+        public async Task<UpdateWebCustomDomainResponse> UpdateWebCustomDomainWithOptionsAsync(string DomainName, UpdateWebCustomDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWebCustomDomain",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v2/api/web/custom-domains/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(DomainName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWebCustomDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新自定义域名.
+         *
+         * @param request UpdateWebCustomDomainRequest
+         * @return UpdateWebCustomDomainResponse
+         */
+        public UpdateWebCustomDomainResponse UpdateWebCustomDomain(string DomainName, UpdateWebCustomDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateWebCustomDomainWithOptions(DomainName, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新自定义域名.
+         *
+         * @param request UpdateWebCustomDomainRequest
+         * @return UpdateWebCustomDomainResponse
+         */
+        public async Task<UpdateWebCustomDomainResponse> UpdateWebCustomDomainAsync(string DomainName, UpdateWebCustomDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateWebCustomDomainWithOptionsAsync(DomainName, request, headers, runtime);
         }
 
     }

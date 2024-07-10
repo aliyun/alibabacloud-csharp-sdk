@@ -155,6 +155,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string UpdateApplicationInput { get; set; }
 
+            [NameInMap("UpdateTraffic")]
+            [Validation(Required=false)]
+            public bool? UpdateTraffic { get; set; }
+
         }
 
         [NameInMap("DeployDuration")]

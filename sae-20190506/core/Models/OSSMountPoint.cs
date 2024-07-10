@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string BucketPath { get; set; }
 
-        [NameInMap("endpoint")]
-        [Validation(Required=false)]
-        public string Endpoint { get; set; }
-
         [NameInMap("mountDir")]
         [Validation(Required=false)]
         public string MountDir { get; set; }

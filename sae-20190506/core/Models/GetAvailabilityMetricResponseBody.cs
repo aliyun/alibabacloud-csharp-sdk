@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public List<GetAvailabilityMetricResponseBodyData> Data { get; set; }
         public class GetAvailabilityMetricResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the application.
+            /// The application ID.
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// Indicates whether an auto scaling policy is enabled. The following limits are imposed on the ID:
+            /// Indicates whether an auto scaling policy is enabled. Valid values:
             /// 
             /// *   **1**: An auto scaling policy is enabled.
             /// *   **0**: No auto scaling policy is enabled.
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? Instances { get; set; }
 
             /// <summary>
-            /// The name of the application.
+            /// The application name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the namespace.
+            /// The namespace ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
