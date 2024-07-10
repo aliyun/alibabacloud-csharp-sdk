@@ -48,6 +48,54 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public string AfterTaxAmount { get; set; }
 
+                    [NameInMap("BillModuleConfig")]
+                    [Validation(Required=false)]
+                    public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig BillModuleConfig { get; set; }
+                    public class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig : TeaModel {
+                        [NameInMap("billModuleConfig")]
+                        [Validation(Required=false)]
+                        public List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig> BillModuleConfig { get; set; }
+                        public class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig : TeaModel {
+                            [NameInMap("ApiCode")]
+                            [Validation(Required=false)]
+                            public string ApiCode { get; set; }
+
+                            [NameInMap("BillModuleProperties")]
+                            [Validation(Required=false)]
+                            public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties BillModuleProperties { get; set; }
+                            public class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties : TeaModel {
+                                [NameInMap("billModuleProperties")]
+                                [Validation(Required=false)]
+                                public List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties> BillModuleProperties { get; set; }
+                                public class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties : TeaModel {
+                                    [NameInMap("AttrApiCode")]
+                                    [Validation(Required=false)]
+                                    public string AttrApiCode { get; set; }
+
+                                    [NameInMap("ModuleApiCode")]
+                                    [Validation(Required=false)]
+                                    public string ModuleApiCode { get; set; }
+
+                                    [NameInMap("Value")]
+                                    [Validation(Required=false)]
+                                    public string Value { get; set; }
+
+                                }
+
+                            }
+
+                            [NameInMap("Code")]
+                            [Validation(Required=false)]
+                            public string Code { get; set; }
+
+                            [NameInMap("Name")]
+                            [Validation(Required=false)]
+                            public string Name { get; set; }
+
+                        }
+
+                    }
+
                     /// <summary>
                     /// The service code.
                     /// </summary>
@@ -135,6 +183,50 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [NameInMap("OriginalConfig")]
                     [Validation(Required=false)]
                     public string OriginalConfig { get; set; }
+
+                    [NameInMap("OriginalModuleConfig")]
+                    [Validation(Required=false)]
+                    public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig OriginalModuleConfig { get; set; }
+                    public class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig : TeaModel {
+                        [NameInMap("originalModuleConfig")]
+                        [Validation(Required=false)]
+                        public List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig> OriginalModuleConfig { get; set; }
+                        public class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig : TeaModel {
+                            [NameInMap("Code")]
+                            [Validation(Required=false)]
+                            public string Code { get; set; }
+
+                            [NameInMap("ModuleProperties")]
+                            [Validation(Required=false)]
+                            public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties ModuleProperties { get; set; }
+                            public class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties : TeaModel {
+                                [NameInMap("moduleProperties")]
+                                [Validation(Required=false)]
+                                public List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties> ModuleProperties { get; set; }
+                                public class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties : TeaModel {
+                                    [NameInMap("Code")]
+                                    [Validation(Required=false)]
+                                    public string Code { get; set; }
+
+                                    [NameInMap("Name")]
+                                    [Validation(Required=false)]
+                                    public string Name { get; set; }
+
+                                    [NameInMap("Value")]
+                                    [Validation(Required=false)]
+                                    public string Value { get; set; }
+
+                                }
+
+                            }
+
+                            [NameInMap("Name")]
+                            [Validation(Required=false)]
+                            public string Name { get; set; }
+
+                        }
+
+                    }
 
                     /// <summary>
                     /// The currency of payment.
