@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public long? AppKey { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("DeviceType")]
         [Validation(Required=false)]
         public string DeviceType { get; set; }
