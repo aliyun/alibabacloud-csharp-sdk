@@ -3642,6 +3642,122 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         }
 
         /**
+         * @summary DocMaster
+         *
+         * @param tmpReq RecognizeGeneralStructureRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RecognizeGeneralStructureResponse
+         */
+        public RecognizeGeneralStructureResponse RecognizeGeneralStructureWithOptions(RecognizeGeneralStructureRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RecognizeGeneralStructureShrinkRequest request = new RecognizeGeneralStructureShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Keys))
+            {
+                request.KeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Keys, "Keys", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeysShrink))
+            {
+                query["Keys"] = request.KeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
+                Stream = tmpReq.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecognizeGeneralStructure",
+                Version = "2021-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecognizeGeneralStructureResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary DocMaster
+         *
+         * @param tmpReq RecognizeGeneralStructureRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RecognizeGeneralStructureResponse
+         */
+        public async Task<RecognizeGeneralStructureResponse> RecognizeGeneralStructureWithOptionsAsync(RecognizeGeneralStructureRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RecognizeGeneralStructureShrinkRequest request = new RecognizeGeneralStructureShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Keys))
+            {
+                request.KeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Keys, "Keys", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeysShrink))
+            {
+                query["Keys"] = request.KeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
+                Stream = tmpReq.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecognizeGeneralStructure",
+                Version = "2021-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecognizeGeneralStructureResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary DocMaster
+         *
+         * @param request RecognizeGeneralStructureRequest
+         * @return RecognizeGeneralStructureResponse
+         */
+        public RecognizeGeneralStructureResponse RecognizeGeneralStructure(RecognizeGeneralStructureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RecognizeGeneralStructureWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary DocMaster
+         *
+         * @param request RecognizeGeneralStructureRequest
+         * @return RecognizeGeneralStructureResponse
+         */
+        public async Task<RecognizeGeneralStructureResponse> RecognizeGeneralStructureAsync(RecognizeGeneralStructureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RecognizeGeneralStructureWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 香港身份证识别
          *
          * @param request RecognizeHKIdcardRequest
