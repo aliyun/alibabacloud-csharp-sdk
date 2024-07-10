@@ -5895,6 +5895,230 @@ namespace AlibabaCloud.SDK.Mts20140618
         }
 
         /**
+         * @summary 查询版权水印提取任务
+         *
+         * @param request QueryCopyrightExtractJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryCopyrightExtractJobResponse
+         */
+        public QueryCopyrightExtractJobResponse QueryCopyrightExtractJobWithOptions(QueryCopyrightExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopyrightExtractJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopyrightExtractJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询版权水印提取任务
+         *
+         * @param request QueryCopyrightExtractJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryCopyrightExtractJobResponse
+         */
+        public async Task<QueryCopyrightExtractJobResponse> QueryCopyrightExtractJobWithOptionsAsync(QueryCopyrightExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopyrightExtractJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopyrightExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询版权水印提取任务
+         *
+         * @param request QueryCopyrightExtractJobRequest
+         * @return QueryCopyrightExtractJobResponse
+         */
+        public QueryCopyrightExtractJobResponse QueryCopyrightExtractJob(QueryCopyrightExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCopyrightExtractJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询版权水印提取任务
+         *
+         * @param request QueryCopyrightExtractJobRequest
+         * @return QueryCopyrightExtractJobResponse
+         */
+        public async Task<QueryCopyrightExtractJobResponse> QueryCopyrightExtractJobAsync(QueryCopyrightExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCopyrightExtractJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询视频版权水印任务
+         *
+         * @param request QueryCopyrightJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryCopyrightJobResponse
+         */
+        public QueryCopyrightJobResponse QueryCopyrightJobWithOptions(QueryCopyrightJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopyrightJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopyrightJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询视频版权水印任务
+         *
+         * @param request QueryCopyrightJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryCopyrightJobResponse
+         */
+        public async Task<QueryCopyrightJobResponse> QueryCopyrightJobWithOptionsAsync(QueryCopyrightJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopyrightJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopyrightJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询视频版权水印任务
+         *
+         * @param request QueryCopyrightJobRequest
+         * @return QueryCopyrightJobResponse
+         */
+        public QueryCopyrightJobResponse QueryCopyrightJob(QueryCopyrightJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCopyrightJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询视频版权水印任务
+         *
+         * @param request QueryCopyrightJobRequest
+         * @return QueryCopyrightJobResponse
+         */
+        public async Task<QueryCopyrightJobResponse> QueryCopyrightJobAsync(QueryCopyrightJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCopyrightJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the jobs of clearing or deleting a media fingerprint library.
          *
          * @description You can call this operation to query the specified jobs of clearing or deleting a media fingerprint library based on the job IDs. If you do not specify job IDs, the system returns the latest 20 jobs that are submitted.
@@ -8495,6 +8719,322 @@ namespace AlibabaCloud.SDK.Mts20140618
         }
 
         /**
+         * @summary 查询视频溯源水印ab流任务
+         *
+         * @param request QueryTraceAbJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTraceAbJobResponse
+         */
+        public QueryTraceAbJobResponse QueryTraceAbJobWithOptions(QueryTraceAbJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceAbJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceAbJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询视频溯源水印ab流任务
+         *
+         * @param request QueryTraceAbJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTraceAbJobResponse
+         */
+        public async Task<QueryTraceAbJobResponse> QueryTraceAbJobWithOptionsAsync(QueryTraceAbJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceAbJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceAbJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询视频溯源水印ab流任务
+         *
+         * @param request QueryTraceAbJobRequest
+         * @return QueryTraceAbJobResponse
+         */
+        public QueryTraceAbJobResponse QueryTraceAbJob(QueryTraceAbJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryTraceAbJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询视频溯源水印ab流任务
+         *
+         * @param request QueryTraceAbJobRequest
+         * @return QueryTraceAbJobResponse
+         */
+        public async Task<QueryTraceAbJobResponse> QueryTraceAbJobAsync(QueryTraceAbJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryTraceAbJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询溯源水印提取任务
+         *
+         * @param request QueryTraceExtractJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTraceExtractJobResponse
+         */
+        public QueryTraceExtractJobResponse QueryTraceExtractJobWithOptions(QueryTraceExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceExtractJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceExtractJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询溯源水印提取任务
+         *
+         * @param request QueryTraceExtractJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTraceExtractJobResponse
+         */
+        public async Task<QueryTraceExtractJobResponse> QueryTraceExtractJobWithOptionsAsync(QueryTraceExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceExtractJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询溯源水印提取任务
+         *
+         * @param request QueryTraceExtractJobRequest
+         * @return QueryTraceExtractJobResponse
+         */
+        public QueryTraceExtractJobResponse QueryTraceExtractJob(QueryTraceExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryTraceExtractJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询溯源水印提取任务
+         *
+         * @param request QueryTraceExtractJobRequest
+         * @return QueryTraceExtractJobResponse
+         */
+        public async Task<QueryTraceExtractJobResponse> QueryTraceExtractJobAsync(QueryTraceExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryTraceExtractJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询视频溯源水印m3u8任务
+         *
+         * @param request QueryTraceM3u8JobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTraceM3u8JobResponse
+         */
+        public QueryTraceM3u8JobResponse QueryTraceM3u8JobWithOptions(QueryTraceM3u8JobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceM3u8Job",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceM3u8JobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询视频溯源水印m3u8任务
+         *
+         * @param request QueryTraceM3u8JobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTraceM3u8JobResponse
+         */
+        public async Task<QueryTraceM3u8JobResponse> QueryTraceM3u8JobWithOptionsAsync(QueryTraceM3u8JobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceM3u8Job",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceM3u8JobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询视频溯源水印m3u8任务
+         *
+         * @param request QueryTraceM3u8JobRequest
+         * @return QueryTraceM3u8JobResponse
+         */
+        public QueryTraceM3u8JobResponse QueryTraceM3u8Job(QueryTraceM3u8JobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryTraceM3u8JobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询视频溯源水印m3u8任务
+         *
+         * @param request QueryTraceM3u8JobRequest
+         * @return QueryTraceM3u8JobResponse
+         */
+        public async Task<QueryTraceM3u8JobResponse> QueryTraceM3u8JobAsync(QueryTraceM3u8JobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryTraceM3u8JobWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries watermark templates.
          *
          * @description You can call this operation to query up to 10 watermark templates at a time.
@@ -9724,6 +10264,302 @@ namespace AlibabaCloud.SDK.Mts20140618
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitAnalysisJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 提交版权水印提取任务
+         *
+         * @param request SubmitCopyrightExtractJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitCopyrightExtractJobResponse
+         */
+        public SubmitCopyrightExtractJobResponse SubmitCopyrightExtractJobWithOptions(SubmitCopyrightExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBack))
+            {
+                query["CallBack"] = request.CallBack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCopyrightExtractJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCopyrightExtractJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交版权水印提取任务
+         *
+         * @param request SubmitCopyrightExtractJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitCopyrightExtractJobResponse
+         */
+        public async Task<SubmitCopyrightExtractJobResponse> SubmitCopyrightExtractJobWithOptionsAsync(SubmitCopyrightExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBack))
+            {
+                query["CallBack"] = request.CallBack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCopyrightExtractJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCopyrightExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交版权水印提取任务
+         *
+         * @param request SubmitCopyrightExtractJobRequest
+         * @return SubmitCopyrightExtractJobResponse
+         */
+        public SubmitCopyrightExtractJobResponse SubmitCopyrightExtractJob(SubmitCopyrightExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitCopyrightExtractJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 提交版权水印提取任务
+         *
+         * @param request SubmitCopyrightExtractJobRequest
+         * @return SubmitCopyrightExtractJobResponse
+         */
+        public async Task<SubmitCopyrightExtractJobResponse> SubmitCopyrightExtractJobAsync(SubmitCopyrightExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitCopyrightExtractJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 提交视频版权水印
+         *
+         * @param request SubmitCopyrightJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitCopyrightJobResponse
+         */
+        public SubmitCopyrightJobResponse SubmitCopyrightJobWithOptions(SubmitCopyrightJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBack))
+            {
+                query["CallBack"] = request.CallBack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                query["TotalTime"] = request.TotalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCopyrightJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCopyrightJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交视频版权水印
+         *
+         * @param request SubmitCopyrightJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitCopyrightJobResponse
+         */
+        public async Task<SubmitCopyrightJobResponse> SubmitCopyrightJobWithOptionsAsync(SubmitCopyrightJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBack))
+            {
+                query["CallBack"] = request.CallBack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                query["TotalTime"] = request.TotalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCopyrightJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCopyrightJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交视频版权水印
+         *
+         * @param request SubmitCopyrightJobRequest
+         * @return SubmitCopyrightJobResponse
+         */
+        public SubmitCopyrightJobResponse SubmitCopyrightJob(SubmitCopyrightJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitCopyrightJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 提交视频版权水印
+         *
+         * @param request SubmitCopyrightJobRequest
+         * @return SubmitCopyrightJobResponse
+         */
+        public async Task<SubmitCopyrightJobResponse> SubmitCopyrightJobAsync(SubmitCopyrightJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitCopyrightJobWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -11388,6 +12224,410 @@ namespace AlibabaCloud.SDK.Mts20140618
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitSnapshotJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 提交视频溯源水印ab流任务
+         *
+         * @param request SubmitTraceAbJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitTraceAbJobResponse
+         */
+        public SubmitTraceAbJobResponse SubmitTraceAbJobWithOptions(SubmitTraceAbJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBack))
+            {
+                query["CallBack"] = request.CallBack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherBase64ed))
+            {
+                query["CipherBase64ed"] = request.CipherBase64ed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                query["TotalTime"] = request.TotalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceAbJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceAbJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交视频溯源水印ab流任务
+         *
+         * @param request SubmitTraceAbJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitTraceAbJobResponse
+         */
+        public async Task<SubmitTraceAbJobResponse> SubmitTraceAbJobWithOptionsAsync(SubmitTraceAbJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBack))
+            {
+                query["CallBack"] = request.CallBack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherBase64ed))
+            {
+                query["CipherBase64ed"] = request.CipherBase64ed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                query["TotalTime"] = request.TotalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceAbJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceAbJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交视频溯源水印ab流任务
+         *
+         * @param request SubmitTraceAbJobRequest
+         * @return SubmitTraceAbJobResponse
+         */
+        public SubmitTraceAbJobResponse SubmitTraceAbJob(SubmitTraceAbJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitTraceAbJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 提交视频溯源水印ab流任务
+         *
+         * @param request SubmitTraceAbJobRequest
+         * @return SubmitTraceAbJobResponse
+         */
+        public async Task<SubmitTraceAbJobResponse> SubmitTraceAbJobAsync(SubmitTraceAbJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitTraceAbJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 提交溯源水印提取任务
+         *
+         * @param request SubmitTraceExtractJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitTraceExtractJobResponse
+         */
+        public SubmitTraceExtractJobResponse SubmitTraceExtractJobWithOptions(SubmitTraceExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBack))
+            {
+                query["CallBack"] = request.CallBack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceExtractJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceExtractJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交溯源水印提取任务
+         *
+         * @param request SubmitTraceExtractJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitTraceExtractJobResponse
+         */
+        public async Task<SubmitTraceExtractJobResponse> SubmitTraceExtractJobWithOptionsAsync(SubmitTraceExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBack))
+            {
+                query["CallBack"] = request.CallBack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceExtractJob",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交溯源水印提取任务
+         *
+         * @param request SubmitTraceExtractJobRequest
+         * @return SubmitTraceExtractJobResponse
+         */
+        public SubmitTraceExtractJobResponse SubmitTraceExtractJob(SubmitTraceExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitTraceExtractJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 提交溯源水印提取任务
+         *
+         * @param request SubmitTraceExtractJobRequest
+         * @return SubmitTraceExtractJobResponse
+         */
+        public async Task<SubmitTraceExtractJobResponse> SubmitTraceExtractJobAsync(SubmitTraceExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitTraceExtractJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 提交视频溯源水印m3u8文件任务
+         *
+         * @param request SubmitTraceM3u8JobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitTraceM3u8JobResponse
+         */
+        public SubmitTraceM3u8JobResponse SubmitTraceM3u8JobWithOptions(SubmitTraceM3u8JobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyUri))
+            {
+                query["KeyUri"] = request.KeyUri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trace))
+            {
+                query["Trace"] = request.Trace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceM3u8Job",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceM3u8JobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交视频溯源水印m3u8文件任务
+         *
+         * @param request SubmitTraceM3u8JobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitTraceM3u8JobResponse
+         */
+        public async Task<SubmitTraceM3u8JobResponse> SubmitTraceM3u8JobWithOptionsAsync(SubmitTraceM3u8JobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyUri))
+            {
+                query["KeyUri"] = request.KeyUri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trace))
+            {
+                query["Trace"] = request.Trace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceM3u8Job",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceM3u8JobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交视频溯源水印m3u8文件任务
+         *
+         * @param request SubmitTraceM3u8JobRequest
+         * @return SubmitTraceM3u8JobResponse
+         */
+        public SubmitTraceM3u8JobResponse SubmitTraceM3u8Job(SubmitTraceM3u8JobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitTraceM3u8JobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 提交视频溯源水印m3u8文件任务
+         *
+         * @param request SubmitTraceM3u8JobRequest
+         * @return SubmitTraceM3u8JobResponse
+         */
+        public async Task<SubmitTraceM3u8JobResponse> SubmitTraceM3u8JobAsync(SubmitTraceM3u8JobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitTraceM3u8JobWithOptionsAsync(request, runtime);
         }
 
         /**
