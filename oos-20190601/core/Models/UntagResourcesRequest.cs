@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -26,11 +28,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         /// <summary>
         /// The IDs of the resources for which you want to modify the resource group. The number of resource IDs is 1 to 50.
         /// 
-        /// *   If you set ResourceType to template, specify ResourceIds in the \["TemplateName1","TemplateName2"] format.
-        /// *   If you set ResourceType to parameter, specify ResourceIds in the \["Name1","Name2"] format.
-        /// *   If you set ResourceType to secretparameter, specify ResourceIds in the \["Name1","Name2"] format.
-        /// *   If you set ResourceType to stateconfiguration, specify ResourceIds in the \["StateConfigurationId 1","StateConfigurationId 2"] format.
-        /// *   If you set ResourceType to application, specify ResourceIds in the \["Name1","Name2"] format.
+        /// *   If you set ResourceType to template, specify ResourceIds in the ["TemplateName1","TemplateName2"] format.
+        /// *   If you set ResourceType to parameter, specify ResourceIds in the ["Name1","Name2"] format.
+        /// *   If you set ResourceType to secretparameter, specify ResourceIds in the ["Name1","Name2"] format.
+        /// *   If you set ResourceType to stateconfiguration, specify ResourceIds in the ["StateConfigurationId 1","StateConfigurationId 2"] format.
+        /// *   If you set ResourceType to application, specify ResourceIds in the ["Name1","Name2"] format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         /// *   secretparameter: encryption parameter.
         /// *   stateconfiguration: desired-state configuration.
         /// *   application: application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

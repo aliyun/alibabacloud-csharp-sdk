@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string DedupString { get; set; }
 
         /// <summary>
-        /// The description of the O\&M item.
+        /// The description of the O\\&M item.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the O\&M item.
+        /// The ID of the O\\&M item.
         /// </summary>
         [NameInMap("OpsItemId")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// The title of the O\&M item.
+        /// The title of the O\\&M item.
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

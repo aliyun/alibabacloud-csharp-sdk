@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The IDs of desired-state configurations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StateConfigurationIds")]
         [Validation(Required=false)]

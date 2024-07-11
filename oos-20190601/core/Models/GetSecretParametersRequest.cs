@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetSecretParametersRequest : TeaModel {
         /// <summary>
-        /// The name of the encryption parameter. Multiple encryption parameters can form a JSON array in the format of \["xxxxxxxxx", "yyyyyyyyy", … "zzzzzzzzz"]. Each JSON array can contain a maximum of 10 encryption parameters. Multiple encryption parameters in the array are separated by commas (,).
+        /// The name of the encryption parameter. Multiple encryption parameters can form a JSON array in the format of ["xxxxxxxxx", "yyyyyyyyy", … "zzzzzzzzz"]. Each JSON array can contain a maximum of 10 encryption parameters. Multiple encryption parameters in the array are separated by commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Names")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
     public class CreateApplicationGroupRequest : TeaModel {
         /// <summary>
         /// The application name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The ID of the region in which the related sources reside.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DeployRegionId")]
         [Validation(Required=false)]
@@ -60,6 +64,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The name of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

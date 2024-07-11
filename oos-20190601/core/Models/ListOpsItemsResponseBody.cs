@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The list of O\&M items.
+        /// The list of O\\&M items.
         /// </summary>
         [NameInMap("OpsItems")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// The time when the O\&M item was created.
+            /// The time when the O\\&M item was created.
             /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// The ID of the O\&M item.
+            /// The ID of the O\\&M item.
             /// </summary>
             [NameInMap("OpsItemId")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// The status of the O\&M item.
+            /// The status of the O\\&M item.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// The title of the O\&M item.
+            /// The title of the O\\&M item.
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// The time when the O\&M item was updated.
+            /// The time when the O\\&M item was updated.
             /// </summary>
             [NameInMap("UpdateDate")]
             [Validation(Required=false)]

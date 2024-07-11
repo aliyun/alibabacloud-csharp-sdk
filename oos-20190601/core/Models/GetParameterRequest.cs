@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetParameterRequest : TeaModel {
         /// <summary>
-        /// The name of the common parameter. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+        /// The name of the common parameter. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

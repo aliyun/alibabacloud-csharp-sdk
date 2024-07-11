@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
     public class UpdateTemplateRequest : TeaModel {
         /// <summary>
         /// The content of the template. The content must be in the JSON or YAML format, and its maximum size is 64 KB.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -38,7 +40,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public Dictionary<string, object> Tags { get; set; }
 
         /// <summary>
-        /// The name of the template. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). The name cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.
+        /// The name of the template. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_). The name cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

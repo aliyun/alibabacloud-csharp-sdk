@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
     public class DescribeApplicationGroupBillRequest : TeaModel {
         /// <summary>
         /// The application name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The billing cycle, in the YYYY-MM format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The application group name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -53,6 +59,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The type of the cloud resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

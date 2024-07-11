@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CreateSecretParameterShrinkRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). For more information, see "How to ensure idempotence".
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). For more information, see "How to ensure idempotence".
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string Constraints { get; set; }
 
+        /// <summary>
+        /// The instance ID of the KMS instance.
+        /// </summary>
         [NameInMap("DKMSInstanceId")]
         [Validation(Required=false)]
         public string DKMSInstanceId { get; set; }
@@ -47,7 +50,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string KeyId { get; set; }
 
         /// <summary>
-        /// The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
+        /// The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -83,6 +88,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The value of the encryption parameter. The value must be 1 to 4096 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
     public class DeleteApplicationGroupRequest : TeaModel {
         /// <summary>
         /// The name of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The name of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

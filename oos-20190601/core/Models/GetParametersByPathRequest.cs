@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]

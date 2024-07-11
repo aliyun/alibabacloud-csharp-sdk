@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
 
+            /// <summary>
+            /// The instance ID of the KMS instance.
+            /// </summary>
             [NameInMap("DKMSInstanceId")]
             [Validation(Required=false)]
             public string DKMSInstanceId { get; set; }

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
     public class GetParametersRequest : TeaModel {
         /// <summary>
         /// The names of the common parameters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Names")]
         [Validation(Required=false)]

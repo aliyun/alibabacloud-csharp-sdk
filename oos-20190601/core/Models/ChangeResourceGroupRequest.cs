@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group to which the cloud resource is to be moved. You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
+        /// The ID of the resource group to which the cloud resource is to be moved. You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         /// *   If the ResourceType parameter is set to secretparameter, set the ResourceId parameter to the name of the encryption parameter.
         /// *   If the ResourceType parameter is set to stateconfiguration, set the ResourceId parameter to the ID of the desired-state configuration.
         /// *   If the ResourceType parameter is set to application, set the ResourceId parameter to the name of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         /// *   secretparameter: encryption parameter
         /// *   stateconfiguration: desired-state configuration
         /// *   application: application
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

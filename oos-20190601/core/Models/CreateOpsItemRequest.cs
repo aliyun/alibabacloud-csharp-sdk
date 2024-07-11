@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         ///     <!-- -->
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -143,6 +145,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         ///     <!-- -->
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Severity")]
         [Validation(Required=false)]
@@ -157,6 +161,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The source business.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -170,7 +176,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public Dictionary<string, object> Tags { get; set; }
 
         /// <summary>
-        /// The title of the O\&M item.
+        /// The title of the O\\&M item.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

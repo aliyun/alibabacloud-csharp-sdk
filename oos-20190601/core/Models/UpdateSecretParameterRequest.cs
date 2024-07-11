@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
+        /// The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The value of the parameter. The value must be 1 to 4096 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

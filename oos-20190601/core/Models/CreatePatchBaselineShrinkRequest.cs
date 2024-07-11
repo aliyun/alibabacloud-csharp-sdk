@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
     public class CreatePatchBaselineShrinkRequest : TeaModel {
         /// <summary>
         /// The rules of scanning and installing patches for the specified operating system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApprovalRules")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The name of the patch baseline.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -62,6 +66,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         /// *   RedhatEnterpriseLinux
         /// *   Anolis
         /// *   AlmaLinux
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperationSystem")]
         [Validation(Required=false)]

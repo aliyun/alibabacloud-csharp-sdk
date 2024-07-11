@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetOpsItemRequest : TeaModel {
         /// <summary>
-        /// The O\&M item ID.
+        /// The O\\&M item ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OpsItemId")]
         [Validation(Required=false)]

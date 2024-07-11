@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+        /// The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_).
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

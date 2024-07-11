@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The path of the encryption parameter. The path must be 1 to 200 characters in length. For example, if the name of an encryption parameter is /secretParameter/mySecretParameter, the path of the encryption parameter is /secretParameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]

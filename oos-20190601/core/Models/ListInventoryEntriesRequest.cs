@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -84,6 +86,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         /// *   ACS:Service
         /// *   ACS:WindowsRegistry
         /// *   ACS:WindowsUpdate
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TypeName")]
         [Validation(Required=false)]

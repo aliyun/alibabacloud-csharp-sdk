@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The names of the templates to be deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateNames")]
         [Validation(Required=false)]

@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public bool? HasTrigger { get; set; }
 
+        [NameInMap("IsExample")]
+        [Validation(Required=false)]
+        public bool? IsExample { get; set; }
+
         /// <summary>
         /// The template is favorite or not.
         /// </summary>

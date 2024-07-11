@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The schedule expression. The interval between two schedules must be a minimum of 30 minutes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScheduleExpression")]
         [Validation(Required=false)]
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The schedule type. Set the value to rate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScheduleType")]
         [Validation(Required=false)]
@@ -74,13 +78,17 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// The resources to be queried.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public string Targets { get; set; }
 
         /// <summary>
-        /// The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+        /// The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

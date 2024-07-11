@@ -24,7 +24,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.
+        /// The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_). It cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

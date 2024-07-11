@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
     public class ListResourceExecutionStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the execution.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
     public class NotifyExecutionRequest : TeaModel {
         /// <summary>
         /// The ID of the execution.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         /// *   **Reject**: rejects an execution. For example, you want to reject the execution of a high-risk operation task.
         /// *   **RetryTask**: retries a failed task whose execution mode is Suspend upon Failure.
         /// *   **SkipTask**: skips a failed task whose execution mode is Suspend upon Failure.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NotifyType")]
         [Validation(Required=false)]
