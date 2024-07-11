@@ -14068,6 +14068,112 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 更新集群审计日志配置
+         *
+         * @param request UpdateClusterAuditLogConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateClusterAuditLogConfigResponse
+         */
+        public UpdateClusterAuditLogConfigResponse UpdateClusterAuditLogConfigWithOptions(string clusterid, UpdateClusterAuditLogConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disable))
+            {
+                body["disable"] = request.Disable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsProjectName))
+            {
+                body["sls_project_name"] = request.SlsProjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateClusterAuditLogConfig",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid) + "/audit_log",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateClusterAuditLogConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新集群审计日志配置
+         *
+         * @param request UpdateClusterAuditLogConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateClusterAuditLogConfigResponse
+         */
+        public async Task<UpdateClusterAuditLogConfigResponse> UpdateClusterAuditLogConfigWithOptionsAsync(string clusterid, UpdateClusterAuditLogConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disable))
+            {
+                body["disable"] = request.Disable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsProjectName))
+            {
+                body["sls_project_name"] = request.SlsProjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateClusterAuditLogConfig",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid) + "/audit_log",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateClusterAuditLogConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新集群审计日志配置
+         *
+         * @param request UpdateClusterAuditLogConfigRequest
+         * @return UpdateClusterAuditLogConfigResponse
+         */
+        public UpdateClusterAuditLogConfigResponse UpdateClusterAuditLogConfig(string clusterid, UpdateClusterAuditLogConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateClusterAuditLogConfigWithOptions(clusterid, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新集群审计日志配置
+         *
+         * @param request UpdateClusterAuditLogConfigRequest
+         * @return UpdateClusterAuditLogConfigResponse
+         */
+        public async Task<UpdateClusterAuditLogConfigResponse> UpdateClusterAuditLogConfigAsync(string clusterid, UpdateClusterAuditLogConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateClusterAuditLogConfigWithOptionsAsync(clusterid, request, headers, runtime);
+        }
+
+        /**
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateContactGroupForAlertResponse
