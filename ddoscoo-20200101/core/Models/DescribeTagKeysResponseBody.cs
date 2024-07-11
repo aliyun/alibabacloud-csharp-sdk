@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the details of the tag key.
+        /// The details about the tag keys.
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public List<DescribeTagKeysResponseBodyTagKeys> TagKeys { get; set; }
         public class DescribeTagKeysResponseBodyTagKeys : TeaModel {
             /// <summary>
-            /// The number of Anti-DDoS Pro instances to which the tag key is added.
+            /// The number of Anti-DDoS Proxy (Chinese Mainland) instances to which the tag key is added.
             /// </summary>
             [NameInMap("TagCount")]
             [Validation(Required=false)]

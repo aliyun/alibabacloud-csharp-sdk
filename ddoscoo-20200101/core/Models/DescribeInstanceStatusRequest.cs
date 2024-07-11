@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeInstanceStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance to query.
+        /// The ID of the Anti-DDoS Proxy instance to query.
         /// 
-        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.
+        /// >  You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all Anti-DDoS Proxy (Chinese Mainland) or Anti-DDoS Proxy (Outside Chinese Mainland) instances.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The type of the instance to query. Valid values:
+        /// The type of the Anti-DDoS Proxy instance to query. Valid values:
         /// 
-        /// *   **1**: an Anti-DDoS Pro instance
-        /// *   **2**: an Anti-DDoS Premium instance
+        /// *   **1**: an Anti-DDoS Proxy (Chinese Mainland) instance
+        /// *   **2**: an Anti-DDoS Proxy (Outside Chinese Mainland) instance
         /// 
         /// This parameter is required.
         /// </summary>

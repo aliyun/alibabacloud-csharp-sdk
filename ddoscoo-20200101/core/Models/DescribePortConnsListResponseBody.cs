@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribePortConnsListResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the connections established over the port.
+        /// Details about the connections established over the port.
         /// </summary>
         [NameInMap("ConnsList")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public long? ActConns { get; set; }
 
             /// <summary>
-            /// The number of concurrent connections.
+            /// >  This parameter is in internal preview. Do not use this parameter.
             /// </summary>
             [NameInMap("Conns")]
             [Validation(Required=false)]
             public long? Conns { get; set; }
 
             /// <summary>
-            /// The new connection creation rate.
+            /// The number of new connections.
             /// </summary>
             [NameInMap("Cps")]
             [Validation(Required=false)]

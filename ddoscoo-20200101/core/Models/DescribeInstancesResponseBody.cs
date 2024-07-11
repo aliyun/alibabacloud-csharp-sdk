@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details of the instances.
+        /// The details about the instances.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// The time when the instance is created. This value is a UNIX timestamp. Unit: milliseconds.
+            /// The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             /// <summary>
             /// The mitigation plan of the instance. Valid values:
             /// 
-            /// *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
-            /// *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
-            /// *   **2**: Anti-DDoS Premium instance of the MCA mitigation plan
-            /// *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
+            /// *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
+            /// *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
+            /// *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
+            /// *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
             /// </summary>
             [NameInMap("Edition")]
             [Validation(Required=false)]
             public int? Edition { get; set; }
 
             /// <summary>
-            /// The forwarding status of the instance. Valid values:
+            /// The traffic forwarding status of the instance. Valid values:
             /// 
             /// *   **0**: The instance no longer forwards service traffic.
             /// *   **1**: The instance forwards service traffic as expected.
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public int? Enabled { get; set; }
 
             /// <summary>
-            /// The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.
+            /// The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
@@ -86,18 +86,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             /// <summary>
             /// The IP version of the instance. Valid values:
             /// 
-            /// *   **Ipv4**: IPv4
-            /// *   **Ipv6**: IPv6
+            /// *   **Ipv4**
+            /// *   **Ipv6**
             /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
             public string IpVersion { get; set; }
 
             /// <summary>
-            /// Indicates whether the 95th percentile metering method has been enabled for the instance. Valid values:
+            /// Indicates whether the metering method of the 95th percentile burstable clean bandwidth is enabled for the instance. Valid values:
             /// 
-            /// *   0: The 95th percentile metering method has not been enabled for the instance.
-            /// *   1: The 95th percentile metering method has been enabled for the instance.
+            /// *   0: no
+            /// *   1: yes
             /// </summary>
             [NameInMap("IsFirstOpenBw")]
             [Validation(Required=false)]
@@ -106,8 +106,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             /// <summary>
             /// Indicates whether the metering method of the 95th percentile burstable QPS is enabled for the instance. Valid values:
             /// 
-            /// - 0: no
-            /// - 1: yes
+            /// *   0: no
+            /// *   1: yes
             /// </summary>
             [NameInMap("IsFirstOpenQps")]
             [Validation(Required=false)]

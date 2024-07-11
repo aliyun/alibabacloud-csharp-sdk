@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array consisting of the details of the tags that are added to the Anti-DDoS Pro instance.
+        /// The tags that are added to the Anti-DDoS Proxy (Chinese Mainland) instance.
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -35,28 +35,28 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public List<DescribeTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class DescribeTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// The ID of the Anti-DDoS Pro instance.
+                /// The ID of the Anti-DDoS Proxy (Chinese Mainland) instance.
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource. The value is fixed as **INSTANCE**, which indicates an Anti-DDoS Pro instance.
+                /// The resource type. The value is fixed as **INSTANCE**, which indicates an Anti-DDoS Proxy instance.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The key of the tag that is added to the Anti-DDoS Pro instance.
+                /// The key of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The value of the tag that is added to the Anti-DDoS Pro instance.
+                /// The value of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

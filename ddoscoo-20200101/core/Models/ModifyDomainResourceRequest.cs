@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// An array that consists of the details of the protocol type and port number.
+        /// The details about the protocol type and port number.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public List<ModifyDomainResourceRequestProxyTypes> ProxyTypes { get; set; }
         public class ModifyDomainResourceRequestProxyTypes : TeaModel {
             /// <summary>
-            /// An array that consists of port numbers.
+            /// The port numbers.
             /// 
             /// This parameter is required.
             /// </summary>

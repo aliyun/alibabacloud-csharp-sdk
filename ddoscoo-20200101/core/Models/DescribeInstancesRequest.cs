@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The mitigation plan of the instance to query. Valid values:
         /// 
-        /// *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
-        /// *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
-        /// *   **2**: Anti-DDoS Premium instance of the Mainland China Acceleration (MCA) mitigation plan
-        /// *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
+        /// *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
+        /// *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
+        /// *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
+        /// *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
         /// </summary>
         [NameInMap("Edition")]
         [Validation(Required=false)]
@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public long? ExpireStartTime { get; set; }
 
+        /// <summary>
+        /// The IDs of the instances to query. You can specify up to 200 instance IDs.
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
@@ -90,18 +93,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The states of the instances to query. You can specify up to two states.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<int?> Status { get; set; }
 
+        /// <summary>
+        /// The tags that are added to the instances to query.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeInstancesRequestTag> Tag { get; set; }
         public class DescribeInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:
+            /// The key of the tag that is added to the instance to query. You can specify up to 200 tag keys. When you specify tags, take note of the following rules:
             /// 
-            /// *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).
+            /// *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated with a comma (,).
             /// *   Separate multiple tags with commas (,).
             /// 
             /// >  The tag key (**Key**) and tag value (**Value**) must be specified in pairs.
@@ -111,9 +120,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:
+            /// The value of the tag that is added to the instance to query. You can specify up to 200 tag values. When you specify tags, take note of the following rules:
             /// 
-            /// *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).
+            /// *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated with a comma (,).
             /// *   Separate multiple tags with commas (,).
             /// 
             /// >  The tag key (**Key**) and tag value (**Value**) must be specified in pairs.

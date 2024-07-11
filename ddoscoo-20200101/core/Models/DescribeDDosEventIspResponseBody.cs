@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDDosEventIspResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the ISPs for the volumetric attack.
+        /// The ISPs for the volumetric attack.
         /// </summary>
         [NameInMap("Isps")]
         [Validation(Required=false)]

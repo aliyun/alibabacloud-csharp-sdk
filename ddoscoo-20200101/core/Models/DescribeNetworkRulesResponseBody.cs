@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeNetworkRulesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details of a port forwarding rule.
+        /// The details of a port forwarding rule.
         /// </summary>
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             /// <summary>
             /// Indicates whether the port forwarding rule is automatically created. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("IsAutoCreate")]
             [Validation(Required=false)]
@@ -58,12 +58,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// An array that consists of IP addresses of origin servers.
+            /// The IP addresses of origin servers.
             /// </summary>
             [NameInMap("RealServers")]
             [Validation(Required=false)]
             public List<string> RealServers { get; set; }
 
+            /// <summary>
+            /// The remarks of the port forwarding rule.
+            /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }

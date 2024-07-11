@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeInstanceExtResponseBody : TeaModel {
         /// <summary>
-        /// The information about the instance.
+        /// The extended information about the Anti-DDoS Proxy instance.
         /// </summary>
         [NameInMap("InstanceExtSpecs")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public long? FunctionVersion { get; set; }
 
             /// <summary>
-            /// The instance ID
+            /// The ID of the instance.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -41,20 +41,20 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public long? NormalBandwidth { get; set; }
 
             /// <summary>
-            /// The type of the instance. Valid value:
+            /// The type of the instance. Valid values:
             /// 
-            /// *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
-            /// *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
-            /// *   **2**: Anti-DDoS Premium instance of the CMA mitigation plan
-            /// *   **3**: Anti-DDoS Premium instance of the Secure Chinese Mainland Acceleration (Sec-CMA) plan
-            /// *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
+            /// *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
+            /// *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
+            /// *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
+            /// *   **3**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan
+            /// *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
             /// </summary>
             [NameInMap("ProductPlan")]
             [Validation(Required=false)]
             public long? ProductPlan { get; set; }
 
             /// <summary>
-            /// The Internet service provider (ISP) line resource of the Anti-DDoS Pro instance.
+            /// The Internet service provider (ISP) line of the Anti-DDoS Proxy (Chinese Mainland) instance.
             /// </summary>
             [NameInMap("ServicePartner")]
             [Validation(Required=false)]

@@ -12,23 +12,22 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The details of the configurations of blocked locations. This parameter is a JSON string. The value consists of the following fields:
         /// 
-        /// *   **RegionBlockSwitch**: the status of the Location Blacklist policy. This field is required and must be of the string type. Valid values:
+        /// *   **RegionBlockSwitch**: the status of the location blacklist feature. This field is required and must be of the string type. Valid values:
         /// 
-        ///     *   **on**: enables the policy.
-        ///     *   **off**: disables the policy.
+        ///     *   **on**
+        ///     *   **off**
         /// 
-        /// *   **Countries**: the codes of the countries or areas from which you want to block requests. This field is optional and must be of the array type.
+        /// *   **Countries**: the codes of the countries and areas from which you want to block requests. This field is optional and must be of the array type.
         /// 
         ///     **
         /// 
-        ///     **Note**For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic.
-        /// 
+        ///     **Note** For more information about the codes of countries and areas, see [Location parameters](https://help.aliyun.com/document_detail/167926.html).
         /// 
         /// *   **Provinces**: the codes of the administrative regions in China from which you want to block requests. This field is optional and must be of the array type.
         /// 
         ///     **
         /// 
-        ///     **Note**For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic.
+        ///     **Note** For more information about the codes of administrative regions in China, see [Location parameters](https://help.aliyun.com/document_detail/167926.html).
         /// 
         ///     For example, `[11,12]` specifies Beijing and Tianjin.
         /// 

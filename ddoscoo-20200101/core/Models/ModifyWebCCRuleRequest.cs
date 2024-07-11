@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// The blocking duration. Valid values: **60** to **86400**. Unit: seconds.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Ttl")]
@@ -63,6 +65,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public int? Ttl { get; set; }
 
         /// <summary>
+        /// The check path.
+        /// 
+        /// >  You cannot modify the Uniform Resource Identifier (URI). The domain name of the website, the check path, and the rule name uniquely identify a rule.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Uri")]

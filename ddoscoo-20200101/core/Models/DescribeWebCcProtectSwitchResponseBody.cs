@@ -10,68 +10,68 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebCcProtectSwitchResponseBody : TeaModel {
         /// <summary>
-        /// The status of each protection policy for a website.
+        /// The status of each mitigation policy for the website.
         /// </summary>
         [NameInMap("ProtectSwitchList")]
         [Validation(Required=false)]
         public List<DescribeWebCcProtectSwitchResponseBodyProtectSwitchList> ProtectSwitchList { get; set; }
         public class DescribeWebCcProtectSwitchResponseBodyProtectSwitchList : TeaModel {
             /// <summary>
-            /// The mode of the Intelligent Protection policy. Valid values:
+            /// The mode of Intelligent Protection. Valid values:
             /// 
-            /// *   **watch**: the Warning mode
-            /// *   **defense**: the Defense mode
+            /// *   **watch**: Warning
+            /// *   **defense**: Defense
             /// </summary>
             [NameInMap("AiMode")]
             [Validation(Required=false)]
             public string AiMode { get; set; }
 
             /// <summary>
-            /// The status of the Intelligent Protection policy. Valid values:
+            /// The status of Intelligent Protection. Valid values:
             /// 
-            /// *   **0**: disabled
-            /// *   **1**: enabled
+            /// *   **0**: turned off
+            /// *   **1:** turned on
             /// </summary>
             [NameInMap("AiRuleEnable")]
             [Validation(Required=false)]
             public int? AiRuleEnable { get; set; }
 
             /// <summary>
-            /// The level of the Intelligent Protection policy. Valid values:
+            /// The level of Intelligent Protection. Valid values:
             /// 
-            /// *   **level30**: the Low level
-            /// *   **level60**: the Normal level
-            /// *   **level90**: the Strict level
+            /// *   **level30**: Loose
+            /// *   **level60**: Normal
+            /// *   **level90**: Strict
             /// </summary>
             [NameInMap("AiTemplate")]
             [Validation(Required=false)]
             public string AiTemplate { get; set; }
 
             /// <summary>
-            /// The status of the Black Lists and White Lists (Domain Names) policy. Valid values:
+            /// The status of Blacklist/Whitelist (Domain Names). Valid values:
             /// 
-            /// *   **0**: disabled
-            /// *   **1**: enabled
+            /// *   **0**: turned off
+            /// *   **1:** turned on
             /// </summary>
             [NameInMap("BlackWhiteListEnable")]
             [Validation(Required=false)]
             public int? BlackWhiteListEnable { get; set; }
 
             /// <summary>
-            /// The status of the Custom Rule switch for the Frequency Control policy. Valid values:
+            /// The status of the Custom Rules switch for Frequency Control. Valid values:
             /// 
-            /// *   **0**: disabled
-            /// *   **1**: enabled
+            /// *   **0**: turned off
+            /// *   **1:** turned on
             /// </summary>
             [NameInMap("CcCustomRuleEnable")]
             [Validation(Required=false)]
             public int? CcCustomRuleEnable { get; set; }
 
             /// <summary>
-            /// The status of the Frequency Control policy. Valid values:
+            /// The status of Frequency Control. Valid values:
             /// 
-            /// *   **0**: disabled
-            /// *   **1**: enabled
+            /// *   **0**: turned off
+            /// *   **1:** turned on
             /// </summary>
             [NameInMap("CcEnable")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string CcGlobalSwitch { get; set; }
 
             /// <summary>
-            /// The mode of the Frequency Control policy. Valid values:
+            /// The mode of Frequency Control. Valid values:
             /// 
             /// *   **default**: Normal
             /// *   **gf_under_attack**: Emergency
@@ -101,20 +101,20 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// The status of the Accurate Access Control policy. Valid values:
+            /// The status of Accurate Access Control. Valid values:
             /// 
-            /// *   **0**: disabled
-            /// *   **1**: enabled
+            /// *   **0**: turned off
+            /// *   **1:** turned on
             /// </summary>
             [NameInMap("PreciseRuleEnable")]
             [Validation(Required=false)]
             public int? PreciseRuleEnable { get; set; }
 
             /// <summary>
-            /// The status of the Location Blacklist (Domain Names) policy. Valid values:
+            /// The status of Location Blacklist (Domain Names). Valid values:
             /// 
-            /// *   **0**: disabled
-            /// *   **1**: enabled
+            /// *   **0**: turned off
+            /// *   **1:** turned on
             /// </summary>
             [NameInMap("RegionBlockEnable")]
             [Validation(Required=false)]

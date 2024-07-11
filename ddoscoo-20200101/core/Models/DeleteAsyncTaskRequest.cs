@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The ID of the task that you want to delete.
         /// 
-        /// > You can call the [DescribeAsyncTasks](https://help.aliyun.com/document_detail/159405.html) operation to query the IDs of all asynchronous export tasks.
+        /// >  You can call the [DescribeAsyncTasks](~~DescribeAsyncTasks~~) operation to query the IDs of all asynchronous export tasks.
         /// 
         /// This parameter is required.
         /// </summary>

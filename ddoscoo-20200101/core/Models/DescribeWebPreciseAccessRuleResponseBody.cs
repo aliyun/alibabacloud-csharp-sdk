@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebPreciseAccessRuleResponseBody : TeaModel {
         /// <summary>
-        /// An array consisting of the configuration of the accurate access control rule that is created for the website.
+        /// The configuration of the accurate access control rule that is created for the website.
         /// </summary>
         [NameInMap("PreciseAccessConfigList")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// An array that consists of the rules.
+            /// The scheduling rules.
             /// </summary>
             [NameInMap("RuleList")]
             [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 /// <summary>
                 /// The action triggered if the rule is matched. Valid values:
                 /// 
-                /// *   **accept**: allows the requests that match the rule.
-                /// *   **block**: blocks the requests that match the rule.
-                /// *   **challenge**: implements Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule.
+                /// *   **accept**: The requests that match the rule are allowed.
+                /// *   **block**: The requests that match the rule are blocked.
+                /// *   **challenge**: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                     public string Field { get; set; }
 
                     /// <summary>
-                    /// The custom HTTP header.
+                    /// The custom HTTP request header.
                     /// 
-                    /// > This parameter takes effect only when **Field** is set to **header**.
+                    /// >  This parameter takes effect only when **Field** is set to **header**.
                     /// </summary>
                     [NameInMap("HeaderName")]
                     [Validation(Required=false)]
@@ -85,14 +85,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 }
 
                 /// <summary>
-                /// The validity period of the rule. Unit: seconds. This parameter takes effect only when **action** of a rule is **block**. Access requests that match the rule are blocked within the specified validity period of the rule. **0** indicates that the rule takes effect all the time.
+                /// The validity period of the rule. Unit: seconds. This parameter takes effect only when **action** of a rule is **block**. Access requests that match the rule are blocked within the specified validity period of the rule. The value **0** indicates that the whitelist takes effect all the time.
                 /// </summary>
                 [NameInMap("Expires")]
                 [Validation(Required=false)]
                 public long? Expires { get; set; }
 
                 /// <summary>
-                /// The name of the rule.
+                /// The name of the scheduling rule.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 /// <summary>
                 /// The source of the rule. Valid values:
                 /// 
-                /// *   **manual**: manually created. This is the default value.
+                /// *   **manual** (default): manually created.
                 /// *   **auto**: automatically generated.
                 /// </summary>
                 [NameInMap("Owner")]

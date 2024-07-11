@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// Specifies whether to enable CNAME reuse. Valid values:
         /// 
-        /// *   **1**: enables CNAME reuse.
-        /// *   **2**: disables CNAME reuse.
+        /// *   **0:** disabled
+        /// *   **1:** enabled
         /// 
         /// This parameter is required.
         /// </summary>

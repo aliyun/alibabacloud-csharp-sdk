@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeInstanceStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// The statistics on the instances.
+        /// The statistics on the instance.
         /// </summary>
         [NameInMap("InstanceStatistics")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             /// <summary>
             /// The number of advanced mitigation sessions that are used in this month.
             /// 
-            /// > This parameter is returned only if Anti-DDoS Premium instances are queried.
+            /// >  This parameter is returned only if Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.
             /// </summary>
             [NameInMap("DefenseCountUsage")]
             [Validation(Required=false)]

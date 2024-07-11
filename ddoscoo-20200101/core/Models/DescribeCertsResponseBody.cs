@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<DescribeCertsResponseBodyCerts> Certs { get; set; }
         public class DescribeCertsResponseBodyCerts : TeaModel {
+            /// <summary>
+            /// The global certificate ID, which is in the certificate ID-cn-hangzhou format. If the ID of the certificate is 123, CertIdentifier is 123-cn-hangzhou.
+            /// </summary>
             [NameInMap("CertIdentifier")]
             [Validation(Required=false)]
             public string CertIdentifier { get; set; }
@@ -30,22 +33,22 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             /// <summary>
             /// Indicates whether the certificate is associated with the domain name. Valid values:
             /// 
-            /// *   **true**: The certificate is associated with the domain name.
-            /// *   **false**: The certificate is not associated with the domain name.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("DomainRelated")]
             [Validation(Required=false)]
             public bool? DomainRelated { get; set; }
 
             /// <summary>
-            /// The expiration date of the certificate. string
+            /// The expiration date of the certificate. The value is a string.
             /// </summary>
             [NameInMap("EndDate")]
             [Validation(Required=false)]
             public string EndDate { get; set; }
 
             /// <summary>
-            /// The ID of the certificate.
+            /// The certificate ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The issuance date of the certificate. string
+            /// The issuance date of the certificate. The value is a string.
             /// </summary>
             [NameInMap("StartDate")]
             [Validation(Required=false)]

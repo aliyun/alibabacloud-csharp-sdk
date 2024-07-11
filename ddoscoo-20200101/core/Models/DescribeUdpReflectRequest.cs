@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The region ID of the instance. Valid values:
         /// 
-        /// *   **cn-hangzhou**: Chinese mainland, which indicates an Anti-DDoS Pro instance. This is the default value.
-        /// *   **ap-southeast-1**: outside the Chinese mainland, which indicates an Anti-DDoS Premium instance.
+        /// *   **cn-hangzhou**: indicates an Anti-DDoS Proxy (Chinese Mainland) instance. This is the default value.
+        /// *   **ap-southeast-1**: indicates an Anti-DDoS Proxy (Outside Chinese Mainland) instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

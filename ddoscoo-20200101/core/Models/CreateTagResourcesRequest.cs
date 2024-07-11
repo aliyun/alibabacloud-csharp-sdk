@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class CreateTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.
+        /// The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// An array consisting of the IDs of the Anti-DDoS Pro instances to which you want to add the tag.
+        /// The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances to which you want to add the tag.
         /// 
         /// This parameter is required.
         /// </summary>

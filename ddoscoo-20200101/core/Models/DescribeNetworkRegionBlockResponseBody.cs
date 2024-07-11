@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public DescribeNetworkRegionBlockResponseBodyConfig Config { get; set; }
         public class DescribeNetworkRegionBlockResponseBodyConfig : TeaModel {
             /// <summary>
-            /// An array consisting of the codes of the countries or areas from which the requests are blocked.
+            /// The codes of the countries or areas from which the requests are blocked.
             /// </summary>
             [NameInMap("Countries")]
             [Validation(Required=false)]
             public List<long?> Countries { get; set; }
 
             /// <summary>
-            /// An array consisting of the codes of the administrative regions in China from which the requests are blocked.
+            /// The codes of the administrative regions in China from which the requests are blocked.
             /// </summary>
             [NameInMap("Provinces")]
             [Validation(Required=false)]

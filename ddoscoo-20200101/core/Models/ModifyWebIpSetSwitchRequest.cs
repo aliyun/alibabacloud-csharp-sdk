@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyWebIpSetSwitchRequest : TeaModel {
         /// <summary>
-        /// The details of the Black Lists and White Lists (Domain Names) policy. This parameter is a JSON string. The string contains the following fields:
+        /// The details of the Blacklist/Whitelist (Domain Names) feature. This parameter is a JSON string. The value consists of the following fields:
         /// 
-        /// *   **Bwlist_Enable**: the status of the Black Lists and White Lists (Domain Names) policy. This field is required and must be of the integer type. Valid values:
+        /// **bwlist_enable**: the status of the Blacklist/Whitelist (Domain Names) feature. This field is required and must be of the integer type. Valid values:
         /// 
-        ///     *   **0**: disabled
-        ///     *   **1**: enabled
+        /// *   0: turned off
+        /// *   1: turned on
         /// 
         /// This parameter is required.
         /// </summary>

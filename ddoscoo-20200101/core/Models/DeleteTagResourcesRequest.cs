@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.
+        /// The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.
         /// 
         /// This parameter is required.
         /// </summary>
