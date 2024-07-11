@@ -1,3 +1,6 @@
+2024-07-11 Version: 1.0.2
+- Generated csharp 2018-12-21 for Baas.
+
 2024-06-20 Version: 1.0.1
 - Generated csharp 2018-12-21 for Baas.
 
