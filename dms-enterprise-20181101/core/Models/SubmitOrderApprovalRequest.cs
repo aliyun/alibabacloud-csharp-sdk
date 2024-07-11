@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        [NameInMap("RealLoginUserUid")]
+        [Validation(Required=false)]
+        public string RealLoginUserUid { get; set; }
+
         /// <summary>
         /// The ID of the tenant.
         /// 

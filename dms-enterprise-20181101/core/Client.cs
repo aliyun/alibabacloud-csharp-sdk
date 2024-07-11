@@ -1068,6 +1068,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["OldApprover"] = request.OldApprover;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
@@ -1133,6 +1137,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OldApprover))
             {
                 query["OldApprover"] = request.OldApprover;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
@@ -2130,7 +2138,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Creates data archiving tickets.
+         * @summary Creates a data archiving ticket to archive data to destinations such as dedicated storage space or ApsaraDB RDS for MySQL instances.
+         *
+         * @description You can call this API operation only for database instances that are managed in Security Collaboration mode.
          *
          * @param tmpReq CreateDataArchiveOrderRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2194,7 +2204,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Creates data archiving tickets.
+         * @summary Creates a data archiving ticket to archive data to destinations such as dedicated storage space or ApsaraDB RDS for MySQL instances.
+         *
+         * @description You can call this API operation only for database instances that are managed in Security Collaboration mode.
          *
          * @param tmpReq CreateDataArchiveOrderRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2258,7 +2270,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Creates data archiving tickets.
+         * @summary Creates a data archiving ticket to archive data to destinations such as dedicated storage space or ApsaraDB RDS for MySQL instances.
+         *
+         * @description You can call this API operation only for database instances that are managed in Security Collaboration mode.
          *
          * @param request CreateDataArchiveOrderRequest
          * @return CreateDataArchiveOrderResponse
@@ -2270,7 +2284,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Creates data archiving tickets.
+         * @summary Creates a data archiving ticket to archive data to destinations such as dedicated storage space or ApsaraDB RDS for MySQL instances.
+         *
+         * @description You can call this API operation only for database instances that are managed in Security Collaboration mode.
          *
          * @param request CreateDataArchiveOrderRequest
          * @return CreateDataArchiveOrderResponse
@@ -2315,6 +2331,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamShrink))
             {
                 query["Param"] = request.ParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserListShrink))
             {
@@ -2377,6 +2397,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamShrink))
             {
                 query["Param"] = request.ParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserListShrink))
             {
@@ -2626,6 +2650,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["PluginParam"] = request.PluginParamShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserListShrink))
             {
                 query["RelatedUserList"] = request.RelatedUserListShrink;
@@ -2689,6 +2717,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginParamShrink))
             {
                 query["PluginParam"] = request.PluginParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserListShrink))
             {
@@ -7466,6 +7498,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["OrderId"] = request.OrderId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
@@ -7513,6 +7549,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
@@ -7586,6 +7626,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["OrderId"] = request.OrderId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
@@ -7633,6 +7677,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
@@ -9508,6 +9556,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["OrderId"] = request.OrderId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
@@ -9545,6 +9597,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
@@ -13194,7 +13250,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary 获取结构设计项目的流程信息
+         * @summary Queries the information about a schema design ticket, such as the current node of the ticket, whether the ticket can be returned to the schema design node, and the publishing strategy.
          *
          * @param request GetTableDesignProjectFlowRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13232,7 +13288,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary 获取结构设计项目的流程信息
+         * @summary Queries the information about a schema design ticket, such as the current node of the ticket, whether the ticket can be returned to the schema design node, and the publishing strategy.
          *
          * @param request GetTableDesignProjectFlowRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13270,7 +13326,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary 获取结构设计项目的流程信息
+         * @summary Queries the information about a schema design ticket, such as the current node of the ticket, whether the ticket can be returned to the schema design node, and the publishing strategy.
          *
          * @param request GetTableDesignProjectFlowRequest
          * @return GetTableDesignProjectFlowResponse
@@ -13282,7 +13338,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary 获取结构设计项目的流程信息
+         * @summary Queries the information about a schema design ticket, such as the current node of the ticket, whether the ticket can be returned to the schema design node, and the publishing strategy.
          *
          * @param request GetTableDesignProjectFlowRequest
          * @return GetTableDesignProjectFlowResponse
@@ -13294,7 +13350,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary 获取结构设计项目的详细信息
+         * @summary Queries the information about the project and change base database of a schema design ticket, such as the state of the ticket, the ID of the user who created the ticket, and the name and ID of the change base database.
          *
          * @param request GetTableDesignProjectInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13332,7 +13388,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary 获取结构设计项目的详细信息
+         * @summary Queries the information about the project and change base database of a schema design ticket, such as the state of the ticket, the ID of the user who created the ticket, and the name and ID of the change base database.
          *
          * @param request GetTableDesignProjectInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13370,7 +13426,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary 获取结构设计项目的详细信息
+         * @summary Queries the information about the project and change base database of a schema design ticket, such as the state of the ticket, the ID of the user who created the ticket, and the name and ID of the change base database.
          *
          * @param request GetTableDesignProjectInfoRequest
          * @return GetTableDesignProjectInfoResponse
@@ -13382,7 +13438,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary 获取结构设计项目的详细信息
+         * @summary Queries the information about the project and change base database of a schema design ticket, such as the state of the ticket, the ID of the user who created the ticket, and the name and ID of the change base database.
          *
          * @param request GetTableDesignProjectInfoRequest
          * @return GetTableDesignProjectInfoResponse
@@ -24412,6 +24468,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["OrderId"] = request.OrderId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
@@ -24449,6 +24509,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {

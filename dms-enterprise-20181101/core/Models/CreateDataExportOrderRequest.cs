@@ -165,6 +165,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         }
 
+        [NameInMap("RealLoginUserUid")]
+        [Validation(Required=false)]
+        public string RealLoginUserUid { get; set; }
+
         /// <summary>
         /// The stakeholders involved in this operation.
         /// </summary>
