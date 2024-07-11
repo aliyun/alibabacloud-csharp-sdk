@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        [NameInMap("out_order_id")]
+        [Validation(Required=false)]
+        public string OutOrderId { get; set; }
+
+        [NameInMap("out_refund_apply_id")]
+        [Validation(Required=false)]
+        public string OutRefundApplyId { get; set; }
+
         [NameInMap("refund_apply_id")]
         [Validation(Required=false)]
         public string RefundApplyId { get; set; }

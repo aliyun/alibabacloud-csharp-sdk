@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        [NameInMap("out_modify_apply_id")]
+        [Validation(Required=false)]
+        public string OutModifyApplyId { get; set; }
+
+        [NameInMap("out_order_id")]
+        [Validation(Required=false)]
+        public string OutOrderId { get; set; }
+
     }
 
 }

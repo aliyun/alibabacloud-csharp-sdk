@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Telephone { get; set; }
 
+            [NameInMap("train_acceleration_package_invoice_fee")]
+            [Validation(Required=false)]
+            public string TrainAccelerationPackageInvoiceFee { get; set; }
+
             [NameInMap("train_invoice_fee")]
             [Validation(Required=false)]
             public string TrainInvoiceFee { get; set; }
