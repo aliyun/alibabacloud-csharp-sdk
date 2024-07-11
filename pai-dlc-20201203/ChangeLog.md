@@ -1,3 +1,8 @@
+2024-07-11 Version: 1.5.12
+- Update API CreateTensorboard: update param body.
+- Update API ListTensorboards: add param QuotaId.
+
+
 2024-07-09 Version: 1.5.11
 - Update API GetJob: update response param.
 

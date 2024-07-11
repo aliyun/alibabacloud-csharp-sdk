@@ -388,6 +388,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["Options"] = request.Options;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                body["QuotaId"] = request.QuotaId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
                 body["SourceId"] = request.SourceId;
@@ -487,6 +495,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
             {
                 body["Options"] = request.Options;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                body["QuotaId"] = request.QuotaId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
@@ -2438,6 +2454,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["PaymentType"] = request.PaymentType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOwn))
             {
                 query["ShowOwn"] = request.ShowOwn;
@@ -2541,6 +2561,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
             {
                 query["PaymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOwn))
             {

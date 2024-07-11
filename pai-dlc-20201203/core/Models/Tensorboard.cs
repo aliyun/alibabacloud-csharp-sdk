@@ -37,6 +37,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public string Priority { get; set; }
+
+        [NameInMap("QuotaId")]
+        [Validation(Required=false)]
+        public string QuotaId { get; set; }
+
+        [NameInMap("QuotaName")]
+        [Validation(Required=false)]
+        public string QuotaName { get; set; }
+
         [NameInMap("ReasonCode")]
         [Validation(Required=false)]
         public string ReasonCode { get; set; }
