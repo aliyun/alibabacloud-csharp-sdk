@@ -11295,6 +11295,114 @@ namespace AlibabaCloud.SDK.Mts20140618
         }
 
         /**
+         * @summary 提交图片版权水印任务
+         *
+         * @param request SubmitImageCopyrightRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitImageCopyrightResponse
+         */
+        public SubmitImageCopyrightResponse SubmitImageCopyrightWithOptions(SubmitImageCopyrightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitImageCopyright",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitImageCopyrightResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交图片版权水印任务
+         *
+         * @param request SubmitImageCopyrightRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitImageCopyrightResponse
+         */
+        public async Task<SubmitImageCopyrightResponse> SubmitImageCopyrightWithOptionsAsync(SubmitImageCopyrightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitImageCopyright",
+                Version = "2014-06-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitImageCopyrightResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交图片版权水印任务
+         *
+         * @param request SubmitImageCopyrightRequest
+         * @return SubmitImageCopyrightResponse
+         */
+        public SubmitImageCopyrightResponse SubmitImageCopyright(SubmitImageCopyrightRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitImageCopyrightWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 提交图片版权水印任务
+         *
+         * @param request SubmitImageCopyrightRequest
+         * @return SubmitImageCopyrightResponse
+         */
+        public async Task<SubmitImageCopyrightResponse> SubmitImageCopyrightAsync(SubmitImageCopyrightRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitImageCopyrightWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Submits transcoding jobs. If the transcoding jobs and workflows created in the ApsaraVideo Media Processing (MPS) console cannot meet your business requirements, you can call the SubmitJobs operation to submit transcoding jobs. Specify transcoding parameters as required when you call the SubmitJobs operation.
          *
          * @description *   SubmitJobs is an asynchronous operation. After you submit transcoding jobs, the jobs are added to an MPS queue to be scheduled and run. The transcoding jobs may not have been complete when the response is returned. After you call this operation, you can call the [QueryJobList](https://help.aliyun.com/document_detail/602836.html) operation to query the job results. You can also associate a Message Service (MNS) queue or topic with the MPS queue to receive notifications on the jobs. For more information, see [Receive notifications](https://www.alibabacloud.com/help/zh/apsaravideo-for-media-processing/latest/receive-message-notifications).
