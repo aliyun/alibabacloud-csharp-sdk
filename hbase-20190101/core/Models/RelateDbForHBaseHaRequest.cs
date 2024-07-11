@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class RelateDbForHBaseHaRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HaActive")]
         [Validation(Required=false)]
         public string HaActive { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string HaActiveClusterKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HaActiveDBType")]
         [Validation(Required=false)]
         public string HaActiveDBType { get; set; }
@@ -45,10 +54,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string HaActiveVersion { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HaMigrateType")]
         [Validation(Required=false)]
         public string HaMigrateType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HaStandby")]
         [Validation(Required=false)]
         public string HaStandby { get; set; }
@@ -57,6 +72,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string HaStandbyClusterKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HaStandbyDBType")]
         [Validation(Required=false)]
         public string HaStandbyDBType { get; set; }
@@ -85,10 +103,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string HaTables { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("IsActiveStandard")]
         [Validation(Required=false)]
         public bool? IsActiveStandard { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("IsStandbyStandard")]
         [Validation(Required=false)]
         public bool? IsStandbyStandard { get; set; }

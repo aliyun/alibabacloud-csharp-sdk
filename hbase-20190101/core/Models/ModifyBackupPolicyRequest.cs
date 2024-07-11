@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string PreferredBackupEndTimeUTC { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
         public string PreferredBackupPeriod { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string PreferredBackupStartTimeUTC { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PreferredBackupTime")]
         [Validation(Required=false)]
         public string PreferredBackupTime { get; set; }

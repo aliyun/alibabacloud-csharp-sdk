@@ -269,6 +269,14 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
         }
 
+        [NameInMap("TaskProgress")]
+        [Validation(Required=false)]
+        public string TaskProgress { get; set; }
+
+        [NameInMap("TaskStatus")]
+        [Validation(Required=false)]
+        public string TaskStatus { get; set; }
+
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

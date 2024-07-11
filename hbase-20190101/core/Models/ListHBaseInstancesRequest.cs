@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ListHBaseInstancesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

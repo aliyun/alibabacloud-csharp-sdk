@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyInstanceServiceConfigRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ConfigureName")]
         [Validation(Required=false)]
         public string ConfigureName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ConfigureValue")]
         [Validation(Required=false)]
         public string ConfigureValue { get; set; }

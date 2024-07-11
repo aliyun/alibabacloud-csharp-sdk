@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyClusterDeletionProtectionRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Protection")]
         [Validation(Required=false)]
         public bool? Protection { get; set; }

@@ -73,6 +73,9 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EnableHbaseProxy")]
         [Validation(Required=false)]
         public bool? EnableHbaseProxy { get; set; }
@@ -230,6 +233,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [NameInMap("TaskProgress")]
         [Validation(Required=false)]
         public string TaskProgress { get; set; }
+
+        [NameInMap("TaskStatus")]
+        [Validation(Required=false)]
+        public string TaskStatus { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]

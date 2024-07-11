@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CreateHbaseHaSlbRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BdsId")]
         [Validation(Required=false)]
         public string BdsId { get; set; }
@@ -17,14 +20,23 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HaId")]
         [Validation(Required=false)]
         public string HaId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HaTypes")]
         [Validation(Required=false)]
         public string HaTypes { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HbaseType")]
         [Validation(Required=false)]
         public string HbaseType { get; set; }

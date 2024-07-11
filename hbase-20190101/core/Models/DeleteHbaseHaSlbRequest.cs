@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DeleteHbaseHaSlbRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BdsId")]
         [Validation(Required=false)]
         public string BdsId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HaId")]
         [Validation(Required=false)]
         public string HaId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HaTypes")]
         [Validation(Required=false)]
         public string HaTypes { get; set; }
