@@ -1486,6 +1486,82 @@ namespace AlibabaCloud.SDK.CGCS20211111
         }
 
         /**
+         * @param request DescribeInstanceStatsInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceStatsInfoResponse
+         */
+        public DescribeInstanceStatsInfoResponse DescribeInstanceStatsInfoWithOptions(DescribeInstanceStatsInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceStatsInfo",
+                Version = "2021-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceStatsInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeInstanceStatsInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceStatsInfoResponse
+         */
+        public async Task<DescribeInstanceStatsInfoResponse> DescribeInstanceStatsInfoWithOptionsAsync(DescribeInstanceStatsInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceStatsInfo",
+                Version = "2021-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceStatsInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeInstanceStatsInfoRequest
+         * @return DescribeInstanceStatsInfoResponse
+         */
+        public DescribeInstanceStatsInfoResponse DescribeInstanceStatsInfo(DescribeInstanceStatsInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstanceStatsInfoWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request DescribeInstanceStatsInfoRequest
+         * @return DescribeInstanceStatsInfoResponse
+         */
+        public async Task<DescribeInstanceStatsInfoResponse> DescribeInstanceStatsInfoAsync(DescribeInstanceStatsInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstanceStatsInfoWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 获取适配申请详情
          *
          * @param request GetAdaptationRequest
