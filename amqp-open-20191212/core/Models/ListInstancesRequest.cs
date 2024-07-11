@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
     public class ListInstancesRequest : TeaModel {
         /// <summary>
         /// The maximum number of entries to return. Valid values: 1 to 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

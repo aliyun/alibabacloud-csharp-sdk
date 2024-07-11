@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
     public class DeleteBindingRequest : TeaModel {
         /// <summary>
         /// The binding key.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindingKey")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// 
         /// *   **QUEUE**
         /// *   **EXCHANGE**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindingType")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The name of the object that you want to unbind from the source exchange.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationName")]
         [Validation(Required=false)]
@@ -35,6 +41,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The name of the source exchange.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceExchange")]
         [Validation(Required=false)]
@@ -49,6 +59,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The vhost name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VirtualHost")]
         [Validation(Required=false)]

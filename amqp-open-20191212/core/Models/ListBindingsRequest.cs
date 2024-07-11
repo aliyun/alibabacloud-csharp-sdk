@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
     public class ListBindingsRequest : TeaModel {
         /// <summary>
         /// The ID of the ApsaraMQ for RabbitMQ instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// The maximum number of entries to return. Valid values:
         /// 
         /// **1 to 100**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The vhost name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VirtualHost")]
         [Validation(Required=false)]

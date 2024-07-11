@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string DeadLetterExchange { get; set; }
 
         /// <summary>
-        /// The dead-letter routing key. The key must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (\_), periods (.), number signs (#), forward slashes (/), and at signs (@).
+        /// The dead-letter routing key. The key must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).
         /// </summary>
         [NameInMap("DeadLetterRoutingKey")]
         [Validation(Required=false)]
@@ -58,6 +58,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The ID of the ApsaraMQ for RabbitMQ instance on which you want to create a queue.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -92,15 +94,19 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <summary>
         /// The name of the queue that you want to create.
         /// 
-        /// *   The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (\_), periods (.), number signs (#), forward slashes (/), and at signs (@).
+        /// *   The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).
         /// *   After the queue is created, you cannot change the name of the queue. If you want to change the name of the queue, delete the queue and create another queue.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]
         public string QueueName { get; set; }
 
         /// <summary>
-        /// The name of the vhost to which the queue that you want to create belongs. The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (\_), periods (.), number signs (#), forward slashes (/), and at signs (@).
+        /// The name of the vhost to which the queue that you want to create belongs. The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VirtualHost")]
         [Validation(Required=false)]

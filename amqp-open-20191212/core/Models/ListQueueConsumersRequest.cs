@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
     public class ListQueueConsumersRequest : TeaModel {
         /// <summary>
         /// The ID of the ApsaraMQ for RabbitMQ instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The name of the queue for which you want to query online consumers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Queue")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The virtual host (vhost) name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VirtualHost")]
         [Validation(Required=false)]

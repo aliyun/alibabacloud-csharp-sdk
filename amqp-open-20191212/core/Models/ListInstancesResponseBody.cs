@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 /// <summary>
                 /// The disk size. Unit: GB.
                 /// 
-                /// >  For Professional Edition instances and Enterprise Edition instances, this parameter is unavailable and \*\*-1\*\* is returned.
+                /// >  For Professional Edition instances and Enterprise Edition instances, this parameter is unavailable and \\*\\*-1\\*\\* is returned.
                 /// </summary>
                 [NameInMap("StorageSize")]
                 [Validation(Required=false)]

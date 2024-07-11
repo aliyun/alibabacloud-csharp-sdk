@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// 
         /// *   **true**: If the last queue that is bound to the exchange is unbound, the exchange is automatically deleted.
         /// *   **false**: If the last queue that is bound to the exchange is unbound, the exchange is not automatically deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AutoDeleteState")]
         [Validation(Required=false)]
@@ -29,8 +31,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <summary>
         /// The name of the exchange that you want to create. The exchange name must meet the following conventions:
         /// 
-        /// *   The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (\_), periods (.), number signs (#), forward slashes (/), and at signs (@).
+        /// *   The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).
         /// *   After the exchange is created, you cannot change its name. If you want to change its name, delete the exchange and create another exchange.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExchangeName")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// *   **FANOUT**: An exchange of this type routes all received messages to all queues bound to this exchange. You can use a fanout exchange to broadcast messages.
         /// *   **HEADERS**: This type of exchange is similar to direct exchanges. The only difference is that a headers exchange routes messages based on the headers attributes instead of routing keys. When you bind a headers exchange to a queue, you must configure binding attributes in the key-value format for the binding. When you send a message to a headers exchange, you must configure the headers attributes in the key-value format for the message. After a headers exchange receives a message, the exchange routes the message based on the matching results between the headers attributes of the message and the binding attributes of the bound queues.
         /// *   **X-CONSISTENT-HASH**: An exchange of this type allows you to perform hash calculations on routing keys or header values and use consistent hashing to route a message to different queues.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExchangeType")]
         [Validation(Required=false)]
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The ID of the ApsaraMQ for RabbitMQ for which you want to create an exchange.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -61,6 +69,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// 
         /// *   **false**
         /// *   **true**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Internal")]
         [Validation(Required=false)]
@@ -68,10 +78,16 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The name of the vhost to which the exchange that you want to create belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VirtualHost")]
         [Validation(Required=false)]
         public string VirtualHost { get; set; }
+
+        [NameInMap("XDelayedType")]
+        [Validation(Required=false)]
+        public string XDelayedType { get; set; }
 
     }
 

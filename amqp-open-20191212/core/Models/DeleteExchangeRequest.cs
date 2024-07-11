@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
     public class DeleteExchangeRequest : TeaModel {
         /// <summary>
         /// The name of the exchange that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExchangeName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The ID of the ApsaraMQ for RabbitMQ instance whose exchange you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The vhost to which the exchange that you want to delete belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VirtualHost")]
         [Validation(Required=false)]
