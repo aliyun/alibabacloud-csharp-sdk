@@ -70,6 +70,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RuleNameList { get; set; }
 
+        /// <summary>
+        /// The version of the masking rule. Default value: v1. Valid values:
+        /// 
+        /// *   v1
+        /// *   v2
+        /// </summary>
         [NameInMap("RuleVersion")]
         [Validation(Required=false)]
         public string RuleVersion { get; set; }

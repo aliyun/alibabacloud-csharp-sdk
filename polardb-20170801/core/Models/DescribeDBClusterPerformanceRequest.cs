@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
     }
 
 }
