@@ -1,0 +1,79 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Buss20220822.Models
+{
+    public class RiskEventSyncRequest : TeaModel {
+        [NameInMap("Deleted")]
+        [Validation(Required=false)]
+        public bool? Deleted { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("DiscoveryTime")]
+        [Validation(Required=false)]
+        public long? DiscoveryTime { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("EventName")]
+        [Validation(Required=false)]
+        public string EventName { get; set; }
+
+        [NameInMap("EventNumber")]
+        [Validation(Required=false)]
+        public string EventNumber { get; set; }
+
+        [NameInMap("RelevanceBu")]
+        [Validation(Required=false)]
+        public string RelevanceBu { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("RiskDetail")]
+        [Validation(Required=false)]
+        public string RiskDetail { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("RiskEffectType")]
+        [Validation(Required=false)]
+        public string RiskEffectType { get; set; }
+
+        [NameInMap("RiskLevel")]
+        [Validation(Required=false)]
+        public string RiskLevel { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("RiskType")]
+        [Validation(Required=false)]
+        public string RiskType { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Submitter")]
+        [Validation(Required=false)]
+        public string Submitter { get; set; }
+
+    }
+
+}
