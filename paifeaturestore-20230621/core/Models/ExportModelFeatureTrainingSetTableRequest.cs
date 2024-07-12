@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         }
 
+        [NameInMap("RealTimeIterateInterval")]
+        [Validation(Required=false)]
+        public long? RealTimeIterateInterval { get; set; }
+
         [NameInMap("TrainingSetConfig")]
         [Validation(Required=false)]
         public ExportModelFeatureTrainingSetTableRequestTrainingSetConfig TrainingSetConfig { get; set; }

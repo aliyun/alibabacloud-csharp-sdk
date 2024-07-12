@@ -1951,6 +1951,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["LabelInputConfig"] = request.LabelInputConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealTimeIterateInterval))
+            {
+                body["RealTimeIterateInterval"] = request.RealTimeIterateInterval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingSetConfig))
             {
                 body["TrainingSetConfig"] = request.TrainingSetConfig;
@@ -1994,6 +1998,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelInputConfig))
             {
                 body["LabelInputConfig"] = request.LabelInputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealTimeIterateInterval))
+            {
+                body["RealTimeIterateInterval"] = request.RealTimeIterateInterval;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingSetConfig))
             {
