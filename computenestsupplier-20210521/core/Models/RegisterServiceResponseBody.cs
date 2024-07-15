@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class RegisterServiceResponseBody : TeaModel {
+        /// <summary>
+        /// The registration ID.
+        /// </summary>
         [NameInMap("RegistrationId")]
         [Validation(Required=false)]
         public string RegistrationId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -8,7 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class GetServiceInstanceRequest : TeaModel {
+    public class UpdateServiceInstanceAttributeShrinkRequest : TeaModel {
+        /// <summary>
+        /// The time when the service instance expires.
+        /// 
+        /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
+        /// </summary>
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("LicenseData")]
+        [Validation(Required=false)]
+        public string LicenseDataShrink { get; set; }
+
         /// <summary>
         /// The region ID.
         /// 
@@ -19,7 +32,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the service instance.
+        /// The service instance ID.
         /// 
         /// This parameter is required.
         /// </summary>

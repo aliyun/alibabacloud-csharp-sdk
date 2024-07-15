@@ -162,6 +162,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Redeploys a service instance after the service instance failed to be deployed.
+         *
          * @param request ContinueDeployServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ContinueDeployServiceInstanceResponse
@@ -210,6 +212,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Redeploys a service instance after the service instance failed to be deployed.
+         *
          * @param request ContinueDeployServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ContinueDeployServiceInstanceResponse
@@ -258,6 +262,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Redeploys a service instance after the service instance failed to be deployed.
+         *
          * @param request ContinueDeployServiceInstanceRequest
          * @return ContinueDeployServiceInstanceResponse
          */
@@ -268,6 +274,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Redeploys a service instance after the service instance failed to be deployed.
+         *
          * @param request ContinueDeployServiceInstanceRequest
          * @return ContinueDeployServiceInstanceResponse
          */
@@ -278,7 +286,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建部署物
+         * @summary Creates a deployment package.
          *
          * @param tmpReq CreateArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -350,7 +358,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建部署物
+         * @summary Creates a deployment package.
          *
          * @param tmpReq CreateArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -422,7 +430,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建部署物
+         * @summary Creates a deployment package.
          *
          * @param request CreateArtifactRequest
          * @return CreateArtifactResponse
@@ -434,7 +442,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建部署物
+         * @summary Creates a deployment package.
          *
          * @param request CreateArtifactRequest
          * @return CreateArtifactResponse
@@ -446,7 +454,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建新服务版本
+         * @summary Creates a service.
          *
          * @param request CreateServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -580,7 +588,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建新服务版本
+         * @summary Creates a service.
          *
          * @param request CreateServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -714,7 +722,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建新服务版本
+         * @summary Creates a service.
          *
          * @param request CreateServiceRequest
          * @return CreateServiceResponse
@@ -726,7 +734,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建新服务版本
+         * @summary Creates a service.
          *
          * @param request CreateServiceRequest
          * @return CreateServiceResponse
@@ -738,7 +746,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 商家侧创建服务实例
+         * @summary Creates and deploys a service instance.
          *
          * @param tmpReq CreateServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -826,7 +834,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 商家侧创建服务实例
+         * @summary Creates and deploys a service instance.
          *
          * @param tmpReq CreateServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -914,7 +922,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 商家侧创建服务实例
+         * @summary Creates and deploys a service instance.
          *
          * @param request CreateServiceInstanceRequest
          * @return CreateServiceInstanceResponse
@@ -926,7 +934,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 商家侧创建服务实例
+         * @summary Creates and deploys a service instance.
          *
          * @param request CreateServiceInstanceRequest
          * @return CreateServiceInstanceResponse
@@ -938,7 +946,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 删除部署物
+         * @summary Deletes an artifact.
          *
          * @param request DeleteArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -976,7 +984,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 删除部署物
+         * @summary Deletes an artifact.
          *
          * @param request DeleteArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1014,7 +1022,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 删除部署物
+         * @summary Deletes an artifact.
          *
          * @param request DeleteArtifactRequest
          * @return DeleteArtifactResponse
@@ -1026,7 +1034,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 删除部署物
+         * @summary Deletes an artifact.
          *
          * @param request DeleteArtifactRequest
          * @return DeleteArtifactResponse
@@ -1154,6 +1162,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deletes a service instance.
+         *
          * @param request DeleteServiceInstancesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteServiceInstancesResponse
@@ -1194,6 +1204,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deletes a service instance.
+         *
          * @param request DeleteServiceInstancesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteServiceInstancesResponse
@@ -1234,6 +1246,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deletes a service instance.
+         *
          * @param request DeleteServiceInstancesRequest
          * @return DeleteServiceInstancesResponse
          */
@@ -1244,6 +1258,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deletes a service instance.
+         *
          * @param request DeleteServiceInstancesRequest
          * @return DeleteServiceInstancesResponse
          */
@@ -1254,6 +1270,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deploys a service instance.
+         *
          * @param request DeployServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeployServiceInstanceResponse
@@ -1294,6 +1312,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deploys a service instance.
+         *
          * @param request DeployServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeployServiceInstanceResponse
@@ -1334,6 +1354,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deploys a service instance.
+         *
          * @param request DeployServiceInstanceRequest
          * @return DeployServiceInstanceResponse
          */
@@ -1344,6 +1366,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deploys a service instance.
+         *
          * @param request DeployServiceInstanceRequest
          * @return DeployServiceInstanceResponse
          */
@@ -1354,7 +1378,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取部署物信息
+         * @summary Queries the information about a deployment package.
          *
          * @param request GetArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1396,7 +1420,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取部署物信息
+         * @summary Queries the information about a deployment package.
          *
          * @param request GetArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1438,7 +1462,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取部署物信息
+         * @summary Queries the information about a deployment package.
          *
          * @param request GetArtifactRequest
          * @return GetArtifactResponse
@@ -1450,7 +1474,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取部署物信息
+         * @summary Queries the information about a deployment package.
          *
          * @param request GetArtifactRequest
          * @return GetArtifactResponse
@@ -1462,7 +1486,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取部署物仓库访问凭证
+         * @summary Queries the credentials that are required to upload a deployment package.
          *
          * @param request GetArtifactRepositoryCredentialsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1500,7 +1524,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取部署物仓库访问凭证
+         * @summary Queries the credentials that are required to upload a deployment package.
          *
          * @param request GetArtifactRepositoryCredentialsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1538,7 +1562,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取部署物仓库访问凭证
+         * @summary Queries the credentials that are required to upload a deployment package.
          *
          * @param request GetArtifactRepositoryCredentialsRequest
          * @return GetArtifactRepositoryCredentialsResponse
@@ -1550,7 +1574,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取部署物仓库访问凭证
+         * @summary Queries the credentials that are required to upload a deployment package.
          *
          * @param request GetArtifactRepositoryCredentialsRequest
          * @return GetArtifactRepositoryCredentialsResponse
@@ -1562,7 +1586,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 查询服务详情
+         * @summary Queries the information about a service.
          *
          * @param request GetServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1616,7 +1640,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 查询服务详情
+         * @summary Queries the information about a service.
          *
          * @param request GetServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1670,7 +1694,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 查询服务详情
+         * @summary Queries the information about a service.
          *
          * @param request GetServiceRequest
          * @return GetServiceResponse
@@ -1682,7 +1706,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 查询服务详情
+         * @summary Queries the information about a service.
          *
          * @param request GetServiceRequest
          * @return GetServiceResponse
@@ -1694,7 +1718,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 计算巢服务部署询价
+         * @summary Queries the estimated price for creating a service instance.
          *
          * @param tmpReq GetServiceEstimateCostRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1770,7 +1794,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 计算巢服务部署询价
+         * @summary Queries the estimated price for creating a service instance.
          *
          * @param tmpReq GetServiceEstimateCostRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1846,7 +1870,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 计算巢服务部署询价
+         * @summary Queries the estimated price for creating a service instance.
          *
          * @param request GetServiceEstimateCostRequest
          * @return GetServiceEstimateCostResponse
@@ -1858,7 +1882,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 计算巢服务部署询价
+         * @summary Queries the estimated price for creating a service instance.
          *
          * @param request GetServiceEstimateCostRequest
          * @return GetServiceEstimateCostResponse
@@ -1870,6 +1894,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Queries the information about a service instance.
+         *
          * @param request GetServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetServiceInstanceResponse
@@ -1906,6 +1932,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Queries the information about a service instance.
+         *
          * @param request GetServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetServiceInstanceResponse
@@ -1942,6 +1970,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Queries the information about a service instance.
+         *
          * @param request GetServiceInstanceRequest
          * @return GetServiceInstanceResponse
          */
@@ -1952,6 +1982,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Queries the information about a service instance.
+         *
          * @param request GetServiceInstanceRequest
          * @return GetServiceInstanceResponse
          */
@@ -1962,7 +1994,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取ROS模板参数限制
+         * @summary Queries the valid values of parameters in a Resource Orchestration Service (ROS) template.
          *
          * @param request GetServiceTemplateParameterConstraintsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2028,7 +2060,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取ROS模板参数限制
+         * @summary Queries the valid values of parameters in a Resource Orchestration Service (ROS) template.
          *
          * @param request GetServiceTemplateParameterConstraintsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2094,7 +2126,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取ROS模板参数限制
+         * @summary Queries the valid values of parameters in a Resource Orchestration Service (ROS) template.
          *
          * @param request GetServiceTemplateParameterConstraintsRequest
          * @return GetServiceTemplateParameterConstraintsResponse
@@ -2106,7 +2138,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 获取ROS模板参数限制
+         * @summary Queries the valid values of parameters in a Resource Orchestration Service (ROS) template.
          *
          * @param request GetServiceTemplateParameterConstraintsRequest
          * @return GetServiceTemplateParameterConstraintsResponse
@@ -2118,6 +2150,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Obtain the AccessKey pair of uploaded files.
+         *
          * @param request GetUploadCredentialsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetUploadCredentialsResponse
@@ -2154,6 +2188,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Obtain the AccessKey pair of uploaded files.
+         *
          * @param request GetUploadCredentialsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetUploadCredentialsResponse
@@ -2190,6 +2226,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Obtain the AccessKey pair of uploaded files.
+         *
          * @param request GetUploadCredentialsRequest
          * @return GetUploadCredentialsResponse
          */
@@ -2200,6 +2238,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Obtain the AccessKey pair of uploaded files.
+         *
          * @param request GetUploadCredentialsRequest
          * @return GetUploadCredentialsResponse
          */
@@ -2210,7 +2250,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries a list of images uploaded to Container Registry.
          *
          * @param request ListAcrImageRepositoriesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2256,7 +2296,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries a list of images uploaded to Container Registry.
          *
          * @param request ListAcrImageRepositoriesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2302,7 +2342,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries a list of images uploaded to Container Registry.
          *
          * @param request ListAcrImageRepositoriesRequest
          * @return ListAcrImageRepositoriesResponse
@@ -2314,7 +2354,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries a list of images uploaded to Container Registry.
          *
          * @param request ListAcrImageRepositoriesRequest
          * @return ListAcrImageRepositoriesResponse
@@ -2326,7 +2366,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries the versions of images that are uploaded to the image repository.
          *
          * @param request ListAcrImageTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2372,7 +2412,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries the versions of images that are uploaded to the image repository.
          *
          * @param request ListAcrImageTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2418,7 +2458,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries the versions of images that are uploaded to the image repository.
          *
          * @param request ListAcrImageTagsRequest
          * @return ListAcrImageTagsResponse
@@ -2430,7 +2470,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries the versions of images that are uploaded to the image repository.
          *
          * @param request ListAcrImageTagsRequest
          * @return ListAcrImageTagsResponse
@@ -2442,7 +2482,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物版本
+         * @summary Queries the version information about a deployment package.
          *
          * @param request ListArtifactVersionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2484,7 +2524,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物版本
+         * @summary Queries the version information about a deployment package.
          *
          * @param request ListArtifactVersionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2526,7 +2566,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物版本
+         * @summary Queries the version information about a deployment package.
          *
          * @param request ListArtifactVersionsRequest
          * @return ListArtifactVersionsResponse
@@ -2538,7 +2578,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物版本
+         * @summary Queries the version information about a deployment package.
          *
          * @param request ListArtifactVersionsRequest
          * @return ListArtifactVersionsResponse
@@ -2550,7 +2590,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries a list of deployment packages.
          *
          * @param request ListArtifactsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2600,7 +2640,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries a list of deployment packages.
          *
          * @param request ListArtifactsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2650,7 +2690,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries a list of deployment packages.
          *
          * @param request ListArtifactsRequest
          * @return ListArtifactsResponse
@@ -2662,7 +2702,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 展示部署物
+         * @summary Queries a list of deployment packages.
          *
          * @param request ListArtifactsRequest
          * @return ListArtifactsResponse
@@ -2674,6 +2714,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Queries a list of service instances.
+         *
          * @param request ListServiceInstancesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListServiceInstancesResponse
@@ -2730,6 +2772,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Queries a list of service instances.
+         *
          * @param request ListServiceInstancesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListServiceInstancesResponse
@@ -2786,6 +2830,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Queries a list of service instances.
+         *
          * @param request ListServiceInstancesRequest
          * @return ListServiceInstancesResponse
          */
@@ -2796,6 +2842,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Queries a list of service instances.
+         *
          * @param request ListServiceInstancesRequest
          * @return ListServiceInstancesResponse
          */
@@ -2806,7 +2854,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 商家获取服务使用申请接口
+         * @summary Queries the applications for using a service.
          *
          * @param request ListServiceUsagesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2852,7 +2900,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 商家获取服务使用申请接口
+         * @summary Queries the applications for using a service.
          *
          * @param request ListServiceUsagesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2898,7 +2946,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 商家获取服务使用申请接口
+         * @summary Queries the applications for using a service.
          *
          * @param request ListServiceUsagesRequest
          * @return ListServiceUsagesResponse
@@ -2910,7 +2958,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 商家获取服务使用申请接口
+         * @summary Queries the applications for using a service.
          *
          * @param request ListServiceUsagesRequest
          * @return ListServiceUsagesResponse
@@ -2922,7 +2970,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 查询服务
+         * @summary Queries a list of services.
          *
          * @param request ListServicesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2980,7 +3028,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 查询服务
+         * @summary Queries a list of services.
          *
          * @param request ListServicesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3038,7 +3086,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 查询服务
+         * @summary Queries a list of services.
          *
          * @param request ListServicesRequest
          * @return ListServicesResponse
@@ -3050,7 +3098,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 查询服务
+         * @summary Queries a list of services.
          *
          * @param request ListServicesRequest
          * @return ListServicesResponse
@@ -3062,7 +3110,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 修改服务实例资源
+         * @summary Modifies the resource information about a service instance.
          *
          * @param request ModifyServiceInstanceResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3104,7 +3152,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 修改服务实例资源
+         * @summary Modifies the resource information about a service instance.
          *
          * @param request ModifyServiceInstanceResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3146,7 +3194,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 修改服务实例资源
+         * @summary Modifies the resource information about a service instance.
          *
          * @param request ModifyServiceInstanceResourcesRequest
          * @return ModifyServiceInstanceResourcesResponse
@@ -3158,7 +3206,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 修改服务实例资源
+         * @summary Modifies the resource information about a service instance.
          *
          * @param request ModifyServiceInstanceResourcesRequest
          * @return ModifyServiceInstanceResourcesResponse
@@ -3170,6 +3218,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Pushes metering data of an Alibaba Cloud Marketplace commodity.
+         *
          * @param request PushMeteringDataRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return PushMeteringDataResponse
@@ -3206,6 +3256,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Pushes metering data of an Alibaba Cloud Marketplace commodity.
+         *
          * @param request PushMeteringDataRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return PushMeteringDataResponse
@@ -3242,6 +3294,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Pushes metering data of an Alibaba Cloud Marketplace commodity.
+         *
          * @param request PushMeteringDataRequest
          * @return PushMeteringDataResponse
          */
@@ -3252,6 +3306,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Pushes metering data of an Alibaba Cloud Marketplace commodity.
+         *
          * @param request PushMeteringDataRequest
          * @return PushMeteringDataResponse
          */
@@ -3262,6 +3318,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Registers an artifact.
+         *
          * @param request RegisterServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return RegisterServiceResponse
@@ -3302,6 +3360,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Registers an artifact.
+         *
          * @param request RegisterServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return RegisterServiceResponse
@@ -3342,6 +3402,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Registers an artifact.
+         *
          * @param request RegisterServiceRequest
          * @return RegisterServiceResponse
          */
@@ -3352,6 +3414,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Registers an artifact.
+         *
          * @param request RegisterServiceRequest
          * @return RegisterServiceResponse
          */
@@ -3454,7 +3518,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 重启服务实例
+         * @summary When the service instance is Deployed, call the RestartServiceInstance interface to restart the service instance.
          *
          * @param request RestartServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3496,7 +3560,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 重启服务实例
+         * @summary When the service instance is Deployed, call the RestartServiceInstance interface to restart the service instance.
          *
          * @param request RestartServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3538,7 +3602,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 重启服务实例
+         * @summary When the service instance is Deployed, call the RestartServiceInstance interface to restart the service instance.
          *
          * @param request RestartServiceInstanceRequest
          * @return RestartServiceInstanceResponse
@@ -3550,7 +3614,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 重启服务实例
+         * @summary When the service instance is Deployed, call the RestartServiceInstance interface to restart the service instance.
          *
          * @param request RestartServiceInstanceRequest
          * @return RestartServiceInstanceResponse
@@ -3562,7 +3626,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 启动服务实例
+         * @summary When the service instance status is Stopped (Stopped) or StartFailed (Startup failed), the StartServiceInstance interface is invoked to start the service instance.
          *
          * @param request StartServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3604,7 +3668,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 启动服务实例
+         * @summary When the service instance status is Stopped (Stopped) or StartFailed (Startup failed), the StartServiceInstance interface is invoked to start the service instance.
          *
          * @param request StartServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3646,7 +3710,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 启动服务实例
+         * @summary When the service instance status is Stopped (Stopped) or StartFailed (Startup failed), the StartServiceInstance interface is invoked to start the service instance.
          *
          * @param request StartServiceInstanceRequest
          * @return StartServiceInstanceResponse
@@ -3658,7 +3722,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 启动服务实例
+         * @summary When the service instance status is Stopped (Stopped) or StartFailed (Startup failed), the StartServiceInstance interface is invoked to start the service instance.
          *
          * @param request StartServiceInstanceRequest
          * @return StartServiceInstanceResponse
@@ -3670,7 +3734,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 停止服务实例
+         * @summary When the service instance is Deployed and StopFailed, call the StopServiceInstance interface to stop the service instance.
          *
          * @param request StopServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3712,7 +3776,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 停止服务实例
+         * @summary When the service instance is Deployed and StopFailed, call the StopServiceInstance interface to stop the service instance.
          *
          * @param request StopServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3754,7 +3818,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 停止服务实例
+         * @summary When the service instance is Deployed and StopFailed, call the StopServiceInstance interface to stop the service instance.
          *
          * @param request StopServiceInstanceRequest
          * @return StopServiceInstanceResponse
@@ -3766,7 +3830,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 停止服务实例
+         * @summary When the service instance is Deployed and StopFailed, call the StopServiceInstance interface to stop the service instance.
          *
          * @param request StopServiceInstanceRequest
          * @return StopServiceInstanceResponse
@@ -3778,7 +3842,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 更新部署物
+         * @summary Updates a deployment package.
          *
          * @param tmpReq UpdateArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3834,7 +3898,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 更新部署物
+         * @summary Updates a deployment package.
          *
          * @param tmpReq UpdateArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3890,7 +3954,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 更新部署物
+         * @summary Updates a deployment package.
          *
          * @param request UpdateArtifactRequest
          * @return UpdateArtifactResponse
@@ -3902,7 +3966,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 更新部署物
+         * @summary Updates a deployment package.
          *
          * @param request UpdateArtifactRequest
          * @return UpdateArtifactResponse
@@ -3914,6 +3978,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Upgrades a service.
+         *
          * @param tmpReq UpdateServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateServiceResponse
@@ -3923,6 +3989,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateServiceShrinkRequest request = new UpdateServiceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Commodity))
+            {
+                request.CommodityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Commodity, "Commodity", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateOption))
             {
                 request.UpdateOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateOption, "UpdateOption", "json");
@@ -3939,6 +4009,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityShrink))
+            {
+                query["Commodity"] = request.CommodityShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMetadata))
             {
@@ -4040,6 +4114,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Upgrades a service.
+         *
          * @param tmpReq UpdateServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateServiceResponse
@@ -4049,6 +4125,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateServiceShrinkRequest request = new UpdateServiceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Commodity))
+            {
+                request.CommodityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Commodity, "Commodity", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateOption))
             {
                 request.UpdateOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateOption, "UpdateOption", "json");
@@ -4065,6 +4145,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityShrink))
+            {
+                query["Commodity"] = request.CommodityShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMetadata))
             {
@@ -4166,6 +4250,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Upgrades a service.
+         *
          * @param request UpdateServiceRequest
          * @return UpdateServiceResponse
          */
@@ -4176,6 +4262,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Upgrades a service.
+         *
          * @param request UpdateServiceRequest
          * @return UpdateServiceResponse
          */
@@ -4186,19 +4274,29 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 更新服务实例属性
+         * @summary Updates the properties of a service instance.
          *
-         * @param request UpdateServiceInstanceAttributeRequest
+         * @param tmpReq UpdateServiceInstanceAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateServiceInstanceAttributeResponse
          */
-        public UpdateServiceInstanceAttributeResponse UpdateServiceInstanceAttributeWithOptions(UpdateServiceInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateServiceInstanceAttributeResponse UpdateServiceInstanceAttributeWithOptions(UpdateServiceInstanceAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateServiceInstanceAttributeShrinkRequest request = new UpdateServiceInstanceAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LicenseData))
+            {
+                request.LicenseDataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LicenseData, "LicenseData", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseDataShrink))
+            {
+                query["LicenseData"] = request.LicenseDataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4228,19 +4326,29 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 更新服务实例属性
+         * @summary Updates the properties of a service instance.
          *
-         * @param request UpdateServiceInstanceAttributeRequest
+         * @param tmpReq UpdateServiceInstanceAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateServiceInstanceAttributeResponse
          */
-        public async Task<UpdateServiceInstanceAttributeResponse> UpdateServiceInstanceAttributeWithOptionsAsync(UpdateServiceInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateServiceInstanceAttributeResponse> UpdateServiceInstanceAttributeWithOptionsAsync(UpdateServiceInstanceAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateServiceInstanceAttributeShrinkRequest request = new UpdateServiceInstanceAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LicenseData))
+            {
+                request.LicenseDataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LicenseData, "LicenseData", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseDataShrink))
+            {
+                query["LicenseData"] = request.LicenseDataShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4270,7 +4378,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 更新服务实例属性
+         * @summary Updates the properties of a service instance.
          *
          * @param request UpdateServiceInstanceAttributeRequest
          * @return UpdateServiceInstanceAttributeResponse
@@ -4282,7 +4390,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 更新服务实例属性
+         * @summary Updates the properties of a service instance.
          *
          * @param request UpdateServiceInstanceAttributeRequest
          * @return UpdateServiceInstanceAttributeResponse
@@ -4438,6 +4546,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Upgrades a service instance.
+         *
          * @param tmpReq UpgradeServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpgradeServiceInstanceResponse
@@ -4496,6 +4606,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Upgrades a service instance.
+         *
          * @param tmpReq UpgradeServiceInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpgradeServiceInstanceResponse
@@ -4554,6 +4666,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Upgrades a service instance.
+         *
          * @param request UpgradeServiceInstanceRequest
          * @return UpgradeServiceInstanceResponse
          */
@@ -4564,6 +4678,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Upgrades a service instance.
+         *
          * @param request UpgradeServiceInstanceRequest
          * @return UpgradeServiceInstanceResponse
          */
