@@ -1020,6 +1020,222 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 清理某个用户在某个集群的证书以及权限
+         *
+         * @param request CleanClusterUserPermissionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CleanClusterUserPermissionsResponse
+         */
+        public CleanClusterUserPermissionsResponse CleanClusterUserPermissionsWithOptions(string ClusterId, string Uid, CleanClusterUserPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CleanClusterUserPermissions",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/cluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/user/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Uid) + "/permissions",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CleanClusterUserPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 清理某个用户在某个集群的证书以及权限
+         *
+         * @param request CleanClusterUserPermissionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CleanClusterUserPermissionsResponse
+         */
+        public async Task<CleanClusterUserPermissionsResponse> CleanClusterUserPermissionsWithOptionsAsync(string ClusterId, string Uid, CleanClusterUserPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CleanClusterUserPermissions",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/cluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/user/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Uid) + "/permissions",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CleanClusterUserPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 清理某个用户在某个集群的证书以及权限
+         *
+         * @param request CleanClusterUserPermissionsRequest
+         * @return CleanClusterUserPermissionsResponse
+         */
+        public CleanClusterUserPermissionsResponse CleanClusterUserPermissions(string ClusterId, string Uid, CleanClusterUserPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CleanClusterUserPermissionsWithOptions(ClusterId, Uid, request, headers, runtime);
+        }
+
+        /**
+         * @summary 清理某个用户在某个集群的证书以及权限
+         *
+         * @param request CleanClusterUserPermissionsRequest
+         * @return CleanClusterUserPermissionsResponse
+         */
+        public async Task<CleanClusterUserPermissionsResponse> CleanClusterUserPermissionsAsync(string ClusterId, string Uid, CleanClusterUserPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CleanClusterUserPermissionsWithOptionsAsync(ClusterId, Uid, request, headers, runtime);
+        }
+
+        /**
+         * @summary 清除某个用户的证书以及相关RBAC权限
+         *
+         * @param tmpReq CleanUserPermissionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CleanUserPermissionsResponse
+         */
+        public CleanUserPermissionsResponse CleanUserPermissionsWithOptions(string Uid, CleanUserPermissionsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CleanUserPermissionsShrinkRequest request = new CleanUserPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ClusterIds))
+            {
+                request.ClusterIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ClusterIds, "ClusterIds", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterIdsShrink))
+            {
+                query["ClusterIds"] = request.ClusterIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CleanUserPermissions",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/users/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Uid) + "/permissions",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CleanUserPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 清除某个用户的证书以及相关RBAC权限
+         *
+         * @param tmpReq CleanUserPermissionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CleanUserPermissionsResponse
+         */
+        public async Task<CleanUserPermissionsResponse> CleanUserPermissionsWithOptionsAsync(string Uid, CleanUserPermissionsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CleanUserPermissionsShrinkRequest request = new CleanUserPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ClusterIds))
+            {
+                request.ClusterIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ClusterIds, "ClusterIds", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterIdsShrink))
+            {
+                query["ClusterIds"] = request.ClusterIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CleanUserPermissions",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/users/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Uid) + "/permissions",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CleanUserPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 清除某个用户的证书以及相关RBAC权限
+         *
+         * @param request CleanUserPermissionsRequest
+         * @return CleanUserPermissionsResponse
+         */
+        public CleanUserPermissionsResponse CleanUserPermissions(string Uid, CleanUserPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CleanUserPermissionsWithOptions(Uid, request, headers, runtime);
+        }
+
+        /**
+         * @summary 清除某个用户的证书以及相关RBAC权限
+         *
+         * @param request CleanUserPermissionsRequest
+         * @return CleanUserPermissionsResponse
+         */
+        public async Task<CleanUserPermissionsResponse> CleanUserPermissionsAsync(string Uid, CleanUserPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CleanUserPermissionsWithOptionsAsync(Uid, request, headers, runtime);
+        }
+
+        /**
          * @summary Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.
          *
          * @param request CreateAutoscalingConfigRequest
@@ -9928,6 +10144,112 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 获取当前集群已下发的用户Kubeconfig的状态列表
+         *
+         * @param request ListClusterKubeconfigStatesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListClusterKubeconfigStatesResponse
+         */
+        public ListClusterKubeconfigStatesResponse ListClusterKubeconfigStatesWithOptions(string ClusterId, ListClusterKubeconfigStatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListClusterKubeconfigStates",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/kubeconfig/states",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListClusterKubeconfigStatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取当前集群已下发的用户Kubeconfig的状态列表
+         *
+         * @param request ListClusterKubeconfigStatesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListClusterKubeconfigStatesResponse
+         */
+        public async Task<ListClusterKubeconfigStatesResponse> ListClusterKubeconfigStatesWithOptionsAsync(string ClusterId, ListClusterKubeconfigStatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListClusterKubeconfigStates",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/kubeconfig/states",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListClusterKubeconfigStatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取当前集群已下发的用户Kubeconfig的状态列表
+         *
+         * @param request ListClusterKubeconfigStatesRequest
+         * @return ListClusterKubeconfigStatesResponse
+         */
+        public ListClusterKubeconfigStatesResponse ListClusterKubeconfigStates(string ClusterId, ListClusterKubeconfigStatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListClusterKubeconfigStatesWithOptions(ClusterId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取当前集群已下发的用户Kubeconfig的状态列表
+         *
+         * @param request ListClusterKubeconfigStatesRequest
+         * @return ListClusterKubeconfigStatesResponse
+         */
+        public async Task<ListClusterKubeconfigStatesResponse> ListClusterKubeconfigStatesAsync(string ClusterId, ListClusterKubeconfigStatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListClusterKubeconfigStatesWithOptionsAsync(ClusterId, request, headers, runtime);
+        }
+
+        /**
          * @summary 获取自动运维执行计划列表
          *
          * @param request ListOperationPlansRequest
@@ -10181,6 +10503,112 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 查询单用户所有集群的证书状态
+         *
+         * @param request ListUserKubeConfigStatesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUserKubeConfigStatesResponse
+         */
+        public ListUserKubeConfigStatesResponse ListUserKubeConfigStatesWithOptions(string Uid, ListUserKubeConfigStatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["page_number"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserKubeConfigStates",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/users/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Uid) + "/kubeconfig/states",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserKubeConfigStatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询单用户所有集群的证书状态
+         *
+         * @param request ListUserKubeConfigStatesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUserKubeConfigStatesResponse
+         */
+        public async Task<ListUserKubeConfigStatesResponse> ListUserKubeConfigStatesWithOptionsAsync(string Uid, ListUserKubeConfigStatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["page_number"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserKubeConfigStates",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/users/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Uid) + "/kubeconfig/states",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserKubeConfigStatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询单用户所有集群的证书状态
+         *
+         * @param request ListUserKubeConfigStatesRequest
+         * @return ListUserKubeConfigStatesResponse
+         */
+        public ListUserKubeConfigStatesResponse ListUserKubeConfigStates(string Uid, ListUserKubeConfigStatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListUserKubeConfigStatesWithOptions(Uid, request, headers, runtime);
+        }
+
+        /**
+         * @summary 查询单用户所有集群的证书状态
+         *
+         * @param request ListUserKubeConfigStatesRequest
+         * @return ListUserKubeConfigStatesResponse
+         */
+        public async Task<ListUserKubeConfigStatesResponse> ListUserKubeConfigStatesAsync(string Uid, ListUserKubeConfigStatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListUserKubeConfigStatesWithOptionsAsync(Uid, request, headers, runtime);
         }
 
         /**
