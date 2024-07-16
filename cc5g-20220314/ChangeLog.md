@@ -1,3 +1,10 @@
+2024-07-16 Version: 2.1.0
+- Support API GetCreateCustomerInfomation.
+- Support API InnerLimitRateCards.
+- Support API InnerStopCards.
+- Update API GetDiagnoseResultForSingleCard: update response param.
+
+
 2022-11-07 Version: 2.0.5
 - Cc5g.
 

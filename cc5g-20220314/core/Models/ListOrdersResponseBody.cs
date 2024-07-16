@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public List<ListOrdersResponseBodyOrders> Orders { get; set; }
         public class ListOrdersResponseBodyOrders : TeaModel {
+            /// <summary>
+            /// 代表创建时间的资源属性字段
+            /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
@@ -85,6 +88,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// 代表资源名称的资源属性字段
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

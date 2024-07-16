@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public List<ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules> GroupAuthorizationRules { get; set; }
         public class ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules : TeaModel {
+            /// <summary>
+            /// 代表资源一级ID的资源属性字段
+            /// </summary>
             [NameInMap("AuthorizationRuleId")]
             [Validation(Required=false)]
             public string AuthorizationRuleId { get; set; }
@@ -41,6 +44,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public bool? Dns { get; set; }
 
+            /// <summary>
+            /// 代表创建时间的资源属性字段
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -57,6 +63,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string SourceCidr { get; set; }
 
+            /// <summary>
+            /// 代表资源名称的资源属性字段
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

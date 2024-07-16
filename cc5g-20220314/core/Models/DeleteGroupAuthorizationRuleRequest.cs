@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class DeleteGroupAuthorizationRuleRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuthorizationRuleId")]
         [Validation(Required=false)]
         public string AuthorizationRuleId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WirelessCloudConnectorGroupId")]
         [Validation(Required=false)]
         public string WirelessCloudConnectorGroupId { get; set; }

@@ -37,6 +37,24 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("SubItems")]
+            [Validation(Required=false)]
+            public List<GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems> SubItems { get; set; }
+            public class GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems : TeaModel {
+                [NameInMap("SubItem")]
+                [Validation(Required=false)]
+                public string SubItem { get; set; }
+
+                [NameInMap("SubItemInfo")]
+                [Validation(Required=false)]
+                public string SubItemInfo { get; set; }
+
+                [NameInMap("SubItemStatus")]
+                [Validation(Required=false)]
+                public string SubItemStatus { get; set; }
+
+            }
+
         }
 
         [NameInMap("EndTime")]
@@ -50,6 +68,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [NameInMap("ErrorDesc")]
             [Validation(Required=false)]
             public string ErrorDesc { get; set; }
+
+            [NameInMap("ErrorItem")]
+            [Validation(Required=false)]
+            public string ErrorItem { get; set; }
 
             [NameInMap("ErrorLevel")]
             [Validation(Required=false)]

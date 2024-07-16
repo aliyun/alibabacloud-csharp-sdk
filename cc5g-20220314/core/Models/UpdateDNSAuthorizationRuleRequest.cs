@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class UpdateDNSAuthorizationRuleRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuthorizationRuleId")]
         [Validation(Required=false)]
         public string AuthorizationRuleId { get; set; }
@@ -37,6 +40,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string SourceDNSIp { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WirelessCloudConnectorId")]
         [Validation(Required=false)]
         public string WirelessCloudConnectorId { get; set; }

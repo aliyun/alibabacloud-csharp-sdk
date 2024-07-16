@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class UpdateBatchOperateCardsTaskRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BatchOperateCardsTaskId")]
         [Validation(Required=false)]
         public string BatchOperateCardsTaskId { get; set; }

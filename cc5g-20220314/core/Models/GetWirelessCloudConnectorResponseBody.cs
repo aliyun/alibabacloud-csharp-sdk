@@ -65,10 +65,16 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string ISP { get; set; }
 
+            /// <summary>
+            /// 代表创建时间的资源属性字段
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// 代表资源名称的资源属性字段
+            /// </summary>
             [NameInMap("NetLinkId")]
             [Validation(Required=false)]
             public string NetLinkId { get; set; }
@@ -80,6 +86,10 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
             [NameInMap("VSwitchs")]
             [Validation(Required=false)]

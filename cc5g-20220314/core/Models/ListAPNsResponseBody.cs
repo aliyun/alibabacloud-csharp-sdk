@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public List<ListAPNsResponseBodyAPNs> APNs { get; set; }
         public class ListAPNsResponseBodyAPNs : TeaModel {
+            /// <summary>
+            /// 代表资源名称的资源属性字段
+            /// </summary>
             [NameInMap("APN")]
             [Validation(Required=false)]
             public string APN { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// 代表资源一级ID的资源属性字段
+            /// </summary>
             [NameInMap("ISP")]
             [Validation(Required=false)]
             public string ISP { get; set; }
 
+            /// <summary>
+            /// 代表创建时间的资源属性字段
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

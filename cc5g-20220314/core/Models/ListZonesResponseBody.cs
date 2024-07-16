@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public List<ListZonesResponseBodyZones> Zones { get; set; }
         public class ListZonesResponseBodyZones : TeaModel {
+            /// <summary>
+            /// 代表创建时间的资源属性字段
+            /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
+            /// <summary>
+            /// 代表资源名称的资源属性字段
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }

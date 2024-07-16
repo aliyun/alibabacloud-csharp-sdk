@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EffectType")]
         [Validation(Required=false)]
         public string EffectType { get; set; }
@@ -37,6 +40,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OperateType")]
         [Validation(Required=false)]
         public string OperateType { get; set; }
@@ -45,6 +51,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]
         public long? Threshold { get; set; }

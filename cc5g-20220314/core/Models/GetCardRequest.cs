@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class GetCardRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Iccid")]
         [Validation(Required=false)]
         public string Iccid { get; set; }

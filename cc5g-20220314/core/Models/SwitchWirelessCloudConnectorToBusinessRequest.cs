@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WirelessCloudConnectorId")]
         [Validation(Required=false)]
         public string WirelessCloudConnectorId { get; set; }

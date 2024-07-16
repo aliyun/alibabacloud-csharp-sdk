@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public List<ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasks> BatchOperateCardsTasks { get; set; }
         public class ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasks : TeaModel {
+            /// <summary>
+            /// 代表资源一级ID的资源属性字段
+            /// </summary>
             [NameInMap("BatchOperateCardsTaskId")]
             [Validation(Required=false)]
             public string BatchOperateCardsTaskId { get; set; }
@@ -41,6 +44,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string OperateResultOssFilePath { get; set; }
 
+            /// <summary>
+            /// 代表创建时间的资源属性字段
+            /// </summary>
             [NameInMap("OperateType")]
             [Validation(Required=false)]
             public string OperateType { get; set; }

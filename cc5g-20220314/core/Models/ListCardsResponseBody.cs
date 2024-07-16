@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public List<ListCardsResponseBodyCards> Cards { get; set; }
         public class ListCardsResponseBodyCards : TeaModel {
+            /// <summary>
+            /// 代表创建时间的资源属性字段
+            /// </summary>
             [NameInMap("APN")]
             [Validation(Required=false)]
             public string APN { get; set; }
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string ISP { get; set; }
 
+            /// <summary>
+            /// 代表资源一级ID的资源属性字段
+            /// </summary>
             [NameInMap("Iccid")]
             [Validation(Required=false)]
             public string Iccid { get; set; }
@@ -61,6 +67,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// 代表资源名称的资源属性字段
+            /// </summary>
             [NameInMap("NetType")]
             [Validation(Required=false)]
             public string NetType { get; set; }

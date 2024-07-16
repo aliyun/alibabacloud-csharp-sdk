@@ -29,10 +29,16 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SourceDNSIp")]
         [Validation(Required=false)]
         public string SourceDNSIp { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WirelessCloudConnectorGroupId")]
         [Validation(Required=false)]
         public string WirelessCloudConnectorGroupId { get; set; }

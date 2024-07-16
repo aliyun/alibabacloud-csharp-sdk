@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class GetDiagnoseResultForSingleCardRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DiagnoseTaskId")]
         [Validation(Required=false)]
         public string DiagnoseTaskId { get; set; }

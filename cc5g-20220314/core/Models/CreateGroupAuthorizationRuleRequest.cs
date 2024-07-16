@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Destination")]
         [Validation(Required=false)]
         public string Destination { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string DestinationPort { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
         public string DestinationType { get; set; }
@@ -37,6 +43,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
@@ -49,6 +58,9 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
         [Validation(Required=false)]
         public string SourceCidr { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WirelessCloudConnectorGroupId")]
         [Validation(Required=false)]
         public string WirelessCloudConnectorGroupId { get; set; }

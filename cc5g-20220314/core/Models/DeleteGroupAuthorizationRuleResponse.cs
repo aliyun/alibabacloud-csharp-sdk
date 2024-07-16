@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.CC5G20220314.Models
 {
     public class DeleteGroupAuthorizationRuleResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DeleteGroupAuthorizationRuleResponseBody Body { get; set; }
 
     }
