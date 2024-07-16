@@ -512,6 +512,222 @@ namespace AlibabaCloud.SDK.Bailian20231229
         }
 
         /**
+         * @summary 删除Index
+         *
+         * @param request DeleteIndexRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteIndexResponse
+         */
+        public DeleteIndexResponse DeleteIndexWithOptions(string WorkspaceId, DeleteIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndex",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIndexResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除Index
+         *
+         * @param request DeleteIndexRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteIndexResponse
+         */
+        public async Task<DeleteIndexResponse> DeleteIndexWithOptionsAsync(string WorkspaceId, DeleteIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndex",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIndexResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除Index
+         *
+         * @param request DeleteIndexRequest
+         * @return DeleteIndexResponse
+         */
+        public DeleteIndexResponse DeleteIndex(string WorkspaceId, DeleteIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteIndexWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除Index
+         *
+         * @param request DeleteIndexRequest
+         * @return DeleteIndexResponse
+         */
+        public async Task<DeleteIndexResponse> DeleteIndexAsync(string WorkspaceId, DeleteIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteIndexWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除index doc
+         *
+         * @param tmpReq DeleteIndexDocumentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteIndexDocumentResponse
+         */
+        public DeleteIndexDocumentResponse DeleteIndexDocumentWithOptions(string WorkspaceId, DeleteIndexDocumentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteIndexDocumentShrinkRequest request = new DeleteIndexDocumentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocumentIds))
+            {
+                request.DocumentIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentIds, "DocumentIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIdsShrink))
+            {
+                query["DocumentIds"] = request.DocumentIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndexDocument",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/delete_index_document",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIndexDocumentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除index doc
+         *
+         * @param tmpReq DeleteIndexDocumentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteIndexDocumentResponse
+         */
+        public async Task<DeleteIndexDocumentResponse> DeleteIndexDocumentWithOptionsAsync(string WorkspaceId, DeleteIndexDocumentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteIndexDocumentShrinkRequest request = new DeleteIndexDocumentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocumentIds))
+            {
+                request.DocumentIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentIds, "DocumentIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIdsShrink))
+            {
+                query["DocumentIds"] = request.DocumentIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndexDocument",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/delete_index_document",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIndexDocumentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除index doc
+         *
+         * @param request DeleteIndexDocumentRequest
+         * @return DeleteIndexDocumentResponse
+         */
+        public DeleteIndexDocumentResponse DeleteIndexDocument(string WorkspaceId, DeleteIndexDocumentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteIndexDocumentWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除index doc
+         *
+         * @param request DeleteIndexDocumentRequest
+         * @return DeleteIndexDocumentResponse
+         */
+        public async Task<DeleteIndexDocumentResponse> DeleteIndexDocumentAsync(string WorkspaceId, DeleteIndexDocumentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteIndexDocumentWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 获取文档基本信息，包括文档名称、类型、状态等。
          *
          * @param headers map
@@ -695,6 +911,380 @@ namespace AlibabaCloud.SDK.Bailian20231229
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetIndexJobStatusWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary Chunk
+         *
+         * @param request ListChunksRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListChunksResponse
+         */
+        public ListChunksResponse ListChunksWithOptions(string WorkspaceId, ListChunksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filed))
+            {
+                body["Filed"] = request.Filed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                body["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChunks",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/list_chunks",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChunksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Chunk
+         *
+         * @param request ListChunksRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListChunksResponse
+         */
+        public async Task<ListChunksResponse> ListChunksWithOptionsAsync(string WorkspaceId, ListChunksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filed))
+            {
+                body["Filed"] = request.Filed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                body["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChunks",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/list_chunks",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChunksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Chunk
+         *
+         * @param request ListChunksRequest
+         * @return ListChunksResponse
+         */
+        public ListChunksResponse ListChunks(string WorkspaceId, ListChunksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListChunksWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary Chunk
+         *
+         * @param request ListChunksRequest
+         * @return ListChunksResponse
+         */
+        public async Task<ListChunksResponse> ListChunksAsync(string WorkspaceId, ListChunksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListChunksWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 查询Index文件
+         *
+         * @param request ListIndexDocumentsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListIndexDocumentsResponse
+         */
+        public ListIndexDocumentsResponse ListIndexDocumentsWithOptions(string WorkspaceId, ListIndexDocumentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentName))
+            {
+                query["DocumentName"] = request.DocumentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentStatus))
+            {
+                query["DocumentStatus"] = request.DocumentStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIndexDocuments",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/list_index_documents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIndexDocumentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询Index文件
+         *
+         * @param request ListIndexDocumentsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListIndexDocumentsResponse
+         */
+        public async Task<ListIndexDocumentsResponse> ListIndexDocumentsWithOptionsAsync(string WorkspaceId, ListIndexDocumentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentName))
+            {
+                query["DocumentName"] = request.DocumentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentStatus))
+            {
+                query["DocumentStatus"] = request.DocumentStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIndexDocuments",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/list_index_documents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIndexDocumentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询Index文件
+         *
+         * @param request ListIndexDocumentsRequest
+         * @return ListIndexDocumentsResponse
+         */
+        public ListIndexDocumentsResponse ListIndexDocuments(string WorkspaceId, ListIndexDocumentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListIndexDocumentsWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 查询Index文件
+         *
+         * @param request ListIndexDocumentsRequest
+         * @return ListIndexDocumentsResponse
+         */
+        public async Task<ListIndexDocumentsResponse> ListIndexDocumentsAsync(string WorkspaceId, ListIndexDocumentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListIndexDocumentsWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 查询pipeline
+         *
+         * @param request ListIndicesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListIndicesResponse
+         */
+        public ListIndicesResponse ListIndicesWithOptions(string WorkspaceId, ListIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexName))
+            {
+                query["IndexName"] = request.IndexName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIndices",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/list_indices",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIndicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询pipeline
+         *
+         * @param request ListIndicesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListIndicesResponse
+         */
+        public async Task<ListIndicesResponse> ListIndicesWithOptionsAsync(string WorkspaceId, ListIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexName))
+            {
+                query["IndexName"] = request.IndexName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIndices",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/list_indices",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIndicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询pipeline
+         *
+         * @param request ListIndicesRequest
+         * @return ListIndicesResponse
+         */
+        public ListIndicesResponse ListIndices(string WorkspaceId, ListIndicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListIndicesWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 查询pipeline
+         *
+         * @param request ListIndicesRequest
+         * @return ListIndicesResponse
+         */
+        public async Task<ListIndicesResponse> ListIndicesAsync(string WorkspaceId, ListIndicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListIndicesWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
         /**
