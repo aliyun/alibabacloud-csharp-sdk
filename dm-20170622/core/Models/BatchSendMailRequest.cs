@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20170622.Models
 {
     public class BatchSendMailRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
         public int? AddressType { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ReceiversName")]
         [Validation(Required=false)]
         public string ReceiversName { get; set; }
@@ -49,6 +58,9 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public string TagName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }

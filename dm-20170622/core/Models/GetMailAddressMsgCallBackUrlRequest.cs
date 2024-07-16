@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20170622.Models
 {
     public class GetMailAddressMsgCallBackUrlRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MailFrom")]
         [Validation(Required=false)]
         public string MailFrom { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20170622.Models
 {
     public class SingleSendMailV2ShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
         public int? AddressType { get; set; }
@@ -45,6 +51,9 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public string ReplyAddressAlias { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ReplyToAddress")]
         [Validation(Required=false)]
         public bool? ReplyToAddress { get; set; }
@@ -57,6 +66,9 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }
@@ -69,6 +81,9 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public string TextBody { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ToAddress")]
         [Validation(Required=false)]
         public string ToAddress { get; set; }

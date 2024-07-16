@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public string TagDescription { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]
         public string TagName { get; set; }

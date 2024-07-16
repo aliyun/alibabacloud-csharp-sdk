@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20170622.Models
 {
     public class GetTrackListRequest : TeaModel {
+        [NameInMap("AccountName")]
+        [Validation(Required=false)]
+        public string AccountName { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -45,9 +52,16 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("TagName")]
+        [Validation(Required=false)]
+        public string TagName { get; set; }
 
         [NameInMap("Total")]
         [Validation(Required=false)]

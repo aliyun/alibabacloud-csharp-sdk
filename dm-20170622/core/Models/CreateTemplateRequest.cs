@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public int? SmsType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20170622.Models
 {
     public class CreateMailAddressRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Sendtype")]
         [Validation(Required=false)]
         public string Sendtype { get; set; }

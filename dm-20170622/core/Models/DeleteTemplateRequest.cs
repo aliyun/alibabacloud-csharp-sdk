@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public int? TemplateId { get; set; }
