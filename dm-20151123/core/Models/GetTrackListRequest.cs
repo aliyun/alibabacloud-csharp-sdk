@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetTrackListRequest : TeaModel {
+        [NameInMap("AccountName")]
+        [Validation(Required=false)]
+        public string AccountName { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -54,6 +58,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("TagName")]
+        [Validation(Required=false)]
+        public string TagName { get; set; }
 
         [NameInMap("Total")]
         [Validation(Required=false)]
