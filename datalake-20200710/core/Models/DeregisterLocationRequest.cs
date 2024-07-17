@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.DataLake20200710.Models
 {
     public class DeregisterLocationRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LocationId")]
         [Validation(Required=false)]
         public string LocationId { get; set; }

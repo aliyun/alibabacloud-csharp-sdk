@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
     public class DeleteCatalogRequest : TeaModel {
         /// <summary>
         /// CatalogId
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CatalogId")]
         [Validation(Required=false)]

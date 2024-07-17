@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
         [Validation(Required=false)]
         public string CatalogId { get; set; }
 
+        [NameInMap("CatalogType")]
+        [Validation(Required=false)]
+        public string CatalogType { get; set; }
+
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
@@ -21,9 +25,17 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
         [Validation(Required=false)]
         public string CreatedBy { get; set; }
 
+        [NameInMap("DefaultCatalog")]
+        [Validation(Required=false)]
+        public bool? DefaultCatalog { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("JdbcEnabled")]
+        [Validation(Required=false)]
+        public bool? JdbcEnabled { get; set; }
 
         [NameInMap("LocationUri")]
         [Validation(Required=false)]
@@ -36,6 +48,14 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("StorageAccessConfig")]
+        [Validation(Required=false)]
+        public string StorageAccessConfig { get; set; }
+
+        [NameInMap("ThriftEnabled")]
+        [Validation(Required=false)]
+        public bool? ThriftEnabled { get; set; }
 
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]

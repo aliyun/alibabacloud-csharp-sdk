@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
 {
     public class DeleteDatabaseResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DeleteDatabaseResponseBody Body { get; set; }
 
     }

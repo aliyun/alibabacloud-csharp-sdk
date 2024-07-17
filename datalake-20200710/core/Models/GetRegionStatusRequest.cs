@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.DataLake20200710.Models
 {
     public class GetRegionStatusRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

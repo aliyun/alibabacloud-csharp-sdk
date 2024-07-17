@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
         [Validation(Required=false)]
         public bool? InventoryCollectEnabled { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
         [Validation(Required=false)]
         public bool? OssLogCollectEnabled { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]
         public string RoleName { get; set; }

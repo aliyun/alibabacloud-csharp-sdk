@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
     public class UpdateCatalogRequest : TeaModel {
         /// <summary>
         /// cataloginput
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CatalogInput")]
         [Validation(Required=false)]

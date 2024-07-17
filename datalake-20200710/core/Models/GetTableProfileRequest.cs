@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
 
         /// <summary>
         /// DatabaseName
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
 
         /// <summary>
         /// TableName
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

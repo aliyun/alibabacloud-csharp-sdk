@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
 {
     public class CancelQueryResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CancelQueryResponseBody Body { get; set; }
 
     }

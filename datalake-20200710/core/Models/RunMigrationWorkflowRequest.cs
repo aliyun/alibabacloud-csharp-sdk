@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.DataLake20200710.Models
 {
     public class RunMigrationWorkflowRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

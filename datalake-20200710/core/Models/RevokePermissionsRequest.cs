@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.DataLake20200710.Models
 {
     public class RevokePermissionsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Accesses")]
         [Validation(Required=false)]
         public List<string> Accesses { get; set; }
@@ -24,14 +27,23 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
         [Validation(Required=false)]
         public List<string> DelegateAccesses { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MetaResource")]
         [Validation(Required=false)]
         public MetaResource MetaResource { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Principal")]
         [Validation(Required=false)]
         public Principal Principal { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

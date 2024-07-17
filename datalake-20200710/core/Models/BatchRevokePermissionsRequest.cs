@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
         [Validation(Required=false)]
         public List<GrantRevokeEntry> GrantRevokeEntries { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

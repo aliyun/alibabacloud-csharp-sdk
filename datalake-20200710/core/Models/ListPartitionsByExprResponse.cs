@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.DataLake20200710.Models
 {
     public class ListPartitionsByExprResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
     }
