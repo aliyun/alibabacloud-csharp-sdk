@@ -157,6 +157,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 [Validation(Required=false)]
                 public List<int?> SetPoints { get; set; }
 
+                [NameInMap("SetValues")]
+                [Validation(Required=false)]
+                public List<long?> SetValues { get; set; }
+
                 [NameInMap("TimePoints")]
                 [Validation(Required=false)]
                 public List<int?> TimePoints { get; set; }

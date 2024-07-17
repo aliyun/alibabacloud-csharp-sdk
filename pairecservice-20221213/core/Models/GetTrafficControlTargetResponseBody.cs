@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public GetTrafficControlTargetResponseBodySplitParts SplitParts { get; set; }
         public class GetTrafficControlTargetResponseBodySplitParts : TeaModel {
+            [NameInMap("SetPoints")]
+            [Validation(Required=false)]
+            public List<long?> SetPoints { get; set; }
+
             [NameInMap("SetValues")]
             [Validation(Required=false)]
             public List<long?> SetValues { get; set; }

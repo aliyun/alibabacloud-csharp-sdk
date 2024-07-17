@@ -11653,6 +11653,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SetPoints))
+            {
+                body["SetPoints"] = request.SetPoints;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SetValues))
             {
                 body["SetValues"] = request.SetValues;
@@ -11700,6 +11704,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SetPoints))
+            {
+                body["SetPoints"] = request.SetPoints;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SetValues))
             {
