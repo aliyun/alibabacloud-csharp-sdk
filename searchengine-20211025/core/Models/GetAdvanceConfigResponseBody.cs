@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned results.
+        /// The result.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetAdvanceConfigResponseBodyResult Result { get; set; }
         public class GetAdvanceConfigResponseBodyResult : TeaModel {
             /// <summary>
-            /// The content of the configuration that is returned.
+            /// The content of the advanced configuration that is returned.
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
@@ -38,42 +38,42 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// The description.
+            /// The description of the advanced configuration.
             /// </summary>
             [NameInMap("desc")]
             [Validation(Required=false)]
             public string Desc { get; set; }
 
             /// <summary>
-            /// The information about files.
+            /// The files.
             /// </summary>
             [NameInMap("files")]
             [Validation(Required=false)]
             public List<GetAdvanceConfigResponseBodyResultFiles> Files { get; set; }
             public class GetAdvanceConfigResponseBodyResultFiles : TeaModel {
                 /// <summary>
-                /// The name of the file path.
+                /// The file path.
                 /// </summary>
                 [NameInMap("fullPathName")]
                 [Validation(Required=false)]
                 public string FullPathName { get; set; }
 
                 /// <summary>
-                /// Indicates whether it is a directory.
+                /// Indicates whether the file is a directory.
                 /// </summary>
                 [NameInMap("isDir")]
                 [Validation(Required=false)]
                 public bool? IsDir { get; set; }
 
                 /// <summary>
-                /// Indicates whether it is a template.
+                /// Indicates whether the file is a container.
                 /// </summary>
                 [NameInMap("isTemplate")]
                 [Validation(Required=false)]
                 public bool? IsTemplate { get; set; }
 
                 /// <summary>
-                /// The name.
+                /// The file name.
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -82,21 +82,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The name.
+            /// The name of the advanced configuration.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The status.
+            /// The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The update time.
+            /// The time when the advanced configuration was updated.
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]

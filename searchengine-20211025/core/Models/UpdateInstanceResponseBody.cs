@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result returned
+        /// The results returned.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public UpdateInstanceResponseBodyResult Result { get; set; }
         public class UpdateInstanceResponseBodyResult : TeaModel {
             /// <summary>
-            /// The billing method
+            /// The billing method.
             /// </summary>
             [NameInMap("chargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The product code
+            /// The commodity code of the instance.
             /// </summary>
             [NameInMap("commodityCode")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public bool? InDebt { get; set; }
 
             /// <summary>
-            /// The ID of the resource
+            /// The instance ID.
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// The ID of the resource group
+            /// The ID of the resource group.
             /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The status of the instance
+            /// The instance status.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyAdvanceConfigFileRequest : TeaModel {
         /// <summary>
-        /// The content of the file.
+        /// The file content.
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// The variable.
+        /// The variables.
         /// </summary>
         [NameInMap("variables")]
         [Validation(Required=false)]

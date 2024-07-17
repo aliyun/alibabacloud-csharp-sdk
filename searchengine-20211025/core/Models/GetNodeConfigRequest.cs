@@ -17,14 +17,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The name of the cluster.
+        /// The node name.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The type of the node. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster node.
+        /// The node type. Valid values:
+        /// 
+        /// *   qrs: Query Result Searcher (QRS) worker
+        /// *   search: Search worker
+        /// *   index: index
+        /// *   cluster: cluster
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

@@ -23,10 +23,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public DeleteSqlInstanceResponseBodyResult Result { get; set; }
         public class DeleteSqlInstanceResponseBodyResult : TeaModel {
+            /// <summary>
+            /// id of request
+            /// </summary>
             [NameInMap("requestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
 
+            /// <summary>
+            /// The result.
+            /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
             public Dictionary<string, string> Result { get; set; }

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The configurations of the node.
+        /// The result set.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetNodeConfigResponseBodyResult Result { get; set; }
         public class GetNodeConfigResponseBodyResult : TeaModel {
             /// <summary>
-            /// Indicates whether the expression is the default one.
+            /// Indicates whether the index is effective online.
             /// </summary>
             [NameInMap("active")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public int? MinServicePercent { get; set; }
 
             /// <summary>
-            /// Indicates whether the node is associated with the cluster.
+            /// Indicates whether the cluster is mounted.
             /// </summary>
             [NameInMap("published")]
             [Validation(Required=false)]

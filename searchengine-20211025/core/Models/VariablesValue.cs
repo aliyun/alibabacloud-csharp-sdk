@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class VariablesValue : TeaModel {
         /// <summary>
-        /// Specifies whether the variable cannot be modified.
+        /// Specifies whether the variable is not allowed to be modified.
         /// </summary>
         [NameInMap("disableModify")]
         [Validation(Required=false)]
@@ -24,52 +24,52 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? IsModify { get; set; }
 
         /// <summary>
-        /// The value of the variable.
+        /// The variable value.
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]
         public string Value { get; set; }
 
         /// <summary>
-        /// The description about the variable.
+        /// The description of the variable.
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The value of the template.
+        /// The template value of the variable.
         /// </summary>
         [NameInMap("templateValue")]
         [Validation(Required=false)]
         public string TemplateValue { get; set; }
 
         /// <summary>
-        /// The type of the variable. Valid values:
+        /// The variable type. Valid values:
         /// 
-        /// *   NORMAL: a normal variable
-        /// *   FUNCTION: a function variable
+        /// *   NORMAL: common variable
+        /// *   FUNCTION: function variable
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The function variable.
+        /// The function variables.
         /// </summary>
         [NameInMap("funcValue")]
         [Validation(Required=false)]
         public VariablesValueFuncValue FuncValue { get; set; }
         public class VariablesValueFuncValue : TeaModel {
             /// <summary>
-            /// The class name.
+            /// The class name of the function variable.
             /// </summary>
             [NameInMap("funcClassName")]
             [Validation(Required=false)]
             public string FuncClassName { get; set; }
 
             /// <summary>
-            /// The template of the variable.
+            /// The template of the function variable.
             /// </summary>
             [NameInMap("template")]
             [Validation(Required=false)]

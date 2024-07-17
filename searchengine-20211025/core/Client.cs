@@ -520,9 +520,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Creates a cluster.
          *
-         * @description ### Method
+         * @description ### [](#method)Method
          * `POST`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/clusters`
          *
          * @param request CreateClusterRequest
@@ -577,9 +577,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Creates a cluster.
          *
-         * @description ### Method
+         * @description ### [](#method)Method
          * `POST`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/clusters`
          *
          * @param request CreateClusterRequest
@@ -634,9 +634,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Creates a cluster.
          *
-         * @description ### Method
+         * @description ### [](#method)Method
          * `POST`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/clusters`
          *
          * @param request CreateClusterRequest
@@ -652,9 +652,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Creates a cluster.
          *
-         * @description ### Method
+         * @description ### [](#method)Method
          * `POST`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/clusters`
          *
          * @param request CreateClusterRequest
@@ -1340,9 +1340,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Creates a Havenask instance.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `POST`
-         * ### URI
+         * ### [](#uri)URI
          * `/api/instances?dryRun=false`
          *
          * @param request CreateInstanceRequest
@@ -1389,9 +1389,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Creates a Havenask instance.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `POST`
-         * ### URI
+         * ### [](#uri)URI
          * `/api/instances?dryRun=false`
          *
          * @param request CreateInstanceRequest
@@ -1438,9 +1438,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Creates a Havenask instance.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `POST`
-         * ### URI
+         * ### [](#uri)URI
          * `/api/instances?dryRun=false`
          *
          * @param request CreateInstanceRequest
@@ -1456,9 +1456,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Creates a Havenask instance.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `POST`
-         * ### URI
+         * ### [](#uri)URI
          * `/api/instances?dryRun=false`
          *
          * @param request CreateInstanceRequest
@@ -1472,7 +1472,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 开通公网域名
+         * @summary Creates a public endpoint.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -1500,7 +1500,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 开通公网域名
+         * @summary Creates a public endpoint.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -1528,7 +1528,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 开通公网域名
+         * @summary Creates a public endpoint.
          *
          * @return CreatePublicUrlResponse
          */
@@ -1540,7 +1540,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 开通公网域名
+         * @summary Creates a public endpoint.
          *
          * @return CreatePublicUrlResponse
          */
@@ -1650,7 +1650,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 创建索引V2
+         * @summary Creates an index table.
          *
          * @param request CreateTableRequest
          * @param headers map
@@ -1724,7 +1724,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 创建索引V2
+         * @summary Creates an index table.
          *
          * @param request CreateTableRequest
          * @param headers map
@@ -1798,7 +1798,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 创建索引V2
+         * @summary Creates an index table.
          *
          * @param request CreateTableRequest
          * @return CreateTableResponse
@@ -1811,7 +1811,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 创建索引V2
+         * @summary Creates an index table.
          *
          * @param request CreateTableRequest
          * @return CreateTableResponse
@@ -2690,7 +2690,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 删除公网域名
+         * @summary Deletes a public endpoint.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2718,7 +2718,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 删除公网域名
+         * @summary Deletes a public endpoint.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2746,7 +2746,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 删除公网域名
+         * @summary Deletes a public endpoint.
          *
          * @return DeletePublicUrlResponse
          */
@@ -2758,7 +2758,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 删除公网域名
+         * @summary Deletes a public endpoint.
          *
          * @return DeletePublicUrlResponse
          */
@@ -2842,7 +2842,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 删除索引表V2
+         * @summary Deletes an index table.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2870,7 +2870,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 删除索引表V2
+         * @summary Deletes an index table.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2898,7 +2898,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 删除索引表V2
+         * @summary Deletes an index table.
          *
          * @return DeleteTableResponse
          */
@@ -2910,7 +2910,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 删除索引表V2
+         * @summary Deletes an index table.
          *
          * @return DeleteTableResponse
          */
@@ -2922,6 +2922,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @summary Queries available regions.
+         *
          * @param request DescribeRegionsRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2956,6 +2958,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @summary Queries available regions.
+         *
          * @param request DescribeRegionsRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2990,6 +2994,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @summary Queries available regions.
+         *
          * @param request DescribeRegionsRequest
          * @return DescribeRegionsResponse
          */
@@ -3001,6 +3007,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @summary Queries available regions.
+         *
          * @param request DescribeRegionsRequest
          * @return DescribeRegionsResponse
          */
@@ -3266,7 +3274,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries the information about a dictionary.
+         * @summary Queries the information about an advanced configuration.
          *
          * @description ## Method
          *     GET
@@ -3307,7 +3315,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries the information about a dictionary.
+         * @summary Queries the information about an advanced configuration.
          *
          * @description ## Method
          *     GET
@@ -3348,7 +3356,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries the information about a dictionary.
+         * @summary Queries the information about an advanced configuration.
          *
          * @description ## Method
          *     GET
@@ -3366,7 +3374,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries the information about a dictionary.
+         * @summary Queries the information about an advanced configuration.
          *
          * @description ## Method
          *     GET
@@ -3384,7 +3392,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the information in a specified advanced configuration file.
+         * @summary Queries the information about an advanced configuration file.
          *
          * @description ## Method
          *     GET
@@ -3425,7 +3433,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the information in a specified advanced configuration file.
+         * @summary Queries the information about an advanced configuration file.
          *
          * @description ## Method
          *     GET
@@ -3466,7 +3474,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the information in a specified advanced configuration file.
+         * @summary Queries the information about an advanced configuration file.
          *
          * @description ## Method
          *     GET
@@ -3484,7 +3492,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the information in a specified advanced configuration file.
+         * @summary Queries the information about an advanced configuration file.
          *
          * @description ## Method
          *     GET
@@ -4062,7 +4070,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries details about the version information of an index table.
+         * @summary Queries the details of an index table version.
          *
          * @description ## Method
          *     GET
@@ -4103,7 +4111,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries details about the version information of an index table.
+         * @summary Queries the details of an index table version.
          *
          * @description ## Method
          *     GET
@@ -4144,7 +4152,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries details about the version information of an index table.
+         * @summary Queries the details of an index table version.
          *
          * @description ## Method
          *     GET
@@ -4162,7 +4170,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries details about the version information of an index table.
+         * @summary Queries the details of an index table version.
          *
          * @description ## Method
          *     GET
@@ -4260,7 +4268,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引在线生效策略
+         * @summary Queries the online effective policy of an index.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4288,7 +4296,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引在线生效策略
+         * @summary Queries the online effective policy of an index.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4316,7 +4324,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引在线生效策略
+         * @summary Queries the online effective policy of an index.
          *
          * @return GetIndexOnlineStrategyResponse
          */
@@ -4328,7 +4336,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引在线生效策略
+         * @summary Queries the online effective policy of an index.
          *
          * @return GetIndexOnlineStrategyResponse
          */
@@ -4340,7 +4348,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the information about index versions that the current index version can be rolled back to.
+         * @summary Queries the information about index versions that the current index version can be rolled back to.
          *
          * @description ## Method
          *     GET
@@ -4373,7 +4381,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the information about index versions that the current index version can be rolled back to.
+         * @summary Queries the information about index versions that the current index version can be rolled back to.
          *
          * @description ## Method
          *     GET
@@ -4406,7 +4414,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the information about index versions that the current index version can be rolled back to.
+         * @summary Queries the information about index versions that the current index version can be rolled back to.
          *
          * @description ## Method
          *     GET
@@ -4423,7 +4431,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the information about index versions that the current index version can be rolled back to.
+         * @summary Queries the information about index versions that the current index version can be rolled back to.
          *
          * @description ## Method
          *     GET
@@ -4440,7 +4448,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries the details of an instance based on a specified instance ID.
+         * @summary Queries the details of an instance based on the instance ID.
          *
          * @description ### Method
          * `GET`
@@ -4473,7 +4481,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries the details of an instance based on a specified instance ID.
+         * @summary Queries the details of an instance based on the instance ID.
          *
          * @description ### Method
          * `GET`
@@ -4506,7 +4514,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries the details of an instance based on a specified instance ID.
+         * @summary Queries the details of an instance based on the instance ID.
          *
          * @description ### Method
          * `GET`
@@ -4523,7 +4531,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries the details of an instance based on a specified instance ID.
+         * @summary Queries the details of an instance based on the instance ID.
          *
          * @description ### Method
          * `GET`
@@ -4744,7 +4752,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引表信息V2
+         * @summary Queries the information about an index table.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4772,7 +4780,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引表信息V2
+         * @summary Queries the information about an index table.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4800,7 +4808,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引表信息V2
+         * @summary Queries the information about an index table.
          *
          * @return GetTableResponse
          */
@@ -4812,7 +4820,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引表信息V2
+         * @summary Queries the information about an index table.
          *
          * @return GetTableResponse
          */
@@ -4824,7 +4832,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 根据generationId获取某个索引版本状态V2
+         * @summary Queries the status of an index version based on the ID of the full index version.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4852,7 +4860,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 根据generationId获取某个索引版本状态V2
+         * @summary Queries the status of an index version based on the ID of the full index version.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4880,7 +4888,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 根据generationId获取某个索引版本状态V2
+         * @summary Queries the status of an index version based on the ID of the full index version.
          *
          * @return GetTableGenerationResponse
          */
@@ -4892,7 +4900,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 根据generationId获取某个索引版本状态V2
+         * @summary Queries the status of an index version based on the ID of the full index version.
          *
          * @return GetTableGenerationResponse
          */
@@ -4904,7 +4912,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the file list in an advanced configuration directory.
+         * @summary Queries the files in an advanced configuration directory.
          *
          * @description ## Method
          * `GET`
@@ -4945,7 +4953,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the file list in an advanced configuration directory.
+         * @summary Queries the files in an advanced configuration directory.
          *
          * @description ## Method
          * `GET`
@@ -4986,7 +4994,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the file list in an advanced configuration directory.
+         * @summary Queries the files in an advanced configuration directory.
          *
          * @description ## Method
          * `GET`
@@ -5004,7 +5012,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the file list in an advanced configuration directory.
+         * @summary Queries the files in an advanced configuration directory.
          *
          * @description ## Method
          * `GET`
@@ -5328,7 +5336,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Displays cluster tasks .
+         * @summary Queries cluster tasks.
          *
          * @description ### Method
          * ```java
@@ -5365,7 +5373,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Displays cluster tasks .
+         * @summary Queries cluster tasks.
          *
          * @description ### Method
          * ```java
@@ -5402,7 +5410,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Displays cluster tasks .
+         * @summary Queries cluster tasks.
          *
          * @description ### Method
          * ```java
@@ -5423,7 +5431,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Displays cluster tasks .
+         * @summary Queries cluster tasks.
          *
          * @description ### Method
          * ```java
@@ -5560,7 +5568,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the schema information of a specified data source.
+         * @summary Queries the schema information about a data source.
          *
          * @description ## Method
          * `GET`
@@ -5593,7 +5601,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the schema information of a specified data source.
+         * @summary Queries the schema information about a data source.
          *
          * @description ## Method
          * `GET`
@@ -5626,7 +5634,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the schema information of a specified data source.
+         * @summary Queries the schema information about a data source.
          *
          * @description ## Method
          * `GET`
@@ -5643,7 +5651,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the schema information of a specified data source.
+         * @summary Queries the schema information about a data source.
          *
          * @description ## Method
          * `GET`
@@ -5662,11 +5670,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Displays data source tasks.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * ```java
          * GET
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/data-source-tasks
          * ```
@@ -5699,11 +5707,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Displays data source tasks.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * ```java
          * GET
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/data-source-tasks
          * ```
@@ -5736,11 +5744,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Displays data source tasks.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * ```java
          * GET
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/data-source-tasks
          * ```
@@ -5757,11 +5765,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Displays data source tasks.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * ```java
          * GET
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/data-source-tasks
          * ```
@@ -5948,7 +5956,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the data restoration version of a data source.
+         * @summary Queries the historical index versions of a data source.
          *
          * @description ### Method
          * `GET`
@@ -5993,7 +6001,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the data restoration version of a data source.
+         * @summary Queries the historical index versions of a data source.
          *
          * @description ### Method
          * `GET`
@@ -6038,7 +6046,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the data restoration version of a data source.
+         * @summary Queries the historical index versions of a data source.
          *
          * @description ### Method
          * `GET`
@@ -6056,7 +6064,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the data restoration version of a data source.
+         * @summary Queries the historical index versions of a data source.
          *
          * @description ### Method
          * `GET`
@@ -6264,7 +6272,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries instances.
+         * @summary Queries the specifications of an instance.
          *
          * @description ### Method
          * `GET`
@@ -6305,7 +6313,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries instances.
+         * @summary Queries the specifications of an instance.
          *
          * @description ### Method
          * `GET`
@@ -6346,7 +6354,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries instances.
+         * @summary Queries the specifications of an instance.
          *
          * @description ### Method
          * `GET`
@@ -6364,7 +6372,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries instances.
+         * @summary Queries the specifications of an instance.
          *
          * @description ### Method
          * `GET`
@@ -6382,12 +6390,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries instances.
+         * @summary Queries a list of instances.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `GET`
-         * ### URI
-         * `/openapi/[code]/instances`
+         * ### [](#uri)URI
+         * `/openapi/ha3/instances`
          *
          * @param tmpReq ListInstancesRequest
          * @param headers map
@@ -6453,12 +6461,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries instances.
+         * @summary Queries a list of instances.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `GET`
-         * ### URI
-         * `/openapi/[code]/instances`
+         * ### [](#uri)URI
+         * `/openapi/ha3/instances`
          *
          * @param tmpReq ListInstancesRequest
          * @param headers map
@@ -6524,12 +6532,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries instances.
+         * @summary Queries a list of instances.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `GET`
-         * ### URI
-         * `/openapi/[code]/instances`
+         * ### [](#uri)URI
+         * `/openapi/ha3/instances`
          *
          * @param request ListInstancesRequest
          * @return ListInstancesResponse
@@ -6542,12 +6550,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Queries instances.
+         * @summary Queries a list of instances.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `GET`
-         * ### URI
-         * `/openapi/[code]/instances`
+         * ### [](#uri)URI
+         * `/openapi/ha3/instances`
          *
          * @param request ListInstancesRequest
          * @return ListInstancesResponse
@@ -6690,7 +6698,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the details of online configurations.
+         * @summary Queries the details of an online configuration.
          *
          * @description ### Method
          * ```java
@@ -6735,7 +6743,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the details of online configurations.
+         * @summary Queries the details of an online configuration.
          *
          * @description ### Method
          * ```java
@@ -6780,7 +6788,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the details of online configurations.
+         * @summary Queries the details of an online configuration.
          *
          * @description ### Method
          * ```java
@@ -6802,7 +6810,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Obtains the details of online configurations.
+         * @summary Queries the details of an online configuration.
          *
          * @description ### Method
          * ```java
@@ -7008,9 +7016,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Queries the query result.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `GET`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
          *
          * @param request ListQueryResultRequest
@@ -7053,9 +7061,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Queries the query result.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `GET`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
          *
          * @param request ListQueryResultRequest
@@ -7098,9 +7106,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Queries the query result.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `GET`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
          *
          * @param request ListQueryResultRequest
@@ -7116,9 +7124,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Queries the query result.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `GET`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
          *
          * @param request ListQueryResultRequest
@@ -7396,7 +7404,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引generation列表V2
+         * @summary Queries a list of index versions.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -7424,7 +7432,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引generation列表V2
+         * @summary Queries a list of index versions.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -7452,7 +7460,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引generation列表V2
+         * @summary Queries a list of index versions.
          *
          * @return ListTableGenerationsResponse
          */
@@ -7464,7 +7472,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引generation列表V2
+         * @summary Queries a list of index versions.
          *
          * @return ListTableGenerationsResponse
          */
@@ -7476,7 +7484,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引列表V2
+         * @summary Queries a list of index tables.
          *
          * @param request ListTablesRequest
          * @param headers map
@@ -7512,7 +7520,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引列表V2
+         * @summary Queries a list of index tables.
          *
          * @param request ListTablesRequest
          * @param headers map
@@ -7548,7 +7556,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引列表V2
+         * @summary Queries a list of index tables.
          *
          * @param request ListTablesRequest
          * @return ListTablesResponse
@@ -7561,7 +7569,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 获取索引列表V2
+         * @summary Queries a list of index tables.
          *
          * @param request ListTablesRequest
          * @return ListTablesResponse
@@ -8316,9 +8324,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Modifies the description of a specified cluster.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `PUT`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
          *
          * @param request ModifyClusterDescRequest
@@ -8357,9 +8365,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Modifies the description of a specified cluster.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `PUT`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
          *
          * @param request ModifyClusterDescRequest
@@ -8398,9 +8406,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Modifies the description of a specified cluster.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `PUT`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
          *
          * @param request ModifyClusterDescRequest
@@ -8416,9 +8424,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Modifies the description of a specified cluster.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * `PUT`
-         * ### URI
+         * ### [](#uri)URI
          * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
          *
          * @param request ModifyClusterDescRequest
@@ -8606,7 +8614,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Modifies the online configurations of a cluster.
+         * @summary Modifies the online configuration of a cluster.
          *
          * @description ### Method
          * `PUT`
@@ -8651,7 +8659,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Modifies the online configurations of a cluster.
+         * @summary Modifies the online configuration of a cluster.
          *
          * @description ### Method
          * `PUT`
@@ -8696,7 +8704,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Modifies the online configurations of a cluster.
+         * @summary Modifies the online configuration of a cluster.
          *
          * @description ### Method
          * `PUT`
@@ -8714,7 +8722,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Modifies the online configurations of a cluster.
+         * @summary Modifies the online configuration of a cluster.
          *
          * @description ### Method
          * `PUT`
@@ -9210,7 +9218,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 修改索引在线策略
+         * @summary Modifies an online policy of an index.
          *
          * @param request ModifyIndexOnlineStrategyRequest
          * @param headers map
@@ -9246,7 +9254,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 修改索引在线策略
+         * @summary Modifies an online policy of an index.
          *
          * @param request ModifyIndexOnlineStrategyRequest
          * @param headers map
@@ -9282,7 +9290,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 修改索引在线策略
+         * @summary Modifies an online policy of an index.
          *
          * @param request ModifyIndexOnlineStrategyRequest
          * @return ModifyIndexOnlineStrategyResponse
@@ -9295,7 +9303,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 修改索引在线策略
+         * @summary Modifies an online policy of an index.
          *
          * @param request ModifyIndexOnlineStrategyRequest
          * @return ModifyIndexOnlineStrategyResponse
@@ -9452,9 +9460,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Modifies the index version of a cluster (an index version rollback).
          *
-         * @description ## Method
+         * @description ## [](#)Method
          *     PUT
-         * ## URI
+         * ## [](#uri)URI
          *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
          *
          * @param request ModifyIndexVersionRequest
@@ -9488,9 +9496,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Modifies the index version of a cluster (an index version rollback).
          *
-         * @description ## Method
+         * @description ## [](#)Method
          *     PUT
-         * ## URI
+         * ## [](#uri)URI
          *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
          *
          * @param request ModifyIndexVersionRequest
@@ -9524,9 +9532,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Modifies the index version of a cluster (an index version rollback).
          *
-         * @description ## Method
+         * @description ## [](#)Method
          *     PUT
-         * ## URI
+         * ## [](#uri)URI
          *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
          *
          * @param request ModifyIndexVersionRequest
@@ -9542,9 +9550,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Modifies the index version of a cluster (an index version rollback).
          *
-         * @description ## Method
+         * @description ## [](#)Method
          *     PUT
-         * ## URI
+         * ## [](#uri)URI
          *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
          *
          * @param request ModifyIndexVersionRequest
@@ -10216,7 +10224,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 修改索引V2
+         * @summary Modifies an index table.
          *
          * @param request ModifyTableRequest
          * @param headers map
@@ -10282,7 +10290,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 修改索引V2
+         * @summary Modifies an index table.
          *
          * @param request ModifyTableRequest
          * @param headers map
@@ -10348,7 +10356,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 修改索引V2
+         * @summary Modifies an index table.
          *
          * @param request ModifyTableRequest
          * @return ModifyTableResponse
@@ -10361,7 +10369,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 修改索引V2
+         * @summary Modifies an index table.
          *
          * @param request ModifyTableRequest
          * @return ModifyTableResponse
@@ -10868,7 +10876,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 索引重建V2
+         * @summary Rebuilds an index.
          *
          * @param request ReindexRequest
          * @param headers map
@@ -10912,7 +10920,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 索引重建V2
+         * @summary Rebuilds an index.
          *
          * @param request ReindexRequest
          * @param headers map
@@ -10956,7 +10964,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 索引重建V2
+         * @summary Rebuilds an index.
          *
          * @param request ReindexRequest
          * @return ReindexResponse
@@ -10969,7 +10977,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary 索引重建V2
+         * @summary Rebuilds an index.
          *
          * @param request ReindexRequest
          * @return ReindexResponse
@@ -11334,11 +11342,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Stops an FSM task.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * ```java
          * PUT
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
          * ```
@@ -11371,11 +11379,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Stops an FSM task.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * ```java
          * PUT
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
          * ```
@@ -11408,11 +11416,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Stops an FSM task.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * ```java
          * PUT
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
          * ```
@@ -11429,11 +11437,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Stops an FSM task.
          *
-         * @description ### Method
+         * @description ### [](#)Method
          * ```java
          * PUT
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
          * ```

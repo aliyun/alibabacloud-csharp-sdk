@@ -23,10 +23,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public DeleteFolderResponseBodyResult Result { get; set; }
         public class DeleteFolderResponseBodyResult : TeaModel {
+            /// <summary>
+            /// The request ID.
+            /// </summary>
             [NameInMap("requestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
 
+            /// <summary>
+            /// The result
+            /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
             public Dictionary<string, string> Result { get; set; }

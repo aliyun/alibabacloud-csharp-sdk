@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyOnlineConfigRequest : TeaModel {
         /// <summary>
-        /// ashortdescriptionofstruct
+        /// The request body.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

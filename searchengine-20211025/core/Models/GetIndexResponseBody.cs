@@ -17,31 +17,43 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the index.
+        /// The index information.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetIndexResponseBodyResult Result { get; set; }
         public class GetIndexResponseBodyResult : TeaModel {
+            /// <summary>
+            /// The cluster information.
+            /// </summary>
             [NameInMap("cluster")]
             [Validation(Required=false)]
             public Dictionary<string, ResultClusterValue> Cluster { get; set; }
 
+            /// <summary>
+            /// The configuration information.
+            /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public Dictionary<string, Dictionary<string, object>> Config { get; set; }
 
+            /// <summary>
+            /// The configuration that takes effect next time.
+            /// </summary>
             [NameInMap("configWhenBuild")]
             [Validation(Required=false)]
             public Dictionary<string, Dictionary<string, object>> ConfigWhenBuild { get; set; }
 
             /// <summary>
-            /// The content of the index.
+            /// The file content.
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            /// <summary>
+            /// The name of the data source.
+            /// </summary>
             [NameInMap("dataSource")]
             [Validation(Required=false)]
             public string DataSource { get; set; }
@@ -67,56 +79,71 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public GetIndexResponseBodyResultDataSourceInfoConfig Config { get; set; }
                 public class GetIndexResponseBodyResultDataSourceInfoConfig : TeaModel {
+                    /// <summary>
+                    /// The AccessKey ID of the MaxCompute data source.
+                    /// </summary>
                     [NameInMap("accessKey")]
                     [Validation(Required=false)]
                     public string AccessKey { get; set; }
 
+                    /// <summary>
+                    /// The AccessKey secret of the MaxCompute data source.
+                    /// </summary>
                     [NameInMap("accessSecret")]
                     [Validation(Required=false)]
                     public string AccessSecret { get; set; }
 
+                    /// <summary>
+                    /// The name of the OSS bucket.
+                    /// </summary>
                     [NameInMap("bucket")]
                     [Validation(Required=false)]
                     public string Bucket { get; set; }
 
                     /// <summary>
-                    /// A parameter related to MaxCompute.
+                    /// The endpoint of the MaxCompute data source.
                     /// </summary>
                     [NameInMap("endpoint")]
                     [Validation(Required=false)]
                     public string Endpoint { get; set; }
 
                     /// <summary>
-                    /// A parameter related to SARO.
+                    /// The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.
                     /// </summary>
                     [NameInMap("namespace")]
                     [Validation(Required=false)]
                     public string Namespace { get; set; }
 
                     /// <summary>
-                    /// A parameter related to OSS.
+                    /// The Object Storage Service (OSS) path.
                     /// </summary>
                     [NameInMap("ossPath")]
                     [Validation(Required=false)]
                     public string OssPath { get; set; }
 
+                    /// <summary>
+                    /// The partition in the MaxCompute table. Example: ds=20180102.
+                    /// </summary>
                     [NameInMap("partition")]
                     [Validation(Required=false)]
                     public string Partition { get; set; }
 
                     /// <summary>
-                    /// A parameter related to Apsara File Storage for HDFS.
+                    /// The file path in the Apsara File Storage for HDFS file system.
                     /// </summary>
                     [NameInMap("path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
+                    /// <summary>
+                    /// The name of the MaxCompute project that is used as the data source.
+                    /// </summary>
                     [NameInMap("project")]
                     [Validation(Required=false)]
                     public string Project { get; set; }
 
                     /// <summary>
-                    /// A parameter related to SARO and MaxCompute.
+                    /// The name of the MaxCompute table that is used as the data source.
                     /// </summary>
                     [NameInMap("table")]
                     [Validation(Required=false)]
@@ -125,7 +152,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// The offline deployment name of the data source.
+                /// The data center in which the data source is deployed.
                 /// </summary>
                 [NameInMap("domain")]
                 [Validation(Required=false)]
@@ -138,6 +165,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The maximum number of full indexes that can be concurrently processed.
+                /// </summary>
                 [NameInMap("processParallelNum")]
                 [Validation(Required=false)]
                 public int? ProcessParallelNum { get; set; }
@@ -150,16 +180,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public int? ProcessPartitionCount { get; set; }
 
                 /// <summary>
-                /// The configuration of SARO data sources.
+                /// The configurations of the SARO data source.
                 /// </summary>
                 [NameInMap("saroConfig")]
                 [Validation(Required=false)]
                 public GetIndexResponseBodyResultDataSourceInfoSaroConfig SaroConfig { get; set; }
                 public class GetIndexResponseBodyResultDataSourceInfoSaroConfig : TeaModel {
+                    /// <summary>
+                    /// The namespace of the SARO data source.
+                    /// </summary>
                     [NameInMap("namespace")]
                     [Validation(Required=false)]
                     public string Namespace { get; set; }
 
+                    /// <summary>
+                    /// The name of the SARO table.
+                    /// </summary>
                     [NameInMap("tableName")]
                     [Validation(Required=false)]
                     public string TableName { get; set; }
@@ -176,32 +212,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The remarks.
+            /// The description of the index version.
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The deployment name of the index.
+            /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The last time when full data in the index was updated.
+            /// The time when full data in the index was last updated.
             /// </summary>
             [NameInMap("fullUpdateTime")]
             [Validation(Required=false)]
             public string FullUpdateTime { get; set; }
 
             /// <summary>
-            /// The version of the data.
+            /// The data version.
             /// </summary>
             [NameInMap("fullVersion")]
             [Validation(Required=false)]
             public long? FullVersion { get; set; }
 
             /// <summary>
-            /// The last time when incremental data in the index was updated.
+            /// The time when incremental data in the index was last updated.
             /// </summary>
             [NameInMap("incUpdateTime")]
             [Validation(Required=false)]
@@ -215,12 +254,23 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? IndexSize { get; set; }
 
             /// <summary>
-            /// The status of the index. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, and RESTORE_USE. After a Retrieval Engine Edition instance is created, it enters the IN_USE state.
+            /// The status of the index version. Valid values:
+            /// 
+            /// *   NEW: The index version is created.
+            /// *   PUBLISH: The index version is normal.
+            /// *   IN_USE: The index version is in use.
+            /// *   NOT_USE: The index version is not used.
+            /// *   STOP_USE: The index version is being stopped.
+            /// *   RESTORE_USE: The index version is being restored.
+            /// *   FAIL: The index version failed to be created.
             /// </summary>
             [NameInMap("indexStatus")]
             [Validation(Required=false)]
             public string IndexStatus { get; set; }
 
+            /// <summary>
+            /// The index name.
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -274,6 +324,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     [Validation(Required=false)]
                     public bool? IsTemplate { get; set; }
 
+                    /// <summary>
+                    /// The file name.
+                    /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -281,28 +334,36 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// The name of the version.
+                /// The version name.
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The status of the version.
+                /// The status of the index version. Valid values:
+                /// 
+                /// *   NEW: The index version is created.
+                /// *   PUBLISH: The index version is normal.
+                /// *   IN_USE: The index version is in use.
+                /// *   NOT_USE: The index version is not used.
+                /// *   STOP_USE: The index version is being stopped.
+                /// *   RESTORE_USE: The index version is being restored.
+                /// *   FAIL: The index version failed to be created.
                 /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The last time when the version was updated.
+                /// The time when the index version was updated.
                 /// </summary>
                 [NameInMap("updateTime")]
                 [Validation(Required=false)]
                 public long? UpdateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the version.
+                /// The version ID.
                 /// </summary>
                 [NameInMap("versionId")]
                 [Validation(Required=false)]

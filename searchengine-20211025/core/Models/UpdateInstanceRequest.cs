@@ -10,19 +10,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
-        /// A list of instance-related specifications.
+        /// The information about the instance specification.
         /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<UpdateInstanceRequestComponents> Components { get; set; }
         public class UpdateInstanceRequestComponents : TeaModel {
             /// <summary>
-            /// The specification code, which must be consistent with the values of the corresponding module parameters.
+            /// The code of the specification, which must be consistent with the value that you specify on the buy page.
             /// </summary>
             [NameInMap("code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
+            /// <summary>
+            /// The value of the specification.
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Valid values: UPGRADE and DOWNGRADE. UPGRADE indicates to upgrade the instance specifications. DOWNGRADE indicates to downgrade the instance specifications.
+        /// The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE upgrades the instance specifications. DOWNGRADE: downgrades the instance specifications.
         /// </summary>
         [NameInMap("orderType")]
         [Validation(Required=false)]

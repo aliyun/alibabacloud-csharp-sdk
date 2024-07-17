@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of information about the data source
+        /// The information about the data source.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public List<string> Indexes { get; set; }
 
             /// <summary>
-            /// The time when an index for full data was last built
+            /// The time when the full data of the data source was last queried.
             /// </summary>
             [NameInMap("lastFulTime")]
             [Validation(Required=false)]
             public long? LastFulTime { get; set; }
 
             /// <summary>
-            /// The name of the data source
+            /// The name of the data source.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The state of the data source
+            /// The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

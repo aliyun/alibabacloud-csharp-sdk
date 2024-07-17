@@ -17,91 +17,103 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result returned
+        /// The results returned.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyResult> Result { get; set; }
         public class ListInstancesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The billing method
+            /// The billing method.
             /// </summary>
             [NameInMap("chargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The product code
+            /// The commodity code of the instance.
             /// </summary>
             [NameInMap("commodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// The time when the instance was created
+            /// The time when the instance was created.
             /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The description of the instance
+            /// The description of the instance.
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("edition")]
+            [Validation(Required=false)]
+            public string Edition { get; set; }
+
             /// <summary>
-            /// The expiration time
+            /// The time when the instance expires.
             /// </summary>
             [NameInMap("expiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// Indicates whether an overdue payment is involved
+            /// Indicates whether an overdue payment is involved.
             /// </summary>
             [NameInMap("inDebt")]
             [Validation(Required=false)]
             public bool? InDebt { get; set; }
 
             /// <summary>
-            /// The ID of the resource
+            /// The instance ID.
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The lock status
+            /// The lock state of the instance.
             /// </summary>
             [NameInMap("lockMode")]
             [Validation(Required=false)]
             public string LockMode { get; set; }
 
             /// <summary>
-            /// Information about the instance of the network search engine
+            /// The network information of the instance.
             /// </summary>
             [NameInMap("network")]
             [Validation(Required=false)]
             public ListInstancesResponseBodyResultNetwork Network { get; set; }
             public class ListInstancesResponseBodyResultNetwork : TeaModel {
+                [NameInMap("allow")]
+                [Validation(Required=false)]
+                public string Allow { get; set; }
+
                 /// <summary>
-                /// The access point of the gateway
+                /// The instance endpoint.
                 /// </summary>
                 [NameInMap("endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                [NameInMap("publicEndpoint")]
+                [Validation(Required=false)]
+                public string PublicEndpoint { get; set; }
+
                 /// <summary>
-                /// The ID of the virtual switch
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("vSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the Virtual Private Cloud (VPC) network
+                /// The ID of the virtual private cloud (VPC) in which the instance is deployed.
                 /// </summary>
                 [NameInMap("vpcId")]
                 [Validation(Required=false)]
@@ -109,36 +121,98 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
             }
 
+            [NameInMap("noQrs")]
+            [Validation(Required=false)]
+            public bool? NoQrs { get; set; }
+
             /// <summary>
-            /// The ID of the resource group
+            /// The ID of the resource group.
             /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            [NameInMap("spec")]
+            [Validation(Required=false)]
+            public ListInstancesResponseBodyResultSpec Spec { get; set; }
+            public class ListInstancesResponseBodyResultSpec : TeaModel {
+                [NameInMap("qrsResource")]
+                [Validation(Required=false)]
+                public ListInstancesResponseBodyResultSpecQrsResource QrsResource { get; set; }
+                public class ListInstancesResponseBodyResultSpecQrsResource : TeaModel {
+                    [NameInMap("category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    [NameInMap("cpu")]
+                    [Validation(Required=false)]
+                    public int? Cpu { get; set; }
+
+                    [NameInMap("disk")]
+                    [Validation(Required=false)]
+                    public int? Disk { get; set; }
+
+                    [NameInMap("mem")]
+                    [Validation(Required=false)]
+                    public int? Mem { get; set; }
+
+                    [NameInMap("nodeCount")]
+                    [Validation(Required=false)]
+                    public int? NodeCount { get; set; }
+
+                }
+
+                [NameInMap("searchResource")]
+                [Validation(Required=false)]
+                public ListInstancesResponseBodyResultSpecSearchResource SearchResource { get; set; }
+                public class ListInstancesResponseBodyResultSpecSearchResource : TeaModel {
+                    [NameInMap("category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    [NameInMap("cpu")]
+                    [Validation(Required=false)]
+                    public int? Cpu { get; set; }
+
+                    [NameInMap("disk")]
+                    [Validation(Required=false)]
+                    public int? Disk { get; set; }
+
+                    [NameInMap("mem")]
+                    [Validation(Required=false)]
+                    public int? Mem { get; set; }
+
+                    [NameInMap("nodeCount")]
+                    [Validation(Required=false)]
+                    public int? NodeCount { get; set; }
+
+                }
+
+            }
+
             /// <summary>
-            /// The status of the instance
+            /// The instance status.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The result returned.
+            /// The tags of the instance.
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyResultTags> Tags { get; set; }
             public class ListInstancesResponseBodyResultTags : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
@@ -147,11 +221,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The time when the instance was last updated
+            /// The time when the instance was updated.
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
+
+            [NameInMap("userName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
+            [NameInMap("version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
 
         }
 

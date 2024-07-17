@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public List<ListClustersResponseBodyResult> Result { get; set; }
         public class ListClustersResponseBodyResult : TeaModel {
+            /// <summary>
+            /// The configuration information.
+            /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public Dictionary<string, Dictionary<string, object>> Config { get; set; }
@@ -34,6 +37,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string ConfigUpdateTime { get; set; }
 
+            /// <summary>
+            /// The time when the cluster was created.
+            /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -169,7 +175,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The status of the cluster. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.
+            /// The cluster status. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

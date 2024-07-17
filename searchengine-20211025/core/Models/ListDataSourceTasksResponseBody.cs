@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the index.
+        /// The index information.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -31,56 +31,56 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string ExtraAttribute { get; set; }
 
             /// <summary>
-            /// The field3 field that is passed through when you create a state machine.
+            /// The field3 field that was passed when the FSM was created.
             /// </summary>
             [NameInMap("field3")]
             [Validation(Required=false)]
             public string Field3 { get; set; }
 
             /// <summary>
-            /// fsmId
+            /// The ID of the finite state machine (FSM).
             /// </summary>
             [NameInMap("fsmId")]
             [Validation(Required=false)]
             public string FsmId { get; set; }
 
             /// <summary>
-            /// Indicates whether the change is a data source task change or a cluster task change.
+            /// The change group type.
             /// </summary>
             [NameInMap("groupType")]
             [Validation(Required=false)]
             public string GroupType { get; set; }
 
             /// <summary>
-            /// The task name on the card.
+            /// The card name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The overall status of FSM.
+            /// The FSM status.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The status tag of the progress bar chart.
+            /// The tags of the progress bar.
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListDataSourceTasksResponseBodyResultTags> Tags { get; set; }
             public class ListDataSourceTasksResponseBodyResultTags : TeaModel {
                 /// <summary>
-                /// The content of the tag.
+                /// The tag content.
                 /// </summary>
                 [NameInMap("msg")]
                 [Validation(Required=false)]
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// The level of the tag.
+                /// The tag level.
                 /// </summary>
                 [NameInMap("tagLevel")]
                 [Validation(Required=false)]
@@ -89,35 +89,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The information about the task.
+            /// The task information.
             /// </summary>
             [NameInMap("taskNodes")]
             [Validation(Required=false)]
             public List<ListDataSourceTasksResponseBodyResultTaskNodes> TaskNodes { get; set; }
             public class ListDataSourceTasksResponseBodyResultTaskNodes : TeaModel {
                 /// <summary>
-                /// The date when the task was completed.
+                /// The time when the task was complete.
                 /// </summary>
                 [NameInMap("finishDate")]
                 [Validation(Required=false)]
                 public string FinishDate { get; set; }
 
                 /// <summary>
-                /// The sequence number of the task.
+                /// The ordinal number of the task.
                 /// </summary>
                 [NameInMap("index")]
                 [Validation(Required=false)]
                 public long? Index { get; set; }
 
                 /// <summary>
-                /// The name of the task.
+                /// The task name.
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The status of the task.
+                /// The task status.
                 /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
@@ -126,21 +126,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The timestamp of the task on the card.
+            /// The timestamp of the card.
             /// </summary>
             [NameInMap("time")]
             [Validation(Required=false)]
             public string Time { get; set; }
 
             /// <summary>
-            /// The type of the task on the card.
+            /// The card type.
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The user who triggered the finite-state machine (FSM) process.
+            /// The user who triggered the generation of the FSM process.
             /// </summary>
             [NameInMap("user")]
             [Validation(Required=false)]

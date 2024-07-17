@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Deploy
+        /// The result.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -77,47 +77,59 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
             }
 
+            /// <summary>
+            /// The parameters of the process.
+            /// </summary>
             [NameInMap("processor")]
             [Validation(Required=false)]
             public GetDataSourceDeployResponseBodyResultProcessor Processor { get; set; }
             public class GetDataSourceDeployResponseBodyResultProcessor : TeaModel {
+                /// <summary>
+                /// The startup parameters of the process.
+                /// </summary>
                 [NameInMap("args")]
                 [Validation(Required=false)]
                 public string Args { get; set; }
 
+                /// <summary>
+                /// The resource information.
+                /// </summary>
                 [NameInMap("resource")]
                 [Validation(Required=false)]
                 public string Resource { get; set; }
 
             }
 
+            /// <summary>
+            /// The information about the data source.
+            /// </summary>
             [NameInMap("storage")]
             [Validation(Required=false)]
             public GetDataSourceDeployResponseBodyResultStorage Storage { get; set; }
             public class GetDataSourceDeployResponseBodyResultStorage : TeaModel {
                 /// <summary>
-                /// AK
+                /// The AccessKey ID of the MaxCompute data source.
                 /// </summary>
                 [NameInMap("accessKey")]
                 [Validation(Required=false)]
                 public string AccessKey { get; set; }
 
                 /// <summary>
-                /// AS
+                /// The AccessKey secret of the MaxCompute data source.
                 /// </summary>
                 [NameInMap("accessSecret")]
                 [Validation(Required=false)]
                 public string AccessSecret { get; set; }
 
                 /// <summary>
-                /// oss bucket
+                /// The name of the OSS bucket.
                 /// </summary>
                 [NameInMap("bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
                 /// <summary>
-                /// odps endpoint
+                /// The endpoint of the MaxCompute data source.
                 /// </summary>
                 [NameInMap("endpoint")]
                 [Validation(Required=false)]
@@ -127,10 +139,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
+                /// <summary>
+                /// The Object Storage Service (OSS) path.
+                /// </summary>
                 [NameInMap("ossPath")]
                 [Validation(Required=false)]
                 public string OssPath { get; set; }
 
+                /// <summary>
+                /// The partition in the MaxCompute table. Example: ds=20180102.
+                /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
                 public string Partition { get; set; }
@@ -149,12 +167,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
             }
 
+            /// <summary>
+            /// The information about the incremental data source Swift.
+            /// </summary>
             [NameInMap("swift")]
             [Validation(Required=false)]
             public GetDataSourceDeployResponseBodyResultSwift Swift { get; set; }
             public class GetDataSourceDeployResponseBodyResultSwift : TeaModel {
                 /// <summary>
-                /// topic
+                /// The topic.
                 /// </summary>
                 [NameInMap("topic")]
                 [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateConfigDirRequest : TeaModel {
         /// <summary>
-        /// The name of the directory
+        /// The directory name.
         /// </summary>
         [NameInMap("dirName")]
         [Validation(Required=false)]
         public string DirName { get; set; }
 
         /// <summary>
-        /// Parent file path
+        /// The path of the parent directory.
         /// </summary>
         [NameInMap("parentFullPath")]
         [Validation(Required=false)]

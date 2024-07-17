@@ -17,42 +17,42 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// The name of the data center.
+        /// The data center.
         /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The primary key of generation.
+        /// The primary key.
         /// </summary>
         [NameInMap("generation")]
         [Validation(Required=false)]
         public long? Generation { get; set; }
 
         /// <summary>
-        /// The information about shards of the index.
+        /// The index information.
         /// </summary>
         [NameInMap("indexInfos")]
         [Validation(Required=false)]
         public List<ModifyIndexPartitionRequestIndexInfos> IndexInfos { get; set; }
         public class ModifyIndexPartitionRequestIndexInfos : TeaModel {
             /// <summary>
-            /// The name of the index.
+            /// The index name.
             /// </summary>
             [NameInMap("indexName")]
             [Validation(Required=false)]
             public string IndexName { get; set; }
 
             /// <summary>
-            /// The number of concurrency. The default value is 1.
+            /// The concurrency. Default value: 1.
             /// </summary>
             [NameInMap("parallelNum")]
             [Validation(Required=false)]
             public int? ParallelNum { get; set; }
 
             /// <summary>
-            /// The number of shards of the index.
+            /// The number of shards.
             /// </summary>
             [NameInMap("partitionCount")]
             [Validation(Required=false)]

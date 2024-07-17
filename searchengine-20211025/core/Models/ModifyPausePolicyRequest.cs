@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyPausePolicyRequest : TeaModel {
+        /// <summary>
+        /// The request body.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public Dictionary<string, BodyValue> Body { get; set; }

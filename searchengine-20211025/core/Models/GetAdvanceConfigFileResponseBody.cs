@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result
+        /// The result.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetAdvanceConfigFileResponseBodyResult Result { get; set; }
         public class GetAdvanceConfigFileResponseBodyResult : TeaModel {
             /// <summary>
-            /// The content of the file
+            /// The file content.
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]

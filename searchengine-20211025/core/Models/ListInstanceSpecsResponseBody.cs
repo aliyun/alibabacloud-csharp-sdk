@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// List
+        /// The result.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListInstanceSpecsResponseBodyResult> Result { get; set; }
         public class ListInstanceSpecsResponseBodyResult : TeaModel {
             /// <summary>
-            /// None
+            /// The number of CPU cores.
             /// </summary>
             [NameInMap("cpu")]
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// 单数据节点存储空间最大值
+            /// The maximum storage space of a Searcher worker.
             /// </summary>
             [NameInMap("maxDisk")]
             [Validation(Required=false)]
             public int? MaxDisk { get; set; }
 
             /// <summary>
-            /// Unit: GB
+            /// The memory. Unit: GB.
             /// </summary>
             [NameInMap("mem")]
             [Validation(Required=false)]
             public int? Mem { get; set; }
 
             /// <summary>
-            /// 单数据节点存储空间最小值
+            /// The minimum storage space of a Searcher worker.
             /// </summary>
             [NameInMap("minDisk")]
             [Validation(Required=false)]

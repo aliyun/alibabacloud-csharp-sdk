@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result returned.
+        /// The results returned.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The product code.
+            /// The commodity code of the instance.
             /// </summary>
             [NameInMap("commodityCode")]
             [Validation(Required=false)]
@@ -51,8 +51,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("edition")]
+            [Validation(Required=false)]
+            public string Edition { get; set; }
+
             /// <summary>
-            /// The expiration time.
+            /// The time when the instance expires.
             /// </summary>
             [NameInMap("expiredTime")]
             [Validation(Required=false)]
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public bool? InDebt { get; set; }
 
             /// <summary>
-            /// The ID of the resource.
+            /// The instance ID.
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
@@ -79,12 +83,104 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string LockMode { get; set; }
 
+            [NameInMap("network")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyResultNetwork Network { get; set; }
+            public class GetInstanceResponseBodyResultNetwork : TeaModel {
+                [NameInMap("allow")]
+                [Validation(Required=false)]
+                public string Allow { get; set; }
+
+                [NameInMap("endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+                [NameInMap("publicEndpoint")]
+                [Validation(Required=false)]
+                public string PublicEndpoint { get; set; }
+
+                [NameInMap("vSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                [NameInMap("vpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+            }
+
+            [NameInMap("newMode")]
+            [Validation(Required=false)]
+            public bool? NewMode { get; set; }
+
+            [NameInMap("noQrs")]
+            [Validation(Required=false)]
+            public bool? NoQrs { get; set; }
+
             /// <summary>
             /// The ID of the resource group.
             /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
+            [NameInMap("spec")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyResultSpec Spec { get; set; }
+            public class GetInstanceResponseBodyResultSpec : TeaModel {
+                [NameInMap("qrsResource")]
+                [Validation(Required=false)]
+                public GetInstanceResponseBodyResultSpecQrsResource QrsResource { get; set; }
+                public class GetInstanceResponseBodyResultSpecQrsResource : TeaModel {
+                    [NameInMap("category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    [NameInMap("cpu")]
+                    [Validation(Required=false)]
+                    public int? Cpu { get; set; }
+
+                    [NameInMap("disk")]
+                    [Validation(Required=false)]
+                    public int? Disk { get; set; }
+
+                    [NameInMap("mem")]
+                    [Validation(Required=false)]
+                    public int? Mem { get; set; }
+
+                    [NameInMap("nodeCount")]
+                    [Validation(Required=false)]
+                    public int? NodeCount { get; set; }
+
+                }
+
+                [NameInMap("searchResource")]
+                [Validation(Required=false)]
+                public GetInstanceResponseBodyResultSpecSearchResource SearchResource { get; set; }
+                public class GetInstanceResponseBodyResultSpecSearchResource : TeaModel {
+                    [NameInMap("category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    [NameInMap("cpu")]
+                    [Validation(Required=false)]
+                    public int? Cpu { get; set; }
+
+                    [NameInMap("disk")]
+                    [Validation(Required=false)]
+                    public int? Disk { get; set; }
+
+                    [NameInMap("mem")]
+                    [Validation(Required=false)]
+                    public int? Mem { get; set; }
+
+                    [NameInMap("nodeCount")]
+                    [Validation(Required=false)]
+                    public int? NodeCount { get; set; }
+
+                }
+
+            }
 
             /// <summary>
             /// The status of the instance. Valid values:
@@ -99,21 +195,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// 标签。
+            /// The tags of the instance.
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<GetInstanceResponseBodyResultTags> Tags { get; set; }
             public class GetInstanceResponseBodyResultTags : TeaModel {
                 /// <summary>
-                /// 标签键
+                /// The tag key.
                 /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// 标签值
+                /// The tag value.
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
@@ -122,11 +218,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The time when the instance was last updated.
+            /// The time when the instance was updated.
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
+
+            [NameInMap("userName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
+            [NameInMap("version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
 
         }
 

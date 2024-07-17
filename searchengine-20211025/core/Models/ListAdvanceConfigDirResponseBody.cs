@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The file list in the advanced configuration directory.
+        /// The advanced configuration files.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListAdvanceConfigDirResponseBodyResult> Result { get; set; }
         public class ListAdvanceConfigDirResponseBodyResult : TeaModel {
             /// <summary>
-            /// The name of the absolute path.
+            /// The absolute path in which the file is stored.
             /// </summary>
             [NameInMap("fullPathName")]
             [Validation(Required=false)]
             public string FullPathName { get; set; }
 
             /// <summary>
-            /// Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.
+            /// Indicates whether the file is a directory. Valid values: true and false.
             /// </summary>
             [NameInMap("isDir")]
             [Validation(Required=false)]
             public bool? IsDir { get; set; }
 
             /// <summary>
-            /// Indicates whether it is a template. Valid values: **true** and **false**. true indicates that it is a template, and false indicates that it is not a template.
+            /// Indicates whether the file is a template. Valid values: **true** and **false**.
             /// </summary>
             [NameInMap("isTemplate")]
             [Validation(Required=false)]
             public bool? IsTemplate { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// The cluster name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

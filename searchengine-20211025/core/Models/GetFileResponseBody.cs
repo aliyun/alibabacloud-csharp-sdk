@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the index.
+        /// The index information.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetFileResponseBodyResult Result { get; set; }
         public class GetFileResponseBodyResult : TeaModel {
             /// <summary>
-            /// The content of the file.
+            /// The file content.
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string DataSource { get; set; }
 
             /// <summary>
-            /// The name of the full path.
+            /// The full path of the file.
             /// </summary>
             [NameInMap("fullPathName")]
             [Validation(Required=false)]
             public string FullPathName { get; set; }
 
             /// <summary>
-            /// Indicates whether it is a directory.
+            /// Indicates whether the file is a directory.
             /// </summary>
             [NameInMap("isDir")]
             [Validation(Required=false)]
             public bool? IsDir { get; set; }
 
             /// <summary>
-            /// The name of the file.
+            /// The file name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

@@ -17,12 +17,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of the cluster details.
+        /// The clusters.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetClusterResponseBodyResult Result { get; set; }
         public class GetClusterResponseBodyResult : TeaModel {
+            /// <summary>
+            /// The configuration information.
+            /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public Dictionary<string, Dictionary<string, object>> Config { get; set; }
@@ -34,6 +37,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string ConfigUpdateTime { get; set; }
 
+            /// <summary>
+            /// The time when the cluster was created.
+            /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -53,14 +59,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string CurrentOnlineConfigVersion { get; set; }
 
             /// <summary>
-            /// The specifications of the data node.
+            /// The specifications of Searcher workers.
             /// </summary>
             [NameInMap("dataNode")]
             [Validation(Required=false)]
             public GetClusterResponseBodyResultDataNode DataNode { get; set; }
             public class GetClusterResponseBodyResultDataNode : TeaModel {
                 /// <summary>
-                /// The name of the node.
+                /// The name of the Searcher worker.
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -104,21 +110,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string LatestOnlineConfigVersion { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// The cluster name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The specifications of the query node.
+            /// The specifications of Query Result Searcher (QRS) workers.
             /// </summary>
             [NameInMap("queryNode")]
             [Validation(Required=false)]
             public GetClusterResponseBodyResultQueryNode QueryNode { get; set; }
             public class GetClusterResponseBodyResultQueryNode : TeaModel {
                 /// <summary>
-                /// The name of the node.
+                /// The name of the QRS worker.
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]

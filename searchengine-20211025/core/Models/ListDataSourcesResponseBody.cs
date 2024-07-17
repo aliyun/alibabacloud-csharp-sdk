@@ -17,28 +17,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result returned.
+        /// The results returned.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListDataSourcesResponseBodyResult> Result { get; set; }
         public class ListDataSourcesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The data center where the data source is deployed in offline mode.
+            /// The data center in which the data source is deployed.
             /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The information about indexes.
+            /// The indexes.
             /// </summary>
             [NameInMap("indexes")]
             [Validation(Required=false)]
             public List<string> Indexes { get; set; }
 
             /// <summary>
-            /// The time when an index for full data was last built.
+            /// The time when the full data of the data source was last queried.
             /// </summary>
             [NameInMap("lastFulTime")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The state of the data source.
+            /// The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

@@ -9,33 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateIndexRequest : TeaModel {
+        /// <summary>
+        /// The maximum number of full indexes that can be concurrently built.
+        /// </summary>
         [NameInMap("buildParallelNum")]
         [Validation(Required=false)]
         public int? BuildParallelNum { get; set; }
 
         /// <summary>
-        /// The content of the index.
+        /// The index schema.
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// Optional. The data source, which can be MaxCompute, Message Service (MNS), Realtime Compute for Apache Flink, or StreamCompute.
+        /// The name of the data source.
         /// </summary>
         [NameInMap("dataSource")]
         [Validation(Required=false)]
         public string DataSource { get; set; }
 
         /// <summary>
-        /// The information about the data source, which is required for the new version of OpenSearch Vector Search Edition.
+        /// The information about the data source. This parameter is required for an OpenSearch Vector Search Edition instance of the new version.
         /// </summary>
         [NameInMap("dataSourceInfo")]
         [Validation(Required=false)]
         public CreateIndexRequestDataSourceInfo DataSourceInfo { get; set; }
         public class CreateIndexRequestDataSourceInfo : TeaModel {
             /// <summary>
-            /// Specifies whether to enable the automatic full indexing feature.
+            /// Specifies whether to enable automatic full indexing.
             /// </summary>
             [NameInMap("autoBuildIndex")]
             [Validation(Required=false)]
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string AccessSecret { get; set; }
 
                 /// <summary>
-                /// oss bucket
+                /// The name of the OSS bucket.
                 /// </summary>
                 [NameInMap("bucket")]
                 [Validation(Required=false)]
@@ -76,21 +79,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// The namespace name.
+                /// </summary>
                 [NameInMap("namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
+                /// <summary>
+                /// The path of the OSS object.
+                /// </summary>
                 [NameInMap("ossPath")]
                 [Validation(Required=false)]
                 public string OssPath { get; set; }
 
                 /// <summary>
-                /// The data partition. This parameter is required if type is set to odps.
+                /// The partition in the MaxCompute table. This parameter is required if type is set to odps.
                 /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
                 public string Partition { get; set; }
 
+                /// <summary>
+                /// The path of the Apsara File Storage for HDFS data source.
+                /// </summary>
                 [NameInMap("path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
@@ -103,7 +115,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// The table name.
                 /// </summary>
                 [NameInMap("table")]
                 [Validation(Required=false)]
@@ -111,24 +123,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
             }
 
+            /// <summary>
+            /// The start timestamp from which incremental data is retrieved.
+            /// </summary>
             [NameInMap("dataTimeSec")]
             [Validation(Required=false)]
             public int? DataTimeSec { get; set; }
 
             /// <summary>
-            /// The data center where the data source is deployed.
+            /// The data center in which the data source is deployed.
             /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The name of the index.
+            /// The name of the data source.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The maximum number of full indexes that can be concurrently processed.
+            /// </summary>
             [NameInMap("processParallelNum")]
             [Validation(Required=false)]
             public int? ProcessParallelNum { get; set; }
@@ -140,14 +158,23 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public int? ProcessPartitionCount { get; set; }
 
+            /// <summary>
+            /// The configurations of the SARO data source.
+            /// </summary>
             [NameInMap("saroConfig")]
             [Validation(Required=false)]
             public CreateIndexRequestDataSourceInfoSaroConfig SaroConfig { get; set; }
             public class CreateIndexRequestDataSourceInfoSaroConfig : TeaModel {
+                /// <summary>
+                /// The namespace of the SARO data source.
+                /// </summary>
                 [NameInMap("namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
+                /// <summary>
+                /// The name of the SARO table.
+                /// </summary>
                 [NameInMap("tableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
@@ -155,7 +182,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The type of the data source. Valid values: odps, swift, saro, and oss.
+            /// The type of the data source. Valid values:
+            /// 
+            /// *   odps
+            /// *   swift
+            /// *   saro
+            /// *   oss
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -164,37 +196,46 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// The data center in which the data source resides.
+        /// The data center in which the data source is deployed.
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The extended configurations of the field. Keys such as vector and embedding are included. Vector indicates the vector field. Embedding indicates the field that requires embedding.
+        /// The extended content of the field configuration. key specifies the vector field and the field that requires embedding.
         /// </summary>
         [NameInMap("extend")]
         [Validation(Required=false)]
         public Dictionary<string, object> Extend { get; set; }
 
+        /// <summary>
+        /// The maximum number of full indexes that can be concurrently merged.
+        /// </summary>
         [NameInMap("mergeParallelNum")]
         [Validation(Required=false)]
         public int? MergeParallelNum { get; set; }
 
         /// <summary>
-        /// The name of the index.
+        /// The index name.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The data partition.
+        /// The number of data shards.
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]
         public int? Partition { get; set; }
 
+        /// <summary>
+        /// Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

@@ -17,63 +17,63 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result returned.
+        /// The results returned.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListDataSourceSchemasResponseBodyResult> Result { get; set; }
         public class ListDataSourceSchemasResponseBodyResult : TeaModel {
             /// <summary>
-            /// Indicates whether the index properties are added. Valid values: true and false. **true** indicates that the index properties are added, and **false** indicates that the index properties are not added.
+            /// Indicates whether the field has the index attribute. Valid values: **true** and **false**.
             /// </summary>
             [NameInMap("addIndex")]
             [Validation(Required=false)]
             public bool? AddIndex { get; set; }
 
             /// <summary>
-            /// Indicates whether it is an attribute field. Valid values: true and false. **true** indicates that it is an attribute field, and **false** indicates that it is not an attribute field.
+            /// Indicates whether the field is an attribute field. Valid values: **true** and **false**.
             /// </summary>
             [NameInMap("attribute")]
             [Validation(Required=false)]
             public bool? Attribute { get; set; }
 
             /// <summary>
-            /// Indicates whether it is a custom field. Valid values: true and false. **true** indicates that it is a custom field, and **false** indicates that it is not a custom field.
+            /// Indicates whether the field is a custom field. Valid values: **true** and **false**.
             /// </summary>
             [NameInMap("custom")]
             [Validation(Required=false)]
             public bool? Custom { get; set; }
 
             /// <summary>
-            /// The name of the field.
+            /// The field name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The primary key.
+            /// The primary key field.
             /// </summary>
             [NameInMap("primaryKey")]
             [Validation(Required=false)]
             public ListDataSourceSchemasResponseBodyResultPrimaryKey PrimaryKey { get; set; }
             public class ListDataSourceSchemasResponseBodyResultPrimaryKey : TeaModel {
                 /// <summary>
-                /// Indicates whether it has the primary key property. **true** indicates that it has the primary key property, and **false** indicates that it does not have the primary key property.
+                /// Indicates whether the field has the primary key attribute. Valid values: **true** and **false**.
                 /// </summary>
                 [NameInMap("hasPrimaryKeyAttribute")]
                 [Validation(Required=false)]
                 public bool? HasPrimaryKeyAttribute { get; set; }
 
                 /// <summary>
-                /// Indicates whether it is the primary key. Valid values: true and false. **true** indicates that it is the primary key, and **false** indicates that it is not the primary key.
+                /// Indicates whether the field is the primary key. Valid values: **true** and **false**.
                 /// </summary>
                 [NameInMap("isPrimaryKey")]
                 [Validation(Required=false)]
                 public bool? IsPrimaryKey { get; set; }
 
                 /// <summary>
-                /// Indicates whether data is sorted based on the primary key. Valid values: true and false. **true** indicates that data is sorted based on the primary key, and **false** indicates that data is not sorted based on the primary key.
+                /// Indicates whether the field can be sorted. Valid values: **true** and **false**.
                 /// </summary>
                 [NameInMap("isPrimaryKeySorted")]
                 [Validation(Required=false)]
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// Indicates whether the information can be displayed. Valid values: true and false. **true** indicates that the information can be displayed, and **false** indicates that the information cannot be displayed.
+            /// Indicates whether the field can be displayed. Valid values: **true** and **false**.
             /// </summary>
             [NameInMap("summary")]
             [Validation(Required=false)]
             public bool? Summary { get; set; }
 
             /// <summary>
-            /// The type of the field.
+            /// The field type.
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]

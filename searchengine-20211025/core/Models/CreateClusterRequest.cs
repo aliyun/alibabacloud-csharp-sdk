@@ -10,26 +10,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// The remarks of the query node
+        /// Specifies whether to enable automatic connection.
         /// </summary>
         [NameInMap("autoLoad")]
         [Validation(Required=false)]
         public bool? AutoLoad { get; set; }
 
         /// <summary>
-        /// The description of the data node
+        /// The details of the Searcher workers.
         /// </summary>
         [NameInMap("dataNode")]
         [Validation(Required=false)]
         public CreateClusterRequestDataNode DataNode { get; set; }
         public class CreateClusterRequestDataNode : TeaModel {
             /// <summary>
-            /// The number of data nodes
+            /// The number of Searcher workers.
             /// </summary>
             [NameInMap("number")]
             [Validation(Required=false)]
             public int? Number { get; set; }
 
+            /// <summary>
+            /// The number of shards.
+            /// </summary>
             [NameInMap("partition")]
             [Validation(Required=false)]
             public string Partition { get; set; }
@@ -37,28 +40,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// The description of the cluster
+        /// The description of the cluster.
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the node
+        /// The cluster name.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The description of the query node
+        /// The details of the Query Result Searcher (QRS) workers.
         /// </summary>
         [NameInMap("queryNode")]
         [Validation(Required=false)]
         public CreateClusterRequestQueryNode QueryNode { get; set; }
         public class CreateClusterRequestQueryNode : TeaModel {
             /// <summary>
-            /// The number of nodes to query
+            /// The number of QRS workers.
             /// </summary>
             [NameInMap("number")]
             [Validation(Required=false)]

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// List
+        /// The result.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListTableGenerationsResponseBodyResult> Result { get; set; }
         public class ListTableGenerationsResponseBodyResult : TeaModel {
             /// <summary>
-            /// generationId
+            /// The ID of the full index version.
             /// </summary>
             [NameInMap("generationId")]
             [Validation(Required=false)]

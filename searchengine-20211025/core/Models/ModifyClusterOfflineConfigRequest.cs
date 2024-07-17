@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyClusterOfflineConfigRequest : TeaModel {
         /// <summary>
-        /// The mode of reindexing. Valid values: api and indexRecover. api indicates to push incremental data to a data source by calling the API operations. indexRecover indicates that the data source is restored from the index.
+        /// The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.
         /// </summary>
         [NameInMap("buildMode")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// The type of the data source. Valid values: odps, swift, saro, and unKnow.
+        /// The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.
         /// </summary>
         [NameInMap("dataSourceType")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? DataTimeSec { get; set; }
 
         /// <summary>
-        /// The domain where the data source is deployed.
+        /// The data center in which the data source is deployed.
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The data restoration version.
+        /// The ID of the full index version.
         /// </summary>
         [NameInMap("generation")]
         [Validation(Required=false)]
@@ -65,6 +65,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string Partition { get; set; }
 
+        /// <summary>
+        /// The push mode of the configuration. By default, only the configuration is pushed.
+        /// </summary>
         [NameInMap("pushMode")]
         [Validation(Required=false)]
         public string PushMode { get; set; }

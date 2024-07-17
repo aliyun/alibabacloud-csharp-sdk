@@ -23,10 +23,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public List<ListAliasesResponseBodyResult> Result { get; set; }
         public class ListAliasesResponseBodyResult : TeaModel {
+            /// <summary>
+            /// alias name
+            /// </summary>
             [NameInMap("alias")]
             [Validation(Required=false)]
             public string Alias { get; set; }
 
+            /// <summary>
+            /// index name
+            /// </summary>
             [NameInMap("index")]
             [Validation(Required=false)]
             public string Index { get; set; }

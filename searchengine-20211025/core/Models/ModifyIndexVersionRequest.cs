@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyIndexVersionRequest : TeaModel {
         /// <summary>
-        /// The keyword used to search for a version. Fuzzy match is supported.
+        /// The request body.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<ModifyIndexVersionRequestBody> Body { get; set; }
         public class ModifyIndexVersionRequestBody : TeaModel {
             /// <summary>
-            /// The ID of the index deployed in offline mode.
+            /// The deployment ID of the data source.
             /// </summary>
             [NameInMap("buildDeployId")]
             [Validation(Required=false)]
             public string BuildDeployId { get; set; }
 
             /// <summary>
-            /// The name of the index.
+            /// The index name.
             /// </summary>
             [NameInMap("indexName")]
             [Validation(Required=false)]
             public string IndexName { get; set; }
 
             /// <summary>
-            /// The version of the index.
+            /// The index version.
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

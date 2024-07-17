@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The Instance type, vector (vector index version),engine (recall engine version)
+        /// The instance type. Valid values: vector: OpenSearch Vector Search Edition instance. engine: OpenSearch Retrieval Engine Edition instance.
         /// </summary>
         [NameInMap("edition")]
         [Validation(Required=false)]
         public string Edition { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tag dictionary.
+        /// The tags of the instance.
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

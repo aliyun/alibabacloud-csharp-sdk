@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The name of the data source. Valid values: search and not_search. search indicates to search data. not_search indicates not to search data.
+        /// The name of the data source. Valid values: -search: search for data. -not_search: do not search for data.
         /// </summary>
         [NameInMap("dataSourceName")]
         [Validation(Required=false)]
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// The original name of the node.
+        /// The name of the configuration before the modification.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -75,13 +75,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The type of the algorithm. Valid values: pop, cp, hot, hint, and suggest.
+        /// The type of the algorithm. Valid values:
         /// 
-        /// *   pop indicates the popularity model.
-        /// *   cp indicates the category prediction model.
-        /// *   hot indicates the top search model.
-        /// *   hint indicates the hint model.
-        /// *   suggest indicates the drop-down suggestion model.
+        /// *   pop: a popularity model.
+        /// *   cp: a category prediction model.
+        /// *   hot: a top search model.
+        /// *   hint: a hint model.
+        /// *   suggest: a drop-down suggestions model.
         /// 
         /// This parameter is required.
         /// </summary>

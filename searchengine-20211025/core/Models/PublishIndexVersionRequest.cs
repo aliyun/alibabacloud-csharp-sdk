@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class PublishIndexVersionRequest : TeaModel {
         /// <summary>
-        /// The query result
+        /// The request body.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

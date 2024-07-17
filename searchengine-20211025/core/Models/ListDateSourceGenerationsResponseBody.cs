@@ -24,49 +24,49 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public List<ListDateSourceGenerationsResponseBodyResult> Result { get; set; }
         public class ListDateSourceGenerationsResponseBodyResult : TeaModel {
             /// <summary>
-            /// buildDeployId
+            /// The ID of the offline deployment.
             /// </summary>
             [NameInMap("buildDeployId")]
             [Validation(Required=false)]
             public int? BuildDeployId { get; set; }
 
             /// <summary>
-            /// The time to start index building.
+            /// The timestamp that was generated when the index building was started.
             /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The directory where the index file created by using the dump table is saved.
+            /// The path of the dumped index in the Apsara File Storage for HDFS file system.
             /// </summary>
             [NameInMap("dataDumpRoot")]
             [Validation(Required=false)]
             public string DataDumpRoot { get; set; }
 
             /// <summary>
-            /// The primary key of the generation.
+            /// The ID of the full index version.
             /// </summary>
             [NameInMap("generation")]
             [Validation(Required=false)]
             public long? Generation { get; set; }
 
             /// <summary>
-            /// Key indicates the name of the index. value indicates the number of shards.
+            /// The shards of the index version. The value is a key-value pair in which the key indicates the index name and the value indicates the number of shards. The number of value shards.
             /// </summary>
             [NameInMap("partition")]
             [Validation(Required=false)]
             public Dictionary<string, int?> Partition { get; set; }
 
             /// <summary>
-            /// The status.
+            /// The status of the index version.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The timestamp when the offline indexing was initiated.
+            /// The start timestamp from which incremental data is retrieved.
             /// </summary>
             [NameInMap("timestamp")]
             [Validation(Required=false)]

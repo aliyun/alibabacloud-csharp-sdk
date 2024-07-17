@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class BuildIndexRequest : TeaModel {
         /// <summary>
-        /// The reindexing mode.
+        /// The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.
         /// </summary>
         [NameInMap("buildMode")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? DataTimeSec { get; set; }
 
         /// <summary>
-        /// The data center in which the data source resides.
+        /// The data center in which the data source is deployed.
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public long? Generation { get; set; }
 
         /// <summary>
-        /// The data partition. This parameter is required if dataSourceType is set to odps.
+        /// The partition in the MaxCompute table. This parameter is required if type is set to odps.
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]

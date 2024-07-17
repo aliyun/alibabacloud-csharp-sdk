@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyFileRequest : TeaModel {
         /// <summary>
-        /// The content of the file.
+        /// The file content.
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// This parameter is required when index building for full data in a MaxCompute data source is triggered.
+        /// The number of shards.
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]

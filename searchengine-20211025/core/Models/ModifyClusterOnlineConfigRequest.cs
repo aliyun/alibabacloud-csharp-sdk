@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyClusterOnlineConfigRequest : TeaModel {
         /// <summary>
-        /// The information about the cluster
+        /// The cluster information.
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
         public List<string> Clusters { get; set; }
 
         /// <summary>
-        /// 配置信息
+        /// The configuration information.
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]

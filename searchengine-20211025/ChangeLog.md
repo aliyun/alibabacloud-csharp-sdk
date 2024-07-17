@@ -1,3 +1,8 @@
+2024-07-17 Version: 3.2.2
+- Update API GetInstance: update response param.
+- Update API ListInstances: update response param.
+
+
 2024-07-03 Version: 3.2.1
 - Generated csharp 2021-10-25 for searchengine.
 

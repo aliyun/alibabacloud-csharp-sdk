@@ -10,70 +10,70 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetClusterRunTimeInfoResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result set.
+        /// The result.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<GetClusterRunTimeInfoResponseBodyResult> Result { get; set; }
         public class GetClusterRunTimeInfoResponseBodyResult : TeaModel {
             /// <summary>
-            /// The name of the cluster.
+            /// The cluster name.
             /// </summary>
             [NameInMap("clusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// The information about the data node.
+            /// The information about the Searcher workers.
             /// </summary>
             [NameInMap("dataNodes")]
             [Validation(Required=false)]
             public List<GetClusterRunTimeInfoResponseBodyResultDataNodes> DataNodes { get; set; }
             public class GetClusterRunTimeInfoResponseBodyResultDataNodes : TeaModel {
                 /// <summary>
-                /// The configuration status list.
+                /// The configuration status.
                 /// </summary>
                 [NameInMap("configStatusList")]
                 [Validation(Required=false)]
                 public List<GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList> ConfigStatusList { get; set; }
                 public class GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList : TeaModel {
                     /// <summary>
-                    /// The time when the cluster was updated.
+                    /// The time when the configuration was last updated.
                     /// </summary>
                     [NameInMap("configUpdateTime")]
                     [Validation(Required=false)]
                     public string ConfigUpdateTime { get; set; }
 
                     /// <summary>
-                    /// The overall progress.
+                    /// The configuration progress. Unit: percentage.
                     /// </summary>
                     [NameInMap("donePercent")]
                     [Validation(Required=false)]
                     public int? DonePercent { get; set; }
 
                     /// <summary>
-                    /// The number of nodes that are configured.
+                    /// The number of processed Searcher workers in the cluster.
                     /// </summary>
                     [NameInMap("doneSize")]
                     [Validation(Required=false)]
                     public int? DoneSize { get; set; }
 
                     /// <summary>
-                    /// The name of the cluster.
+                    /// The cluster name.
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The total number of nodes that you specify when you create the cluster.
+                    /// The total number of Searcher workers in the cluster.
                     /// </summary>
                     [NameInMap("totalSize")]
                     [Validation(Required=false)]
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// The dataStatusList.
+                /// The data of the Searcher worker.
                 /// </summary>
                 [NameInMap("dataStatusList")]
                 [Validation(Required=false)]
                 public List<GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList> DataStatusList { get; set; }
                 public class GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList : TeaModel {
                     /// <summary>
-                    /// The information about advanced configurations.
+                    /// The information about the advanced configuration.
                     /// </summary>
                     [NameInMap("advanceConfigInfo")]
                     [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     }
 
                     /// <summary>
-                    /// The name of the worker that failed because of a deployment failure.
+                    /// The name of the worker that failed due to a deployment failure.
                     /// </summary>
                     [NameInMap("deployFailedWorker")]
                     [Validation(Required=false)]
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public int? DocSize { get; set; }
 
                     /// <summary>
-                    /// The overall progress.
+                    /// The configuration progress. Unit: percentage.
                     /// </summary>
                     [NameInMap("donePercent")]
                     [Validation(Required=false)]
                     public int? DonePercent { get; set; }
 
                     /// <summary>
-                    /// The number of nodes that are configured.
+                    /// The number of processed QRS workers in the cluster.
                     /// </summary>
                     [NameInMap("doneSize")]
                     [Validation(Required=false)]
@@ -147,35 +147,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string ErrorMsg { get; set; }
 
                     /// <summary>
-                    /// The time when the full data was updated.
+                    /// The time when full data in the index was last updated.
                     /// </summary>
                     [NameInMap("fullUpdateTime")]
                     [Validation(Required=false)]
                     public string FullUpdateTime { get; set; }
 
                     /// <summary>
-                    /// The full version.
+                    /// The time when the full index version was generated.
                     /// </summary>
                     [NameInMap("fullVersion")]
                     [Validation(Required=false)]
                     public long? FullVersion { get; set; }
 
                     /// <summary>
-                    /// The time when the incremental data was updated.
+                    /// The time when incremental data in the index was last updated.
                     /// </summary>
                     [NameInMap("incUpdateTime")]
                     [Validation(Required=false)]
                     public string IncUpdateTime { get; set; }
 
                     /// <summary>
-                    /// The incremental version.
+                    /// The time when the incremental index version was generated.
                     /// </summary>
                     [NameInMap("incVersion")]
                     [Validation(Required=false)]
                     public long? IncVersion { get; set; }
 
                     /// <summary>
-                    /// The configuration information of the index.
+                    /// The information about the index configuration.
                     /// </summary>
                     [NameInMap("indexConfigInfo")]
                     [Validation(Required=false)]
@@ -198,35 +198,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     }
 
                     /// <summary>
-                    /// The size of the index.
+                    /// The index size.
                     /// </summary>
                     [NameInMap("indexSize")]
                     [Validation(Required=false)]
                     public long? IndexSize { get; set; }
 
                     /// <summary>
-                    /// The name of the worker that failed because of insufficient disk space.
+                    /// The name of the worker that failed due to insufficient disks.
                     /// </summary>
                     [NameInMap("lackDiskWorker")]
                     [Validation(Required=false)]
                     public List<string> LackDiskWorker { get; set; }
 
                     /// <summary>
-                    /// The name of the worker that failed because of insufficient memory.
+                    /// The name of the worker that failed due to insufficient memory.
                     /// </summary>
                     [NameInMap("lackMemWorker")]
                     [Validation(Required=false)]
                     public List<string> LackMemWorker { get; set; }
 
                     /// <summary>
-                    /// The name of the node.
+                    /// The name of the QRS worker.
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The total number of nodes that you specify when you create the cluster.
+                    /// The total number of QRS workers in the cluster.
                     /// </summary>
                     [NameInMap("totalSize")]
                     [Validation(Required=false)]
@@ -235,35 +235,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// The service status.
+                /// The service status of the QRS worker.
                 /// </summary>
                 [NameInMap("serviceStatus")]
                 [Validation(Required=false)]
                 public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus ServiceStatus { get; set; }
                 public class GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus : TeaModel {
                     /// <summary>
-                    /// The overall progress.
+                    /// The process progress of QRS workers in the cluster. Unit: percentage.
                     /// </summary>
                     [NameInMap("donePercent")]
                     [Validation(Required=false)]
                     public int? DonePercent { get; set; }
 
                     /// <summary>
-                    /// The number of nodes being processed in the cluster.
+                    /// The number of processed QRS workers in the cluster.
                     /// </summary>
                     [NameInMap("doneSize")]
                     [Validation(Required=false)]
                     public int? DoneSize { get; set; }
 
                     /// <summary>
-                    /// The name.
+                    /// The name of the QRS worker.
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The total number of nodes in the cluster.
+                    /// The total number of QRS workers in the cluster.
                     /// </summary>
                     [NameInMap("totalSize")]
                     [Validation(Required=false)]
@@ -274,49 +274,49 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The information about the query node.
+            /// The information about the Query Result Searcher (QRS) workers.
             /// </summary>
             [NameInMap("queryNode")]
             [Validation(Required=false)]
             public GetClusterRunTimeInfoResponseBodyResultQueryNode QueryNode { get; set; }
             public class GetClusterRunTimeInfoResponseBodyResultQueryNode : TeaModel {
                 /// <summary>
-                /// The dataStatusList.
+                /// The configuration status.
                 /// </summary>
                 [NameInMap("configStatusList")]
                 [Validation(Required=false)]
                 public List<GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList> ConfigStatusList { get; set; }
                 public class GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList : TeaModel {
                     /// <summary>
-                    /// The time when the cluster was updated.
+                    /// The time when the configuration was last updated.
                     /// </summary>
                     [NameInMap("configUpdateTime")]
                     [Validation(Required=false)]
                     public string ConfigUpdateTime { get; set; }
 
                     /// <summary>
-                    /// The progress.
+                    /// The process progress of QRS workers in the cluster. Unit: percentage.
                     /// </summary>
                     [NameInMap("donePercent")]
                     [Validation(Required=false)]
                     public int? DonePercent { get; set; }
 
                     /// <summary>
-                    /// The number of nodes that are configured.
+                    /// The number of processed QRS workers in the cluster.
                     /// </summary>
                     [NameInMap("doneSize")]
                     [Validation(Required=false)]
                     public int? DoneSize { get; set; }
 
                     /// <summary>
-                    /// The name of the cluster.
+                    /// The cluster name.
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The total number of nodes that you specify when you create the cluster.
+                    /// The total number of QRS workers in the cluster.
                     /// </summary>
                     [NameInMap("totalSize")]
                     [Validation(Required=false)]
@@ -325,35 +325,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// The service status.
+                /// The service status of the QRS worker.
                 /// </summary>
                 [NameInMap("serviceStatus")]
                 [Validation(Required=false)]
                 public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus ServiceStatus { get; set; }
                 public class GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus : TeaModel {
                     /// <summary>
-                    /// The progress.
+                    /// The process progress of QRS workers in the cluster. Unit: percentage.
                     /// </summary>
                     [NameInMap("donePercent")]
                     [Validation(Required=false)]
                     public int? DonePercent { get; set; }
 
                     /// <summary>
-                    /// The number of nodes that are configured.
+                    /// The number of processed QRS workers in the cluster.
                     /// </summary>
                     [NameInMap("doneSize")]
                     [Validation(Required=false)]
                     public int? DoneSize { get; set; }
 
                     /// <summary>
-                    /// The name of the cluster.
+                    /// The cluster name.
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The total number of nodes that you specify when you create the cluster.
+                    /// The total number of QRS workers in the cluster.
                     /// </summary>
                     [NameInMap("totalSize")]
                     [Validation(Required=false)]

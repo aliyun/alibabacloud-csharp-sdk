@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class DeleteConfigFileResponseBody : TeaModel {
         /// <summary>
-        /// id of request
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Map
+        /// The result.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

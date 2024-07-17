@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListIndexesRequest : TeaModel {
         /// <summary>
-        /// 是否为新版本控制台页面
+        /// Specifies whether the OpenSearch Vector Search Edition instance is of the new version.
         /// </summary>
         [NameInMap("newMode")]
         [Validation(Required=false)]
