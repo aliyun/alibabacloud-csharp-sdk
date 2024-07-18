@@ -2238,6 +2238,154 @@ namespace AlibabaCloud.SDK.Aliding20230426
         }
 
         /**
+         * @summary 校验阿里员工
+         *
+         * @param tmpReq CheckAlibabaStaffRequest
+         * @param tmpHeader CheckAlibabaStaffHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckAlibabaStaffResponse
+         */
+        public CheckAlibabaStaffResponse CheckAlibabaStaffWithOptions(CheckAlibabaStaffRequest tmpReq, CheckAlibabaStaffHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CheckAlibabaStaffShrinkRequest request = new CheckAlibabaStaffShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            CheckAlibabaStaffShrinkHeaders headers = new CheckAlibabaStaffShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                body["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckAlibabaStaff",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/im/checkAlibabaStaff",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckAlibabaStaffResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 校验阿里员工
+         *
+         * @param tmpReq CheckAlibabaStaffRequest
+         * @param tmpHeader CheckAlibabaStaffHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckAlibabaStaffResponse
+         */
+        public async Task<CheckAlibabaStaffResponse> CheckAlibabaStaffWithOptionsAsync(CheckAlibabaStaffRequest tmpReq, CheckAlibabaStaffHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CheckAlibabaStaffShrinkRequest request = new CheckAlibabaStaffShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            CheckAlibabaStaffShrinkHeaders headers = new CheckAlibabaStaffShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                body["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckAlibabaStaff",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/im/checkAlibabaStaff",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckAlibabaStaffResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 校验阿里员工
+         *
+         * @param request CheckAlibabaStaffRequest
+         * @return CheckAlibabaStaffResponse
+         */
+        public CheckAlibabaStaffResponse CheckAlibabaStaff(CheckAlibabaStaffRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CheckAlibabaStaffHeaders headers = new CheckAlibabaStaffHeaders();
+            return CheckAlibabaStaffWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 校验阿里员工
+         *
+         * @param request CheckAlibabaStaffRequest
+         * @return CheckAlibabaStaffResponse
+         */
+        public async Task<CheckAlibabaStaffResponse> CheckAlibabaStaffAsync(CheckAlibabaStaffRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CheckAlibabaStaffHeaders headers = new CheckAlibabaStaffHeaders();
+            return await CheckAlibabaStaffWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 查询用户是否为企业内部群成员
          *
          * @param request CheckUserIsGroupMemberRequest
@@ -31667,6 +31815,202 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateUserAvatarHeaders headers = new UpdateUserAvatarHeaders();
             return await UpdateUserAvatarWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 设置正在进行中的视频会议属性
+         *
+         * @param tmpReq UpdateVideoConferenceSettingRequest
+         * @param tmpHeader UpdateVideoConferenceSettingHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateVideoConferenceSettingResponse
+         */
+        public UpdateVideoConferenceSettingResponse UpdateVideoConferenceSettingWithOptions(UpdateVideoConferenceSettingRequest tmpReq, UpdateVideoConferenceSettingHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateVideoConferenceSettingShrinkRequest request = new UpdateVideoConferenceSettingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateVideoConferenceSettingShrinkHeaders headers = new UpdateVideoConferenceSettingShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUnmuteSelf))
+            {
+                body["AllowUnmuteSelf"] = request.AllowUnmuteSelf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTransferHost))
+            {
+                body["AutoTransferHost"] = request.AutoTransferHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForbiddenShareScreen))
+            {
+                body["ForbiddenShareScreen"] = request.ForbiddenShareScreen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LockConference))
+            {
+                body["LockConference"] = request.LockConference;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MuteAll))
+            {
+                body["MuteAll"] = request.MuteAll;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyInternalEmployeesJoin))
+            {
+                body["OnlyInternalEmployeesJoin"] = request.OnlyInternalEmployeesJoin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVideoConferenceSetting",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/updateVideoConferenceSetting",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVideoConferenceSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 设置正在进行中的视频会议属性
+         *
+         * @param tmpReq UpdateVideoConferenceSettingRequest
+         * @param tmpHeader UpdateVideoConferenceSettingHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateVideoConferenceSettingResponse
+         */
+        public async Task<UpdateVideoConferenceSettingResponse> UpdateVideoConferenceSettingWithOptionsAsync(UpdateVideoConferenceSettingRequest tmpReq, UpdateVideoConferenceSettingHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateVideoConferenceSettingShrinkRequest request = new UpdateVideoConferenceSettingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateVideoConferenceSettingShrinkHeaders headers = new UpdateVideoConferenceSettingShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUnmuteSelf))
+            {
+                body["AllowUnmuteSelf"] = request.AllowUnmuteSelf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTransferHost))
+            {
+                body["AutoTransferHost"] = request.AutoTransferHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForbiddenShareScreen))
+            {
+                body["ForbiddenShareScreen"] = request.ForbiddenShareScreen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LockConference))
+            {
+                body["LockConference"] = request.LockConference;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MuteAll))
+            {
+                body["MuteAll"] = request.MuteAll;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyInternalEmployeesJoin))
+            {
+                body["OnlyInternalEmployeesJoin"] = request.OnlyInternalEmployeesJoin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVideoConferenceSetting",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/updateVideoConferenceSetting",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVideoConferenceSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 设置正在进行中的视频会议属性
+         *
+         * @param request UpdateVideoConferenceSettingRequest
+         * @return UpdateVideoConferenceSettingResponse
+         */
+        public UpdateVideoConferenceSettingResponse UpdateVideoConferenceSetting(UpdateVideoConferenceSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateVideoConferenceSettingHeaders headers = new UpdateVideoConferenceSettingHeaders();
+            return UpdateVideoConferenceSettingWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 设置正在进行中的视频会议属性
+         *
+         * @param request UpdateVideoConferenceSettingRequest
+         * @return UpdateVideoConferenceSettingResponse
+         */
+        public async Task<UpdateVideoConferenceSettingResponse> UpdateVideoConferenceSettingAsync(UpdateVideoConferenceSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateVideoConferenceSettingHeaders headers = new UpdateVideoConferenceSettingHeaders();
+            return await UpdateVideoConferenceSettingWithOptionsAsync(request, headers, runtime);
         }
 
         /**
