@@ -359,6 +359,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetResultToReviewResponseBodyDataReviewHistoryListReviewHistory> ReviewHistory { get; set; }
                 public class GetResultToReviewResponseBodyDataReviewHistoryListReviewHistory : TeaModel {
+                    [NameInMap("Comments")]
+                    [Validation(Required=false)]
+                    public string Comments { get; set; }
+
                     [NameInMap("ComplainResult")]
                     [Validation(Required=false)]
                     public int? ComplainResult { get; set; }
@@ -367,17 +371,43 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public int? OldScore { get; set; }
 
+                    [NameInMap("Operator")]
+                    [Validation(Required=false)]
+                    public long? Operator { get; set; }
+
                     [NameInMap("OperatorName")]
                     [Validation(Required=false)]
                     public string OperatorName { get; set; }
+
+                    [NameInMap("ReviewManagerType")]
+                    [Validation(Required=false)]
+                    public string ReviewManagerType { get; set; }
 
                     [NameInMap("ReviewResult")]
                     [Validation(Required=false)]
                     public int? ReviewResult { get; set; }
 
+                    [NameInMap("ReviewRightRule")]
+                    [Validation(Required=false)]
+                    public GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewRightRule ReviewRightRule { get; set; }
+                    public class GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewRightRule : TeaModel {
+                        [NameInMap("Rid")]
+                        [Validation(Required=false)]
+                        public long? Rid { get; set; }
+
+                        [NameInMap("RuleName")]
+                        [Validation(Required=false)]
+                        public string RuleName { get; set; }
+
+                    }
+
                     [NameInMap("Score")]
                     [Validation(Required=false)]
                     public int? Score { get; set; }
+
+                    [NameInMap("Time")]
+                    [Validation(Required=false)]
+                    public long? Time { get; set; }
 
                     [NameInMap("TimeStr")]
                     [Validation(Required=false)]
@@ -386,6 +416,32 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public int? Type { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("ReviewTypeIdList")]
+            [Validation(Required=false)]
+            public GetResultToReviewResponseBodyDataReviewTypeIdList ReviewTypeIdList { get; set; }
+            public class GetResultToReviewResponseBodyDataReviewTypeIdList : TeaModel {
+                [NameInMap("ReviewTypeIdList")]
+                [Validation(Required=false)]
+                public List<GetResultToReviewResponseBodyDataReviewTypeIdListReviewTypeIdList> ReviewTypeIdList { get; set; }
+                public class GetResultToReviewResponseBodyDataReviewTypeIdListReviewTypeIdList : TeaModel {
+                    [NameInMap("ReviewKeyIdList")]
+                    [Validation(Required=false)]
+                    public GetResultToReviewResponseBodyDataReviewTypeIdListReviewTypeIdListReviewKeyIdList ReviewKeyIdList { get; set; }
+                    public class GetResultToReviewResponseBodyDataReviewTypeIdListReviewTypeIdListReviewKeyIdList : TeaModel {
+                        [NameInMap("ReviewKeyIdList")]
+                        [Validation(Required=false)]
+                        public List<long?> ReviewKeyIdList { get; set; }
+
+                    }
+
+                    [NameInMap("ReviewTypeId")]
+                    [Validation(Required=false)]
+                    public long? ReviewTypeId { get; set; }
 
                 }
 

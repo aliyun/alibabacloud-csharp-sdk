@@ -844,6 +844,76 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public string Resolver { get; set; }
 
+                [NameInMap("ReviewHistoryList")]
+                [Validation(Required=false)]
+                public GetResultResponseBodyDataResultInfoReviewHistoryList ReviewHistoryList { get; set; }
+                public class GetResultResponseBodyDataResultInfoReviewHistoryList : TeaModel {
+                    [NameInMap("ReviewHistory")]
+                    [Validation(Required=false)]
+                    public List<GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory> ReviewHistory { get; set; }
+                    public class GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory : TeaModel {
+                        [NameInMap("Comments")]
+                        [Validation(Required=false)]
+                        public string Comments { get; set; }
+
+                        [NameInMap("ComplainResult")]
+                        [Validation(Required=false)]
+                        public int? ComplainResult { get; set; }
+
+                        [NameInMap("OldScore")]
+                        [Validation(Required=false)]
+                        public int? OldScore { get; set; }
+
+                        [NameInMap("Operator")]
+                        [Validation(Required=false)]
+                        public long? Operator { get; set; }
+
+                        [NameInMap("OperatorName")]
+                        [Validation(Required=false)]
+                        public string OperatorName { get; set; }
+
+                        [NameInMap("ReviewManagerType")]
+                        [Validation(Required=false)]
+                        public string ReviewManagerType { get; set; }
+
+                        [NameInMap("ReviewResult")]
+                        [Validation(Required=false)]
+                        public int? ReviewResult { get; set; }
+
+                        [NameInMap("ReviewRightRule")]
+                        [Validation(Required=false)]
+                        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule ReviewRightRule { get; set; }
+                        public class GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule : TeaModel {
+                            [NameInMap("Rid")]
+                            [Validation(Required=false)]
+                            public long? Rid { get; set; }
+
+                            [NameInMap("RuleName")]
+                            [Validation(Required=false)]
+                            public string RuleName { get; set; }
+
+                        }
+
+                        [NameInMap("Score")]
+                        [Validation(Required=false)]
+                        public int? Score { get; set; }
+
+                        [NameInMap("Time")]
+                        [Validation(Required=false)]
+                        public long? Time { get; set; }
+
+                        [NameInMap("TimeStr")]
+                        [Validation(Required=false)]
+                        public string TimeStr { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public int? Type { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("ReviewResult")]
                 [Validation(Required=false)]
                 public int? ReviewResult { get; set; }
@@ -863,6 +933,32 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [NameInMap("ReviewType")]
                 [Validation(Required=false)]
                 public int? ReviewType { get; set; }
+
+                [NameInMap("ReviewTypeIdList")]
+                [Validation(Required=false)]
+                public GetResultResponseBodyDataResultInfoReviewTypeIdList ReviewTypeIdList { get; set; }
+                public class GetResultResponseBodyDataResultInfoReviewTypeIdList : TeaModel {
+                    [NameInMap("ReviewTypeIdList")]
+                    [Validation(Required=false)]
+                    public List<GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList> ReviewTypeIdList { get; set; }
+                    public class GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList : TeaModel {
+                        [NameInMap("ReviewKeyIdList")]
+                        [Validation(Required=false)]
+                        public GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList ReviewKeyIdList { get; set; }
+                        public class GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList : TeaModel {
+                            [NameInMap("ReviewKeyIdList")]
+                            [Validation(Required=false)]
+                            public List<long?> ReviewKeyIdList { get; set; }
+
+                        }
+
+                        [NameInMap("ReviewTypeId")]
+                        [Validation(Required=false)]
+                        public long? ReviewTypeId { get; set; }
+
+                    }
+
+                }
 
                 [NameInMap("Reviewer")]
                 [Validation(Required=false)]

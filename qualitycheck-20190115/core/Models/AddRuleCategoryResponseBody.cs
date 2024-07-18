@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public bool? Select { get; set; }
 
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public int? Type { get; set; }
+
         }
 
         [NameInMap("Message")]

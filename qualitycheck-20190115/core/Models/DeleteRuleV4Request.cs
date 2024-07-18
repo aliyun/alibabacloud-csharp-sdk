@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public bool? ForceDelete { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }

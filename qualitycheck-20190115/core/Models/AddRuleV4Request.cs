@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public bool? IsCopy { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JsonStrForRule")]
         [Validation(Required=false)]
         public string JsonStrForRule { get; set; }

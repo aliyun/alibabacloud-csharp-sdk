@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public int? IsSchemeData { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TestJson")]
         [Validation(Required=false)]
         public string TestJson { get; set; }

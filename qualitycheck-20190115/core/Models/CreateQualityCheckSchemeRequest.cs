@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("jsonStr")]
         [Validation(Required=false)]
         public string JsonStr { get; set; }
