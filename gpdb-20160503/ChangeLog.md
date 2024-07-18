@@ -1,3 +1,10 @@
+2024-07-18 Version: 1.10.3
+- Update API ListDocuments: add param MaxResults.
+- Update API ListDocuments: add param NextToken.
+- Update API ListDocuments: update response param.
+- Update API QueryContent: add param IncludeFileUrl.
+
+
 2024-07-03 Version: 1.10.2
 - Update API DescribeDocument: update response param.
 

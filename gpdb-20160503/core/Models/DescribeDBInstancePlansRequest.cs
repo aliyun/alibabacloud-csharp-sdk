@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The time used to filter plans. If you specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format, the plans created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.
+        /// The time that is used to filter plans. If you specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format, the plans that are created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.
         /// </summary>
         [NameInMap("PlanCreateDate")]
         [Validation(Required=false)]
@@ -62,6 +62,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// 
         /// *   **PauseResume**: pauses and resumes an instance.
         /// *   **Resize**: scales an instance.
+        /// *   **ModifySpec**: changes compute node specifications.
         /// </summary>
         [NameInMap("PlanType")]
         [Validation(Required=false)]

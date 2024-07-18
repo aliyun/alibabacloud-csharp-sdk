@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The description of the service.
+        /// </summary>
         [NameInMap("ServiceDescription")]
         [Validation(Required=false)]
         public string ServiceDescription { get; set; }
@@ -29,10 +32,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
+        /// <summary>
+        /// The name of the service.
+        /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
+        /// <summary>
+        /// The specifications of the service. Unit: compute units (CUs).
+        /// </summary>
         [NameInMap("ServiceSpec")]
         [Validation(Required=false)]
         public string ServiceSpec { get; set; }

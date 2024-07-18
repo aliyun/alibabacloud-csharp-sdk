@@ -46,10 +46,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ExecuteCost { get; set; }
 
         /// <summary>
-        /// The execution state of the SQL statement. Valid values:
+        /// The execution status of the query. Valid values:
         /// 
-        /// *   **success**
-        /// *   **fail**
+        /// *   1: successful.
+        /// *   0: failed.
+        /// *   0,1 or 1,0: all.
         /// </summary>
         [NameInMap("ExecuteState")]
         [Validation(Required=false)]
@@ -87,10 +88,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// 
         /// > 
         /// 
-        /// *   If **OperationClass** is specified, the value of **OperationType** must belong to the corresponding query language. For example, if **OperationClass** is set to **DQL**, the value of **OperationType** must be a **DQL** statement such as **SELECT**.
+        /// *   If you specify **OperationClass**, the value of **OperationType** must be of the corresponding query language. For example, if you set **OperationClass** to **DQL**, the value of **OperationType** must be a **DQL** statement such as **SELECT**.
         /// 
-        /// *   If **OperationClass** is not specified, the value of **OperationType** can be an SQL statement of any query language.
-        /// *   If **OperationClass** and **OperationType** are not specified, all types of SQL statements are returned.
+        /// *   If you leave **OperationClass** empty, the value of **OperationType** can be an SQL statement of any query language.
+        /// 
+        /// *   If you leave **OperationClass** and **OperationType** empty, all types of SQL statements are returned.
         /// </summary>
         [NameInMap("OperationType")]
         [Validation(Required=false)]

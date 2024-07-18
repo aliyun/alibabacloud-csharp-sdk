@@ -160,30 +160,48 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             }
 
+            /// <summary>
+            /// The total amount of cold data storage.
+            /// </summary>
             [NameInMap("adbpg_instance_cold_data_gb")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgInstanceColdDataGb AdbpgInstanceColdDataGb { get; set; }
             public class DescribeHealthStatusResponseBodyStatusAdbpgInstanceColdDataGb : TeaModel {
+                /// <summary>
+                /// The total amount of cold data storage. Unit: GB.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public float? Value { get; set; }
 
             }
 
+            /// <summary>
+            /// The total amount of hot data storage.
+            /// </summary>
             [NameInMap("adbpg_instance_hot_data_gb")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgInstanceHotDataGb AdbpgInstanceHotDataGb { get; set; }
             public class DescribeHealthStatusResponseBodyStatusAdbpgInstanceHotDataGb : TeaModel {
+                /// <summary>
+                /// The total amount of hot data storage. Unit: GB.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public float? Value { get; set; }
 
             }
 
+            /// <summary>
+            /// The total amount of data storage of the instance.
+            /// </summary>
             [NameInMap("adbpg_instance_total_data_gb")]
             [Validation(Required=false)]
             public DescribeHealthStatusResponseBodyStatusAdbpgInstanceTotalDataGb AdbpgInstanceTotalDataGb { get; set; }
             public class DescribeHealthStatusResponseBodyStatusAdbpgInstanceTotalDataGb : TeaModel {
+                /// <summary>
+                /// The total amount of data storage of the instance. Unit: GB.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public float? Value { get; set; }

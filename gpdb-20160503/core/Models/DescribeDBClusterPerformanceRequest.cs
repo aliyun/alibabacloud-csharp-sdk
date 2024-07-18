@@ -66,6 +66,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Nodes { get; set; }
 
+        /// <summary>
+        /// The name of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }

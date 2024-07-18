@@ -28,13 +28,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values:
+        /// The number of entries per page. Valid values:
         /// 
-        /// *   **20**
+        /// *   **30**
         /// *   **50**
         /// *   **100**
         /// 
-        /// Default value: **20**.
+        /// Default value: **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

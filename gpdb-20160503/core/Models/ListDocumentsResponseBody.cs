@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListDocumentsResponseBody : TeaModel {
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
+
         [NameInMap("Items")]
         [Validation(Required=false)]
         public ListDocumentsResponseBodyItems Items { get; set; }
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

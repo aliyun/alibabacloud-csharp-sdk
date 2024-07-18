@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// The queried plans.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<DescribeDBInstancePlansResponseBodyItemsPlanList> PlanList { get; set; }
             public class DescribeDBInstancePlansResponseBodyItemsPlanList : TeaModel {
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
@@ -51,16 +51,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string PlanDesc { get; set; }
 
                 /// <summary>
-                /// The end time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+                /// The end time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// 
-                /// >  This parameter is returned only for periodically executed plans.
+                /// > 
+                /// 
+                /// *   This parameter is returned only for the plans that are periodically executed.
+                /// 
+                /// *   If you did not specify the end time when you created the plan, this parameter is not returned.
                 /// </summary>
                 [NameInMap("PlanEndDate")]
                 [Validation(Required=false)]
                 public string PlanEndDate { get; set; }
 
                 /// <summary>
-                /// The ID of the plan.
+                /// The plan ID.
                 /// </summary>
                 [NameInMap("PlanId")]
                 [Validation(Required=false)]
@@ -84,21 +88,25 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string PlanScheduleType { get; set; }
 
                 /// <summary>
-                /// The start time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+                /// The start time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// 
-                /// >  This parameter is returned only for periodically executed plans.
+                /// > 
+                /// 
+                /// *   This parameter is returned only for the plans that are periodically executed.
+                /// 
+                /// *   If you did not specify the start time when you created the plan, the current time is returned.
                 /// </summary>
                 [NameInMap("PlanStartDate")]
                 [Validation(Required=false)]
                 public string PlanStartDate { get; set; }
 
                 /// <summary>
-                /// The state of the plan. Valid values:
+                /// The status of the plan. Valid values:
                 /// 
-                /// *   **active**: The plan is running.
-                /// *   **cancel**: The plan is canceled.
-                /// *   **deleted**: The plan is deleted.
-                /// *   **finished**: The plan execution is complete.
+                /// *   **active**
+                /// *   **cancel**
+                /// *   **deleted**
+                /// *   **finished**
                 /// </summary>
                 [NameInMap("PlanStatus")]
                 [Validation(Required=false)]

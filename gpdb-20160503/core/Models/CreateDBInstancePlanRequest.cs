@@ -41,13 +41,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PlanDesc { get; set; }
 
         /// <summary>
-        /// The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+        /// The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. The end time must be later than the start time.
         /// 
-        /// > 
-        /// 
-        /// *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
-        /// 
-        /// *   If you do not specify this parameter, the plan does not end.
+        /// > - This parameter must be specified only when **PlanScheduleType** is set to **Regular.
+        ///  > - If you do not specify this parameter, the plan stops until the plan is deleted.
         /// </summary>
         [NameInMap("PlanEndDate")]
         [Validation(Required=false)]
@@ -75,13 +72,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PlanScheduleType { get; set; }
 
         /// <summary>
-        /// The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+        /// The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// 
-        /// > 
-        /// 
-        /// *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
-        /// 
-        /// *   If you do not specify this parameter, the plan is executed immediately.
+        /// > -  This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
+        /// > -  If you do not specify this parameter, the current time is used.
         /// </summary>
         [NameInMap("PlanStartDate")]
         [Validation(Required=false)]
@@ -94,11 +88,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// *   **Resize**: changes the number of compute nodes.
         /// *   **ModifySpec**: changes compute node specifications.
         /// 
-        /// > 
-        /// 
-        /// *   You can specify the value to Resize only for instances in Serverless mode.
-        /// 
-        /// *   You can specify the value to ModifySpec only for instances in elastic storage mode.
+        /// > - You can specify the value to ModifySpec only for instances in elastic storage mode.
+        /// >- You can specify the value to ModifySpec only for instances in elastic storage mode.
         /// 
         /// This parameter is required.
         /// </summary>

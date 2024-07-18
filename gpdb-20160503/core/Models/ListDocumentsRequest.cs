@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         /// <summary>
         /// The name of the namespace. Default value: public.
         /// 
@@ -46,6 +50,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("NamespacePassword")]
         [Validation(Required=false)]
         public string NamespacePassword { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

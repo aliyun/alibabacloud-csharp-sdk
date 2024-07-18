@@ -3546,7 +3546,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates the configurations for an external data source.
          *
          * @param tmpReq CreateStreamingJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3682,7 +3682,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates the configurations for an external data source.
          *
          * @param tmpReq CreateStreamingJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3818,7 +3818,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates the configurations for an external data source.
          *
          * @param request CreateStreamingJobRequest
          * @return CreateStreamingJobResponse
@@ -3830,7 +3830,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates the configurations for an external data source.
          *
          * @param request CreateStreamingJobRequest
          * @return CreateStreamingJobResponse
@@ -5058,7 +5058,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据服务
+         * @summary Deletes an external data service.
          *
          * @param request DeleteExternalDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5100,7 +5100,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据服务
+         * @summary Deletes an external data service.
          *
          * @param request DeleteExternalDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5142,7 +5142,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据服务
+         * @summary Deletes an external data service.
          *
          * @param request DeleteExternalDataServiceRequest
          * @return DeleteExternalDataServiceResponse
@@ -5154,7 +5154,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据服务
+         * @summary Deletes an external data service.
          *
          * @param request DeleteExternalDataServiceRequest
          * @return DeleteExternalDataServiceResponse
@@ -10406,7 +10406,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据服务详情
+         * @summary Queries the information about an external data service.
          *
          * @param request DescribeExternalDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10448,7 +10448,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据服务详情
+         * @summary Queries the information about an external data service.
          *
          * @param request DescribeExternalDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10490,7 +10490,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据服务详情
+         * @summary Queries the information about an external data service.
          *
          * @param request DescribeExternalDataServiceRequest
          * @return DescribeExternalDataServiceResponse
@@ -10502,7 +10502,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据服务详情
+         * @summary Queries the information about an external data service.
          *
          * @param request DescribeExternalDataServiceRequest
          * @return DescribeExternalDataServiceResponse
@@ -15488,6 +15488,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
@@ -15495,6 +15499,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespacePassword))
             {
                 query["NamespacePassword"] = request.NamespacePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -15542,6 +15550,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
@@ -15549,6 +15561,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespacePassword))
             {
                 query["NamespacePassword"] = request.NamespacePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -19766,7 +19782,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询
+         * @summary Retrieves vector data and metadata from a document collection by using natural statements.
          *
          * @param tmpReq QueryContentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -19817,6 +19833,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearchArgsShrink))
             {
                 query["HybridSearchArgs"] = request.HybridSearchArgsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFileUrl))
+            {
+                query["IncludeFileUrl"] = request.IncludeFileUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeMetadataFields))
             {
@@ -19882,7 +19902,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询
+         * @summary Retrieves vector data and metadata from a document collection by using natural statements.
          *
          * @param tmpReq QueryContentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -19933,6 +19953,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearchArgsShrink))
             {
                 query["HybridSearchArgs"] = request.HybridSearchArgsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFileUrl))
+            {
+                query["IncludeFileUrl"] = request.IncludeFileUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeMetadataFields))
             {
@@ -19998,7 +20022,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询
+         * @summary Retrieves vector data and metadata from a document collection by using natural statements.
          *
          * @param request QueryContentRequest
          * @return QueryContentResponse
@@ -20010,7 +20034,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询
+         * @summary Retrieves vector data and metadata from a document collection by using natural statements.
          *
          * @param request QueryContentRequest
          * @return QueryContentResponse

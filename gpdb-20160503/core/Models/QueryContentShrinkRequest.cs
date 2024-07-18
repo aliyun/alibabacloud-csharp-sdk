@@ -39,14 +39,53 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        /// <summary>
+        /// The two-way retrieval algorithm. This parameter is empty by default, which specifies that scores of vector search and full-text search are directly compared and sorted without additional weighting or adjustments.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   RRF: The reciprocal rank fusion (RRF) algorithm uses a constant k to control the fusion effect. For more information, see the description of the HybridSearchArgs parameter.
+        /// *   Weight: This algorithm uses the alpha parameter to specify the proportion of the vector search score and the full-text search score and then sorts by weight. For more information, see the description of the HybridSearchArgs parameter.
+        /// *   Cascaded: This algorithm performs first full-text search and then vector search.
+        /// </summary>
         [NameInMap("HybridSearch")]
         [Validation(Required=false)]
         public string HybridSearch { get; set; }
 
+        /// <summary>
+        /// The parameters of the two-way retrieval algorithm. The following parameters are supported:
+        /// 
+        /// *   When HybridSearch is set to RRF, the scores are calculated by using the `1/(k+rank_i)` formula. The constant k is a positive integer that is greater than 1.
+        /// 
+        /// <!---->
+        /// 
+        ///     { 
+        ///        "RRF": {
+        ///         "k": 60
+        ///        }
+        ///     }
+        /// 
+        /// *   When HybridSearch is set to Weight, the scores are calculated by using the `alpha * vector_score + (1-alpha) * text_score` formula. The alpha parameter specifies the proportion of the vector search score and the full-text search score and ranges from 0 to 1. A value of 0 specifies full-text search and a value of 1 specifies vector search.
+        /// 
+        /// <!---->
+        /// 
+        ///     { 
+        ///        "Weight": {
+        ///         "alpha": 0.5
+        ///        }
+        ///     }
+        /// </summary>
         [NameInMap("HybridSearchArgs")]
         [Validation(Required=false)]
         public string HybridSearchArgsShrink { get; set; }
 
+        [NameInMap("IncludeFileUrl")]
+        [Validation(Required=false)]
+        public bool? IncludeFileUrl { get; set; }
+
+        /// <summary>
+        /// The metadata fields to be returned. Separate multiple fields with commas (,). This parameter is empty by default.
+        /// </summary>
         [NameInMap("IncludeMetadataFields")]
         [Validation(Required=false)]
         public string IncludeMetadataFields { get; set; }
@@ -59,6 +98,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Metrics { get; set; }
 
+        /// <summary>
+        /// The name of the namespace. Default value: public.
+        /// 
+        /// >  You can call the [CreateNamespace](https://help.aliyun.com/document_detail/2401495.html) operation to create a namespace and call the [ListNamespaces](https://help.aliyun.com/document_detail/2401502.html) operation to query a list of namespaces.
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -74,6 +118,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The recall window. If you specify this parameter, the context of the search result is returned. Format: List\\<A, B>. Valid values: -10<=A<=0 and 0<=B<=10.
+        /// 
+        /// > 
+        /// 
+        /// *   We recommend that you specify this parameter if the source document is segmented into large numbers of pieces and you may fail to obtain the context.
+        /// 
+        /// *   The context of the search result is retrieved based on the recall window after the search result is reranked.
+        /// </summary>
         [NameInMap("RecallWindow")]
         [Validation(Required=false)]
         public string RecallWindowShrink { get; set; }
@@ -93,6 +146,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? TopK { get; set; }
 
+        /// <summary>
+        /// Specifies whether to use full-text search to implement two-way retrieval. The default value is false, which specifies that only vector search is used.
+        /// </summary>
         [NameInMap("UseFullTextRetrieval")]
         [Validation(Required=false)]
         public bool? UseFullTextRetrieval { get; set; }

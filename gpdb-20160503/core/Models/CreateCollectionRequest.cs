@@ -87,7 +87,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.
         /// 
-        /// >Warning: Reserved fields such as id, vector, to_tsvector, and source cannot be used.
+        /// > 
+        /// 
+        /// *   For information about the supported data types, see [Data types](https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/data-types-1/?spm=a2c4g.11186623.0.0.43e567a1C35QRD).
+        /// 
+        /// *   The money data type is not supported.
+        /// 
+        /// **
+        /// 
+        /// **Warning**
+        /// Reserved fields such as id, vector, to_tsvector, and source cannot be used.
         /// 
         /// This parameter is required.
         /// </summary>

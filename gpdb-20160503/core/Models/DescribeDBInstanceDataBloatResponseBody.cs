@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceDataBloatResponseBody : TeaModel {
         /// <summary>
-        /// Details of data bloat.
+        /// The queried data bloat.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]

@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// The status of the asynchronous request. Valid values:
             /// 
-            /// *   **RUNNING**
-            /// *   **BLOCK**
+            /// *   **running**
+            /// *   **block**
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
