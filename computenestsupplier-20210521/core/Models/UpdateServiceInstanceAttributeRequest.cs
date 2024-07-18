@@ -18,10 +18,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// The License Data
+        /// </summary>
         [NameInMap("LicenseData")]
         [Validation(Required=false)]
         public UpdateServiceInstanceAttributeRequestLicenseData LicenseData { get; set; }
         public class UpdateServiceInstanceAttributeRequestLicenseData : TeaModel {
+            /// <summary>
+            /// The Custom Data
+            /// </summary>
             [NameInMap("CustomData")]
             [Validation(Required=false)]
             public string CustomData { get; set; }

@@ -256,6 +256,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string OperationEndTime { get; set; }
 
+        [NameInMap("OperationExtraInfo")]
+        [Validation(Required=false)]
+        public string OperationExtraInfo { get; set; }
+
         /// <summary>
         /// The beginning of the time range during which hosted O\\&M is implemented.
         /// </summary>
