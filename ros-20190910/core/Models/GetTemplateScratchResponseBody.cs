@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public GetTemplateScratchResponseBodyTemplateScratch TemplateScratch { get; set; }
         public class GetTemplateScratchResponseBodyTemplateScratch : TeaModel {
             /// <summary>
-            /// The time at which the scenario was created.
+            /// The time at which the resource scenario was created.
             /// 
             /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
             /// </summary>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The description of the scenario.
+            /// The description of the resource scenario.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The status code of the scenario that fails to be created.
+            /// The status code of the resource scenario that fails to be created.
             /// 
             /// > This parameter is returned only if you set Status to GENERATE_FAILED.
             /// </summary>
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string LogicalIdStrategy { get; set; }
 
             /// <summary>
-            /// The preference parameters of the scenario.
+            /// The preference parameters of the resource scenario.
             /// </summary>
             [NameInMap("PreferenceParameters")]
             [Validation(Required=false)]
             public List<GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters> PreferenceParameters { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters : TeaModel {
                 /// <summary>
-                /// The name of the parameter.
+                /// The parameter name.
                 /// </summary>
                 [NameInMap("ParameterKey")]
                 [Validation(Required=false)]
                 public string ParameterKey { get; set; }
 
                 /// <summary>
-                /// The value of the parameter.
+                /// The parameter value.
                 /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The resource types.
+                /// The resource type filters.
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -119,6 +119,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<GetTemplateScratchResponseBodyTemplateScratchSourceResources> SourceResources { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchSourceResources : TeaModel {
+                /// <summary>
+                /// The related resource type filters.
+                /// </summary>
                 [NameInMap("RelatedResourceTypeFilter")]
                 [Validation(Required=false)]
                 public List<string> RelatedResourceTypeFilter { get; set; }
@@ -154,7 +157,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public Dictionary<string, object> ResourceTags { get; set; }
 
                 /// <summary>
-                /// The resource types.
+                /// The resource type filters.
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -192,7 +195,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The stacks that are associated with the scenario.
+            /// The stacks that are associated with the resource scenario.
             /// </summary>
             [NameInMap("Stacks")]
             [Validation(Required=false)]
@@ -225,18 +228,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The state of the scenario. Valid values:
+            /// The state of the resource scenario. Valid values:
             /// 
-            /// *   GENERATE_IN_PROGRESS: The scenario is being created.
-            /// *   GENERATE_COMPLETE: The scenario is created.
-            /// *   GENERATE_FAILED: The scenario fails to be created.
+            /// *   GENERATE_IN_PROGRESS: The resource scenario is being created.
+            /// *   GENERATE_COMPLETE: The resource scenario is created.
+            /// *   GENERATE_FAILED: The resource scenario fails to be created.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The reason why the scenario fails to be created.
+            /// The reason why the resource scenario fails to be created.
             /// 
             /// > This parameter is returned only if you set Status to GENERATE_FAILED.
             /// </summary>
@@ -245,21 +248,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// The scenario data.
+            /// The resource scenario data.
             /// </summary>
             [NameInMap("TemplateScratchData")]
             [Validation(Required=false)]
             public Dictionary<string, object> TemplateScratchData { get; set; }
 
             /// <summary>
-            /// The ID of the scenario.
+            /// The ID of the resource scenario.
             /// </summary>
             [NameInMap("TemplateScratchId")]
             [Validation(Required=false)]
             public string TemplateScratchId { get; set; }
 
             /// <summary>
-            /// The type of the scenario. Valid values:
+            /// The type of the resource scenario. Valid values:
             /// 
             /// *   ResourceImport: resource management
             /// *   ArchitectureReplication: resource replication
@@ -269,7 +272,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string TemplateScratchType { get; set; }
 
             /// <summary>
-            /// The time at which the scenario was updated.
+            /// The time at which the resource scenario was updated.
             /// 
             /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
             /// </summary>

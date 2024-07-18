@@ -165,6 +165,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
+            [NameInMap("QueryTimeoutDetails")]
+            [Validation(Required=false)]
+            public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails> QueryTimeoutDetails { get; set; }
+            public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("ResourceName")]
+                [Validation(Required=false)]
+                public string ResourceName { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
             /// <summary>
             /// The data type of the parameter.
             /// </summary>

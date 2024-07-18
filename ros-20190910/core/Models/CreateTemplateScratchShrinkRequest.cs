@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the scenario.
+        /// The description of the resource scenario.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string LogicalIdStrategy { get; set; }
 
         /// <summary>
-        /// The preference parameters of the scenario.
+        /// The preference parameters of the resource scenario.
         /// </summary>
         [NameInMap("PreferenceParameters")]
         [Validation(Required=false)]
         public string PreferenceParametersShrink { get; set; }
 
         /// <summary>
-        /// The region ID of the scenario.
+        /// The region ID of the resource scenario.
         /// 
         /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
         /// 
@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The source resources.
+        /// 
+        /// When you set TemplateScratchType to ArchitectureDetection, you can specify SourceResources to detect the architecture data of all resources associated with the specified source resources. For example, if you set SourceResources to the ID of a Classic Load Balancer (CLB) instance, the architecture data of all resources, such as the Elastic Compute Service (ECS) instance, vSwitch, and VPC, associated with the CLB instance is detected.
+        /// 
+        /// If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources. In other cases, you can specify up to 200 source resources.
         /// </summary>
         [NameInMap("SourceResources")]
         [Validation(Required=false)]
@@ -95,14 +99,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string SourceTagShrink { get; set; }
 
         /// <summary>
-        /// The tags of the scenario.
+        /// The tags of the resource scenario.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateTemplateScratchShrinkRequestTags> Tags { get; set; }
         public class CreateTemplateScratchShrinkRequestTags : TeaModel {
             /// <summary>
-            /// The tag key of the scenario.
+            /// The tag key of the resource scenario.
             /// 
             /// > Tags is optional. If you want to specify Tags, you must specify Key.
             /// 
@@ -113,7 +117,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the scenario.
+            /// The tag value of the resource scenario.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -122,11 +126,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The type of the scenario. Valid values:
+        /// The type of the resource scenario. Valid values:
         /// 
-        /// *   ResourceImport: resource management
         /// *   ArchitectureReplication: resource replication
+        /// *   ArchitectureDetection: resource detection
+        /// *   ResourceImport: resource management
         /// *   ResourceMigration: resource migration
+        /// 
+        /// >  The valid values of the ParameterKey and ParameterValue request parameters vary based on the value of TemplateScratchType. For more information, see the "**Additional information about request parameters**" section of this topic.
         /// 
         /// This parameter is required.
         /// </summary>

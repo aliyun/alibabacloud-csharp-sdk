@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the scenario.
+        /// The description of the resource scenario.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -49,18 +49,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string LogicalIdStrategy { get; set; }
 
         /// <summary>
-        /// The preference parameters of the scenario.
+        /// The preference parameters of the resource scenario.
         /// </summary>
         [NameInMap("PreferenceParameters")]
         [Validation(Required=false)]
         public List<CreateTemplateScratchRequestPreferenceParameters> PreferenceParameters { get; set; }
         public class CreateTemplateScratchRequestPreferenceParameters : TeaModel {
             /// <summary>
-            /// The key of the parameter.
+            /// The parameter name.
             /// 
-            /// For information about the valid values of ParameterKey, see the **Additional information about request parameters** section of this topic.
-            /// > - PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
-            /// > -  If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.
+            /// For more information about the valid values of ParameterKey, see the "**Additional information about request parameters**" section of this topic.
+            /// 
+            /// > 
+            /// 
+            /// *   PreferenceParameters is optional. If you specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
+            /// 
+            /// *   You must set ParameterKey to DeletionPolicy when TemplateScratchType is set to ResourceImport.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -69,11 +73,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// The value of the parameter. The value of ParameterValue varies based on the value of ParameterKey.
+            /// The parameter value. The value is an assignment to the parameter key.
             /// 
-            /// For information about the valid values of ParameterValue, see the **Additional information about request parameters** section of this topic.
+            /// For more information about the valid values of ParameterValue, see the "**Additional information about request parameters**" section of this topic.
             /// 
-            /// > PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
+            /// >  PreferenceParameters is optional. If you specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The region ID of the scenario.
+        /// The region ID of the resource scenario.
         /// 
         /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
         /// 
@@ -118,7 +122,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The resource types.
+            /// The resource types for filtering resources.
             /// </summary>
             [NameInMap("ResourceTypeFilter")]
             [Validation(Required=false)]
@@ -128,24 +132,39 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The source resources.
+        /// 
+        /// When you set TemplateScratchType to ArchitectureDetection, you can specify SourceResources to detect the architecture data of all resources associated with the specified source resources. For example, if you set SourceResources to the ID of a Classic Load Balancer (CLB) instance, the architecture data of all resources, such as the Elastic Compute Service (ECS) instance, vSwitch, and VPC, associated with the CLB instance is detected.
+        /// 
+        /// If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources. In other cases, you can specify up to 200 source resources.
         /// </summary>
         [NameInMap("SourceResources")]
         [Validation(Required=false)]
         public List<CreateTemplateScratchRequestSourceResources> SourceResources { get; set; }
         public class CreateTemplateScratchRequestSourceResources : TeaModel {
             /// <summary>
-            /// The region ID.
+            /// The region ID of the resource.
+            /// 
+            /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+            /// 
+            /// > 
+            /// 
+            /// *   This parameter takes effect only when TemplateScratchType is set to ArchitectureDetection.
+            /// 
+            /// *   The region ID of a global resource is `global`. For example, the region ID of the ALIYUN::CDN::Domain global resource is `global`.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The related resource type filters.
+            /// </summary>
             [NameInMap("RelatedResourceTypeFilter")]
             [Validation(Required=false)]
             public List<string> RelatedResourceTypeFilter { get; set; }
 
             /// <summary>
-            /// The ID of the resource.
+            /// The resource ID.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -154,7 +173,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// The resource type.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -183,7 +202,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public Dictionary<string, object> ResourceTags { get; set; }
 
             /// <summary>
-            /// The resource types.
+            /// The resource types for filtering resources.
             /// </summary>
             [NameInMap("ResourceTypeFilter")]
             [Validation(Required=false)]
@@ -192,14 +211,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The tags of the scenario.
+        /// The tags of the resource scenario.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateTemplateScratchRequestTags> Tags { get; set; }
         public class CreateTemplateScratchRequestTags : TeaModel {
             /// <summary>
-            /// The tag key of the scenario.
+            /// The tag key of the resource scenario.
             /// 
             /// > Tags is optional. If you want to specify Tags, you must specify Key.
             /// 
@@ -210,7 +229,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the scenario.
+            /// The tag value of the resource scenario.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -219,11 +238,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The type of the scenario. Valid values:
+        /// The type of the resource scenario. Valid values:
         /// 
-        /// *   ResourceImport: resource management
         /// *   ArchitectureReplication: resource replication
+        /// *   ArchitectureDetection: resource detection
+        /// *   ResourceImport: resource management
         /// *   ResourceMigration: resource migration
+        /// 
+        /// >  The valid values of the ParameterKey and ParameterValue request parameters vary based on the value of TemplateScratchType. For more information, see the "**Additional information about request parameters**" section of this topic.
         /// 
         /// This parameter is required.
         /// </summary>

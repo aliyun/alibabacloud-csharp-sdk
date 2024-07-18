@@ -1,3 +1,7 @@
+2024-07-18 Version: 2.3.16
+- Update API GetTemplateParameterConstraints: update response param.
+
+
 2024-06-21 Version: 2.3.15
 - Update API DeleteStack: add param Parallelism.
 

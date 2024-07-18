@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the scenario.
+        /// The ID of the resource scenario.
         /// </summary>
         [NameInMap("TemplateScratchId")]
         [Validation(Required=false)]

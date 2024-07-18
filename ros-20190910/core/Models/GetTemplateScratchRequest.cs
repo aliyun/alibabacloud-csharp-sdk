@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetTemplateScratchRequest : TeaModel {
         /// <summary>
-        /// The region ID of the scenario.
+        /// The region ID of the resource scenario.
         /// 
         /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ShowDataOption { get; set; }
 
         /// <summary>
-        /// The ID of the scenario.
+        /// The ID of the resource scenario.
         /// </summary>
         [NameInMap("TemplateScratchId")]
         [Validation(Required=false)]
