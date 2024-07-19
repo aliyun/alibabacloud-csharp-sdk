@@ -1,3 +1,15 @@
+2024-07-19 Version: 1.11.0
+- Support API CreateSecret.
+- Support API DeleteSecret.
+- Support API DescribeTable.
+- Support API ExecuteStatement.
+- Support API GetSecretValue.
+- Support API ListDatabases.
+- Support API ListSchemas.
+- Support API ListSecrets.
+- Support API ListTables.
+
+
 2024-07-18 Version: 1.10.3
 - Update API ListDocuments: add param MaxResults.
 - Update API ListDocuments: add param NextToken.
