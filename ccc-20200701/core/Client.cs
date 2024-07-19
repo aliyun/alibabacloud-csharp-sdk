@@ -13887,6 +13887,130 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @summary ListGroupChatMessages
+         *
+         * @param request ListGroupChatMessagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListGroupChatMessagesResponse
+         */
+        public ListGroupChatMessagesResponse ListGroupChatMessagesWithOptions(ListGroupChatMessagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextPageToken))
+            {
+                query["NextPageToken"] = request.NextPageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupChatMessages",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupChatMessagesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary ListGroupChatMessages
+         *
+         * @param request ListGroupChatMessagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListGroupChatMessagesResponse
+         */
+        public async Task<ListGroupChatMessagesResponse> ListGroupChatMessagesWithOptionsAsync(ListGroupChatMessagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextPageToken))
+            {
+                query["NextPageToken"] = request.NextPageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupChatMessages",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupChatMessagesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary ListGroupChatMessages
+         *
+         * @param request ListGroupChatMessagesRequest
+         * @return ListGroupChatMessagesResponse
+         */
+        public ListGroupChatMessagesResponse ListGroupChatMessages(ListGroupChatMessagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListGroupChatMessagesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary ListGroupChatMessages
+         *
+         * @param request ListGroupChatMessagesRequest
+         * @return ListGroupChatMessagesResponse
+         */
+        public async Task<ListGroupChatMessagesResponse> ListGroupChatMessagesAsync(ListGroupChatMessagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListGroupChatMessagesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @param request ListHistoricalAgentReportRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListHistoricalAgentReportResponse
