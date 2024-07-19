@@ -8,17 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
-    public class GetOssUploadTokenResult : TeaModel {
+    public class StartAvatarSessionResponseBody : TeaModel {
+        [NameInMap("channelToken")]
+        [Validation(Required=false)]
+        public string ChannelToken { get; set; }
+
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("uploadInfo")]
+        [NameInMap("sessionId")]
         [Validation(Required=false)]
-        public UploadInfo UploadInfo { get; set; }
+        public string SessionId { get; set; }
 
     }
 

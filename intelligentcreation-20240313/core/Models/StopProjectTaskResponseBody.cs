@@ -8,17 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
-    public class GetOssUploadTokenResult : TeaModel {
+    public class StopProjectTaskResponseBody : TeaModel {
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("uploadInfo")]
+        [NameInMap("success")]
         [Validation(Required=false)]
-        public UploadInfo UploadInfo { get; set; }
+        public bool? Success { get; set; }
 
     }
 
