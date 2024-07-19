@@ -9047,6 +9047,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDuration))
             {
                 query["JobDuration"] = request.JobDuration;
@@ -9124,6 +9128,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDuration))
             {
@@ -43697,7 +43705,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询IP地址池功能的开通状态。
+         * @summary Queries whether the IP address pool feature is enabled.
          *
          * @param request GetPublicIpAddressPoolServiceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -43755,7 +43763,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询IP地址池功能的开通状态。
+         * @summary Queries whether the IP address pool feature is enabled.
          *
          * @param request GetPublicIpAddressPoolServiceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -43813,7 +43821,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询IP地址池功能的开通状态。
+         * @summary Queries whether the IP address pool feature is enabled.
          *
          * @param request GetPublicIpAddressPoolServiceStatusRequest
          * @return GetPublicIpAddressPoolServiceStatusResponse
@@ -43825,7 +43833,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询IP地址池功能的开通状态。
+         * @summary Queries whether the IP address pool feature is enabled.
          *
          * @param request GetPublicIpAddressPoolServiceStatusRequest
          * @return GetPublicIpAddressPoolServiceStatusResponse
@@ -47241,7 +47249,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Queries the information about the available IP address pools.
+         * @summary Queries available IP address pools.
          *
          * @param request ListPublicIpAddressPoolsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -47331,7 +47339,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Queries the information about the available IP address pools.
+         * @summary Queries available IP address pools.
          *
          * @param request ListPublicIpAddressPoolsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -47421,7 +47429,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Queries the information about the available IP address pools.
+         * @summary Queries available IP address pools.
          *
          * @param request ListPublicIpAddressPoolsRequest
          * @return ListPublicIpAddressPoolsResponse
@@ -47433,7 +47441,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Queries the information about the available IP address pools.
+         * @summary Queries available IP address pools.
          *
          * @param request ListPublicIpAddressPoolsRequest
          * @return ListPublicIpAddressPoolsResponse
@@ -65451,6 +65459,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDuration))
             {
                 query["JobDuration"] = request.JobDuration;
@@ -65524,6 +65536,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDuration))
             {

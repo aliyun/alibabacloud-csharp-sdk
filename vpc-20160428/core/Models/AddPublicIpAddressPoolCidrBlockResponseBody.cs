@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AddPublicIpAddressPoolCidrBlockResponseBody : TeaModel {
         /// <summary>
-        /// The CIDR blocks.
+        /// The CIDR block.
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]

@@ -90,6 +90,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **NatGateway**: a NAT gateway.
         /// *   **Attachment**: a transit router.
         /// *   **VpcPeer**: a VPC peering connection.
+        /// *   **Ipv4Gateway**: an IPv4 gateway.
+        /// *   **GatewayEndpoint**: a gateway endpoint.
+        /// *   **Ecr**: a Express Connect Router (ECR).
         /// </summary>
         [NameInMap("NextHopType")]
         [Validation(Required=false)]

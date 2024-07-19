@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnGatewayRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment for the VPN gateway. Valid values:
+        /// Specifies whether to enable automatic payment. Valid values:
         /// 
         /// *   **true**
         /// *   **false** (default)
         /// 
-        /// >  We recommend that you enable automatic payment. If you disable automatic payment, you must manually pay the bill for creating the VPN gateway.
+        /// > To create a VPN gateway, we recommend that you enable automatic payment. If you disable automatic payment, you must manually pay the bill to create the VPN gateway.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   If you want to create a public VPN gateway, valid values are **10**, **100**, **200**, **500**, and **1000**.
         /// *   If you want to create a private VPN gateway, valid values are **200** and **1000**.
         /// 
-        /// >  The maximum bandwidth supported by VPN gateways in some regions is 200 Mbit/s. For more information, see [VPN gateway limits](https://help.aliyun.com/document_detail/65290.html).
+        /// >  The maximum bandwidth supported by VPN gateways in some regions is 500 Mbit/s. For more information, see [VPN gateway limits](https://help.aliyun.com/document_detail/65290.html).
         /// 
         /// This parameter is required.
         /// </summary>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DisasterRecoveryVSwitchId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the IPsec-VPN feature. Valid values:
+        /// Specifies whether to enable IPsec-VPN for the VPN gateway. Valid values:
         /// 
         /// *   **true** (default)
         /// *   **false**
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableIpsec { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the SSL-VPN feature for the VPN gateway. Valid values:
+        /// Specifies whether to enable SSL-VPN. Valid values:
         /// 
         /// *   **true**
         /// *   **false** (default)

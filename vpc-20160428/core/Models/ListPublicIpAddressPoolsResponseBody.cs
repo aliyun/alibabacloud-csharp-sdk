@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string BizType { get; set; }
 
+            /// <summary>
+            /// The status of the IP address pool.
+            /// 
+            /// *   **Normal**
+            /// *   **FinancialLocked**
+            /// </summary>
             [NameInMap("BusinessStatus")]
             [Validation(Required=false)]
             public string BusinessStatus { get; set; }
