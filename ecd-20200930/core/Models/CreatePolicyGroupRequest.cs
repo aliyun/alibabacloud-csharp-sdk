@@ -374,6 +374,50 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Clipboard { get; set; }
 
+        [NameInMap("DeviceRedirects")]
+        [Validation(Required=false)]
+        public List<CreatePolicyGroupRequestDeviceRedirects> DeviceRedirects { get; set; }
+        public class CreatePolicyGroupRequestDeviceRedirects : TeaModel {
+            [NameInMap("DeviceType")]
+            [Validation(Required=false)]
+            public string DeviceType { get; set; }
+
+            [NameInMap("RedirectType")]
+            [Validation(Required=false)]
+            public string RedirectType { get; set; }
+
+        }
+
+        [NameInMap("DeviceRules")]
+        [Validation(Required=false)]
+        public List<CreatePolicyGroupRequestDeviceRules> DeviceRules { get; set; }
+        public class CreatePolicyGroupRequestDeviceRules : TeaModel {
+            [NameInMap("DeviceName")]
+            [Validation(Required=false)]
+            public string DeviceName { get; set; }
+
+            [NameInMap("DevicePid")]
+            [Validation(Required=false)]
+            public string DevicePid { get; set; }
+
+            [NameInMap("DeviceType")]
+            [Validation(Required=false)]
+            public string DeviceType { get; set; }
+
+            [NameInMap("DeviceVid")]
+            [Validation(Required=false)]
+            public string DeviceVid { get; set; }
+
+            [NameInMap("OptCommand")]
+            [Validation(Required=false)]
+            public string OptCommand { get; set; }
+
+            [NameInMap("RedirectType")]
+            [Validation(Required=false)]
+            public string RedirectType { get; set; }
+
+        }
+
         /// <summary>
         /// Access control for domain names. The wildcard character (\\*) is supported for domain names. Separate multiple domain names with commas (,). Valid values:
         /// 

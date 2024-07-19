@@ -244,6 +244,50 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? CpuSingleRateLimit { get; set; }
 
+            [NameInMap("DeviceRedirects")]
+            [Validation(Required=false)]
+            public List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects> DeviceRedirects { get; set; }
+            public class DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects : TeaModel {
+                [NameInMap("DeviceType")]
+                [Validation(Required=false)]
+                public string DeviceType { get; set; }
+
+                [NameInMap("RedirectType")]
+                [Validation(Required=false)]
+                public string RedirectType { get; set; }
+
+            }
+
+            [NameInMap("DeviceRules")]
+            [Validation(Required=false)]
+            public List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules> DeviceRules { get; set; }
+            public class DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules : TeaModel {
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
+                public string DeviceName { get; set; }
+
+                [NameInMap("DevicePid")]
+                [Validation(Required=false)]
+                public string DevicePid { get; set; }
+
+                [NameInMap("DeviceType")]
+                [Validation(Required=false)]
+                public string DeviceType { get; set; }
+
+                [NameInMap("DeviceVid")]
+                [Validation(Required=false)]
+                public string DeviceVid { get; set; }
+
+                [NameInMap("OptCommand")]
+                [Validation(Required=false)]
+                public string OptCommand { get; set; }
+
+                [NameInMap("RedirectType")]
+                [Validation(Required=false)]
+                public string RedirectType { get; set; }
+
+            }
+
             [NameInMap("DisplayMode")]
             [Validation(Required=false)]
             public string DisplayMode { get; set; }

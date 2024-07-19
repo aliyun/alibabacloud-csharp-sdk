@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public float? GpuCount { get; set; }
 
+        [NameInMap("GpuDriverType")]
+        [Validation(Required=false)]
+        public string GpuDriverType { get; set; }
+
         /// <summary>
         /// The image ID.
         /// </summary>

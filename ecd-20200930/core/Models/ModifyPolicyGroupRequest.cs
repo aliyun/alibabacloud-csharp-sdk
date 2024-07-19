@@ -196,6 +196,50 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Clipboard { get; set; }
 
+        [NameInMap("DeviceRedirects")]
+        [Validation(Required=false)]
+        public List<ModifyPolicyGroupRequestDeviceRedirects> DeviceRedirects { get; set; }
+        public class ModifyPolicyGroupRequestDeviceRedirects : TeaModel {
+            [NameInMap("DeviceType")]
+            [Validation(Required=false)]
+            public string DeviceType { get; set; }
+
+            [NameInMap("RedirectType")]
+            [Validation(Required=false)]
+            public string RedirectType { get; set; }
+
+        }
+
+        [NameInMap("DeviceRules")]
+        [Validation(Required=false)]
+        public List<ModifyPolicyGroupRequestDeviceRules> DeviceRules { get; set; }
+        public class ModifyPolicyGroupRequestDeviceRules : TeaModel {
+            [NameInMap("DeviceName")]
+            [Validation(Required=false)]
+            public string DeviceName { get; set; }
+
+            [NameInMap("DevicePid")]
+            [Validation(Required=false)]
+            public string DevicePid { get; set; }
+
+            [NameInMap("DeviceType")]
+            [Validation(Required=false)]
+            public string DeviceType { get; set; }
+
+            [NameInMap("DeviceVid")]
+            [Validation(Required=false)]
+            public string DeviceVid { get; set; }
+
+            [NameInMap("OptCommand")]
+            [Validation(Required=false)]
+            public string OptCommand { get; set; }
+
+            [NameInMap("RedirectType")]
+            [Validation(Required=false)]
+            public string RedirectType { get; set; }
+
+        }
+
         /// <summary>
         /// The domain blacklist or whitelist. Wildcard domains are supported. Separate domain names with commas (,). Valid values:
         /// 

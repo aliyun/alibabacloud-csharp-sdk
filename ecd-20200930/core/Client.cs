@@ -6015,6 +6015,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Clipboard"] = request.Clipboard;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRedirects))
+            {
+                query["DeviceRedirects"] = request.DeviceRedirects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRules))
+            {
+                query["DeviceRules"] = request.DeviceRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
             {
                 query["DomainList"] = request.DomainList;
@@ -6262,6 +6270,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Clipboard))
             {
                 query["Clipboard"] = request.Clipboard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRedirects))
+            {
+                query["DeviceRedirects"] = request.DeviceRedirects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRules))
+            {
+                query["DeviceRules"] = request.DeviceRules;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
             {
@@ -9121,6 +9137,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["GpuCount"] = request.GpuCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuDriverType))
+            {
+                query["GpuDriverType"] = request.GpuDriverType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
@@ -9230,6 +9250,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuCount))
             {
                 query["GpuCount"] = request.GpuCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuDriverType))
+            {
+                query["GpuDriverType"] = request.GpuDriverType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
@@ -11335,6 +11359,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["GpuCount"] = request.GpuCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuDriverType))
+            {
+                query["GpuDriverType"] = request.GpuDriverType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeFamily))
             {
                 query["InstanceTypeFamily"] = request.InstanceTypeFamily;
@@ -11406,6 +11434,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuCount))
             {
                 query["GpuCount"] = request.GpuCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuDriverType))
+            {
+                query["GpuDriverType"] = request.GpuDriverType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeFamily))
             {
@@ -24093,6 +24125,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Clipboard"] = request.Clipboard;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRedirects))
+            {
+                query["DeviceRedirects"] = request.DeviceRedirects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRules))
+            {
+                query["DeviceRules"] = request.DeviceRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
             {
                 query["DomainList"] = request.DomainList;
@@ -24350,6 +24390,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Clipboard))
             {
                 query["Clipboard"] = request.Clipboard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRedirects))
+            {
+                query["DeviceRedirects"] = request.DeviceRedirects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRules))
+            {
+                query["DeviceRules"] = request.DeviceRules;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
             {
