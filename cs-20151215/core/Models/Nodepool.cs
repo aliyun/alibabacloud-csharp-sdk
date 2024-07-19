@@ -363,6 +363,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             }
 
+            [NameInMap("ram_role_name")]
+            [Validation(Required=false)]
+            public string RamRoleName { get; set; }
+
             [NameInMap("rds_instances")]
             [Validation(Required=false)]
             public List<string> RdsInstances { get; set; }
