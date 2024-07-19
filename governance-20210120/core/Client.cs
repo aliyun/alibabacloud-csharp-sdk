@@ -38,12 +38,14 @@ namespace AlibabaCloud.SDK.Governance20210120
         }
 
         /**
-          * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-          * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
-          *
-          * @param request EnrollAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnrollAccountResponse
+         * @summary Enrolls an account. You can create a new account or manage an existing account in the account factory.
+         *
+         * @description You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+         * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+         *
+         * @param request EnrollAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnrollAccountResponse
          */
         public EnrollAccountResponse EnrollAccountWithOptions(EnrollAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -105,12 +107,14 @@ namespace AlibabaCloud.SDK.Governance20210120
         }
 
         /**
-          * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-          * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
-          *
-          * @param request EnrollAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnrollAccountResponse
+         * @summary Enrolls an account. You can create a new account or manage an existing account in the account factory.
+         *
+         * @description You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+         * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+         *
+         * @param request EnrollAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnrollAccountResponse
          */
         public async Task<EnrollAccountResponse> EnrollAccountWithOptionsAsync(EnrollAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -172,11 +176,13 @@ namespace AlibabaCloud.SDK.Governance20210120
         }
 
         /**
-          * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-          * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
-          *
-          * @param request EnrollAccountRequest
-          * @return EnrollAccountResponse
+         * @summary Enrolls an account. You can create a new account or manage an existing account in the account factory.
+         *
+         * @description You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+         * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+         *
+         * @param request EnrollAccountRequest
+         * @return EnrollAccountResponse
          */
         public EnrollAccountResponse EnrollAccount(EnrollAccountRequest request)
         {
@@ -185,11 +191,13 @@ namespace AlibabaCloud.SDK.Governance20210120
         }
 
         /**
-          * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-          * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
-          *
-          * @param request EnrollAccountRequest
-          * @return EnrollAccountResponse
+         * @summary Enrolls an account. You can create a new account or manage an existing account in the account factory.
+         *
+         * @description You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+         * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+         *
+         * @param request EnrollAccountRequest
+         * @return EnrollAccountResponse
          */
         public async Task<EnrollAccountResponse> EnrollAccountAsync(EnrollAccountRequest request)
         {
@@ -197,6 +205,13 @@ namespace AlibabaCloud.SDK.Governance20210120
             return await EnrollAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Obtains the details of an account factory baseline.
+         *
+         * @param request GetAccountFactoryBaselineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAccountFactoryBaselineResponse
+         */
         public GetAccountFactoryBaselineResponse GetAccountFactoryBaselineWithOptions(GetAccountFactoryBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -228,6 +243,13 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<GetAccountFactoryBaselineResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the details of an account factory baseline.
+         *
+         * @param request GetAccountFactoryBaselineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAccountFactoryBaselineResponse
+         */
         public async Task<GetAccountFactoryBaselineResponse> GetAccountFactoryBaselineWithOptionsAsync(GetAccountFactoryBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -259,18 +281,37 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<GetAccountFactoryBaselineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the details of an account factory baseline.
+         *
+         * @param request GetAccountFactoryBaselineRequest
+         * @return GetAccountFactoryBaselineResponse
+         */
         public GetAccountFactoryBaselineResponse GetAccountFactoryBaseline(GetAccountFactoryBaselineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAccountFactoryBaselineWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Obtains the details of an account factory baseline.
+         *
+         * @param request GetAccountFactoryBaselineRequest
+         * @return GetAccountFactoryBaselineResponse
+         */
         public async Task<GetAccountFactoryBaselineResponse> GetAccountFactoryBaselineAsync(GetAccountFactoryBaselineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAccountFactoryBaselineWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details about an account that is enrolled in the account factory.
+         *
+         * @param request GetEnrolledAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetEnrolledAccountResponse
+         */
         public GetEnrolledAccountResponse GetEnrolledAccountWithOptions(GetEnrolledAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -302,6 +343,13 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<GetEnrolledAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details about an account that is enrolled in the account factory.
+         *
+         * @param request GetEnrolledAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetEnrolledAccountResponse
+         */
         public async Task<GetEnrolledAccountResponse> GetEnrolledAccountWithOptionsAsync(GetEnrolledAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -333,18 +381,37 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<GetEnrolledAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details about an account that is enrolled in the account factory.
+         *
+         * @param request GetEnrolledAccountRequest
+         * @return GetEnrolledAccountResponse
+         */
         public GetEnrolledAccountResponse GetEnrolledAccount(GetEnrolledAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetEnrolledAccountWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details about an account that is enrolled in the account factory.
+         *
+         * @param request GetEnrolledAccountRequest
+         * @return GetEnrolledAccountResponse
+         */
         public async Task<GetEnrolledAccountResponse> GetEnrolledAccountAsync(GetEnrolledAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetEnrolledAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Obtains a list of baselines in the account factory.
+         *
+         * @param request ListAccountFactoryBaselinesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAccountFactoryBaselinesResponse
+         */
         public ListAccountFactoryBaselinesResponse ListAccountFactoryBaselinesWithOptions(ListAccountFactoryBaselinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -380,6 +447,13 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<ListAccountFactoryBaselinesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains a list of baselines in the account factory.
+         *
+         * @param request ListAccountFactoryBaselinesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAccountFactoryBaselinesResponse
+         */
         public async Task<ListAccountFactoryBaselinesResponse> ListAccountFactoryBaselinesWithOptionsAsync(ListAccountFactoryBaselinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -415,18 +489,37 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<ListAccountFactoryBaselinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains a list of baselines in the account factory.
+         *
+         * @param request ListAccountFactoryBaselinesRequest
+         * @return ListAccountFactoryBaselinesResponse
+         */
         public ListAccountFactoryBaselinesResponse ListAccountFactoryBaselines(ListAccountFactoryBaselinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAccountFactoryBaselinesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Obtains a list of baselines in the account factory.
+         *
+         * @param request ListAccountFactoryBaselinesRequest
+         * @return ListAccountFactoryBaselinesResponse
+         */
         public async Task<ListAccountFactoryBaselinesResponse> ListAccountFactoryBaselinesAsync(ListAccountFactoryBaselinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAccountFactoryBaselinesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of accounts that are enrolled in the account factory.
+         *
+         * @param request ListEnrolledAccountsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEnrolledAccountsResponse
+         */
         public ListEnrolledAccountsResponse ListEnrolledAccountsWithOptions(ListEnrolledAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -462,6 +555,13 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<ListEnrolledAccountsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of accounts that are enrolled in the account factory.
+         *
+         * @param request ListEnrolledAccountsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEnrolledAccountsResponse
+         */
         public async Task<ListEnrolledAccountsResponse> ListEnrolledAccountsWithOptionsAsync(ListEnrolledAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -497,12 +597,24 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<ListEnrolledAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of accounts that are enrolled in the account factory.
+         *
+         * @param request ListEnrolledAccountsRequest
+         * @return ListEnrolledAccountsResponse
+         */
         public ListEnrolledAccountsResponse ListEnrolledAccounts(ListEnrolledAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListEnrolledAccountsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of accounts that are enrolled in the account factory.
+         *
+         * @param request ListEnrolledAccountsRequest
+         * @return ListEnrolledAccountsResponse
+         */
         public async Task<ListEnrolledAccountsResponse> ListEnrolledAccountsAsync(ListEnrolledAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

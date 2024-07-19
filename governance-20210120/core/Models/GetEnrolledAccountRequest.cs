@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
     public class GetEnrolledAccountRequest : TeaModel {
         /// <summary>
         /// The account ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountUid")]
         [Validation(Required=false)]
