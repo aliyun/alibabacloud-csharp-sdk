@@ -26,34 +26,64 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeImportOASTaskResponseBodyApiResultsApiResult> ApiResult { get; set; }
             public class DescribeImportOASTaskResponseBodyApiResultsApiResult : TeaModel {
+                /// <summary>
+                /// The API ID.
+                /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
+                /// <summary>
+                /// The API name.
+                /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
+                /// <summary>
+                /// The API description.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// The cause of the failure if the API fails to be imported.
+                /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
+                /// <summary>
+                /// The API group ID.
+                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
+                /// <summary>
+                /// The HTTP request HTTP method of the API.
+                /// </summary>
                 [NameInMap("Method")]
                 [Validation(Required=false)]
                 public string Method { get; set; }
 
+                /// <summary>
+                /// The request path of the API.
+                /// </summary>
                 [NameInMap("Path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
+                /// <summary>
+                /// The execution status of the subtask. Valid values:
+                /// 
+                /// *   RUNNING
+                /// *   WAIT
+                /// *   OVER
+                /// *   FAIL
+                /// *   CANCEL
+                /// </summary>
                 [NameInMap("UpdateStatus")]
                 [Validation(Required=false)]
                 public string UpdateStatus { get; set; }
@@ -79,22 +109,43 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeImportOASTaskResponseBodyModelResultsModelResult> ModelResult { get; set; }
             public class DescribeImportOASTaskResponseBodyModelResultsModelResult : TeaModel {
+                /// <summary>
+                /// The cause of the failure if the model fails to be imported.
+                /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
+                /// <summary>
+                /// The API group ID.
+                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
+                /// <summary>
+                /// The ID of the imported model.
+                /// </summary>
                 [NameInMap("ModelId")]
                 [Validation(Required=false)]
                 public string ModelId { get; set; }
 
+                /// <summary>
+                /// The model name.
+                /// </summary>
                 [NameInMap("ModelName")]
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
 
+                /// <summary>
+                /// The execution status of the subtask. Valid values:
+                /// 
+                /// *   RUNNING
+                /// *   WAIT
+                /// *   OVER
+                /// *   FAIL
+                /// *   CANCEL
+                /// </summary>
                 [NameInMap("UpdateStatus")]
                 [Validation(Required=false)]
                 public string UpdateStatus { get; set; }

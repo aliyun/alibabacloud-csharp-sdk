@@ -2191,7 +2191,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建后端服务
+         * @summary Creates a backend service in API Gateway.
          *
          * @param request CreateBackendRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2249,7 +2249,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建后端服务
+         * @summary Creates a backend service in API Gateway.
          *
          * @param request CreateBackendRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2307,7 +2307,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建后端服务
+         * @summary Creates a backend service in API Gateway.
          *
          * @param request CreateBackendRequest
          * @return CreateBackendResponse
@@ -2319,7 +2319,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建后端服务
+         * @summary Creates a backend service in API Gateway.
          *
          * @param request CreateBackendRequest
          * @return CreateBackendResponse
@@ -14567,7 +14567,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询实例信息
+         * @summary Queries the details of instances in a region. The instances include shared instances and dedicated instances.
          *
          * @param request DescribeInstancesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14617,7 +14617,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询实例信息
+         * @summary Queries the details of instances in a region. The instances include shared instances and dedicated instances.
          *
          * @param request DescribeInstancesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14667,7 +14667,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询实例信息
+         * @summary Queries the details of instances in a region. The instances include shared instances and dedicated instances.
          *
          * @param request DescribeInstancesRequest
          * @return DescribeInstancesResponse
@@ -14679,7 +14679,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询实例信息
+         * @summary Queries the details of instances in a region. The instances include shared instances and dedicated instances.
          *
          * @param request DescribeInstancesRequest
          * @return DescribeInstancesResponse
@@ -18256,6 +18256,166 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableInstanceAccessControlWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 导出OAS
+         *
+         * @param tmpReq ExportOASRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportOASResponse
+         */
+        public ExportOASResponse ExportOASWithOptions(ExportOASRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExportOASShrinkRequest request = new ExportOASShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApiIdList))
+            {
+                request.ApiIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApiIdList, "ApiIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiIdListShrink))
+            {
+                query["ApiIdList"] = request.ApiIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFormat))
+            {
+                query["DataFormat"] = request.DataFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OasVersion))
+            {
+                query["OasVersion"] = request.OasVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StageName))
+            {
+                query["StageName"] = request.StageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithXExtensions))
+            {
+                query["WithXExtensions"] = request.WithXExtensions;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportOAS",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportOASResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 导出OAS
+         *
+         * @param tmpReq ExportOASRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportOASResponse
+         */
+        public async Task<ExportOASResponse> ExportOASWithOptionsAsync(ExportOASRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExportOASShrinkRequest request = new ExportOASShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApiIdList))
+            {
+                request.ApiIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApiIdList, "ApiIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiIdListShrink))
+            {
+                query["ApiIdList"] = request.ApiIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFormat))
+            {
+                query["DataFormat"] = request.DataFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OasVersion))
+            {
+                query["OasVersion"] = request.OasVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StageName))
+            {
+                query["StageName"] = request.StageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithXExtensions))
+            {
+                query["WithXExtensions"] = request.WithXExtensions;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportOAS",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportOASResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 导出OAS
+         *
+         * @param request ExportOASRequest
+         * @return ExportOASResponse
+         */
+        public ExportOASResponse ExportOAS(ExportOASRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExportOASWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 导出OAS
+         *
+         * @param request ExportOASRequest
+         * @return ExportOASResponse
+         */
+        public async Task<ExportOASResponse> ExportOASAsync(ExportOASRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExportOASWithOptionsAsync(request, runtime);
         }
 
         /**

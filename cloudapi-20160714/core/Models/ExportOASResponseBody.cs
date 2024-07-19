@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
-    public class CreateBackendResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the backend service.
-        /// </summary>
-        [NameInMap("BackendId")]
+    public class ExportOASResponseBody : TeaModel {
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string BackendId { get; set; }
+        public string Data { get; set; }
 
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
