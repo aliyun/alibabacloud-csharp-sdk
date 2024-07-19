@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("ParentDomainName")]
+        [Validation(Required=false)]
+        public string ParentDomainName { get; set; }
+
         /// <summary>
         /// The hostname.
         /// </summary>

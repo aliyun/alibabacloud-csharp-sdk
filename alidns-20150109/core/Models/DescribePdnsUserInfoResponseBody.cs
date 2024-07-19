@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            [NameInMap("StatisticSwitchStatus")]
+            [Validation(Required=false)]
+            public string StatisticSwitchStatus { get; set; }
+
             [NameInMap("StoppedService")]
             [Validation(Required=false)]
             public string StoppedService { get; set; }
