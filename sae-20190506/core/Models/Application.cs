@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("applicationID")]
-        [Validation(Required=false)]
-        public string ApplicationID { get; set; }
-
         [NameInMap("applicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
