@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class SegmentSkyRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public string ImageURL { get; set; }

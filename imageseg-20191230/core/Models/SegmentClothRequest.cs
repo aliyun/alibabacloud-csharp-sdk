@@ -13,9 +13,16 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
         [Validation(Required=false)]
         public List<string> ClothClass { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public string ImageURL { get; set; }
+
+        [NameInMap("OutMode")]
+        [Validation(Required=false)]
+        public long? OutMode { get; set; }
 
         [NameInMap("ReturnForm")]
         [Validation(Required=false)]
