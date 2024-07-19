@@ -8,10 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class RestartServiceInstanceResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
+    public class UnTagResourcesResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

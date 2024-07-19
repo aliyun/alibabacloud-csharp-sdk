@@ -8,17 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class GetServiceInstanceRequest : TeaModel {
+    public class ListTagValuesRequest : TeaModel {
         /// <summary>
-        /// The MarketInstance ID.
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("MarketInstanceId")]
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public string MarketInstanceId { get; set; }
+        public string Key { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID.
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -26,13 +28,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The service instance ID.
-        /// 
-        /// >  You must specify either `ServiceInstanceId` or `MarketInstanceId`. Otherwise, the operation fails.
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("ServiceInstanceId")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string ServiceInstanceId { get; set; }
+        public string ResourceType { get; set; }
 
     }
 

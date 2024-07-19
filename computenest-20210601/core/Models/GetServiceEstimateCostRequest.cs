@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class GetServiceTemplateParameterConstraintsRequest : TeaModel {
+    public class GetServiceEstimateCostRequest : TeaModel {
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
@@ -17,55 +17,50 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The region ID of the service instance.
-        /// 
-        /// This parameter is required.
+        /// The commodity details.
         /// </summary>
-        [NameInMap("DeployRegionId")]
+        [NameInMap("Commodity")]
         [Validation(Required=false)]
-        public string DeployRegionId { get; set; }
-
-        /// <summary>
-        /// Specifies whether to enable the private connection. Valid values:
-        /// 
-        /// *   true
-        /// *   false
-        /// </summary>
-        [NameInMap("EnablePrivateVpcConnection")]
-        [Validation(Required=false)]
-        public bool? EnablePrivateVpcConnection { get; set; }
-
-        /// <summary>
-        /// The configuration parameters of the service instance.
-        /// </summary>
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public List<GetServiceTemplateParameterConstraintsRequestParameters> Parameters { get; set; }
-        public class GetServiceTemplateParameterConstraintsRequestParameters : TeaModel {
+        public GetServiceEstimateCostRequestCommodity Commodity { get; set; }
+        public class GetServiceEstimateCostRequestCommodity : TeaModel {
             /// <summary>
-            /// The name of the parameter. If you do not specify Parameters, the parameters and values in the template are used.
-            /// 
-            /// >  Parameters is an optional parameter. ParameterKey is required if you specify Parameters.
+            /// The subscription duration.
             /// </summary>
-            [NameInMap("ParameterKey")]
+            [NameInMap("PayPeriod")]
             [Validation(Required=false)]
-            public string ParameterKey { get; set; }
+            public int? PayPeriod { get; set; }
 
             /// <summary>
-            /// The parameter value that is defined in the template.
+            /// The unit of the subscription duration. Valid values:
             /// 
-            /// >  Parameters is an optional parameter. ParameterValue is required if you specify Parameters.
+            /// *   Year
+            /// *   Month
+            /// *   Day
             /// </summary>
-            [NameInMap("ParameterValue")]
+            [NameInMap("PayPeriodUnit")]
             [Validation(Required=false)]
-            public string ParameterValue { get; set; }
+            public string PayPeriodUnit { get; set; }
 
         }
 
         /// <summary>
-        /// The region ID.
+        /// The name of the configuration update operation.
+        /// </summary>
+        [NameInMap("OperationName")]
+        [Validation(Required=false)]
+        public string OperationName { get; set; }
+
+        /// <summary>
+        /// The parameters that are specified for service instance deployment.
         /// 
-        /// This parameter is required.
+        /// >  If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.
+        /// </summary>
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Parameters { get; set; }
+
+        /// <summary>
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -95,16 +90,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// The name of the specification package.
+        /// The package name.
         /// </summary>
         [NameInMap("SpecificationName")]
         [Validation(Required=false)]
         public string SpecificationName { get; set; }
 
         /// <summary>
-        /// The template name.
+        /// The name of the template. This parameter is returned only if you specify TemplateId.
         /// 
-        /// This parameter is required.
+        /// > -   If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.
+        /// > -  If you not specify TemplateVersion, the name of the template whose version is the default version is returned.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

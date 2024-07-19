@@ -8,20 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class UpdateServiceInstanceSpecResponseBody : TeaModel {
-        /// <summary>
-        /// The order ID.
-        /// </summary>
-        [NameInMap("OrderId")]
+    public class ListTagValuesResponseBody : TeaModel {
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string NextToken { get; set; }
 
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Values")]
+        [Validation(Required=false)]
+        public List<string> Values { get; set; }
 
     }
 

@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class UpdateServiceInstanceSpecResponseBody : TeaModel {
+    public class GetServiceEstimateCostResponseBody : TeaModel {
         /// <summary>
-        /// The order ID.
+        /// Estimated commodity cost.
         /// </summary>
-        [NameInMap("OrderId")]
+        [NameInMap("Commodity")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public Dictionary<string, object> Commodity { get; set; }
 
         /// <summary>
         /// The request ID.
@@ -22,6 +22,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// Estimated resource cost.
+        /// </summary>
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Resources { get; set; }
 
     }
 
