@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CloneServiceRequest : TeaModel {
+        /// <summary>
+        /// The request body. For more information, see [CreateService](https://help.aliyun.com/document_detail/412086.html).
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string Body { get; set; }

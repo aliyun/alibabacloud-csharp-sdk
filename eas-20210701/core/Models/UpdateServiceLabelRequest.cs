@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
     public class UpdateServiceLabelRequest : TeaModel {
         /// <summary>
         /// The custom service tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]

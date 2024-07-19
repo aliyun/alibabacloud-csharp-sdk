@@ -24,19 +24,25 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. You can call the [CreateResource](~~412111~~) operation to query the ID of the resource group.
+        /// The ID of the resource group. You can call the [CreateResource](https://help.aliyun.com/document_detail/412111.html) operation to query the ID of the resource group.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The name of the resource group. You can call the [CreateResource](~~412111~~) operation to query the name of the resource group.
+        /// The name of the resource group. You can call the [CreateResource](https://help.aliyun.com/document_detail/412111.html) operation to query the name of the resource group.
         /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
+        /// <summary>
+        /// The type of the resource group. Valid values:
+        /// 
+        /// *   Dedicated: the dedicated resource group.
+        /// *   SelfManaged: the self-managed resource group.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

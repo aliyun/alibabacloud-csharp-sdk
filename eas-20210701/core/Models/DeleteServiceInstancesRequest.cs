@@ -16,6 +16,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Container { get; set; }
 
+        /// <summary>
+        /// The instances that you want to restart. Separate multiple instance names with commas (,). For more information about how to query the instance name, see [ListServiceInstances](https://help.aliyun.com/document_detail/412108.html).
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public string InstanceList { get; set; }

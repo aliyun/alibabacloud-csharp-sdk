@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public float? CurrentAmount { get; set; }
 
+        [NameInMap("ExternalIP")]
+        [Validation(Required=false)]
+        public string ExternalIP { get; set; }
+
+        [NameInMap("ExternalInstancePort")]
+        [Validation(Required=false)]
+        public int? ExternalInstancePort { get; set; }
+
         [NameInMap("HostIP")]
         [Validation(Required=false)]
         public string HostIP { get; set; }
@@ -75,7 +83,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         [NameInMap("StartAt")]
         [Validation(Required=false)]
+        [Obsolete]
         public string StartAt { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -92,6 +105,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("TotalProcesses")]
         [Validation(Required=false)]
         public int? TotalProcesses { get; set; }
+
+        [NameInMap("Zone")]
+        [Validation(Required=false)]
+        public string Zone { get; set; }
 
     }
 

@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// The instance type used for the private gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]

@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// The type of the resource group. Valid values:
         /// 
-        /// - Dedicated
-        /// - SelfManaged
+        /// *   Dedicated: the dedicated resource group.
+        /// *   SelfManaged: the self-managed resource group.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

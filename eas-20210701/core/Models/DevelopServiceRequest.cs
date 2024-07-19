@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// Specifies whether to exit development mode. Valid values:
         /// 
-        /// *   true
-        /// *   false (default)
+        /// *   true: exits development mode.
+        /// *   false (default): enters development mode.
         /// </summary>
         [NameInMap("Exit")]
         [Validation(Required=false)]

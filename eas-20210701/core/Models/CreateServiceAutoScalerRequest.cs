@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 public int? ScaleDownGracePeriodSeconds { get; set; }
 
                 /// <summary>
-                /// The number of instances that you want to create at a time if the number of instances is scaled out from 0. Default value: 1.
+                /// The number of instances that you want to create at a time if the number of instances is 0. Default value: 1.
                 /// </summary>
                 [NameInMap("scaleUpActivationReplicas")]
                 [Validation(Required=false)]
@@ -74,21 +74,27 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// The maximum number of instances. The value must be greater than that of the min parameter.
+        /// The maximum number of instances in the service. The value of max must be greater than the value of min.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("max")]
         [Validation(Required=false)]
         public int? Max { get; set; }
 
         /// <summary>
-        /// The minimum number of instances. The value must be greater than 0.
+        /// The minimum number of instances in the service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("min")]
         [Validation(Required=false)]
         public int? Min { get; set; }
 
         /// <summary>
-        /// The Autoscaler strategies.
+        /// The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("scaleStrategies")]
         [Validation(Required=false)]
@@ -97,8 +103,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// The name of the metric for triggering auto scaling. Valid values:
             /// 
-            /// *   QPS: the queries per second (QPS) for an individual instance.
-            /// *   CPU: the CPU utilization.
+            /// *   qps: the queries per second (qps) for an individual instance.
+            /// *   cpu: the cpu utilization.
+            /// * gpu[util]: gpu utilization.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("metricName")]
             [Validation(Required=false)]
@@ -114,8 +123,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// The threshold of the metric that triggers auto scaling.
             /// 
-            /// *   If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.
-            /// *   If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.
+            /// *   If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.
+            /// *   If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.
+            /// *   If you set metricName to gpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("threshold")]
             [Validation(Required=false)]

@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
+        [NameInMap("Vendor")]
+        [Validation(Required=false)]
+        public string Vendor { get; set; }
+
     }
 
 }

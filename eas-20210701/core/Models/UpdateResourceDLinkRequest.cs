@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// The ID of the security group to which the Elastic Compute Service (ECS) instance belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// The ID of the peer primary vSwitch. After this parameter is specified, an elastic network interface (ENI) is created in the VSwitch.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

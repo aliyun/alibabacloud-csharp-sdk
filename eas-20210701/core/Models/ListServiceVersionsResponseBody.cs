@@ -9,24 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServiceVersionsResponseBody : TeaModel {
+        /// <summary>
+        /// The page number.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// The versions of the service.
+        /// The historical versions of the service.
         /// </summary>
         [NameInMap("Versions")]
         [Validation(Required=false)]
@@ -51,7 +63,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ImageAvailable { get; set; }
 
             /// <summary>
-            /// The ID of the image.
+            /// The image ID.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
@@ -72,11 +84,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ServiceConfig { get; set; }
 
             /// <summary>
-            /// Indicates whether EAS is enabled. Valid values:
+            /// Indicates whether Elastic Algorithm service (EAS) is activated. Valid values:
             /// 
-            /// *   true: EAS is enabled.
-            /// *   false: EAS is not enabled.
-            /// *   unknown: The enabling status of EAS is unknown.
+            /// *   true: EAS is activated.
+            /// *   false: EAS is not activated.
+            /// *   unknown: The activation of EAS is unknown.
             /// </summary>
             [NameInMap("ServiceRunnable")]
             [Validation(Required=false)]

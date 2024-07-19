@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// The configurable options for self managed resource group.
+        /// The configuration items of the self-managed resource group.
         /// </summary>
         [NameInMap("SelfManagedResourceOptions")]
         [Validation(Required=false)]
         public UpdateResourceRequestSelfManagedResourceOptions SelfManagedResourceOptions { get; set; }
         public class UpdateResourceRequestSelfManagedResourceOptions : TeaModel {
             /// <summary>
-            /// The key-value pairs for matched nodes.
+            /// Tag tag key-value pairs for nodes.
             /// </summary>
             [NameInMap("NodeMatchLabels")]
             [Validation(Required=false)]
@@ -39,7 +39,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public class UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations : TeaModel {
                 /// <summary>
                 /// The effect.
-                /// 
                 /// Valid values:
                 /// - PreferNoSchedule
                 /// - NoSchedule
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 public string Effect { get; set; }
 
                 /// <summary>
-                /// The name of the key.
+                /// The key name.
                 /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
@@ -67,7 +66,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// The name of the value.
+                /// The key value.
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
