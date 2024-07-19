@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            [NameInMap("appType")]
+            [Validation(Required=false)]
+            public string AppType { get; set; }
+
             /// <summary>
             /// 代表创建时间的资源属性字段
             /// </summary>

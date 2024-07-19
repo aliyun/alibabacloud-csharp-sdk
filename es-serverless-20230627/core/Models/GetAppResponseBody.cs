@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            [NameInMap("appType")]
+            [Validation(Required=false)]
+            public string AppType { get; set; }
+
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
