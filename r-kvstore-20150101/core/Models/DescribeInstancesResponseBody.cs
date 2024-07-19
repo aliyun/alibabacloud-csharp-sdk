@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string CloudType { get; set; }
 
+                [NameInMap("ComputingType")]
+                [Validation(Required=false)]
+                public string ComputingType { get; set; }
+
                 /// <summary>
                 /// The parameter configurations of the instance. For more information, see [Modify parameters of an instance](https://help.aliyun.com/document_detail/43885.html).
                 /// </summary>

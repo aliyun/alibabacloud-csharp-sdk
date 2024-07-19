@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyDBInstanceAutoUpgradeRequest : TeaModel {
         /// <summary>
+        /// The instance ID. You can call the DescribeDBInstances operation to obtain the ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
@@ -37,6 +39,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// Specifies whether to enable automatic minor version update. Valid values:
+        /// 
+        /// *   **1**: enables automatic minor version update.
+        /// *   **0**: disables automatic minor version update.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Value")]

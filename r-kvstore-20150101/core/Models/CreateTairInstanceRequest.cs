@@ -17,36 +17,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:
+        /// Specifies whether to enable auto-renewal for the instance. Valid values:
         /// 
         /// *   **true**: enables auto-renewal.
-        /// *   **false**: disables auto-renewal.
+        /// *   **false** (default): disables auto-renewal.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// The subscription duration that is supported by auto-renewal. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.
+        /// The subscription duration that is supported by auto-renewal. Unit: month. Valid values: **1**, **2**, **3**, **6**, and **12**.
         /// 
-        /// > This parameter is required only if the **AutoRenew** parameter is set to **true**.
+        /// >  This parameter is required if the **AutoRenew** parameter is set to **true**.
         /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
         public string AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// Specifies whether to use a coupon. Default value: false. Valid values:
+        /// Specifies whether to use a coupon. Valid values:
         /// 
         /// *   **true**: uses a coupon.
-        /// *   **false**: does not use a coupon.
+        /// *   **false** (default): does not use a coupon.
         /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public string AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// The ID of the backup set of the source instance. The system uses the data stored in the backup set to create an instance. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/61081.html) operation to query the backup set ID.
+        /// If your instance is a cloud-native cluster instance, we recommend that you use [DescribeClusterBackupList](https://help.aliyun.com/document_detail/2679158.html) to query the backup set ID of the cluster instance, such as cb-xx. Then, set the ClusterBackupId request parameter to the backup set ID to clone the cluster instance. This eliminates the need to specify the backup set ID of each shard.
+        /// 
+        /// You can set the BackupId parameter to the backup set ID of the source instance. The system uses the data stored in the backup set to create an instance. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/61081.html) operation to query backup set IDs. If the source instance is a cluster instance, set the BackupId parameter to the backup set IDs of all shards of the source instance, separated by commas (,). Example: "10\\*\\*,11\\*\\*,15\\*\\*".
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -60,10 +62,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Default value: PrePaid. Valid values:
+        /// The billing method. Valid values:
         /// 
-        /// *   **PrePaid**: subscription
-        /// *   **PostPaid**: pay-as-you-go
+        /// *   **PrePaid** (default): subscription
+        /// *   **PostPaid:** pay-as-you-go
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Default value: false. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
         /// *   **true**: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
         /// *   **false**: performs a dry run and sends the request. If the request passes the dry run, the instance is created.
@@ -104,11 +106,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The engine version. Default value: **1.0**. The parameter value varies with the Tair instance type.
+        /// The database engine version. Default value: **1.0**. The parameter value varies based on the Tair instance series.
         /// 
-        /// *   For Tair DRAM-based instances (tair_rdb) that are compatible with Redis 5.0 or 6.0, set this parameter to 5.0 or 6.0.
-        /// *   For Tair persistent memory-optimized instances (tair_scm) that are compatible with Redis 6.0, set this parameter to 1.0.
-        /// *   For Tair ESSD-based instances (tair_essd) that are compatible with Redis 4.0 or 6.0, set this parameter to 1.0 or 2.0.
+        /// *   For Tair DRAM-based instances (tair_rdb) that are compatible with Redis 5.0 or 6.0, set this parameter to **5.0** or **6.0**.
+        /// *   For Tair persistent memory-optimized instances (tair_scm) that are compatible with Redis 6.0, set this parameter to **1.0**.
+        /// *   For Tair ESSD/SSD-based instances (tair_essd) that are compatible with Redis 6.0, set this parameter to **1.0** to create an ESSD-based instance, and set this parameter to **2.0** to create an SSD-based instance.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -158,11 +160,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The storage type of the instance. Valid values:
+        /// The instance series. Valid values:
         /// 
-        /// *   **tair_rdb**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance
-        /// *   **tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance
-        /// *   **tair_essd**: ApsaraDB for Redis Enhanced Edition (Tair) ESSD-based instance
+        /// *   **tair_rdb**: Tair DRAM-based instance
+        /// *   **tair_scm**: Tair persistent memory-optimized instance
+        /// *   **tair_essd**: ESSD/SSD-based instance
         /// 
         /// This parameter is required.
         /// </summary>
@@ -205,7 +207,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.
+        /// The service port number of the instance. Valid values: 1024 to 65535. Default value: 6379.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
@@ -289,17 +291,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// *   **1** (default): You can create a [standard instance](https://help.aliyun.com/document_detail/52228.html) that contains only a single data node.
         /// *   **2** to **32**: You can create a [cluster instance](https://help.aliyun.com/document_detail/52228.html) that contains the specified number of data nodes.
         /// 
-        /// >  When the **InstanceType** parameter is set to **tair_rdb** or **tair_scm**, this parameter can be set to **2** to **32**. Only DRAM-based and persistent memory-optimized instances support the cluster architecture.
+        /// >  When the **InstanceType** parameter is set to **tair_rdb** or **tair_scm**, this parameter can be set to a value in the range of **2** to **32**. Only DRAM-based and persistent memory-optimized instances support the cluster architecture.
         /// </summary>
         [NameInMap("ShardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// The data shard type of the instance. Default value: MASTER_SLAVE. Valid values:
+        /// The shard type of the instance. Valid values:
         /// 
-        /// *   **MASTER_SLAVE**: runs in a master-replica architecture that provides high availability.
-        /// *   **STAND_ALONE**: runs in a standalone architecture. If the only node fails, the system creates a new instance and switches the workloads to the new instance. This may cause data loss. You can set this parameter to this value only if the instance uses the **single-zone** deployment type. If you set this parameter to this value, you cannot create cluster or read/write splitting instances.
+        /// *   **MASTER_SLAVE** (default): runs in a master-replica architecture that provides high availability.
+        /// *   **STAND_ALONE**: runs in a standalone architecture. If the only node fails, the system creates a new instance and switches the workloads to the new instance. This may cause data loss. You can set the ShardType parameter to this value only if the instance uses the **single-zone** deployment mode. If you set the ShardType parameter to this value, you cannot create cluster or read/write splitting instances.
         /// </summary>
         [NameInMap("ShardType")]
         [Validation(Required=false)]
@@ -317,7 +319,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.
         /// 
-        /// >  Then, you can use the **BackupId**, **ClusterBackupId**, or **RestoreTime** parameter to specify the backup set that you want to use or the point in time. This parameter must be used in combination with one of the preceding three parameters.
+        /// >  After you specify the SrcDBInstanceId parameter, use the **BackupId**, **ClusterBackupId** (recommended for cloud-native cluster instances), or **RestoreTime** parameter to specify the backup set or the specific point in time that you want to use to create an instance. The SrcDBInstanceId parameter must be used in combination with one of the preceding three parameters.
         /// </summary>
         [NameInMap("SrcDBInstanceId")]
         [Validation(Required=false)]
@@ -333,9 +335,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Storage { get; set; }
 
         /// <summary>
-        /// The storage type of the instance. Set the value to **essd_pl1**.
+        /// The storage type. Example values: **essd_pl1**, **essd_pl2**, and **essd_pl3**.
         /// 
-        /// > This parameter is available only if the **InstanceType** parameter is set to **tair_essd**.
+        /// >  This parameter is required only when you set the **InstanceType** parameter to **tair_essd** to create an ESSD-based instance.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   essd_pl0
+        /// *   essd_pl1
+        /// *   essd_pl2
+        /// *   essd_pl3
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

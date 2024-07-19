@@ -8,10 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyDBInstanceAutoUpgradeResponseBody : TeaModel {
-        /// <summary>
-        /// ID of the request.
-        /// </summary>
+    public class ModifyActiveOperationTasksResponseBody : TeaModel {
+        [NameInMap("Ids")]
+        [Validation(Required=false)]
+        public string Ids { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

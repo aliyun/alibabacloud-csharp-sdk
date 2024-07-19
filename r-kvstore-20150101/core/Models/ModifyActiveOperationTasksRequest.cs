@@ -8,16 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class CreateGlobalDistributeCacheRequest : TeaModel {
+    public class ModifyActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// The time when you want to restart the instance. Default value: Immediately. Valid values:
-        /// 
-        /// *   **Immediately**: immediately restarts the instance.
-        /// *   **MaintainTime**: restarts the instance during the maintenance window.
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("EffectiveTime")]
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string EffectiveTime { get; set; }
+        public string Ids { get; set; }
+
+        [NameInMap("ImmediateStart")]
+        [Validation(Required=false)]
+        public int? ImmediateStart { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -26,15 +27,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        /// <summary>
-        /// The ID of the resource group.
-        /// 
-        /// >  You do not need to specify system parameters.
-        /// </summary>
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -49,13 +41,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the existing instance.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("SeedSubInstanceId")]
+        [NameInMap("SwitchTime")]
         [Validation(Required=false)]
-        public string SeedSubInstanceId { get; set; }
+        public string SwitchTime { get; set; }
 
     }
 
