@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetBasicAccelerateIpResponseBody : TeaModel {
         /// <summary>
-        /// The accelerated IP address.
+        /// The accelerated IP address of the basic GA instance.
         /// </summary>
         [NameInMap("AccelerateIpAddress")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string IpSetId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **active**: The accelerated IP address is available.
         /// *   **binding**: The accelerated IP address is being associated.
         /// *   **bound**: The accelerated IP address is associated.
-        /// *   **unbinding**: The basic GA instance is being disassociated.
-        /// *   **deleting**: The accelerated IP address is being deleted.
+        /// *   **unbinding**: The accelerated IP address is being disassociated.
+        /// *   **deleting**: The GA instance is being deleted.
         /// 
-        /// >  This parameter is not returned when the queried accelerated IP address is being created.
+        /// >  If the accelerated IP address is being created, this parameter is not returned.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

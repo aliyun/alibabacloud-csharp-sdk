@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class GetAclRequest : TeaModel {
         /// <summary>
         /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The operation that you want to perform. Set the value to **GetAcl**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

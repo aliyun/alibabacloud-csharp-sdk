@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// *   **true**
         /// *   **false** (default)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The endpoint group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **Domain:** a custom domain name.
         /// *   **EIP:** an Alibaba Cloud elastic IP address (EIP).
         /// *   **PublicIp:** an Alibaba Cloud public IP address.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
@@ -75,6 +83,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

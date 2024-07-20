@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies> Policies { get; set; }
         public class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies : TeaModel {
             /// <summary>
-            /// The ID of the GA instance with which the endpoint is associated.
+            /// The ID of the GA instance to which the endpoint belongs.
             /// </summary>
             [NameInMap("AcceleratorId")]
             [Validation(Required=false)]
             public string AcceleratorId { get; set; }
 
             /// <summary>
-            /// The IP address of the traffic destination.
+            /// The IP addresses of the traffic policies.
             /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]
@@ -52,21 +52,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupId { get; set; }
 
             /// <summary>
-            /// The ID of the endpoint to which the traffic destination belongs.
+            /// The ID of the endpoint to which the traffic policy belongs.
             /// </summary>
             [NameInMap("EndpointId")]
             [Validation(Required=false)]
             public string EndpointId { get; set; }
 
             /// <summary>
-            /// The ID of the custom routing listener with which the endpoint is associated.
+            /// The ID of the custom routing listener to which the endpoint belongs.
             /// </summary>
             [NameInMap("ListenerId")]
             [Validation(Required=false)]
             public string ListenerId { get; set; }
 
             /// <summary>
-            /// The traffic policy ID.
+            /// The ID of the traffic policy.
             /// </summary>
             [NameInMap("PolicyId")]
             [Validation(Required=false)]
@@ -96,16 +96,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The ID of the service that manages the GA instance.
+            /// The ID of the service that manages the instance.
             /// 
-            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+            /// >  This parameter is returned only if the value of **ServiceManaged** is **true**.
             /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// Indicates whether the GA instance is managed. Valid values:
+            /// Indicates whether the instance is managed. Valid values:
             /// 
             /// *   **true**: The GA instance is managed.
             /// *   **false**: The GA instance is not managed.
@@ -115,11 +115,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// The actions that you can perform on the managed instance.
+            /// The actions that users can perform on the managed instance.
             /// 
-            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-            /// 
-            /// *   You can perform only specific actions on a managed instance.
+            /// > *   This parameter is returned only if the value of **ServiceManaged** is **true**.
+            /// >*   Users can perform only specific actions on a managed instance.
             /// </summary>
             [NameInMap("ServiceManagedInfos")]
             [Validation(Required=false)]
@@ -150,7 +149,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
                 /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
                 /// 
-                /// >  This parameter takes effect only if **Action** is set to **CreateChild**.
+                /// >  This parameter is returned only if the value of **Action** is **CreateChild**.
                 /// </summary>
                 [NameInMap("ChildType")]
                 [Validation(Required=false)]
@@ -159,8 +158,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// Indicates whether the specified actions are managed. Valid values:
                 /// 
-                /// *   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.
-                /// *   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.
+                /// *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+                /// *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
                 /// </summary>
                 [NameInMap("IsManaged")]
                 [Validation(Required=false)]

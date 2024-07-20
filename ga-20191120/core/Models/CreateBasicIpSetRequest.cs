@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The ID of the acceleration region.
         /// 
-        /// You can call the [ListAvailableBusiRegions](~~261190~~) operation to query the most recent acceleration region list.
+        /// You can call the [ListAvailableBusiRegions](https://help.aliyun.com/document_detail/261190.html) operation to query the most recent acceleration region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccelerateRegionId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the basic GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -74,6 +78,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the basic GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

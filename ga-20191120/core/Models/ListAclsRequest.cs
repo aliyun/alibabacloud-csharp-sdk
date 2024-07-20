@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAclsRequest : TeaModel {
         /// <summary>
-        /// The ID of the network ACL. You can specify up to 20 network ACL IDs in each request.
+        /// The ACL IDs. You can specify a maximum of 20 ACL IDs in each request.
         /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
         public List<string> AclIds { get; set; }
 
         /// <summary>
-        /// The name of the network ACL. You can specify up to 10 network ACL names in each request.
+        /// The ACL name. You can specify a maximum of ACL names in each request.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -55,6 +55,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -68,29 +70,29 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags of the resource.
+        /// The tag of the ACL.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListAclsRequestTag> Tag { get; set; }
         public class ListAclsRequestTag : TeaModel {
             /// <summary>
-            /// The tag key of the network ACL. The tag key cannot be an empty string.
+            /// The tag key of the ACL. The value of this parameter cannot be an empty string.
             /// 
-            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
             /// 
-            /// You can specify up to 20 tag keys.
+            /// You can specify a maximum of 20 tag keys.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the network ACL. The tag value can be an empty string.
+            /// The tag value of the ACL. The tag value can be an empty string.
             /// 
-            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
             /// 
-            /// You can specify up to 20 tag values.
+            /// You can specify a maximum of 20 tag values.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

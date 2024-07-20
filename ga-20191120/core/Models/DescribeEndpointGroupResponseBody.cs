@@ -162,6 +162,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<string> EndpointGroupUnconfirmedIpList { get; set; }
 
+        [NameInMap("EndpointProtocolVersion")]
+        [Validation(Required=false)]
+        public string EndpointProtocolVersion { get; set; }
+
         /// <summary>
         /// The protocol that is used by the backend service.
         /// 

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class DissociateAdditionalCertificatesFromListenerRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The domain name associated with the additional certificate.
         /// 
         /// You can specify up to 10 domain names in each request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

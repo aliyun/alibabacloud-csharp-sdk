@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class GetHealthStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

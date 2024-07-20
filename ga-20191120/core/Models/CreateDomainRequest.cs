@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The ID of the GA instance.
         /// 
         /// You can enter up to 50 IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorIds")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The accelerated domain name to be added.
         /// 
         /// Wildcard domain names are supported. A wildcard domain name must start with `*.`, such as `*.example.com`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]

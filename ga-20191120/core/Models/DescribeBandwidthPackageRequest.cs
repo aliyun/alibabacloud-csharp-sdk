@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class DescribeBandwidthPackageRequest : TeaModel {
         /// <summary>
         /// The ID of the bandwidth plan that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

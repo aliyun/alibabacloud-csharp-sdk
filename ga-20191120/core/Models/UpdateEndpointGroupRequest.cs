@@ -60,6 +60,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             /// <summary>
             /// The IP address or domain name of the endpoint.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
@@ -91,7 +93,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// > *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
             /// > *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
             /// 
-            /// For more information, see [Service-linked roles](~~178360~~).
+            /// For more information, see [Service-linked roles](https://help.aliyun.com/document_detail/178360.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -103,6 +107,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// Valid values: **0** to **255**.
             /// 
             /// >  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -112,6 +118,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the endpoint group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
@@ -119,10 +127,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the endpoint group is created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointGroupRegion")]
         [Validation(Required=false)]
         public string EndpointGroupRegion { get; set; }
+
+        [NameInMap("EndpointProtocolVersion")]
+        [Validation(Required=false)]
+        public string EndpointProtocolVersion { get; set; }
 
         /// <summary>
         /// The protocol that is used by the backend service. Valid values:
@@ -182,7 +196,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The name of the endpoint group.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -216,6 +230,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

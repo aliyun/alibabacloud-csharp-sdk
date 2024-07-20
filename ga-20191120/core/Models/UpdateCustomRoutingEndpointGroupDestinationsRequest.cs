@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// You must specify the backend service port range and protocol of the endpoint group. The specified information is used to map the port range of the associated listener.
         /// 
         /// You can specify at most 20 mapping configurations, which include port ranges and protocol types.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationConfigurations")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public class UpdateCustomRoutingEndpointGroupDestinationsRequestDestinationConfigurations : TeaModel {
             /// <summary>
             /// The ID of the mapping configuration of the endpoint group.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DestinationId")]
             [Validation(Required=false)]
@@ -87,6 +91,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the endpoint group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
@@ -94,6 +100,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

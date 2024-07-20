@@ -11,6 +11,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class DeleteBasicAccelerateIpRequest : TeaModel {
         /// <summary>
         /// The ID of the accelerated IP address that you want to delete.
+        /// 
+        /// You can call the [ListBasicAccelerateIps](https://help.aliyun.com/document_detail/2253393.html) operation to query the ID of the accelerated IP address.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccelerateIpId")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

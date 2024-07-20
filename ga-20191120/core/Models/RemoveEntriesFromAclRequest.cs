@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class RemoveEntriesFromAclRequest : TeaModel {
         /// <summary>
-        /// The IP addresses or CIDR blocks that you want to delete from the ACL. You can delete up to 20 entries in each request.
+        /// The entries (IP addresses or CIDR blocks) that you want to delete from the ACL. You can delete a maximum of 20 entries at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<RemoveEntriesFromAclRequestAclEntries> AclEntries { get; set; }
         public class RemoveEntriesFromAclRequestAclEntries : TeaModel {
             /// <summary>
-            /// The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to delete from the ACL. You can delete up to 20 entries in each request.
+            /// The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to delete from the ACL. You can delete a maximum of 50 entries at a time.
             /// 
-            /// > This parameter is required.
+            /// >  This parameter is required.
             /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ACL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -57,6 +61,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

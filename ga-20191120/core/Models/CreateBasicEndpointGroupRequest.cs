@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class CreateBasicEndpointGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the basic GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -46,7 +48,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The ID of the region to which the endpoint group belongs.
         /// 
-        /// You can call the [ListAvailableBusiRegions](~~2253223~~) operation to query the region ID.
+        /// You can call the [ListAvailableBusiRegions](https://help.aliyun.com/document_detail/2253223.html) operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointGroupRegion")]
         [Validation(Required=false)]
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The name of the endpoint group.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -86,6 +90,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

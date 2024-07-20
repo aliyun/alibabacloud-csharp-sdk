@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the endpoint for which you want to create traffic destinations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The configurations of the traffic destinations.
         /// 
         /// You can specify up to 500 traffic destinations for each endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyConfigurations")]
         [Validation(Required=false)]
@@ -94,6 +98,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

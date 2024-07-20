@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class CreateForwardingRulesRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -27,6 +29,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ForwardingRules")]
         [Validation(Required=false)]
         public List<CreateForwardingRulesRequestForwardingRules> ForwardingRules { get; set; }
@@ -39,6 +44,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("RuleActions")]
             [Validation(Required=false)]
             public List<CreateForwardingRulesRequestForwardingRulesRuleActions> RuleActions { get; set; }
@@ -47,10 +55,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
                 public class CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig : TeaModel {
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("ServerGroupTuples")]
                     [Validation(Required=false)]
                     public List<CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
                     public class CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
+                        /// <summary>
+                        /// This parameter is required.
+                        /// </summary>
                         [NameInMap("EndpointGroupId")]
                         [Validation(Required=false)]
                         public string EndpointGroupId { get; set; }
@@ -59,10 +73,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
                 }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Order")]
                 [Validation(Required=false)]
                 public int? Order { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("RuleActionType")]
                 [Validation(Required=false)]
                 public string RuleActionType { get; set; }
@@ -73,6 +93,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("RuleConditions")]
             [Validation(Required=false)]
             public List<CreateForwardingRulesRequestForwardingRulesRuleConditions> RuleConditions { get; set; }
@@ -115,6 +138,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -122,6 +147,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

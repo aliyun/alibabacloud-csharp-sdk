@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The bandwidth of the acceleration region. Unit: Mbit/s.
         /// 
         /// The minimum bandwidth is 2 Mbit/s.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the acceleration region of the basic GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpSetId")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

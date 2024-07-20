@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class CreateEndpointGroupsRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -37,6 +39,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
         public List<CreateEndpointGroupsRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
@@ -79,6 +84,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string EndpointGroupName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
             public string EndpointGroupRegion { get; set; }
@@ -86,6 +94,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
+
+            [NameInMap("EndpointProtocolVersion")]
+            [Validation(Required=false)]
+            public string EndpointProtocolVersion { get; set; }
 
             [NameInMap("EndpointRequestProtocol")]
             [Validation(Required=false)]
@@ -171,6 +183,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The ID of the listener.
         /// 
         /// >  If the listener protocol is **HTTP** or **HTTPS**, you can call the **CreateEndpointGroups** operation to create only one endpoint group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -178,6 +192,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

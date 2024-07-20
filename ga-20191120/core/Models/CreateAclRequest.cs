@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The entries of IP addresses or CIDR blocks to add to the ACL.
         /// 
-        /// You can add up to 20 entries in each request.
+        /// You can add a maximum of 50 entries at a time.
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The IP addresses (192.168.XX.XX) or CIDR blocks (10.0.XX.XX/24) that you want to add to the ACL.
             /// 
-            /// You can add up to 20 entries in each request.
+            /// You can add a maximum of 50 entries at a time.
             /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The description of the entry that you want to add to the ACL.
             /// 
-            /// You can add the descriptions of up to 20 entries in each request.
+            /// You can add a maximum of 50 entries at a time.
             /// 
-            /// The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+            /// The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).
             /// </summary>
             [NameInMap("EntryDescription")]
             [Validation(Required=false)]
@@ -41,7 +41,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The name of the ACL. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The ACL name.
+        /// 
+        /// The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
@@ -52,6 +54,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// *   **IPv4**
         /// *   **IPv6**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddressIPVersion")]
         [Validation(Required=false)]
@@ -60,9 +64,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -80,6 +84,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

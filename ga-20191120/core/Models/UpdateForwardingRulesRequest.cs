@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class UpdateForwardingRulesRequest : TeaModel {
         /// <summary>
         /// The GA instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The configurations of the forwarding rules.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ForwardingRules")]
         [Validation(Required=false)]
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public class UpdateForwardingRulesRequestForwardingRules : TeaModel {
             /// <summary>
             /// The forwarding rule ID.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ForwardingRuleId")]
             [Validation(Required=false)]
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The forwarding rule name.
             /// 
-            /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
             /// </summary>
             [NameInMap("ForwardingRuleName")]
             [Validation(Required=false)]
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             /// <summary>
             /// The priority of the forwarding rule. Valid values: **1** to **10000**. A smaller value specifies a higher priority.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
@@ -59,6 +67,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             /// <summary>
             /// The configurations of the forwarding actions.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleActions")]
             [Validation(Required=false)]
@@ -77,6 +87,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     /// The configuration of an endpoint group.
                     /// 
                     /// >  We recommend that you use **RuleActionType** and **RuleActionValue** rather than this parameter to configure forwarding actions.
+                    /// 
+                    /// This parameter is required.
                     /// </summary>
                     [NameInMap("ServerGroupTuples")]
                     [Validation(Required=false)]
@@ -86,6 +98,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                         /// The ID of an endpoint group.
                         /// 
                         /// >  We recommend that you use **RuleActionType** and **RuleActionValue** rather than this parameter to configure forwarding actions.
+                        /// 
+                        /// This parameter is required.
                         /// </summary>
                         [NameInMap("EndpointGroupId")]
                         [Validation(Required=false)]
@@ -99,6 +113,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// The forwarding priority.
                 /// 
                 /// >  This parameter does not take effect. Ignore this parameter.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Order")]
                 [Validation(Required=false)]
@@ -113,6 +129,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// *   **Rewrite**: rewrites a request.
                 /// *   **AddHeader**: adds a header to a request.
                 /// *   **RemoveHeader**: deletes the header of a request.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("RuleActionType")]
                 [Validation(Required=false)]
@@ -147,11 +165,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// 
                 /// *   If you set **RuleActionType** to **AddHeader**, this parameter specifies an HTTP header to be added. If a forwarding rule contains a forwarding action whose type is **AddHeader**, you must specify another forwarding action whose type is **ForwardGroup**. Example: `[{"name":"header1","type":"userdefined", "value":"value"}]`.
                 /// 
-                ///     *   `name`: the name of the HTTP header. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The name of the HTTP header specified by **AddHeader** must be unique and cannot be the same as the name of the HTTP header specified by **RemoveHeader**.
+                ///     *   `name`: the name of the HTTP header. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The name of the HTTP header specified by **AddHeader** must be unique and cannot be the same as the name of the HTTP header specified by **RemoveHeader**.
                 ///     *   `type`: the content type of the HTTP header. Valid values: `user-defined`, `ref`, and `system-defined`.
-                ///     *   `value`: the content of the HTTP header. You cannot leave this parameter empty. If you set `type` to `user-defined`, the content must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The content can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `ref`, the content must be 1 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `system-defined`, only `ClientSrcIp` is supported.**
+                ///     *   `value`: the content of the HTTP header. You cannot leave this parameter empty. If you set `type` to `user-defined`, the content must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The content can contain letters, digits, hyphens (-), and underscores (_). The content cannot start or end with a space character. If you set `type` to `ref`, the content must be 1 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The content cannot start or end with a space character. If you set `type` to `system-defined`, only `ClientSrcIp` is supported.**
                 /// 
-                /// *   If you set **RuleActionType** to **RemoveHeader**, this parameter specifies an HTTP header to be removed. If a forwarding rule contains a forwarding action whose type is **RemoveHeader**, you must specify another forwarding action whose type is **ForwardGroup**. The header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). Example: `["header1"]`.
+                /// *   If you set **RuleActionType** to **RemoveHeader**, this parameter specifies an HTTP header to be removed. If a forwarding rule contains a forwarding action whose type is **RemoveHeader**, you must specify another forwarding action whose type is **ForwardGroup**. The header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). Example: `["header1"]`.
                 /// 
                 /// *   If you set **RuleActionType** to **Rewrite**, this parameter specifies the rewriting configuration. If a forwarding rule contains a forwarding action whose type is **Rewrite**, you must specify another forwarding action whose type is **ForwardGroup**. Example: `{"domain":"value1", "path":"value2", "query":"value3"}`.
                 /// 
@@ -167,6 +185,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             /// <summary>
             /// The forwarding conditions.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleConditions")]
             [Validation(Required=false)]
@@ -222,6 +242,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// *   **Method**: Requests are forwarded based on HTTP request methods.
                 /// *   **Cookie**: Requests are forwarded based on cookies.
                 /// *   **SourceIP**: Requests are forwarded based on source IP addresses.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("RuleConditionType")]
                 [Validation(Required=false)]
@@ -230,26 +252,26 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The value of the forwarding condition. You must specify different JSON strings based on the value of **RuleConditionType**.
                 /// 
-                /// *   If you set **RuleConditionType** to **Host**, this parameter specifies a domain name condition. A forwarding rule can contain only one forwarding condition of the Host type. You can specify multiple domain names in a forwarding condition. The relationship between multiple domain names is OR. The domain name must be 3 to 128 characters in length and can contain letters, digits, hyphens (-), and periods (.). Supported wildcard characters are asterisks (\*) and question marks (?). Example: `["www.example.com", "www.aliyun.com"]`.
+                /// *   If you set **RuleConditionType** to **Host**, this parameter specifies a domain name condition. A forwarding rule can contain only one forwarding condition of the Host type. You can specify multiple domain names in a forwarding condition. The relationship between multiple domain names is OR. The domain name must be 3 to 128 characters in length and can contain letters, digits, hyphens (-), and periods (.). Supported wildcard characters are asterisks (\\*) and question marks (?). Example: `["www.example.com", "www.aliyun.com"]`.
                 /// 
-                /// *   If **RuleConditionType** is set to **Path**, this parameter specifies a path condition. A forwarding rule can contain multiple forwarding conditions of the Path type. The relationship between multiple path conditions is OR. You can specify multiple paths in a forwarding condition. The relationship between multiple paths is OR. The path must be 1 to 128 characters in length, and must start with a forward slash (/). The path can contain letters, digits, and the following special characters: $ - \_ . + / & ~ @ : \". Supported wildcard characters are asterisks (\*) and question marks (?). Example: `["/a", "/b/"]`.
+                /// *   If **RuleConditionType** is set to **Path**, this parameter specifies a path condition. A forwarding rule can contain multiple forwarding conditions of the Path type. The relationship between multiple path conditions is OR. You can specify multiple paths in a forwarding condition. The relationship between multiple paths is OR. The path must be 1 to 128 characters in length, and must start with a forward slash (/). The path can contain letters, digits, and the following special characters: $ - _ . + / & ~ @ : \\". Supported wildcard characters are asterisks (\\*) and question marks (?). Example: `["/a", "/b/"]`.
                 /// 
                 /// *   If you set **RuleConditionType** to **RequestHeader**, this parameter specifies an HTTP header condition that consists of key-value pairs. The header values in a forwarding condition must be unique. Example: `[{"header1":["value1","value2"]}]`.
                 /// 
-                ///     *   Key: The key of an HTTP header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+                ///     *   Key: The key of an HTTP header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).
                 ///     *   Value: The value of an HTTP header must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot start or end with a space character.
                 /// 
                 /// *   If you set **RuleConditionType** to **Query**, this parameter specifies a query string condition that consists of key-value pairs. Example: `[{"query1":["value1"]}, {"query2":["value2"]}]`.
                 /// 
-                ///     *   Key: The key of an HTTP header must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \ ; / ? : @ & = + , $ % | " ^ ~`.
-                ///     *   Value: The value of an HTTP header must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \ ; / ? : @ & = + , $ % | " ^ ~`.
+                ///     *   Key: The key of an HTTP header must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \\ ; / ? : @ & = + , $ % | " ^ ~`.
+                ///     *   Value: The value of an HTTP header must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \\ ; / ? : @ & = + , $ % | " ^ ~`.
                 /// 
                 /// *   If you set **RuleConditionType** to **Method**, this parameter specifies an HTTP request method condition. Valid values: **HEAD**, **GET**, **POST**, **OPTIONS**, **PUT**, **PATCH**, and **DELETE**. Example: `["GET", "OPTIONS", "POST"]`.
                 /// 
                 /// *   If you set **RuleConditionType** to **Cookie**, this parameter specifies a cookie condition that consists of key-value pairs. Example: `[{"cookie1":["value1"]}, {"cookie2":["value2"]}]`.
                 /// 
-                ///     *   Key: The key of a cookie must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
-                ///     *   Value: The value of a cookie must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
+                ///     *   Key: The key of a cookie must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \\ | < > &`.
+                ///     *   Value: The value of a cookie must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \\ | < > &`.
                 /// 
                 /// *   If you set **RuleConditionType** to **SourceIP**, this parameter specifies a source IP address condition. You can specify IP addresses, such as 1.1.XX.XX/32. You can also specify CIDR blocks, such as 2.2.XX.XX/24. A forwarding rule can contain only one forwarding condition whose type is SourceIP. You can specify multiple source IP addresses in a forwarding condition. The relationship between multiple source IP addresses is OR. Example: `["1.1.XX.XX/32", "2.2.XX.XX/24"]`.
                 /// </summary>
@@ -272,6 +294,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The listener ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -279,6 +303,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

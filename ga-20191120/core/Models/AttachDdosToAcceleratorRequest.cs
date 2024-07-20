@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class AttachDdosToAcceleratorRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance with which the Anti-DDoS Pro/Premium instance is associated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the Anti-DDoS Pro/Premium instance to be associated with the GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DdosId")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// *   **cn-hangzhou**: regions in the Chinese mainland
         /// *   **ap-southeast-1**: regions outside the Chinese mainland
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DdosRegionId")]
         [Validation(Required=false)]

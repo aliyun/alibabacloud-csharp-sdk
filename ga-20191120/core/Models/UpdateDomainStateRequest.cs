@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class UpdateDomainStateRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name whose ICP filing status you want to update.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]

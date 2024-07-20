@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The new accelerated domain name.
         /// 
         /// Only primary domain names are supported, such as `example.net`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The accelerated domain name to be modified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetDomain")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class CreateBasicAccelerateIpEndpointRelationsRequest : TeaModel {
         /// <summary>
         /// A list of accelerated IP addresses and the endpoints with which the accelerated IP addresses are associated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccelerateIpEndpointRelations")]
         [Validation(Required=false)]
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The IDs of the accelerated IP addresses.
             /// 
-            /// You can call the [ListBasicAccelerateIps](~~2253393~~) operation to query the IDs of the accelerated IP addresses.
+            /// You can call the [ListBasicAccelerateIps](https://help.aliyun.com/document_detail/2253393.html) operation to query the IDs of the accelerated IP addresses.
             /// 
             /// You can specify up to 20 IP address IDs.
             /// </summary>
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The IDs of the endpoints.
             /// 
-            /// You can call the [ListBasicEndpoints](~~2253406~~) to query the IDs of the endpoints.
+            /// You can call the [ListBasicEndpoints](https://help.aliyun.com/document_detail/2253406.html) to query the IDs of the endpoints.
             /// 
             /// You can specify up to 20 endpoint IDs.
             /// </summary>
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the basic GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -60,6 +64,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

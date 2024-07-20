@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// *   Only a bandwidth plan that is not associated with a GA instance can be specified.
         /// *   If you want to replace a basic bandwidth plan, make sure that the bandwidth provided by the replacement bandwidth plan is not less than the total bandwidth allocated to the acceleration area.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the bandwidth plan that you want to replace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetBandwidthPackageId")]
         [Validation(Required=false)]

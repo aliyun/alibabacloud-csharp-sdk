@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class CreateCustomRoutingEndpointGroupsRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The information about the endpoint groups.
         /// 
         /// You can specify at most five endpoint groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
@@ -204,6 +208,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// The ID of the region in which the endpoint group resides.
             /// 
             /// You can specify at most five region IDs.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
@@ -212,7 +218,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The name of the endpoint group.
             /// 
-            /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
             /// 
             /// You can specify at most five endpoint group names.
             /// </summary>
@@ -224,6 +230,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the custom routing listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -231,6 +239,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

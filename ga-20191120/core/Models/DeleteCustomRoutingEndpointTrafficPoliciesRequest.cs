@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The ID of the endpoint for which you want to delete traffic destinations.
         /// 
         /// >  This parameter is required.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The IDs of the traffic destinations.
         /// 
         /// You can specify the IDs of up to 9,000 traffic destinations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyIds")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

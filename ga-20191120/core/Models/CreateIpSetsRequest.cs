@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class CreateIpSetsRequest : TeaModel {
         /// <summary>
         /// The information about the acceleration regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccelerateRegion")]
         [Validation(Required=false)]
@@ -19,7 +21,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The ID of the acceleration region.
             /// 
-            /// The number of regions that you can add varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).
+            /// The number of regions that you can add varies based on the specification of the GA instance. For more information, see [Overview](https://help.aliyun.com/document_detail/153127.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("AccelerateRegionId")]
             [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The GA instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -84,6 +90,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

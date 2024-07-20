@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The bandwidth of the bandwidth plan. Unit: Mbit/s.
         /// 
         /// Valid values: **2** to **2000**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -169,6 +171,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. **cn-hangzhou** is returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -219,6 +223,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **CrossDomain**: a cross-region acceleration bandwidth plan
         /// 
         /// If you call this operation on the Alibaba Cloud China site, only **Basic** is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

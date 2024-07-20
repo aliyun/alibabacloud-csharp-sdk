@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The ID of the accelerated IP address.
         /// 
-        /// You can call the [ListBasicAccelerateIps](~~2253393~~) operation to query the ID of the accelerated IP address.
+        /// You can call the [ListBasicAccelerateIps](https://help.aliyun.com/document_detail/2253393.html) operation to query the ID of the accelerated IP address.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccelerateIpId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the basic GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -39,7 +43,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The ID of the endpoint.
         /// 
-        /// You can call the [ListBasicEndpoints](~~2253406~~) operation to query the ID of the endpoint.
+        /// You can call the [ListBasicEndpoints](https://help.aliyun.com/document_detail/2253406.html) operation to query the ID of the endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
@@ -47,6 +53,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -54,25 +54,47 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// *   Valid values when TLSVersions is set to **TLSv1.2**:
             /// 
-            /// ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA256 AES256-SHA256
+            ///     *   ECDHE-ECDSA-AES128-SHA
+            ///     *   ECDHE-ECDSA-AES256-SHA
+            ///     *   ECDHE-RSA-AES128-SHA
+            ///     *   ECDHE-RSA-AES256-SHA
+            ///     *   AES128-SHA
+            ///     *   AES256-SHA
+            ///     *   DES-CBC3-SHA
+            ///     *   ECDHE-ECDSA-AES128-GCM-SHA256
+            ///     *   ECDHE-ECDSA-AES256-GCM-SHA384
+            ///     *   ECDHE-ECDSA-AES128-SHA256
+            ///     *   ECDHE-ECDSA-AES256-SHA384
+            ///     *   ECDHE-RSA-AES128-GCM-SHA256
+            ///     *   ECDHE-RSA-AES256-GCM-SHA384
+            ///     *   ECDHE-RSA-AES128-SHA256
+            ///     *   ECDHE-RSA-AES256-SHA384
+            ///     *   AES128-GCM-SHA256
+            ///     *   AES256-GCM-SHA384
+            ///     *   AES128-SHA256
+            ///     *   AES256-SHA256
             /// 
             /// *   Valid values when TLSVersions is set to **TLSv1.3**:
             /// 
-            /// TLS_AES\_128\_GCM_SHA256 TLS_AES\_256\_GCM_SHA384 TLS_CHACHA20\_POLY1305\_SHA256 TLS_AES\_128\_CCM_SHA256 TLS_AES\_128\_CCM\_8\_SHA256
+            ///     *   TLS_AES_128_GCM_SHA256
+            ///     *   TLS_AES_256_GCM_SHA384
+            ///     *   TLS_CHACHA20_POLY1305_SHA256
+            ///     *   TLS_AES_128_CCM_SHA256
+            ///     *   TLS_AES_128_CCM_8_SHA256
             /// </summary>
             [NameInMap("Ciphers")]
             [Validation(Required=false)]
             public List<string> Ciphers { get; set; }
 
             /// <summary>
-            /// The TLS security policy ID.
+            /// The ID of the TLS security policy.
             /// </summary>
             [NameInMap("SecurityPolicyId")]
             [Validation(Required=false)]
             public string SecurityPolicyId { get; set; }
 
             /// <summary>
-            /// The supported TLS protocol versions. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**.
+            /// The supported TLS versions. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**.
             /// </summary>
             [NameInMap("TlsVersions")]
             [Validation(Required=false)]

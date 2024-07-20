@@ -23,7 +23,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The ID of the acceleration region.
         /// 
-        /// You can call the [GetBasicAccelerator](~~2253380~~) operation to query the region ID.
+        /// You can call the [GetBasicAccelerator](https://help.aliyun.com/document_detail/2253380.html) operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpSetId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

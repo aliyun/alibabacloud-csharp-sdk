@@ -80,8 +80,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of the ACL. Valid values:
             /// 
-            /// *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow only specific IP addresses to access an application. Risks may arise if an IP address whitelist is improperly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.
-            /// *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.
+            /// *   **white**: Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow access from specific IP addresses to an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.
+            /// *   **black**: All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.
             /// </summary>
             [NameInMap("AclType")]
             [Validation(Required=false)]
@@ -111,21 +111,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags of the ACL.
+        /// The tag of the ACL.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetAclResponseBodyTags> Tags { get; set; }
         public class GetAclResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// The key of tag N that is add to the ACL.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The value of tag N that is add to the ACL.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

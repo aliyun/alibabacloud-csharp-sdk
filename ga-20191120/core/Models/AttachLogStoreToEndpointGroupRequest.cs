@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class AttachLogStoreToEndpointGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The IDs of the endpoint groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointGroupIds")]
         [Validation(Required=false)]
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,6 +58,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The name of the Logstore.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SlsLogStoreName")]
         [Validation(Required=false)]
@@ -57,6 +67,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The name of the Log Service project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SlsProjectName")]
         [Validation(Required=false)]
@@ -64,6 +76,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the Log Service project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SlsRegionId")]
         [Validation(Required=false)]

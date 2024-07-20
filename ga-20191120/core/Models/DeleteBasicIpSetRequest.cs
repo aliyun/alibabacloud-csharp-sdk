@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the acceleration region of the basic GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpSetId")]
         [Validation(Required=false)]

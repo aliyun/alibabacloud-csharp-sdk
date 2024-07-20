@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the acceleration region to be queried.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BusinessRegionId")]
         [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
+        /// The region where the GA instance is deployed. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the origin probing task for which you want to enable the diagnostic feature.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// *   **ga_pluspre_public_intl**: GA instance.
         /// *   **ga_bwppreintl_public_intl:** basic bandwidth plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **BUY**: purchase order.
         /// *   **RENEW**: renewal order.
         /// *   **UPGRADE**: upgrade order.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class AssociateAclsWithListenerRequest : TeaModel {
         /// <summary>
         /// The ID of the ACL. You can associate up to two ACL IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// *   **white**: Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow access from specific IP addresses to an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.
         /// *   **black**: All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the ACL, the listener forwards all requests.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclType")]
         [Validation(Required=false)]
@@ -51,6 +55,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The listener ID.
         /// 
         /// Only intelligent routing listeners support ACLs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

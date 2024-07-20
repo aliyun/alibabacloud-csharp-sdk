@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The GA instance ID.
         /// 
         /// > The bandwidth metering method of the GA instance must be pay-by-data-transfer.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// *   **bgpPro**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro lines are used for cross-border acceleration. You do not need to complete real-name verification.
         /// *   **private**: cross-border Express Connect circuit. Cross-border Express Connect circuits provide better acceleration performance but require real-name verification.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CrossBorderMode")]
         [Validation(Required=false)]

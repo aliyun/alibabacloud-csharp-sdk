@@ -13,16 +13,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class AddEntriesToAclRequest : TeaModel {
         /// <summary>
-        /// The IP addresses or CIDR blocks that you want to add to the ACL. You can add at most 20 entries in each request.
+        /// The entries (IP addresses or CIDR blocks) that you want to add to the ACL.
+        /// 
+        /// You can delete a maximum of 50 entries at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<AddEntriesToAclRequestAclEntries> AclEntries { get; set; }
         public class AddEntriesToAclRequestAclEntries : TeaModel {
             /// <summary>
-            /// The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to add to the ACL. You can add at most 20 entries in each request.
+            /// The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to add to the ACL. You can add a maximum of 50 entries at a time.
             /// 
-            /// > This parameter is required.
+            /// >  This parameter is required.
             /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
@@ -31,9 +35,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The description of the entry.
             /// 
-            /// You can add the descriptions of up to 20 entries in each request.
+            /// You can add the descriptions of up to 50 entries in each request.
             /// 
-            /// The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+            /// The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).
             /// </summary>
             [NameInMap("EntryDescription")]
             [Validation(Required=false)]
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ACL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -71,6 +77,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

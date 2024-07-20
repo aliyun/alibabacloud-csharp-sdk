@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListListenerCertificatesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the certificates.
+        /// The certificates.
         /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
         public List<ListListenerCertificatesResponseBodyCertificates> Certificates { get; set; }
         public class ListListenerCertificatesResponseBodyCertificates : TeaModel {
             /// <summary>
-            /// The ID of the certificate.
+            /// The certificate ID.
             /// </summary>
             [NameInMap("CertificateId")]
             [Validation(Required=false)]
@@ -33,19 +33,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// Indicates whether the certificate is a default one:
+            /// Indicates whether the certificate is a default one.
             /// 
-            /// *   **true**: a default certificate
-            /// *   **false**: an additional certificate
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// The state of the certificate.
+            /// The status of the certificate.
             /// 
-            /// *   **active**: The certificate is associated with a listener and takes effect.
+            /// *   **active**: The certificate is associated with a listener and in effect.
             /// *   **updating**: The additional certificate is being replaced.
             /// </summary>
             [NameInMap("State")]
@@ -62,24 +62,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If **NextToken** is not returned, it indicates that no additional results exist.
-        /// *   If **NextToken** is returned, the value is the token that is used for the next query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value of **NextToken** is returned, the value indicates the token that is used for the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

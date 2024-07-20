@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class CreateListenerRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -262,7 +264,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The name of the endpoint group that is associated with the custom routing listener.
             /// 
-            /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
             /// 
             /// You can specify at most five endpoint group names.
             /// 
@@ -364,7 +366,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// >*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
                 /// >*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
                 /// >*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.  
-                /// > For more information, see [Service linked roles](~~178360~~).
+                /// > For more information, see [Service linked roles](https://help.aliyun.com/document_detail/178360.html).
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -402,7 +404,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The name of the endpoint group that is associated with the intelligent routing listener.
             /// 
-            /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
             /// 
             /// You can enter the names of up to 10 endpoint groups.
             /// 
@@ -437,6 +439,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
+
+            [NameInMap("EndpointProtocolVersion")]
+            [Validation(Required=false)]
+            public string EndpointProtocolVersion { get; set; }
 
             /// <summary>
             /// The backend service protocol of the endpoint that is associated with the intelligent routing listener. Valid values:
@@ -603,14 +609,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The name of the listener.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The listener ports. Valid values: **1** to **65499**. The maximum number of ports that can be configured depends on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
+        /// The listener ports. Valid values: **1** to **65499**. The maximum number of ports that can be configured depends on the routing type and protocol of the listener. For more information, see [Listener overview](https://help.aliyun.com/document_detail/153216.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
@@ -621,9 +629,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
             /// 
-            /// The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
+            /// The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](https://help.aliyun.com/document_detail/153216.html).
             /// 
             /// > You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("FromPort")]
             [Validation(Required=false)]
@@ -634,9 +644,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
             /// 
-            /// The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
+            /// The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](https://help.aliyun.com/document_detail/153216.html).
             /// 
             /// > You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ToPort")]
             [Validation(Required=false)]
@@ -662,7 +674,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **true**: enables the feature. After client IP addresses are preserved, you can view client IP addresses on the endpoints.
         /// *   **false** (default): disables the feature.
         /// 
-        /// > This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](~~153259~~) and [UpdateEndpointGroup](~~153262~~).
+        /// > This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](https://help.aliyun.com/document_detail/153259.html) and [UpdateEndpointGroup](https://help.aliyun.com/document_detail/153262.html).
         /// </summary>
         [NameInMap("ProxyProtocol")]
         [Validation(Required=false)]
@@ -670,6 +682,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -689,30 +703,30 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The ID of the security policy. Valid values:
         /// 
-        /// *   **tls_cipher_policy\_1\_0**
+        /// *   **tls_cipher_policy_1_0**
         /// 
         ///     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2
         ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
         /// 
-        /// *   **tls_cipher_policy\_1\_1**
+        /// *   **tls_cipher_policy_1_1**
         /// 
         ///     *   Supported TLS versions: TLS 1.1 and TLS 1.2
         ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
         /// 
-        /// *   **tls_cipher_policy\_1\_2**
+        /// *   **tls_cipher_policy_1_2**
         /// 
         ///     *   Supported TLS version: TLS 1.2
         ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
         /// 
-        /// *   **tls_cipher_policy\_1\_2\_strict**
+        /// *   **tls_cipher_policy_1_2_strict**
         /// 
         ///     *   Supported TLS version: TLS 1.2
         ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
         /// 
-        /// *   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**
+        /// *   **tls_cipher_policy_1_2_strict_with_1_3**
         /// 
         ///     *   Supported TLS versions: TLS 1.2 and TLS 1.3
-        ///     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+        ///     *   Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
         /// 
         /// > This parameter is available only when you create an HTTPS listener.
         /// </summary>
@@ -727,7 +741,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **CustomRouting**: custom routing
         /// 
         /// > *   Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.
-        /// > *   You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see [Listener overview](~~153216~~).
+        /// > *   You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see [Listener overview](https://help.aliyun.com/document_detail/153216.html).
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

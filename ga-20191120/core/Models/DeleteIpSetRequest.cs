@@ -30,14 +30,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The ID of the acceleration region that you want to delete.
         /// 
-        /// You can call the [ListIpSets](~~2253273~~) operation to query the IDs of acceleration regions of a specified GA instance.
+        /// You can call the [ListIpSets](https://help.aliyun.com/document_detail/2253273.html) operation to query the IDs of acceleration regions of a specified GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpSetId")]
         [Validation(Required=false)]
         public string IpSetId { get; set; }
 
         /// <summary>
-        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

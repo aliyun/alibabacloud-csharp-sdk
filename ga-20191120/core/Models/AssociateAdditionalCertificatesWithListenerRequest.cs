@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class AssociateAdditionalCertificatesWithListenerRequest : TeaModel {
         /// <summary>
         /// The GA instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The additional certificates.
         /// 
         /// You can specify up to 10 certificates in each request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// The domain name that is specified by the certificate. You can associate each domain name with only one additional certificate.
             /// 
             /// You can specify up to 10 domain names in each request.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// The ID of the certificate. Only server certificates are supported.
             /// 
             /// You can specify up to 10 certificate IDs in each request.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -58,6 +66,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The listener ID. Only HTTPS listeners are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -65,6 +75,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

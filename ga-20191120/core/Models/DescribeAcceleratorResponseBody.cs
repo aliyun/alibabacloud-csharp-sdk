@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// >  The Large Ⅲ specification and higher specifications are available only to users that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.
         /// 
-        /// Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).
+        /// Different specifications provide different capabilities. For more information, see [Instance specifications](https://help.aliyun.com/document_detail/153127.html).
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

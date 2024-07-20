@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The information about the endpoints.
         /// 
         /// You can specify information for up to 20 endpoints.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointConfigurations")]
         [Validation(Required=false)]
@@ -51,6 +53,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
                 /// 
                 /// You can specify up to 20 destination IP addresses for each endpoint.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Address")]
                 [Validation(Required=false)]
@@ -121,6 +125,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the endpoint group in which to create endpoints.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
@@ -128,6 +134,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

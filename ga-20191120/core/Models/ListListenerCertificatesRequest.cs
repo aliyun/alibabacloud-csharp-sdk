@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class ListListenerCertificatesRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -18,32 +20,34 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The number of entries to return.
-        /// 
-        /// Valid values: **1** to **50**. Default value: **20**.
+        /// The maximum number of entries to return. Valid values: **1** to **50**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If this is your first and only query, ignore this parameter.
-        /// *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   You must specify the token that is obtained from the previous query as the value of NextToken.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -52,10 +56,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The type of the certificate. Valid values:
         /// 
-        /// *   **default**: a default certificate
-        /// *   **additional**: an additional certificate
+        /// *   **default**
+        /// *   **additional**
         /// 
-        /// If you do not set this parameter, default and additional certificates are returned by default.
+        /// If you do not specify this parameter, default and additional certificates are returned by default.
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]

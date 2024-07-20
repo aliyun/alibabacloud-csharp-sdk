@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The name of the GA instance.
         /// 
-        /// The name must be 2 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// The name must be 2 to 128 characters in length and can contain digits, underscores (_), and hyphens (-). It must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -153,6 +153,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The ID of the region in which to create the GA instance. Set the value to **cn-hangzhou**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -187,7 +189,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// >  GA instances Large III and above are not available by default. To use these instances , contact your Alibaba Cloud account manager.
         /// 
-        /// Each instance type provides different capabilities. For more information, see [Instance specifications](~~153127~~).
+        /// Each instance type provides different capabilities. For more information, see [Instance specifications](https://help.aliyun.com/document_detail/153127.html).
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

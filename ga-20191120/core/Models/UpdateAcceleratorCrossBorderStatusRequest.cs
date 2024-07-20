@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
     public class UpdateAcceleratorCrossBorderStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// - **true**
         /// - **false**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CrossBorderStatus")]
         [Validation(Required=false)]
