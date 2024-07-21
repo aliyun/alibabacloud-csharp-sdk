@@ -16875,6 +16875,130 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
+         * @summary CDS文件下载
+         *
+         * @param request DownloadCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DownloadCdsFileResponse
+         */
+        public DownloadCdsFileResponse DownloadCdsFileWithOptions(DownloadCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadCdsFile",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadCdsFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary CDS文件下载
+         *
+         * @param request DownloadCdsFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DownloadCdsFileResponse
+         */
+        public async Task<DownloadCdsFileResponse> DownloadCdsFileWithOptionsAsync(DownloadCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadCdsFile",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadCdsFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary CDS文件下载
+         *
+         * @param request DownloadCdsFileRequest
+         * @return DownloadCdsFileResponse
+         */
+        public DownloadCdsFileResponse DownloadCdsFile(DownloadCdsFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DownloadCdsFileWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary CDS文件下载
+         *
+         * @param request DownloadCdsFileRequest
+         * @return DownloadCdsFileResponse
+         */
+        public async Task<DownloadCdsFileResponse> DownloadCdsFileAsync(DownloadCdsFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DownloadCdsFileWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Exports events that occur on a cloud desktop from an Alibaba Cloud Workspace client.
          *
          * @param request ExportClientEventsRequest
