@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? ProductId { get; set; }
 
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
             [NameInMap("RegionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
