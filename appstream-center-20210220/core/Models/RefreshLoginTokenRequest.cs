@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210220.Models
 {
     public class RefreshLoginTokenRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
         [Validation(Required=false)]
         public string LoginIdentifier { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LoginToken")]
         [Validation(Required=false)]
         public string LoginToken { get; set; }
@@ -36,6 +39,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
+        [NameInMap("ProfileRegion")]
+        [Validation(Required=false)]
+        public string ProfileRegion { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
