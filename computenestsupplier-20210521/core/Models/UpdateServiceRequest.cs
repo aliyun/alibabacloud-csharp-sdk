@@ -35,80 +35,139 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Bind Commodity Information
+        /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
         public UpdateServiceRequestCommodity Commodity { get; set; }
         public class UpdateServiceRequestCommodity : TeaModel {
+            /// <summary>
+            /// This parameter is not publicly accessible.
+            /// </summary>
             [NameInMap("ComponentsMappings")]
             [Validation(Required=false)]
             public List<UpdateServiceRequestCommodityComponentsMappings> ComponentsMappings { get; set; }
             public class UpdateServiceRequestCommodityComponentsMappings : TeaModel {
+                /// <summary>
+                /// This parameter is not publicly accessible.
+                /// </summary>
                 [NameInMap("Mappings")]
                 [Validation(Required=false)]
                 public string Mappings { get; set; }
 
+                /// <summary>
+                /// This parameter is not publicly accessible.
+                /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]
                 public string TemplateName { get; set; }
 
             }
 
+            /// <summary>
+            /// Metering Item Configuration Information (Cloud Marketplace - Pay-As-You-Go Use)
+            /// </summary>
             [NameInMap("MeteringEntityExtraInfos")]
             [Validation(Required=false)]
             public List<UpdateServiceRequestCommodityMeteringEntityExtraInfos> MeteringEntityExtraInfos { get; set; }
             public class UpdateServiceRequestCommodityMeteringEntityExtraInfos : TeaModel {
+                /// <summary>
+                /// The ID of the entity.
+                /// </summary>
                 [NameInMap("EntityId")]
                 [Validation(Required=false)]
                 public string EntityId { get; set; }
 
+                /// <summary>
+                /// Metric Name, filled in when Type is ComputeNestBill or ComputeNestPrometheus
+                /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
                 public string MetricName { get; set; }
 
+                /// <summary>
+                /// Custom prometheus query
+                /// </summary>
                 [NameInMap("Promql")]
                 [Validation(Required=false)]
                 public string Promql { get; set; }
 
+                /// <summary>
+                /// Type, value：
+                /// 
+                /// * **Custom**
+                /// * **ComputeNestBill**
+                /// * **ComputeNestPrometheus**
+                /// * **ComputeNestTime**
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
             }
 
+            /// <summary>
+            /// Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Pay-As-You-Go Use)
+            /// </summary>
             [NameInMap("MeteringEntityMappings")]
             [Validation(Required=false)]
             public List<UpdateServiceRequestCommodityMeteringEntityMappings> MeteringEntityMappings { get; set; }
             public class UpdateServiceRequestCommodityMeteringEntityMappings : TeaModel {
+                /// <summary>
+                /// The ID of the entity.
+                /// </summary>
                 [NameInMap("EntityIds")]
                 [Validation(Required=false)]
                 public List<string> EntityIds { get; set; }
 
+                /// <summary>
+                /// The package name.
+                /// </summary>
                 [NameInMap("SpecificationName")]
                 [Validation(Required=false)]
                 public string SpecificationName { get; set; }
 
+                /// <summary>
+                /// The template name.
+                /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]
                 public string TemplateName { get; set; }
 
             }
 
+            /// <summary>
+            /// Saas boost config information
+            /// </summary>
             [NameInMap("SaasBoostConfig")]
             [Validation(Required=false)]
             public string SaasBoostConfig { get; set; }
 
+            /// <summary>
+            /// Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Subscription/Permanent Use)
+            /// </summary>
             [NameInMap("SpecificationMappings")]
             [Validation(Required=false)]
             public List<UpdateServiceRequestCommoditySpecificationMappings> SpecificationMappings { get; set; }
             public class UpdateServiceRequestCommoditySpecificationMappings : TeaModel {
+                /// <summary>
+                /// Specification code.
+                /// </summary>
                 [NameInMap("SpecificationCode")]
                 [Validation(Required=false)]
                 public string SpecificationCode { get; set; }
 
+                /// <summary>
+                /// The package name.
+                /// </summary>
                 [NameInMap("SpecificationName")]
                 [Validation(Required=false)]
                 public string SpecificationName { get; set; }
 
+                /// <summary>
+                /// The template name.
+                /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]
                 public string TemplateName { get; set; }

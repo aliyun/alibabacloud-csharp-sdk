@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Bind Commodity Information
+        /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
         public string CommodityShrink { get; set; }
