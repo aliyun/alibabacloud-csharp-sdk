@@ -1,3 +1,11 @@
+2024-07-22 Version: 2.3.0
+- Support API CancelServiceUsage.
+- Support API CreateServiceUsage.
+- Support API ListServiceCategories.
+- Support API ListServiceUsages.
+- Support API UpdateServiceUsage.
+
+
 2024-07-19 Version: 2.2.0
 - Support API GenerateServicePolicy.
 - Support API GetServiceEstimateCost.
