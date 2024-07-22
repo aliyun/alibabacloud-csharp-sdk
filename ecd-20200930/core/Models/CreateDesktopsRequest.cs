@@ -422,6 +422,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SnapshotPolicyId")]
+        [Validation(Required=false)]
+        public string SnapshotPolicyId { get; set; }
+
         /// <summary>
         /// The tags that you want to add to the cloud desktop.
         /// </summary>
