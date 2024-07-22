@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The CIDR block of the ACL entry.
+            /// The CIDR block for the ACL entry.
             /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The status of the ACL entry. Valid values:
             /// 
-            /// *   **Adding**
-            /// *   **Available**
-            /// *   **Removing**
+            /// *   **Adding**: The ACL entry is being added.
+            /// *   **Available**: The ACL entry is added and available.
+            /// *   **Removing**: The ACL entry is being removed.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

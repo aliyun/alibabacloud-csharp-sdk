@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ListSystemSecurityPoliciesResponseBodySecurityPolicies> SecurityPolicies { get; set; }
         public class ListSystemSecurityPoliciesResponseBodySecurityPolicies : TeaModel {
             /// <summary>
-            /// The supported encryption algorithms.
+            /// The supported cipher suite.
             /// </summary>
             [NameInMap("Ciphers")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string SecurityPolicyId { get; set; }
 
             /// <summary>
-            /// The TLS versions that are supported.
+            /// The supported TLS protocol versions.
             /// </summary>
             [NameInMap("TLSVersions")]
             [Validation(Required=false)]

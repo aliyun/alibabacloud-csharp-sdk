@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The value of **RequestId** for each API request is different.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -49,27 +49,27 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<UpdateServerGroupServersAttributeRequestServers> Servers { get; set; }
         public class UpdateServerGroupServersAttributeRequestServers : TeaModel {
             /// <summary>
-            /// The description of the backend server. The description must be 2 to 256 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.
+            /// The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify up to 40 servers in each call.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The port used by the backend server. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
+            /// The port that is used by the backend server. Valid values: **1** to **65535**. You can specify up to 40 servers in each call.
             /// 
-            /// > You do not need to set this parameter if **ServerType** is set to **Fc**.
+            /// >  You do not need to set this parameter if ServerType is set to **Fc**.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The ID of the backend server. You can specify up to 40 server IDs in each call.
+            /// The ID of the backend server. You can specify up to 40 servers in each call.
             /// 
-            /// *   If **ServerType** is set to **Ecs**, **Eni**, or **Eci**, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance.
-            /// *   If **ServerType** is set to **Ip**, set the ServerId parameter to an IP address.
-            /// *   If **ServerType** is set to **Fc**, set the ServerId parameter to the Alibaba Cloud Resource Name (ARN) of a function.
+            /// *   Specify the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance if you set **ServerType** to **Ecs**, **Eni**, or **Eci**.
+            /// *   Specify an IP address if you set **ServerType** to **Ip**.
+            /// *   Specify the Alibaba Cloud Resource Name (ARN) of a Function Compute function if you set **ServerType** to **Fc**.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -78,20 +78,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
+            /// The IP address of the backend server. You can specify up to 40 servers in each call.
             /// </summary>
             [NameInMap("ServerIp")]
             [Validation(Required=false)]
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// The type of the backend server. You can specify at most 40 servers in each call. Valid values:
+            /// The type of backend server. You can specify up to 40 servers in each call. Valid values:
             /// 
-            /// *   **Ecs**
-            /// *   **Eni**
-            /// *   **Eci**
-            /// *   **Ip**
-            /// *   **Fc**
+            /// *   **Ecs**: ECS instance
+            /// *   **Eni**: ENI
+            /// *   **Eci**: elastic container instance
+            /// *   **Ip**: IP address
+            /// *   **Fc**: Function Compute
             /// 
             /// This parameter is required.
             /// </summary>
@@ -100,9 +100,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerType { get; set; }
 
             /// <summary>
-            /// The weight of the backend server. Valid values: **0** to **100**. Default value: **100**. If the weight of a backend server is set to **0**, no requests are forwarded to the backend server. You can specify at most 40 servers in each call.
+            /// The weight of the backend server. Valid values: **0** to **100**. Default value: **100**. If the value is set to **0**, no requests are forwarded to the server. You can specify up to 40 servers in each call.
             /// 
-            /// > You do not need to set this parameter if **ServerType** is set to **Fc**.
+            /// >  You do not need to set this parameter if ServerType is set to **Fc**.
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]

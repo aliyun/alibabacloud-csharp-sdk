@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAclRelationsRequest : TeaModel {
         /// <summary>
-        /// The ACL IDs.
+        /// Array of ACL ID.
         /// 
         /// This parameter is required.
         /// </summary>

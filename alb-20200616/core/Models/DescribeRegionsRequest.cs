@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The supported natural language. Valid values:
+        /// The language of the response. Valid values:
         /// 
-        /// *   zh-CN: **Chinese**
-        /// *   en-US: **English**
-        /// *   ja: **Japanese**
+        /// *   **zh-CN** (default): Chinese
+        /// *   **en-US**: English
+        /// *   **ja**: Japanese
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

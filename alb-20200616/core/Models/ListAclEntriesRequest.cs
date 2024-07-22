@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAclEntriesRequest : TeaModel {
         /// <summary>
-        /// The ACL ID.
+        /// The ID of the ACL.
         /// 
         /// This parameter is required.
         /// </summary>

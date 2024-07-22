@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListLoadBalancersResponseBody : TeaModel {
         /// <summary>
-        /// The list of ALB instances.
+        /// A list of ALB instances.
         /// </summary>
         [NameInMap("LoadBalancers")]
         [Validation(Required=false)]
         public List<ListLoadBalancersResponseBodyLoadBalancers> LoadBalancers { get; set; }
         public class ListLoadBalancersResponseBodyLoadBalancers : TeaModel {
             /// <summary>
-            /// The configuration of the access log.
+            /// The configurations of access logs.
             /// </summary>
             [NameInMap("AccessLogConfig")]
             [Validation(Required=false)]
             public ListLoadBalancersResponseBodyLoadBalancersAccessLogConfig AccessLogConfig { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersAccessLogConfig : TeaModel {
                 /// <summary>
-                /// The log project.
+                /// The Simple Log Service project.
                 /// </summary>
                 [NameInMap("LogProject")]
                 [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The mode in which IP addresses are allocated. Valid values:
             /// 
-            /// *   **Fixed**: allocates a static IP address to the ALB instance.
+            /// *   **Fixed**: The ALB instance uses a static IP address.
             /// *   **Dynamic**: dynamically allocates an IP address to each zone of the ALB instance.
             /// </summary>
             [NameInMap("AddressAllocatedMode")]
@@ -62,15 +62,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The type of IP address that the ALB instance uses to provide services. Valid values:
             /// 
-            /// *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
-            /// *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.
+            /// *   **Internet**: The ALB instance is assigned a public IP address. The domain name is resolved to the public IP address. The ALB instance is accessible over the Internet.
+            /// *   **Intranet**: The ALB instance is assigned only a private IP address. The domain name is resolved to the private IP address. The ALB instance is accessible only within the VPC of the ALB instance.
             /// </summary>
             [NameInMap("AddressType")]
             [Validation(Required=false)]
             public string AddressType { get; set; }
 
             /// <summary>
-            /// The ID of the EIP bandwidth plan that is associated with the NLB instance if the NLB instance uses a public IP address.
+            /// The ID of the Internet Shared Bandwidth instance that is associated with the Internet-facing ALB instance.
             /// </summary>
             [NameInMap("BandwidthPackageId")]
             [Validation(Required=false)]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The domain name of the ALB instance.
+            /// The domain name.
             /// </summary>
             [NameInMap("DNSName")]
             [Validation(Required=false)]
             public string DNSName { get; set; }
 
             /// <summary>
-            /// The configuration of deletion protection.
+            /// The configuration of the deletion protection feature.
             /// </summary>
             [NameInMap("DeletionProtectionConfig")]
             [Validation(Required=false)]
@@ -117,17 +117,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// The type of IPv6 address that is used by the ALB instance. Valid values:
+            /// The type of IPv6 address used by the ALB instance. Valid values:
             /// 
-            /// *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
-            /// *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.
+            /// *   **Internet** The ALB instance is assigned a public IP address. The domain name is resolved to the public IP address. The ALB instance is accessible over the Internet.
+            /// *   **Intranet** The ALB instance is assigned only a private IP address. The domain name is resolved to the private IP address. The ALB instance is accessible only within the VPC of the ALB instance.
             /// </summary>
             [NameInMap("Ipv6AddressType")]
             [Validation(Required=false)]
             public string Ipv6AddressType { get; set; }
 
             /// <summary>
-            /// The configuration of the billing method.
+            /// The billing information about the ALB instance.
             /// </summary>
             [NameInMap("LoadBalancerBillingConfig")]
             [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// The business status of the ALB instance. Valid values:
+            /// The status of the ALB instance. Valid values:
             /// 
             /// *   **Abnormal**
             /// *   **Normal**
@@ -155,11 +155,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LoadBalancerBussinessStatus { get; set; }
 
             /// <summary>
-            /// The edition of the ALB instance. Different editions have different limits and support different billing methods. Valid values:
+            /// The edition of the ALB instance. The features and billing rules vary based on the edition. Valid values:
             /// 
-            /// *   **Basic**: basic
-            /// *   **Standard**: standard
-            /// *   **StandardWithWaf**: WAF-enabled
+            /// *   **Basic**
+            /// *   **Standard**
+            /// *   **StandardWithWaf**
             /// </summary>
             [NameInMap("LoadBalancerEdition")]
             [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LoadBalancerId { get; set; }
 
             /// <summary>
-            /// The name of the NLB instance.
+            /// The name of the ALB instance.
             /// </summary>
             [NameInMap("LoadBalancerName")]
             [Validation(Required=false)]
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<ListLoadBalancersResponseBodyLoadBalancersLoadBalancerOperationLocks> LoadBalancerOperationLocks { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerOperationLocks : TeaModel {
                 /// <summary>
-                /// The reason why the ALB instance is locked. This parameter is available only when **LoadBalancerBussinessStatus** is set to **Abnormal**.
+                /// The reason why the ALB instance is locked. This parameter is valid only if **LoadBalancerBussinessStatus** is set to **Abnormal**.
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
@@ -196,8 +196,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// The lock type. Valid values:
                 /// 
-                /// *   **SecurityLocked**: The ALB instance is locked due to security reasons.
-                /// *   **RelatedResourceLocked**: The ALB instance is locked due to association issues.
+                /// *   **SecurityLocked**: The ALB instance is locked due to security risks.
+                /// *   **RelatedResourceLocked**: The ALB instance is locked due to other resources associated with the ALB instance.
                 /// *   **FinancialLocked**: The ALB instance is locked due to overdue payments.
                 /// *   **ResidualLocked**: The ALB instance is locked because the associated resources have overdue payments and the resources are released.
                 /// </summary>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The status of the ALB instance. Valid values:
             /// 
-            /// *   **Inactive**: The ALB instance is disabled. The listeners do not forward traffic.
+            /// *   **Inactive**: The ALB instance is disabled. ALB instances in the Inactive state do not forward traffic.
             /// *   **Active**: The ALB instance is running.
             /// *   **Provisioning**: The ALB instance is being created.
             /// *   **Configuring**: The ALB instance is being modified.
@@ -221,18 +221,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LoadBalancerStatus { get; set; }
 
             /// <summary>
-            /// The configuration read-only mode.
+            /// The configuration of modification protection.
             /// </summary>
             [NameInMap("ModificationProtectionConfig")]
             [Validation(Required=false)]
             public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig ModificationProtectionConfig { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig : TeaModel {
                 /// <summary>
-                /// The reason why deletion protection is enabled.
+                /// The reason why the configuration read-only mode is enabled.
                 /// 
-                /// It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.
+                /// The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).
                 /// 
-                /// This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.
+                /// This parameter is available only if the **ModificationProtectionStatus** parameter is set to **ConsoleProtection**.
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
@@ -241,10 +241,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// Indicates whether the configuration read-only mode is enabled for the ALB instance. Valid values:
                 /// 
-                /// *   **NonProtection**: The configuration read-only mode is disabled. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.
-                /// *   **ConsoleProtection**: The configuration read-only mode is enabled. In this case, you can specify ModificationProtectionReason.
+                /// *   **NonProtection**: Modification protection is disabled. In this case, you cannot set the ModificationProtectionReason parameter. If the ModificationProtectionReason parameter is specified, the value is cleared.
+                /// *   **ConsoleProtection**: Modification protection is enabled. In this case, you can set the ModificationProtectionReason parameter.
                 /// 
-                /// > If you set this parameter to **ConsoleProtection**, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+                /// >  If the value is **ConsoleProtection**, modification protection is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -260,21 +260,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The tags that are added to the instance.
+            /// The information about the tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListLoadBalancersResponseBodyLoadBalancersTags> Tags { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The tag key of the ALB instance.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The tag value of the ALB instance.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// The ID of the VPC to which the ALB instance belongs.
+            /// The ID of the VPC in which the ALB instance is deployed.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListLoadBalancersRequest : TeaModel {
+        /// <summary>
+        /// The IP version. Valid values:
+        /// 
+        /// *   **IPv4**
+        /// *   **DualStack**
+        /// </summary>
         [NameInMap("AddressIpVersion")]
         [Validation(Required=false)]
         public string AddressIpVersion { get; set; }
@@ -23,10 +29,19 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string AddressType { get; set; }
 
+        /// <summary>
+        /// The domain name.
+        /// </summary>
         [NameInMap("DNSName")]
         [Validation(Required=false)]
         public string DNSName { get; set; }
 
+        /// <summary>
+        /// The type of IPv6 address that is used by the ALB instance. Valid values:
+        /// 
+        /// *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
+        /// *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.
+        /// </summary>
         [NameInMap("Ipv6AddressType")]
         [Validation(Required=false)]
         public string Ipv6AddressType { get; set; }

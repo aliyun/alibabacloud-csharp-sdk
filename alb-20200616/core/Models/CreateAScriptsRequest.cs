@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateAScriptsRequest : TeaModel {
         /// <summary>
-        /// The AScript rules.
+        /// The information about the AScript rules.
         /// </summary>
         [NameInMap("AScripts")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the AScript rule.
             /// 
-            /// The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -37,18 +37,35 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            /// <summary>
+            /// Specifies whether to enable the extended attributes of the AScript rule. Valid values:
+            /// 
+            /// *   true
+            /// *   false (default)
+            /// </summary>
             [NameInMap("ExtAttributeEnabled")]
             [Validation(Required=false)]
             public bool? ExtAttributeEnabled { get; set; }
 
+            /// <summary>
+            /// The extended attributes.
+            /// </summary>
             [NameInMap("ExtAttributes")]
             [Validation(Required=false)]
             public List<CreateAScriptsRequestAScriptsExtAttributes> ExtAttributes { get; set; }
             public class CreateAScriptsRequestAScriptsExtAttributes : TeaModel {
+                /// <summary>
+                /// The attribute name.
+                /// 
+                /// Set the value to **EsDebug**, which specifies that if requests carry the _es_dbg parameter and the value is the specified key, the debugging header is enabled to output the execution result.
+                /// </summary>
                 [NameInMap("AttributeKey")]
                 [Validation(Required=false)]
                 public string AttributeKey { get; set; }
 
+                /// <summary>
+                /// The attribute value, which must be 1 to 128 characters in length, and can contain letters or digits.
+                /// </summary>
                 [NameInMap("AttributeValue")]
                 [Validation(Required=false)]
                 public string AttributeValue { get; set; }

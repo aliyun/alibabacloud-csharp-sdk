@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -31,12 +31,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The HTTP status codes that are used to determine whether the backend server passes the health check.
-        /// 
-        /// *   If **HealthCheckProtocol** is set to **HTTP**, **HealthCheckCodes** can be set to **http_2xx** (default), **http_3xx**, **http_4xx**, and **http_5xx**. Separate multiple HTTP status codes with a comma (,).
-        /// *   If **HealthCheckProtocol** is set to **gRPC**, **HealthCheckCodes** can be set to **0 to 99**. Default value: **0**. Value ranges are supported. You can enter up to 20 value ranges and separate them with a comma (,).
-        /// 
-        /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+        /// The HTTP status codes that indicate healthy backend servers.
         /// </summary>
         [NameInMap("HealthCheckCodes")]
         [Validation(Required=false)]
@@ -50,25 +45,25 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? HealthCheckConnectPort { get; set; }
 
         /// <summary>
-        /// The domain name that you want to use for the health check. Valid values:
+        /// The domain name that is used for health checks. Valid values:
         /// 
-        /// *   **$SERVER_IP** (default): the private IP addresses of backend servers. If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the Application Load Balancer (ALB) uses the private IP addresses of backend servers for health checks.
-        /// *   **domain**: The domain name must be 1 to 80 characters in length and can contain letters, digits, periods (.), and hyphens (-).
+        /// *   **$SERVER_IP** (default): the private IP address of a backend server. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP addresses of backend servers as domain names for health checks.
+        /// *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
         /// 
-        /// > This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.
+        /// >  This parameter is supported only when you set `HealthCheckProtocol` to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
         /// </summary>
         [NameInMap("HealthCheckHost")]
         [Validation(Required=false)]
         public string HealthCheckHost { get; set; }
 
         /// <summary>
-        /// The HTTP version that is used for health checks.
+        /// The HTTP version for health checks.
         /// 
         /// Valid values: **HTTP1.0** and **HTTP1.1**.
         /// 
         /// Default value: **HTTP1.1**.
         /// 
-        /// > This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.
+        /// >  This parameter takes effect only when `HealthCheckProtocol` is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
         /// </summary>
         [NameInMap("HealthCheckHttpVersion")]
         [Validation(Required=false)]
@@ -82,37 +77,40 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? HealthCheckInterval { get; set; }
 
         /// <summary>
-        /// The method that you want to use for the health check. Valid values:
+        /// The HTTP method that is used for health checks. Valid values:
         /// 
-        /// *   **HEAD**: By default, the ALB instance sends HEAD requests to a backend server to perform HTTP health checks.
+        /// *   **HEAD** (default): By default, HTTP and HTTPS health checks use the HEAD method.
         /// *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-        /// *   **POST**: gRPC health checks automatically use the POST method.
+        /// *   **POST**: gRPC health checks use the POST method by default.
         /// 
-        /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+        /// >  This parameter is supported only when you set **HealthCheckProtocol** to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
         /// </summary>
         [NameInMap("HealthCheckMethod")]
         [Validation(Required=false)]
         public string HealthCheckMethod { get; set; }
 
         /// <summary>
-        /// The URL path that is used for health checks.
+        /// The URL that is used for health checks.
         /// 
-        /// The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`.
+        /// The URL must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&), and the following extended character sets: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`.
         /// 
         /// The URL must start with a forward slash (/).
         /// 
-        /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+        /// >  This parameter is supported only when you set **HealthCheckProtocol** to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
         /// </summary>
         [NameInMap("HealthCheckPath")]
         [Validation(Required=false)]
         public string HealthCheckPath { get; set; }
 
         /// <summary>
-        /// The protocol that you want to use for health checks. Valid values:
+        /// The protocol that is used for health checks. Valid values:
         /// 
-        /// *   **HTTP** (default): To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
-        /// *   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
-        /// *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
+        /// *   **HTTP** (default): HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.
+        /// *   **HTTPS**: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS provides higher security than HTTP because HTTPS supports data encryption.
+        /// *   **TCP**: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.
+        /// *   **gRPC**: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.
+        /// 
+        /// >  HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
         /// </summary>
         [NameInMap("HealthCheckProtocol")]
         [Validation(Required=false)]

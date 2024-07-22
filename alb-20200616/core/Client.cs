@@ -984,14 +984,12 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Creates AScript rules.
          *
-         * @description ### Prerequisites
+         * @description ### [](#)Prerequisites
          * *   A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see [CreateLoadBalancer](https://help.aliyun.com/document_detail/214358.html).
-         * *   By default, the feature to create and manage AScript rules is unavailable. Log on to the [Quota Center console](https://quotas.console.aliyun.com/white-list-products/alb/quotas?spm=a2c4g.11186623.0.0.6e8834f6IFiF2I). On the **Privileges** page, enter the quota ID `slb_user_visible_gray_label/ascript` and apply for the quota.
-         * ### Usage notes
-         * *   **CreateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of the task:
-         *     *   If an AScript rule is in the **Creating** state, the AScript rule is being created.
-         *     *   If an AScript rule is in the **Available** state, the AScript rule is created.
-         * *   In the following table, the value of **N** is **1**.
+         * ### [](#)Usage notes
+         * **CreateAScripts** an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of a script.
+         * *   If the script is in the **Creating** state, the script is being created.
+         * *   If the script is in the **Available**, the script is created.
          *
          * @param request CreateAScriptsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1039,14 +1037,12 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Creates AScript rules.
          *
-         * @description ### Prerequisites
+         * @description ### [](#)Prerequisites
          * *   A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see [CreateLoadBalancer](https://help.aliyun.com/document_detail/214358.html).
-         * *   By default, the feature to create and manage AScript rules is unavailable. Log on to the [Quota Center console](https://quotas.console.aliyun.com/white-list-products/alb/quotas?spm=a2c4g.11186623.0.0.6e8834f6IFiF2I). On the **Privileges** page, enter the quota ID `slb_user_visible_gray_label/ascript` and apply for the quota.
-         * ### Usage notes
-         * *   **CreateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of the task:
-         *     *   If an AScript rule is in the **Creating** state, the AScript rule is being created.
-         *     *   If an AScript rule is in the **Available** state, the AScript rule is created.
-         * *   In the following table, the value of **N** is **1**.
+         * ### [](#)Usage notes
+         * **CreateAScripts** an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of a script.
+         * *   If the script is in the **Creating** state, the script is being created.
+         * *   If the script is in the **Available**, the script is created.
          *
          * @param request CreateAScriptsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1094,14 +1090,12 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Creates AScript rules.
          *
-         * @description ### Prerequisites
+         * @description ### [](#)Prerequisites
          * *   A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see [CreateLoadBalancer](https://help.aliyun.com/document_detail/214358.html).
-         * *   By default, the feature to create and manage AScript rules is unavailable. Log on to the [Quota Center console](https://quotas.console.aliyun.com/white-list-products/alb/quotas?spm=a2c4g.11186623.0.0.6e8834f6IFiF2I). On the **Privileges** page, enter the quota ID `slb_user_visible_gray_label/ascript` and apply for the quota.
-         * ### Usage notes
-         * *   **CreateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of the task:
-         *     *   If an AScript rule is in the **Creating** state, the AScript rule is being created.
-         *     *   If an AScript rule is in the **Available** state, the AScript rule is created.
-         * *   In the following table, the value of **N** is **1**.
+         * ### [](#)Usage notes
+         * **CreateAScripts** an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of a script.
+         * *   If the script is in the **Creating** state, the script is being created.
+         * *   If the script is in the **Available**, the script is created.
          *
          * @param request CreateAScriptsRequest
          * @return CreateAScriptsResponse
@@ -1115,14 +1109,12 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Creates AScript rules.
          *
-         * @description ### Prerequisites
+         * @description ### [](#)Prerequisites
          * *   A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see [CreateLoadBalancer](https://help.aliyun.com/document_detail/214358.html).
-         * *   By default, the feature to create and manage AScript rules is unavailable. Log on to the [Quota Center console](https://quotas.console.aliyun.com/white-list-products/alb/quotas?spm=a2c4g.11186623.0.0.6e8834f6IFiF2I). On the **Privileges** page, enter the quota ID `slb_user_visible_gray_label/ascript` and apply for the quota.
-         * ### Usage notes
-         * *   **CreateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of the task:
-         *     *   If an AScript rule is in the **Creating** state, the AScript rule is being created.
-         *     *   If an AScript rule is in the **Available** state, the AScript rule is created.
-         * *   In the following table, the value of **N** is **1**.
+         * ### [](#)Usage notes
+         * **CreateAScripts** an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of a script.
+         * *   If the script is in the **Creating** state, the script is being created.
+         * *   If the script is in the **Available**, the script is created.
          *
          * @param request CreateAScriptsRequest
          * @return CreateAScriptsResponse
@@ -7738,7 +7730,15 @@ namespace AlibabaCloud.SDK.Alb20200616
         }
 
         /**
-         * @summary 创建访问控制信息
+         * @summary Adds an Application Load Balancer (ALB) instance to a security group.
+         *
+         * @description *   By default, security groups are unavailable. To use security groups, contact your account manager.
+         * *   Make sure that a security group is created. For more information about how to create security groups, see [CreateSecurityGroup](https://help.aliyun.com/document_detail/2679843.html).
+         * *   Each ALB instance can be added to at most four security groups.
+         * *   To query the security groups of an ALB instance, call the [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/2254835.html) operation.
+         * *   GetLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAsynJobs](https://help.aliyun.com/document_detail/2254893.html) operation to query the status of the task.
+         *     *   If the task is in the Succeeded state, the ALB instance is added to the security group.
+         *     *   If the task is in the Processing state, the ALB instance is being added to the security group. In this case, you can query the task but cannot perform other operations.
          *
          * @param request LoadBalancerJoinSecurityGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7784,7 +7784,15 @@ namespace AlibabaCloud.SDK.Alb20200616
         }
 
         /**
-         * @summary 创建访问控制信息
+         * @summary Adds an Application Load Balancer (ALB) instance to a security group.
+         *
+         * @description *   By default, security groups are unavailable. To use security groups, contact your account manager.
+         * *   Make sure that a security group is created. For more information about how to create security groups, see [CreateSecurityGroup](https://help.aliyun.com/document_detail/2679843.html).
+         * *   Each ALB instance can be added to at most four security groups.
+         * *   To query the security groups of an ALB instance, call the [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/2254835.html) operation.
+         * *   GetLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAsynJobs](https://help.aliyun.com/document_detail/2254893.html) operation to query the status of the task.
+         *     *   If the task is in the Succeeded state, the ALB instance is added to the security group.
+         *     *   If the task is in the Processing state, the ALB instance is being added to the security group. In this case, you can query the task but cannot perform other operations.
          *
          * @param request LoadBalancerJoinSecurityGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7830,7 +7838,15 @@ namespace AlibabaCloud.SDK.Alb20200616
         }
 
         /**
-         * @summary 创建访问控制信息
+         * @summary Adds an Application Load Balancer (ALB) instance to a security group.
+         *
+         * @description *   By default, security groups are unavailable. To use security groups, contact your account manager.
+         * *   Make sure that a security group is created. For more information about how to create security groups, see [CreateSecurityGroup](https://help.aliyun.com/document_detail/2679843.html).
+         * *   Each ALB instance can be added to at most four security groups.
+         * *   To query the security groups of an ALB instance, call the [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/2254835.html) operation.
+         * *   GetLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAsynJobs](https://help.aliyun.com/document_detail/2254893.html) operation to query the status of the task.
+         *     *   If the task is in the Succeeded state, the ALB instance is added to the security group.
+         *     *   If the task is in the Processing state, the ALB instance is being added to the security group. In this case, you can query the task but cannot perform other operations.
          *
          * @param request LoadBalancerJoinSecurityGroupRequest
          * @return LoadBalancerJoinSecurityGroupResponse
@@ -7842,7 +7858,15 @@ namespace AlibabaCloud.SDK.Alb20200616
         }
 
         /**
-         * @summary 创建访问控制信息
+         * @summary Adds an Application Load Balancer (ALB) instance to a security group.
+         *
+         * @description *   By default, security groups are unavailable. To use security groups, contact your account manager.
+         * *   Make sure that a security group is created. For more information about how to create security groups, see [CreateSecurityGroup](https://help.aliyun.com/document_detail/2679843.html).
+         * *   Each ALB instance can be added to at most four security groups.
+         * *   To query the security groups of an ALB instance, call the [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/2254835.html) operation.
+         * *   GetLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAsynJobs](https://help.aliyun.com/document_detail/2254893.html) operation to query the status of the task.
+         *     *   If the task is in the Succeeded state, the ALB instance is added to the security group.
+         *     *   If the task is in the Processing state, the ALB instance is being added to the security group. In this case, you can query the task but cannot perform other operations.
          *
          * @param request LoadBalancerJoinSecurityGroupRequest
          * @return LoadBalancerJoinSecurityGroupResponse
@@ -7854,7 +7878,11 @@ namespace AlibabaCloud.SDK.Alb20200616
         }
 
         /**
-         * @summary 创建访问控制信息
+         * @summary Removes an Application Load Balancer (ALB) instance from a security group.
+         *
+         * @description *   LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAsynJobs](https://help.aliyun.com/document_detail/2254893.html) operation to query the status of the task.
+         *     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
+         *     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.
          *
          * @param request LoadBalancerLeaveSecurityGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7900,7 +7928,11 @@ namespace AlibabaCloud.SDK.Alb20200616
         }
 
         /**
-         * @summary 创建访问控制信息
+         * @summary Removes an Application Load Balancer (ALB) instance from a security group.
+         *
+         * @description *   LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAsynJobs](https://help.aliyun.com/document_detail/2254893.html) operation to query the status of the task.
+         *     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
+         *     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.
          *
          * @param request LoadBalancerLeaveSecurityGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7946,7 +7978,11 @@ namespace AlibabaCloud.SDK.Alb20200616
         }
 
         /**
-         * @summary 创建访问控制信息
+         * @summary Removes an Application Load Balancer (ALB) instance from a security group.
+         *
+         * @description *   LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAsynJobs](https://help.aliyun.com/document_detail/2254893.html) operation to query the status of the task.
+         *     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
+         *     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.
          *
          * @param request LoadBalancerLeaveSecurityGroupRequest
          * @return LoadBalancerLeaveSecurityGroupResponse
@@ -7958,7 +7994,11 @@ namespace AlibabaCloud.SDK.Alb20200616
         }
 
         /**
-         * @summary 创建访问控制信息
+         * @summary Removes an Application Load Balancer (ALB) instance from a security group.
+         *
+         * @description *   LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAsynJobs](https://help.aliyun.com/document_detail/2254893.html) operation to query the status of the task.
+         *     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
+         *     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.
          *
          * @param request LoadBalancerLeaveSecurityGroupRequest
          * @return LoadBalancerLeaveSecurityGroupResponse
@@ -9120,10 +9160,9 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Updates AScript rules.
          *
-         * @description *   **UpdateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of the task.
-         *     *   If an AScript rule is in the **Configuring** state, the AScript rule is being updated.
-         *     *   If an AScript rule is in the **Available** state, the AScript rule is updated.
-         * *   In the following table, the maximum value of **N** is **4**.
+         * @description **UpdateAScripts** is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of an AScript rule.
+         * *   If the rule is in the **Configuring** state, the rule is being updated.
+         * *   If the rule is in the **Available** state, the rule is updated.
          *
          * @param request UpdateAScriptsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9167,10 +9206,9 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Updates AScript rules.
          *
-         * @description *   **UpdateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of the task.
-         *     *   If an AScript rule is in the **Configuring** state, the AScript rule is being updated.
-         *     *   If an AScript rule is in the **Available** state, the AScript rule is updated.
-         * *   In the following table, the maximum value of **N** is **4**.
+         * @description **UpdateAScripts** is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of an AScript rule.
+         * *   If the rule is in the **Configuring** state, the rule is being updated.
+         * *   If the rule is in the **Available** state, the rule is updated.
          *
          * @param request UpdateAScriptsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9214,10 +9252,9 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Updates AScript rules.
          *
-         * @description *   **UpdateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of the task.
-         *     *   If an AScript rule is in the **Configuring** state, the AScript rule is being updated.
-         *     *   If an AScript rule is in the **Available** state, the AScript rule is updated.
-         * *   In the following table, the maximum value of **N** is **4**.
+         * @description **UpdateAScripts** is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of an AScript rule.
+         * *   If the rule is in the **Configuring** state, the rule is being updated.
+         * *   If the rule is in the **Available** state, the rule is updated.
          *
          * @param request UpdateAScriptsRequest
          * @return UpdateAScriptsResponse
@@ -9231,10 +9268,9 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Updates AScript rules.
          *
-         * @description *   **UpdateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of the task.
-         *     *   If an AScript rule is in the **Configuring** state, the AScript rule is being updated.
-         *     *   If an AScript rule is in the **Available** state, the AScript rule is updated.
-         * *   In the following table, the maximum value of **N** is **4**.
+         * @description **UpdateAScripts** is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](https://help.aliyun.com/document_detail/472574.html) operation to query the status of an AScript rule.
+         * *   If the rule is in the **Configuring** state, the rule is being updated.
+         * *   If the rule is in the **Available** state, the rule is updated.
          *
          * @param request UpdateAScriptsRequest
          * @return UpdateAScriptsResponse
@@ -10228,11 +10264,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Changes the edition of an Application Load Balancer (ALB) instance.
          *
-         * @description ##
-         * *   You can upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance but you cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](https://help.aliyun.com/document_detail/214654.html).
-         * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/214362.html) to query the status of the task.
+         * @description *   You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](https://help.aliyun.com/document_detail/214654.html).
+         * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/214362.html) operation to query the status of an ALB instance.
          *     *   If the ALB instance is in the **Configuring** state, the edition of the ALB instance is being modified.
-         *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance has been modified.
+         *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance is modified.
          *
          * @param request UpdateLoadBalancerEditionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10280,11 +10315,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Changes the edition of an Application Load Balancer (ALB) instance.
          *
-         * @description ##
-         * *   You can upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance but you cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](https://help.aliyun.com/document_detail/214654.html).
-         * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/214362.html) to query the status of the task.
+         * @description *   You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](https://help.aliyun.com/document_detail/214654.html).
+         * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/214362.html) operation to query the status of an ALB instance.
          *     *   If the ALB instance is in the **Configuring** state, the edition of the ALB instance is being modified.
-         *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance has been modified.
+         *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance is modified.
          *
          * @param request UpdateLoadBalancerEditionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10332,11 +10366,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Changes the edition of an Application Load Balancer (ALB) instance.
          *
-         * @description ##
-         * *   You can upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance but you cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](https://help.aliyun.com/document_detail/214654.html).
-         * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/214362.html) to query the status of the task.
+         * @description *   You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](https://help.aliyun.com/document_detail/214654.html).
+         * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/214362.html) operation to query the status of an ALB instance.
          *     *   If the ALB instance is in the **Configuring** state, the edition of the ALB instance is being modified.
-         *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance has been modified.
+         *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance is modified.
          *
          * @param request UpdateLoadBalancerEditionRequest
          * @return UpdateLoadBalancerEditionResponse
@@ -10350,11 +10383,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /**
          * @summary Changes the edition of an Application Load Balancer (ALB) instance.
          *
-         * @description ##
-         * *   You can upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance but you cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](https://help.aliyun.com/document_detail/214654.html).
-         * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/214362.html) to query the status of the task.
+         * @description *   You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](https://help.aliyun.com/document_detail/214654.html).
+         * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](https://help.aliyun.com/document_detail/214362.html) operation to query the status of an ALB instance.
          *     *   If the ALB instance is in the **Configuring** state, the edition of the ALB instance is being modified.
-         *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance has been modified.
+         *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance is modified.
          *
          * @param request UpdateLoadBalancerEditionRequest
          * @return UpdateLoadBalancerEditionResponse

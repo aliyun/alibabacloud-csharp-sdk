@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return. Valid values: **1 to 100**. If you do not specify this parameter, the default value **20** is used.
+        /// The maximum number of entries to return. Valid values: **1 to 100**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

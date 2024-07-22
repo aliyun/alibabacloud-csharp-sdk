@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateAScriptsRequest : TeaModel {
         /// <summary>
-        /// The AScript rules.
+        /// The information about the AScript rule.
         /// </summary>
         [NameInMap("AScripts")]
         [Validation(Required=false)]
         public List<UpdateAScriptsRequestAScripts> AScripts { get; set; }
         public class UpdateAScriptsRequestAScripts : TeaModel {
             /// <summary>
-            /// The AScript rule ID.
+            /// The rule ID.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the AScript rule.
             /// 
-            /// The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.
             /// </summary>
             [NameInMap("AScriptName")]
             [Validation(Required=false)]
@@ -44,15 +44,28 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            /// <summary>
+            /// Specifies whether to enable the extended attributes of the Ascript rule. Valid values:
+            /// 
+            /// *   true
+            /// *   false (false)
+            /// </summary>
             [NameInMap("ExtAttributeEnabled")]
             [Validation(Required=false)]
             public bool? ExtAttributeEnabled { get; set; }
 
+            /// <summary>
+            /// The extended attribute.
+            /// </summary>
             [NameInMap("ExtAttributes")]
             [Validation(Required=false)]
             public List<UpdateAScriptsRequestAScriptsExtAttributes> ExtAttributes { get; set; }
             public class UpdateAScriptsRequestAScriptsExtAttributes : TeaModel {
                 /// <summary>
+                /// The attribute name.
+                /// 
+                /// Set the value to **EsDebug**, which specifies that when requests carry the _es_dbg parameter whose value is the specified key, the debugging header is enabled to output the execution result.
+                /// 
                 /// This parameter is required.
                 /// </summary>
                 [NameInMap("AttributeKey")]
@@ -60,6 +73,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string AttributeKey { get; set; }
 
                 /// <summary>
+                /// The attribute value, which must be 1 to 128 characters in length, and can contain letters and digits.
+                /// 
                 /// This parameter is required.
                 /// </summary>
                 [NameInMap("AttributeValue")]
@@ -82,7 +97,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

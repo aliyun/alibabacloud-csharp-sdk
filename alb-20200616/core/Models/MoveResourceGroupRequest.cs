@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group to which you want to move the resource.
+        /// The ID of the resource group to which you want to transfer the cloud resource.
         /// 
-        /// > You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify resource and permission management in your Alibaba Cloud account. For more information, see [What is resource management?](https://help.aliyun.com/document_detail/94475.html)
+        /// >  You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see [What is resource management?](https://help.aliyun.com/document_detail/94475.html)
         /// 
         /// This parameter is required.
         /// </summary>

@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LockReason { get; set; }
 
             /// <summary>
-            /// The type of the lock. Valid values:
+            /// The lock type. Valid values:
             /// 
             /// *   **SecurityLocked**: The ALB instance is locked due to security reasons.
             /// *   **RelatedResourceLocked**: The ALB instance is locked due to other resources that are associated with the ALB instance.
@@ -271,6 +271,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The IDs of the security groups to which the ALB instance is added.
+        /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
@@ -362,6 +365,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public string IntranetAddress { get; set; }
 
+                [NameInMap("IntranetAddressHcStatus")]
+                [Validation(Required=false)]
+                public string IntranetAddressHcStatus { get; set; }
+
                 /// <summary>
                 /// An IPv6 address.
                 /// 
@@ -371,7 +378,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
 
+                [NameInMap("Ipv6AddressHcStatus")]
+                [Validation(Required=false)]
+                public string Ipv6AddressHcStatus { get; set; }
+
             }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             /// <summary>
             /// The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance.

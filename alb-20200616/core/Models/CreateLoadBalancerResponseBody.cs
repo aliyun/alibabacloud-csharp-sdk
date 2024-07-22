@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateLoadBalancerResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the ALB instance.
+        /// The ALB instance ID.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

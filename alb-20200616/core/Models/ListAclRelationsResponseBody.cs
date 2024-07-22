@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAclRelationsResponseBody : TeaModel {
         /// <summary>
-        /// The ACLs and the associated listeners.
+        /// The relations between the specified ACL and the listeners.
         /// </summary>
         [NameInMap("AclRelations")]
         [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string ListenerProtocol { get; set; }
 
                 /// <summary>
-                /// The ID of the Server Load Balancer (SLB) instance.
+                /// The ID of the SLB instance.
                 /// </summary>
                 [NameInMap("LoadBalancerId")]
                 [Validation(Required=false)]
                 public string LoadBalancerId { get; set; }
 
                 /// <summary>
-                /// The association status between the ACL and the listener. Valid values:
+                /// The association status between the ACL and the listener.
                 /// 
                 /// *   **Associating**
                 /// *   **Associated**

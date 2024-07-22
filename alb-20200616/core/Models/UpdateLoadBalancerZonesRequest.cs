@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The zones and the vSwitches. You must specify at least two zones. The specified zones overwrite the existing configurations.
+        /// The zones and the vSwitches. You must specify at least two zones. The specified zones and vSwitches overwrite the existing configurations.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -48,12 +48,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<UpdateLoadBalancerZonesRequestZoneMappings> ZoneMappings { get; set; }
         public class UpdateLoadBalancerZonesRequestZoneMappings : TeaModel {
+            /// <summary>
+            /// The private IPv4 address. You must specify at least two zones. You can specify at most 10 zones.
+            /// </summary>
             [NameInMap("IntranetAddress")]
             [Validation(Required=false)]
             public string IntranetAddress { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch in the zone. By default, you can specify only one vSwitch (subnet) for each zone of an ALB instance. You can specify up to 10 zone IDs.
+            /// The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet. You can specify at least 10 zones.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The name of the zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the zones. You can specify up to 10 zone IDs.
+            /// The zone name. You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the most recent zone list. You can specify at least 10 zones.
             /// 
             /// This parameter is required.
             /// </summary>

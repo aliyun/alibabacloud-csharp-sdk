@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ListServerGroupsResponseBodyServerGroups> ServerGroups { get; set; }
         public class ListServerGroupsResponseBodyServerGroups : TeaModel {
             /// <summary>
-            /// Indicates whether configuration management is enabled. Valid value:
+            /// Indicates whether configuration management is enabled. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -55,9 +55,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// 
             /// After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.
             /// 
-            /// > *   By default, connection draining is disabled. To enable connection draining, contact your account manager.
-            /// >*   Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.
-            /// >*   Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.
+            /// > 
+            /// 
+            /// *   By default, connection draining is disabled. To enable connection draining, contact your account manager.
+            /// 
+            /// *   Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.
+            /// 
+            /// *   Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.
             /// </summary>
             [NameInMap("ConnectionDrainConfig")]
             [Validation(Required=false)]
@@ -138,7 +142,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string HealthCheckHost { get; set; }
 
                 /// <summary>
-                /// The HTTP version for health checks.
+                /// The HTTP version that is used for health checks.
                 /// 
                 /// Valid values: **HTTP1.0** and **HTTP1.1**.
                 /// 
@@ -156,7 +160,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public int? HealthCheckInterval { get; set; }
 
                 /// <summary>
-                /// The HTTP method that is used for health checks. Valid value:
+                /// The HTTP method that is used for health checks. Valid values:
                 /// 
                 /// *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
                 /// *   **POST**: gRPC health checks use the POST method by default.
@@ -178,7 +182,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string HealthCheckPath { get; set; }
 
                 /// <summary>
-                /// The protocol that you want to use for health checks. Valid value:
+                /// The protocol that is used for health checks. Valid values:
                 /// 
                 /// *   **HTTP**: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.
                 /// *   **HTTPS**: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.
@@ -215,7 +219,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// Indicates whether IPv6 is supported. Valid value:
+            /// Indicates whether IPv6 is supported. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -225,7 +229,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? Ipv6Enabled { get; set; }
 
             /// <summary>
-            /// The backend protocol. Valid value:
+            /// The backend protocol. Valid values:
             /// 
             /// *   **HTTP**: allows you to associate HTTPS, HTTP, or QUIC listeners with backend servers.
             /// *   **HTTPS**: allows you to associate HTTPS listeners with backend servers.
@@ -243,17 +247,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<string> RelatedLoadBalancerIds { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// The ID of the resource group to which the instance belongs.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The scheduling algorithm. Valid value:
+            /// The scheduling algorithm. Valid values:
             /// 
-            /// *   **Wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights.
-            /// *   **Wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least number of connections.
+            /// *   **Wrr**: weighted round-robin. Backend servers with higher weights receive more requests than backend servers with lower weights.
+            /// *   **Wlc**: weighted least connections. Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least number of connections.
             /// *   **Sch**: consistent hashing. Requests that have the same hash factors are distributed to the same backend server. If you do not specify the UchConfig parameter, the source IP address is used as the hash factor by default. Requests that are from the same IP address are distributed to the same backend server. If you specify the UchConfig parameter, the URL string is used as the hash factor. Requests that have the same URL string are distributed to the same backend server.
             /// </summary>
             [NameInMap("Scheduler")]
@@ -282,7 +286,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerGroupName { get; set; }
 
             /// <summary>
-            /// The status of the server group. Valid value:
+            /// The status of the server group. Valid values:
             /// 
             /// *   **Creating**.
             /// *   **Available**
@@ -293,9 +297,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerGroupStatus { get; set; }
 
             /// <summary>
-            /// The server group type. Valid value:
+            /// The server group type. Valid values:
             /// 
-            /// *   **Instance**: instances, including Elastic Compute Service (ECS) instances, elastic network interfaces (ENIs), and elastic container instances.
+            /// *   **Instance**: instances, including ECS instances, ENIs, and elastic container instances.
             /// *   **Ip**: IP addresses.
             /// *   **Fc**: Function Compute
             /// </summary>
@@ -315,9 +319,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// 
             /// After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.
             /// 
-            /// > *   Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.
-            /// >*   Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.
-            /// >*   Slow start is supported only by the weighted round-robin scheduling algorithm.
+            /// > 
+            /// 
+            /// *   Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.
+            /// 
+            /// *   Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.
+            /// 
+            /// *   Slow start is supported only by the weighted round-robin scheduling algorithm.
             /// </summary>
             [NameInMap("SlowStartConfig")]
             [Validation(Required=false)]
@@ -366,7 +374,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public int? CookieTimeout { get; set; }
 
                 /// <summary>
-                /// Indicates whether session persistence is enabled. Valid value:
+                /// Indicates whether session persistence is enabled. Valid values:
                 /// 
                 /// *   **true**
                 /// *   **false**
@@ -376,7 +384,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public bool? StickySessionEnabled { get; set; }
 
                 /// <summary>
-                /// The method that is used to handle the cookie. Valid value:
+                /// The method that is used to handle the cookie. Valid values:
                 /// 
                 /// *   **insert**: inserts the cookie. The first time a client accesses ALB, ALB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.
                 /// *   **Server**: rewrites the cookie. ALB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.
@@ -434,7 +442,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// Indicates whether persistent TCP connections are enabled. Valid value:
+            /// Indicates whether persistent TCP connections are enabled. Valid values:
             /// 
             /// *   **true**
             /// *   **false**

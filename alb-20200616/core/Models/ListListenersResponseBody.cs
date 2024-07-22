@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LoadBalancerId { get; set; }
 
             /// <summary>
-            /// The configuration of logs.
+            /// The logging configurations.
             /// </summary>
             [NameInMap("LogConfig")]
             [Validation(Required=false)]
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string SecurityPolicyId { get; set; }
 
             /// <summary>
-            /// The tags of the dataset.
+            /// The tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

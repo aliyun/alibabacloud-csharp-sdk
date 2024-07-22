@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public CreateServerGroupRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class CreateServerGroupRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// The HTTP status codes that are used to indicate whether the backend server passes the health check.
+            /// The HTTP status codes that indicate healthy backend servers.
             /// </summary>
             [NameInMap("HealthCheckCodes")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// 
             /// Valid values: **0** to **65535**.
             /// 
-            /// Default value: **0**. If you set the value to 0, the port of a backend server is used for health checks.
+            /// The default value is **0**, which specifies that the port of a backend server is used for health checks.
             /// </summary>
             [NameInMap("HealthCheckConnectPort")]
             [Validation(Required=false)]
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// Specifies whether to enable the health check feature. Valid values:
             /// 
-            /// *   **true**: enables the health check feature.
-            /// *   **false**: disables the health check feature.
+            /// *   **true**
+            /// *   **false**
             /// 
             /// >  If the **ServerGroupType** parameter is set to **Instance** or **Ip**, the health check feature is enabled by default. If the **ServerGroupType** parameter is set to **Fc**, the health check feature is disabled by default.
             /// 
@@ -86,15 +86,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? HealthCheckEnabled { get; set; }
 
             /// <summary>
-            /// The domain name that is used for health checks. The domain name meets the following requirements:
+            /// The domain name that is used for health checks. The domain name must meet the following requirements:
             /// 
-            /// *   The domain name is 1 to 80 characters in length.
-            /// *   The domain name contains lowercase letters, digits, hyphens (-), and periods (.).
-            /// *   The domain name contains at least one period (.) but does not start or end with a period (.).
-            /// *   The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).
-            /// *   The domain name does not start or end with a hyphen (-).
+            /// *   The domain name must be 1 to 80 characters in length.
+            /// *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
+            /// *   The domain name can contain at least one period (.) but cannot start or end with a period (.).
+            /// *   The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).
+            /// *   The domain name cannot start or end with a hyphen (-).
             /// 
-            /// >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
+            /// >  This parameter takes effect only if **HealthCheckProtocol** is set to **HTTP** or **HTTPS**.
             /// </summary>
             [NameInMap("HealthCheckHost")]
             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The version of the HTTP protocol. Valid values: **HTTP1.0** and **HTTP1.1**. Default value: HTTP1.1.
             /// 
-            /// >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
+            /// >  This parameter takes effect only if **HealthCheckProtocol** is set to **HTTP** or **HTTPS**.
             /// </summary>
             [NameInMap("HealthCheckHttpVersion")]
             [Validation(Required=false)]
@@ -125,20 +125,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// 
             /// *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
             /// *   **POST**: By default, gRPC health checks use the POST method.
-            /// *   **HEAD**: HTTP and HTTPS health checks in listeners use the HEAD method by default.
+            /// *   **HEAD** (default): By default, HTTP and HTTPS use the HEAD method.
             /// 
-            /// >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
+            /// >  This parameter takes effect only if **HealthCheckProtocol** is set to **HTTP**, **HTTPS**, or **gRPC**.
             /// </summary>
             [NameInMap("HealthCheckMethod")]
             [Validation(Required=false)]
             public string HealthCheckMethod { get; set; }
 
             /// <summary>
-            /// The path that is used for health checks.
+            /// The URL that is used for health checks.
             /// 
-            /// The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`. The URL must start with a forward slash (/).
+            /// The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`. The URL must start with a forward slash (/).
             /// 
-            /// >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.
+            /// >  This parameter takes effect only if **HealthCheckProtocol** is set to **HTTP** or **HTTPS**.
             /// </summary>
             [NameInMap("HealthCheckPath")]
             [Validation(Required=false)]
@@ -147,25 +147,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The protocol that is used for health checks. Valid values:
             /// 
-            /// *   **HTTP**: ALB performs HTTP health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy.
-            /// *   **HTTPS**: ALB performs HTTPS health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy. HTTPS supports data encryption and provides higher data security than HTTP.
-            /// *   **TCP**: To perform TCP health checks, SLB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.
-            /// *   **gRPC**: To perform gRPC health checks, SLB sends POST or GET requests to a backend server to check whether the backend server is healthy.
-            /// 
-            /// >  HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
+            /// *   **HTTP**: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.
+            /// *   **HTTPS**: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS provides higher security than HTTP because HTTPS supports data encryption.
+            /// *   **TCP**: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.
+            /// *   **gRPC**: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.
             /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// The timeout period for a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds.
+            /// The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.
             /// 
             /// Valid values: **1** to **300**.
             /// 
             /// Default value: **5**.
             /// 
-            /// >  If the value of **HealthCHeckTimeout** is smaller than the value of **HealthCheckInterval**, the value of **HealthCHeckTimeout** is ignored and the value of **HealthCheckInterval** is used.
+            /// >  If the value of **HealthCHeckTimeout** is smaller than the value of **HealthCheckInterval**, **HealthCHeckTimeout** does not take effect. The value of **HealthCheckInterval** specifies the timeout period.
             /// </summary>
             [NameInMap("HealthCheckTimeout")]
             [Validation(Required=false)]
@@ -272,31 +270,31 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The configuration of session persistence.
         /// 
-        /// > This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
+        /// >  This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
         /// </summary>
         [NameInMap("StickySessionConfig")]
         [Validation(Required=false)]
         public CreateServerGroupRequestStickySessionConfig StickySessionConfig { get; set; }
         public class CreateServerGroupRequestStickySessionConfig : TeaModel {
             /// <summary>
-            /// The cookie to be configured on the server.
+            /// The cookie that you want to configure for the server.
             /// 
-            /// The cookie must be 1 to 200 characters in length and can contain only ASCII characters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).
+            /// The cookie must be 1 to 200 characters in length, and can contain only ASCII letters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).
             /// 
-            /// > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Server**.
+            /// >  This parameter takes effect only when **StickySessionEnabled** is set to **true** and **StickySessionType** is set to **server**.
             /// </summary>
             [NameInMap("Cookie")]
             [Validation(Required=false)]
             public string Cookie { get; set; }
 
             /// <summary>
-            /// The timeout period of a cookie. Unit: seconds.
+            /// The maximum amount of time to wait before the session cookie expires. Unit: seconds.
             /// 
             /// Valid values: **1** to **86400**.
             /// 
             /// Default value: **1000**.
             /// 
-            /// > This parameter takes effect only when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Insert**.
+            /// >  This parameter takes effect only when **StickySessionEnabled** is set to **true** and **StickySessionType** is set to **Insert**.
             /// </summary>
             [NameInMap("CookieTimeout")]
             [Validation(Required=false)]
@@ -306,26 +304,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// Specifies whether to enable session persistence. Valid values:
             /// 
             /// *   **true**
-            /// *   **false** (default)
+            /// *   **false**
             /// 
-            /// > This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
+            /// >  This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
             /// </summary>
             [NameInMap("StickySessionEnabled")]
             [Validation(Required=false)]
             public bool? StickySessionEnabled { get; set; }
 
             /// <summary>
-            /// The method that is used to handle a cookie. Valid values:
+            /// The method that is used to handle cookies. Valid values:
             /// 
-            /// *   **Insert** (default): inserts a cookie.
+            /// *   **Insert** (default value): inserts a cookie. The first time a client accesses SLB, SLB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.
+            /// *   **Server**: rewrites a cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.
             /// 
-            /// ALB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to ALB carry this cookie, and ALB determines the destination servers of the requests based on the cookies.
-            /// 
-            /// *   **Server**: rewrites a cookie.
-            /// 
-            /// When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.
-            /// 
-            /// > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true**.
+            /// >  This parameter takes effect when the **StickySessionEnabled** parameter is set to **true**.
             /// </summary>
             [NameInMap("StickySessionType")]
             [Validation(Required=false)]
@@ -391,9 +384,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? UpstreamKeepaliveEnabled { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC). You can add only backend servers that are deployed in the specified VPC to the server group.
+        /// The ID of the virtual private cloud (VPC). You can add only servers that are deployed in the specified VPC to the server group.
         /// 
-        /// > This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
+        /// >  This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
