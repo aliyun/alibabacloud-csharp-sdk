@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class CreateImageFromAppInstanceGroupResponse : TeaModel {
+    public class ModifyAppPolicyResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateImageFromAppInstanceGroupResponseBody Body { get; set; }
+        public ModifyAppPolicyResponseBody Body { get; set; }
 
     }
 

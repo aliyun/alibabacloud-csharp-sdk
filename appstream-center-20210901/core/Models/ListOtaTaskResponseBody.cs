@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
+            /// </summary>
             [NameInMap("TaskStartTime")]
             [Validation(Required=false)]
             public string TaskStartTime { get; set; }

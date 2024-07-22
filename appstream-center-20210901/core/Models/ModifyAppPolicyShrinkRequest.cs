@@ -8,21 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class PageListAppInstanceGroupUserRequest : TeaModel {
+    public class ModifyAppPolicyShrinkRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("AppInstanceGroupId")]
+        [NameInMap("AppPolicyId")]
         [Validation(Required=false)]
-        public string AppInstanceGroupId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string AppPolicyId { get; set; }
 
         /// <summary>
         /// This parameter is required.
@@ -30,6 +22,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
+
+        [NameInMap("VideoPolicy")]
+        [Validation(Required=false)]
+        public string VideoPolicyShrink { get; set; }
 
     }
 

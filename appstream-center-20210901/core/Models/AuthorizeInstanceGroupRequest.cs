@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AuthorizeInstanceGroupRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public List<string> AuthorizeUserIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

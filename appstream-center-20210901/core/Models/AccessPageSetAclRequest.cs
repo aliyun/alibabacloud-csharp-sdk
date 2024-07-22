@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AccessPageSetAclRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccessMode")]
         [Validation(Required=false)]
         public string AccessMode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccessPageId")]
         [Validation(Required=false)]
         public string AccessPageId { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AccessPageName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EffectTime")]
         [Validation(Required=false)]
         public int? EffectTime { get; set; }

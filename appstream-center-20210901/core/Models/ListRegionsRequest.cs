@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class GetOtaTaskByTaskIdRequest : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("TaskId")]
+    public class ListRegionsRequest : TeaModel {
+        [NameInMap("ProductType")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string ProductType { get; set; }
 
     }
 

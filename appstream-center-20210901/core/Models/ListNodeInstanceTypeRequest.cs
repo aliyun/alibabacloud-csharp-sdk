@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListNodeInstanceTypeRequest : TeaModel {
         /// <summary>
-        /// 资源所属的地域ID。关于支持的地域详情，请参见[使用限制](~~426036~~)。
+        /// 资源所属的地域ID。关于支持的地域详情，请参见[使用限制](https://help.aliyun.com/document_detail/426036.html)。
         /// </summary>
         [NameInMap("BizRegionId")]
         [Validation(Required=false)]
@@ -34,14 +34,23 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string OsType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

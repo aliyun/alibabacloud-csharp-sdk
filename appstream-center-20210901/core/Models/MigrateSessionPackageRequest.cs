@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string DestProjectId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SessionPackageId")]
         [Validation(Required=false)]
         public string SessionPackageId { get; set; }

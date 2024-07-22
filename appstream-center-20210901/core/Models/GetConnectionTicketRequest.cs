@@ -37,10 +37,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

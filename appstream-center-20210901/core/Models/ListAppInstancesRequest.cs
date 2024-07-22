@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAppInstancesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }

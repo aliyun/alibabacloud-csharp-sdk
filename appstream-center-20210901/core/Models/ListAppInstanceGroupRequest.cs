@@ -37,9 +37,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        [Obsolete]
+        public string RegionId { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetAccessPageSessionRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccessPageId")]
         [Validation(Required=false)]
         public string AccessPageId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccessPageToken")]
         [Validation(Required=false)]
         public string AccessPageToken { get; set; }

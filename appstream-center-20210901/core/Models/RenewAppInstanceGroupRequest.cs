@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class RenewAppInstanceGroupRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
@@ -17,14 +20,23 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
