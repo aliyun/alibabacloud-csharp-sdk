@@ -1,3 +1,6 @@
+2024-07-22 Version: 2.1.3
+- Generated csharp 2024-03-13 for IntelligentCreation.
+
 2024-07-22 Version: 2.1.2
 - Generated csharp 2024-03-13 for IntelligentCreation.
 
