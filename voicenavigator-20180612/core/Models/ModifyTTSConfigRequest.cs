@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyTTSConfigRequest : TeaModel {
+        [NameInMap("AliCustomizedVoice")]
+        [Validation(Required=false)]
+        public string AliCustomizedVoice { get; set; }
+
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }
@@ -21,6 +25,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string EngineXunfei { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
