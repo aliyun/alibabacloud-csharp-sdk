@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string IndexFile { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4E84BE44-58A7-<b><b>-</b></b>-FBEBEA16EF94</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

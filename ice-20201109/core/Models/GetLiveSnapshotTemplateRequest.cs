@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetLiveSnapshotTemplateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

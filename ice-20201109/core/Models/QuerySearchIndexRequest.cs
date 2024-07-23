@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QuerySearchIndexRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mm</para>
         /// </summary>
         [NameInMap("IndexType")]
         [Validation(Required=false)]
         public string IndexType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test1</para>
+        /// </summary>
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }

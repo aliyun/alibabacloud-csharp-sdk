@@ -10,39 +10,46 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitLiveRecordJobShrinkRequest : TeaModel {
         /// <summary>
-        /// 代表资源名称的资源属性字段
+        /// <para>代表资源名称的资源属性字段</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>live stream record 1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// 回调地址
+        /// <para>回调地址</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></para>
         /// </summary>
         [NameInMap("NotifyUrl")]
         [Validation(Required=false)]
         public string NotifyUrl { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RecordOutput")]
         [Validation(Required=false)]
         public string RecordOutputShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StreamInput")]
         [Validation(Required=false)]
         public string StreamInputShrink { get; set; }
 
         /// <summary>
-        /// 录制模板ID
+        /// <para>录制模板ID</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateMediaMarksRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>53afdf003a******6a16b5feac6402</para>
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MediaMarks")]
         [Validation(Required=false)]

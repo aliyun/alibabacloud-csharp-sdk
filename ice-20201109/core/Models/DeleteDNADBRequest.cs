@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteDNADBRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fb712a6890464059b1b2ea7c8647****</para>
         /// </summary>
         [NameInMap("DBId")]
         [Validation(Required=false)]

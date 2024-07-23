@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLiveTranscodeTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my template</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateConfigShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

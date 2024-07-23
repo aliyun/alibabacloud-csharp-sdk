@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListLiveSnapshotTemplatesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
+        /// </summary>
         [NameInMap("SearchKeyWord")]
         [Validation(Required=false)]
         public string SearchKeyWord { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>desc</para>
+        /// </summary>
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
@@ -29,6 +45,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<string> TemplateIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>custom</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

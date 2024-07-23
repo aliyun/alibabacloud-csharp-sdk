@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Title { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MarketingCopy</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

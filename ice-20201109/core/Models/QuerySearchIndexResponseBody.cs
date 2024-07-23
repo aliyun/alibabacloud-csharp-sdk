@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string IndexStatus { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>mm</para>
+        /// </summary>
         [NameInMap("IndexType")]
         [Validation(Required=false)]
         public string IndexType { get; set; }
@@ -26,12 +30,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaTotal { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4E84BE44-58A7-<b><b>-</b></b>-FBEBEA16EF94</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test1</para>
+        /// </summary>
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }

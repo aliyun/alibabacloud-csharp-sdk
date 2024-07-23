@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public DetectAudioForCustomizedVoiceJobResponseBodyData Data { get; set; }
         public class DetectAudioForCustomizedVoiceJobResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("Pass")]
             [Validation(Required=false)]
             public bool? Pass { get; set; }
@@ -23,10 +27,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

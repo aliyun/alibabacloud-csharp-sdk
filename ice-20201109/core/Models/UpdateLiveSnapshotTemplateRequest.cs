@@ -9,30 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateLiveSnapshotTemplateRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>snapshot/{JobId}.jpg</para>
+        /// </summary>
         [NameInMap("OverwriteFormat")]
         [Validation(Required=false)]
         public string OverwriteFormat { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>snapshot/{JobId}/{UnixTimestamp}.jpg</para>
+        /// </summary>
         [NameInMap("SequenceFormat")]
         [Validation(Required=false)]
         public string SequenceFormat { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("TimeInterval")]
         [Validation(Required=false)]

@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetCustomTemplateRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Subtype")]
         [Validation(Required=false)]
         public int? Subtype { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>96e8864746a0b6f3</b></b></para>
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public int? Type { get; set; }

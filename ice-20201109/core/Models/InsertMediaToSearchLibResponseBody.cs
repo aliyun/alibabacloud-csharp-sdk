@@ -13,12 +13,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
+        /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><em><b><b>ACB-44F2-5F2D-88D7-1283E70</b></b></em></para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

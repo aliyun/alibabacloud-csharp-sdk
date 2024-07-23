@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreatePipelineRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-pipeline</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6</para>
+        /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Standard</para>
         /// </summary>
         [NameInMap("Speed")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetWorkflowTaskRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b><b>4215e042b3966ca5441e</b></b></b></para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

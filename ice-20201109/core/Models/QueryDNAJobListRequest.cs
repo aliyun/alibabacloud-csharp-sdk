@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryDNAJobListRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>88c6ca184c0e47098a5b665e2a12****</para>
+        /// </summary>
         [NameInMap("JobIds")]
         [Validation(Required=false)]
         public string JobIds { get; set; }

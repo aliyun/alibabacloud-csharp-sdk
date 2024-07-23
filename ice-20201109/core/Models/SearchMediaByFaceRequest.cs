@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByFaceRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2d3bf1e35a1e42b5ab338d701efa****</para>
+        /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zxtest-huangxuan-2023-3-7-V1</para>
         /// </summary>
         [NameInMap("FaceSearchToken")]
         [Validation(Required=false)]
@@ -24,16 +31,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MediaType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>https://<b><b>.oss-cn-shanghai.aliyuncs.com/input/huangxuan</b></b>.jpg</para>
         /// </summary>
         [NameInMap("PersonImageUrl")]
         [Validation(Required=false)]

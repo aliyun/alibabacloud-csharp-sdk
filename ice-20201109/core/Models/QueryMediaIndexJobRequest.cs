@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryMediaIndexJobRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c2e77390f75271ec802f0674a2ce6***</para>
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test1</para>
+        /// </summary>
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }

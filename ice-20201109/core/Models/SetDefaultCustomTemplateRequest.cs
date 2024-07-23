@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SetDefaultCustomTemplateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>d80e4e4044975745c14b</b></b></para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -17,14 +17,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;DetextArea&quot;:&quot;Auto&quot;}</para>
+        /// </summary>
         [NameInMap("EditingConfig")]
         [Validation(Required=false)]
         public string EditingConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;Type&quot;:&quot;Video&quot;,&quot;Media&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4&quot;}</a></para>
+        /// </summary>
         [NameInMap("InputConfig")]
         [Validation(Required=false)]
         public string InputConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;MediaURL&quot;: &quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4&quot;}</a></para>
+        /// </summary>
         [NameInMap("OutputConfig")]
         [Validation(Required=false)]
         public string OutputConfig { get; set; }
