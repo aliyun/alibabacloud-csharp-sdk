@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryIProductionJobRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>88c6ca184c0e432bbf5b665e2a15****</para>
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }

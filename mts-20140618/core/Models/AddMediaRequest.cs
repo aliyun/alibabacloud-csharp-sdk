@@ -10,76 +10,105 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class AddMediaRequest : TeaModel {
         /// <summary>
-        /// The ID of the category to which the media file belongs. The value cannot be negative.
+        /// <para>The ID of the category to which the media file belongs. The value cannot be negative.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("CateId")]
         [Validation(Required=false)]
         public long? CateId { get; set; }
 
         /// <summary>
-        /// The URL of the thumbnail. To obtain the URL, you can log on to the **MPS console** and choose **Workflows** > **Media Buckets**. Alternatively, you can log on to the **OSS console** and click **My OSS Paths**.
+        /// <para>The URL of the thumbnail. To obtain the URL, you can log on to the <b>MPS console</b> and choose <b>Workflows</b> &gt; <b>Media Buckets</b>. Alternatively, you can log on to the <b>OSS console</b> and click <b>My OSS Paths</b>.</para>
+        /// <list type="bullet">
+        /// <item><description>The value can be up to 3,200 bytes in length.</description></item>
+        /// <item><description>The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</description></item>
+        /// </list>
         /// 
-        /// *   The value can be up to 3,200 bytes in length.
-        /// *   The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see [URL encoding](https://help.aliyun.com/document_detail/423796.html).
+        /// <b>Example:</b>
+        /// <para><a href="http://bucket.oss-cn-hangzhou.aliyuncs.com/example/1.png">http://bucket.oss-cn-hangzhou.aliyuncs.com/example/1.png</a></para>
         /// </summary>
         [NameInMap("CoverURL")]
         [Validation(Required=false)]
         public string CoverURL { get; set; }
 
         /// <summary>
-        /// The description of the media file.
+        /// <para>The description of the media file.</para>
+        /// <list type="bullet">
+        /// <item><description>The description can be up to 1,024 bytes in length.</description></item>
+        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// </list>
         /// 
-        /// *   The description can be up to 1,024 bytes in length.
-        /// *   The value must be encoded in UTF-8.
+        /// <b>Example:</b>
+        /// <para>A test video</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The path of the input file. You can query the path of the input file in the MPS or OSS console. For more information, see the **Triggering and matching rules for a workflow** section of this topic.
+        /// <para>The path of the input file. You can query the path of the input file in the MPS or OSS console. For more information, see the <b>Triggering and matching rules for a workflow</b> section of this topic.</para>
+        /// <list type="bullet">
+        /// <item><description>The value can be up to 3,200 bytes in length.</description></item>
+        /// <item><description>The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The value can be up to 3,200 bytes in length.
-        /// *   The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see [URL encoding](https://help.aliyun.com/document_detail/423796.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://bucket.oss-cn-hangzhou.aliyuncs.com/A/B/C/test.mp4">http://bucket.oss-cn-hangzhou.aliyuncs.com/A/B/C/test.mp4</a></para>
         /// </summary>
         [NameInMap("FileURL")]
         [Validation(Required=false)]
         public string FileURL { get; set; }
 
         /// <summary>
-        /// Specifies whether to check if the media workflow supports the specified input path. We recommend that you set this parameter to true to prevent errors that may result from invalid paths. Valid values:
+        /// <para>Specifies whether to check if the media workflow supports the specified input path. We recommend that you set this parameter to true to prevent errors that may result from invalid paths. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: checks whether the workflow supports the specified input path.</description></item>
+        /// <item><description><b>false</b>: does not check whether the workflow supports the specified input path.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: checks whether the workflow supports the specified input path.
-        /// *   **false**: does not check whether the workflow supports the specified input path.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("InputUnbind")]
         [Validation(Required=false)]
         public bool? InputUnbind { get; set; }
 
         /// <summary>
-        /// The ID of the media workflow that you want to run for the media file. To query the ID of a media workflow, you can log on to the MPS console or call the [AddMediaWorkflow](https://help.aliyun.com/document_detail/44437.html) operation.
+        /// <para>The ID of the media workflow that you want to run for the media file. To query the ID of a media workflow, you can log on to the MPS console or call the <a href="https://help.aliyun.com/document_detail/44437.html">AddMediaWorkflow</a> operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>07da6c65da7f458997336e0de192****</para>
         /// </summary>
         [NameInMap("MediaWorkflowId")]
         [Validation(Required=false)]
         public string MediaWorkflowId { get; set; }
 
         /// <summary>
-        /// The custom data of the media workflow.
+        /// <para>The custom data of the media workflow.</para>
+        /// <list type="bullet">
+        /// <item><description>The value can be up to 1,024 bytes in length.</description></item>
+        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// </list>
         /// 
-        /// *   The value can be up to 1,024 bytes in length.
-        /// *   The value must be encoded in UTF-8.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("MediaWorkflowUserData")]
         [Validation(Required=false)]
         public string MediaWorkflowUserData { get; set; }
 
         /// <summary>
-        /// The subtitle settings that are used to overwrite the original settings.
+        /// <para>The subtitle settings that are used to overwrite the original settings.</para>
+        /// <list type="bullet">
+        /// <item><description>Example 1: Use <c>{&quot;WebVTTSubtitleOverrides&quot;,[{&quot;RefActivityName&quot;:&quot;subtitleNode&quot;,&quot;WebVTTSubtitleURL&quot;:&quot;http://test.oss-cn-hangzhou.aliyuncs.com/example1.vtt&quot;}]}</c> to overwrite the original subtitle settings during HTTP Live Streaming (HLS) packaging.</description></item>
+        /// <item><description>Example 2: Use <c>{&quot;subtitleTransNodeName&quot;:{&quot;InputConfig&quot;:{&quot;Format&quot;:&quot;stl&quot;,&quot;InputFile&quot;:{&quot;URL&quot;:&quot;http://subtitleBucket.oss-cn-hangzhou.aliyuncs.com/package/example/CENG.stl&quot;}}}}</c> to overwrite the original subtitle settings during Dynamic Adaptive Streaming over HTTP (DASH) packaging.</description></item>
+        /// </list>
         /// 
-        /// *   Example 1: Use `{"WebVTTSubtitleOverrides",[{"RefActivityName":"subtitleNode","WebVTTSubtitleURL":"http://test.oss-cn-hangzhou.aliyuncs.com/example1.vtt"}]}` to overwrite the original subtitle settings during HTTP Live Streaming (HLS) packaging.
-        /// *   Example 2: Use `{"subtitleTransNodeName":{"InputConfig":{"Format":"stl","InputFile":{"URL":"http://subtitleBucket.oss-cn-hangzhou.aliyuncs.com/package/example/CENG.stl"}}}}` to overwrite the original subtitle settings during Dynamic Adaptive Streaming over HTTP (DASH) packaging.
+        /// <b>Example:</b>
+        /// <para>{“subtitleTransNodeName”:{“InputConfig”:{“Format”:”stl”,”InputFile”:{“URL”:”<a href="http://exampleBucket.oss-cn-hangzhou.aliyuncs.com/package/example/CENG.stl%22%7D%7D%7D%7D">http://exampleBucket.oss-cn-hangzhou.aliyuncs.com/package/example/CENG.stl&quot;}}}}</a></para>
         /// </summary>
         [NameInMap("OverrideParams")]
         [Validation(Required=false)]
@@ -102,23 +131,32 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags that you want to add to the media file.
+        /// <para>The tags that you want to add to the media file.</para>
+        /// <remarks>
+        /// <para>In MPS, each tag that is specified for a media file is independent. You can search for all the media files that have the same tags in the Media Library.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can specify up to 16 tags for a media file. Separate multiple tags with commas (,).</description></item>
+        /// <item><description>Each tag can be up to 32 bytes in size</description></item>
+        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// </list>
         /// 
-        /// > In MPS, each tag that is specified for a media file is independent. You can search for all the media files that have the same tags in the Media Library.
-        /// 
-        /// *   You can specify up to 16 tags for a media file. Separate multiple tags with commas (,).
-        /// *   Each tag can be up to 32 bytes in size
-        /// *   The value must be encoded in UTF-8.
+        /// <b>Example:</b>
+        /// <para>tag1,tag2</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
         /// <summary>
-        /// The title of the media file.
+        /// <para>The title of the media file.</para>
+        /// <list type="bullet">
+        /// <item><description>The title can be up to 128 bytes in length.</description></item>
+        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// </list>
         /// 
-        /// *   The title can be up to 128 bytes in length.
-        /// *   The value must be encoded in UTF-8.
+        /// <b>Example:</b>
+        /// <para>mytest</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

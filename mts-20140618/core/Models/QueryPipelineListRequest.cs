@@ -18,9 +18,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of the MPS queues that you want to query. To view the IDs, you can log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane. You can query up to 10 MPS queues at a time. Separate multiple IDs of MPS queues with commas (,).
+        /// <para>The IDs of the MPS queues that you want to query. To view the IDs, you can log on to the <b>MPS console</b> and choose <b>Global Settings</b> &gt; <b>Pipelines</b> in the left-side navigation pane. You can query up to 10 MPS queues at a time. Separate multiple IDs of MPS queues with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>d1ce4d3efcb549419193f50f1fcd****,72dfa5e679ab4be9a3ed9974c736****</para>
         /// </summary>
         [NameInMap("PipelineIds")]
         [Validation(Required=false)]

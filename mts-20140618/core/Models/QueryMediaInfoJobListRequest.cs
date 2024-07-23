@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryMediaInfoJobListRequest : TeaModel {
         /// <summary>
-        /// The IDs of the media information analysis jobs.
+        /// <para>The IDs of the media information analysis jobs.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query up to 10 jobs at a time. Separate multiple IDs with commas (,).</description></item>
+        /// <item><description>You can obtain the details from the response parameters of the <a href="https://help.aliyun.com/document_detail/602827.html">SubmitMediaInfoJob</a> operation.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you do not specify the JobIds parameter, the <b>InvalidParameter</b> error code is returned.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   You can query up to 10 jobs at a time. Separate multiple IDs with commas (,).
-        /// *   You can obtain the details from the response parameters of the [SubmitMediaInfoJob](https://help.aliyun.com/document_detail/602827.html) operation.
-        /// 
-        /// >  If you do not specify the JobIds parameter, the **InvalidParameter** error code is returned.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>23ca1d184c0e4341e5b665e2a12****</para>
         /// </summary>
         [NameInMap("MediaInfoJobIds")]
         [Validation(Required=false)]

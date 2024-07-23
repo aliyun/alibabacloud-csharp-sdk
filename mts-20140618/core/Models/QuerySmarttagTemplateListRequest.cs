@@ -26,7 +26,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the template. You can obtain the template ID from the response of the [AddSmarttagTemplate](https://help.aliyun.com/document_detail/187759.html) operation. If you set this parameter to a specific value, the information about the corresponding template is returned. If you do not specify this parameter, the operation returns the information about all the templates that are created by the current RAM user.
+        /// <para>The ID of the template. You can obtain the template ID from the response of the <a href="https://help.aliyun.com/document_detail/187759.html">AddSmarttagTemplate</a> operation. If you set this parameter to a specific value, the information about the corresponding template is returned. If you do not specify this parameter, the operation returns the information about all the templates that are created by the current RAM user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>05de22f255284c7a8d2aab535dde****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class CancelJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the transcoding job to be canceled. You can log on to the **MPS console** and click **Tasks** in the left-side navigation pane to obtain job IDs. Alternatively, you can obtain job IDs from the response of the [SubmitJobs](https://help.aliyun.com/document_detail/29226.html) operation.
+        /// <para>The ID of the transcoding job to be canceled. You can log on to the <b>MPS console</b> and click <b>Tasks</b> in the left-side navigation pane to obtain job IDs. Alternatively, you can obtain job IDs from the response of the <a href="https://help.aliyun.com/document_detail/29226.html">SubmitJobs</a> operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>d1ce4d3efcb549419193f50f1fcd****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

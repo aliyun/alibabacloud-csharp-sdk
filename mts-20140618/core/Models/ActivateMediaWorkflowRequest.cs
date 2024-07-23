@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,9 +10,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ActivateMediaWorkflowRequest : TeaModel {
         /// <summary>
-        /// The ID of the media workflow. You can obtain the ID from the response of the [AddMediaWorkflow](https://help.aliyun.com/document_detail/44437.html) operation.
+        /// <para>The ID of the media workflow. You can obtain the ID from the response of the <a href="https://help.aliyun.com/document_detail/44437.html">AddMediaWorkflow</a> operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>93ab850b4f6f44eab54b6e9181d4****</para>
         /// </summary>
         [NameInMap("MediaWorkflowId")]
         [Validation(Required=false)]

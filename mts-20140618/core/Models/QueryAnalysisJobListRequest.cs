@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryAnalysisJobListRequest : TeaModel {
         /// <summary>
-        /// The template analysis job ID list.
+        /// <para>The template analysis job ID list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>bb558c1cc25b45309aab5be44d19****</para>
         /// </summary>
         [NameInMap("AnalysisJobIds")]
         [Validation(Required=false)]

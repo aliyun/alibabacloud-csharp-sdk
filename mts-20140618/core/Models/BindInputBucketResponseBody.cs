@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class BindInputBucketResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4AEA0480-32F4-1656-92B3-F4D4CDE6BBB3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -13,23 +13,38 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public SubmitCopyrightJobResponseBodyData Data { get; set; }
         public class SubmitCopyrightJobResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>bfb786c639894f4d80648792021e****</para>
+            /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ok</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FA258E67-09B8-4EAA-8F33-BA567834A2C3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("StatusCode")]
         [Validation(Required=false)]
         public long? StatusCode { get; set; }

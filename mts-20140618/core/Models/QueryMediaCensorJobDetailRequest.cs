@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryMediaCensorJobDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the content moderation job. You can obtain the job ID from the response parameters of the [SubmitMediaCensorJob](https://help.aliyun.com/document_detail/91774.html) operation.
+        /// <para>The ID of the content moderation job. You can obtain the job ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/91774.html">SubmitMediaCensorJob</a> operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2288c6ca184c0e47098a5b665e2a12****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// <para>The maximum number of entries to return on each page.</para>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>30</b>.</description></item>
+        /// <item><description>Valid values: <b>1 to 300</b>.</description></item>
+        /// </list>
         /// 
-        /// *   Default value: **30**.
-        /// *   Valid values: **1 to 300**.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("MaximumPageSize")]
         [Validation(Required=false)]
         public long? MaximumPageSize { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation to query the results of a content moderation job for the first time.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation to query the results of a content moderation job for the first time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ae0fd49c0840e14daf0d66a75b83****</para>
         /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]

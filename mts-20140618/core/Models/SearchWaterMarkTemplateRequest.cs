@@ -18,17 +18,24 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <list type="bullet">
+        /// <item><description>A maximum of <b>100</b> entries can be returned on each page.</description></item>
+        /// <item><description>Default value: <b>10</b>.</description></item>
+        /// </list>
         /// 
-        /// *   A maximum of **100** entries can be returned on each page.
-        /// *   Default value: **10**.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -43,11 +50,15 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The state of the watermark templates that you want to query. Valid values:
+        /// <para>The state of the watermark templates that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>All (default)</b></description></item>
+        /// <item><description><b>Normal</b></description></item>
+        /// <item><description><b>Deleted</b></description></item>
+        /// </list>
         /// 
-        /// *   **All (default)**
-        /// *   **Normal**
-        /// *   **Deleted**
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

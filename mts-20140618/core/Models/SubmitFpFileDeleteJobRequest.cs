@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SubmitFpFileDeleteJobRequest : TeaModel {
         /// <summary>
-        /// The IDs of the media files that you want to delete. Separate multiple file IDs with commas (,). You can delete up to 200 media files at a time. You can obtain media file IDs from the response parameters of the [ListFpShotFiles](https://help.aliyun.com/document_detail/209266.html) operation.
+        /// <para>The IDs of the media files that you want to delete. Separate multiple file IDs with commas (,). You can delete up to 200 media files at a time. You can obtain media file IDs from the response parameters of the <a href="https://help.aliyun.com/document_detail/209266.html">ListFpShotFiles</a> operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>41e6536e4f2250e2e9bf26cdea19****</para>
         /// </summary>
         [NameInMap("FileIds")]
         [Validation(Required=false)]
         public string FileIds { get; set; }
 
         /// <summary>
-        /// The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the [CreateFpShotDB](https://help.aliyun.com/document_detail/170149.html) operation.
+        /// <para>The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/170149.html">CreateFpShotDB</a> operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>88c6ca184c0e432bbf5b665e2a15****</para>
         /// </summary>
         [NameInMap("FpDBId")]
         [Validation(Required=false)]
@@ -34,16 +39,23 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the ApsaraVideo Media Processing (MPS) queue to which the job is submitted. The MPS queue is bound with a notification method. To view the MPS queue ID, log on to the **MPS console** and choose **Global Settings** > **MPS queue and Callback** in the left-side navigation pane.
+        /// <para>The ID of the ApsaraVideo Media Processing (MPS) queue to which the job is submitted. The MPS queue is bound with a notification method. To view the MPS queue ID, log on to the <b>MPS console</b> and choose <b>Global Settings</b> &gt; <b>MPS queue and Callback</b> in the left-side navigation pane.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ed450ea0bfbd41e29f80a401fb4d****</para>
         /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }
 
         /// <summary>
-        /// The primary keys of the files to be deleted. Separate multiple primary keys with commas (,). You can delete up to 200 primary keys at a time. You can obtain the primary keys of media files from the response parameters of the [ListFpShotFiles](https://help.aliyun.com/document_detail/209266.html) operation.
+        /// <para>The primary keys of the files to be deleted. Separate multiple primary keys with commas (,). You can delete up to 200 primary keys at a time. You can obtain the primary keys of media files from the response parameters of the <a href="https://help.aliyun.com/document_detail/209266.html">ListFpShotFiles</a> operation.</para>
+        /// <remarks>
+        /// <para> This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.
+        /// <b>Example:</b>
+        /// <para>24e0fba7188fae707e146esa54****</para>
         /// </summary>
         [NameInMap("PrimaryKeys")]
         [Validation(Required=false)]
@@ -58,7 +70,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The custom data. The value can contain letters and digits and can be up to 128 bytes in length.
+        /// <para>The custom data. The value can contain letters and digits and can be up to 128 bytes in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example data</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

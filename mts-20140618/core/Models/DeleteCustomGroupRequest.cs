@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class DeleteCustomGroupRequest : TeaModel {
         /// <summary>
-        /// The custom type of the image library. Valid values:
+        /// <para>The custom type of the image library. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>landmark: custom landmarks.</description></item>
+        /// <item><description>object: custom objects.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   landmark: custom landmarks.
-        /// *   object: custom objects.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>landmark</para>
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// The ID of the custom image library.
+        /// <para>The ID of the custom image library.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CustomGroupId")]
         [Validation(Required=false)]

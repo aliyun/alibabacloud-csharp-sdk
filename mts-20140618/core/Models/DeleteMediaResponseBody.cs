@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class DeleteMediaResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>05F8B913-E9F3-4A6F-9922-48CADA0FFAAD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

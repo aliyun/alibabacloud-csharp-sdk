@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class RegisterCustomFaceRequest : TeaModel {
         /// <summary>
-        /// The ID of the figure library in which you want to register a custom face. The ID is used to uniquely identify a figure library. You can specify the ID of a custom figure library. Make sure that the ID is unique and keep the ID for future API operation calls. If you set this parameter to the ID of a system figure library, the custom face is registered in the system figure library. The ID can be up to 120 characters in length and is not case-sensitive.
+        /// <para>The ID of the figure library in which you want to register a custom face. The ID is used to uniquely identify a figure library. You can specify the ID of a custom figure library. Make sure that the ID is unique and keep the ID for future API operation calls. If you set this parameter to the ID of a system figure library, the custom face is registered in the system figure library. The ID can be up to 120 characters in length and is not case-sensitive.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>CategoryId001-****</para>
         /// </summary>
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// The URL of the facial image that you want to register for the specified figure. The image must contain only one face.
+        /// <para>The URL of the facial image that you want to register for the specified figure. The image must contain only one face.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://example-****.jpeg">http://example-****.jpeg</a></para>
         /// </summary>
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]
@@ -36,9 +40,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the figure for which you want to register a custom face. The ID is used to uniquely identify a figure. You can specify a figure ID. Make sure that the ID is unique and keep the ID for future API operation calls. The ID can be up to 120 characters in length and is not case-sensitive. The value returned is of the String type.
+        /// <para>The ID of the figure for which you want to register a custom face. The ID is used to uniquely identify a figure. You can specify a figure ID. Make sure that the ID is unique and keep the ID for future API operation calls. The ID can be up to 120 characters in length and is not case-sensitive. The value returned is of the String type.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PersonId001-****</para>
         /// </summary>
         [NameInMap("PersonId")]
         [Validation(Required=false)]

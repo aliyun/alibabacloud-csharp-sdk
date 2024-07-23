@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class AddPipelineRequest : TeaModel {
         /// <summary>
-        /// The name of the MPS queue. The name can be up to 128 bytes in size.
+        /// <para>The name of the MPS queue. The name can be up to 128 bytes in size.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test-pipeline</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The Message Service (MNS) configuration.
+        /// <para>The Message Service (MNS) configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Topic&quot;:&quot;mts-topic-1&quot;}</para>
         /// </summary>
         [NameInMap("NotifyConfig")]
         [Validation(Required=false)]
@@ -42,29 +47,38 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The role.
+        /// <para>The role.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AliyunMTSDefaultRole</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
         /// <summary>
-        /// The type of the MPS queue. Valid values:
+        /// <para>The type of the MPS queue. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Boost</b>: MPS queue with transcoding speed boosted.</description></item>
+        /// <item><description><b>Standard</b>: standard MPS queue.</description></item>
+        /// <item><description><b>NarrowBandHDV2</b>: MPS queue that supports Narrowband HD 2.0.</description></item>
+        /// <item><description><b>AIVideoCover</b>: MPS queue for intelligent snapshot capture.</description></item>
+        /// <item><description><b>AIVideoTag</b>: MPS queue for video tagging. The supported regions are China (Shanghai), China (Beijing), and China (Hangzhou).</description></item>
+        /// </list>
+        /// <para>Default value: <b>Standard</b>.</para>
         /// 
-        /// *   **Boost**: MPS queue with transcoding speed boosted.
-        /// *   **Standard**: standard MPS queue.
-        /// *   **NarrowBandHDV2**: MPS queue that supports Narrowband HD 2.0.
-        /// *   **AIVideoCover**: MPS queue for intelligent snapshot capture.
-        /// *   **AIVideoTag**: MPS queue for video tagging. The supported regions are China (Shanghai), China (Beijing), and China (Hangzhou).
-        /// 
-        /// Default value: **Standard**.
+        /// <b>Example:</b>
+        /// <para>Standard</para>
         /// </summary>
         [NameInMap("Speed")]
         [Validation(Required=false)]
         public string Speed { get; set; }
 
         /// <summary>
-        /// The level of the MPS queue. Valid values: **1 to 3**.
+        /// <para>The level of the MPS queue. Valid values: <b>1 to 3</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SpeedLevel")]
         [Validation(Required=false)]

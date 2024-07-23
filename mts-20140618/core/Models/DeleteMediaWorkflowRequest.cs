@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class DeleteMediaWorkflowRequest : TeaModel {
         /// <summary>
-        /// The ID of the media workflow that you want to delete. To obtain the ID of the media workflow, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Workflow Settings** in the left-side navigation pane.
+        /// <para>The ID of the media workflow that you want to delete. To obtain the ID of the media workflow, you can log on to the <b>ApsaraVideo Media Processing (MPS) console</b> and choose <b>Workflows</b> &gt; <b>Workflow Settings</b> in the left-side navigation pane.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>93ab850b4f6f44eab54b6e9181d4****</para>
         /// </summary>
         [NameInMap("MediaWorkflowId")]
         [Validation(Required=false)]

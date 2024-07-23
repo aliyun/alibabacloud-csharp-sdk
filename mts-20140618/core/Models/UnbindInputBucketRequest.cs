@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class UnbindInputBucketRequest : TeaModel {
         /// <summary>
-        /// The name of the input media bucket to be unbound. To obtain the media bucket name, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Media Buckets** in the left-side navigation pane. Alternatively, you can log on to the **Object Storage Service (OSS) console** and click **Historical Paths**.
+        /// <para>The name of the input media bucket to be unbound. To obtain the media bucket name, you can log on to the <b>ApsaraVideo Media Processing (MPS) console</b> and choose <b>Workflows</b> &gt; <b>Media Buckets</b> in the left-side navigation pane. Alternatively, you can log on to the <b>Object Storage Service (OSS) console</b> and click <b>Historical Paths</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example-bucket-****</para>
         /// </summary>
         [NameInMap("Bucket")]
         [Validation(Required=false)]
@@ -35,7 +37,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the role used for delegated authorization.
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the role used for delegated authorization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::174809843091****:role/exampleRole</para>
         /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]

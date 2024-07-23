@@ -26,9 +26,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of the watermark templates that you want to query. To obtain the IDs of the watermark templates, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Global Settings** > **Watermark Templates** in the left-side navigation pane. You can query up to 10 watermark templates at a time. Separate multiple IDs of watermark templates with commas (,).
+        /// <para>The IDs of the watermark templates that you want to query. To obtain the IDs of the watermark templates, you can log on to the <b>ApsaraVideo Media Processing (MPS) console</b> and choose <b>Global Settings</b> &gt; <b>Watermark Templates</b> in the left-side navigation pane. You can query up to 10 watermark templates at a time. Separate multiple IDs of watermark templates with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3780bd69b2b74540bc7b1096f564****</para>
         /// </summary>
         [NameInMap("WaterMarkTemplateIds")]
         [Validation(Required=false)]

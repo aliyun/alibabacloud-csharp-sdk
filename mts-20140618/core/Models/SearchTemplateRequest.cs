@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SearchTemplateRequest : TeaModel {
         /// <summary>
-        /// The name prefix based on which you want to search for templates.
+        /// <para>The name prefix based on which you want to search for templates.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>S00000001</para>
         /// </summary>
         [NameInMap("NamePrefix")]
         [Validation(Required=false)]
@@ -25,17 +28,24 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The size of each page set during the result paging query.
+        /// <para>The size of each page set during the result paging query.</para>
+        /// <list type="bullet">
+        /// <item><description>Upper limit: 100.</description></item>
+        /// <item><description>Default value: 10.</description></item>
+        /// </list>
         /// 
-        /// - Upper limit: 100.
-        /// - Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -50,12 +60,16 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the custom transcoding templates that you want to query.
+        /// <para>The status of the custom transcoding templates that you want to query.</para>
+        /// <list type="bullet">
+        /// <item><description><b>All</b>: All custom transcoding templates are queried.</description></item>
+        /// <item><description><b>Normal</b>: Normal custom transcoding templates are queried.</description></item>
+        /// <item><description><b>Deleted</b>: Deleted custom transcoding templates are queried.</description></item>
+        /// <item><description>Default value: <b>All</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **All**: All custom transcoding templates are queried.
-        /// *   **Normal**: Normal custom transcoding templates are queried.
-        /// *   **Deleted**: Deleted custom transcoding templates are queried.
-        /// *   Default value: **All**.
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

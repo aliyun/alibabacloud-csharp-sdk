@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ListJobResponseBody : TeaModel {
         /// <summary>
-        /// The transcoding jobs.
+        /// <para>The transcoding jobs.</para>
         /// </summary>
         [NameInMap("JobList")]
         [Validation(Required=false)]
@@ -21,49 +21,67 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             public List<ListJobResponseBodyJobListJob> Job { get; set; }
             public class ListJobResponseBodyJobListJob : TeaModel {
                 /// <summary>
-                /// The error code returned if the job failed. This parameter is not returned if the job was successful.
+                /// <para>The error code returned if the job failed. This parameter is not returned if the job was successful.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>InternalError</para>
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The time when the job was created.
+                /// <para>The time when the job was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2014-01-10T12:00:00Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The time when the job was complete.
+                /// <para>The time when the job was complete.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2014-01-10T12:20:25Z</para>
                 /// </summary>
                 [NameInMap("FinishTime")]
                 [Validation(Required=false)]
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// The information about the job input.
+                /// <para>The information about the job input.</para>
                 /// </summary>
                 [NameInMap("Input")]
                 [Validation(Required=false)]
                 public ListJobResponseBodyJobListJobInput Input { get; set; }
                 public class ListJobResponseBodyJobListJobInput : TeaModel {
                     /// <summary>
-                    /// The name of the OSS bucket in which the job input is stored.
+                    /// <para>The name of the OSS bucket in which the job input is stored.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>example-bucket</para>
                     /// </summary>
                     [NameInMap("Bucket")]
                     [Validation(Required=false)]
                     public string Bucket { get; set; }
 
                     /// <summary>
-                    /// The ID of the OSS region in which the job input is stored.
+                    /// <para>The ID of the OSS region in which the job input is stored.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>oss-cn-hangzhou</para>
                     /// </summary>
                     [NameInMap("Location")]
                     [Validation(Required=false)]
                     public string Location { get; set; }
 
                     /// <summary>
-                    /// The name of the OSS object that is used as the job input.
+                    /// <para>The name of the OSS object that is used as the job input.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>example.flv</para>
                     /// </summary>
                     [NameInMap("Object")]
                     [Validation(Required=false)]
@@ -72,35 +90,47 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 }
 
                 /// <summary>
-                /// The task ID.
+                /// <para>The task ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>31fa3c9ca8134fb4b0b0f7878301****</para>
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// The message sent by Message Service (MNS) to notify users of the job result.
+                /// <para>The message sent by Message Service (MNS) to notify users of the job result.</para>
                 /// </summary>
                 [NameInMap("MNSMessageResult")]
                 [Validation(Required=false)]
                 public ListJobResponseBodyJobListJobMNSMessageResult MNSMessageResult { get; set; }
                 public class ListJobResponseBodyJobListJobMNSMessageResult : TeaModel {
                     /// <summary>
-                    /// The error code returned if the job failed. This parameter is not returned if the job was successful.
+                    /// <para>The error code returned if the job failed. This parameter is not returned if the job was successful.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>InvalidParameter.ResourceNotFound</para>
                     /// </summary>
                     [NameInMap("ErrorCode")]
                     [Validation(Required=false)]
                     public string ErrorCode { get; set; }
 
                     /// <summary>
-                    /// The error message returned if the job failed. This parameter is not returned if the job was successful.
+                    /// <para>The error message returned if the job failed. This parameter is not returned if the job was successful.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The resource operated “%s” cannot be found.</para>
                     /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
-                    /// The ID of the message returned if the job was successful.
+                    /// <para>The ID of the message returned if the job was successful.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>123</para>
                     /// </summary>
                     [NameInMap("MessageId")]
                     [Validation(Required=false)]
@@ -109,106 +139,139 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 }
 
                 /// <summary>
-                /// The error message returned if the job failed. This parameter is not returned if the job was successful.
+                /// <para>The error message returned if the job failed. This parameter is not returned if the job was successful.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The operation has failed due to some unknown error, exception or failure.</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The output of the job.
+                /// <para>The output of the job.</para>
                 /// </summary>
                 [NameInMap("Output")]
                 [Validation(Required=false)]
                 public ListJobResponseBodyJobListJobOutput Output { get; set; }
                 public class ListJobResponseBodyJobListJobOutput : TeaModel {
                     /// <summary>
-                    /// The audio configurations.
+                    /// <para>The audio configurations.</para>
                     /// </summary>
                     [NameInMap("Audio")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputAudio Audio { get; set; }
                     public class ListJobResponseBodyJobListJobOutputAudio : TeaModel {
                         /// <summary>
-                        /// The audio bitrate of the output file.
+                        /// <para>The audio bitrate of the output file.</para>
+                        /// <list type="bullet">
+                        /// <item><description>Unit: Kbit/s.</description></item>
+                        /// <item><description>Default value: <b>128</b>.</description></item>
+                        /// </list>
                         /// 
-                        /// *   Unit: Kbit/s.
-                        /// *   Default value: **128**.
+                        /// <b>Example:</b>
+                        /// <para>128</para>
                         /// </summary>
                         [NameInMap("Bitrate")]
                         [Validation(Required=false)]
                         public string Bitrate { get; set; }
 
                         /// <summary>
-                        /// The number of sound channels.
+                        /// <para>The number of sound channels.</para>
+                        /// <list type="bullet">
+                        /// <item><description>If the value of Codec is mp3, the value of this parameter can only be 1 or 2.</description></item>
+                        /// <item><description>If the value of Codec is aac, the value of this parameter can only be 1, 2, 4, 5, 6, or 8.</description></item>
+                        /// <item><description>Default value: 2.</description></item>
+                        /// </list>
                         /// 
-                        /// *   If the value of Codec is mp3, the value of this parameter can only be 1 or 2.
-                        /// *   If the value of Codec is aac, the value of this parameter can only be 1, 2, 4, 5, 6, or 8.
-                        /// *   Default value: 2.
+                        /// <b>Example:</b>
+                        /// <para>2</para>
                         /// </summary>
                         [NameInMap("Channels")]
                         [Validation(Required=false)]
                         public string Channels { get; set; }
 
                         /// <summary>
-                        /// The audio codec.
+                        /// <para>The audio codec.</para>
+                        /// <list type="bullet">
+                        /// <item><description>Valid values: aac, mp3, vorbis, and flac.</description></item>
+                        /// <item><description>Default value: <b>aac</b>.</description></item>
+                        /// </list>
                         /// 
-                        /// *   Valid values: aac, mp3, vorbis, and flac.
-                        /// *   Default value: **aac**.
+                        /// <b>Example:</b>
+                        /// <para>aac</para>
                         /// </summary>
                         [NameInMap("Codec")]
                         [Validation(Required=false)]
                         public string Codec { get; set; }
 
                         /// <summary>
-                        /// The codec profile of the audio. Valid values if the value of Codec is aac: aaclow, aache, aachev2, aacld, and aaceld.
+                        /// <para>The codec profile of the audio. Valid values if the value of Codec is aac: aaclow, aache, aachev2, aacld, and aaceld.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>aaclow</para>
                         /// </summary>
                         [NameInMap("Profile")]
                         [Validation(Required=false)]
                         public string Profile { get; set; }
 
                         /// <summary>
-                        /// The level of quality control on the audio.
+                        /// <para>The level of quality control on the audio.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>15</para>
                         /// </summary>
                         [NameInMap("Qscale")]
                         [Validation(Required=false)]
                         public string Qscale { get; set; }
 
                         /// <summary>
-                        /// The sampling rate.
+                        /// <para>The sampling rate.</para>
+                        /// <list type="bullet">
+                        /// <item><description>Valid values: 22050, 32000, 44100, 48000, and 96000.</description></item>
+                        /// <item><description>Unit: Hz.</description></item>
+                        /// <item><description>Default value: 44100.</description></item>
+                        /// <item><description>If the video container format is FLV and the audio codec is MP3, the value of this parameter cannot be 32000, 48000, or 96000. If the audio codec is MP3, the value of this parameter cannot be 96000.</description></item>
+                        /// </list>
                         /// 
-                        /// *   Valid values: 22050, 32000, 44100, 48000, and 96000.
-                        /// *   Unit: Hz.
-                        /// *   Default value: 44100.
-                        /// *   If the video container format is FLV and the audio codec is MP3, the value of this parameter cannot be 32000, 48000, or 96000. If the audio codec is MP3, the value of this parameter cannot be 96000.
+                        /// <b>Example:</b>
+                        /// <para>44100</para>
                         /// </summary>
                         [NameInMap("Samplerate")]
                         [Validation(Required=false)]
                         public string Samplerate { get; set; }
 
                         /// <summary>
-                        /// The volume configurations.
+                        /// <para>The volume configurations.</para>
                         /// </summary>
                         [NameInMap("Volume")]
                         [Validation(Required=false)]
                         public ListJobResponseBodyJobListJobOutputAudioVolume Volume { get; set; }
                         public class ListJobResponseBodyJobListJobOutputAudioVolume : TeaModel {
                             /// <summary>
-                            /// The volume adjustment range.
+                            /// <para>The volume adjustment range.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Unit: decibel.</description></item>
+                            /// <item><description>Default value: <b>-20</b>.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Unit: decibel.
-                            /// *   Default value: **-20**.
+                            /// <b>Example:</b>
+                            /// <para>-20</para>
                             /// </summary>
                             [NameInMap("Level")]
                             [Validation(Required=false)]
                             public string Level { get; set; }
 
                             /// <summary>
-                            /// The method that is used to adjust the volume. Valid values:
+                            /// <para>The method that is used to adjust the volume. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>auto</b></description></item>
+                            /// <item><description><b>dynamic</b></description></item>
+                            /// <item><description><b>linear</b></description></item>
+                            /// </list>
                             /// 
-                            /// *   **auto**
-                            /// *   **dynamic**
-                            /// *   **linear**
+                            /// <b>Example:</b>
+                            /// <para>auto</para>
                             /// </summary>
                             [NameInMap("Method")]
                             [Validation(Required=false)]
@@ -219,46 +282,58 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The sequence number of the audio stream.
+                    /// <para>The sequence number of the audio stream.</para>
+                    /// <list type="bullet">
+                    /// <item><description>Format: <c>0:a:{Sequence number}</c>.</description></item>
+                    /// <item><description>The sequence number is the index of the audio stream in the list and starts from 0. If no sequence number is specified, the default audio stream is used.</description></item>
+                    /// </list>
                     /// 
-                    /// *   Format: `0:a:{Sequence number}`.
-                    /// *   The sequence number is the index of the audio stream in the list and starts from 0. If no sequence number is specified, the default audio stream is used.
+                    /// <b>Example:</b>
+                    /// <para>0:a:0</para>
                     /// </summary>
                     [NameInMap("AudioStreamMap")]
                     [Validation(Required=false)]
                     public string AudioStreamMap { get; set; }
 
                     /// <summary>
-                    /// The information about the clip.
+                    /// <para>The information about the clip.</para>
                     /// </summary>
                     [NameInMap("Clip")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputClip Clip { get; set; }
                     public class ListJobResponseBodyJobListJobOutputClip : TeaModel {
                         /// <summary>
-                        /// The time span of the clip.
+                        /// <para>The time span of the clip.</para>
                         /// </summary>
                         [NameInMap("TimeSpan")]
                         [Validation(Required=false)]
                         public ListJobResponseBodyJobListJobOutputClipTimeSpan TimeSpan { get; set; }
                         public class ListJobResponseBodyJobListJobOutputClipTimeSpan : TeaModel {
                             /// <summary>
-                            /// The duration of the clip.
+                            /// <para>The duration of the clip.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
+                            /// <item><description>Valid values: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</description></item>
+                            /// <item><description>Examples: 01:00:59.999 and 32000.23.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
-                            /// *   Valid values: `[00:00:00.000,23:59:59.999]` or `[0.000,86399.999]`.
-                            /// *   Examples: 01:00:59.999 and 32000.23.
+                            /// <b>Example:</b>
+                            /// <para>01:00:59.999</para>
                             /// </summary>
                             [NameInMap("Duration")]
                             [Validation(Required=false)]
                             public string Duration { get; set; }
 
                             /// <summary>
-                            /// The point in time when the clip starts.
+                            /// <para>The point in time when the clip starts.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
+                            /// <item><description>Valid values: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</description></item>
+                            /// <item><description>Examples: 01:59:59.999 and 32000.23.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
-                            /// *   Valid values: `[00:00:00.000,23:59:59.999]` or `[0.000,86399.999]`.
-                            /// *   Examples: 01:59:59.999 and 32000.23.
+                            /// <b>Example:</b>
+                            /// <para>01:00:59.999</para>
                             /// </summary>
                             [NameInMap("Seek")]
                             [Validation(Required=false)]
@@ -269,22 +344,26 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The container format configurations.
+                    /// <para>The container format configurations.</para>
                     /// </summary>
                     [NameInMap("Container")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputContainer Container { get; set; }
                     public class ListJobResponseBodyJobListJobOutputContainer : TeaModel {
                         /// <summary>
-                        /// The container format.
+                        /// <para>The container format.</para>
+                        /// <list type="bullet">
+                        /// <item><description>Default value: mp4.</description></item>
+                        /// <item><description>Video formats include FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4).</description></item>
+                        /// <item><description>Audio formats include MP3, MP4, Ogg, FLAC, and M4A.</description></item>
+                        /// <item><description>Image formats include GIF and WebP.</description></item>
+                        /// <item><description>If the container format is GIF, the video codec must be GIF.</description></item>
+                        /// <item><description>If the container format is WebP, the video codec must be WebP.</description></item>
+                        /// <item><description>If the container format is FLV, the video codec cannot be H.265.</description></item>
+                        /// </list>
                         /// 
-                        /// *   Default value: mp4.
-                        /// *   Video formats include FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4).
-                        /// *   Audio formats include MP3, MP4, Ogg, FLAC, and M4A.
-                        /// *   Image formats include GIF and WebP.
-                        /// *   If the container format is GIF, the video codec must be GIF.
-                        /// *   If the container format is WebP, the video codec must be WebP.
-                        /// *   If the container format is FLV, the video codec cannot be H.265.
+                        /// <b>Example:</b>
+                        /// <para>flv</para>
                         /// </summary>
                         [NameInMap("Format")]
                         [Validation(Required=false)]
@@ -293,58 +372,80 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The configurations of watermark blurring. The value is a JSON object. For more information, see [Parameter details](https://help.aliyun.com/document_detail/29253.html).
+                    /// <para>The configurations of watermark blurring. The value is a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;0&quot;: [{&quot;l&quot;: 10,&quot;t&quot;: 10,&quot;w&quot;: 10,&quot;h&quot;: 10},{&quot;l&quot;: 100,&quot;t&quot;: 0.1,&quot;w&quot;: 10,&quot;h&quot;: 10}],&quot;128000&quot;: [],&quot;250000&quot;: [{&quot;l&quot;: 0.2,&quot;t&quot;: 0.1,&quot;w&quot;: 0.01,&quot;h&quot;: 0.05}]}</para>
                     /// </summary>
                     [NameInMap("DeWatermark")]
                     [Validation(Required=false)]
                     public string DeWatermark { get; set; }
 
                     /// <summary>
-                    /// The encryption configurations. Only outputs in the M3U8 format are supported.
+                    /// <para>The encryption configurations. Only outputs in the M3U8 format are supported.</para>
                     /// </summary>
                     [NameInMap("Encryption")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputEncryption Encryption { get; set; }
                     public class ListJobResponseBodyJobListJobOutputEncryption : TeaModel {
                         /// <summary>
-                        /// The encryption ID.
+                        /// <para>The encryption ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>31fa3c9ca8134f9cec2b4b0b0f78****</para>
                         /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// The key that is used to encrypt the video.
+                        /// <para>The key that is used to encrypt the video.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>encryptionkey128</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The key encryption method. Valid values: Base64 and KMS.
+                        /// <para>The key encryption method. Valid values: Base64 and KMS.</para>
+                        /// <remarks>
+                        /// <para> For example, if the key is encryptionkey128, you can encrypt the key in the Base64 format or use Key Management Service (KMS) to encrypt the key.``````</para>
+                        /// </remarks>
                         /// 
-                        /// >  For example, if the key is encryptionkey128, you can encrypt the key in the Base64 format or use Key Management Service (KMS) to encrypt the key.``````
+                        /// <b>Example:</b>
+                        /// <para>Base64</para>
                         /// </summary>
                         [NameInMap("KeyType")]
                         [Validation(Required=false)]
                         public string KeyType { get; set; }
 
                         /// <summary>
-                        /// The URL that is used to request the key. The URL is Base64-encoded.
+                        /// <para>The URL that is used to request the key. The URL is Base64-encoded.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para><a href="https://1161758785*****.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/HLS-decyptServer/decyptServer/">https://1161758785*****.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/HLS-decyptServer/decyptServer/</a></para>
                         /// </summary>
                         [NameInMap("KeyUri")]
                         [Validation(Required=false)]
                         public string KeyUri { get; set; }
 
                         /// <summary>
-                        /// The number of unencrypted frames at the beginning of the video. Leaving these frames unencrypted enables video playback to quickly start.
+                        /// <para>The number of unencrypted frames at the beginning of the video. Leaving these frames unencrypted enables video playback to quickly start.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>3</para>
                         /// </summary>
                         [NameInMap("SkipCnt")]
                         [Validation(Required=false)]
                         public string SkipCnt { get; set; }
 
                         /// <summary>
-                        /// The encryption type. Only hls-aes-128 may be returned.
+                        /// <para>The encryption type. Only hls-aes-128 may be returned.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>hls-aes-128</para>
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
@@ -353,34 +454,42 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The non-standard support configuration for M3U8. The value must be a JSON object. For more information, see [Parameter details](https://help.aliyun.com/document_detail/29253.html).
+                    /// <para>The non-standard support configuration for M3U8. The value must be a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>.</para>
                     /// </summary>
                     [NameInMap("M3U8NonStandardSupport")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputM3U8NonStandardSupport M3U8NonStandardSupport { get; set; }
                     public class ListJobResponseBodyJobListJobOutputM3U8NonStandardSupport : TeaModel {
                         /// <summary>
-                        /// The non-standard support configurations for TS files. The value is a JSON object. For more information, see [Parameter details](https://help.aliyun.com/document_detail/29253.html).
+                        /// <para>The non-standard support configurations for TS files. The value is a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>.</para>
                         /// </summary>
                         [NameInMap("TS")]
                         [Validation(Required=false)]
                         public ListJobResponseBodyJobListJobOutputM3U8NonStandardSupportTS TS { get; set; }
                         public class ListJobResponseBodyJobListJobOutputM3U8NonStandardSupportTS : TeaModel {
                             /// <summary>
-                            /// Indicates whether the MD5 value of the TS file is included in the M3U8 file. Valid values:
+                            /// <para>Indicates whether the MD5 value of the TS file is included in the M3U8 file. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>true</b></description></item>
+                            /// <item><description><b>false</b></description></item>
+                            /// </list>
                             /// 
-                            /// *   **true**
-                            /// *   **false**
+                            /// <b>Example:</b>
+                            /// <para>true</para>
                             /// </summary>
                             [NameInMap("Md5Support")]
                             [Validation(Required=false)]
                             public bool? Md5Support { get; set; }
 
                             /// <summary>
-                            /// Indicates whether the size of the TS file is included in the M3U8 file.
+                            /// <para>Indicates whether the size of the TS file is included in the M3U8 file.</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>true</b></description></item>
+                            /// <item><description><b>false</b></description></item>
+                            /// </list>
                             /// 
-                            /// *   **true**
-                            /// *   **false**
+                            /// <b>Example:</b>
+                            /// <para>true</para>
                             /// </summary>
                             [NameInMap("SizeSupport")]
                             [Validation(Required=false)]
@@ -391,19 +500,23 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The URL of the merging configuration file. You can specify either MergeList or MergeConfigUrl when you submit the transcoding job.
+                    /// <para>The URL of the merging configuration file. You can specify either MergeList or MergeConfigUrl when you submit the transcoding job.</para>
+                    /// <list type="bullet">
+                    /// <item><description>The configuration file specified by MergeConfigUrl can contain up to 50 clips.</description></item>
+                    /// <item><description>MergeConfigUrl indicates the URL of the configuration file for merging clips.</description></item>
+                    /// <item><description>Make sure that the configuration file is stored as an object in OSS and that MPS can access the OSS object. For information about the file content, see the details of merging parameters.</description></item>
+                    /// <item><description>Example of the content of the merging configuration file: <c>{&quot;MergeList&quot;:[{&quot;MergeURL&quot;:&quot;http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4&quot;}]}</c>.</description></item>
+                    /// </list>
                     /// 
-                    /// *   The configuration file specified by MergeConfigUrl can contain up to 50 clips.
-                    /// *   MergeConfigUrl indicates the URL of the configuration file for merging clips.
-                    /// *   Make sure that the configuration file is stored as an object in OSS and that MPS can access the OSS object. For information about the file content, see the details of merging parameters.
-                    /// *   Example of the content of the merging configuration file: `{"MergeList":[{"MergeURL":"http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4"}]}`.
+                    /// <b>Example:</b>
+                    /// <para>{&quot;MergeList&quot;:[{&quot;MergeURL&quot;:&quot;<a href="http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4%22%7D%5D%7D">http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4&quot;}]}</a></para>
                     /// </summary>
                     [NameInMap("MergeConfigUrl")]
                     [Validation(Required=false)]
                     public string MergeConfigUrl { get; set; }
 
                     /// <summary>
-                    /// The configurations for merging clips.
+                    /// <para>The configurations for merging clips.</para>
                     /// </summary>
                     [NameInMap("MergeList")]
                     [Validation(Required=false)]
@@ -414,37 +527,49 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         public List<ListJobResponseBodyJobListJobOutputMergeListMerge> Merge { get; set; }
                         public class ListJobResponseBodyJobListJobOutputMergeListMerge : TeaModel {
                             /// <summary>
-                            /// The duration of the clip.
+                            /// <para>The duration of the clip.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
+                            /// <item><description>Examples: 01:59:59.999 and 32000.23.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
-                            /// *   Examples: 01:59:59.999 and 32000.23.
+                            /// <b>Example:</b>
+                            /// <para>01:59:59.999</para>
                             /// </summary>
                             [NameInMap("Duration")]
                             [Validation(Required=false)]
                             public string Duration { get; set; }
 
                             /// <summary>
-                            /// The OSS URL of the clip.
+                            /// <para>The OSS URL of the clip.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Example: <c>http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object.flv</c>.</description></item>
+                            /// <item><description>The object must be URL-encoded by using the UTF-8 standard.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Example: `http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object.flv`.
-                            /// *   The object must be URL-encoded by using the UTF-8 standard.
+                            /// <b>Example:</b>
+                            /// <para><a href="http://example-bucket.oss-cn-hangzhou.aliyuncs.com/example-object.flv">http://example-bucket.oss-cn-hangzhou.aliyuncs.com/example-object.flv</a></para>
                             /// </summary>
                             [NameInMap("MergeURL")]
                             [Validation(Required=false)]
                             public string MergeURL { get; set; }
 
                             /// <summary>
-                            /// The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role used for delegated authorization.
+                            /// <para>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role used for delegated authorization.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>acs:ram::<your uid>:role/<your role name></para>
                             /// </summary>
                             [NameInMap("RoleArn")]
                             [Validation(Required=false)]
                             public string RoleArn { get; set; }
 
                             /// <summary>
-                            /// The start point in time of the clip.
-                            /// 
-                            /// *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
-                            /// *   Examples: 01:59:59.999 and 32000.23.
+                            /// <para>The start point in time of the clip.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
+                            /// <item><description>Examples: 01:59:59.999 and 32000.23.</description></item>
+                            /// </list>
                             /// </summary>
                             [NameInMap("Start")]
                             [Validation(Required=false)]
@@ -455,45 +580,58 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The transmuxing configurations.
+                    /// <para>The transmuxing configurations.</para>
                     /// </summary>
                     [NameInMap("MuxConfig")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputMuxConfig MuxConfig { get; set; }
                     public class ListJobResponseBodyJobListJobOutputMuxConfig : TeaModel {
                         /// <summary>
-                        /// The transmuxing configurations for GIF.
+                        /// <para>The transmuxing configurations for GIF.</para>
                         /// </summary>
                         [NameInMap("Gif")]
                         [Validation(Required=false)]
                         public ListJobResponseBodyJobListJobOutputMuxConfigGif Gif { get; set; }
                         public class ListJobResponseBodyJobListJobOutputMuxConfigGif : TeaModel {
                             /// <summary>
-                            /// The color dithering algorithm of the palette. Valid values: **sierra** and **bayer**.
+                            /// <para>The color dithering algorithm of the palette. Valid values: <b>sierra</b> and <b>bayer</b>.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>bayer</para>
                             /// </summary>
                             [NameInMap("DitherMode")]
                             [Validation(Required=false)]
                             public string DitherMode { get; set; }
 
                             /// <summary>
-                            /// The duration for which the final frame is paused. Unit: centisecond.
+                            /// <para>The duration for which the final frame is paused. Unit: centisecond.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("FinalDelay")]
                             [Validation(Required=false)]
                             public string FinalDelay { get; set; }
 
                             /// <summary>
-                            /// Indicates whether a custom palette is used. Valid values:
+                            /// <para>Indicates whether a custom palette is used. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>true</b></description></item>
+                            /// <item><description><b>false</b></description></item>
+                            /// </list>
                             /// 
-                            /// *   **true**
-                            /// *   **false**
+                            /// <b>Example:</b>
+                            /// <para>true</para>
                             /// </summary>
                             [NameInMap("IsCustomPalette")]
                             [Validation(Required=false)]
                             public string IsCustomPalette { get; set; }
 
                             /// <summary>
-                            /// The loop count.
+                            /// <para>The loop count.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("Loop")]
                             [Validation(Required=false)]
@@ -502,17 +640,21 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         }
 
                         /// <summary>
-                        /// The segment configurations. The value is a JSON object.
+                        /// <para>The segment configurations. The value is a JSON object.</para>
                         /// </summary>
                         [NameInMap("Segment")]
                         [Validation(Required=false)]
                         public ListJobResponseBodyJobListJobOutputMuxConfigSegment Segment { get; set; }
                         public class ListJobResponseBodyJobListJobOutputMuxConfigSegment : TeaModel {
                             /// <summary>
-                            /// The length of the segment. The value must be an integer. Unit: seconds.
+                            /// <para>The length of the segment. The value must be an integer. Unit: seconds.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Valid values: [1,10].</description></item>
+                            /// <item><description>Default value: 10.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Valid values: [1,10].
-                            /// *   Default value: 10.
+                            /// <b>Example:</b>
+                            /// <para>10</para>
                             /// </summary>
                             [NameInMap("Duration")]
                             [Validation(Required=false)]
@@ -521,14 +663,17 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         }
 
                         /// <summary>
-                        /// The transmuxing configurations for WebP.
+                        /// <para>The transmuxing configurations for WebP.</para>
                         /// </summary>
                         [NameInMap("Webp")]
                         [Validation(Required=false)]
                         public ListJobResponseBodyJobListJobOutputMuxConfigWebp Webp { get; set; }
                         public class ListJobResponseBodyJobListJobOutputMuxConfigWebp : TeaModel {
                             /// <summary>
-                            /// The loop count.
+                            /// <para>The loop count.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("Loop")]
                             [Validation(Required=false)]
@@ -539,7 +684,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The opening parts.
+                    /// <para>The opening parts.</para>
                     /// </summary>
                     [NameInMap("OpeningList")]
                     [Validation(Required=false)]
@@ -550,39 +695,54 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         public List<ListJobResponseBodyJobListJobOutputOpeningListOpening> Opening { get; set; }
                         public class ListJobResponseBodyJobListJobOutputOpeningListOpening : TeaModel {
                             /// <summary>
-                            /// The height of the opening part. Valid values: values in the range of (0, 4096), -1, and full.
+                            /// <para>The height of the opening part. Valid values: values in the range of (0, 4096), -1, and full.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Default value: <b>-1</b>.</description></item>
+                            /// <item><description>A value of -1 indicates that the height of the source of the opening part is retained.</description></item>
+                            /// <item><description>A value of full indicates that the height of the opening part equals the height of the main part.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Default value: **-1**.
-                            /// *   A value of -1 indicates that the height of the source of the opening part is retained.
-                            /// *   A value of full indicates that the height of the opening part equals the height of the main part.
+                            /// <b>Example:</b>
+                            /// <para>-1</para>
                             /// </summary>
                             [NameInMap("Height")]
                             [Validation(Required=false)]
                             public string Height { get; set; }
 
                             /// <summary>
-                            /// The amount of time after which the opening part is played. The value starts from 0.
+                            /// <para>The amount of time after which the opening part is played. The value starts from 0.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Unit: seconds.</description></item>
+                            /// <item><description>Default value: <b>0</b>.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Unit: seconds.
-                            /// *   Default value: **0**.
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("Start")]
                             [Validation(Required=false)]
                             public string Start { get; set; }
 
                             /// <summary>
-                            /// The width of the opening part. Valid values: values in the range of (0, 4096), -1, and full.
+                            /// <para>The width of the opening part. Valid values: values in the range of (0, 4096), -1, and full.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Default value: <b>-1</b>.</description></item>
+                            /// <item><description>A value of -1 indicates that the width of the source of the opening part is retained.</description></item>
+                            /// <item><description>A value of full indicates that the width of the opening part equals the width of the main part.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Default value: **-1**.
-                            /// *   A value of -1 indicates that the width of the source of the opening part is retained.
-                            /// *   A value of full indicates that the width of the opening part equals the width of the main part.
+                            /// <b>Example:</b>
+                            /// <para>-1</para>
                             /// </summary>
                             [NameInMap("Width")]
                             [Validation(Required=false)]
                             public string Width { get; set; }
 
                             /// <summary>
-                            /// The OSS URL of the opening part.
+                            /// <para>The OSS URL of the opening part.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv</a></para>
                             /// </summary>
                             [NameInMap("openUrl")]
                             [Validation(Required=false)]
@@ -593,7 +753,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The output subtitles.
+                    /// <para>The output subtitles.</para>
                     /// </summary>
                     [NameInMap("OutSubtitleList")]
                     [Validation(Required=false)]
@@ -604,49 +764,67 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         public List<ListJobResponseBodyJobListJobOutputOutSubtitleListOutSubtitle> OutSubtitle { get; set; }
                         public class ListJobResponseBodyJobListJobOutputOutSubtitleListOutSubtitle : TeaModel {
                             /// <summary>
-                            /// The video track. Format: 0:{Stream}:{Stream sequence number}, that is, 0:v:{video_index}. The value of Stream is v, which indicates a video stream. The sequence number is the index of the video stream in the list and starts from 0.
+                            /// <para>The video track. Format: 0:{Stream}:{Stream sequence number}, that is, 0:v:{video_index}. The value of Stream is v, which indicates a video stream. The sequence number is the index of the video stream in the list and starts from 0.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0:v:0</para>
                             /// </summary>
                             [NameInMap("Map")]
                             [Validation(Required=false)]
                             public string Map { get; set; }
 
                             /// <summary>
-                            /// The error message returned if the job failed to be created. This parameter is not returned if the job was created.
+                            /// <para>The error message returned if the job failed to be created. This parameter is not returned if the job was created.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>The specified parameter “%s” cannot be null.</para>
                             /// </summary>
                             [NameInMap("Message")]
                             [Validation(Required=false)]
                             public string Message { get; set; }
 
                             /// <summary>
-                            /// The details of the output file.
+                            /// <para>The details of the output file.</para>
                             /// </summary>
                             [NameInMap("OutSubtitleFile")]
                             [Validation(Required=false)]
                             public ListJobResponseBodyJobListJobOutputOutSubtitleListOutSubtitleOutSubtitleFile OutSubtitleFile { get; set; }
                             public class ListJobResponseBodyJobListJobOutputOutSubtitleListOutSubtitleOutSubtitleFile : TeaModel {
                                 /// <summary>
-                                /// The name of the OSS bucket in which the input file is stored.
+                                /// <para>The name of the OSS bucket in which the input file is stored.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>example-bucket-****</para>
                                 /// </summary>
                                 [NameInMap("Bucket")]
                                 [Validation(Required=false)]
                                 public string Bucket { get; set; }
 
                                 /// <summary>
-                                /// The ID of the OSS region in which the output file is stored.
+                                /// <para>The ID of the OSS region in which the output file is stored.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>oss-cn-hangzhou</para>
                                 /// </summary>
                                 [NameInMap("Location")]
                                 [Validation(Required=false)]
                                 public string Location { get; set; }
 
                                 /// <summary>
-                                /// The name of the OSS object that is used as the output file.
+                                /// <para>The name of the OSS object that is used as the output file.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>example-output.flv</para>
                                 /// </summary>
                                 [NameInMap("Object")]
                                 [Validation(Required=false)]
                                 public string Object { get; set; }
 
                                 /// <summary>
-                                /// The ARN of the RAM role used for delegated authorization.
+                                /// <para>The ARN of the RAM role used for delegated authorization.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>acs:ram::<your uid>:role/<your role name></para>
                                 /// </summary>
                                 [NameInMap("RoleArn")]
                                 [Validation(Required=false)]
@@ -655,10 +833,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             }
 
                             /// <summary>
-                            /// Indicates whether the job was created. Valid values:
+                            /// <para>Indicates whether the job was created. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>true</b></description></item>
+                            /// <item><description><b>false</b></description></item>
+                            /// </list>
                             /// 
-                            /// *   **true**
-                            /// *   **false**
+                            /// <b>Example:</b>
+                            /// <para>true</para>
                             /// </summary>
                             [NameInMap("Success")]
                             [Validation(Required=false)]
@@ -669,35 +851,47 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The details of the output file.
+                    /// <para>The details of the output file.</para>
                     /// </summary>
                     [NameInMap("OutputFile")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputOutputFile OutputFile { get; set; }
                     public class ListJobResponseBodyJobListJobOutputOutputFile : TeaModel {
                         /// <summary>
-                        /// The name of the OSS bucket in which the input file is stored.
+                        /// <para>The name of the OSS bucket in which the input file is stored.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>example-bucket</para>
                         /// </summary>
                         [NameInMap("Bucket")]
                         [Validation(Required=false)]
                         public string Bucket { get; set; }
 
                         /// <summary>
-                        /// The ID of the OSS region in which the output file is stored.
+                        /// <para>The ID of the OSS region in which the output file is stored.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>oss-cn-hangzhou</para>
                         /// </summary>
                         [NameInMap("Location")]
                         [Validation(Required=false)]
                         public string Location { get; set; }
 
                         /// <summary>
-                        /// The name of the OSS object that is used as the output file.
+                        /// <para>The name of the OSS object that is used as the output file.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>example-output.flv</para>
                         /// </summary>
                         [NameInMap("Object")]
                         [Validation(Required=false)]
                         public string Object { get; set; }
 
                         /// <summary>
-                        /// The ARN of the RAM role used for delegated authorization.
+                        /// <para>The ARN of the RAM role used for delegated authorization.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>acs:ram::<your uid>:role/<your role name></para>
                         /// </summary>
                         [NameInMap("RoleArn")]
                         [Validation(Required=false)]
@@ -706,108 +900,148 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The priority of the job in the MPS queue to which the job is added.
+                    /// <para>The priority of the job in the MPS queue to which the job is added.</para>
+                    /// <list type="bullet">
+                    /// <item><description>A value of 10 indicates the highest priority.</description></item>
+                    /// <item><description>Default value: <b>6</b>.</description></item>
+                    /// </list>
                     /// 
-                    /// *   A value of 10 indicates the highest priority.
-                    /// *   Default value: **6**.
+                    /// <b>Example:</b>
+                    /// <para>6</para>
                     /// </summary>
                     [NameInMap("Priority")]
                     [Validation(Required=false)]
                     public string Priority { get; set; }
 
                     /// <summary>
-                    /// The media properties.
+                    /// <para>The media properties.</para>
                     /// </summary>
                     [NameInMap("Properties")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputProperties Properties { get; set; }
                     public class ListJobResponseBodyJobListJobOutputProperties : TeaModel {
                         /// <summary>
-                        /// The bitrate of the video.
+                        /// <para>The bitrate of the video.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>490</para>
                         /// </summary>
                         [NameInMap("Bitrate")]
                         [Validation(Required=false)]
                         public string Bitrate { get; set; }
 
                         /// <summary>
-                        /// The duration of the video.
+                        /// <para>The duration of the video.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>17</para>
                         /// </summary>
                         [NameInMap("Duration")]
                         [Validation(Required=false)]
                         public string Duration { get; set; }
 
                         /// <summary>
-                        /// The format of the video.
+                        /// <para>The format of the video.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>mp4</para>
                         /// </summary>
                         [NameInMap("FileFormat")]
                         [Validation(Required=false)]
                         public string FileFormat { get; set; }
 
                         /// <summary>
-                        /// The size of the file.
+                        /// <para>The size of the file.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1057273</para>
                         /// </summary>
                         [NameInMap("FileSize")]
                         [Validation(Required=false)]
                         public string FileSize { get; set; }
 
                         /// <summary>
-                        /// The format information.
+                        /// <para>The format information.</para>
                         /// </summary>
                         [NameInMap("Format")]
                         [Validation(Required=false)]
                         public ListJobResponseBodyJobListJobOutputPropertiesFormat Format { get; set; }
                         public class ListJobResponseBodyJobListJobOutputPropertiesFormat : TeaModel {
                             /// <summary>
-                            /// The total bitrate.
+                            /// <para>The total bitrate.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>490.784</para>
                             /// </summary>
                             [NameInMap("Bitrate")]
                             [Validation(Required=false)]
                             public string Bitrate { get; set; }
 
                             /// <summary>
-                            /// The total duration.
+                            /// <para>The total duration.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>17.234000</para>
                             /// </summary>
                             [NameInMap("Duration")]
                             [Validation(Required=false)]
                             public string Duration { get; set; }
 
                             /// <summary>
-                            /// The full name of the container format.
+                            /// <para>The full name of the container format.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>QuickTime / MOV</para>
                             /// </summary>
                             [NameInMap("FormatLongName")]
                             [Validation(Required=false)]
                             public string FormatLongName { get; set; }
 
                             /// <summary>
-                            /// The short name of the container format. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.
+                            /// <para>The short name of the container format. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>mov</para>
                             /// </summary>
                             [NameInMap("FormatName")]
                             [Validation(Required=false)]
                             public string FormatName { get; set; }
 
                             /// <summary>
-                            /// The total number of program streams.
+                            /// <para>The total number of program streams.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("NumPrograms")]
                             [Validation(Required=false)]
                             public string NumPrograms { get; set; }
 
                             /// <summary>
-                            /// The total number of media streams.
+                            /// <para>The total number of media streams.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2</para>
                             /// </summary>
                             [NameInMap("NumStreams")]
                             [Validation(Required=false)]
                             public string NumStreams { get; set; }
 
                             /// <summary>
-                            /// The size of the file.
+                            /// <para>The size of the file.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1057273</para>
                             /// </summary>
                             [NameInMap("Size")]
                             [Validation(Required=false)]
                             public string Size { get; set; }
 
                             /// <summary>
-                            /// The start time.
+                            /// <para>The start time.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0.064000</para>
                             /// </summary>
                             [NameInMap("StartTime")]
                             [Validation(Required=false)]
@@ -816,28 +1050,34 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         }
 
                         /// <summary>
-                        /// The frame rate of the video.
+                        /// <para>The frame rate of the video.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>30</para>
                         /// </summary>
                         [NameInMap("Fps")]
                         [Validation(Required=false)]
                         public string Fps { get; set; }
 
                         /// <summary>
-                        /// The height of the video.
+                        /// <para>The height of the video.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1280</para>
                         /// </summary>
                         [NameInMap("Height")]
                         [Validation(Required=false)]
                         public string Height { get; set; }
 
                         /// <summary>
-                        /// The stream information.
+                        /// <para>The stream information.</para>
                         /// </summary>
                         [NameInMap("Streams")]
                         [Validation(Required=false)]
                         public ListJobResponseBodyJobListJobOutputPropertiesStreams Streams { get; set; }
                         public class ListJobResponseBodyJobListJobOutputPropertiesStreams : TeaModel {
                             /// <summary>
-                            /// The audio streams.
+                            /// <para>The audio streams.</para>
                             /// </summary>
                             [NameInMap("AudioStreamList")]
                             [Validation(Required=false)]
@@ -848,112 +1088,160 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                                 public List<ListJobResponseBodyJobListJobOutputPropertiesStreamsAudioStreamListAudioStream> AudioStream { get; set; }
                                 public class ListJobResponseBodyJobListJobOutputPropertiesStreamsAudioStreamListAudioStream : TeaModel {
                                     /// <summary>
-                                    /// The bitrate of the audio stream.
+                                    /// <para>The bitrate of the audio stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>64.136</para>
                                     /// </summary>
                                     [NameInMap("Bitrate")]
                                     [Validation(Required=false)]
                                     public string Bitrate { get; set; }
 
                                     /// <summary>
-                                    /// The output layout of the sound channels.
+                                    /// <para>The output layout of the sound channels.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>mono</para>
                                     /// </summary>
                                     [NameInMap("ChannelLayout")]
                                     [Validation(Required=false)]
                                     public string ChannelLayout { get; set; }
 
                                     /// <summary>
-                                    /// The number of sound channels.
+                                    /// <para>The number of sound channels.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1</para>
                                     /// </summary>
                                     [NameInMap("Channels")]
                                     [Validation(Required=false)]
                                     public string Channels { get; set; }
 
                                     /// <summary>
-                                    /// The full name of the codec.
+                                    /// <para>The full name of the codec.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>AAC (Advanced Audio Coding)</para>
                                     /// </summary>
                                     [NameInMap("CodecLongName")]
                                     [Validation(Required=false)]
                                     public string CodecLongName { get; set; }
 
                                     /// <summary>
-                                    /// The short name of the codec.
+                                    /// <para>The short name of the codec.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>aac</para>
                                     /// </summary>
                                     [NameInMap("CodecName")]
                                     [Validation(Required=false)]
                                     public string CodecName { get; set; }
 
                                     /// <summary>
-                                    /// The tag of the codec.
+                                    /// <para>The tag of the codec.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>0x6134706d</para>
                                     /// </summary>
                                     [NameInMap("CodecTag")]
                                     [Validation(Required=false)]
                                     public string CodecTag { get; set; }
 
                                     /// <summary>
-                                    /// The tag string of the codec.
+                                    /// <para>The tag string of the codec.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>mp4a</para>
                                     /// </summary>
                                     [NameInMap("CodecTagString")]
                                     [Validation(Required=false)]
                                     public string CodecTagString { get; set; }
 
                                     /// <summary>
-                                    /// The codec time base.
+                                    /// <para>The codec time base.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1/32000</para>
                                     /// </summary>
                                     [NameInMap("CodecTimeBase")]
                                     [Validation(Required=false)]
                                     public string CodecTimeBase { get; set; }
 
                                     /// <summary>
-                                    /// The duration of the audio stream.
+                                    /// <para>The duration of the audio stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>17.223562</para>
                                     /// </summary>
                                     [NameInMap("Duration")]
                                     [Validation(Required=false)]
                                     public string Duration { get; set; }
 
                                     /// <summary>
-                                    /// The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.
+                                    /// <para>The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1</para>
                                     /// </summary>
                                     [NameInMap("Index")]
                                     [Validation(Required=false)]
                                     public string Index { get; set; }
 
                                     /// <summary>
-                                    /// The language of the audio stream. For more information, see [FFmpeg documentation](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+                                    /// <para>The language of the audio stream. For more information, see <a href="https://www.ffmpeg.org/ffmpeg-all.html#Metadata">FFmpeg documentation</a> and <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639</a>.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>und</para>
                                     /// </summary>
                                     [NameInMap("Lang")]
                                     [Validation(Required=false)]
                                     public string Lang { get; set; }
 
                                     /// <summary>
-                                    /// The total number of frames.
+                                    /// <para>The total number of frames.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>30</para>
                                     /// </summary>
                                     [NameInMap("NumFrames")]
                                     [Validation(Required=false)]
                                     public string NumFrames { get; set; }
 
                                     /// <summary>
-                                    /// The sampling format.
+                                    /// <para>The sampling format.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>fltp</para>
                                     /// </summary>
                                     [NameInMap("SampleFmt")]
                                     [Validation(Required=false)]
                                     public string SampleFmt { get; set; }
 
                                     /// <summary>
-                                    /// The sampling rate of the audio stream.
+                                    /// <para>The sampling rate of the audio stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>32000</para>
                                     /// </summary>
                                     [NameInMap("Samplerate")]
                                     [Validation(Required=false)]
                                     public string Samplerate { get; set; }
 
                                     /// <summary>
-                                    /// The start time.
+                                    /// <para>The start time.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>0.000000</para>
                                     /// </summary>
                                     [NameInMap("StartTime")]
                                     [Validation(Required=false)]
                                     public string StartTime { get; set; }
 
                                     /// <summary>
-                                    /// The time base of the audio stream.
+                                    /// <para>The time base of the audio stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1/32000</para>
                                     /// </summary>
                                     [NameInMap("Timebase")]
                                     [Validation(Required=false)]
@@ -964,7 +1252,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             }
 
                             /// <summary>
-                            /// The subtitle streams.
+                            /// <para>The subtitle streams.</para>
                             /// </summary>
                             [NameInMap("SubtitleStreamList")]
                             [Validation(Required=false)]
@@ -975,14 +1263,20 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                                 public List<ListJobResponseBodyJobListJobOutputPropertiesStreamsSubtitleStreamListSubtitleStream> SubtitleStream { get; set; }
                                 public class ListJobResponseBodyJobListJobOutputPropertiesStreamsSubtitleStreamListSubtitleStream : TeaModel {
                                     /// <summary>
-                                    /// The sequence number of the subtitle stream. The value indicates the position of the subtitle stream in all subtitle streams.
+                                    /// <para>The sequence number of the subtitle stream. The value indicates the position of the subtitle stream in all subtitle streams.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1</para>
                                     /// </summary>
                                     [NameInMap("Index")]
                                     [Validation(Required=false)]
                                     public string Index { get; set; }
 
                                     /// <summary>
-                                    /// The language of the subtitle stream.
+                                    /// <para>The language of the subtitle stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>und</para>
                                     /// </summary>
                                     [NameInMap("Lang")]
                                     [Validation(Required=false)]
@@ -993,7 +1287,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             }
 
                             /// <summary>
-                            /// The video streams.
+                            /// <para>The video streams.</para>
                             /// </summary>
                             [NameInMap("VideoStreamList")]
                             [Validation(Required=false)]
@@ -1004,133 +1298,187 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                                 public List<ListJobResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStream> VideoStream { get; set; }
                                 public class ListJobResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStream : TeaModel {
                                     /// <summary>
-                                    /// The average frame rate of the video stream.
+                                    /// <para>The average frame rate of the video stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>30.0</para>
                                     /// </summary>
                                     [NameInMap("AvgFPS")]
                                     [Validation(Required=false)]
                                     public string AvgFPS { get; set; }
 
                                     /// <summary>
-                                    /// The bitrate of the video stream.
+                                    /// <para>The bitrate of the video stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>421.117</para>
                                     /// </summary>
                                     [NameInMap("Bitrate")]
                                     [Validation(Required=false)]
                                     public string Bitrate { get; set; }
 
                                     /// <summary>
-                                    /// The full name of the codec.
+                                    /// <para>The full name of the codec.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</para>
                                     /// </summary>
                                     [NameInMap("CodecLongName")]
                                     [Validation(Required=false)]
                                     public string CodecLongName { get; set; }
 
                                     /// <summary>
-                                    /// The short name of the codec.
+                                    /// <para>The short name of the codec.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>h264</para>
                                     /// </summary>
                                     [NameInMap("CodecName")]
                                     [Validation(Required=false)]
                                     public string CodecName { get; set; }
 
                                     /// <summary>
-                                    /// The tag of the codec.
+                                    /// <para>The tag of the codec.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>0x31637661</para>
                                     /// </summary>
                                     [NameInMap("CodecTag")]
                                     [Validation(Required=false)]
                                     public string CodecTag { get; set; }
 
                                     /// <summary>
-                                    /// The tag string of the codec.
+                                    /// <para>The tag string of the codec.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>avc1</para>
                                     /// </summary>
                                     [NameInMap("CodecTagString")]
                                     [Validation(Required=false)]
                                     public string CodecTagString { get; set; }
 
                                     /// <summary>
-                                    /// The codec time base.
+                                    /// <para>The codec time base.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1/60</para>
                                     /// </summary>
                                     [NameInMap("CodecTimeBase")]
                                     [Validation(Required=false)]
                                     public string CodecTimeBase { get; set; }
 
                                     /// <summary>
-                                    /// The display aspect ratio (DAR).
+                                    /// <para>The display aspect ratio (DAR).</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>9:16</para>
                                     /// </summary>
                                     [NameInMap("Dar")]
                                     [Validation(Required=false)]
                                     public string Dar { get; set; }
 
                                     /// <summary>
-                                    /// The duration of the video stream.
+                                    /// <para>The duration of the video stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>17.233333</para>
                                     /// </summary>
                                     [NameInMap("Duration")]
                                     [Validation(Required=false)]
                                     public string Duration { get; set; }
 
                                     /// <summary>
-                                    /// The frame rate of the video stream.
+                                    /// <para>The frame rate of the video stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>30.0</para>
                                     /// </summary>
                                     [NameInMap("Fps")]
                                     [Validation(Required=false)]
                                     public string Fps { get; set; }
 
                                     /// <summary>
-                                    /// Indicates whether the video stream contains B-frames.
+                                    /// <para>Indicates whether the video stream contains B-frames.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>2</para>
                                     /// </summary>
                                     [NameInMap("HasBFrames")]
                                     [Validation(Required=false)]
                                     public string HasBFrames { get; set; }
 
                                     /// <summary>
-                                    /// The height of the video stream in pixels.
+                                    /// <para>The height of the video stream in pixels.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1280</para>
                                     /// </summary>
                                     [NameInMap("Height")]
                                     [Validation(Required=false)]
                                     public string Height { get; set; }
 
                                     /// <summary>
-                                    /// The sequence number of the video stream. The value indicates the position of the video stream in all video streams.
+                                    /// <para>The sequence number of the video stream. The value indicates the position of the video stream in all video streams.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>0</para>
                                     /// </summary>
                                     [NameInMap("Index")]
                                     [Validation(Required=false)]
                                     public string Index { get; set; }
 
                                     /// <summary>
-                                    /// The language of the video stream. For more information, see [FFmpeg documentation](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+                                    /// <para>The language of the video stream. For more information, see <a href="https://www.ffmpeg.org/ffmpeg-all.html#Metadata">FFmpeg documentation</a> and <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639</a>.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>und</para>
                                     /// </summary>
                                     [NameInMap("Lang")]
                                     [Validation(Required=false)]
                                     public string Lang { get; set; }
 
                                     /// <summary>
-                                    /// The codec level.
+                                    /// <para>The codec level.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>31</para>
                                     /// </summary>
                                     [NameInMap("Level")]
                                     [Validation(Required=false)]
                                     public string Level { get; set; }
 
                                     /// <summary>
-                                    /// The network bandwidth that was consumed.
+                                    /// <para>The network bandwidth that was consumed.</para>
                                     /// </summary>
                                     [NameInMap("NetworkCost")]
                                     [Validation(Required=false)]
                                     public ListJobResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStreamNetworkCost NetworkCost { get; set; }
                                     public class ListJobResponseBodyJobListJobOutputPropertiesStreamsVideoStreamListVideoStreamNetworkCost : TeaModel {
                                         /// <summary>
-                                        /// The average bitrate of the video stream.
+                                        /// <para>The average bitrate of the video stream.</para>
+                                        /// 
+                                        /// <b>Example:</b>
+                                        /// <para>300</para>
                                         /// </summary>
                                         [NameInMap("AvgBitrate")]
                                         [Validation(Required=false)]
                                         public string AvgBitrate { get; set; }
 
                                         /// <summary>
-                                        /// The maximum bandwidth that was consumed.
+                                        /// <para>The maximum bandwidth that was consumed.</para>
+                                        /// 
+                                        /// <b>Example:</b>
+                                        /// <para>10</para>
                                         /// </summary>
                                         [NameInMap("CostBandwidth")]
                                         [Validation(Required=false)]
                                         public string CostBandwidth { get; set; }
 
                                         /// <summary>
-                                        /// The amount of time consumed to preload the video stream.
+                                        /// <para>The amount of time consumed to preload the video stream.</para>
+                                        /// 
+                                        /// <b>Example:</b>
+                                        /// <para>8</para>
                                         /// </summary>
                                         [NameInMap("PreloadTime")]
                                         [Validation(Required=false)]
@@ -1139,49 +1487,70 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                                     }
 
                                     /// <summary>
-                                    /// The total frame rate.
+                                    /// <para>The total frame rate.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>30</para>
                                     /// </summary>
                                     [NameInMap("NumFrames")]
                                     [Validation(Required=false)]
                                     public string NumFrames { get; set; }
 
                                     /// <summary>
-                                    /// The pixel format of the video stream.
+                                    /// <para>The pixel format of the video stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>yuv420p</para>
                                     /// </summary>
                                     [NameInMap("PixFmt")]
                                     [Validation(Required=false)]
                                     public string PixFmt { get; set; }
 
                                     /// <summary>
-                                    /// The codec profile.
+                                    /// <para>The codec profile.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>high</para>
                                     /// </summary>
                                     [NameInMap("Profile")]
                                     [Validation(Required=false)]
                                     public string Profile { get; set; }
 
                                     /// <summary>
-                                    /// The sample aspect ratio (SAR) of the video stream.
+                                    /// <para>The sample aspect ratio (SAR) of the video stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1:1</para>
                                     /// </summary>
                                     [NameInMap("Sar")]
                                     [Validation(Required=false)]
                                     public string Sar { get; set; }
 
                                     /// <summary>
-                                    /// The start time.
+                                    /// <para>The start time.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>0.000000</para>
                                     /// </summary>
                                     [NameInMap("StartTime")]
                                     [Validation(Required=false)]
                                     public string StartTime { get; set; }
 
                                     /// <summary>
-                                    /// The time base of the video stream.
+                                    /// <para>The time base of the video stream.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1/15360</para>
                                     /// </summary>
                                     [NameInMap("Timebase")]
                                     [Validation(Required=false)]
                                     public string Timebase { get; set; }
 
                                     /// <summary>
-                                    /// The width of the video stream in pixels.
+                                    /// <para>The width of the video stream in pixels.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>720</para>
                                     /// </summary>
                                     [NameInMap("Width")]
                                     [Validation(Required=false)]
@@ -1194,7 +1563,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         }
 
                         /// <summary>
-                        /// The width of the video.
+                        /// <para>The width of the video.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>720</para>
                         /// </summary>
                         [NameInMap("Width")]
                         [Validation(Required=false)]
@@ -1203,21 +1575,24 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The rotation angle of the video.
+                    /// <para>The rotation angle of the video.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>90</para>
                     /// </summary>
                     [NameInMap("Rotate")]
                     [Validation(Required=false)]
                     public string Rotate { get; set; }
 
                     /// <summary>
-                    /// The subtitle configurations.
+                    /// <para>The subtitle configurations.</para>
                     /// </summary>
                     [NameInMap("SubtitleConfig")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputSubtitleConfig SubtitleConfig { get; set; }
                     public class ListJobResponseBodyJobListJobOutputSubtitleConfig : TeaModel {
                         /// <summary>
-                        /// The external subtitles. The value is a JSON array.
+                        /// <para>The external subtitles. The value is a JSON array.</para>
                         /// </summary>
                         [NameInMap("ExtSubtitleList")]
                         [Validation(Required=false)]
@@ -1228,50 +1603,68 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             public List<ListJobResponseBodyJobListJobOutputSubtitleConfigExtSubtitleListExtSubtitle> ExtSubtitle { get; set; }
                             public class ListJobResponseBodyJobListJobOutputSubtitleConfigExtSubtitleListExtSubtitle : TeaModel {
                                 /// <summary>
-                                /// The character set used by the external subtitle.
+                                /// <para>The character set used by the external subtitle.</para>
+                                /// <list type="bullet">
+                                /// <item><description>Valid values: UTF-8, GBK, BIG5, and auto.</description></item>
+                                /// <item><description>Default value: <b>auto</b>.</description></item>
+                                /// </list>
+                                /// <remarks>
+                                /// <para> If this parameter is set to auto, the detected character set may not be the actual character set. We recommend that you set this parameter to another value.</para>
+                                /// </remarks>
                                 /// 
-                                /// *   Valid values: UTF-8, GBK, BIG5, and auto.
-                                /// *   Default value: **auto**.
-                                /// 
-                                /// >  If this parameter is set to auto, the detected character set may not be the actual character set. We recommend that you set this parameter to another value.
+                                /// <b>Example:</b>
+                                /// <para>auto</para>
                                 /// </summary>
                                 [NameInMap("CharEnc")]
                                 [Validation(Required=false)]
                                 public string CharEnc { get; set; }
 
                                 /// <summary>
-                                /// The font of the hardcoded subtitles converted from external subtitles.
+                                /// <para>The font of the hardcoded subtitles converted from external subtitles.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>&quot;WenQuanYi Zen Hei&quot;, &quot;Yuanti SC Regular&quot;, &quot;SimSun&quot;</para>
                                 /// </summary>
                                 [NameInMap("FontName")]
                                 [Validation(Required=false)]
                                 public string FontName { get; set; }
 
                                 /// <summary>
-                                /// The input subtitle file.
-                                /// 
-                                /// *   Files in the SRT or ASS format are supported. For more information, see [Parameter details](https://help.aliyun.com/document_detail/29253.html).
-                                /// *   Example: `{"Bucket":"example-bucket","Location":"oss-cn-hangzhou","Object":"example.srt"}`.
+                                /// <para>The input subtitle file.</para>
+                                /// <list type="bullet">
+                                /// <item><description>Files in the SRT or ASS format are supported. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>.</description></item>
+                                /// <item><description>Example: <c>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;oss-cn-hangzhou&quot;,&quot;Object&quot;:&quot;example.srt&quot;}</c>.</description></item>
+                                /// </list>
                                 /// </summary>
                                 [NameInMap("Input")]
                                 [Validation(Required=false)]
                                 public ListJobResponseBodyJobListJobOutputSubtitleConfigExtSubtitleListExtSubtitleInput Input { get; set; }
                                 public class ListJobResponseBodyJobListJobOutputSubtitleConfigExtSubtitleListExtSubtitleInput : TeaModel {
                                     /// <summary>
-                                    /// The name of the OSS bucket in which the input file is stored.
+                                    /// <para>The name of the OSS bucket in which the input file is stored.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>example-bucket-****</para>
                                     /// </summary>
                                     [NameInMap("Bucket")]
                                     [Validation(Required=false)]
                                     public string Bucket { get; set; }
 
                                     /// <summary>
-                                    /// The ID of the OSS region in which the input file is stored.
+                                    /// <para>The ID of the OSS region in which the input file is stored.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>oss-cn-hangzhou</para>
                                     /// </summary>
                                     [NameInMap("Location")]
                                     [Validation(Required=false)]
                                     public string Location { get; set; }
 
                                     /// <summary>
-                                    /// The name of the OSS object that is used as the input file.
+                                    /// <para>The name of the OSS object that is used as the input file.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>example-output.flv</para>
                                     /// </summary>
                                     [NameInMap("Object")]
                                     [Validation(Required=false)]
@@ -1284,7 +1677,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         }
 
                         /// <summary>
-                        /// The subtitles.
+                        /// <para>The subtitles.</para>
                         /// </summary>
                         [NameInMap("SubtitleList")]
                         [Validation(Required=false)]
@@ -1295,7 +1688,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             public List<ListJobResponseBodyJobListJobOutputSubtitleConfigSubtitleListSubtitle> Subtitle { get; set; }
                             public class ListJobResponseBodyJobListJobOutputSubtitleConfigSubtitleListSubtitle : TeaModel {
                                 /// <summary>
-                                /// The sequence number of the video stream. The sequence number is the index of the video stream in the list and starts from 0. If you do not set the corresponding parameter in the request, the default video stream is selected.
+                                /// <para>The sequence number of the video stream. The sequence number is the index of the video stream in the list and starts from 0. If you do not set the corresponding parameter in the request, the default video stream is selected.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>0</para>
                                 /// </summary>
                                 [NameInMap("Map")]
                                 [Validation(Required=false)]
@@ -1308,17 +1704,21 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The configurations for using the resolution of the source video.
+                    /// <para>The configurations for using the resolution of the source video.</para>
                     /// </summary>
                     [NameInMap("SuperReso")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputSuperReso SuperReso { get; set; }
                     public class ListJobResponseBodyJobListJobOutputSuperReso : TeaModel {
                         /// <summary>
-                        /// Indicates whether parameters related to the sampling rate are obtained. Valid values:
+                        /// <para>Indicates whether parameters related to the sampling rate are obtained. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b></description></item>
+                        /// <item><description><b>false</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**
-                        /// *   **false**
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("IsHalfSample")]
                         [Validation(Required=false)]
@@ -1327,7 +1727,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The ending parts.
+                    /// <para>The ending parts.</para>
                     /// </summary>
                     [NameInMap("TailSlateList")]
                     [Validation(Required=false)]
@@ -1338,59 +1738,83 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         public List<ListJobResponseBodyJobListJobOutputTailSlateListTailSlate> TailSlate { get; set; }
                         public class ListJobResponseBodyJobListJobOutputTailSlateListTailSlate : TeaModel {
                             /// <summary>
-                            /// The color of the bars that are added to the ending part if the size of the ending part is smaller than that of the main part. Default value: **White**. For more information, see [Background colors](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/29253/cn_zh/1502784952344/color.txt?spm=a2c4g.11186623.2.63.1df840f74IH4Eq\\&file=color.txt).
+                            /// <para>The color of the bars that are added to the ending part if the size of the ending part is smaller than that of the main part. Default value: <b>White</b>. For more information, see <a href="https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/29253/cn_zh/1502784952344/color.txt?spm=a2c4g.11186623.2.63.1df840f74IH4Eq%5C&file=color.txt">Background colors</a>.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>White</para>
                             /// </summary>
                             [NameInMap("BgColor")]
                             [Validation(Required=false)]
                             public string BgColor { get; set; }
 
                             /// <summary>
-                            /// The duration of the transition between the main part and the ending part. A fade transition is used: The last frame of the main part fades out, and the first frame of the ending part fades in. Unit: seconds. Default value: 0.
+                            /// <para>The duration of the transition between the main part and the ending part. A fade transition is used: The last frame of the main part fades out, and the first frame of the ending part fades in. Unit: seconds. Default value: 0.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("BlendDuration")]
                             [Validation(Required=false)]
                             public string BlendDuration { get; set; }
 
                             /// <summary>
-                            /// The height of the ending part. Valid values: values in the range of (0, 4096), -1, and full.
+                            /// <para>The height of the ending part. Valid values: values in the range of (0, 4096), -1, and full.</para>
+                            /// <list type="bullet">
+                            /// <item><description>A value of -1 indicates that the height of the source of the ending part is retained.</description></item>
+                            /// <item><description>A value of full indicates that the height of the ending part equals the height of the main part.</description></item>
+                            /// <item><description>Default value: -1.</description></item>
+                            /// </list>
                             /// 
-                            /// *   A value of -1 indicates that the height of the source of the ending part is retained.
-                            /// *   A value of full indicates that the height of the ending part equals the height of the main part.
-                            /// *   Default value: -1.
+                            /// <b>Example:</b>
+                            /// <para>-1</para>
                             /// </summary>
                             [NameInMap("Height")]
                             [Validation(Required=false)]
                             public string Height { get; set; }
 
                             /// <summary>
-                            /// Indicates whether the audio content of the ending part is merged. Valid values:
+                            /// <para>Indicates whether the audio content of the ending part is merged. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>true</b></description></item>
+                            /// <item><description><b>false</b></description></item>
+                            /// </list>
                             /// 
-                            /// *   **true**
-                            /// *   **false**
+                            /// <b>Example:</b>
+                            /// <para>true</para>
                             /// </summary>
                             [NameInMap("IsMergeAudio")]
                             [Validation(Required=false)]
                             public bool? IsMergeAudio { get; set; }
 
                             /// <summary>
-                            /// The start time.
+                            /// <para>The start time.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1</para>
                             /// </summary>
                             [NameInMap("Start")]
                             [Validation(Required=false)]
                             public string Start { get; set; }
 
                             /// <summary>
-                            /// The OSS URL of the ending part.
+                            /// <para>The OSS URL of the ending part.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv</a></para>
                             /// </summary>
                             [NameInMap("TailUrl")]
                             [Validation(Required=false)]
                             public string TailUrl { get; set; }
 
                             /// <summary>
-                            /// The width of the ending part. Valid values: values in the range of (0, 4096), -1, and full.
+                            /// <para>The width of the ending part. Valid values: values in the range of (0, 4096), -1, and full.</para>
+                            /// <list type="bullet">
+                            /// <item><description>A value of -1 indicates that the width of the source of the ending part is retained. A value of full indicates that the width of the ending part equals the width of the main part.</description></item>
+                            /// <item><description>Default value: -1.</description></item>
+                            /// </list>
                             /// 
-                            /// *   A value of -1 indicates that the width of the source of the ending part is retained. A value of full indicates that the width of the ending part equals the width of the main part.
-                            /// *   Default value: -1.
+                            /// <b>Example:</b>
+                            /// <para>-1</para>
                             /// </summary>
                             [NameInMap("Width")]
                             [Validation(Required=false)]
@@ -1401,101 +1825,137 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The template ID.
+                    /// <para>The template ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>S00000000-000010</para>
                     /// </summary>
                     [NameInMap("TemplateId")]
                     [Validation(Required=false)]
                     public string TemplateId { get; set; }
 
                     /// <summary>
-                    /// The general transcoding configurations. If this parameter is specified in the request, the corresponding parameters in the specified transcoding template are overwritten.
+                    /// <para>The general transcoding configurations. If this parameter is specified in the request, the corresponding parameters in the specified transcoding template are overwritten.</para>
                     /// </summary>
                     [NameInMap("TransConfig")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputTransConfig TransConfig { get; set; }
                     public class ListJobResponseBodyJobListJobOutputTransConfig : TeaModel {
                         /// <summary>
-                        /// The method of resolution adjustment. Default value: **none**. Valid values: rescale, crop, pad, and none.
+                        /// <para>The method of resolution adjustment. Default value: <b>none</b>. Valid values: rescale, crop, pad, and none.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>none</para>
                         /// </summary>
                         [NameInMap("AdjDarMethod")]
                         [Validation(Required=false)]
                         public string AdjDarMethod { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, the input bitrate is retained and the specified audio bitrate does not take effect. This parameter has a lower priority than IsCheckAudioBitrateFail. Valid values:
+                        /// <para>Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, the input bitrate is retained and the specified audio bitrate does not take effect. This parameter has a lower priority than IsCheckAudioBitrateFail. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><para><b>true</b></para>
+                        /// </description></item>
+                        /// <item><description><para><b>false</b></para>
+                        /// </description></item>
+                        /// <item><description><para>Default value:</para>
+                        /// <list type="bullet">
+                        /// <item><description>If this parameter is empty and the codec of the output audio is different from the codec of the input audio, the default value is false.</description></item>
+                        /// <item><description>If this parameter is empty and the codec of the output audio is the same as the codec of the input audio, the default value is true.</description></item>
+                        /// </list>
+                        /// </description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**
-                        /// 
-                        /// *   **false**
-                        /// 
-                        /// *   Default value:
-                        /// 
-                        ///     *   If this parameter is empty and the codec of the output audio is different from the codec of the input audio, the default value is false.
-                        ///     *   If this parameter is empty and the codec of the output audio is the same as the codec of the input audio, the default value is true.
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("IsCheckAudioBitrate")]
                         [Validation(Required=false)]
                         public string IsCheckAudioBitrate { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, a transcoding failure is returned without transcoding the audio. This parameter has a higher priority than IsCheckAudioBitrate. Valid values:
+                        /// <para>Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, a transcoding failure is returned without transcoding the audio. This parameter has a higher priority than IsCheckAudioBitrate. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>false</b>: The audio bitrate is checked.</description></item>
+                        /// <item><description><b>true</b>: The audio bitrate is not checked.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **false**: The audio bitrate is checked.
-                        /// *   **true**: The audio bitrate is not checked.
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("IsCheckAudioBitrateFail")]
                         [Validation(Required=false)]
                         public string IsCheckAudioBitrateFail { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained. Valid values:
+                        /// <para>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b></description></item>
+                        /// <item><description><b>false</b></description></item>
+                        /// <item><description>Default value: <b>false</b>.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**
-                        /// *   **false**
-                        /// *   Default value: **false**.
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("IsCheckReso")]
                         [Validation(Required=false)]
                         public string IsCheckReso { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, a transcoding failure is returned. Valid values:
+                        /// <para>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, a transcoding failure is returned. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b></description></item>
+                        /// <item><description><b>false</b></description></item>
+                        /// <item><description>Default value: <b>false</b>.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**
-                        /// *   **false**
-                        /// *   Default value: **false**.
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("IsCheckResoFail")]
                         [Validation(Required=false)]
                         public string IsCheckResoFail { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the input bitrate is retained. Valid values:
+                        /// <para>Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the input bitrate is retained. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b></description></item>
+                        /// <item><description><b>false</b></description></item>
+                        /// <item><description>Default value: <b>false</b>.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**
-                        /// *   **false**
-                        /// *   Default value: **false**.
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("IsCheckVideoBitrate")]
                         [Validation(Required=false)]
                         public string IsCheckVideoBitrate { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, a transcoding failure is returned without transcoding the video. This parameter has a higher priority than IsCheckVideoBitrate. Valid values:
+                        /// <para>Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, a transcoding failure is returned without transcoding the video. This parameter has a higher priority than IsCheckVideoBitrate. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b></description></item>
+                        /// <item><description><b>false</b></description></item>
+                        /// <item><description>Default value: false.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**
-                        /// *   **false**
-                        /// *   Default value: false.
+                        /// <b>Example:</b>
+                        /// <para>false</para>
                         /// </summary>
                         [NameInMap("IsCheckVideoBitrateFail")]
                         [Validation(Required=false)]
                         public string IsCheckVideoBitrateFail { get; set; }
 
                         /// <summary>
-                        /// The transcoding mode.
+                        /// <para>The transcoding mode.</para>
+                        /// <list type="bullet">
+                        /// <item><description>Valid values: onepass, twopass, and CBR.</description></item>
+                        /// <item><description>Default value: onepass.</description></item>
+                        /// </list>
                         /// 
-                        /// *   Valid values: onepass, twopass, and CBR.
-                        /// *   Default value: onepass.
+                        /// <b>Example:</b>
+                        /// <para>onepass</para>
                         /// </summary>
                         [NameInMap("TransMode")]
                         [Validation(Required=false)]
@@ -1504,42 +1964,54 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The custom data.
+                    /// <para>The custom data.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test-001</para>
                     /// </summary>
                     [NameInMap("UserData")]
                     [Validation(Required=false)]
                     public string UserData { get; set; }
 
                     /// <summary>
-                    /// The video configurations.
+                    /// <para>The video configurations.</para>
                     /// </summary>
                     [NameInMap("Video")]
                     [Validation(Required=false)]
                     public ListJobResponseBodyJobListJobOutputVideo Video { get; set; }
                     public class ListJobResponseBodyJobListJobOutputVideo : TeaModel {
                         /// <summary>
-                        /// The average bitrate of the video. Unit: Kbit/s.
+                        /// <para>The average bitrate of the video. Unit: Kbit/s.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>428</para>
                         /// </summary>
                         [NameInMap("Bitrate")]
                         [Validation(Required=false)]
                         public string Bitrate { get; set; }
 
                         /// <summary>
-                        /// The bitrate range of the video.
+                        /// <para>The bitrate range of the video.</para>
                         /// </summary>
                         [NameInMap("BitrateBnd")]
                         [Validation(Required=false)]
                         public ListJobResponseBodyJobListJobOutputVideoBitrateBnd BitrateBnd { get; set; }
                         public class ListJobResponseBodyJobListJobOutputVideoBitrateBnd : TeaModel {
                             /// <summary>
-                            /// The maximum bitrate. Unit: Kbit/s.
+                            /// <para>The maximum bitrate. Unit: Kbit/s.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1000</para>
                             /// </summary>
                             [NameInMap("Max")]
                             [Validation(Required=false)]
                             public string Max { get; set; }
 
                             /// <summary>
-                            /// The minimum bitrate. Unit: Kbit/s.
+                            /// <para>The minimum bitrate. Unit: Kbit/s.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>200</para>
                             /// </summary>
                             [NameInMap("Min")]
                             [Validation(Required=false)]
@@ -1548,163 +2020,225 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         }
 
                         /// <summary>
-                        /// The size of the buffer.
+                        /// <para>The size of the buffer.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>6000</para>
                         /// </summary>
                         [NameInMap("Bufsize")]
                         [Validation(Required=false)]
                         public string Bufsize { get; set; }
 
                         /// <summary>
-                        /// The video codec. Valid values: **H.264**, **H.265**, **GIF**, and **WEBP**.
+                        /// <para>The video codec. Valid values: <b>H.264</b>, <b>H.265</b>, <b>GIF</b>, and <b>WEBP</b>.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>H.264</para>
                         /// </summary>
                         [NameInMap("Codec")]
                         [Validation(Required=false)]
                         public string Codec { get; set; }
 
                         /// <summary>
-                        /// The constant rate factor. If this parameter is returned, the value of Bitrate is invalid. Default value: **26**.
+                        /// <para>The constant rate factor. If this parameter is returned, the value of Bitrate is invalid. Default value: <b>26</b>.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>26</para>
                         /// </summary>
                         [NameInMap("Crf")]
                         [Validation(Required=false)]
                         public string Crf { get; set; }
 
                         /// <summary>
-                        /// The video cropping mode. Valid values:
+                        /// <para>The video cropping mode. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>border</b>: automatically detects and removes black borders.</description></item>
+                        /// <item><description>A value in the width:height:left:top format: crops the videos based on the custom settings. Example: 1280:800:0:140.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **border**: automatically detects and removes black borders.
-                        /// *   A value in the width:height:left:top format: crops the videos based on the custom settings. Example: 1280:800:0:140.
+                        /// <b>Example:</b>
+                        /// <para>border</para>
                         /// </summary>
                         [NameInMap("Crop")]
                         [Validation(Required=false)]
                         public string Crop { get; set; }
 
                         /// <summary>
-                        /// The strength of the independent noise reduction algorithm.
+                        /// <para>The strength of the independent noise reduction algorithm.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>5</para>
                         /// </summary>
                         [NameInMap("Degrain")]
                         [Validation(Required=false)]
                         public string Degrain { get; set; }
 
                         /// <summary>
-                        /// The frame rate.
+                        /// <para>The frame rate.</para>
+                        /// <list type="bullet">
+                        /// <item><description>The value is 60 if the frame rate of the input video exceeds 60.</description></item>
+                        /// <item><description>Default value: the frame rate of the input file.</description></item>
+                        /// </list>
                         /// 
-                        /// *   The value is 60 if the frame rate of the input video exceeds 60.
-                        /// *   Default value: the frame rate of the input file.
+                        /// <b>Example:</b>
+                        /// <para>25</para>
                         /// </summary>
                         [NameInMap("Fps")]
                         [Validation(Required=false)]
                         public string Fps { get; set; }
 
                         /// <summary>
-                        /// The maximum number of frames between two keyframes. Default value: 250.
+                        /// <para>The maximum number of frames between two keyframes. Default value: 250.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>250</para>
                         /// </summary>
                         [NameInMap("Gop")]
                         [Validation(Required=false)]
                         public string Gop { get; set; }
 
                         /// <summary>
-                        /// The height of the video.
+                        /// <para>The height of the video.</para>
+                        /// <list type="bullet">
+                        /// <item><description>Unit: pixel.</description></item>
+                        /// <item><description>Default value: the height of the input video.</description></item>
+                        /// </list>
                         /// 
-                        /// *   Unit: pixel.
-                        /// *   Default value: the height of the input video.
+                        /// <b>Example:</b>
+                        /// <para>720</para>
                         /// </summary>
                         [NameInMap("Height")]
                         [Validation(Required=false)]
                         public string Height { get; set; }
 
                         /// <summary>
-                        /// The maximum frame rate.
+                        /// <para>The maximum frame rate.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>60</para>
                         /// </summary>
                         [NameInMap("MaxFps")]
                         [Validation(Required=false)]
                         public string MaxFps { get; set; }
 
                         /// <summary>
-                        /// The maximum bitrate of the video. Unit: Kbit/s.
+                        /// <para>The maximum bitrate of the video. Unit: Kbit/s.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1000</para>
                         /// </summary>
                         [NameInMap("Maxrate")]
                         [Validation(Required=false)]
                         public string Maxrate { get; set; }
 
                         /// <summary>
-                        /// The black borders that are added to the video. Unit: pixel.
+                        /// <para>The black borders that are added to the video. Unit: pixel.</para>
+                        /// <list type="bullet">
+                        /// <item><description>Format: width:height:left:top.</description></item>
+                        /// <item><description>Example: 1280:800:0:140.</description></item>
+                        /// </list>
                         /// 
-                        /// *   Format: width:height:left:top.
-                        /// *   Example: 1280:800:0:140.
+                        /// <b>Example:</b>
+                        /// <para>1280:800:0:140</para>
                         /// </summary>
                         [NameInMap("Pad")]
                         [Validation(Required=false)]
                         public string Pad { get; set; }
 
                         /// <summary>
-                        /// The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.
+                        /// <para>The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>yuv420p</para>
                         /// </summary>
                         [NameInMap("PixFmt")]
                         [Validation(Required=false)]
                         public string PixFmt { get; set; }
 
                         /// <summary>
-                        /// The preset video algorithm. Default value: medium. Valid values:
+                        /// <para>The preset video algorithm. Default value: medium. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>veryfast</b></description></item>
+                        /// <item><description><b>fast</b></description></item>
+                        /// <item><description><b>medium</b></description></item>
+                        /// <item><description><b>slow</b></description></item>
+                        /// <item><description><b>slower</b></description></item>
+                        /// </list>
                         /// 
-                        /// *   **veryfast**
-                        /// *   **fast**
-                        /// *   **medium**
-                        /// *   **slow**
-                        /// *   **slower**
+                        /// <b>Example:</b>
+                        /// <para>medium</para>
                         /// </summary>
                         [NameInMap("Preset")]
                         [Validation(Required=false)]
                         public string Preset { get; set; }
 
                         /// <summary>
-                        /// The codec profile. Valid values:
+                        /// <para>The codec profile. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>baseline</b>: applicable to mobile devices.</description></item>
+                        /// <item><description><b>main</b>: applicable to standard-definition devices.</description></item>
+                        /// <item><description><b>high</b>: applicable to high-definition devices.</description></item>
+                        /// <item><description>Default value: <b>high</b>.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **baseline**: applicable to mobile devices.
-                        /// *   **main**: applicable to standard-definition devices.
-                        /// *   **high**: applicable to high-definition devices.
-                        /// *   Default value: **high**.
+                        /// <b>Example:</b>
+                        /// <para>high</para>
                         /// </summary>
                         [NameInMap("Profile")]
                         [Validation(Required=false)]
                         public string Profile { get; set; }
 
                         /// <summary>
-                        /// The level of quality control on the video.
+                        /// <para>The level of quality control on the video.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>15</para>
                         /// </summary>
                         [NameInMap("Qscale")]
                         [Validation(Required=false)]
                         public string Qscale { get; set; }
 
                         /// <summary>
-                        /// The priority of the resource.
+                        /// <para>The priority of the resource.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
                         /// </summary>
                         [NameInMap("ResoPriority")]
                         [Validation(Required=false)]
                         public string ResoPriority { get; set; }
 
                         /// <summary>
-                        /// The scan mode. Valid values:
+                        /// <para>The scan mode. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>If this parameter is <b>empty</b>, the scan mode of the input file is used.</description></item>
+                        /// <item><description><b>auto</b>: automatic deinterlacing.</description></item>
+                        /// <item><description><b>progressive</b>: progressive scan.</description></item>
+                        /// <item><description><b>interlaced</b>: interlaced scan.</description></item>
+                        /// <item><description><b>By default</b>, this parameter is empty.</description></item>
+                        /// </list>
+                        /// <para><b>Best practice</b>: Interlaced scan consumes less bandwidth than progressive scan, but the image quality is poor. Therefore, mainstream video production uses progressive scan.</para>
+                        /// <list type="bullet">
+                        /// <item><description>If <b>progressive scan</b> or <b>interlaced scan</b> is used when the scan mode of the input file is neither of them, the transcoding job fails.</description></item>
+                        /// <item><description>We recommend that you use <b>the scan mode of the input file</b> or <b>automatic deinterlacing</b> to improve compatibility.</description></item>
+                        /// </list>
                         /// 
-                        /// *   If this parameter is **empty**, the scan mode of the input file is used.
-                        /// *   **auto**: automatic deinterlacing.
-                        /// *   **progressive**: progressive scan.
-                        /// *   **interlaced**: interlaced scan.
-                        /// *   **By default**, this parameter is empty.
-                        /// 
-                        /// **Best practice**: Interlaced scan consumes less bandwidth than progressive scan, but the image quality is poor. Therefore, mainstream video production uses progressive scan.
-                        /// 
-                        /// *   If **progressive scan** or **interlaced scan** is used when the scan mode of the input file is neither of them, the transcoding job fails.
-                        /// *   We recommend that you use **the scan mode of the input file** or **automatic deinterlacing** to improve compatibility.
+                        /// <b>Example:</b>
+                        /// <para>interlaced</para>
                         /// </summary>
                         [NameInMap("ScanMode")]
                         [Validation(Required=false)]
                         public string ScanMode { get; set; }
 
                         /// <summary>
-                        /// The width of the video.
+                        /// <para>The width of the video.</para>
+                        /// <list type="bullet">
+                        /// <item><description>Unit: pixel.</description></item>
+                        /// <item><description>Default value: the width of the input video.</description></item>
+                        /// </list>
                         /// 
-                        /// *   Unit: pixel.
-                        /// *   Default value: the width of the input video.
+                        /// <b>Example:</b>
+                        /// <para>1280</para>
                         /// </summary>
                         [NameInMap("Width")]
                         [Validation(Required=false)]
@@ -1713,25 +2247,32 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     }
 
                     /// <summary>
-                    /// The sequence number of the video stream.
+                    /// <para>The sequence number of the video stream.</para>
+                    /// <list type="bullet">
+                    /// <item><description>Format: 0:a:{Sequence number}. Example value: 0:a:0.</description></item>
+                    /// <item><description>The sequence number is the index of the video stream in the list and starts from 0.</description></item>
+                    /// <item><description>If no sequence number is specified, the default video stream is used.</description></item>
+                    /// </list>
                     /// 
-                    /// *   Format: 0:a:{Sequence number}. Example value: 0:a:0.
-                    /// *   The sequence number is the index of the video stream in the list and starts from 0.
-                    /// *   If no sequence number is specified, the default video stream is used.
+                    /// <b>Example:</b>
+                    /// <para>0:a:0</para>
                     /// </summary>
                     [NameInMap("VideoStreamMap")]
                     [Validation(Required=false)]
                     public string VideoStreamMap { get; set; }
 
                     /// <summary>
-                    /// The URL of the watermark configuration file.
+                    /// <para>The URL of the watermark configuration file.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para><a href="http://example.com/configure">http://example.com/configure</a></para>
                     /// </summary>
                     [NameInMap("WaterMarkConfigUrl")]
                     [Validation(Required=false)]
                     public string WaterMarkConfigUrl { get; set; }
 
                     /// <summary>
-                    /// The watermarks.
+                    /// <para>The watermarks.</para>
                     /// </summary>
                     [NameInMap("WaterMarkList")]
                     [Validation(Required=false)]
@@ -1742,79 +2283,109 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         public List<ListJobResponseBodyJobListJobOutputWaterMarkListWaterMark> WaterMark { get; set; }
                         public class ListJobResponseBodyJobListJobOutputWaterMarkListWaterMark : TeaModel {
                             /// <summary>
-                            /// The horizontal offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Default value: 0. The value can be an integer or a decimal number.
+                            /// <para>The horizontal offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Default value: 0. The value can be an integer or a decimal number.</para>
+                            /// <list type="bullet">
+                            /// <item><description><para>An integer indicates the pixel value of the horizontal offset.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Valid values: [8,4096].</description></item>
+                            /// <item><description>Unit: pixel.</description></item>
+                            /// </list>
+                            /// </description></item>
+                            /// <item><description><para>A decimal number indicates the ratio of the horizontal offset to the width in the output video resolution.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Valid values: (0,1).</description></item>
+                            /// <item><description>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</description></item>
+                            /// </list>
+                            /// </description></item>
+                            /// </list>
                             /// 
-                            /// *   An integer indicates the pixel value of the horizontal offset.
-                            /// 
-                            ///     *   Valid values: [8,4096].
-                            ///     *   Unit: pixel.
-                            /// 
-                            /// *   A decimal number indicates the ratio of the horizontal offset to the width in the output video resolution.
-                            /// 
-                            ///     *   Valid values: (0,1).
-                            ///     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.
+                            /// <b>Example:</b>
+                            /// <para>100</para>
                             /// </summary>
                             [NameInMap("Dx")]
                             [Validation(Required=false)]
                             public string Dx { get; set; }
 
                             /// <summary>
-                            /// The vertical offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.
+                            /// <para>The vertical offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.</para>
+                            /// <list type="bullet">
+                            /// <item><description><para>An integer indicates the pixel value of the vertical offset.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Valid values: [8,4096].</description></item>
+                            /// <item><description>Unit: pixel.</description></item>
+                            /// </list>
+                            /// </description></item>
+                            /// <item><description><para>A decimal indicates the ratio of the vertical offset to the height in the output video resolution.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Valid values: (0,1).</description></item>
+                            /// <item><description>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</description></item>
+                            /// </list>
+                            /// </description></item>
+                            /// </list>
                             /// 
-                            /// *   An integer indicates the pixel value of the vertical offset.
-                            /// 
-                            ///     *   Valid values: [8,4096].
-                            ///     *   Unit: pixel.
-                            /// 
-                            /// *   A decimal indicates the ratio of the vertical offset to the height in the output video resolution.
-                            /// 
-                            ///     *   Valid values: (0,1).
-                            ///     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.
+                            /// <b>Example:</b>
+                            /// <para>100</para>
                             /// </summary>
                             [NameInMap("Dy")]
                             [Validation(Required=false)]
                             public string Dy { get; set; }
 
                             /// <summary>
-                            /// The height of the watermark. If this parameter is specified in the request, the corresponding parameter in the specified watermark template is overwritten. The value can be an integer or a decimal number.
+                            /// <para>The height of the watermark. If this parameter is specified in the request, the corresponding parameter in the specified watermark template is overwritten. The value can be an integer or a decimal number.</para>
+                            /// <list type="bullet">
+                            /// <item><description><para>An integer indicates the pixel value of the watermark height.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Valid values: [8,4096].</description></item>
+                            /// <item><description>Unit: pixel.</description></item>
+                            /// </list>
+                            /// </description></item>
+                            /// <item><description><para>A decimal indicates the ratio of the watermark height to the height in the output video resolution.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Valid values: (0,1).</description></item>
+                            /// <item><description>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</description></item>
+                            /// </list>
+                            /// </description></item>
+                            /// </list>
                             /// 
-                            /// *   An integer indicates the pixel value of the watermark height.
-                            /// 
-                            ///     *   Valid values: [8,4096].
-                            ///     *   Unit: pixel.
-                            /// 
-                            /// *   A decimal indicates the ratio of the watermark height to the height in the output video resolution.
-                            /// 
-                            ///     *   Valid values: (0,1).
-                            ///     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.
+                            /// <b>Example:</b>
+                            /// <para>50</para>
                             /// </summary>
                             [NameInMap("Height")]
                             [Validation(Required=false)]
                             public string Height { get; set; }
 
                             /// <summary>
-                            /// The watermark input file.
+                            /// <para>The watermark input file.</para>
                             /// </summary>
                             [NameInMap("InputFile")]
                             [Validation(Required=false)]
                             public ListJobResponseBodyJobListJobOutputWaterMarkListWaterMarkInputFile InputFile { get; set; }
                             public class ListJobResponseBodyJobListJobOutputWaterMarkListWaterMarkInputFile : TeaModel {
                                 /// <summary>
-                                /// The name of the OSS bucket in which the input file is stored.
+                                /// <para>The name of the OSS bucket in which the input file is stored.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>example-bucket</para>
                                 /// </summary>
                                 [NameInMap("Bucket")]
                                 [Validation(Required=false)]
                                 public string Bucket { get; set; }
 
                                 /// <summary>
-                                /// The ID of the OSS region in which the input file is stored.
+                                /// <para>The ID of the OSS region in which the input file is stored.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>oss-cn-hangzhou</para>
                                 /// </summary>
                                 [NameInMap("Location")]
                                 [Validation(Required=false)]
                                 public string Location { get; set; }
 
                                 /// <summary>
-                                /// The name of the Object Storage Service (OSS) object that is used as the input file.
+                                /// <para>The name of the Object Storage Service (OSS) object that is used as the input file.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>example-logo-****.png</para>
                                 /// </summary>
                                 [NameInMap("Object")]
                                 [Validation(Required=false)]
@@ -1823,46 +2394,64 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             }
 
                             /// <summary>
-                            /// The position of the watermark.
+                            /// <para>The position of the watermark.</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>TopRight</b></description></item>
+                            /// <item><description><b>TopLeft</b></description></item>
+                            /// <item><description><b>BottomRight</b></description></item>
+                            /// <item><description><b>BottomLeft</b></description></item>
+                            /// </list>
                             /// 
-                            /// *   **TopRight**
-                            /// *   **TopLeft**
-                            /// *   **BottomRight**
-                            /// *   **BottomLeft**
+                            /// <b>Example:</b>
+                            /// <para>TopRight</para>
                             /// </summary>
                             [NameInMap("ReferPos")]
                             [Validation(Required=false)]
                             public string ReferPos { get; set; }
 
                             /// <summary>
-                            /// The type of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. For more information, see [Parameter details](https://help.aliyun.com/document_detail/29253.html). Valid values:
+                            /// <para>The type of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>Image</b></description></item>
+                            /// <item><description><b>Text</b></description></item>
+                            /// </list>
                             /// 
-                            /// *   **Image**
-                            /// *   **Text**
+                            /// <b>Example:</b>
+                            /// <para>Image</para>
                             /// </summary>
                             [NameInMap("Type")]
                             [Validation(Required=false)]
                             public string Type { get; set; }
 
                             /// <summary>
-                            /// The ID of the watermark template.
+                            /// <para>The ID of the watermark template.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>88c6ca184c0e47098a5b665e2a12****</para>
                             /// </summary>
                             [NameInMap("WaterMarkTemplateId")]
                             [Validation(Required=false)]
                             public string WaterMarkTemplateId { get; set; }
 
                             /// <summary>
-                            /// The width of the watermark image. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.
+                            /// <para>The width of the watermark image. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.</para>
+                            /// <list type="bullet">
+                            /// <item><description><para>An integer indicates the pixel value of the watermark width.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Valid values: [8,4096].</description></item>
+                            /// <item><description>Unit: pixel.</description></item>
+                            /// </list>
+                            /// </description></item>
+                            /// <item><description><para>A decimal indicates the ratio of the watermark width to the width in the output video resolution.</para>
+                            /// <list type="bullet">
+                            /// <item><description>Valid values: (0,1).</description></item>
+                            /// <item><description>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</description></item>
+                            /// </list>
+                            /// </description></item>
+                            /// </list>
                             /// 
-                            /// *   An integer indicates the pixel value of the watermark width.
-                            /// 
-                            ///     *   Valid values: [8,4096].
-                            ///     *   Unit: pixel.
-                            /// 
-                            /// *   A decimal indicates the ratio of the watermark width to the width in the output video resolution.
-                            /// 
-                            ///     *   Valid values: (0,1).
-                            ///     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.
+                            /// <b>Example:</b>
+                            /// <para>50</para>
                             /// </summary>
                             [NameInMap("Width")]
                             [Validation(Required=false)]
@@ -1875,27 +2464,37 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 }
 
                 /// <summary>
-                /// The transcoding progress.
+                /// <para>The transcoding progress.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("Percent")]
                 [Validation(Required=false)]
                 public long? Percent { get; set; }
 
                 /// <summary>
-                /// The ID of the MPS queue.
+                /// <para>The ID of the MPS queue.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>88c6ca184c0e47b665e2a1267971****</para>
                 /// </summary>
                 [NameInMap("PipelineId")]
                 [Validation(Required=false)]
                 public string PipelineId { get; set; }
 
                 /// <summary>
-                /// The state of the job. Valid values:
+                /// <para>The state of the job. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Submitted</b></description></item>
+                /// <item><description><b>Transcoding</b></description></item>
+                /// <item><description><b>TranscodeSuccess</b></description></item>
+                /// <item><description><b>TranscodeFail</b></description></item>
+                /// <item><description><b>TranscodeCancelled</b></description></item>
+                /// </list>
                 /// 
-                /// *   **Submitted**
-                /// *   **Transcoding**
-                /// *   **TranscodeSuccess**
-                /// *   **TranscodeFail**
-                /// *   **TranscodeCancelled**
+                /// <b>Example:</b>
+                /// <para>TranscodeSuccess</para>
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
@@ -1906,14 +2505,20 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         }
 
         /// <summary>
-        /// The pagination token. It can be used in the next request to retrieve a new page of results.
+        /// <para>The pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16f01ad6175e4230ac42bb5182cd****</para>
         /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BC860F04-778A-472F-AB39-E1BF329C1EA8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

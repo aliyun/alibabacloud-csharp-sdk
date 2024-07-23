@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ListAllMediaBucketRequest : TeaModel {
         /// <summary>
-        /// The maximum number of media buckets to return. Valid values: 1 to 100. Default value: 50.
+        /// <para>The maximum number of media buckets to return. Valid values: 1 to 100. Default value: 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaximumPageSize")]
         [Validation(Required=false)]
         public int? MaximumPageSize { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The response to the first request contains this parameter, which is added to the next request.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The response to the first request contains this parameter, which is added to the next request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>P2Zqo1PLGhZdygo-ajSsjUX5zrBHCgXy6j4hEvv****</para>
         /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryFpFileDeleteJobListRequest : TeaModel {
         /// <summary>
-        /// The IDs of the jobs of deleting media files from a media fingerprint library. You can obtain the job IDs from the response parameters of the [SubmitFpFileDeleteJob](https://help.aliyun.com/document_detail/209274.html) operation. Separate multiple job IDs with commas (,). If you leave this parameter empty, the system returns the latest 20 jobs that are submitted.
+        /// <para>The IDs of the jobs of deleting media files from a media fingerprint library. You can obtain the job IDs from the response parameters of the <a href="https://help.aliyun.com/document_detail/209274.html">SubmitFpFileDeleteJob</a> operation. Separate multiple job IDs with commas (,). If you leave this parameter empty, the system returns the latest 20 jobs that are submitted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d98459323c024947a104f6a50cbf****,c2dc694696f1441591c5012a73c1****</para>
         /// </summary>
         [NameInMap("JobIds")]
         [Validation(Required=false)]

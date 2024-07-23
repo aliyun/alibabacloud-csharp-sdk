@@ -10,165 +10,213 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class UpdateTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The type of the transcoding template.
+        /// <para>The type of the transcoding template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5E4FB22E-B9EA-4E24-8FFC-B407EA71QW21</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The type of the transcoding template.
+        /// <para>The type of the transcoding template.</para>
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]
         public UpdateTemplateResponseBodyTemplate Template { get; set; }
         public class UpdateTemplateResponseBodyTemplate : TeaModel {
             /// <summary>
-            /// The audio codec settings.
+            /// <para>The audio codec settings.</para>
             /// </summary>
             [NameInMap("Audio")]
             [Validation(Required=false)]
             public UpdateTemplateResponseBodyTemplateAudio Audio { get; set; }
             public class UpdateTemplateResponseBodyTemplateAudio : TeaModel {
                 /// <summary>
-                /// The ID of the transcoding template.
+                /// <para>The ID of the transcoding template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>500</para>
                 /// </summary>
                 [NameInMap("Bitrate")]
                 [Validation(Required=false)]
                 public string Bitrate { get; set; }
 
                 /// <summary>
-                /// The audio bitrate of the output file.
+                /// <para>The audio bitrate of the output file.</para>
+                /// <list type="bullet">
+                /// <item><description>Valid values: 8 to 1000.****</description></item>
+                /// <item><description>Unit: Kbit/s.</description></item>
+                /// <item><description>Default value: <b>128</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   Valid values: 8 to 1000.****
-                /// *   Unit: Kbit/s.
-                /// *   Default value: **128**.
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Channels")]
                 [Validation(Required=false)]
                 public string Channels { get; set; }
 
                 /// <summary>
-                /// The sampling rate.
+                /// <para>The sampling rate.</para>
+                /// <list type="bullet">
+                /// <item><description>Unit: Hz.</description></item>
+                /// <item><description>Default value: <b>44100</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   Unit: Hz.
-                /// *   Default value: **44100**.
+                /// <b>Example:</b>
+                /// <para>aac</para>
                 /// </summary>
                 [NameInMap("Codec")]
                 [Validation(Required=false)]
                 public string Codec { get; set; }
 
                 /// <summary>
-                /// Indicates whether the audio stream is deleted.
+                /// <para>Indicates whether the audio stream is deleted.</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The audio stream is deleted.</description></item>
+                /// <item><description><b>false</b>: The audio stream is retained.</description></item>
+                /// <item><description>Default value: <b>false</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The audio stream is deleted.
-                /// *   **false**: The audio stream is retained.
-                /// *   Default value: **false**.
+                /// <b>Example:</b>
+                /// <para>aac_low</para>
                 /// </summary>
                 [NameInMap("Profile")]
                 [Validation(Required=false)]
                 public string Profile { get; set; }
 
                 /// <summary>
-                /// The number of sound channels. Default value: **2**.
+                /// <para>The number of sound channels. Default value: <b>2</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Qscale")]
                 [Validation(Required=false)]
                 public string Qscale { get; set; }
 
                 /// <summary>
-                /// The audio codec format. Default value: **aac**. Valid values:
+                /// <para>The audio codec format. Default value: <b>aac</b>. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>aac</b></description></item>
+                /// <item><description><b>mp3</b></description></item>
+                /// <item><description><b>vorbis</b></description></item>
+                /// <item><description><b>flac</b></description></item>
+                /// </list>
                 /// 
-                /// *   **aac**
-                /// *   **mp3**
-                /// *   **vorbis**
-                /// *   **flac**
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Remove")]
                 [Validation(Required=false)]
                 public string Remove { get; set; }
 
                 /// <summary>
-                /// The level of the independent denoising algorithm.
+                /// <para>The level of the independent denoising algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>44100</para>
                 /// </summary>
                 [NameInMap("Samplerate")]
                 [Validation(Required=false)]
                 public string Samplerate { get; set; }
 
                 /// <summary>
-                /// The volume control configurations.
+                /// <para>The volume control configurations.</para>
                 /// </summary>
                 [NameInMap("Volume")]
                 [Validation(Required=false)]
                 public UpdateTemplateResponseBodyTemplateAudioVolume Volume { get; set; }
                 public class UpdateTemplateResponseBodyTemplateAudioVolume : TeaModel {
                     /// <summary>
-                    /// The expected volume.
+                    /// <para>The expected volume.</para>
+                    /// <list type="bullet">
+                    /// <item><description>This parameter takes effect only if the value of Method is dynamic.</description></item>
+                    /// <item><description>Unit: decibel.</description></item>
+                    /// <item><description>Valid values: [-70,-5].</description></item>
+                    /// <item><description>Default value: -6.</description></item>
+                    /// </list>
                     /// 
-                    /// *   This parameter takes effect only if the value of Method is dynamic.
-                    /// *   Unit: decibel.
-                    /// *   Valid values: [-70,-5].
-                    /// *   Default value: -6.
+                    /// <b>Example:</b>
+                    /// <para>-6</para>
                     /// </summary>
                     [NameInMap("IntegratedLoudnessTarget")]
                     [Validation(Required=false)]
                     public string IntegratedLoudnessTarget { get; set; }
 
                     /// <summary>
-                    /// The increased volume relative to the volume of the input audio.
+                    /// <para>The increased volume relative to the volume of the input audio.</para>
+                    /// <list type="bullet">
+                    /// <item><description>This parameter takes effect only if the value of Method is linear.</description></item>
+                    /// <item><description>Unit: decibel.</description></item>
+                    /// <item><description>Valid values: less than or equal to 20.</description></item>
+                    /// <item><description>Default value: -20.</description></item>
+                    /// </list>
                     /// 
-                    /// *   This parameter takes effect only if the value of Method is linear.
-                    /// *   Unit: decibel.
-                    /// *   Valid values: less than or equal to 20.
-                    /// *   Default value: -20.
+                    /// <b>Example:</b>
+                    /// <para>-20</para>
                     /// </summary>
                     [NameInMap("Level")]
                     [Validation(Required=false)]
                     public string Level { get; set; }
 
                     /// <summary>
-                    /// The range of the volume relative to the expected volume.
+                    /// <para>The range of the volume relative to the expected volume.</para>
+                    /// <list type="bullet">
+                    /// <item><description>This parameter takes effect only if the value of Method is dynamic.</description></item>
+                    /// <item><description>Unit: decibel.</description></item>
+                    /// <item><description>Valid values: [1,20].</description></item>
+                    /// <item><description>Default value: 8.</description></item>
+                    /// </list>
                     /// 
-                    /// *   This parameter takes effect only if the value of Method is dynamic.
-                    /// *   Unit: decibel.
-                    /// *   Valid values: [1,20].
-                    /// *   Default value: 8.
+                    /// <b>Example:</b>
+                    /// <para>8</para>
                     /// </summary>
                     [NameInMap("LoudnessRangeTarget")]
                     [Validation(Required=false)]
                     public string LoudnessRangeTarget { get; set; }
 
                     /// <summary>
-                    /// The volume adjustment method. Valid values:
+                    /// <para>The volume adjustment method. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>auto</b></description></item>
+                    /// <item><description><b>dynamic</b></description></item>
+                    /// <item><description><b>linear</b></description></item>
+                    /// </list>
                     /// 
-                    /// *   **auto**
-                    /// *   **dynamic**
-                    /// *   **linear**
+                    /// <b>Example:</b>
+                    /// <para>auto</para>
                     /// </summary>
                     [NameInMap("Method")]
                     [Validation(Required=false)]
                     public string Method { get; set; }
 
                     /// <summary>
-                    /// The volume adjustment coefficient.
+                    /// <para>The volume adjustment coefficient.</para>
+                    /// <para>This parameter takes effect only if the value of Method is adaptive.</para>
+                    /// <para>Valid values: [0,1].</para>
+                    /// <para>Default value: 0.9.</para>
                     /// 
-                    /// This parameter takes effect only if the value of Method is adaptive.
-                    /// 
-                    /// Valid values: [0,1].
-                    /// 
-                    /// Default value: 0.9.
+                    /// <b>Example:</b>
+                    /// <para>0.9</para>
                     /// </summary>
                     [NameInMap("PeakLevel")]
                     [Validation(Required=false)]
                     public string PeakLevel { get; set; }
 
                     /// <summary>
-                    /// The peak volume.
+                    /// <para>The peak volume.</para>
+                    /// <list type="bullet">
+                    /// <item><description>This parameter takes effect only if the value of Method is dynamic.</description></item>
+                    /// <item><description>Unit: decibel.</description></item>
+                    /// <item><description>Valid values: [-9,0].</description></item>
+                    /// <item><description>Default value: -1.</description></item>
+                    /// </list>
                     /// 
-                    /// *   This parameter takes effect only if the value of Method is dynamic.
-                    /// *   Unit: decibel.
-                    /// *   Valid values: [-9,0].
-                    /// *   Default value: -1.
+                    /// <b>Example:</b>
+                    /// <para>-1</para>
                     /// </summary>
                     [NameInMap("TruePeak")]
                     [Validation(Required=false)]
@@ -179,14 +227,17 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             }
 
             /// <summary>
-            /// The container format.
+            /// <para>The container format.</para>
             /// </summary>
             [NameInMap("Container")]
             [Validation(Required=false)]
             public UpdateTemplateResponseBodyTemplateContainer Container { get; set; }
             public class UpdateTemplateResponseBodyTemplateContainer : TeaModel {
                 /// <summary>
-                /// The container format.
+                /// <para>The container format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mp4</para>
                 /// </summary>
                 [NameInMap("Format")]
                 [Validation(Required=false)]
@@ -195,49 +246,64 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             }
 
             /// <summary>
-            /// The container configurations.
+            /// <para>The container configurations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16f01ad6175e4230ac42bb5182cd****</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The transmuxing configurations for WebP.
+            /// <para>The transmuxing configurations for WebP.</para>
             /// </summary>
             [NameInMap("MuxConfig")]
             [Validation(Required=false)]
             public UpdateTemplateResponseBodyTemplateMuxConfig MuxConfig { get; set; }
             public class UpdateTemplateResponseBodyTemplateMuxConfig : TeaModel {
                 /// <summary>
-                /// The duration for which the final frame is paused. Unit: milliseconds.
+                /// <para>The duration for which the final frame is paused. Unit: milliseconds.</para>
                 /// </summary>
                 [NameInMap("Gif")]
                 [Validation(Required=false)]
                 public UpdateTemplateResponseBodyTemplateMuxConfigGif Gif { get; set; }
                 public class UpdateTemplateResponseBodyTemplateMuxConfigGif : TeaModel {
                     /// <summary>
-                    /// The loop count.
+                    /// <para>The loop count.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>bayer</para>
                     /// </summary>
                     [NameInMap("DitherMode")]
                     [Validation(Required=false)]
                     public string DitherMode { get; set; }
 
                     /// <summary>
-                    /// The color dithering algorithm of the palette. Valid values: sierra and bayer.
+                    /// <para>The color dithering algorithm of the palette. Valid values: sierra and bayer.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
                     /// </summary>
                     [NameInMap("FinalDelay")]
                     [Validation(Required=false)]
                     public string FinalDelay { get; set; }
 
                     /// <summary>
-                    /// The segment configurations.
+                    /// <para>The segment configurations.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("IsCustomPalette")]
                     [Validation(Required=false)]
                     public string IsCustomPalette { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the custom palette is used.
+                    /// <para>Indicates whether the custom palette is used.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Loop")]
                     [Validation(Required=false)]
@@ -246,14 +312,17 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 }
 
                 /// <summary>
-                /// The length of the segment. Unit: seconds.
+                /// <para>The length of the segment. Unit: seconds.</para>
                 /// </summary>
                 [NameInMap("Segment")]
                 [Validation(Required=false)]
                 public UpdateTemplateResponseBodyTemplateMuxConfigSegment Segment { get; set; }
                 public class UpdateTemplateResponseBodyTemplateMuxConfigSegment : TeaModel {
                     /// <summary>
-                    /// The name of the template.
+                    /// <para>The name of the template.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
                     /// </summary>
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
@@ -262,14 +331,17 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 }
 
                 /// <summary>
-                /// The loop count.
+                /// <para>The loop count.</para>
                 /// </summary>
                 [NameInMap("Webp")]
                 [Validation(Required=false)]
                 public UpdateTemplateResponseBodyTemplateMuxConfigWebp Webp { get; set; }
                 public class UpdateTemplateResponseBodyTemplateMuxConfigWebp : TeaModel {
                     /// <summary>
-                    /// The transmuxing configurations for GIF.
+                    /// <para>The transmuxing configurations for GIF.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Loop")]
                     [Validation(Required=false)]
@@ -280,117 +352,158 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             }
 
             /// <summary>
-            /// The audio codec configurations.
+            /// <para>The audio codec configurations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MPS-example</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The transmuxing configurations.
+            /// <para>The transmuxing configurations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Normal</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// Indicates whether the audio bitrate is checked. If the bitrate of the output audio is greater than the bitrate of the input audio, the bitrate of the input audio is retained after transcoding. In this case, the specified audio bitrate does not take effect. This parameter has a lower priority than the IsCheckAudioBitrateFail parameter. Valid values:
-            /// 
-            /// *   **true**: The audio bitrate is checked.
-            /// 
-            /// *   **false**: The audio bitrate is not checked.
-            /// 
-            /// *   Default value:
-            /// 
-            ///     *   If the parameter is left empty and the codec of the output audio is different from that of the input audio, the default value is false.
-            ///     *   If the parameter is left empty and the codec of the output audio is the same as that of the input audio, the default value is true.
+            /// <para>Indicates whether the audio bitrate is checked. If the bitrate of the output audio is greater than the bitrate of the input audio, the bitrate of the input audio is retained after transcoding. In this case, the specified audio bitrate does not take effect. This parameter has a lower priority than the IsCheckAudioBitrateFail parameter. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: The audio bitrate is checked.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The audio bitrate is not checked.</para>
+            /// </description></item>
+            /// <item><description><para>Default value:</para>
+            /// <list type="bullet">
+            /// <item><description>If the parameter is left empty and the codec of the output audio is different from that of the input audio, the default value is false.</description></item>
+            /// <item><description>If the parameter is left empty and the codec of the output audio is the same as that of the input audio, the default value is true.</description></item>
+            /// </list>
+            /// </description></item>
+            /// </list>
             /// </summary>
             [NameInMap("TransConfig")]
             [Validation(Required=false)]
             public UpdateTemplateResponseBodyTemplateTransConfig TransConfig { get; set; }
             public class UpdateTemplateResponseBodyTemplateTransConfig : TeaModel {
                 /// <summary>
-                /// Indicates whether the video bitrate is checked. If this parameter is set to true and the system detects that the video bitrate of the output file is greater than that of the input file, the video bitrate of the input file is retained after transcoding. Valid values:
+                /// <para>Indicates whether the video bitrate is checked. If this parameter is set to true and the system detects that the video bitrate of the output file is greater than that of the input file, the video bitrate of the input file is retained after transcoding. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The video bitrate is checked.</description></item>
+                /// <item><description><b>false</b>: The video bitrate is not checked.</description></item>
+                /// <item><description>Default value: <b>false</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The video bitrate is checked.
-                /// *   **false**: The video bitrate is not checked.
-                /// *   Default value: **false**.
+                /// <b>Example:</b>
+                /// <para>none</para>
                 /// </summary>
                 [NameInMap("AdjDarMethod")]
                 [Validation(Required=false)]
                 public string AdjDarMethod { get; set; }
 
                 /// <summary>
-                /// The transcoding mode. Default value: **onepass**. Valid values:
+                /// <para>The transcoding mode. Default value: <b>onepass</b>. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>onepass</b></description></item>
+                /// <item><description><b>twopass</b></description></item>
+                /// <item><description><b>CBR</b></description></item>
+                /// </list>
                 /// 
-                /// *   **onepass**
-                /// *   **twopass**
-                /// *   **CBR**
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsCheckAudioBitrate")]
                 [Validation(Required=false)]
                 public string IsCheckAudioBitrate { get; set; }
 
                 /// <summary>
-                /// The status of the template. Valid values:
+                /// <para>The status of the template. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Normal</b>: The template is normal.</description></item>
+                /// <item><description><b>Deleted</b>: The template is deleted.</description></item>
+                /// </list>
                 /// 
-                /// *   **Normal**: The template is normal.
-                /// *   **Deleted**: The template is deleted.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsCheckAudioBitrateFail")]
                 [Validation(Required=false)]
                 public string IsCheckAudioBitrateFail { get; set; }
 
                 /// <summary>
-                /// Indicates whether the video bitrate is checked. This parameter has a higher priority than the IsCheckVideoBitrate parameter. Valid values:
+                /// <para>Indicates whether the video bitrate is checked. This parameter has a higher priority than the IsCheckVideoBitrate parameter. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The video bitrate is checked</description></item>
+                /// <item><description><b>false</b>: The video bitrate is not checked.</description></item>
+                /// <item><description>Default value: <b>false</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The video bitrate is checked
-                /// *   **false**: The video bitrate is not checked.
-                /// *   Default value: **false**.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsCheckReso")]
                 [Validation(Required=false)]
                 public string IsCheckReso { get; set; }
 
                 /// <summary>
-                /// Indicates whether the audio bitrate is checked. This parameter has a higher priority than the IsCheckAudioBitrate parameter. Valid values:
+                /// <para>Indicates whether the audio bitrate is checked. This parameter has a higher priority than the IsCheckAudioBitrate parameter. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The audio bitrate is checked.</description></item>
+                /// <item><description><b>false</b>: The audio bitrate is not checked.</description></item>
+                /// <item><description>Default value: <b>false</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The audio bitrate is checked.
-                /// *   **false**: The audio bitrate is not checked.
-                /// *   Default value: **false**.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsCheckResoFail")]
                 [Validation(Required=false)]
                 public string IsCheckResoFail { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resolution is checked. If this parameter is set to true and the system detects that the resolution of the output file is higher than that of the input file based on the width or height, an error that indicates a transcoding failure is returned. Valid values:
+                /// <para>Indicates whether the resolution is checked. If this parameter is set to true and the system detects that the resolution of the output file is higher than that of the input file based on the width or height, an error that indicates a transcoding failure is returned. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The resolution is checked.</description></item>
+                /// <item><description><b>false</b>: The resolution is not checked.</description></item>
+                /// <item><description>Default value: <b>false</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The resolution is checked.
-                /// *   **false**: The resolution is not checked.
-                /// *   Default value: **false**.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsCheckVideoBitrate")]
                 [Validation(Required=false)]
                 public string IsCheckVideoBitrate { get; set; }
 
                 /// <summary>
-                /// The method of resolution adjustment. Default value: **none**. Valid values:
+                /// <para>The method of resolution adjustment. Default value: <b>none</b>. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>rescale: The input video is rescaled.</description></item>
+                /// <item><description>crop: The input video is cropped.</description></item>
+                /// <item><description>none: No change is made.</description></item>
+                /// </list>
                 /// 
-                /// *   rescale: The input video is rescaled.
-                /// *   crop: The input video is cropped.
-                /// *   none: No change is made.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsCheckVideoBitrateFail")]
                 [Validation(Required=false)]
                 public string IsCheckVideoBitrateFail { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained after transcoding. Valid values:
+                /// <para>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained after transcoding. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The resolution is checked.</description></item>
+                /// <item><description><b>false</b>: The resolution is not checked.</description></item>
+                /// <item><description>Default value: <b>false</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The resolution is checked.
-                /// *   **false**: The resolution is not checked.
-                /// *   Default value: **false**.
+                /// <b>Example:</b>
+                /// <para>onepass</para>
                 /// </summary>
                 [NameInMap("TransMode")]
                 [Validation(Required=false)]
@@ -399,35 +512,44 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             }
 
             /// <summary>
-            /// The video codec configurations.
+            /// <para>The video codec configurations.</para>
             /// </summary>
             [NameInMap("Video")]
             [Validation(Required=false)]
             public UpdateTemplateResponseBodyTemplateVideo Video { get; set; }
             public class UpdateTemplateResponseBodyTemplateVideo : TeaModel {
                 /// <summary>
-                /// The maximum bitrate of the video. Unit: Kbit/s.
+                /// <para>The maximum bitrate of the video. Unit: Kbit/s.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("Bitrate")]
                 [Validation(Required=false)]
                 public string Bitrate { get; set; }
 
                 /// <summary>
-                /// The upper limit of the total bitrate. Unit: Kbit/s.
+                /// <para>The upper limit of the total bitrate. Unit: Kbit/s.</para>
                 /// </summary>
                 [NameInMap("BitrateBnd")]
                 [Validation(Required=false)]
                 public UpdateTemplateResponseBodyTemplateVideoBitrateBnd BitrateBnd { get; set; }
                 public class UpdateTemplateResponseBodyTemplateVideoBitrateBnd : TeaModel {
                     /// <summary>
-                    /// The lower limit of the total bitrate. Unit: Kbit/s.
+                    /// <para>The lower limit of the total bitrate. Unit: Kbit/s.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>500</para>
                     /// </summary>
                     [NameInMap("Max")]
                     [Validation(Required=false)]
                     public string Max { get; set; }
 
                     /// <summary>
-                    /// The pixel format. Valid values: standard pixel formats such as yuv420p and yuvj420p.
+                    /// <para>The pixel format. Valid values: standard pixel formats such as yuv420p and yuvj420p.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
                     /// </summary>
                     [NameInMap("Min")]
                     [Validation(Required=false)]
@@ -436,136 +558,187 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 }
 
                 /// <summary>
-                /// The level of quality control on the video.
+                /// <para>The level of quality control on the video.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>6000</para>
                 /// </summary>
                 [NameInMap("Bufsize")]
                 [Validation(Required=false)]
                 public string Bufsize { get; set; }
 
                 /// <summary>
-                /// The height of the output video.
+                /// <para>The height of the output video.</para>
+                /// <list type="bullet">
+                /// <item><description>Unit: pixel.</description></item>
+                /// <item><description>Default value: the height of the input video.</description></item>
+                /// </list>
                 /// 
-                /// *   Unit: pixel.
-                /// *   Default value: the height of the input video.
+                /// <b>Example:</b>
+                /// <para>H.264</para>
                 /// </summary>
                 [NameInMap("Codec")]
                 [Validation(Required=false)]
                 public string Codec { get; set; }
 
                 /// <summary>
-                /// Indicates whether the video stream is deleted. Valid values:
+                /// <para>Indicates whether the video stream is deleted. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The video stream is deleted.</description></item>
+                /// <item><description><b>false</b>: The video stream is retained.</description></item>
+                /// <item><description>Default value: <b>false</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The video stream is deleted.
-                /// *   **false**: The video stream is retained.
-                /// *   Default value: **false**.
+                /// <b>Example:</b>
+                /// <para>15</para>
                 /// </summary>
                 [NameInMap("Crf")]
                 [Validation(Required=false)]
                 public string Crf { get; set; }
 
                 /// <summary>
-                /// The average bitrate of the video. Unit: Kbit/s.
+                /// <para>The average bitrate of the video. Unit: Kbit/s.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>border</para>
                 /// </summary>
                 [NameInMap("Crop")]
                 [Validation(Required=false)]
                 public string Crop { get; set; }
 
                 /// <summary>
-                /// The average bitrate range of the video.
+                /// <para>The average bitrate range of the video.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Degrain")]
                 [Validation(Required=false)]
                 public string Degrain { get; set; }
 
                 /// <summary>
-                /// The preset video algorithm. Default value: **medium**. Valid values:
+                /// <para>The preset video algorithm. Default value: <b>medium</b>. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>veryfast</b></description></item>
+                /// <item><description><b>fast</b></description></item>
+                /// <item><description><b>medium</b></description></item>
+                /// <item><description><b>slow</b></description></item>
+                /// <item><description><b>slower</b></description></item>
+                /// </list>
                 /// 
-                /// *   **veryfast**
-                /// *   **fast**
-                /// *   **medium**
-                /// *   **slow**
-                /// *   **slower**
+                /// <b>Example:</b>
+                /// <para>25</para>
                 /// </summary>
                 [NameInMap("Fps")]
                 [Validation(Required=false)]
                 public string Fps { get; set; }
 
                 /// <summary>
-                /// The width of the video.
+                /// <para>The width of the video.</para>
+                /// <list type="bullet">
+                /// <item><description>Unit: pixel.</description></item>
+                /// <item><description>Default value: <b>the width of the input video</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   Unit: pixel.
-                /// *   Default value: **the width of the input video**.
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Gop")]
                 [Validation(Required=false)]
                 public string Gop { get; set; }
 
                 /// <summary>
-                /// Indicates whether the HDR2SDR conversion feature is enabled. If this feature is enabled, high dynamic range (HDR) videos are transcoded to standard dynamic range (SDR) videos.
+                /// <para>Indicates whether the HDR2SDR conversion feature is enabled. If this feature is enabled, high dynamic range (HDR) videos are transcoded to standard dynamic range (SDR) videos.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Hdr2sdr")]
                 [Validation(Required=false)]
                 public string Hdr2sdr { get; set; }
 
                 /// <summary>
-                /// The level of the independent denoising algorithm.
+                /// <para>The level of the independent denoising algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>800</para>
                 /// </summary>
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public string Height { get; set; }
 
                 /// <summary>
-                /// The size of the buffer.
+                /// <para>The size of the buffer.</para>
+                /// <list type="bullet">
+                /// <item><description>Unit: KB.</description></item>
+                /// <item><description>Default value: <b>6000</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   Unit: KB.
-                /// *   Default value: **6000**.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("LongShortMode")]
                 [Validation(Required=false)]
                 public string LongShortMode { get; set; }
 
                 /// <summary>
-                /// The encoding profile. Valid values:
+                /// <para>The encoding profile. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>baseline</b>: applicable to mobile devices.</description></item>
+                /// <item><description><b>main</b>: applicable to standard-definition devices.</description></item>
+                /// <item><description><b>high</b>: applicable to high-definition devices.</description></item>
+                /// <item><description>Default value: <b>high</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   **baseline**: applicable to mobile devices.
-                /// *   **main**: applicable to standard-definition devices.
-                /// *   **high**: applicable to high-definition devices.
-                /// *   Default value: **high**.
+                /// <b>Example:</b>
+                /// <para>60</para>
                 /// </summary>
                 [NameInMap("MaxFps")]
                 [Validation(Required=false)]
                 public string MaxFps { get; set; }
 
                 /// <summary>
-                /// The maximum frame rate.
+                /// <para>The maximum frame rate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>500</para>
                 /// </summary>
                 [NameInMap("Maxrate")]
                 [Validation(Required=false)]
                 public string Maxrate { get; set; }
 
                 /// <summary>
-                /// The Narrowband HD settings.
+                /// <para>The Narrowband HD settings.</para>
                 /// </summary>
                 [NameInMap("NarrowBand")]
                 [Validation(Required=false)]
                 public UpdateTemplateResponseBodyTemplateVideoNarrowBand NarrowBand { get; set; }
                 public class UpdateTemplateResponseBodyTemplateVideoNarrowBand : TeaModel {
                     /// <summary>
-                    /// The upper limit of the dynamic bitrate. If this parameter is set, the average bitrate is in the range of (0, 1000000].
+                    /// <para>The upper limit of the dynamic bitrate. If this parameter is set, the average bitrate is in the range of (0, 1000000].</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3000</para>
                     /// </summary>
                     [NameInMap("Abrmax")]
                     [Validation(Required=false)]
                     public float? Abrmax { get; set; }
 
                     /// <summary>
-                    /// The maximum ratio of the upper limit of dynamic bitrate. If this parameter is set, the value of Abrmax does not exceed x times of the source video bitrate. Valid values: (0,1.0].
+                    /// <para>The maximum ratio of the upper limit of dynamic bitrate. If this parameter is set, the value of Abrmax does not exceed x times of the source video bitrate. Valid values: (0,1.0].</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.0</para>
                     /// </summary>
                     [NameInMap("MaxAbrRatio")]
                     [Validation(Required=false)]
                     public float? MaxAbrRatio { get; set; }
 
                     /// <summary>
-                    /// The Narrowband HD version. Only 1.0 may be returned.
+                    /// <para>The Narrowband HD version. Only 1.0 may be returned.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.0</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -574,78 +747,110 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 }
 
                 /// <summary>
-                /// The video codec. Default value: **H.264**.
+                /// <para>The video codec. Default value: <b>H.264</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1280:800:0:140</para>
                 /// </summary>
                 [NameInMap("Pad")]
                 [Validation(Required=false)]
                 public string Pad { get; set; }
 
                 /// <summary>
-                /// The black borders added to the video.
+                /// <para>The black borders added to the video.</para>
+                /// <list type="bullet">
+                /// <item><description>Format: width:height:left:top.</description></item>
+                /// <item><description>Example: 1280:800:0:140.</description></item>
+                /// </list>
                 /// 
-                /// *   Format: width:height:left:top.
-                /// *   Example: 1280:800:0:140.
+                /// <b>Example:</b>
+                /// <para>yuv420p</para>
                 /// </summary>
                 [NameInMap("PixFmt")]
                 [Validation(Required=false)]
                 public string PixFmt { get; set; }
 
                 /// <summary>
-                /// The scan mode. Valid values:
+                /// <para>The scan mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>interlaced</b>: An interlaced scan is performed.</description></item>
+                /// <item><description><b>progressive</b>: A progressive scan is performed.</description></item>
+                /// </list>
                 /// 
-                /// *   **interlaced**: An interlaced scan is performed.
-                /// *   **progressive**: A progressive scan is performed.
+                /// <b>Example:</b>
+                /// <para>medium</para>
                 /// </summary>
                 [NameInMap("Preset")]
                 [Validation(Required=false)]
                 public string Preset { get; set; }
 
                 /// <summary>
-                /// The bitrate quality control factor.
+                /// <para>The bitrate quality control factor.</para>
+                /// <list type="bullet">
+                /// <item><description>Default value if the Codec parameter is set to H.264: <b>23</b>. Default value if the Codec parameter is set to H.265: <b>26</b>.</description></item>
+                /// <item><description>If this parameter is returned, the setting of the Bitrate parameter is invalid.</description></item>
+                /// </list>
                 /// 
-                /// *   Default value if the Codec parameter is set to H.264: **23**. Default value if the Codec parameter is set to H.265: **26**.
-                /// *   If this parameter is returned, the setting of the Bitrate parameter is invalid.
+                /// <b>Example:</b>
+                /// <para>high</para>
                 /// </summary>
                 [NameInMap("Profile")]
                 [Validation(Required=false)]
                 public string Profile { get; set; }
 
                 /// <summary>
-                /// The method used to crop the video.
+                /// <para>The method used to crop the video.</para>
+                /// <list type="bullet">
+                /// <item><description><b>border</b>: automatically detects and removes borders.</description></item>
+                /// <item><description>Value in the width:height:left:top format: crops the video based on custom settings.**** Example: 1280:800:0:140.</description></item>
+                /// </list>
                 /// 
-                /// *   **border**: automatically detects and removes borders.
-                /// *   Value in the width:height:left:top format: crops the video based on custom settings.**** Example: 1280:800:0:140.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Qscale")]
                 [Validation(Required=false)]
                 public string Qscale { get; set; }
 
                 /// <summary>
-                /// The maximum number of frames between two keyframes. Default value: **250**.
+                /// <para>The maximum number of frames between two keyframes. Default value: <b>250</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Remove")]
                 [Validation(Required=false)]
                 public string Remove { get; set; }
 
                 /// <summary>
-                /// The general transcoding configurations.
+                /// <para>The general transcoding configurations.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ResoPriority")]
                 [Validation(Required=false)]
                 public string ResoPriority { get; set; }
 
                 /// <summary>
-                /// The policy of resolution adjustment.
+                /// <para>The policy of resolution adjustment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>interlaced</para>
                 /// </summary>
                 [NameInMap("ScanMode")]
                 [Validation(Required=false)]
                 public string ScanMode { get; set; }
 
                 /// <summary>
-                /// The frame rate.
+                /// <para>The frame rate.</para>
+                /// <list type="bullet">
+                /// <item><description>A value of 60 is returned if the frame rate of the input video exceeds 60.</description></item>
+                /// <item><description>Default value: the frame rate of the input video.</description></item>
+                /// </list>
                 /// 
-                /// *   A value of 60 is returned if the frame rate of the input video exceeds 60.
-                /// *   Default value: the frame rate of the input video.
+                /// <b>Example:</b>
+                /// <para>256</para>
                 /// </summary>
                 [NameInMap("Width")]
                 [Validation(Required=false)]

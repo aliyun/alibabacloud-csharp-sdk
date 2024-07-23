@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class DeleteTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2247541A-9F27-47EE-B6EC-484B5475****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the custom transcoding template that is deleted.
+        /// <para>The ID of the custom transcoding template that is deleted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16f01ad6175e4230ac42bb5182cd****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

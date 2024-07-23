@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class BindInputBucketRequest : TeaModel {
         /// <summary>
-        /// The name of the input media bucket to be bound. The name can be up to 64 bytes in size. To obtain the media bucket name, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Media Buckets** in the left-side navigation pane.
+        /// <para>The name of the input media bucket to be bound. The name can be up to 64 bytes in size. To obtain the media bucket name, you can log on to the <b>ApsaraVideo Media Processing (MPS) console</b> and choose <b>Workflows</b> &gt; <b>Media Buckets</b> in the left-side navigation pane.</para>
+        /// <remarks>
+        /// <para>The bucket name can contain lowercase letters, digits, and hyphens (-), and cannot start or end with a hyphen (-).</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > The bucket name can contain lowercase letters, digits, and hyphens (-), and cannot start or end with a hyphen (-).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example-bucket-****</para>
         /// </summary>
         [NameInMap("Bucket")]
         [Validation(Required=false)]
@@ -29,7 +32,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The settings of Object Storage Service (OSS) hotlink protection. For more information, see [Hotlink protection](https://help.aliyun.com/document_detail/31869.html).
+        /// <para>The settings of Object Storage Service (OSS) hotlink protection. For more information, see <a href="https://help.aliyun.com/document_detail/31869.html">Hotlink protection</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">http://www.example.com</a></para>
         /// </summary>
         [NameInMap("Referer")]
         [Validation(Required=false)]

@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QuerySnapshotJobListRequest : TeaModel {
         /// <summary>
-        /// The snapshot configuration.
+        /// <para>The snapshot configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2014-01-12T12:00:00Z</para>
         /// </summary>
         [NameInMap("EndOfJobCreatedTimeRange")]
         [Validation(Required=false)]
         public string EndOfJobCreatedTimeRange { get; set; }
 
         /// <summary>
-        /// The ID of the MPS queue to which the snapshot jobs that you want to query are submitted. To obtain the ID, you can log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.
+        /// <para>The ID of the MPS queue to which the snapshot jobs that you want to query are submitted. To obtain the ID, you can log on to the <b>MPS console</b> and choose <b>Global Settings</b> &gt; <b>Pipelines</b> in the left-side navigation pane.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("MaximumPageSize")]
         [Validation(Required=false)]
         public long? MaximumPageSize { get; set; }
 
         /// <summary>
-        /// The end of the time range within which the creation time of snapshot jobs to be queried is.
+        /// <para>The end of the time range within which the creation time of snapshot jobs to be queried is.</para>
+        /// <list type="bullet">
+        /// <item><description>Specify the time in the ISO 8601 standard in the</description></item>
+        /// <item><description>YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</description></item>
+        /// </list>
         /// 
-        /// *   Specify the time in the ISO 8601 standard in the
-        /// *   YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+        /// <b>Example:</b>
+        /// <para>cc6cbef8e8d5481ca536f5d2a466****</para>
         /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]
@@ -42,7 +52,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The start time for taking snapshots. Unit: milliseconds.
+        /// <para>The start time for taking snapshots. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b11c171cced04565b1f38f1ecc39****</para>
         /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
@@ -57,24 +70,34 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range within which the creation time of snapshot jobs to be queried is.
+        /// <para>The beginning of the time range within which the creation time of snapshot jobs to be queried is.</para>
+        /// <list type="bullet">
+        /// <item><description>Specify the time in the ISO 8601 standard in the</description></item>
+        /// <item><description>YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</description></item>
+        /// </list>
         /// 
-        /// *   Specify the time in the ISO 8601 standard in the
-        /// *   YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+        /// <b>Example:</b>
+        /// <para>72dfa5e679ab4be9a3ed9974c736****</para>
         /// </summary>
         [NameInMap("SnapshotJobIds")]
         [Validation(Required=false)]
         public string SnapshotJobIds { get; set; }
 
         /// <summary>
-        /// The time when the job was created.
+        /// <para>The time when the job was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2014-01-10T12:00:00Z</para>
         /// </summary>
         [NameInMap("StartOfJobCreatedTimeRange")]
         [Validation(Required=false)]
         public string StartOfJobCreatedTimeRange { get; set; }
 
         /// <summary>
-        /// The information about the snapshot jobs.
+        /// <para>The information about the snapshot jobs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Snapshoting</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

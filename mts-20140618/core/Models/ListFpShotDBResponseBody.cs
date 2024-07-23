@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ListFpShotDBResponseBody : TeaModel {
         /// <summary>
-        /// The media fingerprint libraries.
+        /// <para>The media fingerprint libraries.</para>
         /// </summary>
         [NameInMap("FpShotDBList")]
         [Validation(Required=false)]
@@ -21,40 +21,56 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             public List<ListFpShotDBResponseBodyFpShotDBListFpShotDB> FpShotDB { get; set; }
             public class ListFpShotDBResponseBodyFpShotDBListFpShotDB : TeaModel {
                 /// <summary>
-                /// The description of the media fingerprint library.
+                /// <para>The description of the media fingerprint library.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The library is a text fingerprint library.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the media fingerprint library.
+                /// <para>The ID of the media fingerprint library.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>88c6ca184c0e47098a5b665e2a12****</para>
                 /// </summary>
                 [NameInMap("FpDBId")]
                 [Validation(Required=false)]
                 public string FpDBId { get; set; }
 
                 /// <summary>
-                /// The model ID of the media fingerprint library. A value of **11** indicates that the library is a text fingerprint library. A value of **12** indicates that the library is a video fingerprint library. A value of **13** indicates that the library is an audio fingerprint library. A value of **14** indicates that the library is an image fingerprint library.
+                /// <para>The model ID of the media fingerprint library. A value of <b>11</b> indicates that the library is a text fingerprint library. A value of <b>12</b> indicates that the library is a video fingerprint library. A value of <b>13</b> indicates that the library is an audio fingerprint library. A value of <b>14</b> indicates that the library is an image fingerprint library.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>11</para>
                 /// </summary>
                 [NameInMap("ModelId")]
                 [Validation(Required=false)]
                 public int? ModelId { get; set; }
 
                 /// <summary>
-                /// The name of the media fingerprint library.
+                /// <para>The name of the media fingerprint library.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test-****</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The status of the media fingerprint library. Default value: **offline**. ****Valid values:
+                /// <para>The status of the media fingerprint library. Default value: <b>offline</b>. ****Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>offline</b>: The media fingerprint library is offline.</description></item>
+                /// <item><description><b>active</b>: The media fingerprint library is online.</description></item>
+                /// <item><description><b>paused</b>: The media fingerprint library is paused.</description></item>
+                /// <item><description><b>deleted</b>: The media fingerprint library is deleted.</description></item>
+                /// </list>
                 /// 
-                /// *   **offline**: The media fingerprint library is offline.
-                /// *   **active**: The media fingerprint library is online.
-                /// *   **paused**: The media fingerprint library is paused.
-                /// *   **deleted**: The media fingerprint library is deleted.
+                /// <b>Example:</b>
+                /// <para>active</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -65,7 +81,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         }
 
         /// <summary>
-        /// The IDs of the media fingerprint libraries that do not exist.
+        /// <para>The IDs of the media fingerprint libraries that do not exist.</para>
         /// </summary>
         [NameInMap("NonExistIds")]
         [Validation(Required=false)]
@@ -78,7 +94,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>25818875-5F78-4A13-BEF6-D7393642CA58</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

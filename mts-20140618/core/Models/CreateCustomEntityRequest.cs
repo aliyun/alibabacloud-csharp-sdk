@@ -10,25 +10,35 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class CreateCustomEntityRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>landmark</para>
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{ &quot;finegrainName&quot;:&quot;examplName&quot; }</para>
+        /// </summary>
         [NameInMap("CustomEntityInfo")]
         [Validation(Required=false)]
         public string CustomEntityInfo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CustomEntityName")]
         [Validation(Required=false)]
         public string CustomEntityName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CustomGroupId")]
         [Validation(Required=false)]

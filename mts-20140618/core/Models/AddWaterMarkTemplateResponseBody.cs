@@ -10,101 +10,136 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class AddWaterMarkTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54BB917F-DD35-4F32-BABA-E60E31B21W63</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the watermark template.
+        /// <para>The details of the watermark template.</para>
         /// </summary>
         [NameInMap("WaterMarkTemplate")]
         [Validation(Required=false)]
         public AddWaterMarkTemplateResponseBodyWaterMarkTemplate WaterMarkTemplate { get; set; }
         public class AddWaterMarkTemplateResponseBodyWaterMarkTemplate : TeaModel {
             /// <summary>
-            /// The horizontal offset. Unit: pixel.
+            /// <para>The horizontal offset. Unit: pixel.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("Dx")]
             [Validation(Required=false)]
             public string Dx { get; set; }
 
             /// <summary>
-            /// The vertical offset. Unit: pixel.
+            /// <para>The vertical offset. Unit: pixel.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("Dy")]
             [Validation(Required=false)]
             public string Dy { get; set; }
 
             /// <summary>
-            /// The height of the watermark image. Unit: pixel.
+            /// <para>The height of the watermark image. Unit: pixel.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
             /// </summary>
             [NameInMap("Height")]
             [Validation(Required=false)]
             public string Height { get; set; }
 
             /// <summary>
-            /// The ID of the watermark template. We recommend that you keep this ID for subsequent operation calls.
+            /// <para>The ID of the watermark template. We recommend that you keep this ID for subsequent operation calls.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3780bd69b2b74540bc7b1096f564****</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the watermark template.
+            /// <para>The name of the watermark template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example-watermark-****</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The values of the Height, Width, Dx, and Dy parameters relative to the reference edges. If the values of the Height, Width, Dx, and Dy parameters are decimals between 0 and 1, the values are calculated by referring to the following edges in sequence:
-            /// 
-            /// *   **Width**: the width edge.
-            /// *   **Height**: the height edge.
-            /// *   **Long**: the long edge.
-            /// *   **Short**: the short edge.
+            /// <para>The values of the Height, Width, Dx, and Dy parameters relative to the reference edges. If the values of the Height, Width, Dx, and Dy parameters are decimals between 0 and 1, the values are calculated by referring to the following edges in sequence:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Width</b>: the width edge.</description></item>
+            /// <item><description><b>Height</b>: the height edge.</description></item>
+            /// <item><description><b>Long</b>: the long edge.</description></item>
+            /// <item><description><b>Short</b>: the short edge.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("RatioRefer")]
             [Validation(Required=false)]
             public AddWaterMarkTemplateResponseBodyWaterMarkTemplateRatioRefer RatioRefer { get; set; }
             public class AddWaterMarkTemplateResponseBodyWaterMarkTemplateRatioRefer : TeaModel {
                 /// <summary>
-                /// The horizontal offset of the watermark relative to the output video image. Default value: **0**. The default value indicates no offset. The value can be an integer or a decimal.
+                /// <para>The horizontal offset of the watermark relative to the output video image. Default value: <b>0</b>. The default value indicates no offset. The value can be an integer or a decimal.</para>
+                /// <list type="bullet">
+                /// <item><description><b>Integer</b>: the vertical offset. This indicates the absolute position. Unit: pixel.</description></item>
+                /// <item><description><b>Decimal</b>: the ratio of the horizontal offset to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</description></item>
+                /// </list>
                 /// 
-                /// *   **Integer**: the vertical offset. This indicates the absolute position. Unit: pixel.
-                /// *   **Decimal**: the ratio of the horizontal offset to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
+                /// <b>Example:</b>
+                /// <para>0.51</para>
                 /// </summary>
                 [NameInMap("Dx")]
                 [Validation(Required=false)]
                 public string Dx { get; set; }
 
                 /// <summary>
-                /// The vertical offset of the watermark relative to the output video image. Default value: **0**. The default value indicates no offset. The value can be an integer or a decimal.
+                /// <para>The vertical offset of the watermark relative to the output video image. Default value: <b>0</b>. The default value indicates no offset. The value can be an integer or a decimal.</para>
+                /// <list type="bullet">
+                /// <item><description><b>Integer</b>: the vertical offset. This indicates the absolute position. Unit: pixel.</description></item>
+                /// <item><description><b>Decimal</b>: the ratio of the vertical offset to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</description></item>
+                /// </list>
                 /// 
-                /// *   **Integer**: the vertical offset. This indicates the absolute position. Unit: pixel.
-                /// *   **Decimal**: the ratio of the vertical offset to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
+                /// <b>Example:</b>
+                /// <para>0.28</para>
                 /// </summary>
                 [NameInMap("Dy")]
                 [Validation(Required=false)]
                 public string Dy { get; set; }
 
                 /// <summary>
-                /// The height of the watermark image in the output video. The value can be an integer or a decimal.
+                /// <para>The height of the watermark image in the output video. The value can be an integer or a decimal.</para>
+                /// <list type="bullet">
+                /// <item><description><b>Integer</b>: the height of the watermark image. This indicates the absolute position. Unit: pixel.</description></item>
+                /// <item><description><b>Decimal</b>: the ratio of the height of the watermark image to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</description></item>
+                /// </list>
                 /// 
-                /// *   **Integer**: the height of the watermark image. This indicates the absolute position. Unit: pixel.
-                /// *   **Decimal**: the ratio of the height of the watermark image to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
+                /// <b>Example:</b>
+                /// <para>0.33</para>
                 /// </summary>
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public string Height { get; set; }
 
                 /// <summary>
-                /// The width of the watermark image in the output video. The value can be an integer or a decimal.
+                /// <para>The width of the watermark image in the output video. The value can be an integer or a decimal.</para>
+                /// <list type="bullet">
+                /// <item><description><b>Integer</b>: the width of the watermark image. This indicates the absolute position. Unit: pixel.</description></item>
+                /// <item><description><b>Decimal</b>: the ratio of the width of the watermark image to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</description></item>
+                /// </list>
                 /// 
-                /// *   **Integer**: the width of the watermark image. This indicates the absolute position. Unit: pixel.
-                /// *   **Decimal**: the ratio of the width of the watermark image to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
+                /// <b>Example:</b>
+                /// <para>0.36</para>
                 /// </summary>
                 [NameInMap("Width")]
                 [Validation(Required=false)]
@@ -113,46 +148,61 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             }
 
             /// <summary>
-            /// The position of the watermark. Valid values:
+            /// <para>The position of the watermark. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>TopRight</b>: the upper-right corner.</description></item>
+            /// <item><description><b>TopLeft</b>: the upper-left corner.</description></item>
+            /// <item><description><b>BottomRight</b>: the lower-right corner.</description></item>
+            /// <item><description><b>BottomLeft</b>: the lower-left corner.</description></item>
+            /// </list>
             /// 
-            /// *   **TopRight**: the upper-right corner.
-            /// *   **TopLeft**: the upper-left corner.
-            /// *   **BottomRight**: the lower-right corner.
-            /// *   **BottomLeft**: the lower-left corner.
+            /// <b>Example:</b>
+            /// <para>TopRight</para>
             /// </summary>
             [NameInMap("ReferPos")]
             [Validation(Required=false)]
             public string ReferPos { get; set; }
 
             /// <summary>
-            /// The status of the watermark template.
+            /// <para>The status of the watermark template.</para>
+            /// <list type="bullet">
+            /// <item><description><b>Normal</b>: The watermark template is normal.</description></item>
+            /// <item><description><b>Deleted</b>: The watermark template is deleted.</description></item>
+            /// </list>
             /// 
-            /// *   **Normal**: The watermark template is normal.
-            /// *   **Deleted**: The watermark template is deleted.
+            /// <b>Example:</b>
+            /// <para>Normal</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The timeline of the watermark.
+            /// <para>The timeline of the watermark.</para>
             /// </summary>
             [NameInMap("Timeline")]
             [Validation(Required=false)]
             public AddWaterMarkTemplateResponseBodyWaterMarkTemplateTimeline Timeline { get; set; }
             public class AddWaterMarkTemplateResponseBodyWaterMarkTemplateTimeline : TeaModel {
                 /// <summary>
-                /// The display duration of the watermark. Default value: **ToEND**. The default value indicates that the watermark is displayed until the video ends.
+                /// <para>The display duration of the watermark. Default value: <b>ToEND</b>. The default value indicates that the watermark is displayed until the video ends.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ToEND</para>
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public string Duration { get; set; }
 
                 /// <summary>
-                /// The beginning of the time range during which the watermark is displayed.
+                /// <para>The beginning of the time range during which the watermark is displayed.</para>
+                /// <list type="bullet">
+                /// <item><description>Unit: seconds.</description></item>
+                /// <item><description>Default value: <b>0</b>.</description></item>
+                /// </list>
                 /// 
-                /// *   Unit: seconds.
-                /// *   Default value: **0**.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Start")]
                 [Validation(Required=false)]
@@ -161,17 +211,24 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             }
 
             /// <summary>
-            /// The type of the watermark. Valid values:
+            /// <para>The type of the watermark. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Image: an image watermark.</description></item>
+            /// <item><description>Text: a text watermark.</description></item>
+            /// </list>
             /// 
-            /// *   Image: an image watermark.
-            /// *   Text: a text watermark.
+            /// <b>Example:</b>
+            /// <para>Image</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The width of the watermark image. Unit: pixel.
+            /// <para>The width of the watermark image. Unit: pixel.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("Width")]
             [Validation(Required=false)]

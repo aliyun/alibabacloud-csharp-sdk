@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ListAllMediaBucketResponseBody : TeaModel {
         /// <summary>
-        /// The media buckets returned.
+        /// <para>The media buckets returned.</para>
         /// </summary>
         [NameInMap("MediaBucketList")]
         [Validation(Required=false)]
@@ -21,24 +21,34 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             public List<ListAllMediaBucketResponseBodyMediaBucketListMediaBucket> MediaBucket { get; set; }
             public class ListAllMediaBucketResponseBodyMediaBucketListMediaBucket : TeaModel {
                 /// <summary>
-                /// The name of the media bucket.
+                /// <para>The name of the media bucket.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example-bucket-****</para>
                 /// </summary>
                 [NameInMap("Bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
                 /// <summary>
-                /// The settings of Object Storage Service (OSS) hotlink protection. For more information, see [Hotlink protection](https://help.aliyun.com/document_detail/31869.html).
+                /// <para>The settings of Object Storage Service (OSS) hotlink protection. For more information, see <a href="https://help.aliyun.com/document_detail/31869.html">Hotlink protection</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://www.example.com">http://www.example.com</a></para>
                 /// </summary>
                 [NameInMap("Referer")]
                 [Validation(Required=false)]
                 public string Referer { get; set; }
 
                 /// <summary>
-                /// The type of the media bucket. Valid values:
+                /// <para>The type of the media bucket. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Input: input media bucket</description></item>
+                /// <item><description>Output: output media bucket</description></item>
+                /// </list>
                 /// 
-                /// *   Input: input media bucket
-                /// *   Output: output media bucket
+                /// <b>Example:</b>
+                /// <para>Input</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -49,14 +59,20 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         }
 
         /// <summary>
-        /// The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+        /// <para>The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>P2Zqo1PLGhZdygo-ajSsjUX5zrBHCgXy6j4hEvv****</para>
         /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>79760D91-D3CF-4165-****-B7E2836EF62A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

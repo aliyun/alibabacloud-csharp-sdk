@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryTraceExtractJobRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>31fa3c9ca8134fb4b0b0f7878301****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

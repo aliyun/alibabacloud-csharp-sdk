@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class UpdateMediaPublishStateRequest : TeaModel {
         /// <summary>
-        /// The ID of the media file whose publishing status you want to update. You can obtain the ID of a media file from the response of the [AddMedia](https://help.aliyun.com/document_detail/44458.html) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click **Manage**. The ID of the video is displayed on the Basics tab.
+        /// <para>The ID of the media file whose publishing status you want to update. You can obtain the ID of a media file from the response of the <a href="https://help.aliyun.com/document_detail/44458.html">AddMedia</a> operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose <b>Media Management</b> &gt; <b>Media List</b>. Find the required video and click <b>Manage</b>. The ID of the video is displayed on the Basics tab.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3e6149d5a8c944c09b1a8d2dc3e4****</para>
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
@@ -27,10 +29,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The publishing status. Default value: **Initialed**. Valid values:
+        /// <para>The publishing status. Default value: <b>Initialed</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: published.</description></item>
+        /// <item><description><b>false</b>: unpublished.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: published.
-        /// *   **false**: unpublished.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Publish")]
         [Validation(Required=false)]

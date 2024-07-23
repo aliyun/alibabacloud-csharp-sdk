@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class CreateCustomGroupRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>landmark</para>
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
@@ -21,7 +24,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public string CustomGroupDescription { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CustomGroupName")]
         [Validation(Required=false)]

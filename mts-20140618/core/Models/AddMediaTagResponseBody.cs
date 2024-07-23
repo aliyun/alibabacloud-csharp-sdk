@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class AddMediaTagResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>91B6CAB9-034C-4E4E-A40B-E7F5C81E1A2K</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

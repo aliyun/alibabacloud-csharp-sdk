@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ListJobRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2014-01-11T12:00:00Z</para>
         /// </summary>
         [NameInMap("EndOfJobCreatedTimeRange")]
         [Validation(Required=false)]
         public string EndOfJobCreatedTimeRange { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>10</b>.</description></item>
+        /// <item><description>Valid values: <b>1 to 100</b>.</description></item>
+        /// </list>
         /// 
-        /// *   Default value: **10**.
-        /// *   Valid values: **1 to 100**.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaximumPageSize")]
         [Validation(Required=false)]
         public long? MaximumPageSize { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of the query results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextPageToken.
+        /// <para>The token that is used to retrieve the next page of the query results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextPageToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16f01ad6175e4230ac42bb5182cd****</para>
         /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]
@@ -42,7 +52,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the MPS queue to which the job is submitted. To obtain the ID of an MPS queue, you can log on to the [MPS console](https://mps.console.aliyun.com/overview) and choose **Global Settings** > **MPS Queue and Callback** in the left-side navigation pane.
+        /// <para>The ID of the MPS queue to which the job is submitted. To obtain the ID of an MPS queue, you can log on to the <a href="https://mps.console.aliyun.com/overview">MPS console</a> and choose <b>Global Settings</b> &gt; <b>MPS Queue and Callback</b> in the left-side navigation pane.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>88c6ca184c0e424d5w5b665e2a12****</para>
         /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
@@ -57,21 +70,28 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2014-01-10T12:00:00Z</para>
         /// </summary>
         [NameInMap("StartOfJobCreatedTimeRange")]
         [Validation(Required=false)]
         public string StartOfJobCreatedTimeRange { get; set; }
 
         /// <summary>
-        /// The state of the transcoding job. Default value: **All**. Valid values:
+        /// <para>The state of the transcoding job. Default value: <b>All</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>All</b></description></item>
+        /// <item><description><b>Submitted</b></description></item>
+        /// <item><description><b>Transcoding</b></description></item>
+        /// <item><description><b>TranscodeSuccess</b></description></item>
+        /// <item><description><b>TranscodeFail</b></description></item>
+        /// <item><description><b>TranscodeCancelled</b></description></item>
+        /// </list>
         /// 
-        /// *   **All**
-        /// *   **Submitted**
-        /// *   **Transcoding**
-        /// *   **TranscodeSuccess**
-        /// *   **TranscodeFail**
-        /// *   **TranscodeCancelled**
+        /// <b>Example:</b>
+        /// <para>All</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

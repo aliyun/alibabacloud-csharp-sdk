@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QuerySmarttagJobRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>39f8e0bc005e4f309379701645f4****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -24,6 +27,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;labelResultType&quot;:&quot;auto&quot;}</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public string Params { get; set; }

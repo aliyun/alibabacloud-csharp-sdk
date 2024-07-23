@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SubmitMediaInfoJobRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the asynchronous mode for the job. We recommend that you set this parameter to true. Valid values:
+        /// <para>Specifies whether to enable the asynchronous mode for the job. We recommend that you set this parameter to true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables the asynchronous mode.</description></item>
+        /// <item><description><b>false</b>: does not enable the asynchronous mode.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: enables the asynchronous mode.
-        /// *   **false**: does not enable the asynchronous mode.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Async")]
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
         /// <summary>
-        /// The information about the input media file. The value is a JSON string. You must perform the following operations to add the OSS bucket in which the input media file is stored as a media bucket: Log on to the **MPS console**, choose **Workflows** > **Media Buckets** in the left-side navigation pane, and then click **Add Bucket**. After you add the OSS bucket as a media bucket, you must perform URL encoding for the OSS object. For example, `{"Bucket":"example-bucket","Location":"example-location","Object":"example%2Fexample.flv"}` indicates the `example-bucket.example-location.aliyuncs.com/example/example.flv` file.
+        /// <para>The information about the input media file. The value is a JSON string. You must perform the following operations to add the OSS bucket in which the input media file is stored as a media bucket: Log on to the <b>MPS console</b>, choose <b>Workflows</b> &gt; <b>Media Buckets</b> in the left-side navigation pane, and then click <b>Add Bucket</b>. After you add the OSS bucket as a media bucket, you must perform URL encoding for the OSS object. For example, <c>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;example-location&quot;,&quot;Object&quot;:&quot;example%2Fexample.flv&quot;}</c> indicates the <c>example-bucket.example-location.aliyuncs.com/example/example.flv</c> file.</para>
+        /// <remarks>
+        /// <para>The OSS bucket must reside in the same region as your MPS service.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > The OSS bucket must reside in the same region as your MPS service.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;example-location&quot;,&quot;Object&quot;:&quot;example%2Fexample.flv&quot;}</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
@@ -39,7 +46,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the MPS queue to which the analysis job is submitted. To view the ID of the MPS queue, log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.
+        /// <para>The ID of the MPS queue to which the analysis job is submitted. To view the ID of the MPS queue, log on to the <b>MPS console</b> and choose <b>Global Settings</b> &gt; <b>Pipelines</b> in the left-side navigation pane.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>88c6ca184c0e432bbf5b665e2a15****</para>
         /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
@@ -54,7 +64,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The custom data. The custom data can contain letters, digits, and hyphens (-), and can be up to 1,024 bytes in length. The custom data cannot start with a special character.
+        /// <para>The custom data. The custom data can contain letters, digits, and hyphens (-), and can be up to 1,024 bytes in length. The custom data cannot start with a special character.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testid-001</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

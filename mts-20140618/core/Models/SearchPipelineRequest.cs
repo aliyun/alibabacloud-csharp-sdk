@@ -18,17 +18,24 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <list type="bullet">
+        /// <item><description>A maximum of <b>100</b> entries can be returned on each page.</description></item>
+        /// <item><description>Default value: <b>10</b>.</description></item>
+        /// </list>
         /// 
-        /// *   A maximum of **100** entries can be returned on each page.
-        /// *   Default value: **10**.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -43,12 +50,16 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the MPS queues that you want to query. If you leave this parameter empty, all MPS queues are queried.
+        /// <para>The status of the MPS queues that you want to query. If you leave this parameter empty, all MPS queues are queried.</para>
+        /// <list type="bullet">
+        /// <item><description><b>All</b>: queries all MPS queues.</description></item>
+        /// <item><description><b>Active</b>: queries the MPS queues that are active.</description></item>
+        /// <item><description><b>Paused</b>: queues the MPS queues that are paused.</description></item>
+        /// <item><description>Default value: <b>All</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **All**: queries all MPS queues.
-        /// *   **Active**: queries the MPS queues that are active.
-        /// *   **Paused**: queues the MPS queues that are paused.
-        /// *   Default value: **All**.
+        /// <b>Example:</b>
+        /// <para>Paused</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

@@ -10,83 +10,112 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class UpdateMediaResponseBody : TeaModel {
         /// <summary>
-        /// The information about the media file.
+        /// <para>The information about the media file.</para>
         /// </summary>
         [NameInMap("Media")]
         [Validation(Required=false)]
         public UpdateMediaResponseBodyMedia Media { get; set; }
         public class UpdateMediaResponseBodyMedia : TeaModel {
             /// <summary>
-            /// The bitrate of the media file.
+            /// <para>The bitrate of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2659.326</para>
             /// </summary>
             [NameInMap("Bitrate")]
             [Validation(Required=false)]
             public string Bitrate { get; set; }
 
             /// <summary>
-            /// The ID of the category to which the media file belongs.
+            /// <para>The ID of the category to which the media file belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CateId")]
             [Validation(Required=false)]
             public long? CateId { get; set; }
 
             /// <summary>
-            /// The review state of the media file. Valid values:
+            /// <para>The review state of the media file. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Initiated</b>: The media file is uploaded but not reviewed.</description></item>
+            /// <item><description><b>Pass</b>: The media file is uploaded and passes the review.</description></item>
+            /// </list>
             /// 
-            /// *   **Initiated**: The media file is uploaded but not reviewed.
-            /// *   **Pass**: The media file is uploaded and passes the review.
+            /// <b>Example:</b>
+            /// <para>Initiated</para>
             /// </summary>
             [NameInMap("CensorState")]
             [Validation(Required=false)]
             public string CensorState { get; set; }
 
             /// <summary>
-            /// The URL of the thumbnail.
+            /// <para>The URL of the thumbnail.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://example-bucket-****.oss-cn-shanghai.aliyuncs.com/example-****.jpg">http://example-bucket-****.oss-cn-shanghai.aliyuncs.com/example-****.jpg</a></para>
             /// </summary>
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// The time when the media file was created.
+            /// <para>The time when the media file was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2016-09-14T08:30:33Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The description of the media file.
+            /// <para>The description of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The duration of the media file.
+            /// <para>The duration of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7.965000</para>
             /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public string Duration { get; set; }
 
             /// <summary>
-            /// The information about the input file.
+            /// <para>The information about the input file.</para>
             /// </summary>
             [NameInMap("File")]
             [Validation(Required=false)]
             public UpdateMediaResponseBodyMediaFile File { get; set; }
             public class UpdateMediaResponseBodyMediaFile : TeaModel {
                 /// <summary>
-                /// The state of the input file. Valid values:
+                /// <para>The state of the input file. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Normal</b>: The input file is normal.</description></item>
+                /// <item><description><b>Deleted</b>: The input file is deleted.</description></item>
+                /// </list>
                 /// 
-                /// *   **Normal**: The input file is normal.
-                /// *   **Deleted**: The input file is deleted.
+                /// <b>Example:</b>
+                /// <para>Normal</para>
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }
 
                 /// <summary>
-                /// The name of the OSS bucket in which the input media file is stored.
+                /// <para>The name of the OSS bucket in which the input media file is stored.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com//example-****.mp4">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com//example-****.mp4</a></para>
                 /// </summary>
                 [NameInMap("URL")]
                 [Validation(Required=false)]
@@ -95,47 +124,63 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             }
 
             /// <summary>
-            /// The format of the media file. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.
+            /// <para>The format of the media file. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mov</para>
             /// </summary>
             [NameInMap("Format")]
             [Validation(Required=false)]
             public string Format { get; set; }
 
             /// <summary>
-            /// The frame rate of the media file.
+            /// <para>The frame rate of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>25.0</para>
             /// </summary>
             [NameInMap("Fps")]
             [Validation(Required=false)]
             public string Fps { get; set; }
 
             /// <summary>
-            /// The height of the media file.
+            /// <para>The height of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1080</para>
             /// </summary>
             [NameInMap("Height")]
             [Validation(Required=false)]
             public string Height { get; set; }
 
             /// <summary>
-            /// The ID of the media file.
+            /// <para>The ID of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3e1cd21131a94525be55acf65888****</para>
             /// </summary>
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
 
             /// <summary>
-            /// The publishing state of the media file. Valid values:
+            /// <para>The publishing state of the media file. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Initiated</b>: The media file is in the initial state.</description></item>
+            /// <item><description><b>UnPublish</b>: The media file has not been published, and the playback permission on the OSS object is Private.</description></item>
+            /// <item><description><b>Published</b>: The media file has been published, and the playback permission on the OSS object is Default.</description></item>
+            /// <item><description><b>Deleted</b>: The media file is deleted.</description></item>
+            /// </list>
             /// 
-            /// *   **Initiated**: The media file is in the initial state.
-            /// *   **UnPublish**: The media file has not been published, and the playback permission on the OSS object is Private.
-            /// *   **Published**: The media file has been published, and the playback permission on the OSS object is Default.
-            /// *   **Deleted**: The media file is deleted.
+            /// <b>Example:</b>
+            /// <para>Published</para>
             /// </summary>
             [NameInMap("PublishState")]
             [Validation(Required=false)]
             public string PublishState { get; set; }
 
             /// <summary>
-            /// The IDs of the media workflow execution instances.
+            /// <para>The IDs of the media workflow execution instances.</para>
             /// </summary>
             [NameInMap("RunIdList")]
             [Validation(Required=false)]
@@ -148,14 +193,17 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             }
 
             /// <summary>
-            /// The size of the media file.
+            /// <para>The size of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2647692</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public string Size { get; set; }
 
             /// <summary>
-            /// The information about the tags.
+            /// <para>The information about the tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -168,14 +216,20 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             }
 
             /// <summary>
-            /// The title of the media file.
+            /// <para>The title of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hello</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// The width of the media file.
+            /// <para>The width of the media file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1920</para>
             /// </summary>
             [NameInMap("Width")]
             [Validation(Required=false)]
@@ -184,7 +238,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6A88246F-C91F-42BD-BABE-DB0DF993F960</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

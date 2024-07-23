@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class DeactivateMediaWorkflowRequest : TeaModel {
         /// <summary>
-        /// The ID of the media workflow that is deactivated.
+        /// <para>The ID of the media workflow that is deactivated.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>93ab850b4f6f44eab54b6e9181d4****</para>
         /// </summary>
         [NameInMap("MediaWorkflowId")]
         [Validation(Required=false)]

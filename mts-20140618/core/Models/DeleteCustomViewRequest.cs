@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class DeleteCustomViewRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>landmark</para>
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CustomEntityId")]
         [Validation(Required=false)]
         public string CustomEntityId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CustomGroupId")]
         [Validation(Required=false)]
         public string CustomGroupId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CustomViewId")]
         [Validation(Required=false)]

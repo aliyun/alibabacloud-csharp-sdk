@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class AddMediaTagRequest : TeaModel {
         /// <summary>
-        /// The ID of the media file to which you want to add tags.
+        /// <para>The ID of the media file to which you want to add tags.</para>
+        /// <remarks>
+        /// <para>To obtain the ID of a media file, you can call the <a href="https://help.aliyun.com/document_detail/44458.html">AddMedia</a> operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose <b>Media Management</b> &gt; <b>Media List</b>. Find the file that you want to manage and click <b>Manage</b> in the Actions column. The ID of the file is displayed on the Basics tab.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > To obtain the ID of a media file, you can call the [AddMedia](https://help.aliyun.com/document_detail/44458.html) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the file that you want to manage and click **Manage** in the Actions column. The ID of the file is displayed on the Basics tab.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3e6149d5a8c944c09b1a8d2dc3e4****</para>
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
@@ -37,7 +40,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tag that you want to add to the medial file. The value is encoded in UTF-8 and can be up to 32 bytes in length.
+        /// <para>The tag that you want to add to the medial file. The value is encoded in UTF-8 and can be up to 32 bytes in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tag1</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
