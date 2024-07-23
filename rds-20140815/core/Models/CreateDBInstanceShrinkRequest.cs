@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? Amount { get; set; }
 
+        [NameInMap("AutoCreateProxy")]
+        [Validation(Required=false)]
+        public bool? AutoCreateProxy { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable the automatic payment feature. Valid values:</para>
         /// <list type="bullet">

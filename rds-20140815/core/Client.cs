@@ -5391,6 +5391,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["Amount"] = request.Amount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateProxy))
+            {
+                query["AutoCreateProxy"] = request.AutoCreateProxy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -5683,6 +5687,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
                 query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateProxy))
+            {
+                query["AutoCreateProxy"] = request.AutoCreateProxy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
@@ -10483,6 +10491,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateProxy))
+            {
+                query["AutoCreateProxy"] = request.AutoCreateProxy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -10680,6 +10692,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateProxy))
+            {
+                query["AutoCreateProxy"] = request.AutoCreateProxy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;

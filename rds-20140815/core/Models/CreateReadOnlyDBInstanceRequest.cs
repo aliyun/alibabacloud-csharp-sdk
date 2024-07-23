@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReadOnlyDBInstanceRequest : TeaModel {
+        [NameInMap("AutoCreateProxy")]
+        [Validation(Required=false)]
+        public bool? AutoCreateProxy { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable the automatic payment feature. Valid values:</para>
         /// <ol>
