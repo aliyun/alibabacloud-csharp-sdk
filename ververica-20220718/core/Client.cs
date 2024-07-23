@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary create a deployment
-         *
-         * @param request CreateDeploymentRequest
-         * @param headers CreateDeploymentHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeploymentRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateDeploymentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeploymentResponse
+        /// </returns>
         public CreateDeploymentResponse CreateDeploymentWithOptions(string namespace_, CreateDeploymentRequest request, CreateDeploymentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -77,14 +87,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<CreateDeploymentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary create a deployment
-         *
-         * @param request CreateDeploymentRequest
-         * @param headers CreateDeploymentHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeploymentRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateDeploymentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeploymentResponse
+        /// </returns>
         public async Task<CreateDeploymentResponse> CreateDeploymentWithOptionsAsync(string namespace_, CreateDeploymentRequest request, CreateDeploymentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -117,12 +137,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<CreateDeploymentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary create a deployment
-         *
-         * @param request CreateDeploymentRequest
-         * @return CreateDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeploymentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeploymentResponse
+        /// </returns>
         public CreateDeploymentResponse CreateDeployment(string namespace_, CreateDeploymentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -130,12 +156,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return CreateDeploymentWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary create a deployment
-         *
-         * @param request CreateDeploymentRequest
-         * @return CreateDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeploymentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeploymentResponse
+        /// </returns>
         public async Task<CreateDeploymentResponse> CreateDeploymentAsync(string namespace_, CreateDeploymentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -143,14 +175,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await CreateDeploymentWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用CreateMember创建成员。
-         *
-         * @param request CreateMemberRequest
-         * @param headers CreateMemberHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a namespace as a member and grants permissions to the user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateMemberHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemberResponse
+        /// </returns>
         public CreateMemberResponse CreateMemberWithOptions(string namespace_, CreateMemberRequest request, CreateMemberHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -183,14 +225,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<CreateMemberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用CreateMember创建成员。
-         *
-         * @param request CreateMemberRequest
-         * @param headers CreateMemberHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a namespace as a member and grants permissions to the user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateMemberHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemberResponse
+        /// </returns>
         public async Task<CreateMemberResponse> CreateMemberWithOptionsAsync(string namespace_, CreateMemberRequest request, CreateMemberHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -223,12 +275,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<CreateMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用CreateMember创建成员。
-         *
-         * @param request CreateMemberRequest
-         * @return CreateMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a namespace as a member and grants permissions to the user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemberResponse
+        /// </returns>
         public CreateMemberResponse CreateMember(string namespace_, CreateMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -236,12 +294,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return CreateMemberWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用CreateMember创建成员。
-         *
-         * @param request CreateMemberRequest
-         * @return CreateMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a namespace as a member and grants permissions to the user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemberResponse
+        /// </returns>
         public async Task<CreateMemberResponse> CreateMemberAsync(string namespace_, CreateMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -249,14 +313,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await CreateMemberWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用CreateSavepoint触发一次savepoint。
-         *
-         * @param request CreateSavepointRequest
-         * @param headers CreateSavepointHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a savepoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSavepointRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateSavepointHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSavepointResponse
+        /// </returns>
         public CreateSavepointResponse CreateSavepointWithOptions(string namespace_, CreateSavepointRequest request, CreateSavepointHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -302,14 +376,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<CreateSavepointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用CreateSavepoint触发一次savepoint。
-         *
-         * @param request CreateSavepointRequest
-         * @param headers CreateSavepointHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a savepoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSavepointRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateSavepointHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSavepointResponse
+        /// </returns>
         public async Task<CreateSavepointResponse> CreateSavepointWithOptionsAsync(string namespace_, CreateSavepointRequest request, CreateSavepointHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -355,12 +439,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<CreateSavepointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用CreateSavepoint触发一次savepoint。
-         *
-         * @param request CreateSavepointRequest
-         * @return CreateSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a savepoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSavepointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSavepointResponse
+        /// </returns>
         public CreateSavepointResponse CreateSavepoint(string namespace_, CreateSavepointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -368,12 +458,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return CreateSavepointWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用CreateSavepoint触发一次savepoint。
-         *
-         * @param request CreateSavepointRequest
-         * @return CreateSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a savepoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSavepointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSavepointResponse
+        /// </returns>
         public async Task<CreateSavepointResponse> CreateSavepointAsync(string namespace_, CreateSavepointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -381,14 +477,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await CreateSavepointWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用CreateVariable创建变量。
-         *
-         * @param request CreateVariableRequest
-         * @param headers CreateVariableHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVariableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a variable.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVariableRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateVariableHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVariableResponse
+        /// </returns>
         public CreateVariableResponse CreateVariableWithOptions(string namespace_, CreateVariableRequest request, CreateVariableHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -421,14 +527,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<CreateVariableResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用CreateVariable创建变量。
-         *
-         * @param request CreateVariableRequest
-         * @param headers CreateVariableHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVariableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a variable.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVariableRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateVariableHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVariableResponse
+        /// </returns>
         public async Task<CreateVariableResponse> CreateVariableWithOptionsAsync(string namespace_, CreateVariableRequest request, CreateVariableHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -461,12 +577,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<CreateVariableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用CreateVariable创建变量。
-         *
-         * @param request CreateVariableRequest
-         * @return CreateVariableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a variable.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVariableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVariableResponse
+        /// </returns>
         public CreateVariableResponse CreateVariable(string namespace_, CreateVariableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -474,12 +596,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return CreateVariableWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用CreateVariable创建变量。
-         *
-         * @param request CreateVariableRequest
-         * @return CreateVariableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a variable.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVariableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVariableResponse
+        /// </returns>
         public async Task<CreateVariableResponse> CreateVariableAsync(string namespace_, CreateVariableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -487,13 +615,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await CreateVariableWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary delete deployment
-         *
-         * @param headers DeleteDeploymentHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a deployment based on the deployment ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteDeploymentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeploymentResponse
+        /// </returns>
         public DeleteDeploymentResponse DeleteDeploymentWithOptions(string namespace_, string deploymentId, DeleteDeploymentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -524,13 +660,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteDeploymentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary delete deployment
-         *
-         * @param headers DeleteDeploymentHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a deployment based on the deployment ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteDeploymentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeploymentResponse
+        /// </returns>
         public async Task<DeleteDeploymentResponse> DeleteDeploymentWithOptionsAsync(string namespace_, string deploymentId, DeleteDeploymentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -561,11 +705,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteDeploymentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary delete deployment
-         *
-         * @return DeleteDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a deployment based on the deployment ID.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDeploymentResponse
+        /// </returns>
         public DeleteDeploymentResponse DeleteDeployment(string namespace_, string deploymentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -573,11 +720,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return DeleteDeploymentWithOptions(namespace_, deploymentId, headers, runtime);
         }
 
-        /**
-         * @summary delete deployment
-         *
-         * @return DeleteDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a deployment based on the deployment ID.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDeploymentResponse
+        /// </returns>
         public async Task<DeleteDeploymentResponse> DeleteDeploymentAsync(string namespace_, string deploymentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -585,13 +735,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await DeleteDeploymentWithOptionsAsync(namespace_, deploymentId, headers, runtime);
         }
 
-        /**
-         * @summary delete job
-         *
-         * @param headers DeleteJobHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the information about a job that is not in the running state in a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteJobHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteJobResponse
+        /// </returns>
         public DeleteJobResponse DeleteJobWithOptions(string namespace_, string jobId, DeleteJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -622,13 +780,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary delete job
-         *
-         * @param headers DeleteJobHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the information about a job that is not in the running state in a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteJobHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteJobResponse
+        /// </returns>
         public async Task<DeleteJobResponse> DeleteJobWithOptionsAsync(string namespace_, string jobId, DeleteJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -659,11 +825,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary delete job
-         *
-         * @return DeleteJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the information about a job that is not in the running state in a deployment.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteJobResponse
+        /// </returns>
         public DeleteJobResponse DeleteJob(string namespace_, string jobId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -671,11 +840,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return DeleteJobWithOptions(namespace_, jobId, headers, runtime);
         }
 
-        /**
-         * @summary delete job
-         *
-         * @return DeleteJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the information about a job that is not in the running state in a deployment.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteJobResponse
+        /// </returns>
         public async Task<DeleteJobResponse> DeleteJobAsync(string namespace_, string jobId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -683,13 +855,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await DeleteJobWithOptionsAsync(namespace_, jobId, headers, runtime);
         }
 
-        /**
-         * @summary 调用DeleteMember删除成员。
-         *
-         * @param headers DeleteMemberHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions from a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteMemberHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemberResponse
+        /// </returns>
         public DeleteMemberResponse DeleteMemberWithOptions(string namespace_, string member, DeleteMemberHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -720,13 +900,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteMemberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用DeleteMember删除成员。
-         *
-         * @param headers DeleteMemberHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions from a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteMemberHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemberResponse
+        /// </returns>
         public async Task<DeleteMemberResponse> DeleteMemberWithOptionsAsync(string namespace_, string member, DeleteMemberHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -757,11 +945,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用DeleteMember删除成员。
-         *
-         * @return DeleteMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions from a member.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteMemberResponse
+        /// </returns>
         public DeleteMemberResponse DeleteMember(string namespace_, string member)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -769,11 +960,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return DeleteMemberWithOptions(namespace_, member, headers, runtime);
         }
 
-        /**
-         * @summary 调用DeleteMember删除成员。
-         *
-         * @return DeleteMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions from a member.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteMemberResponse
+        /// </returns>
         public async Task<DeleteMemberResponse> DeleteMemberAsync(string namespace_, string member)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -781,13 +975,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await DeleteMemberWithOptionsAsync(namespace_, member, headers, runtime);
         }
 
-        /**
-         * @summary 调用DeleteSavepoint删除savepoint。
-         *
-         * @param headers DeleteSavepointHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a savepoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteSavepointHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSavepointResponse
+        /// </returns>
         public DeleteSavepointResponse DeleteSavepointWithOptions(string namespace_, string savepointId, DeleteSavepointHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -818,13 +1020,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteSavepointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用DeleteSavepoint删除savepoint。
-         *
-         * @param headers DeleteSavepointHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a savepoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteSavepointHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSavepointResponse
+        /// </returns>
         public async Task<DeleteSavepointResponse> DeleteSavepointWithOptionsAsync(string namespace_, string savepointId, DeleteSavepointHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -855,11 +1065,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteSavepointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用DeleteSavepoint删除savepoint。
-         *
-         * @return DeleteSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a savepoint.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteSavepointResponse
+        /// </returns>
         public DeleteSavepointResponse DeleteSavepoint(string namespace_, string savepointId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -867,11 +1080,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return DeleteSavepointWithOptions(namespace_, savepointId, headers, runtime);
         }
 
-        /**
-         * @summary 调用DeleteSavepoint删除savepoint。
-         *
-         * @return DeleteSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a savepoint.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteSavepointResponse
+        /// </returns>
         public async Task<DeleteSavepointResponse> DeleteSavepointAsync(string namespace_, string savepointId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -879,13 +1095,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await DeleteSavepointWithOptionsAsync(namespace_, savepointId, headers, runtime);
         }
 
-        /**
-         * @summary deleta variable
-         *
-         * @param headers DeleteVariableHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteVariableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a variable.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteVariableHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVariableResponse
+        /// </returns>
         public DeleteVariableResponse DeleteVariableWithOptions(string namespace_, string name, DeleteVariableHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -916,13 +1140,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteVariableResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary deleta variable
-         *
-         * @param headers DeleteVariableHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteVariableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a variable.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// DeleteVariableHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVariableResponse
+        /// </returns>
         public async Task<DeleteVariableResponse> DeleteVariableWithOptionsAsync(string namespace_, string name, DeleteVariableHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -953,11 +1185,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<DeleteVariableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary deleta variable
-         *
-         * @return DeleteVariableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a variable.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteVariableResponse
+        /// </returns>
         public DeleteVariableResponse DeleteVariable(string namespace_, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -965,11 +1200,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return DeleteVariableWithOptions(namespace_, name, headers, runtime);
         }
 
-        /**
-         * @summary deleta variable
-         *
-         * @return DeleteVariableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a variable.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteVariableResponse
+        /// </returns>
         public async Task<DeleteVariableResponse> DeleteVariableAsync(string namespace_, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -977,14 +1215,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await DeleteVariableWithOptionsAsync(namespace_, name, headers, runtime);
         }
 
-        /**
-         * @summary 调用FlinkApiProxy代理Flink请求。
-         *
-         * @param request FlinkApiProxyRequest
-         * @param headers FlinkApiProxyHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FlinkApiProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides a Flink request proxy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlinkApiProxyRequest
+        /// </param>
+        /// <param name="headers">
+        /// FlinkApiProxyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlinkApiProxyResponse
+        /// </returns>
         public FlinkApiProxyResponse FlinkApiProxyWithOptions(FlinkApiProxyRequest request, FlinkApiProxyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1034,14 +1282,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<FlinkApiProxyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用FlinkApiProxy代理Flink请求。
-         *
-         * @param request FlinkApiProxyRequest
-         * @param headers FlinkApiProxyHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FlinkApiProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides a Flink request proxy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlinkApiProxyRequest
+        /// </param>
+        /// <param name="headers">
+        /// FlinkApiProxyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlinkApiProxyResponse
+        /// </returns>
         public async Task<FlinkApiProxyResponse> FlinkApiProxyWithOptionsAsync(FlinkApiProxyRequest request, FlinkApiProxyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1091,12 +1349,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<FlinkApiProxyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用FlinkApiProxy代理Flink请求。
-         *
-         * @param request FlinkApiProxyRequest
-         * @return FlinkApiProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides a Flink request proxy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlinkApiProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlinkApiProxyResponse
+        /// </returns>
         public FlinkApiProxyResponse FlinkApiProxy(FlinkApiProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1104,12 +1368,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return FlinkApiProxyWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 调用FlinkApiProxy代理Flink请求。
-         *
-         * @param request FlinkApiProxyRequest
-         * @return FlinkApiProxyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides a Flink request proxy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlinkApiProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlinkApiProxyResponse
+        /// </returns>
         public async Task<FlinkApiProxyResponse> FlinkApiProxyAsync(FlinkApiProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1117,14 +1387,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await FlinkApiProxyWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary generate resource plan with flink conf async.
-         *
-         * @param request GenerateResourcePlanWithFlinkConfAsyncRequest
-         * @param headers GenerateResourcePlanWithFlinkConfAsyncHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateResourcePlanWithFlinkConfAsyncResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a ticket that applies for asynchronous generation of the fine-grained resources. This operation returns the ID of the ticket for you to query the asynchronous generation result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateResourcePlanWithFlinkConfAsyncRequest
+        /// </param>
+        /// <param name="headers">
+        /// GenerateResourcePlanWithFlinkConfAsyncHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateResourcePlanWithFlinkConfAsyncResponse
+        /// </returns>
         public GenerateResourcePlanWithFlinkConfAsyncResponse GenerateResourcePlanWithFlinkConfAsyncWithOptions(string namespace_, string deploymentId, GenerateResourcePlanWithFlinkConfAsyncRequest request, GenerateResourcePlanWithFlinkConfAsyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1157,14 +1437,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GenerateResourcePlanWithFlinkConfAsyncResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary generate resource plan with flink conf async.
-         *
-         * @param request GenerateResourcePlanWithFlinkConfAsyncRequest
-         * @param headers GenerateResourcePlanWithFlinkConfAsyncHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateResourcePlanWithFlinkConfAsyncResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a ticket that applies for asynchronous generation of the fine-grained resources. This operation returns the ID of the ticket for you to query the asynchronous generation result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateResourcePlanWithFlinkConfAsyncRequest
+        /// </param>
+        /// <param name="headers">
+        /// GenerateResourcePlanWithFlinkConfAsyncHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateResourcePlanWithFlinkConfAsyncResponse
+        /// </returns>
         public async Task<GenerateResourcePlanWithFlinkConfAsyncResponse> GenerateResourcePlanWithFlinkConfAsyncWithOptionsAsync(string namespace_, string deploymentId, GenerateResourcePlanWithFlinkConfAsyncRequest request, GenerateResourcePlanWithFlinkConfAsyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1197,12 +1487,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GenerateResourcePlanWithFlinkConfAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary generate resource plan with flink conf async.
-         *
-         * @param request GenerateResourcePlanWithFlinkConfAsyncRequest
-         * @return GenerateResourcePlanWithFlinkConfAsyncResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a ticket that applies for asynchronous generation of the fine-grained resources. This operation returns the ID of the ticket for you to query the asynchronous generation result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateResourcePlanWithFlinkConfAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateResourcePlanWithFlinkConfAsyncResponse
+        /// </returns>
         public GenerateResourcePlanWithFlinkConfAsyncResponse GenerateResourcePlanWithFlinkConfAsync(string namespace_, string deploymentId, GenerateResourcePlanWithFlinkConfAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1210,12 +1506,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return GenerateResourcePlanWithFlinkConfAsyncWithOptions(namespace_, deploymentId, request, headers, runtime);
         }
 
-        /**
-         * @summary generate resource plan with flink conf async.
-         *
-         * @param request GenerateResourcePlanWithFlinkConfAsyncRequest
-         * @return GenerateResourcePlanWithFlinkConfAsyncResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a ticket that applies for asynchronous generation of the fine-grained resources. This operation returns the ID of the ticket for you to query the asynchronous generation result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateResourcePlanWithFlinkConfAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateResourcePlanWithFlinkConfAsyncResponse
+        /// </returns>
         public async Task<GenerateResourcePlanWithFlinkConfAsyncResponse> GenerateResourcePlanWithFlinkConfAsyncAsync(string namespace_, string deploymentId, GenerateResourcePlanWithFlinkConfAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1223,13 +1525,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await GenerateResourcePlanWithFlinkConfAsyncWithOptionsAsync(namespace_, deploymentId, request, headers, runtime);
         }
 
-        /**
-         * @summary get a deployment
-         *
-         * @param headers GetDeploymentHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetDeploymentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentResponse
+        /// </returns>
         public GetDeploymentResponse GetDeploymentWithOptions(string namespace_, string deploymentId, GetDeploymentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1260,13 +1570,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetDeploymentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary get a deployment
-         *
-         * @param headers GetDeploymentHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetDeploymentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentResponse
+        /// </returns>
         public async Task<GetDeploymentResponse> GetDeploymentWithOptionsAsync(string namespace_, string deploymentId, GetDeploymentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1297,11 +1615,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetDeploymentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary get a deployment
-         *
-         * @return GetDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of a deployment.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetDeploymentResponse
+        /// </returns>
         public GetDeploymentResponse GetDeployment(string namespace_, string deploymentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1309,11 +1630,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return GetDeploymentWithOptions(namespace_, deploymentId, headers, runtime);
         }
 
-        /**
-         * @summary get a deployment
-         *
-         * @return GetDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of a deployment.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetDeploymentResponse
+        /// </returns>
         public async Task<GetDeploymentResponse> GetDeploymentAsync(string namespace_, string deploymentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1321,13 +1645,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await GetDeploymentWithOptionsAsync(namespace_, deploymentId, headers, runtime);
         }
 
-        /**
-         * @summary 获取生成ResourcePlan异步操作的结果。
-         *
-         * @param headers GetGenerateResourcePlanResultHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGenerateResourcePlanResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the asynchronous generation result of fine-grained resources based on the ID of the ticket that applies for an asynchronous generation.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetGenerateResourcePlanResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGenerateResourcePlanResultResponse
+        /// </returns>
         public GetGenerateResourcePlanResultResponse GetGenerateResourcePlanResultWithOptions(string namespace_, string ticketId, GetGenerateResourcePlanResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1358,13 +1690,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetGenerateResourcePlanResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取生成ResourcePlan异步操作的结果。
-         *
-         * @param headers GetGenerateResourcePlanResultHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetGenerateResourcePlanResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the asynchronous generation result of fine-grained resources based on the ID of the ticket that applies for an asynchronous generation.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetGenerateResourcePlanResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGenerateResourcePlanResultResponse
+        /// </returns>
         public async Task<GetGenerateResourcePlanResultResponse> GetGenerateResourcePlanResultWithOptionsAsync(string namespace_, string ticketId, GetGenerateResourcePlanResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1395,11 +1735,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetGenerateResourcePlanResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取生成ResourcePlan异步操作的结果。
-         *
-         * @return GetGenerateResourcePlanResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the asynchronous generation result of fine-grained resources based on the ID of the ticket that applies for an asynchronous generation.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetGenerateResourcePlanResultResponse
+        /// </returns>
         public GetGenerateResourcePlanResultResponse GetGenerateResourcePlanResult(string namespace_, string ticketId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1407,11 +1750,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return GetGenerateResourcePlanResultWithOptions(namespace_, ticketId, headers, runtime);
         }
 
-        /**
-         * @summary 获取生成ResourcePlan异步操作的结果。
-         *
-         * @return GetGenerateResourcePlanResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the asynchronous generation result of fine-grained resources based on the ID of the ticket that applies for an asynchronous generation.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetGenerateResourcePlanResultResponse
+        /// </returns>
         public async Task<GetGenerateResourcePlanResultResponse> GetGenerateResourcePlanResultAsync(string namespace_, string ticketId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1419,13 +1765,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await GetGenerateResourcePlanResultWithOptionsAsync(namespace_, ticketId, headers, runtime);
         }
 
-        /**
-         * @summary get job
-         *
-         * @param headers GetJobHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetJobHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobResponse
+        /// </returns>
         public GetJobResponse GetJobWithOptions(string namespace_, string jobId, GetJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1456,13 +1810,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary get job
-         *
-         * @param headers GetJobHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetJobHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobResponse
+        /// </returns>
         public async Task<GetJobResponse> GetJobWithOptionsAsync(string namespace_, string jobId, GetJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1493,11 +1855,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary get job
-         *
-         * @return GetJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of a job.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetJobResponse
+        /// </returns>
         public GetJobResponse GetJob(string namespace_, string jobId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1505,11 +1870,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return GetJobWithOptions(namespace_, jobId, headers, runtime);
         }
 
-        /**
-         * @summary get job
-         *
-         * @return GetJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of a job.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetJobResponse
+        /// </returns>
         public async Task<GetJobResponse> GetJobAsync(string namespace_, string jobId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1517,13 +1885,141 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await GetJobWithOptionsAsync(namespace_, jobId, headers, runtime);
         }
 
-        /**
-         * @summary 调用GetMember获取成员。
-         *
-         * @param headers GetMemberHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the latest startup logs of a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetLatestJobStartLogHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLatestJobStartLogResponse
+        /// </returns>
+        public GetLatestJobStartLogResponse GetLatestJobStartLogWithOptions(string namespace_, string deploymentId, GetLatestJobStartLogHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLatestJobStartLog",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentId) + "/latest_jobmanager_start_log",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLatestJobStartLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the latest startup logs of a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetLatestJobStartLogHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLatestJobStartLogResponse
+        /// </returns>
+        public async Task<GetLatestJobStartLogResponse> GetLatestJobStartLogWithOptionsAsync(string namespace_, string deploymentId, GetLatestJobStartLogHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLatestJobStartLog",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentId) + "/latest_jobmanager_start_log",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLatestJobStartLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the latest startup logs of a job.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetLatestJobStartLogResponse
+        /// </returns>
+        public GetLatestJobStartLogResponse GetLatestJobStartLog(string namespace_, string deploymentId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetLatestJobStartLogHeaders headers = new GetLatestJobStartLogHeaders();
+            return GetLatestJobStartLogWithOptions(namespace_, deploymentId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the latest startup logs of a job.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetLatestJobStartLogResponse
+        /// </returns>
+        public async Task<GetLatestJobStartLogResponse> GetLatestJobStartLogAsync(string namespace_, string deploymentId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetLatestJobStartLogHeaders headers = new GetLatestJobStartLogHeaders();
+            return await GetLatestJobStartLogWithOptionsAsync(namespace_, deploymentId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permissions of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetMemberHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemberResponse
+        /// </returns>
         public GetMemberResponse GetMemberWithOptions(string namespace_, string member, GetMemberHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1554,13 +2050,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetMemberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用GetMember获取成员。
-         *
-         * @param headers GetMemberHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permissions of a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetMemberHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemberResponse
+        /// </returns>
         public async Task<GetMemberResponse> GetMemberWithOptionsAsync(string namespace_, string member, GetMemberHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1591,11 +2095,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用GetMember获取成员。
-         *
-         * @return GetMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permissions of a member.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMemberResponse
+        /// </returns>
         public GetMemberResponse GetMember(string namespace_, string member)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1603,11 +2110,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return GetMemberWithOptions(namespace_, member, headers, runtime);
         }
 
-        /**
-         * @summary 调用GetMember获取成员。
-         *
-         * @return GetMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permissions of a member.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMemberResponse
+        /// </returns>
         public async Task<GetMemberResponse> GetMemberAsync(string namespace_, string member)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1615,13 +2125,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await GetMemberWithOptionsAsync(namespace_, member, headers, runtime);
         }
 
-        /**
-         * @summary 调用GetSavepoint获取savepoint信息。
-         *
-         * @param headers GetSavepointHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of a savepoint and checkpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetSavepointHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSavepointResponse
+        /// </returns>
         public GetSavepointResponse GetSavepointWithOptions(string namespace_, string savepointId, GetSavepointHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1652,13 +2170,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetSavepointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用GetSavepoint获取savepoint信息。
-         *
-         * @param headers GetSavepointHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of a savepoint and checkpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetSavepointHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSavepointResponse
+        /// </returns>
         public async Task<GetSavepointResponse> GetSavepointWithOptionsAsync(string namespace_, string savepointId, GetSavepointHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -1689,11 +2215,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<GetSavepointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用GetSavepoint获取savepoint信息。
-         *
-         * @return GetSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of a savepoint and checkpoint.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetSavepointResponse
+        /// </returns>
         public GetSavepointResponse GetSavepoint(string namespace_, string savepointId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1701,11 +2230,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return GetSavepointWithOptions(namespace_, savepointId, headers, runtime);
         }
 
-        /**
-         * @summary 调用GetSavepoint获取savepoint信息。
-         *
-         * @return GetSavepointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of a savepoint and checkpoint.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetSavepointResponse
+        /// </returns>
         public async Task<GetSavepointResponse> GetSavepointAsync(string namespace_, string savepointId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1713,14 +2245,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await GetSavepointWithOptionsAsync(namespace_, savepointId, headers, runtime);
         }
 
-        /**
-         * @summary list deployment targets
-         *
-         * @param request ListDeploymentTargetsRequest
-         * @param headers ListDeploymentTargetsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDeploymentTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of clusters in which deployments can be deployed. The cluster can be a session cluster or a per-job cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeploymentTargetsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListDeploymentTargetsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeploymentTargetsResponse
+        /// </returns>
         public ListDeploymentTargetsResponse ListDeploymentTargetsWithOptions(string namespace_, ListDeploymentTargetsRequest request, ListDeploymentTargetsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1762,14 +2304,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListDeploymentTargetsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary list deployment targets
-         *
-         * @param request ListDeploymentTargetsRequest
-         * @param headers ListDeploymentTargetsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDeploymentTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of clusters in which deployments can be deployed. The cluster can be a session cluster or a per-job cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeploymentTargetsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListDeploymentTargetsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeploymentTargetsResponse
+        /// </returns>
         public async Task<ListDeploymentTargetsResponse> ListDeploymentTargetsWithOptionsAsync(string namespace_, ListDeploymentTargetsRequest request, ListDeploymentTargetsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1811,12 +2363,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListDeploymentTargetsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary list deployment targets
-         *
-         * @param request ListDeploymentTargetsRequest
-         * @return ListDeploymentTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of clusters in which deployments can be deployed. The cluster can be a session cluster or a per-job cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeploymentTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeploymentTargetsResponse
+        /// </returns>
         public ListDeploymentTargetsResponse ListDeploymentTargets(string namespace_, ListDeploymentTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1824,12 +2382,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return ListDeploymentTargetsWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary list deployment targets
-         *
-         * @param request ListDeploymentTargetsRequest
-         * @return ListDeploymentTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of clusters in which deployments can be deployed. The cluster can be a session cluster or a per-job cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeploymentTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeploymentTargetsResponse
+        /// </returns>
         public async Task<ListDeploymentTargetsResponse> ListDeploymentTargetsAsync(string namespace_, ListDeploymentTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1837,14 +2401,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await ListDeploymentTargetsWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary list deployments
-         *
-         * @param request ListDeploymentsRequest
-         * @param headers ListDeploymentsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDeploymentsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains information about all deployments.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeploymentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListDeploymentsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeploymentsResponse
+        /// </returns>
         public ListDeploymentsResponse ListDeploymentsWithOptions(string namespace_, ListDeploymentsRequest request, ListDeploymentsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1914,14 +2488,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListDeploymentsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary list deployments
-         *
-         * @param request ListDeploymentsRequest
-         * @param headers ListDeploymentsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDeploymentsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains information about all deployments.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeploymentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListDeploymentsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeploymentsResponse
+        /// </returns>
         public async Task<ListDeploymentsResponse> ListDeploymentsWithOptionsAsync(string namespace_, ListDeploymentsRequest request, ListDeploymentsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1991,12 +2575,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListDeploymentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary list deployments
-         *
-         * @param request ListDeploymentsRequest
-         * @return ListDeploymentsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains information about all deployments.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeploymentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeploymentsResponse
+        /// </returns>
         public ListDeploymentsResponse ListDeployments(string namespace_, ListDeploymentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2004,12 +2594,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return ListDeploymentsWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary list deployments
-         *
-         * @param request ListDeploymentsRequest
-         * @return ListDeploymentsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains information about all deployments.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeploymentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeploymentsResponse
+        /// </returns>
         public async Task<ListDeploymentsResponse> ListDeploymentsAsync(string namespace_, ListDeploymentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2017,14 +2613,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await ListDeploymentsWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 列出有编辑权限的项目空间。
-         *
-         * @param request ListEditableNamespaceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListEditableNamespaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出有编辑权限的项目空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEditableNamespaceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEditableNamespaceResponse
+        /// </returns>
         public ListEditableNamespaceResponse ListEditableNamespaceWithOptions(ListEditableNamespaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2069,14 +2675,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListEditableNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出有编辑权限的项目空间。
-         *
-         * @param request ListEditableNamespaceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListEditableNamespaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出有编辑权限的项目空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEditableNamespaceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEditableNamespaceResponse
+        /// </returns>
         public async Task<ListEditableNamespaceResponse> ListEditableNamespaceWithOptionsAsync(ListEditableNamespaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2121,12 +2737,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListEditableNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出有编辑权限的项目空间。
-         *
-         * @param request ListEditableNamespaceRequest
-         * @return ListEditableNamespaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出有编辑权限的项目空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEditableNamespaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEditableNamespaceResponse
+        /// </returns>
         public ListEditableNamespaceResponse ListEditableNamespace(ListEditableNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2134,12 +2756,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return ListEditableNamespaceWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 列出有编辑权限的项目空间。
-         *
-         * @param request ListEditableNamespaceRequest
-         * @return ListEditableNamespaceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出有编辑权限的项目空间。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEditableNamespaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEditableNamespaceResponse
+        /// </returns>
         public async Task<ListEditableNamespaceResponse> ListEditableNamespaceAsync(ListEditableNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2147,13 +2775,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await ListEditableNamespaceWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取系统支持的引擎版本信息。
-         *
-         * @param headers ListEngineVersionMetadataHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListEngineVersionMetadataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of engine versions that are supported by Realtime Compute for Apache Flink.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// ListEngineVersionMetadataHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEngineVersionMetadataResponse
+        /// </returns>
         public ListEngineVersionMetadataResponse ListEngineVersionMetadataWithOptions(ListEngineVersionMetadataHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -2184,13 +2820,21 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListEngineVersionMetadataResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取系统支持的引擎版本信息。
-         *
-         * @param headers ListEngineVersionMetadataHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListEngineVersionMetadataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of engine versions that are supported by Realtime Compute for Apache Flink.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// ListEngineVersionMetadataHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEngineVersionMetadataResponse
+        /// </returns>
         public async Task<ListEngineVersionMetadataResponse> ListEngineVersionMetadataWithOptionsAsync(ListEngineVersionMetadataHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -2221,11 +2865,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListEngineVersionMetadataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取系统支持的引擎版本信息。
-         *
-         * @return ListEngineVersionMetadataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of engine versions that are supported by Realtime Compute for Apache Flink.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListEngineVersionMetadataResponse
+        /// </returns>
         public ListEngineVersionMetadataResponse ListEngineVersionMetadata()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2233,11 +2880,14 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return ListEngineVersionMetadataWithOptions(headers, runtime);
         }
 
-        /**
-         * @summary 获取系统支持的引擎版本信息。
-         *
-         * @return ListEngineVersionMetadataResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of engine versions that are supported by Realtime Compute for Apache Flink.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListEngineVersionMetadataResponse
+        /// </returns>
         public async Task<ListEngineVersionMetadataResponse> ListEngineVersionMetadataAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2245,14 +2895,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await ListEngineVersionMetadataWithOptionsAsync(headers, runtime);
         }
 
-        /**
-         * @summary list jobs
-         *
-         * @param request ListJobsRequest
-         * @param headers ListJobsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all jobs in a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListJobsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobsResponse
+        /// </returns>
         public ListJobsResponse ListJobsWithOptions(string namespace_, ListJobsRequest request, ListJobsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2302,14 +2962,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListJobsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary list jobs
-         *
-         * @param request ListJobsRequest
-         * @param headers ListJobsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all jobs in a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListJobsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobsResponse
+        /// </returns>
         public async Task<ListJobsResponse> ListJobsWithOptionsAsync(string namespace_, ListJobsRequest request, ListJobsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2359,12 +3029,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary list jobs
-         *
-         * @param request ListJobsRequest
-         * @return ListJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all jobs in a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobsResponse
+        /// </returns>
         public ListJobsResponse ListJobs(string namespace_, ListJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2372,12 +3048,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return ListJobsWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary list jobs
-         *
-         * @param request ListJobsRequest
-         * @return ListJobsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about all jobs in a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobsResponse
+        /// </returns>
         public async Task<ListJobsResponse> ListJobsAsync(string namespace_, ListJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2385,14 +3067,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await ListJobsWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用ListMembers接口获取成员列表。
-         *
-         * @param request ListMembersRequest
-         * @param headers ListMembersHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the mappings between the ID and permissions of a member in a specific namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListMembersHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMembersResponse
+        /// </returns>
         public ListMembersResponse ListMembersWithOptions(string namespace_, ListMembersRequest request, ListMembersHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2434,14 +3126,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListMembersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用ListMembers接口获取成员列表。
-         *
-         * @param request ListMembersRequest
-         * @param headers ListMembersHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the mappings between the ID and permissions of a member in a specific namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListMembersHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMembersResponse
+        /// </returns>
         public async Task<ListMembersResponse> ListMembersWithOptionsAsync(string namespace_, ListMembersRequest request, ListMembersHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2483,12 +3185,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用ListMembers接口获取成员列表。
-         *
-         * @param request ListMembersRequest
-         * @return ListMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the mappings between the ID and permissions of a member in a specific namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMembersResponse
+        /// </returns>
         public ListMembersResponse ListMembers(string namespace_, ListMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2496,12 +3204,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return ListMembersWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用ListMembers接口获取成员列表。
-         *
-         * @param request ListMembersRequest
-         * @return ListMembersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the mappings between the ID and permissions of a member in a specific namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMembersResponse
+        /// </returns>
         public async Task<ListMembersResponse> ListMembersAsync(string namespace_, ListMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2509,14 +3223,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await ListMembersWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用ListSavepoints获取满足查询条件的savepoint列表。
-         *
-         * @param request ListSavepointsRequest
-         * @param headers ListSavepointsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSavepointsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of savepoints or checkpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSavepointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListSavepointsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSavepointsResponse
+        /// </returns>
         public ListSavepointsResponse ListSavepointsWithOptions(string namespace_, ListSavepointsRequest request, ListSavepointsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2566,14 +3290,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListSavepointsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用ListSavepoints获取满足查询条件的savepoint列表。
-         *
-         * @param request ListSavepointsRequest
-         * @param headers ListSavepointsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSavepointsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of savepoints or checkpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSavepointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListSavepointsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSavepointsResponse
+        /// </returns>
         public async Task<ListSavepointsResponse> ListSavepointsWithOptionsAsync(string namespace_, ListSavepointsRequest request, ListSavepointsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2623,12 +3357,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListSavepointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用ListSavepoints获取满足查询条件的savepoint列表。
-         *
-         * @param request ListSavepointsRequest
-         * @return ListSavepointsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of savepoints or checkpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSavepointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSavepointsResponse
+        /// </returns>
         public ListSavepointsResponse ListSavepoints(string namespace_, ListSavepointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2636,12 +3376,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return ListSavepointsWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用ListSavepoints获取满足查询条件的savepoint列表。
-         *
-         * @param request ListSavepointsRequest
-         * @return ListSavepointsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of savepoints or checkpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSavepointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSavepointsResponse
+        /// </returns>
         public async Task<ListSavepointsResponse> ListSavepointsAsync(string namespace_, ListSavepointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2649,14 +3395,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await ListSavepointsWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary list variables
-         *
-         * @param request ListVariablesRequest
-         * @param headers ListVariablesHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListVariablesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of variables.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVariablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListVariablesHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVariablesResponse
+        /// </returns>
         public ListVariablesResponse ListVariablesWithOptions(string namespace_, ListVariablesRequest request, ListVariablesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2698,14 +3454,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListVariablesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary list variables
-         *
-         * @param request ListVariablesRequest
-         * @param headers ListVariablesHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListVariablesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of variables.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVariablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListVariablesHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVariablesResponse
+        /// </returns>
         public async Task<ListVariablesResponse> ListVariablesWithOptionsAsync(string namespace_, ListVariablesRequest request, ListVariablesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2747,12 +3513,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<ListVariablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary list variables
-         *
-         * @param request ListVariablesRequest
-         * @return ListVariablesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of variables.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVariablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVariablesResponse
+        /// </returns>
         public ListVariablesResponse ListVariables(string namespace_, ListVariablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2760,12 +3532,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return ListVariablesWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary list variables
-         *
-         * @param request ListVariablesRequest
-         * @return ListVariablesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of variables.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVariablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVariablesResponse
+        /// </returns>
         public async Task<ListVariablesResponse> ListVariablesAsync(string namespace_, ListVariablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2773,16 +3551,29 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await ListVariablesWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI StartJob is deprecated
-         *
-         * @summary start job
-         *
-         * @param request StartJobRequest
-         * @param headers StartJobHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartJobResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI StartJob is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>start job</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// StartJobHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobResponse
+        /// </returns>
+        [Obsolete("OpenAPI StartJob is deprecated\n")]
         // Deprecated
         public StartJobResponse StartJobWithOptions(string namespace_, StartJobRequest request, StartJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2816,16 +3607,29 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<StartJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI StartJob is deprecated
-         *
-         * @summary start job
-         *
-         * @param request StartJobRequest
-         * @param headers StartJobHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartJobResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI StartJob is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>start job</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// StartJobHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobResponse
+        /// </returns>
+        [Obsolete("OpenAPI StartJob is deprecated\n")]
         // Deprecated
         public async Task<StartJobResponse> StartJobWithOptionsAsync(string namespace_, StartJobRequest request, StartJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2859,14 +3663,23 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<StartJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI StartJob is deprecated
-         *
-         * @summary start job
-         *
-         * @param request StartJobRequest
-         * @return StartJobResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI StartJob is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>start job</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobResponse
+        /// </returns>
+        [Obsolete("OpenAPI StartJob is deprecated\n")]
         // Deprecated
         public StartJobResponse StartJob(string namespace_, StartJobRequest request)
         {
@@ -2875,14 +3688,23 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return StartJobWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI StartJob is deprecated
-         *
-         * @summary start job
-         *
-         * @param request StartJobRequest
-         * @return StartJobResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI StartJob is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>start job</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobResponse
+        /// </returns>
+        [Obsolete("OpenAPI StartJob is deprecated\n")]
         // Deprecated
         public async Task<StartJobResponse> StartJobAsync(string namespace_, StartJobRequest request)
         {
@@ -2891,14 +3713,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await StartJobWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 启动作业实例。
-         *
-         * @param request StartJobWithParamsRequest
-         * @param headers StartJobWithParamsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartJobWithParamsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobWithParamsRequest
+        /// </param>
+        /// <param name="headers">
+        /// StartJobWithParamsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobWithParamsResponse
+        /// </returns>
         public StartJobWithParamsResponse StartJobWithParamsWithOptions(string namespace_, StartJobWithParamsRequest request, StartJobWithParamsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2931,14 +3763,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<StartJobWithParamsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 启动作业实例。
-         *
-         * @param request StartJobWithParamsRequest
-         * @param headers StartJobWithParamsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartJobWithParamsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobWithParamsRequest
+        /// </param>
+        /// <param name="headers">
+        /// StartJobWithParamsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobWithParamsResponse
+        /// </returns>
         public async Task<StartJobWithParamsResponse> StartJobWithParamsWithOptionsAsync(string namespace_, StartJobWithParamsRequest request, StartJobWithParamsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2971,12 +3813,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<StartJobWithParamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 启动作业实例。
-         *
-         * @param request StartJobWithParamsRequest
-         * @return StartJobWithParamsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobWithParamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobWithParamsResponse
+        /// </returns>
         public StartJobWithParamsResponse StartJobWithParams(string namespace_, StartJobWithParamsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2984,12 +3832,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return StartJobWithParamsWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 启动作业实例。
-         *
-         * @param request StartJobWithParamsRequest
-         * @return StartJobWithParamsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartJobWithParamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartJobWithParamsResponse
+        /// </returns>
         public async Task<StartJobWithParamsResponse> StartJobWithParamsAsync(string namespace_, StartJobWithParamsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2997,14 +3851,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await StartJobWithParamsWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用StopJob停止实例。
-         *
-         * @param request StopJobRequest
-         * @param headers StopJobHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// StopJobHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopJobResponse
+        /// </returns>
         public StopJobResponse StopJobWithOptions(string namespace_, string jobId, StopJobRequest request, StopJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3037,14 +3901,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<StopJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用StopJob停止实例。
-         *
-         * @param request StopJobRequest
-         * @param headers StopJobHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// StopJobHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopJobResponse
+        /// </returns>
         public async Task<StopJobResponse> StopJobWithOptionsAsync(string namespace_, string jobId, StopJobRequest request, StopJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3077,12 +3951,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<StopJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用StopJob停止实例。
-         *
-         * @param request StopJobRequest
-         * @return StopJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopJobResponse
+        /// </returns>
         public StopJobResponse StopJob(string namespace_, string jobId, StopJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3090,12 +3970,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return StopJobWithOptions(namespace_, jobId, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用StopJob停止实例。
-         *
-         * @param request StopJobRequest
-         * @return StopJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopJobResponse
+        /// </returns>
         public async Task<StopJobResponse> StopJobAsync(string namespace_, string jobId, StopJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3103,14 +3989,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await StopJobWithOptionsAsync(namespace_, jobId, request, headers, runtime);
         }
 
-        /**
-         * @summary update a deployment using patch
-         *
-         * @param request UpdateDeploymentRequest
-         * @param headers UpdateDeploymentHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeploymentRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateDeploymentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeploymentResponse
+        /// </returns>
         public UpdateDeploymentResponse UpdateDeploymentWithOptions(string namespace_, string deploymentId, UpdateDeploymentRequest request, UpdateDeploymentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3143,14 +4039,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<UpdateDeploymentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary update a deployment using patch
-         *
-         * @param request UpdateDeploymentRequest
-         * @param headers UpdateDeploymentHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeploymentRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateDeploymentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeploymentResponse
+        /// </returns>
         public async Task<UpdateDeploymentResponse> UpdateDeploymentWithOptionsAsync(string namespace_, string deploymentId, UpdateDeploymentRequest request, UpdateDeploymentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3183,12 +4089,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<UpdateDeploymentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary update a deployment using patch
-         *
-         * @param request UpdateDeploymentRequest
-         * @return UpdateDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeploymentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeploymentResponse
+        /// </returns>
         public UpdateDeploymentResponse UpdateDeployment(string namespace_, string deploymentId, UpdateDeploymentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3196,12 +4108,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return UpdateDeploymentWithOptions(namespace_, deploymentId, request, headers, runtime);
         }
 
-        /**
-         * @summary update a deployment using patch
-         *
-         * @param request UpdateDeploymentRequest
-         * @return UpdateDeploymentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeploymentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeploymentResponse
+        /// </returns>
         public async Task<UpdateDeploymentResponse> UpdateDeploymentAsync(string namespace_, string deploymentId, UpdateDeploymentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3209,14 +4127,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return await UpdateDeploymentWithOptionsAsync(namespace_, deploymentId, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用UpdateMember更新成员。
-         *
-         * @param request UpdateMemberRequest
-         * @param headers UpdateMemberHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the permissions of one or more members in a specific namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateMemberHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemberResponse
+        /// </returns>
         public UpdateMemberResponse UpdateMemberWithOptions(string namespace_, UpdateMemberRequest request, UpdateMemberHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3249,14 +4177,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<UpdateMemberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用UpdateMember更新成员。
-         *
-         * @param request UpdateMemberRequest
-         * @param headers UpdateMemberHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the permissions of one or more members in a specific namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateMemberHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemberResponse
+        /// </returns>
         public async Task<UpdateMemberResponse> UpdateMemberWithOptionsAsync(string namespace_, UpdateMemberRequest request, UpdateMemberHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3289,12 +4227,18 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return TeaModel.ToObject<UpdateMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 调用UpdateMember更新成员。
-         *
-         * @param request UpdateMemberRequest
-         * @return UpdateMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the permissions of one or more members in a specific namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemberResponse
+        /// </returns>
         public UpdateMemberResponse UpdateMember(string namespace_, UpdateMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3302,17 +4246,161 @@ namespace AlibabaCloud.SDK.Ververica20220718
             return UpdateMemberWithOptions(namespace_, request, headers, runtime);
         }
 
-        /**
-         * @summary 调用UpdateMember更新成员。
-         *
-         * @param request UpdateMemberRequest
-         * @return UpdateMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the permissions of one or more members in a specific namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemberResponse
+        /// </returns>
         public async Task<UpdateMemberResponse> UpdateMemberAsync(string namespace_, UpdateMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateMemberHeaders headers = new UpdateMemberHeaders();
             return await UpdateMemberWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the code of an SQL deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateSqlStatementRequest
+        /// </param>
+        /// <param name="headers">
+        /// ValidateSqlStatementHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateSqlStatementResponse
+        /// </returns>
+        public ValidateSqlStatementResponse ValidateSqlStatementWithOptions(string namespace_, ValidateSqlStatementRequest request, ValidateSqlStatementHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateSqlStatement",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-statement/validate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateSqlStatementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the code of an SQL deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateSqlStatementRequest
+        /// </param>
+        /// <param name="headers">
+        /// ValidateSqlStatementHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateSqlStatementResponse
+        /// </returns>
+        public async Task<ValidateSqlStatementResponse> ValidateSqlStatementWithOptionsAsync(string namespace_, ValidateSqlStatementRequest request, ValidateSqlStatementHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateSqlStatement",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-statement/validate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateSqlStatementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the code of an SQL deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateSqlStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateSqlStatementResponse
+        /// </returns>
+        public ValidateSqlStatementResponse ValidateSqlStatement(string namespace_, ValidateSqlStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ValidateSqlStatementHeaders headers = new ValidateSqlStatementHeaders();
+            return ValidateSqlStatementWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the code of an SQL deployment.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateSqlStatementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateSqlStatementResponse
+        /// </returns>
+        public async Task<ValidateSqlStatementResponse> ValidateSqlStatementAsync(string namespace_, ValidateSqlStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ValidateSqlStatementHeaders headers = new ValidateSqlStatementHeaders();
+            return await ValidateSqlStatementWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
     }

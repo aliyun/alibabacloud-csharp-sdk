@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class EngineVersionMetadataIndex : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vvr-6.0.1-flink-1.15</para>
+        /// </summary>
         [NameInMap("defaultEngineVersion")]
         [Validation(Required=false)]
         public string DefaultEngineVersion { get; set; }

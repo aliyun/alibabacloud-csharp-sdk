@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string MainArgs { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://oss//bucket//test.py">https://oss//bucket//test.py</a></para>
+        /// </summary>
         [NameInMap("pythonArtifactUri")]
         [Validation(Required=false)]
         public string PythonArtifactUri { get; set; }

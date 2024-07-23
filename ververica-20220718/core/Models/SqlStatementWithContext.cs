@@ -14,26 +14,18 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public List<string> AdditionalDependencies { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("batchMode")]
         [Validation(Required=false)]
         public bool? BatchMode { get; set; }
-
-        [NameInMap("catalog")]
-        [Validation(Required=false)]
-        public string Catalog { get; set; }
-
-        [NameInMap("database")]
-        [Validation(Required=false)]
-        public string Database { get; set; }
 
         [NameInMap("flinkConfiguration")]
         [Validation(Required=false)]
         public Dictionary<string, object> FlinkConfiguration { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("statement")]
         [Validation(Required=false)]

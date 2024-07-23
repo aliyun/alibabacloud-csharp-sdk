@@ -8,22 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class StopJobResponseBody : TeaModel {
+    public class ValidateSqlStatementResponseBody : TeaModel {
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>If the value of success was true, the job that you stopped was returned.</description></item>
-        /// <item><description>If the value of success was false, a null value was returned.</description></item>
-        /// </list>
+        /// <para>The returned data, which represents the details of SQL validation results.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public Job Data { get; set; }
+        public SqlStatementValidationResult Data { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error code was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
-        /// </list>
+        /// <para>If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -33,10 +27,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error message was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
-        /// </list>
+        /// <para>If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -46,7 +37,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The value was fixed to 200.</para>
+        /// <para>The status code returned. The value was fixed to 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -59,7 +50,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>
+        /// <para>CBC799F0-****-1D30-8A4F-882ED4DD5E02</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

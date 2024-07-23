@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class DeleteVariableHeaders : TeaModel {
+    public class ValidateSqlStatementHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }

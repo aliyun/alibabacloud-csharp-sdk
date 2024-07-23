@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class GenerateResourcePlanWithFlinkConfAsyncRequest : TeaModel {
+    public class ValidateSqlStatementRequest : TeaModel {
         /// <summary>
-        /// <para>The Flink configuration that is used to generate a resource plan.</para>
+        /// <para>The content of the code that you want to verify.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Body { get; set; }
+        public SqlStatementWithContext Body { get; set; }
 
     }
 
