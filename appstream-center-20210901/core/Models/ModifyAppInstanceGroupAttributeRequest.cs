@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyAppInstanceGroupAttributeRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aig-9ciijz60n4xsv****</para>
         /// </summary>
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
@@ -44,10 +47,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public ModifyAppInstanceGroupAttributeRequestNodePool NodePool { get; set; }
         public class ModifyAppInstanceGroupAttributeRequestNodePool : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("NodeCapacity")]
             [Validation(Required=false)]
             public int? NodeCapacity { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rg-ew7va2g1wl3vm****</para>
+            /// </summary>
             [NameInMap("NodePoolId")]
             [Validation(Required=false)]
             public string NodePoolId { get; set; }
@@ -63,7 +74,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PreOpenMode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CloudApp</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
@@ -73,16 +87,28 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public ModifyAppInstanceGroupAttributeRequestSecurityPolicy SecurityPolicy { get; set; }
         public class ModifyAppInstanceGroupAttributeRequestSecurityPolicy : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("ResetAfterUnbind")]
             [Validation(Required=false)]
             public bool? ResetAfterUnbind { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("SkipUserAuthCheck")]
             [Validation(Required=false)]
             public bool? SkipUserAuthCheck { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>15</para>
+        /// </summary>
         [NameInMap("SessionTimeout")]
         [Validation(Required=false)]
         public int? SessionTimeout { get; set; }

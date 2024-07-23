@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetOtaTaskByTaskIdRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ota-be7jzm29wrrz5****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
