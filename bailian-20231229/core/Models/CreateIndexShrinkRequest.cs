@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string CategoryIdsShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>128</para>
+        /// </summary>
         [NameInMap("ChunkSize")]
         [Validation(Required=false)]
         public int? ChunkSize { get; set; }
@@ -29,57 +33,97 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string DocumentIdsShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>text-embedding-v2</para>
+        /// </summary>
         [NameInMap("EmbeddingModelName")]
         [Validation(Required=false)]
         public string EmbeddingModelName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>16</para>
+        /// </summary>
         [NameInMap("OverlapSize")]
         [Validation(Required=false)]
         public int? OverlapSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0.20</para>
+        /// </summary>
         [NameInMap("RerankMinScore")]
         [Validation(Required=false)]
         public double? RerankMinScore { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gte-rerank-hybrid</para>
+        /// </summary>
         [NameInMap("RerankModelName")]
         [Validation(Required=false)]
         public string RerankModelName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>,</para>
+        /// </summary>
         [NameInMap("Separator")]
         [Validation(Required=false)]
         public string Separator { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gp-bp321093j84</para>
+        /// </summary>
         [NameInMap("SinkInstanceId")]
         [Validation(Required=false)]
         public string SinkInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("SinkRegion")]
         [Validation(Required=false)]
         public string SinkRegion { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DEFAULT</para>
         /// </summary>
         [NameInMap("SinkType")]
         [Validation(Required=false)]
         public string SinkType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DATA_CENTER_FILE</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>structured</para>
         /// </summary>
         [NameInMap("StructureType")]
         [Validation(Required=false)]

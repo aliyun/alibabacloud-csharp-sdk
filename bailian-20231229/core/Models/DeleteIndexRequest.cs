@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeleteIndexRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f89ie0fj5a</para>
         /// </summary>
         [NameInMap("IndexId")]
         [Validation(Required=false)]

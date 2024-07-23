@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。
-         *
-         * @param request AddFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddFileResponse
+        /// </returns>
         public AddFileResponse AddFileWithOptions(string WorkspaceId, AddFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -81,14 +91,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<AddFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。
-         *
-         * @param request AddFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddFileResponse
+        /// </returns>
         public async Task<AddFileResponse> AddFileWithOptionsAsync(string WorkspaceId, AddFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -125,12 +145,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<AddFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。
-         *
-         * @param request AddFileRequest
-         * @return AddFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddFileResponse
+        /// </returns>
         public AddFileResponse AddFile(string WorkspaceId, AddFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -138,12 +164,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return AddFileWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。
-         *
-         * @param request AddFileRequest
-         * @return AddFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddFileResponse
+        /// </returns>
         public async Task<AddFileResponse> AddFileAsync(string WorkspaceId, AddFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -151,14 +183,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await AddFileWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 请求文档上传租约，进行文档上传。
-         *
-         * @param request ApplyFileUploadLeaseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApplyFileUploadLeaseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>请求文档上传租约，进行文档上传。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyFileUploadLeaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyFileUploadLeaseResponse
+        /// </returns>
         public ApplyFileUploadLeaseResponse ApplyFileUploadLeaseWithOptions(string CategoryId, string WorkspaceId, ApplyFileUploadLeaseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -195,14 +237,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<ApplyFileUploadLeaseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 请求文档上传租约，进行文档上传。
-         *
-         * @param request ApplyFileUploadLeaseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApplyFileUploadLeaseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>请求文档上传租约，进行文档上传。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyFileUploadLeaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyFileUploadLeaseResponse
+        /// </returns>
         public async Task<ApplyFileUploadLeaseResponse> ApplyFileUploadLeaseWithOptionsAsync(string CategoryId, string WorkspaceId, ApplyFileUploadLeaseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -239,12 +291,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<ApplyFileUploadLeaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 请求文档上传租约，进行文档上传。
-         *
-         * @param request ApplyFileUploadLeaseRequest
-         * @return ApplyFileUploadLeaseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>请求文档上传租约，进行文档上传。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyFileUploadLeaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyFileUploadLeaseResponse
+        /// </returns>
         public ApplyFileUploadLeaseResponse ApplyFileUploadLease(string CategoryId, string WorkspaceId, ApplyFileUploadLeaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -252,12 +310,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return ApplyFileUploadLeaseWithOptions(CategoryId, WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 请求文档上传租约，进行文档上传。
-         *
-         * @param request ApplyFileUploadLeaseRequest
-         * @return ApplyFileUploadLeaseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>请求文档上传租约，进行文档上传。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyFileUploadLeaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyFileUploadLeaseResponse
+        /// </returns>
         public async Task<ApplyFileUploadLeaseResponse> ApplyFileUploadLeaseAsync(string CategoryId, string WorkspaceId, ApplyFileUploadLeaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -265,14 +329,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await ApplyFileUploadLeaseWithOptionsAsync(CategoryId, WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建并运行pipeline
-         *
-         * @param tmpReq CreateIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并运行pipeline</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexResponse
+        /// </returns>
         public CreateIndexResponse CreateIndexWithOptions(string WorkspaceId, CreateIndexRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -375,14 +449,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<CreateIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建并运行pipeline
-         *
-         * @param tmpReq CreateIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并运行pipeline</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexResponse
+        /// </returns>
         public async Task<CreateIndexResponse> CreateIndexWithOptionsAsync(string WorkspaceId, CreateIndexRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -485,12 +569,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<CreateIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建并运行pipeline
-         *
-         * @param request CreateIndexRequest
-         * @return CreateIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并运行pipeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexResponse
+        /// </returns>
         public CreateIndexResponse CreateIndex(string WorkspaceId, CreateIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -498,12 +588,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return CreateIndexWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建并运行pipeline
-         *
-         * @param request CreateIndexRequest
-         * @return CreateIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并运行pipeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexResponse
+        /// </returns>
         public async Task<CreateIndexResponse> CreateIndexAsync(string WorkspaceId, CreateIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -511,13 +607,21 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await CreateIndexWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除文档
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除文档</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileResponse
+        /// </returns>
         public DeleteFileResponse DeleteFileWithOptions(string FileId, string WorkspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -539,13 +643,21 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<DeleteFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除文档
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除文档</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileResponse
+        /// </returns>
         public async Task<DeleteFileResponse> DeleteFileWithOptionsAsync(string FileId, string WorkspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -567,11 +679,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<DeleteFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除文档
-         *
-         * @return DeleteFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除文档</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteFileResponse
+        /// </returns>
         public DeleteFileResponse DeleteFile(string FileId, string WorkspaceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -579,11 +694,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return DeleteFileWithOptions(FileId, WorkspaceId, headers, runtime);
         }
 
-        /**
-         * @summary 删除文档
-         *
-         * @return DeleteFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除文档</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteFileResponse
+        /// </returns>
         public async Task<DeleteFileResponse> DeleteFileAsync(string FileId, string WorkspaceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -591,14 +709,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await DeleteFileWithOptionsAsync(FileId, WorkspaceId, headers, runtime);
         }
 
-        /**
-         * @summary 删除Index
-         *
-         * @param request DeleteIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Index</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexResponse
+        /// </returns>
         public DeleteIndexResponse DeleteIndexWithOptions(string WorkspaceId, DeleteIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -627,14 +755,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<DeleteIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除Index
-         *
-         * @param request DeleteIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Index</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexResponse
+        /// </returns>
         public async Task<DeleteIndexResponse> DeleteIndexWithOptionsAsync(string WorkspaceId, DeleteIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -663,12 +801,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<DeleteIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除Index
-         *
-         * @param request DeleteIndexRequest
-         * @return DeleteIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Index</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexResponse
+        /// </returns>
         public DeleteIndexResponse DeleteIndex(string WorkspaceId, DeleteIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -676,12 +820,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return DeleteIndexWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除Index
-         *
-         * @param request DeleteIndexRequest
-         * @return DeleteIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Index</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexResponse
+        /// </returns>
         public async Task<DeleteIndexResponse> DeleteIndexAsync(string WorkspaceId, DeleteIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -689,14 +839,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await DeleteIndexWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除index doc
-         *
-         * @param tmpReq DeleteIndexDocumentRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIndexDocumentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除index doc</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteIndexDocumentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexDocumentResponse
+        /// </returns>
         public DeleteIndexDocumentResponse DeleteIndexDocumentWithOptions(string WorkspaceId, DeleteIndexDocumentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -735,14 +895,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<DeleteIndexDocumentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除index doc
-         *
-         * @param tmpReq DeleteIndexDocumentRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIndexDocumentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除index doc</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteIndexDocumentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexDocumentResponse
+        /// </returns>
         public async Task<DeleteIndexDocumentResponse> DeleteIndexDocumentWithOptionsAsync(string WorkspaceId, DeleteIndexDocumentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -781,12 +951,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<DeleteIndexDocumentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除index doc
-         *
-         * @param request DeleteIndexDocumentRequest
-         * @return DeleteIndexDocumentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除index doc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexDocumentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexDocumentResponse
+        /// </returns>
         public DeleteIndexDocumentResponse DeleteIndexDocument(string WorkspaceId, DeleteIndexDocumentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -794,12 +970,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return DeleteIndexDocumentWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除index doc
-         *
-         * @param request DeleteIndexDocumentRequest
-         * @return DeleteIndexDocumentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除index doc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexDocumentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexDocumentResponse
+        /// </returns>
         public async Task<DeleteIndexDocumentResponse> DeleteIndexDocumentAsync(string WorkspaceId, DeleteIndexDocumentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -807,13 +989,21 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await DeleteIndexDocumentWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取文档基本信息，包括文档名称、类型、状态等。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档基本信息，包括文档名称、类型、状态等。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileResponse
+        /// </returns>
         public DescribeFileResponse DescribeFileWithOptions(string WorkspaceId, string FileId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -835,13 +1025,21 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<DescribeFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档基本信息，包括文档名称、类型、状态等。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档基本信息，包括文档名称、类型、状态等。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileResponse
+        /// </returns>
         public async Task<DescribeFileResponse> DescribeFileWithOptionsAsync(string WorkspaceId, string FileId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -863,11 +1061,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<DescribeFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档基本信息，包括文档名称、类型、状态等。
-         *
-         * @return DescribeFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档基本信息，包括文档名称、类型、状态等。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeFileResponse
+        /// </returns>
         public DescribeFileResponse DescribeFile(string WorkspaceId, string FileId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -875,11 +1076,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return DescribeFileWithOptions(WorkspaceId, FileId, headers, runtime);
         }
 
-        /**
-         * @summary 获取文档基本信息，包括文档名称、类型、状态等。
-         *
-         * @return DescribeFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档基本信息，包括文档名称、类型、状态等。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeFileResponse
+        /// </returns>
         public async Task<DescribeFileResponse> DescribeFileAsync(string WorkspaceId, string FileId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -887,14 +1091,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await DescribeFileWithOptionsAsync(WorkspaceId, FileId, headers, runtime);
         }
 
-        /**
-         * @summary 获取Index运行状态
-         *
-         * @param request GetIndexJobStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIndexJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Index运行状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIndexJobStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexJobStatusResponse
+        /// </returns>
         public GetIndexJobStatusResponse GetIndexJobStatusWithOptions(string WorkspaceId, GetIndexJobStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -927,14 +1141,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<GetIndexJobStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取Index运行状态
-         *
-         * @param request GetIndexJobStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIndexJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Index运行状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIndexJobStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexJobStatusResponse
+        /// </returns>
         public async Task<GetIndexJobStatusResponse> GetIndexJobStatusWithOptionsAsync(string WorkspaceId, GetIndexJobStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -967,12 +1191,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<GetIndexJobStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取Index运行状态
-         *
-         * @param request GetIndexJobStatusRequest
-         * @return GetIndexJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Index运行状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIndexJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexJobStatusResponse
+        /// </returns>
         public GetIndexJobStatusResponse GetIndexJobStatus(string WorkspaceId, GetIndexJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -980,12 +1210,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return GetIndexJobStatusWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取Index运行状态
-         *
-         * @param request GetIndexJobStatusRequest
-         * @return GetIndexJobStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Index运行状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIndexJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexJobStatusResponse
+        /// </returns>
         public async Task<GetIndexJobStatusResponse> GetIndexJobStatusAsync(string WorkspaceId, GetIndexJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -993,14 +1229,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await GetIndexJobStatusWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Chunk
-         *
-         * @param request ListChunksRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListChunksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Chunk</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChunksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChunksResponse
+        /// </returns>
         public ListChunksResponse ListChunksWithOptions(string WorkspaceId, ListChunksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1045,14 +1291,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<ListChunksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Chunk
-         *
-         * @param request ListChunksRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListChunksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Chunk</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChunksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChunksResponse
+        /// </returns>
         public async Task<ListChunksResponse> ListChunksWithOptionsAsync(string WorkspaceId, ListChunksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1097,12 +1353,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<ListChunksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Chunk
-         *
-         * @param request ListChunksRequest
-         * @return ListChunksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Chunk</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChunksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChunksResponse
+        /// </returns>
         public ListChunksResponse ListChunks(string WorkspaceId, ListChunksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1110,12 +1372,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return ListChunksWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Chunk
-         *
-         * @param request ListChunksRequest
-         * @return ListChunksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Chunk</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChunksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChunksResponse
+        /// </returns>
         public async Task<ListChunksResponse> ListChunksAsync(string WorkspaceId, ListChunksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1123,14 +1391,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await ListChunksWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询Index文件
-         *
-         * @param request ListIndexDocumentsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIndexDocumentsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Index文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIndexDocumentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexDocumentsResponse
+        /// </returns>
         public ListIndexDocumentsResponse ListIndexDocumentsWithOptions(string WorkspaceId, ListIndexDocumentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1175,14 +1453,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<ListIndexDocumentsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询Index文件
-         *
-         * @param request ListIndexDocumentsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIndexDocumentsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Index文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIndexDocumentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexDocumentsResponse
+        /// </returns>
         public async Task<ListIndexDocumentsResponse> ListIndexDocumentsWithOptionsAsync(string WorkspaceId, ListIndexDocumentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1227,12 +1515,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<ListIndexDocumentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询Index文件
-         *
-         * @param request ListIndexDocumentsRequest
-         * @return ListIndexDocumentsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Index文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIndexDocumentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexDocumentsResponse
+        /// </returns>
         public ListIndexDocumentsResponse ListIndexDocuments(string WorkspaceId, ListIndexDocumentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1240,12 +1534,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return ListIndexDocumentsWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询Index文件
-         *
-         * @param request ListIndexDocumentsRequest
-         * @return ListIndexDocumentsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Index文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIndexDocumentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexDocumentsResponse
+        /// </returns>
         public async Task<ListIndexDocumentsResponse> ListIndexDocumentsAsync(string WorkspaceId, ListIndexDocumentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1253,14 +1553,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await ListIndexDocumentsWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询pipeline
-         *
-         * @param request ListIndicesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIndicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询pipeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIndicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndicesResponse
+        /// </returns>
         public ListIndicesResponse ListIndicesWithOptions(string WorkspaceId, ListIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1297,14 +1607,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<ListIndicesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询pipeline
-         *
-         * @param request ListIndicesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIndicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询pipeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIndicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndicesResponse
+        /// </returns>
         public async Task<ListIndicesResponse> ListIndicesWithOptionsAsync(string WorkspaceId, ListIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1341,12 +1661,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<ListIndicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询pipeline
-         *
-         * @param request ListIndicesRequest
-         * @return ListIndicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询pipeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIndicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndicesResponse
+        /// </returns>
         public ListIndicesResponse ListIndices(string WorkspaceId, ListIndicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1354,12 +1680,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return ListIndicesWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询pipeline
-         *
-         * @param request ListIndicesRequest
-         * @return ListIndicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询pipeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIndicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndicesResponse
+        /// </returns>
         public async Task<ListIndicesResponse> ListIndicesAsync(string WorkspaceId, ListIndicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1367,14 +1699,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await ListIndicesWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 召回测试
-         *
-         * @param tmpReq RetrieveRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RetrieveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>召回测试</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RetrieveRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveResponse
+        /// </returns>
         public RetrieveResponse RetrieveWithOptions(string WorkspaceId, RetrieveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1387,6 +1729,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rewrite))
             {
                 request.RewriteShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rewrite, "Rewrite", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchFilters))
+            {
+                request.SearchFiltersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchFilters, "SearchFilters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DenseSimilarityTopK))
@@ -1428,6 +1774,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveRetrieverHistory))
             {
                 query["SaveRetrieverHistory"] = request.SaveRetrieverHistory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchFiltersShrink))
+            {
+                query["SearchFilters"] = request.SearchFiltersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparseSimilarityTopK))
             {
@@ -1453,14 +1803,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<RetrieveResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 召回测试
-         *
-         * @param tmpReq RetrieveRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RetrieveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>召回测试</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RetrieveRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveResponse
+        /// </returns>
         public async Task<RetrieveResponse> RetrieveWithOptionsAsync(string WorkspaceId, RetrieveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1473,6 +1833,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rewrite))
             {
                 request.RewriteShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rewrite, "Rewrite", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchFilters))
+            {
+                request.SearchFiltersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchFilters, "SearchFilters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DenseSimilarityTopK))
@@ -1515,6 +1879,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["SaveRetrieverHistory"] = request.SaveRetrieverHistory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchFiltersShrink))
+            {
+                query["SearchFilters"] = request.SearchFiltersShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparseSimilarityTopK))
             {
                 query["SparseSimilarityTopK"] = request.SparseSimilarityTopK;
@@ -1539,12 +1907,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<RetrieveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 召回测试
-         *
-         * @param request RetrieveRequest
-         * @return RetrieveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>召回测试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetrieveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveResponse
+        /// </returns>
         public RetrieveResponse Retrieve(string WorkspaceId, RetrieveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1552,12 +1926,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return RetrieveWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 召回测试
-         *
-         * @param request RetrieveRequest
-         * @return RetrieveResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>召回测试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetrieveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveResponse
+        /// </returns>
         public async Task<RetrieveResponse> RetrieveAsync(string WorkspaceId, RetrieveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1565,14 +1945,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await RetrieveWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 知识索引
-         *
-         * @param tmpReq SubmitIndexAddDocumentsJobRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitIndexAddDocumentsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识索引</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitIndexAddDocumentsJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitIndexAddDocumentsJobResponse
+        /// </returns>
         public SubmitIndexAddDocumentsJobResponse SubmitIndexAddDocumentsJobWithOptions(string WorkspaceId, SubmitIndexAddDocumentsJobRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1623,14 +2013,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<SubmitIndexAddDocumentsJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 知识索引
-         *
-         * @param tmpReq SubmitIndexAddDocumentsJobRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitIndexAddDocumentsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识索引</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitIndexAddDocumentsJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitIndexAddDocumentsJobResponse
+        /// </returns>
         public async Task<SubmitIndexAddDocumentsJobResponse> SubmitIndexAddDocumentsJobWithOptionsAsync(string WorkspaceId, SubmitIndexAddDocumentsJobRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1681,12 +2081,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<SubmitIndexAddDocumentsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 知识索引
-         *
-         * @param request SubmitIndexAddDocumentsJobRequest
-         * @return SubmitIndexAddDocumentsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitIndexAddDocumentsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitIndexAddDocumentsJobResponse
+        /// </returns>
         public SubmitIndexAddDocumentsJobResponse SubmitIndexAddDocumentsJob(string WorkspaceId, SubmitIndexAddDocumentsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1694,12 +2100,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return SubmitIndexAddDocumentsJobWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 知识索引
-         *
-         * @param request SubmitIndexAddDocumentsJobRequest
-         * @return SubmitIndexAddDocumentsJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>知识索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitIndexAddDocumentsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitIndexAddDocumentsJobResponse
+        /// </returns>
         public async Task<SubmitIndexAddDocumentsJobResponse> SubmitIndexAddDocumentsJobAsync(string WorkspaceId, SubmitIndexAddDocumentsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1707,14 +2119,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return await SubmitIndexAddDocumentsJobWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 提交索引任务
-         *
-         * @param request SubmitIndexJobRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitIndexJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交索引任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitIndexJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitIndexJobResponse
+        /// </returns>
         public SubmitIndexJobResponse SubmitIndexJobWithOptions(string WorkspaceId, SubmitIndexJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1743,14 +2165,24 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<SubmitIndexJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 提交索引任务
-         *
-         * @param request SubmitIndexJobRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SubmitIndexJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交索引任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitIndexJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitIndexJobResponse
+        /// </returns>
         public async Task<SubmitIndexJobResponse> SubmitIndexJobWithOptionsAsync(string WorkspaceId, SubmitIndexJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1779,12 +2211,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return TeaModel.ToObject<SubmitIndexJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 提交索引任务
-         *
-         * @param request SubmitIndexJobRequest
-         * @return SubmitIndexJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交索引任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitIndexJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitIndexJobResponse
+        /// </returns>
         public SubmitIndexJobResponse SubmitIndexJob(string WorkspaceId, SubmitIndexJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1792,12 +2230,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             return SubmitIndexJobWithOptions(WorkspaceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 提交索引任务
-         *
-         * @param request SubmitIndexJobRequest
-         * @return SubmitIndexJobResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交索引任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitIndexJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitIndexJobResponse
+        /// </returns>
         public async Task<SubmitIndexJobResponse> SubmitIndexJobAsync(string WorkspaceId, SubmitIndexJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
