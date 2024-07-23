@@ -10,27 +10,30 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ApplyAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// The IDs of the cloud computers. You can specify 1 to 20 IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the cloud computers. You can specify 1 to 20 IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The ID of the automatic snapshot policy.
+        /// <para>The ID of the automatic snapshot policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sp-ejtum8j5tfcw7****</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

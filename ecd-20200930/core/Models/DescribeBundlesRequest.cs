@@ -10,98 +10,118 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeBundlesRequest : TeaModel {
         /// <summary>
-        /// The IDs of the cloud computer templates. You can specify 1 to 100 IDs.
+        /// <para>The IDs of the cloud computer templates. You can specify 1 to 100 IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bundle_ecd_graphics.2xlarge_s15d15_win2019</para>
         /// </summary>
         [NameInMap("BundleId")]
         [Validation(Required=false)]
         public List<string> BundleId { get; set; }
 
         /// <summary>
-        /// The type of the cloud computer template.
+        /// <para>The type of the cloud computer template.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>SYSTEM: system template</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   SYSTEM: system template
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>CUSTOM: custom template</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   CUSTOM: custom template
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>SYSTEM</para>
         /// </summary>
         [NameInMap("BundleType")]
         [Validation(Required=false)]
         public string BundleType { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the inventory status of the cloud computer instance type.
+        /// <para>Specifies whether to query the inventory status of the cloud computer instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("CheckStock")]
         [Validation(Required=false)]
         public bool? CheckStock { get; set; }
 
         /// <summary>
-        /// The number of vCPUs contained in the cloud computer instance type.
+        /// <para>The number of vCPUs contained in the cloud computer instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("CpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
         /// <summary>
-        /// The instance family of the cloud computers.
+        /// <para>The instance family of the cloud computers.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>eds.graphics: graphical instance families</description></item>
+        /// <item><description>eds.hf: instance families with high clock speeds</description></item>
+        /// <item><description>eds.general: general-purpose instance families</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   eds.graphics: graphical instance families
-        /// *   eds.hf: instance families with high clock speeds
-        /// *   eds.general: general-purpose instance families
+        /// <b>Example:</b>
+        /// <para>eds.general</para>
         /// </summary>
         [NameInMap("DesktopTypeFamily")]
         [Validation(Required=false)]
         public string DesktopTypeFamily { get; set; }
 
         /// <summary>
-        /// This parameter is now in invitational preview and not publicly available.
+        /// <para>This parameter is now in invitational preview and not publicly available.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This parameter is now in invitational preview and unavailable.</para>
         /// </summary>
         [NameInMap("FotaChannel")]
         [Validation(Required=false)]
         public string FotaChannel { get; set; }
 
         /// <summary>
-        /// Specifies whether the cloud computers in the template belong to a cloud computer pool.
+        /// <para>Specifies whether the cloud computers in the template belong to a cloud computer pool.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   true
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   false
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("FromDesktopGroup")]
         [Validation(Required=false)]
         public bool? FromDesktopGroup { get; set; }
 
         /// <summary>
-        /// The number of GPUs contained in the cloud computer instance type.
+        /// <para>The number of GPUs contained in the cloud computer instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("GpuCount")]
         [Validation(Required=false)]
@@ -112,117 +132,146 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GpuDriverType { get; set; }
 
         /// <summary>
-        /// The image ID.
+        /// <para>The image ID.</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public List<string> ImageId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Maximum value: 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Maximum value: 100.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The memory size of the cloud computer instance type. Unit: GiB.
+        /// <para>The memory size of the cloud computer instance type. Unit: GiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("MemorySize")]
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
         /// <summary>
-        /// The token that is used to start the next query.
+        /// <para>The token that is used to start the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The type of the OS.
+        /// <para>The type of the OS.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Linux</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   Linux
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Windows</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   Windows
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>Windows</para>
         /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
         public string OsType { get; set; }
 
         /// <summary>
-        /// The protocol type.
+        /// <para>The protocol type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HDX: High-definition Experience (HDX) protocol</description></item>
+        /// <item><description>ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   HDX: High-definition Experience (HDX) protocol
-        /// *   ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)
+        /// <b>Example:</b>
+        /// <para>ASP</para>
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The scenario to use the image.
+        /// <para>The scenario to use the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FastBuy</para>
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// The desktop template that is selected based on specific criteria.
+        /// <para>The desktop template that is selected based on specific criteria.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("SelectedBundle")]
         [Validation(Required=false)]
         public bool? SelectedBundle { get; set; }
 
         /// <summary>
-        /// The type of the session.
+        /// <para>The type of the session.</para>
+        /// <para>Enumeration Value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>SingleSession</b></description></item>
+        /// <item><description><b>MultipleSession</b></description></item>
+        /// </list>
         /// 
-        /// Enumeration Value:
-        /// * **SingleSession**
-        /// * **MultipleSession**
+        /// <b>Example:</b>
+        /// <para>SingleSession</para>
         /// </summary>
         [NameInMap("SessionType")]
         [Validation(Required=false)]
         public string SessionType { get; set; }
 
         /// <summary>
-        /// Specifies whether to return multi-session cloud computer templates. Default value: false.
+        /// <para>Specifies whether to return multi-session cloud computer templates. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("SupportMultiSession")]
         [Validation(Required=false)]
         public bool? SupportMultiSession { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable disk encryption.
+        /// <para>Specifies whether to enable disk encryption.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("VolumeEncryptionEnabled")]
         [Validation(Required=false)]

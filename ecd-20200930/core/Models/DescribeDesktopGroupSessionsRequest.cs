@@ -10,79 +10,101 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopGroupSessionsRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query.
+        /// <para>The end of the time range to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;2022-08-31T06:56:45Z&quot;</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the end user.
+        /// <para>The ID of the end user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xianqiu</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;asdfdfsdfsdfds&quot;</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The type of the session.
+        /// <para>The type of the session.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: single-session</description></item>
+        /// <item><description>1: multi-session</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   0: single-session
-        /// *   1: multi-session
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("OwnType")]
         [Validation(Required=false)]
         public int? OwnType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The status of the session.
+        /// <para>The status of the session.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Connected</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   Connected
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Disconnected</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   Disconnected
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>Connected</para>
         /// </summary>
         [NameInMap("SessionStatus")]
         [Validation(Required=false)]
         public string SessionStatus { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// <para>The beginning of the time range to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;2022-08-31T06:56:45Z&quot;</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

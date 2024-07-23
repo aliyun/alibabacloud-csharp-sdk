@@ -10,108 +10,142 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCloudDriveGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the cloud disk in Cloud Drive Service.
+        /// <para>The ID of the cloud disk in Cloud Drive Service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai+cds-135515****</para>
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
         public string CdsId { get; set; }
 
         /// <summary>
-        /// The workspace ID.
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+dir-jedbpr4sl9l37****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The workspace name.
+        /// <para>The workspace name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testDirectoryName</para>
         /// </summary>
         [NameInMap("DirectoryName")]
         [Validation(Required=false)]
         public string DirectoryName { get; set; }
 
         /// <summary>
-        /// The team space status. Valid values:
+        /// <para>The team space status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enabled</description></item>
+        /// <item><description>disabled</description></item>
+        /// </list>
+        /// <para>Default value: enabled.</para>
         /// 
-        /// *   enabled
-        /// *   disabled
-        /// 
-        /// Default value: enabled.
+        /// <b>Example:</b>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("DriveStatus")]
         [Validation(Required=false)]
         public string DriveStatus { get; set; }
 
         /// <summary>
-        /// Specifies whether the space is increased.
+        /// <para>Specifies whether the space is increased.</para>
+        /// <list type="bullet">
+        /// <item><description>binding: increased</description></item>
+        /// <item><description>unbound: not increased</description></item>
+        /// </list>
+        /// <para>Default value: null. The default value indicates that all spaces are queried.</para>
         /// 
-        /// *   binding: increased
-        /// *   unbound: not increased
+        /// <b>Example:</b>
+        /// <para>binding</para>
         /// 
-        /// Default value: null. The default value indicates that all spaces are queried.
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("DriveType")]
         [Validation(Required=false)]
         public string DriveType { get; set; }
 
         /// <summary>
-        /// The team ID.
+        /// <para>The team ID.</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public List<string> GroupId { get; set; }
 
         /// <summary>
-        /// The team name for fuzzy search.
+        /// <para>The team name for fuzzy search.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test Team 1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The team type.
+        /// <para>The team type.</para>
+        /// <list type="bullet">
+        /// <item><description>org: organizational structure</description></item>
+        /// <item><description>directory: workspace</description></item>
+        /// </list>
+        /// <para>Default value: null. The default value indicates that all types of teams are queried.</para>
         /// 
-        /// *   org: organizational structure
-        /// *   directory: workspace
-        /// 
-        /// Default value: null. The default value indicates that all types of teams are queried.
+        /// <b>Example:</b>
+        /// <para>org</para>
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values: 1 to 100</description></item>
+        /// <item><description>Default value: 20</description></item>
+        /// </list>
         /// 
-        /// *   Valid values: 1 to 100
-        /// *   Default value: 20
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6lY3I2VNHLwy+nIoSXh****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.
+        /// <para>The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.</para>
+        /// <para>Default value: null. The default value indicates that all nodes are queried.</para>
         /// 
-        /// Default value: null. The default value indicates that all nodes are queried.
+        /// <b>Example:</b>
+        /// <para>cg-e70ga4ixp30ur****</para>
         /// </summary>
         [NameInMap("ParentGroupId")]
         [Validation(Required=false)]
         public string ParentGroupId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

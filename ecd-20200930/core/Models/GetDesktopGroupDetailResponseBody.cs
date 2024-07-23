@@ -10,431 +10,573 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetDesktopGroupDetailResponseBody : TeaModel {
         /// <summary>
-        /// The information about the cloud computer pool.
+        /// <para>The information about the cloud computer pool.</para>
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]
         public GetDesktopGroupDetailResponseBodyDesktops Desktops { get; set; }
         public class GetDesktopGroupDetailResponseBodyDesktops : TeaModel {
             /// <summary>
-            /// Indicates whether cloud computers can be automatically created in the subscription cloud computer pool.
+            /// <para>Indicates whether cloud computers can be automatically created in the subscription cloud computer pool.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: false</description></item>
+            /// <item><description>1: true</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   0: false
-            /// *   1: true
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AllowAutoSetup")]
             [Validation(Required=false)]
             public int? AllowAutoSetup { get; set; }
 
             /// <summary>
-            /// The number of cloud computers that is allowed to be reserved in the pay-as-you-go cloud computer pool. Valid values:
+            /// <para>The number of cloud computers that is allowed to be reserved in the pay-as-you-go cloud computer pool. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: does not allow the system to reserve cloud computers.</description></item>
+            /// <item><description>N: allows the system to reserve N cloud computers. (1≤ N ≤ 100)</description></item>
+            /// </list>
             /// 
-            /// *   0: does not allow the system to reserve cloud computers.
-            /// *   N: allows the system to reserve N cloud computers. (1≤ N ≤ 100)
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AllowBufferCount")]
             [Validation(Required=false)]
             public int? AllowBufferCount { get; set; }
 
             /// <summary>
-            /// The number of concurrent sessions that is allowed for each cloud computer in a multi-session cloud computer pool.
+            /// <para>The number of concurrent sessions that is allowed for each cloud computer in a multi-session cloud computer pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("BindAmount")]
             [Validation(Required=false)]
             public int? BindAmount { get; set; }
 
             /// <summary>
-            /// *   This parameter has different meanings based on the billing method of the cloud computer pool. For a subscription pool, this parameter indicates the number of cloud computers that you purchase in the pool. Valid values: 0 to 200.
-            /// *   For a pay-as-you-go pool, this parameter indicates the minimum number of cloud computers that you can create in the pool. Default value: 1. Valid values: 0 to `MaxDesktopsCount`.
+            /// <list type="bullet">
+            /// <item><description>This parameter has different meanings based on the billing method of the cloud computer pool. For a subscription pool, this parameter indicates the number of cloud computers that you purchase in the pool. Valid values: 0 to 200.</description></item>
+            /// <item><description>For a pay-as-you-go pool, this parameter indicates the minimum number of cloud computers that you can create in the pool. Default value: 1. Valid values: 0 to <c>MaxDesktopsCount</c>.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("BuyDesktopsCount")]
             [Validation(Required=false)]
             public int? BuyDesktopsCount { get; set; }
 
             /// <summary>
-            /// The remarks.
+            /// <para>The remarks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>for students</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
             public string Comments { get; set; }
 
             /// <summary>
-            /// The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds.
+            /// <para>The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60000</para>
             /// </summary>
             [NameInMap("ConnectDuration")]
             [Validation(Required=false)]
             public long? ConnectDuration { get; set; }
 
             /// <summary>
-            /// The number of vCPUs.
+            /// <para>The number of vCPUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// The time when the desktop group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+            /// <para>The time when the desktop group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-11-06T08:28Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud account that creates the cloud computer pool.
+            /// <para>The Alibaba Cloud account that creates the cloud computer pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>155177335370****</para>
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
             public string Creator { get; set; }
 
             /// <summary>
-            /// The category of the user disk.
+            /// <para>The category of the user disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_essd</para>
             /// </summary>
             [NameInMap("DataDiskCategory")]
             [Validation(Required=false)]
             public string DataDiskCategory { get; set; }
 
             /// <summary>
-            /// The user disk capacity. Unit: GiB.
+            /// <para>The user disk capacity. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("DataDiskSize")]
             [Validation(Required=false)]
             public string DataDiskSize { get; set; }
 
             /// <summary>
-            /// The ID of the cloud computer pool.
+            /// <para>The ID of the cloud computer pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dg-3uiojcc0j4kh7****</para>
             /// </summary>
             [NameInMap("DesktopGroupId")]
             [Validation(Required=false)]
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// The name of the cloud computer pool that is queried.
+            /// <para>The name of the cloud computer pool that is queried.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DesktopGroupDemo</para>
             /// </summary>
             [NameInMap("DesktopGroupName")]
             [Validation(Required=false)]
             public string DesktopGroupName { get; set; }
 
             /// <summary>
-            /// The ID of the directory or office network.
+            /// <para>The ID of the directory or office network.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou+dir-363353****</para>
             /// </summary>
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// The type of the directory.
+            /// <para>The type of the directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SIMPLE</para>
             /// </summary>
             [NameInMap("DirectoryType")]
             [Validation(Required=false)]
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// The time when the subscription cloud computer pool expires.
+            /// <para>The time when the subscription cloud computer pool expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-12-31T15:59Z</para>
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// The number of vGPUs.
+            /// <para>The number of vGPUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("GpuCount")]
             [Validation(Required=false)]
             public float? GpuCount { get; set; }
 
             /// <summary>
-            /// The GPU specifications.
+            /// <para>The GPU specifications.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NVIDIA T4</para>
             /// </summary>
             [NameInMap("GpuSpec")]
             [Validation(Required=false)]
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// After an end user connects to a cloud computer, the session is established. If the system does not detect any inputs from the keyboard or mouse within the specified period of time, the session is closed. Unit: milliseconds.
+            /// <para>After an end user connects to a cloud computer, the session is established. If the system does not detect any inputs from the keyboard or mouse within the specified period of time, the session is closed. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>900000</para>
             /// </summary>
             [NameInMap("IdleDisconnectDuration")]
             [Validation(Required=false)]
             public long? IdleDisconnectDuration { get; set; }
 
             /// <summary>
-            /// The ID of the image.
+            /// <para>The ID of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>m-4zfb6zj728hhr****</para>
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The amount of time to retain a session after it is disconnected. Unit: milliseconds. Valid values: 180000 to 345600000. That is, the session can be retained for 3 to 5760 minutes (4 days). If you specify the value to 0, the session is permanently retained.
+            /// <para>The amount of time to retain a session after it is disconnected. Unit: milliseconds. Valid values: 180000 to 345600000. That is, the session can be retained for 3 to 5760 minutes (4 days). If you specify the value to 0, the session is permanently retained.</para>
+            /// <para>When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can still access data of the session.</para>
             /// 
-            /// When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can still access data of the session.
+            /// <b>Example:</b>
+            /// <para>180000</para>
             /// </summary>
             [NameInMap("KeepDuration")]
             [Validation(Required=false)]
             public long? KeepDuration { get; set; }
 
             /// <summary>
-            /// The load balancing policy of the multi-session cloud computer pool.
+            /// <para>The load balancing policy of the multi-session cloud computer pool.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: depth-first</description></item>
+            /// <item><description>1: breadth-first</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   0: depth-first
-            /// *   1: breadth-first
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("LoadPolicy")]
             [Validation(Required=false)]
             public int? LoadPolicy { get; set; }
 
             /// <summary>
-            /// The maximum number of cloud computers that can be housed in the pay-as-you-go cloud computer pool.
+            /// <para>The maximum number of cloud computers that can be housed in the pay-as-you-go cloud computer pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("MaxDesktopsCount")]
             [Validation(Required=false)]
             public int? MaxDesktopsCount { get; set; }
 
             /// <summary>
-            /// The memory size. Unit: MiB.
+            /// <para>The memory size. Unit: MiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4096</para>
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public long? Memory { get; set; }
 
             /// <summary>
-            /// The maximum number of cloud computers that can be automatically created in the subscription cloud computer pool.
+            /// <para>The maximum number of cloud computers that can be automatically created in the subscription cloud computer pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("MinDesktopsCount")]
             [Validation(Required=false)]
             public int? MinDesktopsCount { get; set; }
 
             /// <summary>
-            /// The ID of the Apsara File Storage NAS (NAS) file system for the user data roaming feature.
+            /// <para>The ID of the Apsara File Storage NAS (NAS) file system for the user data roaming feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0783b4****</para>
             /// </summary>
             [NameInMap("NasFileSystemID")]
             [Validation(Required=false)]
             public string NasFileSystemID { get; set; }
 
             /// <summary>
-            /// The name of the NAS file system for the user data roaming feature.
+            /// <para>The name of the NAS file system for the user data roaming feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abcd</para>
             /// </summary>
             [NameInMap("NasFileSystemName")]
             [Validation(Required=false)]
             public string NasFileSystemName { get; set; }
 
             /// <summary>
-            /// The ID of the office network.
+            /// <para>The ID of the office network.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou+dir-990541****</para>
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// The name of the office network in which the cloud computer pool resides.
+            /// <para>The name of the office network in which the cloud computer pool resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("OfficeSiteName")]
             [Validation(Required=false)]
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// The office network type.
+            /// <para>The office network type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PERSONAL: individual office network</description></item>
+            /// <item><description>SIMPLE: convenience office network</description></item>
+            /// <item><description>AD_CONNECTOR: enterprise Active Directory (AD) office network</description></item>
+            /// <item><description>RAM: Resource Access Management (RAM)-based office network</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   PERSONAL: individual office network
-            /// *   SIMPLE: convenience office network
-            /// *   AD_CONNECTOR: enterprise Active Directory (AD) office network
-            /// *   RAM: Resource Access Management (RAM)-based office network
+            /// <b>Example:</b>
+            /// <para>SIMPLE</para>
             /// </summary>
             [NameInMap("OfficeSiteType")]
             [Validation(Required=false)]
             public string OfficeSiteType { get; set; }
 
             /// <summary>
-            /// The ID of the cloud computer template.
+            /// <para>The ID of the cloud computer template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>b-1se9fb37r5tfq****</para>
             /// </summary>
             [NameInMap("OwnBundleId")]
             [Validation(Required=false)]
             public string OwnBundleId { get; set; }
 
             /// <summary>
-            /// The name of the cloud computer template.
+            /// <para>The name of the cloud computer template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>BundleDemo</para>
             /// </summary>
             [NameInMap("OwnBundleName")]
             [Validation(Required=false)]
             public string OwnBundleName { get; set; }
 
             /// <summary>
-            /// The type of the cloud computer pool.
+            /// <para>The type of the cloud computer pool.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: individual (single session)</description></item>
+            /// <item><description>1: shared (multiple sessions)</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   0: individual (single session)
-            /// *   1: shared (multiple sessions)
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("OwnType")]
             [Validation(Required=false)]
             public int? OwnType { get; set; }
 
             /// <summary>
-            /// The billing method.
+            /// <para>The billing method.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>PostPaid: pay-as-you-go.</para>
+            /// </description></item>
+            /// <item><description><para>PrePaid: subscription.</para>
+            /// </description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   PostPaid: pay-as-you-go.
-            /// 
-            /// *   PrePaid: subscription.
+            /// <b>Example:</b>
+            /// <para>PrePaid</para>
             /// </summary>
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
 
             /// <summary>
-            /// The ID of the policy that is associated with the cloud computer pool.
+            /// <para>The ID of the policy that is associated with the cloud computer pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pg-9cktlowtxfl6****</para>
             /// </summary>
             [NameInMap("PolicyGroupId")]
             [Validation(Required=false)]
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// The IDs of policies that are associated with the cloud computer pool.
+            /// <para>The IDs of policies that are associated with the cloud computer pool.</para>
             /// </summary>
             [NameInMap("PolicyGroupIds")]
             [Validation(Required=false)]
             public List<string> PolicyGroupIds { get; set; }
 
             /// <summary>
-            /// The name of the policy that is associated with the cloud computer pool.
+            /// <para>The name of the policy that is associated with the cloud computer pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("PolicyGroupName")]
             [Validation(Required=false)]
             public string PolicyGroupName { get; set; }
 
             /// <summary>
-            /// The names of policies that are associated with the cloud computer pool.
+            /// <para>The names of policies that are associated with the cloud computer pool.</para>
             /// </summary>
             [NameInMap("PolicyGroupNames")]
             [Validation(Required=false)]
             public List<string> PolicyGroupNames { get; set; }
 
             /// <summary>
-            /// Indicates whether user data roaming is enabled.
+            /// <para>Indicates whether user data roaming is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ProfileFollowSwitch")]
             [Validation(Required=false)]
             public bool? ProfileFollowSwitch { get; set; }
 
             /// <summary>
-            /// The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. To calculate the ratio of connected sessions, use the following formula:
+            /// <para>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. To calculate the ratio of connected sessions, use the following formula:</para>
+            /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c></para>
+            /// <para>If the ratio of connected sessions is greater than the specified value, new cloud computers are created. If the ratio of connected sessions is smaller than the specified value, idle cloud computers are deleted.</para>
             /// 
-            /// `Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%`
-            /// 
-            /// If the ratio of connected sessions is greater than the specified value, new cloud computers are created. If the ratio of connected sessions is smaller than the specified value, idle cloud computers are deleted.
+            /// <b>Example:</b>
+            /// <para>0.6</para>
             /// </summary>
             [NameInMap("RatioThreshold")]
             [Validation(Required=false)]
             public float? RatioThreshold { get; set; }
 
             /// <summary>
-            /// The type of the resource. Only Elastic Compute Service (ECS) instances are supported.
+            /// <para>The type of the resource. Only Elastic Compute Service (ECS) instances are supported.</para>
+            /// <para>Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>0: ECS</description></item>
+            /// </list>
             /// 
-            /// Valid value:
-            /// 
-            /// *   0: ECS
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ResType")]
             [Validation(Required=false)]
             public int? ResType { get; set; }
 
             /// <summary>
-            /// The disk reset type of the cloud computer.
+            /// <para>The disk reset type of the cloud computer.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: does not reset disks.</description></item>
+            /// <item><description>1: resets only the system disk.</description></item>
+            /// <item><description>2: resets only the user disk.</description></item>
+            /// <item><description>3: resets the system disk and the user disk.</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   0: does not reset disks.
-            /// *   1: resets only the system disk.
-            /// *   2: resets only the user disk.
-            /// *   3: resets the system disk and the user disk.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ResetType")]
             [Validation(Required=false)]
             public int? ResetType { get; set; }
 
             /// <summary>
-            /// Details of the scheduled tasks.
+            /// <para>Details of the scheduled tasks.</para>
             /// </summary>
             [NameInMap("ScaleTimerInfos")]
             [Validation(Required=false)]
             public List<GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos> ScaleTimerInfos { get; set; }
             public class GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos : TeaModel {
                 /// <summary>
-                /// The number of cloud computers that you purchase in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.
+                /// <para>The number of cloud computers that you purchase in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("BuyResAmount")]
                 [Validation(Required=false)]
                 public int? BuyResAmount { get; set; }
 
                 /// <summary>
-                /// The cron expression for the scheduled task.
+                /// <para>The cron expression for the scheduled task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0 0 0 * * ?</para>
                 /// </summary>
                 [NameInMap("Cron")]
                 [Validation(Required=false)]
                 public string Cron { get; set; }
 
                 /// <summary>
-                /// The duration that is retained after the session is disconnected. Unit: milliseconds. Valid values: 180000 to 345600000. That is, the session can be retained for 3 to 5760 minutes (4 days). If you specify the value to 0, the session is permanently retained.
+                /// <para>The duration that is retained after the session is disconnected. Unit: milliseconds. Valid values: 180000 to 345600000. That is, the session can be retained for 3 to 5760 minutes (4 days). If you specify the value to 0, the session is permanently retained.</para>
+                /// <para>When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can still access data of the session.</para>
                 /// 
-                /// When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can still access data of the session.
+                /// <b>Example:</b>
+                /// <para>600000</para>
                 /// </summary>
                 [NameInMap("KeepDuration")]
                 [Validation(Required=false)]
                 public long? KeepDuration { get; set; }
 
                 /// <summary>
-                /// The load balancing policy of the multi-session cloud computer pool.
+                /// <para>The load balancing policy of the multi-session cloud computer pool.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: depth-first</description></item>
+                /// <item><description>1: breadth-first</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   0: depth-first
-                /// *   1: breadth-first
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("LoadPolicy")]
                 [Validation(Required=false)]
                 public int? LoadPolicy { get; set; }
 
                 /// <summary>
-                /// The maximum number of cloud computers in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.
+                /// <para>The maximum number of cloud computers in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("MaxResAmount")]
                 [Validation(Required=false)]
                 public int? MaxResAmount { get; set; }
 
                 /// <summary>
-                /// The minimum number of cloud computers in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.
+                /// <para>The minimum number of cloud computers in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("MinResAmount")]
                 [Validation(Required=false)]
                 public int? MinResAmount { get; set; }
 
                 /// <summary>
-                /// The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. To calculate the ratio of connected sessions, use the following formula:
+                /// <para>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. To calculate the ratio of connected sessions, use the following formula:</para>
+                /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c></para>
+                /// <para>If the ratio of connected sessions is greater than the specified value, new cloud computers are created. If the ratio of connected sessions is smaller than the specified value, idle cloud computers are deleted.</para>
                 /// 
-                /// `Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%`
-                /// 
-                /// If the ratio of connected sessions is greater than the specified value, new cloud computers are created. If the ratio of connected sessions is smaller than the specified value, idle cloud computers are deleted.
+                /// <b>Example:</b>
+                /// <para>0.5</para>
                 /// </summary>
                 [NameInMap("RatioThreshold")]
                 [Validation(Required=false)]
                 public float? RatioThreshold { get; set; }
 
                 /// <summary>
-                /// The type of the scheduled task.
+                /// <para>The type of the scheduled task.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>drop: decline policy</description></item>
+                /// <item><description>normal: normal policy</description></item>
+                /// <item><description>peak: peak hour policy</description></item>
+                /// <item><description>rise: rise policy</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   drop: decline policy
-                /// *   normal: normal policy
-                /// *   peak: peak hour policy
-                /// *   rise: rise policy
+                /// <b>Example:</b>
+                /// <para>rise</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -443,82 +585,106 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The payment status of the cloud computer pool.
+            /// <para>The payment status of the cloud computer pool.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: unpaid</description></item>
+            /// <item><description>1: paid</description></item>
+            /// <item><description>2: overdue or expired</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   0: unpaid
-            /// *   1: paid
-            /// *   2: overdue or expired
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The period of time before the idle cloud computer enters the Stopped state. If the specified value is reached, the cloud computer is automatically stopped. If an end user connects to the stopped cloud computer, the cloud computer automatically starts. Unit: milliseconds.
+            /// <para>The period of time before the idle cloud computer enters the Stopped state. If the specified value is reached, the cloud computer is automatically stopped. If an end user connects to the stopped cloud computer, the cloud computer automatically starts. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>180000</para>
             /// </summary>
             [NameInMap("StopDuration")]
             [Validation(Required=false)]
             public long? StopDuration { get; set; }
 
             /// <summary>
-            /// The category of the system disk.
+            /// <para>The category of the system disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_essd</para>
             /// </summary>
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// The system disk capacity. Unit: GiB.
+            /// <para>The system disk capacity. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// The list of scheduled points in time for desktop group tasks.
+            /// <para>The list of scheduled points in time for desktop group tasks.</para>
             /// </summary>
             [NameInMap("TimerInfos")]
             [Validation(Required=false)]
             public List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> TimerInfos { get; set; }
             public class GetDesktopGroupDetailResponseBodyDesktopsTimerInfos : TeaModel {
                 /// <summary>
-                /// The cron expression.
+                /// <para>The cron expression.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0 58 11 ? * 2</para>
                 /// </summary>
                 [NameInMap("CronExpression")]
                 [Validation(Required=false)]
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// Indicates whether the scheduled task is forcibly executed.
+                /// <para>Indicates whether the scheduled task is forcibly executed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Forced")]
                 [Validation(Required=false)]
                 public bool? Forced { get; set; }
 
                 /// <summary>
-                /// The status of the cloud computer pool.
+                /// <para>The status of the cloud computer pool.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: enabled</description></item>
+                /// <item><description>2: disabled</description></item>
+                /// <item><description>3: deleted</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   1: enabled
-                /// *   2: disabled
-                /// *   3: deleted
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// The type of the scheduled task.
+                /// <para>The type of the scheduled task.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: scheduled reset</description></item>
+                /// <item><description>2: scheduled startup</description></item>
+                /// <item><description>3: scheduled stop</description></item>
+                /// <item><description>4: scheduled restart</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   1: scheduled reset
-                /// *   2: scheduled startup
-                /// *   3: scheduled stop
-                /// *   4: scheduled restart
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("TimerType")]
                 [Validation(Required=false)]
@@ -527,14 +693,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The information about the scheduling policy.
+            /// <para>The information about the scheduling policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abcd</para>
             /// </summary>
             [NameInMap("TimingStrategyInfo")]
             [Validation(Required=false)]
             public string TimingStrategyInfo { get; set; }
 
             /// <summary>
-            /// The version number of the cloud computer pool.
+            /// <para>The version number of the cloud computer pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -543,7 +715,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1B5268CE-5EB3-545F-9F38-A8BCF710****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

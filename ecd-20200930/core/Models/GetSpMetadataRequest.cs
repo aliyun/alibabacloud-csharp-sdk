@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetSpMetadataRequest : TeaModel {
         /// <summary>
-        /// The workspace ID. This parameter is the same as `OfficeSiteId`. We recommend that you use `OfficeSiteId` to replace `DirectoryId`. You can specify only `DirectoryId` or `OfficeSiteId`.
+        /// <para>The workspace ID. This parameter is the same as <c>OfficeSiteId</c>. We recommend that you use <c>OfficeSiteId</c> to replace <c>DirectoryId</c>. You can specify only <c>DirectoryId</c> or <c>OfficeSiteId</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+dir-400695****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The workspace ID.
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+dir-400695****</para>
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

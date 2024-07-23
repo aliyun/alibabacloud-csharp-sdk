@@ -10,206 +10,205 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesRequest : TeaModel {
         /// <summary>
-        /// Applicable Scope of specifications. Default value: `Public`
+        /// <para>Applicable Scope of specifications. Default value: <c>Public</c></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Public</para>
         /// </summary>
         [NameInMap("AppliedScope")]
         [Validation(Required=false)]
         public string AppliedScope { get; set; }
 
         /// <summary>
-        /// The number of vCPUs.
+        /// <para>The number of vCPUs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("CpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
         /// <summary>
-        /// The ID of the cloud computer pool when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer pool is included in the response.
+        /// <para>The ID of the cloud computer pool when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer pool is included in the response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dg-abcdefg****</para>
         /// </summary>
         [NameInMap("DesktopGroupIdForModify")]
         [Validation(Required=false)]
         public string DesktopGroupIdForModify { get; set; }
 
         /// <summary>
-        /// The ID of the cloud computer when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer is included in the response.
+        /// <para>The ID of the cloud computer when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer is included in the response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecd-gx2x1dhsmucyy****</para>
         /// </summary>
         [NameInMap("DesktopIdForModify")]
         [Validation(Required=false)]
         public string DesktopIdForModify { get; set; }
 
         /// <summary>
-        /// The IDs of the instance types of cloud computers.
+        /// <para>The IDs of the instance types of cloud computers.</para>
+        /// <remarks>
+        /// <para> If the values of the <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> parameters are empty, all instance types of cloud computers are queried.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>eds.hf.4c8g</para>
+        /// <!-- -->
         /// 
-        /// >  If the values of the `InstanceTypeFamily` and `DesktopTypeId` parameters are empty, all instance types of cloud computers are queried.
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.basic.large</para>
+        /// <!-- -->
         /// 
-        /// *   eds.hf.4c8g
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.advanced.large</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.basic.small</para>
+        /// <!-- -->
         /// 
-        /// *   ecd.basic.large
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.graphics.2xlarge</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.hf.8c16g</para>
+        /// <!-- -->
         /// 
-        /// *   ecd.advanced.large
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.hf.12c24g</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.general.8c16g</para>
+        /// <!-- -->
         /// 
-        /// *   ecd.basic.small
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.general.16c32g</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.advanced.xlarge</para>
+        /// <!-- -->
         /// 
-        /// *   ecd.graphics.2xlarge
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.graphics.16c1t4</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.graphics.xlarge</para>
+        /// <!-- -->
         /// 
-        /// *   eds.hf.8c16g
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.performance.2xlarge</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.general.8c32g</para>
+        /// <!-- -->
         /// 
-        /// *   eds.hf.12c24g
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.general.2c2g</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.general.2c4g</para>
+        /// <!-- -->
         /// 
-        /// *   eds.general.8c16g
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.graphics.24c1t4</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.general.4c8g</para>
+        /// <!-- -->
         /// 
-        /// *   eds.general.16c32g
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.general.4c16g</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.general.2c8g</para>
+        /// <!-- -->
         /// 
-        /// *   ecd.advanced.xlarge
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   eds.graphics.16c1t4
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   ecd.graphics.xlarge
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   ecd.performance.2xlarge
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   eds.general.8c32g
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   eds.general.2c2g
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   eds.general.2c4g
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   eds.graphics.24c1t4
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   eds.general.4c8g
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   eds.general.4c16g
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   eds.general.2c8g
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>ecd.graphics.xlarge</para>
         /// </summary>
         [NameInMap("DesktopTypeId")]
         [Validation(Required=false)]
         public string DesktopTypeId { get; set; }
 
         /// <summary>
-        /// The number of GPUs.
+        /// <para>The number of GPUs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("GpuCount")]
         [Validation(Required=false)]
@@ -220,90 +219,95 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GpuDriverType { get; set; }
 
         /// <summary>
-        /// The name of the instance family.
+        /// <para>The name of the instance family.</para>
+        /// <remarks>
+        /// <para> If the values of the <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> parameters are empty, all instance families of cloud computers are queried.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ecd.advanced</para>
+        /// <!-- -->
         /// 
-        /// >  If the values of the `InstanceTypeFamily` and `DesktopTypeId` parameters are empty, all instance families of cloud computers are queried.
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.graphics</para>
+        /// <!-- -->
         /// 
-        /// *   ecd.advanced
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.basic</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.hf</para>
+        /// <!-- -->
         /// 
-        /// *   eds.graphics
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.graphics</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>eds.general</para>
+        /// <!-- -->
         /// 
-        /// *   ecd.basic
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ecd.performance</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        /// *   eds.hf
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   ecd.graphics
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   eds.general
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   ecd.performance
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>ecd.graphics</para>
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// The memory size. Unit: MiB.
+        /// <para>The memory size. Unit: MiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("MemorySize")]
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
         /// <summary>
-        /// The order type.
+        /// <para>The order type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DOWNGRADE</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

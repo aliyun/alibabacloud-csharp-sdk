@@ -10,29 +10,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RenewDesktopsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the auto-payment feature.
+        /// <para>Specifies whether to enable the auto-payment feature.</para>
+        /// <para>Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: enables the auto-payment feature.</para>
+        /// <!-- -->
         /// 
-        /// Default value: true. Valid values:
+        /// <!-- -->
         /// 
-        /// *   true: enables the auto-payment feature.
+        /// <para>Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.</para>
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -43,62 +42,73 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.
+        /// <para>The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecd-ia2zw38bi6cm7****</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The renewal duration. Valid values of this parameter are determined by the value of the `PeriodUnit` parameter.
+        /// <para>The renewal duration. Valid values of this parameter are determined by the value of the <c>PeriodUnit</c> parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values if you set the <c>PeriodUnit</c> parameter to <c>Month</c>: 1, 2, 3, and 6</description></item>
+        /// <item><description>Valid values if you set the <c>PeriodUnit</c> parameter to <c>Year</c>: 1, 2, 3, 4, 5, and 6</description></item>
+        /// </list>
+        /// <para>Default value: 1.</para>
         /// 
-        /// *   Valid values if you set the `PeriodUnit` parameter to `Month`: 1, 2, 3, and 6
-        /// *   Valid values if you set the `PeriodUnit` parameter to `Year`: 1, 2, 3, 4, 5, and 6
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the renewal duration specified by the `Period` parameter.
+        /// <para>The unit of the renewal duration specified by the <c>Period</c> parameter.</para>
+        /// <para>Default value: Month. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Month</para>
+        /// <!-- -->
         /// 
-        /// Default value: Month. Valid values:
+        /// <!-- -->
         /// 
-        /// *   Month
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   Year
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The ID of the promotional activity.
+        /// <para>The ID of the promotional activity.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>500030980150146</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

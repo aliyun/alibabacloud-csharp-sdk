@@ -10,76 +10,97 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeOfficeSitesResponseBody : TeaModel {
         /// <summary>
-        /// The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+        /// <para>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The information about office networks.
+        /// <para>The information about office networks.</para>
         /// </summary>
         [NameInMap("OfficeSites")]
         [Validation(Required=false)]
         public List<DescribeOfficeSitesResponseBodyOfficeSites> OfficeSites { get; set; }
         public class DescribeOfficeSitesResponseBodyOfficeSites : TeaModel {
             /// <summary>
-            /// Details of AD connectors.
+            /// <para>Details of AD connectors.</para>
             /// </summary>
             [NameInMap("ADConnectors")]
             [Validation(Required=false)]
             public List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> ADConnectors { get; set; }
             public class DescribeOfficeSitesResponseBodyOfficeSitesADConnectors : TeaModel {
                 /// <summary>
-                /// The connection address of the AD connector.
+                /// <para>The connection address of the AD connector.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.24.<em>.</em></para>
                 /// </summary>
                 [NameInMap("ADConnectorAddress")]
                 [Validation(Required=false)]
                 public string ADConnectorAddress { get; set; }
 
                 /// <summary>
-                /// The status of the AD connector.
+                /// <para>The status of the AD connector.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>CONNECT_ERROR</description></item>
+                /// <item><description>RUNNING</description></item>
+                /// <item><description>CONNECTING (You must configure the AD domain in which the AD connector is used.)</description></item>
+                /// <item><description>EXPIRED</description></item>
+                /// <item><description>CREATING</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   CONNECT_ERROR
-                /// *   RUNNING
-                /// *   CONNECTING (You must configure the AD domain in which the AD connector is used.)
-                /// *   EXPIRED
-                /// *   CREATING
+                /// <b>Example:</b>
+                /// <para>RUNNING</para>
                 /// </summary>
                 [NameInMap("ConnectorStatus")]
                 [Validation(Required=false)]
                 public string ConnectorStatus { get; set; }
 
                 /// <summary>
-                /// The ID of an elastic network interface (ENI) to which the AD connector is mounted.
+                /// <para>The ID of an elastic network interface (ENI) to which the AD connector is mounted.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eni-bp1i4wx78lgosrj6****</para>
                 /// </summary>
                 [NameInMap("NetworkInterfaceId")]
                 [Validation(Required=false)]
                 public string NetworkInterfaceId { get; set; }
 
                 /// <summary>
-                /// The AD connector type.
+                /// <para>The AD connector type.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: General</description></item>
+                /// <item><description>2: Advanced</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   1: General
-                /// *   2: Advanced
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Specification")]
                 [Validation(Required=false)]
                 public string Specification { get; set; }
 
                 /// <summary>
-                /// The trust password that is specified when you configure the AD trust relationship.
+                /// <para>The trust password that is specified when you configure the AD trust relationship.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>password123***</para>
                 /// </summary>
                 [NameInMap("TrustKey")]
                 [Validation(Required=false)]
                 public string TrustKey { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch that resides in the network of the AD connector.
+                /// <para>The ID of the vSwitch that resides in the network of the AD connector.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-bp19ocz3erfx15uon****</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
@@ -88,221 +109,297 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.
+            /// <para>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>beijing-ad01</para>
             /// </summary>
             [NameInMap("AdHostname")]
             [Validation(Required=false)]
             public string AdHostname { get; set; }
 
             /// <summary>
-            /// The hostname of the secondary domain controller.
+            /// <para>The hostname of the secondary domain controller.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>beijing-ad02</para>
             /// </summary>
             [NameInMap("BackupDCHostname")]
             [Validation(Required=false)]
             public string BackupDCHostname { get; set; }
 
             /// <summary>
-            /// The DNS address of the secondary domain controller.
+            /// <para>The DNS address of the secondary domain controller.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>172.24.XX.XX</para>
             /// </summary>
             [NameInMap("BackupDns")]
             [Validation(Required=false)]
             public string BackupDns { get; set; }
 
             /// <summary>
-            /// The maximum public bandwidth value. Valid values: 0 to 1000.\\
-            /// If you leave this parameter empty or set this parameter to 0, Internet access is not enabled.
+            /// <para>The maximum public bandwidth value. Valid values: 0 to 1000.\
+            /// If you leave this parameter empty or set this parameter to 0, Internet access is not enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// The CEN instance status.
+            /// <para>The CEN instance status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>attached</para>
             /// </summary>
             [NameInMap("CenAttachStatus")]
             [Validation(Required=false)]
             public string CenAttachStatus { get; set; }
 
             /// <summary>
-            /// The CEN instance ID.
+            /// <para>The CEN instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cen-3gwy16dojz1m65****</para>
             /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
             public string CenId { get; set; }
 
             /// <summary>
-            /// The IPv4 CIDR block of the VPC that the office network uses.
+            /// <para>The IPv4 CIDR block of the VPC that the office network uses.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>172.16.0.0/16</para>
             /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// Indicates whether the CloudBox-based office network is created.
+            /// <para>Indicates whether the CloudBox-based office network is created.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("CloudBoxOfficeSite")]
             [Validation(Required=false)]
             public bool? CloudBoxOfficeSite { get; set; }
 
             /// <summary>
-            /// The time when the office network was created.
+            /// <para>The time when the office network was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-05-06T05:58Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The ID of the security group.
+            /// <para>The ID of the security group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sg-bp1ce64o4g9mdf5u****</para>
             /// </summary>
             [NameInMap("CustomSecurityGroupId")]
             [Validation(Required=false)]
             public string CustomSecurityGroupId { get; set; }
 
             /// <summary>
-            /// The method that is used to connect cloud computers that reside in the office network from Alibaba Cloud Workspace clients.
+            /// <para>The method that is used to connect cloud computers that reside in the office network from Alibaba Cloud Workspace clients.</para>
+            /// <remarks>
+            /// <para> The VPC connection depends on Alibaba Cloud PrivateLink. You can use Alibaba Cloud PrivateLink for free. When you set this parameter to <c>VPC</c> or <c>Any</c>, PrivateLink is automatically activated.</para>
+            /// </remarks>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>INTERNET (default): Cloud computers are connected from Alibaba Cloud Workspace clients over the Internet.</description></item>
+            /// <item><description>VPC: Cloud computers are connected from Alibaba Cloud Workspace clients over the VPC.</description></item>
+            /// <item><description>ANY: Cloud computers are connected from Alibaba Cloud Workspace clients over the Internet or the VPC. When end users connect to cloud computers from Alibaba Cloud Workspace clients, you can choose a connection method based on your business requirements.</description></item>
+            /// </list>
             /// 
-            /// >  The VPC connection depends on Alibaba Cloud PrivateLink. You can use Alibaba Cloud PrivateLink for free. When you set this parameter to `VPC` or `Any`, PrivateLink is automatically activated.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   INTERNET (default): Cloud computers are connected from Alibaba Cloud Workspace clients over the Internet.
-            /// *   VPC: Cloud computers are connected from Alibaba Cloud Workspace clients over the VPC.
-            /// *   ANY: Cloud computers are connected from Alibaba Cloud Workspace clients over the Internet or the VPC. When end users connect to cloud computers from Alibaba Cloud Workspace clients, you can choose a connection method based on your business requirements.
+            /// <b>Example:</b>
+            /// <para>INTERNET</para>
             /// </summary>
             [NameInMap("DesktopAccessType")]
             [Validation(Required=false)]
             public string DesktopAccessType { get; set; }
 
             /// <summary>
-            /// The number of cloud computers that are created.
+            /// <para>The number of cloud computers that are created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("DesktopCount")]
             [Validation(Required=false)]
             public long? DesktopCount { get; set; }
 
             /// <summary>
-            /// The endpoint that is used to connect to cloud computers in the directory over a VPC.
+            /// <para>The endpoint that is used to connect to cloud computers in the directory over a VPC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com">http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com</a></para>
             /// </summary>
             [NameInMap("DesktopVpcEndpoint")]
             [Validation(Required=false)]
             public string DesktopVpcEndpoint { get; set; }
 
             /// <summary>
-            /// The array of DNS addresses in the AD domains.
+            /// <para>The array of DNS addresses in the AD domains.</para>
             /// </summary>
             [NameInMap("DnsAddress")]
             [Validation(Required=false)]
             public List<string> DnsAddress { get; set; }
 
             /// <summary>
-            /// The username of a Domain Name System (DNS) user.
+            /// <para>The username of a Domain Name System (DNS) user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testDnsUserName</para>
             /// </summary>
             [NameInMap("DnsUserName")]
             [Validation(Required=false)]
             public string DnsUserName { get; set; }
 
             /// <summary>
-            /// The domain name of the enterprise AD.
+            /// <para>The domain name of the enterprise AD.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The password of the domain administrator.
+            /// <para>The password of the domain administrator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testPassword</para>
             /// </summary>
             [NameInMap("DomainPassword")]
             [Validation(Required=false)]
             public string DomainPassword { get; set; }
 
             /// <summary>
-            /// The username of the domain administrator.
+            /// <para>The username of the domain administrator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Administrator</para>
             /// </summary>
             [NameInMap("DomainUserName")]
             [Validation(Required=false)]
             public string DomainUserName { get; set; }
 
             /// <summary>
-            /// Indicates whether the local administrator permissions are granted to users that are authorized to use cloud computers in the office network.
+            /// <para>Indicates whether the local administrator permissions are granted to users that are authorized to use cloud computers in the office network.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true (default)</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   true (default)
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("EnableAdminAccess")]
             [Validation(Required=false)]
             public bool? EnableAdminAccess { get; set; }
 
             /// <summary>
-            /// Indicates whether the connection between cloud computers in the office network is enabled. After you enable the connection between cloud computers in the office network, cloud computers in the office network can access each other.
+            /// <para>Indicates whether the connection between cloud computers in the office network is enabled. After you enable the connection between cloud computers in the office network, cloud computers in the office network can access each other.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EnableCrossDesktopAccess")]
             [Validation(Required=false)]
             public bool? EnableCrossDesktopAccess { get; set; }
 
             /// <summary>
-            /// Indicates whether Internet access is enabled.
+            /// <para>Indicates whether Internet access is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EnableInternetAccess")]
             [Validation(Required=false)]
             public bool? EnableInternetAccess { get; set; }
 
             /// <summary>
-            /// Indicates whether route access control is enabled for cloud services.
+            /// <para>Indicates whether route access control is enabled for cloud services.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EnableServiceRoute")]
             [Validation(Required=false)]
             public bool? EnableServiceRoute { get; set; }
 
             /// <summary>
-            /// An array of Apsara File Storage NAS (NAS) file system IDs.
+            /// <para>An array of Apsara File Storage NAS (NAS) file system IDs.</para>
             /// </summary>
             [NameInMap("FileSystemIds")]
             [Validation(Required=false)]
             public List<string> FileSystemIds { get; set; }
 
             /// <summary>
-            /// Details about registration logs.
+            /// <para>Details about registration logs.</para>
             /// </summary>
             [NameInMap("Logs")]
             [Validation(Required=false)]
             public List<DescribeOfficeSitesResponseBodyOfficeSitesLogs> Logs { get; set; }
             public class DescribeOfficeSitesResponseBodyOfficeSitesLogs : TeaModel {
                 /// <summary>
-                /// The log severity.
+                /// <para>The log severity.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ERROR</description></item>
+                /// <item><description>INFO</description></item>
+                /// <item><description>WARN</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   ERROR
-                /// *   INFO
-                /// *   WARN
+                /// <b>Example:</b>
+                /// <para>INFO</para>
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
                 /// <summary>
-                /// Details of the log entry.
+                /// <para>Details of the log entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>code:success | message:Create Connector complete</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The step in the log entry.
+                /// <para>The step in the log entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CREATE_CONNECTOR</para>
                 /// </summary>
                 [NameInMap("Step")]
                 [Validation(Required=false)]
                 public string Step { get; set; }
 
                 /// <summary>
-                /// The time when the log entry was printed.
+                /// <para>The time when the log entry was printed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-05-12T09:42Z</para>
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -311,99 +408,135 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// Indicates whether multi-factor authentication (MFA) is enabled.
+            /// <para>Indicates whether multi-factor authentication (MFA) is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("MfaEnabled")]
             [Validation(Required=false)]
             public bool? MfaEnabled { get; set; }
 
             /// <summary>
-            /// The name of the office network. The name is unique in a region.
+            /// <para>The name of the office network. The name is unique in a region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// Indicates whether two-factor verification is enabled when an end user logs on to an Alibaba Cloud Workspace client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
+            /// <para>Indicates whether two-factor verification is enabled when an end user logs on to an Alibaba Cloud Workspace client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("NeedVerifyLoginRisk")]
             [Validation(Required=false)]
             public bool? NeedVerifyLoginRisk { get; set; }
 
             /// <summary>
-            /// Indicates whether the trusted device verification is enabled.
+            /// <para>Indicates whether the trusted device verification is enabled.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("NeedVerifyZeroDevice")]
             [Validation(Required=false)]
             public bool? NeedVerifyZeroDevice { get; set; }
 
             /// <summary>
-            /// The premium bandwidth plan ID.
+            /// <para>The premium bandwidth plan ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>np-amtp8e8q1o9e4****</para>
             /// </summary>
             [NameInMap("NetworkPackageId")]
             [Validation(Required=false)]
             public string NetworkPackageId { get; set; }
 
             /// <summary>
-            /// The IDs of the office networks.
+            /// <para>The IDs of the office networks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou+dir-363353****</para>
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// The account type of the office network.
+            /// <para>The account type of the office network.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SIMPLE: the convenience account</description></item>
+            /// <item><description>AD_CONNECTOR: the enterprise AD account</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   SIMPLE: the convenience account
-            /// *   AD_CONNECTOR: the enterprise AD account
+            /// <b>Example:</b>
+            /// <para>AD_CONNECTOR</para>
             /// </summary>
             [NameInMap("OfficeSiteType")]
             [Validation(Required=false)]
             public string OfficeSiteType { get; set; }
 
             /// <summary>
-            /// The organizational unit (OU) in the AD domain to which the office network is connected.
+            /// <para>The organizational unit (OU) in the AD domain to which the office network is connected.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com/Domain Controllers</para>
             /// </summary>
             [NameInMap("OuName")]
             [Validation(Required=false)]
             public string OuName { get; set; }
 
             /// <summary>
-            /// The protocol type.
+            /// <para>The protocol type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>HDX</description></item>
+            /// <item><description>ASP</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   HDX
-            /// *   ASP
+            /// <b>Example:</b>
+            /// <para>ASP</para>
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The IP address of the RDS license.
+            /// <para>The IP address of the RDS license.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>47.100.XX.XX</para>
             /// </summary>
             [NameInMap("RdsLicenseAddress")]
             [Validation(Required=false)]
             public string RdsLicenseAddress { get; set; }
 
             /// <summary>
-            /// The domain name of the RDS license.
+            /// <para>The domain name of the RDS license.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test.com</para>
             /// </summary>
             [NameInMap("RdsLicenseDomainName")]
             [Validation(Required=false)]
             public string RdsLicenseDomainName { get; set; }
 
             /// <summary>
-            /// The remote desktop service (RDS) license status.
+            /// <para>The remote desktop service (RDS) license status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("RdsLicenseStatus")]
             [Validation(Required=false)]
@@ -414,51 +547,63 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SecurityProtection { get; set; }
 
             /// <summary>
-            /// Indicates whether single sign-on (SSO) is enabled.
+            /// <para>Indicates whether single sign-on (SSO) is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("SsoEnabled")]
             [Validation(Required=false)]
             public bool? SsoEnabled { get; set; }
 
             /// <summary>
-            /// The SSO type.
+            /// <para>The SSO type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SAML.</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   SAML.
+            /// <b>Example:</b>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("SsoType")]
             [Validation(Required=false)]
             public string SsoType { get; set; }
 
             /// <summary>
-            /// The office network status.
+            /// <para>The office network status.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>REGISTERING: The office network is being registered.</description></item>
+            /// <item><description>DEREGISTERING: The office network is being deregistered.</description></item>
+            /// <item><description>REGISTERED: The office network is registered.</description></item>
+            /// <item><description>NEEDCONFIGTRUST: A trust relationship is required for the office network.</description></item>
+            /// <item><description>CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.</description></item>
+            /// <item><description>DEREGISTERED: The office network is deregistered.</description></item>
+            /// <item><description>ERROR: One or more configurations of the office network are invalid.</description></item>
+            /// <item><description>CONFIGTRUSTING: A trust relationship is being configured for the office network.</description></item>
+            /// <item><description>NEEDCONFIGUSER: Users are required for the office network.</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   REGISTERING: The office network is being registered.
-            /// *   DEREGISTERING: The office network is being deregistered.
-            /// *   REGISTERED: The office network is registered.
-            /// *   NEEDCONFIGTRUST: A trust relationship is required for the office network.
-            /// *   CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.
-            /// *   DEREGISTERED: The office network is deregistered.
-            /// *   ERROR: One or more configurations of the office network are invalid.
-            /// *   CONFIGTRUSTING: A trust relationship is being configured for the office network.
-            /// *   NEEDCONFIGUSER: Users are required for the office network.
+            /// <b>Example:</b>
+            /// <para>REGISTERED</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// An array of DNS addresses for AD subdomains.
+            /// <para>An array of DNS addresses for AD subdomains.</para>
             /// </summary>
             [NameInMap("SubDnsAddress")]
             [Validation(Required=false)]
             public List<string> SubDnsAddress { get; set; }
 
             /// <summary>
-            /// The username of enterprise AD subdomain.
+            /// <para>The username of enterprise AD subdomain.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testSubDnsUserName</para>
             /// </summary>
             [NameInMap("SubDomainName")]
             [Validation(Required=false)]
@@ -469,48 +614,65 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SubnetMode { get; set; }
 
             /// <summary>
-            /// The total number of cloud computers.
+            /// <para>The total number of cloud computers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("TotalEdsCount")]
             [Validation(Required=false)]
             public long? TotalEdsCount { get; set; }
 
             /// <summary>
-            /// The number of pooled cloud computers in the cloud computer pool.
+            /// <para>The number of pooled cloud computers in the cloud computer pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("TotalEdsCountForGroup")]
             [Validation(Required=false)]
             public long? TotalEdsCountForGroup { get; set; }
 
             /// <summary>
-            /// >  This parameter is unavailable.
+            /// <remarks>
+            /// <para> This parameter is unavailable.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("TrustPassword")]
             [Validation(Required=false)]
             public string TrustPassword { get; set; }
 
             /// <summary>
-            /// An array of VSwitch IDs.
+            /// <para>An array of VSwitch IDs.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// The VPC ID.
+            /// <para>The VPC ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-uf6tz5k67puge5jn8****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
             /// <summary>
-            /// The VPC type.
+            /// <para>The VPC type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Basic</description></item>
+            /// <item><description>Customized</description></item>
+            /// <item><description>Standard</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   Basic
-            /// *   Customized
-            /// *   Standard
+            /// <b>Example:</b>
+            /// <para>Basic</para>
             /// </summary>
             [NameInMap("VpcType")]
             [Validation(Required=false)]
@@ -519,7 +681,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

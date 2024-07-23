@@ -10,32 +10,36 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyCloudDrivePermissionRequest : TeaModel {
         /// <summary>
-        /// The ID of the cloud disk in Cloud Drive Service.
+        /// <para>The ID of the cloud disk in Cloud Drive Service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+cds-60911*****</para>
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
         public string CdsId { get; set; }
 
         /// <summary>
-        /// The IDs of the users who have the download permissions.
+        /// <para>The IDs of the users who have the download permissions.</para>
         /// </summary>
         [NameInMap("DownloadEndUserIds")]
         [Validation(Required=false)]
         public List<string> DownloadEndUserIds { get; set; }
 
         /// <summary>
-        /// The IDs of the users who have the upload and download permissions.
+        /// <para>The IDs of the users who have the upload and download permissions.</para>
         /// </summary>
         [NameInMap("DownloadUploadEndUserIds")]
         [Validation(Required=false)]
         public List<string> DownloadUploadEndUserIds { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

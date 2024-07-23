@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListUserAdOrganizationUnitsResponseBody : TeaModel {
         /// <summary>
-        /// A pagination token.
+        /// <para>A pagination token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CAAAAA==</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The OUs of the AD domain.
+        /// <para>The OUs of the AD domain.</para>
         /// </summary>
         [NameInMap("OUNames")]
         [Validation(Required=false)]
         public List<ListUserAdOrganizationUnitsResponseBodyOUNames> OUNames { get; set; }
         public class ListUserAdOrganizationUnitsResponseBodyOUNames : TeaModel {
             /// <summary>
-            /// The name of the OU.
+            /// <para>The name of the OU.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>wuying_computers</para>
             /// </summary>
             [NameInMap("DisplayOUName")]
             [Validation(Required=false)]
             public string DisplayOUName { get; set; }
 
             /// <summary>
-            /// The canonical name (CNAME) of the OU in the AD domain controller.
+            /// <para>The canonical name (CNAME) of the OU in the AD domain controller.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com/wuying_computers</para>
             /// </summary>
             [NameInMap("OUName")]
             [Validation(Required=false)]
             public string OUName { get; set; }
 
             /// <summary>
-            /// The enterprise AD office network ID.
+            /// <para>The enterprise AD office network ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou+dir-485361****</para>
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
@@ -47,7 +59,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

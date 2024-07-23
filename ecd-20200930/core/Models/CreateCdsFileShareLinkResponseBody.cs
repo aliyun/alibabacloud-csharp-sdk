@@ -10,53 +10,63 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateCdsFileShareLinkResponseBody : TeaModel {
         /// <summary>
-        /// The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.
+        /// <para>The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data information.
+        /// <para>The data information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CdsFileShareLinkModel Data { get; set; }
 
         /// <summary>
-        /// The error message that is returned. This parameter is not returned if the value of Code is success.
+        /// <para>The error message that is returned. This parameter is not returned if the value of Code is success.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>51592A88-0F2C-55E6-AD2C-2AD9C10D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   true
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   false
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

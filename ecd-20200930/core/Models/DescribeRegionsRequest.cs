@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The display name of the region, which varies based on the current language.
+        /// <para>The display name of the region, which varies based on the current language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

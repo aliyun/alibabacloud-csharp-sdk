@@ -10,36 +10,48 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListOfficeSiteUsersResponseBody : TeaModel {
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>269BDB16-2CD8-4865-84BD-11C40BC21DB0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The usernames of AD users.\\
-        /// If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.
+        /// <para>The usernames of AD users.\
+        /// If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListOfficeSiteUsersResponseBodyUsers> Users { get; set; }
         public class ListOfficeSiteUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// The display name of the user.
+            /// <para>The display name of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alice</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The name of the AD user.
+            /// <para>The name of the AD user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alice</para>
             /// </summary>
             [NameInMap("EndUser")]
             [Validation(Required=false)]

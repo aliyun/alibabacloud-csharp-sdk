@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the zone. Default value: `AvailabilityZone`. This value indicates Alibaba Cloud zones.
+        /// <para>The type of the zone. Default value: <c>AvailabilityZone</c>. This value indicates Alibaba Cloud zones.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AvailabilityZone</para>
         /// </summary>
         [NameInMap("ZoneType")]
         [Validation(Required=false)]

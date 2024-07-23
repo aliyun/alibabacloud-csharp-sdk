@@ -10,23 +10,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListCdsFilesRequest : TeaModel {
         /// <summary>
-        /// The ID of the cloud disk.
+        /// <para>The ID of the cloud disk.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+cds-320357****</para>
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
         public string CdsId { get; set; }
 
         /// <summary>
-        /// The ID of the user to whom the cloud disk is allocated.
+        /// <para>The ID of the user to whom the cloud disk is allocated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testUser</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The IDs of the files to be queried.
+        /// <para>The IDs of the files to be queried.</para>
         /// </summary>
         [NameInMap("FileIds")]
         [Validation(Required=false)]
@@ -37,166 +42,154 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 100.
+        /// <para>The number of entries to return on each page. Default value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token used for the next query. If this parameter is empty, all results are returned.
+        /// <para>The token used for the next query. If this parameter is empty, all results are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>WyI2Mzg4MjAwMzFhNGQwZWVmN2I3MjRkZjZhZjAyMWU4YzY1MmRjZmUyIiwibiIsIm4iLDEsLTEsMTY2OTg2NTQ3NTMxMiwiNjM4ODIwMDNlNTU0YmZiZjFkYTk0MmEyYTZhMjEyZDkxODdjMjAy****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The sorting method of the files.
+        /// <para>The sorting method of the files.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>CreateTimeDesc</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        /// *   CreateTimeDesc
+        /// <para>sorts files in descending order based on the time when they are created.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ModifiedTimeAsc</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     :
+        /// <para>sorts files in ascending order based on the time when they are modified.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>NameDesc</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     sorts files in descending order based on the time when they are created.
+        /// <para>sorts files in descending order based on their names.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>SizeAsc</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        /// *   ModifiedTimeAsc
+        /// <para>sorts files in ascending order based on their sizes.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>ModifiedTimeDesc</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     :
+        /// <para>sorts files in descending order based on the time when they are modified.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>CreateTimeAsc</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     sorts files in ascending order based on the time when they are modified.
+        /// <para>sorts files in ascending order based on the time when they are created.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>SizeDesc</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        /// *   NameDesc
+        /// <para>sorts files in descending order based on their sizes.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>NameAsc</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     :
+        /// <para>sorts files in ascending order based on their names.</para>
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     sorts files in descending order based on their names.
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   SizeAsc
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     sorts files in ascending order based on their sizes.
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   ModifiedTimeDesc
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     sorts files in descending order based on the time when they are modified.
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   CreateTimeAsc
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     sorts files in ascending order based on the time when they are created.
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   SizeDesc
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     sorts files in descending order based on their sizes.
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   NameAsc
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     sorts files in ascending order based on their names.
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>CreateTimeDesc</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The ID of the parent file.
+        /// <para>The ID of the parent file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>63636837e47e5a24a8a940218bef395c210e****</para>
         /// </summary>
         [NameInMap("ParentFileId")]
         [Validation(Required=false)]
         public string ParentFileId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The file status.
+        /// <para>The file status.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>available</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        /// *   available
+        /// <para>returns only normal files.</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>uploading</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>:</para>
+        /// <!-- -->
         /// 
-        ///     :
+        /// <para>returns only the files that are being uploaded.</para>
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     returns only normal files.
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   uploading
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     returns only the files that are being uploaded.
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>available</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

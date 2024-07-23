@@ -10,30 +10,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyUserEntitlementRequest : TeaModel {
         /// <summary>
-        /// The IDs of the cloud computers to which you want to add end users.
+        /// <para>The IDs of the cloud computers to which you want to add end users.</para>
         /// </summary>
         [NameInMap("AuthorizeDesktopId")]
         [Validation(Required=false)]
         public List<string> AuthorizeDesktopId { get; set; }
 
         /// <summary>
-        /// The ID of the users.
+        /// <para>The ID of the users.</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the cloud computers whose end users you want to remove.
+        /// <para>The IDs of the cloud computers whose end users you want to remove.</para>
         /// </summary>
         [NameInMap("RevokeDesktopId")]
         [Validation(Required=false)]

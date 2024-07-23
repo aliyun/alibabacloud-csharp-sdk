@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetSpMetadataResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The metadata of the SP.
+        /// <para>The metadata of the SP.</para>
         /// </summary>
         [NameInMap("SpMetadata")]
         [Validation(Required=false)]

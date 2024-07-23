@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class HibernateDesktopsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

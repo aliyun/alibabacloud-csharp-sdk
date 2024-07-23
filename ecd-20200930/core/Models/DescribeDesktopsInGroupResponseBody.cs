@@ -10,332 +10,373 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsInGroupResponseBody : TeaModel {
         /// <summary>
-        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The number of subscription cloud computers that are in the Connected state.
+        /// <para>The number of subscription cloud computers that are in the Connected state.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("OnlinePrePaidDesktopsCount")]
         [Validation(Required=false)]
         public int? OnlinePrePaidDesktopsCount { get; set; }
 
         /// <summary>
-        /// The details about subscription cloud computers.
+        /// <para>The details about subscription cloud computers.</para>
         /// </summary>
         [NameInMap("PaidDesktops")]
         [Validation(Required=false)]
         public List<DescribeDesktopsInGroupResponseBodyPaidDesktops> PaidDesktops { get; set; }
         public class DescribeDesktopsInGroupResponseBodyPaidDesktops : TeaModel {
             /// <summary>
-            /// The connection status of the cloud computer.
+            /// <para>The connection status of the cloud computer.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Unknown</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Unknown
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Connected</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Disconnected</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Connected
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Disconnected
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Connected</para>
             /// </summary>
             [NameInMap("ConnectionStatus")]
             [Validation(Required=false)]
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// The ID of the cloud computer.
+            /// <para>The ID of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ud-7ftf5b6yu77b0****</para>
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The name of the cloud computer.
+            /// <para>The name of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testName</para>
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// The status of the cloud computer.
+            /// <para>The status of the cloud computer.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Stopped</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Stopped
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Starting</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Rebuilding</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Starting
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Running</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Stopping</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Rebuilding
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Expired</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Deleted</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Running
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Pending</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   Stopping
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Expired
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Deleted
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Pending
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// The type of the disk.
+            /// <para>The type of the disk.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>SYSTEM: system disk</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   SYSTEM: system disk
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>DATA: data disk</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   DATA: data disk
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>SYSTEM</para>
             /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
             public string DiskType { get; set; }
 
             /// <summary>
-            /// The ID of the authorized user of the cloud computer.
+            /// <para>The ID of the authorized user of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
+            /// <para>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</para>
             /// </summary>
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
             public List<string> EndUserIds { get; set; }
 
             /// <summary>
-            /// The username of the authorized user.
+            /// <para>The username of the authorized user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserName")]
             [Validation(Required=false)]
             public string EndUserName { get; set; }
 
             /// <summary>
-            /// The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
+            /// <para>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</para>
             /// </summary>
             [NameInMap("EndUserNames")]
             [Validation(Required=false)]
             public List<string> EndUserNames { get; set; }
 
             /// <summary>
-            /// The image version.
+            /// <para>The image version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.1.0-R-20220914.17****</para>
             /// </summary>
             [NameInMap("FotaVersion")]
             [Validation(Required=false)]
             public string FotaVersion { get; set; }
 
             /// <summary>
-            /// The version of the GPU driver.
+            /// <para>The version of the GPU driver.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("GpuDriverVersion")]
             [Validation(Required=false)]
             public string GpuDriverVersion { get; set; }
 
             /// <summary>
-            /// The image ID.
+            /// <para>The image ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>m-hn5v2mmk0****</para>
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The image name.
+            /// <para>The image name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Win10_ZC</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
             /// <summary>
-            /// The flag that is used to manage the cloud computer.
+            /// <para>The flag that is used to manage the cloud computer.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Updating: The configurations of the cloud computer are being updated.</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Updating: The configurations of the cloud computer are being updated.
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>NoFlag: No flags are attached to the cloud computer.</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   NoFlag: No flags are attached to the cloud computer.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>NoFlag</para>
             /// </summary>
             [NameInMap("ManagementFlag")]
             [Validation(Required=false)]
             public string ManagementFlag { get; set; }
 
             /// <summary>
-            /// The flags that are used to manage the cloud computers.
+            /// <para>The flags that are used to manage the cloud computers.</para>
             /// </summary>
             [NameInMap("ManagementFlags")]
             [Validation(Required=false)]
             public List<string> ManagementFlags { get; set; }
 
             /// <summary>
-            /// The IP address of the member network interface controller (NIC) of the instance.
+            /// <para>The IP address of the member network interface controller (NIC) of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("MemberEniIp")]
             [Validation(Required=false)]
             public string MemberEniIp { get; set; }
 
             /// <summary>
-            /// The OS.
+            /// <para>The OS.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Linux</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Linux
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Windows</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   Windows
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Windows</para>
             /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
 
             /// <summary>
-            /// The IP address of the primary NIC of the instance.
+            /// <para>The IP address of the primary NIC of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("PrimaryEniIp")]
             [Validation(Required=false)]
             public string PrimaryEniIp { get; set; }
 
             /// <summary>
-            /// The protocol.
+            /// <para>The protocol.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>HDX: High-definition Experience (HDX) protocol</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   HDX: High-definition Experience (HDX) protocol
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>ASP: Adaptive Streaming Protocol (ASP) protocol provided by Alibaba Cloud</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   ASP: Adaptive Streaming Protocol (ASP) protocol provided by Alibaba Cloud
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>ASP</para>
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The time when the cloud computer was reset.
+            /// <para>The time when the cloud computer was reset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-03-03 08:48:08</para>
             /// </summary>
             [NameInMap("ResetTime")]
             [Validation(Required=false)]
             public string ResetTime { get; set; }
 
             /// <summary>
-            /// The system disk size. Unit: GiB.
+            /// <para>The system disk size. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
@@ -344,346 +385,393 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The total number of queried subscription cloud computers.
+        /// <para>The total number of queried subscription cloud computers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PaidDesktopsCount")]
         [Validation(Required=false)]
         public int? PaidDesktopsCount { get; set; }
 
         /// <summary>
-        /// The details about pay-as-you-go cloud computers.
+        /// <para>The details about pay-as-you-go cloud computers.</para>
         /// </summary>
         [NameInMap("PostPaidDesktops")]
         [Validation(Required=false)]
         public List<DescribeDesktopsInGroupResponseBodyPostPaidDesktops> PostPaidDesktops { get; set; }
         public class DescribeDesktopsInGroupResponseBodyPostPaidDesktops : TeaModel {
             /// <summary>
-            /// The connection status of the cloud computer.
+            /// <para>The connection status of the cloud computer.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Unknown</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Unknown
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Connected</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Disconnected</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Connected
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Disconnected
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Connected</para>
             /// </summary>
             [NameInMap("ConnectionStatus")]
             [Validation(Required=false)]
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// The retention period of the cloud computer.
+            /// <para>The retention period of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4153958447</para>
             /// </summary>
             [NameInMap("CreateDuration")]
             [Validation(Required=false)]
             public string CreateDuration { get; set; }
 
             /// <summary>
-            /// The time when the cloud computer was created.
+            /// <para>The time when the cloud computer was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-01-21T06:34:57Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the cloud computer.
+            /// <para>The ID of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ud-2i8qxpv6t1a07****</para>
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The name of the cloud computer.
+            /// <para>The name of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testName</para>
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// The status of the cloud computer.
+            /// <para>The status of the cloud computer.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Stopped</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Stopped
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Starting</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Rebuilding</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Starting
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Running</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Stopping</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Rebuilding
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Expired</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Deleted</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Running
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Pending</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   Stopping
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Expired
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Deleted
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Pending
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Stopped</para>
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// The type of the disk.
+            /// <para>The type of the disk.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>SYSTEM: system disk</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   SYSTEM: system disk
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>DATA: data disk</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   DATA: data disk
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>SYSTEM</para>
             /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
             public string DiskType { get; set; }
 
             /// <summary>
-            /// The ID of the authorized user.
+            /// <para>The ID of the authorized user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
+            /// <para>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</para>
             /// </summary>
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
             public List<string> EndUserIds { get; set; }
 
             /// <summary>
-            /// The username of the authorized user.
+            /// <para>The username of the authorized user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserName")]
             [Validation(Required=false)]
             public string EndUserName { get; set; }
 
             /// <summary>
-            /// The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
+            /// <para>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</para>
             /// </summary>
             [NameInMap("EndUserNames")]
             [Validation(Required=false)]
             public List<string> EndUserNames { get; set; }
 
             /// <summary>
-            /// The image version.
+            /// <para>The image version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.1.0-R-20220914.17****</para>
             /// </summary>
             [NameInMap("FotaVersion")]
             [Validation(Required=false)]
             public string FotaVersion { get; set; }
 
             /// <summary>
-            /// The version of the GPU driver.
+            /// <para>The version of the GPU driver.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("GpuDriverVersion")]
             [Validation(Required=false)]
             public string GpuDriverVersion { get; set; }
 
             /// <summary>
-            /// The image ID.
+            /// <para>The image ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>m-hn5v2mmk0****</para>
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The image name.
+            /// <para>The image name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Win10_ZC</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
             /// <summary>
-            /// The flag that is used to manage the cloud computer.
+            /// <para>The flag that is used to manage the cloud computer.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Updating: The configurations of the cloud computer are being updated.</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Updating: The configurations of the cloud computer are being updated.
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>NoFlag: No flags are attached to the cloud computer.</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   NoFlag: No flags are attached to the cloud computer.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>NoFlag</para>
             /// </summary>
             [NameInMap("ManagementFlag")]
             [Validation(Required=false)]
             public string ManagementFlag { get; set; }
 
             /// <summary>
-            /// The flags that are used to manage the cloud computers.
+            /// <para>The flags that are used to manage the cloud computers.</para>
             /// </summary>
             [NameInMap("ManagementFlags")]
             [Validation(Required=false)]
             public List<string> ManagementFlags { get; set; }
 
             /// <summary>
-            /// The IP address of the member NIC of the instance.
+            /// <para>The IP address of the member NIC of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("MemberEniIp")]
             [Validation(Required=false)]
             public string MemberEniIp { get; set; }
 
             /// <summary>
-            /// The OS.
+            /// <para>The OS.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Linux</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Linux
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Windows</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   Windows
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Windows</para>
             /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
 
             /// <summary>
-            /// The IP address of the primary NIC of the instance.
+            /// <para>The IP address of the primary NIC of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("PrimaryEniIp")]
             [Validation(Required=false)]
             public string PrimaryEniIp { get; set; }
 
             /// <summary>
-            /// The protocol.
+            /// <para>The protocol.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>HDX: HDX protocol</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   HDX: HDX protocol
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>ASP: ASP protocol provided by Alibaba Cloud</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   ASP: ASP protocol provided by Alibaba Cloud
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>HDX</para>
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The time when the cloud computer was released.
+            /// <para>The time when the cloud computer was released.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-01-21T16:34:57Z</para>
             /// </summary>
             [NameInMap("ReleaseTime")]
             [Validation(Required=false)]
             public string ReleaseTime { get; set; }
 
             /// <summary>
-            /// The time when the cloud computer was reset.
+            /// <para>The time when the cloud computer was reset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-03-03 08:48:08</para>
             /// </summary>
             [NameInMap("ResetTime")]
             [Validation(Required=false)]
             public string ResetTime { get; set; }
 
             /// <summary>
-            /// The system disk size. Unit: GiB.
+            /// <para>The system disk size. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
@@ -692,42 +780,60 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The total number of queried pay-as-you-go cloud computers.
+        /// <para>The total number of queried pay-as-you-go cloud computers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PostPaidDesktopsCount")]
         [Validation(Required=false)]
         public int? PostPaidDesktopsCount { get; set; }
 
         /// <summary>
-        /// The total amount of bills for pay-as-you-go cloud computers.
+        /// <para>The total amount of bills for pay-as-you-go cloud computers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("PostPaidDesktopsTotalAmount")]
         [Validation(Required=false)]
         public int? PostPaidDesktopsTotalAmount { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of subscription cloud computers that are in the Running state.
+        /// <para>The number of subscription cloud computers that are in the Running state.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("RunningPrePaidDesktopsCount")]
         [Validation(Required=false)]
         public int? RunningPrePaidDesktopsCount { get; set; }
 
         /// <summary>
-        /// The number of subscription cloud computers that are in the Stopped state.
+        /// <para>The number of subscription cloud computers that are in the Stopped state.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("StopedPrePaidDesktopsCount")]
         [Validation(Required=false)]
         public int? StopedPrePaidDesktopsCount { get; set; }
 
         /// <summary>
-        /// The number of subscription cloud computers that are in the Stopped state.
+        /// <para>The number of subscription cloud computers that are in the Stopped state.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("StoppedPrePaidDesktopsCount")]
         [Validation(Required=false)]

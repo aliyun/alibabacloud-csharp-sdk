@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeCustomizedListHeadersResponseBodyHeaders> Headers { get; set; }
         public class DescribeCustomizedListHeadersResponseBodyHeaders : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>display</para>
+            /// </summary>
             [NameInMap("DisplayType")]
             [Validation(Required=false)]
             public string DisplayType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pay_type</para>
+            /// </summary>
             [NameInMap("HeaderKey")]
             [Validation(Required=false)]
             public string HeaderKey { get; set; }
@@ -27,6 +35,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CancelCopyImageRequest : TeaModel {
         /// <summary>
-        /// The ID of the new image in the destination region.
+        /// <para>The ID of the new image in the destination region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>m-gx2x1dhsmusr2****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the image is copied.
+        /// <para>The ID of the region to which the image is copied.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

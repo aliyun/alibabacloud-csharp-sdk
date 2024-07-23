@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeletePolicyGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the policy. You can specify 1 to 100 policy IDs.
+        /// <para>The ID of the policy. You can specify 1 to 100 policy IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pg-gx2x1dhsmthe9****</para>
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public List<string> PolicyGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

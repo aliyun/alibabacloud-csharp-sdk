@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFlowStatisticResponseBody : TeaModel {
         /// <summary>
-        /// The number of available cloud computers in the office network.
+        /// <para>The number of available cloud computers in the office network.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("DesktopCount")]
         [Validation(Required=false)]
         public int? DesktopCount { get; set; }
 
         /// <summary>
-        /// The traffic statistics.
+        /// <para>The traffic statistics.</para>
         /// </summary>
         [NameInMap("DesktopFlowStatistic")]
         [Validation(Required=false)]
         public List<DescribeFlowStatisticResponseBodyDesktopFlowStatistic> DesktopFlowStatistic { get; set; }
         public class DescribeFlowStatisticResponseBodyDesktopFlowStatistic : TeaModel {
             /// <summary>
-            /// The ID of the cloud computer.
+            /// <para>The ID of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecd-8bslxqq0csytn****</para>
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The name of the cloud computer.
+            /// <para>The name of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>desktop-1</para>
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// The traffic amount. Unit: KB.
+            /// <para>The traffic amount. Unit: KB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1000</para>
             /// </summary>
             [NameInMap("FlowIn")]
             [Validation(Required=false)]
             public string FlowIn { get; set; }
 
             /// <summary>
-            /// The traffic ranking.
+            /// <para>The traffic ranking.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("FlowRank")]
             [Validation(Required=false)]
@@ -54,7 +69,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>269BDB16-2CD8-4865-84BD-11C40BC2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

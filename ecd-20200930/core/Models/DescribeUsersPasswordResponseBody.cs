@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUsersPasswordResponseBody : TeaModel {
         /// <summary>
-        /// The authorized users of the cloud computer.
+        /// <para>The authorized users of the cloud computer.</para>
         /// </summary>
         [NameInMap("DesktopUsers")]
         [Validation(Required=false)]
         public List<DescribeUsersPasswordResponseBodyDesktopUsers> DesktopUsers { get; set; }
         public class DescribeUsersPasswordResponseBodyDesktopUsers : TeaModel {
             /// <summary>
-            /// The display name of the end user.
+            /// <para>The display name of the end user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice_1365*****</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The ID of the end user.
+            /// <para>The ID of the end user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The password of the end user.
+            /// <para>The password of the end user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tes123</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F7B4B17B-5C8A-514C-AA4D-F8090E3A63E9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

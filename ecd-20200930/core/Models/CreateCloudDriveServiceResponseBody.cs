@@ -10,19 +10,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateCloudDriveServiceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the attached cloud disk.
+        /// <para>The ID of the attached cloud disk.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+cds-7782057786</para>
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
         public string CdsId { get; set; }
 
         /// <summary>
-        /// The name of the cloud disk that is created in Cloud Drive Service.
+        /// <para>The name of the cloud disk that is created in Cloud Drive Service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CDS_Windows_1126</para>
         /// </summary>
         [NameInMap("CdsName")]
         [Validation(Required=false)]
         public string CdsName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cen-638u3wxds9snyc****</para>
+        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
@@ -65,6 +75,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test1.local</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -74,12 +88,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The maximum capacity of each instance in Cloud Drive Service. Unit: GiB
+        /// <para>The maximum capacity of each instance in Cloud Drive Service. Unit: GiB</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>213674622976</para>
         /// </summary>
         [NameInMap("MaxSize")]
         [Validation(Required=false)]
         public string MaxSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AD_CONNECTOR</para>
+        /// </summary>
         [NameInMap("OfficeSiteType")]
         [Validation(Required=false)]
         public string OfficeSiteType { get; set; }
@@ -89,7 +110,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>062B1439-709A-580E-85DF-CE97A1560565</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

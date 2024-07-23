@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class UpdateFotaTaskRequest : TeaModel {
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the regions supported by Elastic Desktop Service.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the image update task. You can call the [DescribeFotaTasks](https://help.aliyun.com/document_detail/437001.html) operation to obtain the value of this parameter.
+        /// <para>The ID of the image update task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain the value of this parameter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>aot-c4khwrp9ocml4****</para>
         /// </summary>
         [NameInMap("TaskUid")]
         [Validation(Required=false)]
         public string TaskUid { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically push the image update task.
+        /// <para>Specifies whether to automatically push the image update task.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Running: automatically pushes the image update task.</description></item>
+        /// <item><description>Pending: does not automatically push the image update task.</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   Running: automatically pushes the image update task.
-        /// *   Pending: does not automatically push the image update task.
+        /// <b>Example:</b>
+        /// <para>Pending</para>
         /// </summary>
         [NameInMap("UserStatus")]
         [Validation(Required=false)]

@@ -10,54 +10,69 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDevicesResponseBody : TeaModel {
         /// <summary>
-        /// The information about devices that you queried.
+        /// <para>The information about devices that you queried.</para>
         /// </summary>
         [NameInMap("Devices")]
         [Validation(Required=false)]
         public List<DescribeDevicesResponseBodyDevices> Devices { get; set; }
         public class DescribeDevicesResponseBodyDevices : TeaModel {
             /// <summary>
-            /// The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.
+            /// <para>The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5F52817BE267A43C608D245070D2****</para>
             /// </summary>
             [NameInMap("DeviceId")]
             [Validation(Required=false)]
             public string DeviceId { get; set; }
 
             /// <summary>
-            /// The users who are bound to the device.
+            /// <para>The users who are bound to the device.</para>
             /// </summary>
             [NameInMap("EndUserList")]
             [Validation(Required=false)]
             public List<DescribeDevicesResponseBodyDevicesEndUserList> EndUserList { get; set; }
             public class DescribeDevicesResponseBodyDevicesEndUserList : TeaModel {
                 /// <summary>
-                /// The address of the AD office network.
+                /// <para>The address of the AD office network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xn--0zw****</para>
                 /// </summary>
                 [NameInMap("AdDomain")]
                 [Validation(Required=false)]
                 public string AdDomain { get; set; }
 
                 /// <summary>
-                /// The ID of the convenient office network.
+                /// <para>The ID of the convenient office network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou+dir-jedbpr4sl9l37****</para>
                 /// </summary>
                 [NameInMap("DirectoryId")]
                 [Validation(Required=false)]
                 public string DirectoryId { get; set; }
 
                 /// <summary>
-                /// The ID of the user.
+                /// <para>The ID of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>moli</para>
                 /// </summary>
                 [NameInMap("EndUserId")]
                 [Validation(Required=false)]
                 public string EndUserId { get; set; }
 
                 /// <summary>
-                /// The account type of the user.
+                /// <para>The account type of the user.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>AD: enterprise AD account.</description></item>
+                /// <item><description>SIMPLE: convenience account</description></item>
+                /// </list>
                 /// 
-                /// Valid values:
-                /// 
-                /// *   AD: enterprise AD account.
-                /// *   SIMPLE: convenience account
+                /// <b>Example:</b>
+                /// <para>SIMPLE</para>
                 /// </summary>
                 [NameInMap("UserType")]
                 [Validation(Required=false)]
@@ -68,7 +83,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5BEFE642-A383-4A18-8939-FB7DE452****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,64 +10,84 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFotaTasksRequest : TeaModel {
         /// <summary>
-        /// >  This parameter is not publicly available.
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>To be hidden.</para>
         /// </summary>
         [NameInMap("FotaStatus")]
         [Validation(Required=false)]
         public string FotaStatus { get; set; }
 
         /// <summary>
-        /// The language of the image version to update.
+        /// <para>The language of the image version to update.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Simplified Chinese.</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   en: English.
-        /// *   zh: Simplified Chinese.
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values: 1 to 100</description></item>
+        /// <item><description>Default value: 20</description></item>
+        /// </list>
         /// 
-        /// *   Valid values: 1 to 100
-        /// *   Default value: 20
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the regions supported by Elastic Desktop Service.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the image update tasks.
+        /// <para>The IDs of the image update tasks.</para>
         /// </summary>
         [NameInMap("TaskUid")]
         [Validation(Required=false)]
         public List<string> TaskUid { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically push the image update task.
+        /// <para>Specifies whether to automatically push the image update task.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Running: automatically pushes the image update task.</description></item>
+        /// <item><description>Pending: does not automatically push the image update task.</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   Running: automatically pushes the image update task.
-        /// *   Pending: does not automatically push the image update task.
+        /// <b>Example:</b>
+        /// <para>Pending</para>
         /// </summary>
         [NameInMap("UserStatus")]
         [Validation(Required=false)]

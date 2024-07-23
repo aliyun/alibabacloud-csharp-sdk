@@ -10,102 +10,130 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeBundlesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the queried cloud computer templates.
+        /// <para>The details of the queried cloud computer templates.</para>
         /// </summary>
         [NameInMap("Bundles")]
         [Validation(Required=false)]
         public List<DescribeBundlesResponseBodyBundles> Bundles { get; set; }
         public class DescribeBundlesResponseBodyBundles : TeaModel {
             /// <summary>
-            /// The ID of the cloud computer template.
+            /// <para>The ID of the cloud computer template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bundle_ecd_graphics.2xlarge_s15d15_win2019</para>
             /// </summary>
             [NameInMap("BundleId")]
             [Validation(Required=false)]
             public string BundleId { get; set; }
 
             /// <summary>
-            /// The name of the cloud computer template.
+            /// <para>The name of the cloud computer template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Advanced graphics with Windows 2019</para>
             /// </summary>
             [NameInMap("BundleName")]
             [Validation(Required=false)]
             public string BundleName { get; set; }
 
             /// <summary>
-            /// The type of the cloud computer template.
+            /// <para>The type of the cloud computer template.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>SYSTEM: system template</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   SYSTEM: system template
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>CUSTOM: custom template</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   CUSTOM: custom template
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>SYSTEM</para>
             /// </summary>
             [NameInMap("BundleType")]
             [Validation(Required=false)]
             public string BundleType { get; set; }
 
             /// <summary>
-            /// The time when the cloud computer template was created.
+            /// <para>The time when the cloud computer template was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-09-30T06:09Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The description of the cloud computer template.
+            /// <para>The description of the cloud computer template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The instance type of the cloud computer.
+            /// <para>The instance type of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecd.graphics.2xlarge</para>
             /// </summary>
             [NameInMap("DesktopType")]
             [Validation(Required=false)]
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// The details of the cloud computer instance type.
+            /// <para>The details of the cloud computer instance type.</para>
             /// </summary>
             [NameInMap("DesktopTypeAttribute")]
             [Validation(Required=false)]
             public DescribeBundlesResponseBodyBundlesDesktopTypeAttribute DesktopTypeAttribute { get; set; }
             public class DescribeBundlesResponseBodyBundlesDesktopTypeAttribute : TeaModel {
                 /// <summary>
-                /// The number of vCPUs.
+                /// <para>The number of vCPUs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("CpuCount")]
                 [Validation(Required=false)]
                 public int? CpuCount { get; set; }
 
                 /// <summary>
-                /// The number of GPUs.
+                /// <para>The number of GPUs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.5</para>
                 /// </summary>
                 [NameInMap("GpuCount")]
                 [Validation(Required=false)]
                 public float? GpuCount { get; set; }
 
                 /// <summary>
-                /// The GPU type.
+                /// <para>The GPU type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NVIDIA T4</para>
                 /// </summary>
                 [NameInMap("GpuSpec")]
                 [Validation(Required=false)]
                 public string GpuSpec { get; set; }
 
                 /// <summary>
-                /// The memory size. Unit: MiB.
+                /// <para>The memory size. Unit: MiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>47104</para>
                 /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
@@ -114,93 +142,99 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The instance family of the cloud computer.
+            /// <para>The instance family of the cloud computer.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>eds.graphics: graphical instance family</description></item>
+            /// <item><description>eds.hf: instance family with a high clock speed</description></item>
+            /// <item><description>eds.general: general-purpose instance family</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   eds.graphics: graphical instance family
-            /// *   eds.hf: instance family with a high clock speed
-            /// *   eds.general: general-purpose instance family
+            /// <b>Example:</b>
+            /// <para>eds.general</para>
             /// </summary>
             [NameInMap("DesktopTypeFamily")]
             [Validation(Required=false)]
             public string DesktopTypeFamily { get; set; }
 
             /// <summary>
-            /// Details of the disks.
+            /// <para>Details of the disks.</para>
             /// </summary>
             [NameInMap("Disks")]
             [Validation(Required=false)]
             public List<DescribeBundlesResponseBodyBundlesDisks> Disks { get; set; }
             public class DescribeBundlesResponseBodyBundlesDisks : TeaModel {
                 /// <summary>
-                /// The PL of the disk.
+                /// <para>The PL of the disk.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>PL1</para>
+                /// <!-- -->
                 /// 
-                /// Valid values:
+                /// <!-- -->
                 /// 
-                /// *   PL1
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>PL0</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>PL3</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                /// *   PL0
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>PL2</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- --></description></item>
+                /// </list>
                 /// 
-                ///     <!-- -->
-                /// 
-                /// *   PL3
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   PL2
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
+                /// <b>Example:</b>
+                /// <para>PL0</para>
                 /// </summary>
                 [NameInMap("DiskPerformanceLevel")]
                 [Validation(Required=false)]
                 public string DiskPerformanceLevel { get; set; }
 
                 /// <summary>
-                /// The size of the disk. Unit: GiB.
+                /// <para>The size of the disk. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>150</para>
                 /// </summary>
                 [NameInMap("DiskSize")]
                 [Validation(Required=false)]
                 public int? DiskSize { get; set; }
 
                 /// <summary>
-                /// The type of the disk.
+                /// <para>The type of the disk.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>SYSTEM: system disk</para>
+                /// <!-- -->
                 /// 
-                /// Valid values:
+                /// <!-- -->
                 /// 
-                /// *   SYSTEM: system disk
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>DATA: data disk</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- --></description></item>
+                /// </list>
                 /// 
-                ///     <!-- -->
-                /// 
-                /// *   DATA: data disk
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
+                /// <b>Example:</b>
+                /// <para>SYSTEM</para>
                 /// </summary>
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
@@ -209,155 +243,180 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The image ID.
+            /// <para>The image ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>desktopimage-windows-server-2019-64-ch-vgpu</para>
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The image name.
+            /// <para>The image name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Windows server 2019 Chinese</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
             /// <summary>
-            /// The status of the image.
+            /// <para>The status of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Available</para>
             /// </summary>
             [NameInMap("ImageStatus")]
             [Validation(Required=false)]
             public string ImageStatus { get; set; }
 
             /// <summary>
-            /// The OS language of the image.
+            /// <para>The OS language of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>en-US</para>
             /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }
 
             /// <summary>
-            /// The type of the OS.
+            /// <para>The type of the OS.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Linux</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Linux
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Windows</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   Windows
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Windows</para>
             /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
 
             /// <summary>
-            /// The OS.
+            /// <para>The OS.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Ubuntu</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Ubuntu
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Windows Server 2022</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>UOS</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Windows Server 2022
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>CentOS</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Windows Server 2019</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   UOS
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Windows Server 2016</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   CentOS
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Windows Server 2019
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Windows Server 2016
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Windows Server 2019</para>
             /// </summary>
             [NameInMap("Platform")]
             [Validation(Required=false)]
             public string Platform { get; set; }
 
             /// <summary>
-            /// The protocol type.
+            /// <para>The protocol type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>HDX: HDX protocol</description></item>
+            /// <item><description>ASP: in-house ASP</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   HDX: HDX protocol
-            /// *   ASP: in-house ASP
+            /// <b>Example:</b>
+            /// <para>ASP</para>
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The session type.
+            /// <para>The session type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: single-session</description></item>
+            /// <item><description>1: multi-session</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   0: single-session
-            /// *   1: multi-session
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("SessionType")]
             [Validation(Required=false)]
             public string SessionType { get; set; }
 
             /// <summary>
-            /// The inventory status of the cloud computer instance type. This parameter is returned only if you set the `CheckStock` parameter to `true`.
+            /// <para>The inventory status of the cloud computer instance type. This parameter is returned only if you set the <c>CheckStock</c> parameter to <c>true</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Sufficient</para>
             /// </summary>
             [NameInMap("StockState")]
             [Validation(Required=false)]
             public string StockState { get; set; }
 
             /// <summary>
-            /// Indicates whether disk encryption is enabled.
+            /// <para>Indicates whether disk encryption is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("VolumeEncryptionEnabled")]
             [Validation(Required=false)]
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.
+            /// <para>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</para>
             /// </summary>
             [NameInMap("VolumeEncryptionKey")]
             [Validation(Required=false)]
@@ -366,14 +425,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The token that is used for the next query. If this parameter is empty, all results have been returned.
+        /// <para>The token that is used for the next query. If this parameter is empty, all results have been returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6lu3PTF6h3zE8egwlYuv8M8</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BCC854D8-5D1E-46D3-96EF-797A5DD36789</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

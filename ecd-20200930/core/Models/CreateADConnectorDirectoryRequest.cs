@@ -10,176 +10,202 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateADConnectorDirectoryRequest : TeaModel {
         /// <summary>
-        /// The method in which the cloud computer is connected.
+        /// <para>The method in which the cloud computer is connected.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>VPC</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   VPC
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Internet (default)</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Any</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   Internet (default)
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Any
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>Internet</para>
         /// </summary>
         [NameInMap("DesktopAccessType")]
         [Validation(Required=false)]
         public string DesktopAccessType { get; set; }
 
         /// <summary>
-        /// The directory name. The name must be 2 to 255 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
+        /// <para>The directory name. The name must be 2 to 255 characters in length. The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testDirectoryName</para>
         /// </summary>
         [NameInMap("DirectoryName")]
         [Validation(Required=false)]
         public string DirectoryName { get; set; }
 
         /// <summary>
-        /// The IP address of the DNS server corresponding to the enterprise AD. You can specify only one IP address. Make sure that the specified IP address is accessible in the network of the selected vSwitch.
+        /// <para>The IP address of the DNS server corresponding to the enterprise AD. You can specify only one IP address. Make sure that the specified IP address is accessible in the network of the selected vSwitch.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>127.0.**.**</para>
         /// </summary>
         [NameInMap("DnsAddress")]
         [Validation(Required=false)]
         public List<string> DnsAddress { get; set; }
 
         /// <summary>
-        /// The fully qualified domain name (FQDN) of the enterprise AD system. The value must contain the hostname and the domain name. You can register each FQDN only once.
+        /// <para>The fully qualified domain name (FQDN) of the enterprise AD system. The value must contain the hostname and the domain name. You can register each FQDN only once.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>corp.example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The password of the domain administrator. The password can be up to 64 characters in length.
+        /// <para>The password of the domain administrator. The password can be up to 64 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testPassword</para>
         /// </summary>
         [NameInMap("DomainPassword")]
         [Validation(Required=false)]
         public string DomainPassword { get; set; }
 
         /// <summary>
-        /// The username of the domain administrator. The username can be up to 64 characters in length.
+        /// <para>The username of the domain administrator. The username can be up to 64 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sAMAccountName</para>
         /// </summary>
         [NameInMap("DomainUserName")]
         [Validation(Required=false)]
         public string DomainUserName { get; set; }
 
         /// <summary>
-        /// Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.
+        /// <para>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><!-- -->
         /// 
-        /// Valid values:
+        /// <para>true</para>
+        /// <!-- -->
         /// 
-        /// *   <!-- -->
+        /// <para>(default)</para>
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><!-- -->
         /// 
-        ///     true
+        /// <para>false</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     (default)
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   <!-- -->
-        /// 
-        ///     false
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableAdminAccess")]
         [Validation(Required=false)]
         public bool? EnableAdminAccess { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Multi-Factor Authentication (MFA). After you enable MFA, all AD users in the directory must enter a dynamic verification code generated by the virtual MFA device in addition to a correct password when they log on to a cloud computer.
+        /// <para>Specifies whether to enable Multi-Factor Authentication (MFA). After you enable MFA, all AD users in the directory must enter a dynamic verification code generated by the virtual MFA device in addition to a correct password when they log on to a cloud computer.</para>
+        /// <remarks>
+        /// <para> When end users log on to a cloud computer for the first time, they must bind an MFA device.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// <!-- -->
         /// 
-        /// >  When end users log on to a cloud computer for the first time, they must bind an MFA device.
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><!-- -->
         /// 
-        /// *   true
+        /// <para>false (default)</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   <!-- -->
-        /// 
-        ///     false (default)
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("MfaEnabled")]
         [Validation(Required=false)]
         public bool? MfaEnabled { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the AD connector.
+        /// <para>The type of the AD connector.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1 (General)</description></item>
+        /// <item><description>2 (Advanced)</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// - 1 (General)
-        /// - 2 (Advanced)
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Specification")]
         [Validation(Required=false)]
         public long? Specification { get; set; }
 
         /// <summary>
-        /// The DNS address of the existing AD subdomain.\\
-        /// If you specify the `SubDomainName` parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.
+        /// <para>The DNS address of the existing AD subdomain.\
+        /// If you specify the <c>SubDomainName</c> parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.**.**</para>
         /// </summary>
         [NameInMap("SubDomainDnsAddress")]
         [Validation(Required=false)]
         public List<string> SubDomainDnsAddress { get; set; }
 
         /// <summary>
-        /// The FQDN of the enterprise AD subdomain. The value must contain the hostname and the subdomain name.
+        /// <para>The FQDN of the enterprise AD subdomain. The value must contain the hostname and the subdomain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>child.example.com</para>
         /// </summary>
         [NameInMap("SubDomainName")]
         [Validation(Required=false)]
         public string SubDomainName { get; set; }
 
         /// <summary>
-        /// Details of the vSwitch IDs. You can specify only one vSwitch ID.
+        /// <para>Details of the vSwitch IDs. You can specify only one vSwitch ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vsw-bp19ocz3erfx15uon****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

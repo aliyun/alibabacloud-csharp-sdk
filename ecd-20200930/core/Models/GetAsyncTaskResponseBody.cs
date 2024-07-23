@@ -10,97 +10,117 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetAsyncTaskResponseBody : TeaModel {
         /// <summary>
-        /// The operation result. If the request was successful, a success message is returned. If the request failed, an error message is returned.
+        /// <para>The operation result. If the request was successful, a success message is returned. If the request failed, an error message is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data information.
+        /// <para>The data information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAsyncTaskResponseBodyData Data { get; set; }
         public class GetAsyncTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// The asynchronous task ID.
+            /// <para>The asynchronous task ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>000e89fb-cf8f-11e9-8ab4-b6e98080****</para>
             /// </summary>
             [NameInMap("AsyncTaskId")]
             [Validation(Required=false)]
             public string AsyncTaskId { get; set; }
 
             /// <summary>
-            /// The total number of asynchronous tasks that are processed. Example: the number of files that are packaged and downloaded on the server.
+            /// <para>The total number of asynchronous tasks that are processed. Example: the number of files that are packaged and downloaded on the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("ConsumedProcess")]
             [Validation(Required=false)]
             public string ConsumedProcess { get; set; }
 
             /// <summary>
-            /// The error code of the asynchronous task.
+            /// <para>The error code of the asynchronous task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>InternalError</para>
             /// </summary>
             [NameInMap("ErrCode")]
             [Validation(Required=false)]
             public long? ErrCode { get; set; }
 
             /// <summary>
-            /// The error message of the asynchronous task.
+            /// <para>The error message of the asynchronous task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The request has been failed due to some unknown error. Please try again later.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The task status.
+            /// <para>The task status.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Failed: The task failed.</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Failed: The task failed.
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Running: The task was running.</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>PartialSucceed: The task did not completely succeed.</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Running: The task was running.
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Succeed: The task succeeded.</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   PartialSucceed: The task did not completely succeed.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Succeed: The task succeeded.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Failed</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The total number of asynchronous tasks to be processed, such as the amount of files to be downloaded and packaged on the server.
+            /// <para>The total number of asynchronous tasks to be processed, such as the amount of files to be downloaded and packaged on the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1000</para>
             /// </summary>
             [NameInMap("TotalProcess")]
             [Validation(Required=false)]
             public long? TotalProcess { get; set; }
 
             /// <summary>
-            /// The URL to download data generated by the asynchronous task. Example: the URL to package and download tasks on the server.
+            /// <para>The URL to download data generated by the asynchronous task. Example: the URL to package and download tasks on the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -109,14 +129,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

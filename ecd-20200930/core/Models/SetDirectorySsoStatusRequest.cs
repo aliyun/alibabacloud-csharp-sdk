@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetDirectorySsoStatusRequest : TeaModel {
         /// <summary>
-        /// The AD directory ID.
+        /// <para>The AD directory ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+dir-h95efs1mbukd9****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable SSO. Valid values:
+        /// <para>Specifies whether to enable SSO. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enables SSO.</description></item>
+        /// <item><description>false: disables SSO.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   true: enables SSO.
-        /// *   false: disables SSO.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableSso")]
         [Validation(Required=false)]
         public bool? EnableSso { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

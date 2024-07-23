@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ResetSnapshotRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hzngahou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the snapshot.
+        /// <para>The ID of the snapshot.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>s-2zeipxmnhej803x7****</para>
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

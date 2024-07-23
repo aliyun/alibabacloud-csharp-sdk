@@ -10,110 +10,141 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ExportDesktopGroupInfoRequest : TeaModel {
         /// <summary>
-        /// The billing method of the cloud computer pool.
+        /// <para>The billing method of the cloud computer pool.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>PostPaid: pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para>PrePaid: subscription.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   PostPaid: pay-as-you-go.
-        /// 
-        /// *   PrePaid: subscription.
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The IDs of the cloud computer pools.
+        /// <para>The IDs of the cloud computer pools.</para>
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public List<string> DesktopGroupId { get; set; }
 
         /// <summary>
-        /// The name of the cloud computer pool.
+        /// <para>The name of the cloud computer pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("DesktopGroupName")]
         [Validation(Required=false)]
         public string DesktopGroupName { get; set; }
 
         /// <summary>
-        /// The authorized user IDs of cloud computer pools.
+        /// <para>The authorized user IDs of cloud computer pools.</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// The time when the subscription cloud computer pool expires.
+        /// <para>The time when the subscription cloud computer pool expires.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-12-31T15:59Z</para>
         /// </summary>
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// The language of the response.
+        /// <para>The language of the response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("LangType")]
         [Validation(Required=false)]
         public string LangType { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Maximum value: 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Maximum value: 100.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+        /// <para>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the office network to which the cloud computer pool belongs.
+        /// <para>The ID of the office network to which the cloud computer pool belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+dir-467671****</para>
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The ID of the policy that is associated with the cloud computer pool.
+        /// <para>The ID of the policy that is associated with the cloud computer pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pg-53iyi2aar0nd6****</para>
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the regions supported by Elastic Desktop Service.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The tags attached to the cloud computer pool. You can specify 1 to 20 tags.
+        /// <para>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ExportDesktopGroupInfoRequestTag> Tag { get; set; }
         public class ExportDesktopGroupInfoRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.
+            /// <para>The key of the tag. If you specify the <c>Tag</c> parameter, you must also specify the <c>Key</c> parameter. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>. You cannot specify an empty string as a tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+            /// <para>The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

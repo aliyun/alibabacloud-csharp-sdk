@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ClonePolicyGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the new policy.
+        /// <para>The ID of the new policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pg-7jcaznnx6go6n****</para>
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

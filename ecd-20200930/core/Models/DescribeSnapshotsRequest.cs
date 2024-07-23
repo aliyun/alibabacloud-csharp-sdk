@@ -10,135 +10,167 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeSnapshotsRequest : TeaModel {
         /// <summary>
-        /// The user who creates the snapshot.
+        /// <para>The user who creates the snapshot.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Administrator</para>
         /// </summary>
         [NameInMap("Creator")]
         [Validation(Required=false)]
         public string Creator { get; set; }
 
         /// <summary>
-        /// The ID of the cloud computer.
+        /// <para>The ID of the cloud computer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecd-gx2x1dhsmucyy****</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The name of the cloud computer.
+        /// <para>The name of the cloud computer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testName</para>
         /// </summary>
         [NameInMap("DesktopName")]
         [Validation(Required=false)]
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-11-31T06:32:31Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// <para>The maximum number of entries to return on each page.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values: 1 to 100</description></item>
+        /// <item><description>Default value: 10</description></item>
+        /// </list>
         /// 
-        /// *   Valid values: 1 to 100
-        /// *   Default value: 10
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8051af8d01b5479bec9f5ddf02e4a8fbd0ab6e7e43f8****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The snapshot ID.
+        /// <para>The snapshot ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-2ze81owrnv9pity4****</para>
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+        /// <para>The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-). The name cannot start with <c>auto</c> because snapshots whose names start with auto are recognized as automatic snapshots.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_data_disk</para>
         /// </summary>
         [NameInMap("SnapshotName")]
         [Validation(Required=false)]
         public string SnapshotName { get; set; }
 
         /// <summary>
-        /// The category of the snapshots.
+        /// <para>The category of the snapshots.</para>
+        /// <para>Default value: all. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>all: all snapshot categories</para>
+        /// <!-- -->
         /// 
-        /// Default value: all. Valid values:
+        /// <!-- -->
         /// 
-        /// *   all: all snapshot categories
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>auto: automatic snapshots</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>user: manual snapshots</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        /// *   auto: automatic snapshots
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   user: manual snapshots
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>user</para>
         /// </summary>
         [NameInMap("SnapshotType")]
         [Validation(Required=false)]
         public string SnapshotType { get; set; }
 
         /// <summary>
-        /// The type of the disk for which the snapshot is created.
+        /// <para>The type of the disk for which the snapshot is created.</para>
+        /// <remarks>
+        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Data: data disk</para>
+        /// <!-- -->
         /// 
-        /// >  The value of this parameter is not case-sensitive.
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>System: system disk</para>
+        /// <!-- -->
         /// 
-        /// *   Data: data disk
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   System: system disk
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>system</para>
         /// </summary>
         [NameInMap("SourceDiskType")]
         [Validation(Required=false)]
         public string SourceDiskType { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-11-30T06:32:31Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

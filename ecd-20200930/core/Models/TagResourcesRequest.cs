@@ -10,54 +10,65 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.
+        /// <para>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecd-ia2zw38bi6cm7****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource.
+        /// <para>The type of the resource.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ALIYUN::GWS::INSTANCE: cloud computer.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// * ALIYUN::GWS::INSTANCE: cloud computer.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ALIYUN::GWS::INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags that you want to add to the cloud computers. You can specify 1 to 20 tags.
-        /// 
-        /// This parameter is required.
+        /// <para>The tags that you want to add to the cloud computers. You can specify 1 to 20 tags.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with `acs:` or `aliyun` and cannot contain `http://` or `https://`.
+            /// <para>The tag keys. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <c>acs:</c> or <c>aliyun</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+            /// <para>The tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeKmsKeysResponseBody : TeaModel {
         /// <summary>
-        /// The authorization status.
+        /// <para>The authorization status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>authorized</para>
         /// </summary>
         [NameInMap("AuthorizeStatus")]
         [Validation(Required=false)]
         public string AuthorizeStatus { get; set; }
 
         /// <summary>
-        /// Details about the customer master keys (CMKs).
+        /// <para>Details about the customer master keys (CMKs).</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public List<DescribeKmsKeysResponseBodyKeys> Keys { get; set; }
         public class DescribeKmsKeysResponseBodyKeys : TeaModel {
             /// <summary>
-            /// The alias of the key.
+            /// <para>The alias of the key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestAlias</para>
             /// </summary>
             [NameInMap("Alias")]
             [Validation(Required=false)]
             public string Alias { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud Resource Name (ARN) of the key in KMS.
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the key in KMS.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:kms:cn-hangzhou:154035569884****:key/05754286-3ba2-4fa6-8d41-4323aca6****</para>
             /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
 
             /// <summary>
-            /// The ID of the key.
+            /// <para>The ID of the key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>05754286-3ba2-4fa6-8d41-4323aca6****</para>
             /// </summary>
             [NameInMap("KeyId")]
             [Validation(Required=false)]
             public string KeyId { get; set; }
 
             /// <summary>
-            /// The type of the key.
+            /// <para>The type of the key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ServiceKey</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -54,14 +69,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// Indicates whether KMS is activated.
+        /// <para>Indicates whether KMS is activated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("KmsServiceStatus")]
         [Validation(Required=false)]
         public string KmsServiceStatus { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

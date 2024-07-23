@@ -10,44 +10,54 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyCloudDriveGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the cloud disk in Cloud Drive Service.
+        /// <para>The ID of the cloud disk in Cloud Drive Service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shanghai+cds-135515****</para>
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
         public string CdsId { get; set; }
 
         /// <summary>
-        /// The IDs of the teams.
+        /// <para>The IDs of the teams.</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public List<string> GroupId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The status of the team space. Valid values:
+        /// <para>The status of the team space. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enabled</description></item>
+        /// <item><description>disabled</description></item>
+        /// </list>
+        /// <para>Default value: enabled.</para>
         /// 
-        /// *   enabled
-        /// *   disabled
-        /// 
-        /// Default value: enabled.
+        /// <b>Example:</b>
+        /// <para>disabled</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The total capacity of the team space.
+        /// <para>The total capacity of the team space.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32212254720</para>
         /// </summary>
         [NameInMap("TotalSize")]
         [Validation(Required=false)]

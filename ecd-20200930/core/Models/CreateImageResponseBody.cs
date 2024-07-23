@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateImageResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the image.
+        /// <para>The ID of the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>m-gx2x1dhsmusr2****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class HibernateDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101AE027-8299-5E6E-A782-6C91C962****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

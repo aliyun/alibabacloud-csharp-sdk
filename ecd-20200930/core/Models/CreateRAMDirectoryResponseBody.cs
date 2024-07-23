@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateRAMDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// The RAM directory ID.
+        /// <para>The RAM directory ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dri-uf62w3qzt4aigvlcb****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,36 +10,43 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CancelCoordinationForMonitoringRequest : TeaModel {
         /// <summary>
-        /// The IDs of stream collaboration tasks.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of stream collaboration tasks.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CoIds")]
         [Validation(Required=false)]
         public List<string> CoIds { get; set; }
 
         /// <summary>
-        /// The ID of the end user that initiates stream collaboration. If the initiator is the administrator, skip this parameter.
+        /// <para>The ID of the end user that initiates stream collaboration. If the initiator is the administrator, skip this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/436773.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the user.
+        /// <para>The type of the user.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>TENANT_ADMIN: administrator.</description></item>
+        /// </list>
         /// 
-        /// Valid value:
-        /// 
-        /// * TENANT_ADMIN: administrator.
+        /// <b>Example:</b>
+        /// <para>TENANT_ADMIN</para>
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

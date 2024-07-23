@@ -10,55 +10,66 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetCoordinateTicketRequest : TeaModel {
         /// <summary>
-        /// The ID of the stream collaboration. You can obtain the value of this parameter based on the value of `Coid` that is returned by the `ApplyCoordinationForMonitoring` operation.
+        /// <para>The ID of the stream collaboration. You can obtain the value of this parameter based on the value of <c>Coid</c> that is returned by the <c>ApplyCoordinationForMonitoring</c> operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>co-0sot77uale3****</para>
         /// </summary>
         [NameInMap("CoId")]
         [Validation(Required=false)]
         public string CoId { get; set; }
 
         /// <summary>
-        /// The name of the convenience user account. If you initiate the request as an administrator, you do not need to specify this parameter.
+        /// <para>The name of the convenience user account. If you initiate the request as an administrator, you do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/436773.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the cloud computer connection task. The first time you initiate the request, you do not need to specify the ID of the cloud computer connection task. If no ticket is returned after you initiate the first request, you must specify the value of taskId that is returned for the first request in the subsequent request.
+        /// <para>The ID of the cloud computer connection task. The first time you initiate the request, you do not need to specify the ID of the cloud computer connection task. If no ticket is returned after you initiate the first request, you must specify the value of taskId that is returned for the first request in the subsequent request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>39cc15e5-6998-4b9f-9b2c-7a4cc3e2****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The type of the user.
+        /// <para>The type of the user.</para>
+        /// <para>Set the value to TENANT_ADMIN.</para>
+        /// <list type="bullet">
+        /// <item><description><para>The value of</para>
+        /// <!-- -->
         /// 
-        /// Set the value to TENANT_ADMIN.
+        /// <!-- -->
         /// 
-        /// *   The value of
+        /// <para>TENANT_ADMIN</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>specifies an administrator.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     TENANT_ADMIN
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     specifies an administrator.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TENANT_ADMIN</para>
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

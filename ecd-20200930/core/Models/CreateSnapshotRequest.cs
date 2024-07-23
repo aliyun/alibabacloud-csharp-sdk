@@ -10,61 +10,70 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateSnapshotRequest : TeaModel {
         /// <summary>
-        /// The description of the snapshot. The description can be up to 128 characters in length.
+        /// <para>The description of the snapshot. The description can be up to 128 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testDescription</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the cloud computer.
+        /// <para>The ID of the cloud computer.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecd-gx2x1dhsmucyy****&quot;</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+        /// <para>The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-). The name cannot start with <c>auto</c> because snapshots whose names start with auto are recognized as automatic snapshots.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testSnapshotName</para>
         /// </summary>
         [NameInMap("SnapshotName")]
         [Validation(Required=false)]
         public string SnapshotName { get; set; }
 
         /// <summary>
-        /// The type of the disk for which you want to create a snapshot.
+        /// <para>The type of the disk for which you want to create a snapshot.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>system: system disk</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   system: system disk
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>data: data disk</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   data: data disk
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>system</para>
         /// </summary>
         [NameInMap("SourceDiskType")]
         [Validation(Required=false)]

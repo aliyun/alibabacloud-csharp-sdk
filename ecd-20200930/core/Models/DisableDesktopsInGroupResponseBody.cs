@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DisableDesktopsInGroupResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34FB4D97-C0D9-5534-ABC6-90C7EBD5****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

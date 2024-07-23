@@ -10,240 +10,292 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// If the NextToken parameter is empty, no next page exists.
+        /// <para>If the NextToken parameter is empty, no next page exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>51592A88-0F2C-55E6-AD2C-2AD9C10D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the queried snapshots.
+        /// <para>Details of the queried snapshots.</para>
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
         public List<DescribeSnapshotsResponseBodySnapshots> Snapshots { get; set; }
         public class DescribeSnapshotsResponseBodySnapshots : TeaModel {
             /// <summary>
-            /// The point in time at which the snapshot was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.
+            /// <para>The point in time at which the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-12-20T14:52:28Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The user who creates the snapshot.
+            /// <para>The user who creates the snapshot.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Administrator</para>
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
             public string Creator { get; set; }
 
             /// <summary>
-            /// The time when the snapshot was deleted. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.
+            /// <para>The time when the snapshot was deleted. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-12-20T14:52:28Z</para>
             /// </summary>
             [NameInMap("DeletionTime")]
             [Validation(Required=false)]
             public string DeletionTime { get; set; }
 
             /// <summary>
-            /// The description of the snapshot.
+            /// <para>The description of the snapshot.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testDescription</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the cloud computer to which the snapshot belongs.
+            /// <para>The ID of the cloud computer to which the snapshot belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecd-g03l3tlm8djoj****</para>
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The name of the cloud computer.
+            /// <para>The name of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// The status of the cloud computer.
+            /// <para>The status of the cloud computer.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Stopped</description></item>
+            /// <item><description>Starting</description></item>
+            /// <item><description>Rebuilding</description></item>
+            /// <item><description>Running</description></item>
+            /// <item><description>Stopping</description></item>
+            /// <item><description>Expired</description></item>
+            /// <item><description>Deleted</description></item>
+            /// <item><description>Pending</description></item>
+            /// </list>
             /// 
-            /// Valid values:
-            /// 
-            /// *   Stopped
-            /// *   Starting
-            /// *   Rebuilding
-            /// *   Running
-            /// *   Stopping
-            /// *   Expired
-            /// *   Deleted
-            /// *   Pending
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// The progress of creating the snapshot. Unit: %.
+            /// <para>The progress of creating the snapshot. Unit: %.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100%</para>
             /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
 
             /// <summary>
-            /// The protocol type.
+            /// <para>The protocol type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>HDX: High-definition Experience (HDX) protocol</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   HDX: High-definition Experience (HDX) protocol
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>ASP: in-house Adaptive Streaming Protocol (ASP)</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   ASP: in-house Adaptive Streaming Protocol (ASP)
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>ASP</para>
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The remaining time that is required to complete the snapshot creation. Unit: seconds.
+            /// <para>The remaining time that is required to complete the snapshot creation. Unit: seconds.</para>
+            /// <remarks>
+            /// <para> When the <c>Status</c> value is <c>PROGRESSING</c>, the <c>RemainTime</c> value is <c>-1</c>. A value of -1 indicates that the system is calculating the remaining time.</para>
+            /// </remarks>
             /// 
-            /// >  When the `Status` value is `PROGRESSING`, the `RemainTime` value is `-1`. A value of -1 indicates that the system is calculating the remaining time.
+            /// <b>Example:</b>
+            /// <para>30</para>
             /// </summary>
             [NameInMap("RemainTime")]
             [Validation(Required=false)]
             public int? RemainTime { get; set; }
 
             /// <summary>
-            /// The snapshot ID.
+            /// <para>The snapshot ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>s-2zeipxmnhej803x7****</para>
             /// </summary>
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
             public string SnapshotId { get; set; }
 
             /// <summary>
-            /// The name of the snapshot.
+            /// <para>The name of the snapshot.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testSnapshotName</para>
             /// </summary>
             [NameInMap("SnapshotName")]
             [Validation(Required=false)]
             public string SnapshotName { get; set; }
 
             /// <summary>
-            /// The type of the snapshot.
+            /// <para>The type of the snapshot.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>AUTO: automatic snapshot</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   AUTO: automatic snapshot
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>USER: manual snapshot</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   USER: manual snapshot
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>USER</para>
             /// </summary>
             [NameInMap("SnapshotType")]
             [Validation(Required=false)]
             public string SnapshotType { get; set; }
 
             /// <summary>
-            /// The capacity of the source disk. Unit: GiB.
+            /// <para>The capacity of the source disk. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>150</para>
             /// </summary>
             [NameInMap("SourceDiskSize")]
             [Validation(Required=false)]
             public string SourceDiskSize { get; set; }
 
             /// <summary>
-            /// The type of the source disk.
+            /// <para>The type of the source disk.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>SYSTEM: system disk</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   SYSTEM: system disk
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>DATA: data disk</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   DATA: data disk
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>SYSTEM</para>
             /// </summary>
             [NameInMap("SourceDiskType")]
             [Validation(Required=false)]
             public string SourceDiskType { get; set; }
 
             /// <summary>
-            /// The status of the snapshot.
+            /// <para>The status of the snapshot.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>PROGRESSING: The snapshot is being created.</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   PROGRESSING: The snapshot is being created.
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>FAILED: The snapshot fails to be created.</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>ACCOMPLISHED: The snapshot is created.</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   FAILED: The snapshot fails to be created.
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   ACCOMPLISHED: The snapshot is created.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>ACCOMPLISHED</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// Indicates whether disk encryption is enabled.
+            /// <para>Indicates whether disk encryption is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("VolumeEncryptionEnabled")]
             [Validation(Required=false)]
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](https://help.aliyun.com/document_detail/28951.html) operation to query the list of KMS keys.
+            /// <para>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</para>
             /// </summary>
             [NameInMap("VolumeEncryptionKey")]
             [Validation(Required=false)]

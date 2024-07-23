@@ -10,22 +10,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePriceRequest : TeaModel {
         /// <summary>
-        /// The number of the resources. Default value: 1.
+        /// <para>The number of the resources. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Amount")]
         [Validation(Required=false)]
         public int? Amount { get; set; }
 
         /// <summary>
-        /// The maximum public bandwidth. Unit: Mbit/s.
+        /// <para>The maximum public bandwidth. Unit: Mbit/s.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values if the PayByTraffic parameter is set to PayByBandwidth: 10 to 1000</description></item>
+        /// <item><description>Valid values if the PayByTraffic parameter is set to PayByTraffic: 10 to 200</description></item>
+        /// </list>
         /// 
-        /// *   Valid values if the PayByTraffic parameter is set to PayByBandwidth: 10 to 1000
-        /// *   Valid values if the PayByTraffic parameter is set to PayByTraffic: 10 to 200
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("BundleModels")]
         [Validation(Required=false)]
         public List<DescribePriceRequestBundleModels> BundleModels { get; set; }
@@ -105,49 +116,62 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? GroupDesktopCount { get; set; }
 
         /// <summary>
-        /// The model of the WUYING hardware client.
+        /// <para>The model of the WUYING hardware client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hide</para>
         /// </summary>
         [NameInMap("HardwareVersion")]
         [Validation(Required=false)]
         public string HardwareVersion { get; set; }
 
         /// <summary>
-        /// The resource specifications.
+        /// <para>The resource specifications.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If you set ResourceType to Desktop, set this parameter to one of the following values:</para>
+        /// <list type="bullet">
+        /// <item><description>ecd.basic.small</description></item>
+        /// <item><description>ecd.basic.large</description></item>
+        /// <item><description>ecd.advanced.large</description></item>
+        /// <item><description>ecd.advanced.xlarge</description></item>
+        /// <item><description>ecd.performance.2xlarge</description></item>
+        /// <item><description>ecd.graphics.xlarge</description></item>
+        /// <item><description>ecd.graphics.2xlarge</description></item>
+        /// <item><description>ecd.advanced.xlarge_s8d2</description></item>
+        /// <item><description>ecd.advanced.xlarge_s8d7</description></item>
+        /// <item><description>ecd.graphics.1g72c</description></item>
+        /// <item><description>eds.general.2c2g</description></item>
+        /// <item><description>eds.general.2c4g</description></item>
+        /// <item><description>eds.general.2c8g</description></item>
+        /// <item><description>eds.general.4c8g</description></item>
+        /// <item><description>eds.general.4c16g</description></item>
+        /// <item><description>eds.general.8c16g</description></item>
+        /// <item><description>eds.general.8c32g</description></item>
+        /// <item><description>eds.general.16c32g</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>If you set ResourceType to OfficeSite, set this parameter to large.</para>
+        /// </description></item>
+        /// <item><description><para>If you set ResourceType to Bandwidth, leave this parameter empty.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   If you set ResourceType to Desktop, set this parameter to one of the following values:
-        /// 
-        ///     *   ecd.basic.small
-        ///     *   ecd.basic.large
-        ///     *   ecd.advanced.large
-        ///     *   ecd.advanced.xlarge
-        ///     *   ecd.performance.2xlarge
-        ///     *   ecd.graphics.xlarge
-        ///     *   ecd.graphics.2xlarge
-        ///     *   ecd.advanced.xlarge_s8d2
-        ///     *   ecd.advanced.xlarge_s8d7
-        ///     *   ecd.graphics.1g72c
-        ///     *   eds.general.2c2g
-        ///     *   eds.general.2c4g
-        ///     *   eds.general.2c8g
-        ///     *   eds.general.4c8g
-        ///     *   eds.general.4c16g
-        ///     *   eds.general.8c16g
-        ///     *   eds.general.8c32g
-        ///     *   eds.general.16c32g
-        /// 
-        /// *   If you set ResourceType to OfficeSite, set this parameter to large.
-        /// 
-        /// *   If you set ResourceType to Bandwidth, leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>eds.general.2c2g</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The metering method of the Internet access package. Valid values:
+        /// <para>The metering method of the Internet access package. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PayByBandwidth: pay-by-bandwidth</description></item>
+        /// <item><description>PayByTraffic: pay-by-data-transfer</description></item>
+        /// </list>
         /// 
-        /// *   PayByBandwidth: pay-by-bandwidth
-        /// *   PayByTraffic: pay-by-data-transfer
+        /// <b>Example:</b>
+        /// <para>PayByTraffic</para>
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
@@ -158,12 +182,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// The OS. Valid values:
+        /// <para>The OS. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Windows</description></item>
+        /// <item><description>Linux</description></item>
+        /// </list>
+        /// <para>Default value: Windows.</para>
         /// 
-        /// *   Windows
-        /// *   Linux
-        /// 
-        /// Default value: Windows.
+        /// <b>Example:</b>
+        /// <para>Windows</para>
         /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
@@ -174,68 +201,89 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PackageSize { get; set; }
 
         /// <summary>
-        /// The subscription duration. Default value: 1.
+        /// <para>The subscription duration. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the billing cycle. Valid values:
+        /// <para>The unit of the billing cycle. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Hour</description></item>
+        /// <item><description>Month</description></item>
+        /// <item><description>Year</description></item>
+        /// </list>
+        /// <para>Default value: Hour.</para>
         /// 
-        /// *   Hour
-        /// *   Month
-        /// *   Year
-        /// 
-        /// Default value: Hour.
+        /// <b>Example:</b>
+        /// <para>Hour</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The promotion ID.
+        /// <para>The promotion ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource type. Valid values:
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Desktop: cloud desktop</description></item>
+        /// <item><description>OfficeSite: workspace</description></item>
+        /// <item><description>Bandwidth: network bandwidth</description></item>
+        /// </list>
+        /// <para>Default value: Desktop.</para>
         /// 
-        /// *   Desktop: cloud desktop
-        /// *   OfficeSite: workspace
-        /// *   Bandwidth: network bandwidth
-        /// 
-        /// Default value: Desktop.
+        /// <b>Example:</b>
+        /// <para>Desktop</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The performance level (PL) of the system disk. Valid values:
+        /// <para>The performance level (PL) of the system disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PL0</description></item>
+        /// <item><description>PL1</description></item>
+        /// <item><description>PL2</description></item>
+        /// <item><description>PL3</description></item>
+        /// </list>
         /// 
-        /// *   PL0
-        /// *   PL1
-        /// *   PL2
-        /// *   PL3
+        /// <b>Example:</b>
+        /// <para>PL0</para>
         /// </summary>
         [NameInMap("RootDiskPerformanceLevel")]
         [Validation(Required=false)]
         public string RootDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// The system disk size. Unit: GiB.
+        /// <para>The system disk size. Unit: GiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("RootDiskSizeGib")]
         [Validation(Required=false)]
@@ -254,19 +302,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SpType { get; set; }
 
         /// <summary>
-        /// The PL of the data disk. Valid values:
+        /// <para>The PL of the data disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PL0</description></item>
+        /// <item><description>PL1</description></item>
+        /// <item><description>PL2</description></item>
+        /// <item><description>PL3</description></item>
+        /// </list>
         /// 
-        /// *   PL0
-        /// *   PL1
-        /// *   PL2
-        /// *   PL3
+        /// <b>Example:</b>
+        /// <para>PL0</para>
         /// </summary>
         [NameInMap("UserDiskPerformanceLevel")]
         [Validation(Required=false)]
         public string UserDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// The data disk size. Unit: GiB.
+        /// <para>The data disk size. Unit: GiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("UserDiskSizeGib")]
         [Validation(Required=false)]
