@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string IgnoredUsers { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("KillAllSessions")]
         [Validation(Required=false)]

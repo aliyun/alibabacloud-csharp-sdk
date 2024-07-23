@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDasProServiceUsageRequest : TeaModel {
         /// <summary>
-        /// The database instance ID.
+        /// <para>The database instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-2ze8g2am97624****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account that is used to create the database instance.
+        /// <para>The ID of the Alibaba Cloud account that is used to create the database instance.</para>
+        /// <remarks>
+        /// <para> This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.
+        /// <b>Example:</b>
+        /// <para>196278346919****</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

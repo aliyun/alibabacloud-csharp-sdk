@@ -10,53 +10,70 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DisableAutoResourceOptimizeRulesResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DisableAutoResourceOptimizeRulesResponseBodyData Data { get; set; }
         public class DisableAutoResourceOptimizeRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.
+            /// <para>The number of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ConfigFailInstanceCount")]
             [Validation(Required=false)]
             public long? ConfigFailInstanceCount { get; set; }
 
             /// <summary>
-            /// The list of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.
+            /// <para>The list of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.</para>
             /// </summary>
             [NameInMap("ConfigFailInstanceList")]
             [Validation(Required=false)]
             public List<DisableAutoResourceOptimizeRulesResponseBodyDataConfigFailInstanceList> ConfigFailInstanceList { get; set; }
             public class DisableAutoResourceOptimizeRulesResponseBodyDataConfigFailInstanceList : TeaModel {
                 /// <summary>
-                /// Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:
+                /// <para>Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// * **true**
-                /// 
-                /// * **false**
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("ConfigSuccess")]
                 [Validation(Required=false)]
                 public bool? ConfigSuccess { get; set; }
 
                 /// <summary>
-                /// The error message returned if the request failed.
+                /// <para>The error message returned if the request failed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cannot found instance by rm-2ze9xrhze0709****</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// The database instance ID.
+                /// <para>The database instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-2ze9xrhze0709****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -65,32 +82,43 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The number of database instances for which the automatic tablespace fragment recycling feature is disabled.
+            /// <para>The number of database instances for which the automatic tablespace fragment recycling feature is disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ConfigSuccessInstanceCount")]
             [Validation(Required=false)]
             public long? ConfigSuccessInstanceCount { get; set; }
 
             /// <summary>
-            /// The list of database instances for which the automatic tablespace fragment recycling feature is disabled.
+            /// <para>The list of database instances for which the automatic tablespace fragment recycling feature is disabled.</para>
             /// </summary>
             [NameInMap("ConfigSuccessInstanceList")]
             [Validation(Required=false)]
             public List<DisableAutoResourceOptimizeRulesResponseBodyDataConfigSuccessInstanceList> ConfigSuccessInstanceList { get; set; }
             public class DisableAutoResourceOptimizeRulesResponseBodyDataConfigSuccessInstanceList : TeaModel {
                 /// <summary>
-                /// Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:
+                /// <para>Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// * **true**
-                /// 
-                /// * **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("ConfigSuccess")]
                 [Validation(Required=false)]
                 public bool? ConfigSuccess { get; set; }
 
                 /// <summary>
-                /// The database instance ID.
+                /// <para>The database instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-2ze8g2am97624****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -99,7 +127,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The total number of database instances.
+            /// <para>The total number of database instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("TotalInstanceCount")]
             [Validation(Required=false)]
@@ -108,26 +139,37 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

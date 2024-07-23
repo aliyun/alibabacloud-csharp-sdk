@@ -10,30 +10,40 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class CreateSqlLogTaskRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+        /// <para>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1608888296000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The filter conditions.
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<CreateSqlLogTaskRequestFilters> Filters { get; set; }
         public class CreateSqlLogTaskRequestFilters : TeaModel {
             /// <summary>
-            /// The name of the filter parameter.
+            /// <para>The name of the filter parameter.</para>
+            /// <remarks>
+            /// <para> For more information about the supported filter parameters and their valid values, see the following <b>supplement about the Key parameter</b>.</para>
+            /// </remarks>
             /// 
-            /// >  For more information about the supported filter parameters and their valid values, see the following **supplement about the Key parameter**.
+            /// <b>Example:</b>
+            /// <para>KeyWords</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the filter parameter.
+            /// <para>The value of the filter parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>select</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -42,51 +52,72 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The ID of the database instance.
+        /// <para>The ID of the database instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-2ze8g2am97624****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the task.
+        /// <para>The name of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test01</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The node ID.
+        /// <para>The node ID.</para>
+        /// <remarks>
+        /// <para> This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.
+        /// <b>Example:</b>
+        /// <para>pi-uf6k5f6g3912i0dqz</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The role of the node of the PolarDB-X 2.0 database instance. Valid values:
+        /// <para>The role of the node of the PolarDB-X 2.0 database instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>polarx_cn</b>: compute node</description></item>
+        /// <item><description><b>polarx_dn</b>: data node</description></item>
+        /// </list>
         /// 
-        /// *   **polarx_cn**: compute node
-        /// *   **polarx_dn**: data node
+        /// <b>Example:</b>
+        /// <para>polarx_cn</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+        /// <para>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1596177993000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The type of the task. Valid values:
+        /// <para>The type of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Export</b></description></item>
+        /// <item><description><b>Query</b></description></item>
+        /// <item><description><b>Insight</b></description></item>
+        /// </list>
         /// 
-        /// *   **Export**
-        /// *   **Query**
-        /// *   **Insight**
+        /// <b>Example:</b>
+        /// <para>Export</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

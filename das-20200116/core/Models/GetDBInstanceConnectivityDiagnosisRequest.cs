@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDBInstanceConnectivityDiagnosisRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-2ze8g2am97624****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The source IP address.
+        /// <para>The source IP address.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>47.110.180.62</para>
         /// </summary>
         [NameInMap("SrcIp")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetRedisAllSessionRequest : TeaModel {
         /// <summary>
-        /// The reserved parameter.
+        /// <para>The reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("ConsoleContext")]
         [Validation(Required=false)]
         public string ConsoleContext { get; set; }
 
         /// <summary>
-        /// The database instance ID.
+        /// <para>The database instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-2zemyfd1sh1u2i****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -10,72 +10,94 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class UpdateAutoThrottleRulesAsyncResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateAutoThrottleRulesAsyncResponseBodyData Data { get; set; }
         public class UpdateAutoThrottleRulesAsyncResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the asynchronous request was complete. Valid values:
+            /// <para>Indicates whether the asynchronous request was complete. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Complete")]
             [Validation(Required=false)]
             public bool? Complete { get; set; }
 
             /// <summary>
-            /// The returned data of the configuration.
-            /// 
-            /// >  The data is returned only if the value of isFinish is **true**. This value indicates that the asynchronous request is complete.
+            /// <para>The returned data of the configuration.</para>
+            /// <remarks>
+            /// <para> The data is returned only if the value of isFinish is <b>true</b>. This value indicates that the asynchronous request is complete.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("ConfigResponse")]
             [Validation(Required=false)]
             public UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponse ConfigResponse { get; set; }
             public class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponse : TeaModel {
                 /// <summary>
-                /// The number of database instances for which the parameters failed to be configured.
+                /// <para>The number of database instances for which the parameters failed to be configured.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ConfigFailInstanceCount")]
                 [Validation(Required=false)]
                 public long? ConfigFailInstanceCount { get; set; }
 
                 /// <summary>
-                /// The database instances for which the parameters failed to be configured.
+                /// <para>The database instances for which the parameters failed to be configured.</para>
                 /// </summary>
                 [NameInMap("ConfigFailInstanceList")]
                 [Validation(Required=false)]
                 public List<UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigFailInstanceList> ConfigFailInstanceList { get; set; }
                 public class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigFailInstanceList : TeaModel {
                     /// <summary>
-                    /// Indicates whether the parameters are configured. Valid values:
+                    /// <para>Indicates whether the parameters are configured. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><para><b>true</b></para>
+                    /// </description></item>
+                    /// <item><description><para><b>false</b></para>
+                    /// </description></item>
+                    /// </list>
                     /// 
-                    /// * **true**
-                    /// 
-                    /// * **false**
+                    /// <b>Example:</b>
+                    /// <para>false</para>
                     /// </summary>
                     [NameInMap("ConfigSuccess")]
                     [Validation(Required=false)]
                     public bool? ConfigSuccess { get; set; }
 
                     /// <summary>
-                    /// The error message returned.
+                    /// <para>The error message returned.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>instance das autonomy service is off or can not find instance</para>
                     /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
-                    /// The database instance ID.
+                    /// <para>The database instance ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>rm-2ze9xrhze0709****</para>
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -84,32 +106,43 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// The number of database instances for which the parameters are configured.
+                /// <para>The number of database instances for which the parameters are configured.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ConfigSuccessInstanceCount")]
                 [Validation(Required=false)]
                 public long? ConfigSuccessInstanceCount { get; set; }
 
                 /// <summary>
-                /// The database instances for which the parameters are configured.
+                /// <para>The database instances for which the parameters are configured.</para>
                 /// </summary>
                 [NameInMap("ConfigSuccessInstanceList")]
                 [Validation(Required=false)]
                 public List<UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigSuccessInstanceList> ConfigSuccessInstanceList { get; set; }
                 public class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigSuccessInstanceList : TeaModel {
                     /// <summary>
-                    /// Indicates whether the parameters are configured. Valid values:
+                    /// <para>Indicates whether the parameters are configured. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><para><b>true</b></para>
+                    /// </description></item>
+                    /// <item><description><para><b>false</b></para>
+                    /// </description></item>
+                    /// </list>
                     /// 
-                    /// * **true**
-                    /// 
-                    /// * **false**
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("ConfigSuccess")]
                     [Validation(Required=false)]
                     public bool? ConfigSuccess { get; set; }
 
                     /// <summary>
-                    /// The database instance ID.
+                    /// <para>The database instance ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>rm-2ze8g2am97624****</para>
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -118,7 +151,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// The total number of database instances.
+                /// <para>The total number of database instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("TotalInstanceCount")]
                 [Validation(Required=false)]
@@ -127,45 +163,63 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// Indicates whether the asynchronous request failed. Valid values:
+            /// <para>Indicates whether the asynchronous request failed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Fail")]
             [Validation(Required=false)]
             public bool? Fail { get; set; }
 
             /// <summary>
-            /// Indicates whether the asynchronous request was complete. Valid values:
+            /// <para>Indicates whether the asynchronous request was complete. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsFinish")]
             [Validation(Required=false)]
             public bool? IsFinish { get; set; }
 
             /// <summary>
-            /// The ID of the asynchronous request.
+            /// <para>The ID of the asynchronous request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>async__665ee69612f1627c7fd9f3c85075****</para>
             /// </summary>
             [NameInMap("ResultId")]
             [Validation(Required=false)]
             public string ResultId { get; set; }
 
             /// <summary>
-            /// The state of the asynchronous request. Valid values:
+            /// <para>The state of the asynchronous request. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>RUNNING</b></description></item>
+            /// <item><description><b>SUCCESS</b></description></item>
+            /// <item><description><b>FAIL</b></description></item>
+            /// </list>
             /// 
-            /// *   **RUNNING**
-            /// *   **SUCCESS**
-            /// *   **FAIL**
+            /// <b>Example:</b>
+            /// <para>SUCCESS</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1645668213000</para>
             /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
@@ -174,26 +228,37 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

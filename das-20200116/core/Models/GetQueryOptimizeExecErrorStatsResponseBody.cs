@@ -10,77 +10,104 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetQueryOptimizeExecErrorStatsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The detailed information, including the error codes and the number of entries that are returned.
+        /// <para>The detailed information, including the error codes and the number of entries that are returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetQueryOptimizeExecErrorStatsResponseBodyData Data { get; set; }
         public class GetQueryOptimizeExecErrorStatsResponseBodyData : TeaModel {
             /// <summary>
-            /// The reserved parameter.
+            /// <para>The reserved parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
             public string Extra { get; set; }
 
             /// <summary>
-            /// The information about the SQL templates that failed to execute.
+            /// <para>The information about the SQL templates that failed to execute.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<GetQueryOptimizeExecErrorStatsResponseBodyDataList> List { get; set; }
             public class GetQueryOptimizeExecErrorStatsResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testdb01</para>
                 /// </summary>
                 [NameInMap("Dbname")]
                 [Validation(Required=false)]
                 public string Dbname { get; set; }
 
                 /// <summary>
-                /// The error code returned if the request failed.
+                /// <para>The error code returned if the request failed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1146</para>
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// The number of errors.
+                /// <para>The number of errors.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("ErrorCount")]
                 [Validation(Required=false)]
                 public long? ErrorCount { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-2ze8g2am97624****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The alias of the database instance.
+                /// <para>The alias of the database instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test01</para>
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The SQL template ID.
+                /// <para>The SQL template ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2e8147b5ca2dfc640dfd5e43d96a****</para>
                 /// </summary>
                 [NameInMap("SqlId")]
                 [Validation(Required=false)]
                 public string SqlId { get; set; }
 
                 /// <summary>
-                /// The content of the SQL template.
+                /// <para>The content of the SQL template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>select * from test1</para>
                 /// </summary>
                 [NameInMap("SqlText")]
                 [Validation(Required=false)]
@@ -89,21 +116,30 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNo")]
             [Validation(Required=false)]
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>19</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -112,24 +148,34 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeAutoScalingConfigRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pc-2ze1prap1k46r****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

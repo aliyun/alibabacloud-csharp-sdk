@@ -10,153 +10,215 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetRequestDiagnosisPageResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetRequestDiagnosisPageResponseBodyData Data { get; set; }
         public class GetRequestDiagnosisPageResponseBodyData : TeaModel {
             /// <summary>
-            /// Additional information.
+            /// <para>Additional information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;&quot;:&quot;&quot;}</para>
             /// </summary>
             [NameInMap("extra")]
             [Validation(Required=false)]
             public string Extra { get; set; }
 
             /// <summary>
-            /// The SQL diagnostics records returned.
+            /// <para>The SQL diagnostics records returned.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<GetRequestDiagnosisPageResponseBodyDataList> List { get; set; }
             public class GetRequestDiagnosisPageResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// The user ID.
+                /// <para>The user ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2093****</para>
                 /// </summary>
                 [NameInMap("accountId")]
                 [Validation(Required=false)]
                 public string AccountId { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>das</para>
                 /// </summary>
                 [NameInMap("dbSchema")]
                 [Validation(Required=false)]
                 public string DbSchema { get; set; }
 
                 /// <summary>
-                /// The database engine. Valid values:
+                /// <para>The database engine. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>MySQL</b></description></item>
+                /// <item><description><b>PostgreSQL</b></description></item>
+                /// <item><description><b>SQLServer</b></description></item>
+                /// <item><description><b>PolarDBMySQL</b></description></item>
+                /// <item><description><b>PolarDBOracle</b></description></item>
+                /// <item><description><b>MongoDB</b></description></item>
+                /// </list>
                 /// 
-                /// * **MySQL**
-                /// * **PostgreSQL**
-                /// * **SQLServer**
-                /// * **PolarDBMySQL**
-                /// * **PolarDBOracle**
-                /// * **MongoDB**
+                /// <b>Example:</b>
+                /// <para>MySQL</para>
                 /// </summary>
                 [NameInMap("engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The time when the SQL diagnostics task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// <para>The time when the SQL diagnostics task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1633071840000</para>
                 /// </summary>
                 [NameInMap("gmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The time when the SQL diagnostics task was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// <para>The time when the SQL diagnostics task was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1633071850000</para>
                 /// </summary>
                 [NameInMap("gmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The unique ID of the diagnostics task.
+                /// <para>The unique ID of the diagnostics task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>61820b594664275c4429****</para>
                 /// </summary>
                 [NameInMap("messageId")]
                 [Validation(Required=false)]
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// Additional information.
+                /// <para>Additional information.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;&quot;:&quot;&quot;}</para>
                 /// </summary>
                 [NameInMap("param")]
                 [Validation(Required=false)]
                 public string Param { get; set; }
 
                 /// <summary>
-                /// The result of the SQL diagnostics task. The result includes the following information:
+                /// <para>The result of the SQL diagnostics task. The result includes the following information:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>endTime</b>: the end time of the SQL diagnostics task.</para>
+                /// </description></item>
+                /// <item><description><para><b>errorCode</b>: indicates whether the SQL diagnostics task is complete. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0001</b>: The SQL diagnostics task is complete.</description></item>
+                /// <item><description><b>0003</b>: The SQL diagnostics task failed.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para><b>errorMessage</b>: the error message.</para>
+                /// </description></item>
+                /// <item><description><para><b>estimateCost</b>: the estimated cost.</para>
+                /// <list type="bullet">
+                /// <item><description><b>cpu</b>: the estimated CPU utilization of the index.</description></item>
+                /// <item><description><b>io</b>: the estimated I/O usage of the index.</description></item>
+                /// <item><description><b>rows</b>: the estimated values of the rows returned for the index.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para><b>improvement</b>: the performance improvement ratio.</para>
+                /// </description></item>
+                /// <item><description><para><b>indexAdvices</b>: the index recommendations, which include the following information:</para>
+                /// <list type="bullet">
+                /// <item><description><b>columns</b>: the index columns.</description></item>
+                /// <item><description><b>ddlAddIndex</b>: the DDL statement for the index.</description></item>
+                /// <item><description><b>indexName</b>: the name of the index.</description></item>
+                /// <item><description><b>schemaName</b>: the name of the database.</description></item>
+                /// <item><description><b>tableName</b>: the name of the table.</description></item>
+                /// <item><description><b>unique</b>: indicates whether the index is unique.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para><b>ip</b>: the IP address of the instance.</para>
+                /// </description></item>
+                /// <item><description><para><b>messageId</b>: the ID of the diagnostics task.</para>
+                /// </description></item>
+                /// <item><description><para><b>port</b>: the port used to connect to the instance.</para>
+                /// </description></item>
+                /// <item><description><para><b>sqlTag</b>: the SQL tag.</para>
+                /// </description></item>
+                /// <item><description><para><b>startTime</b>: the start time of the SQL diagnostics task.</para>
+                /// </description></item>
+                /// <item><description><para><b>success</b>: indicates whether the request was successful.</para>
+                /// </description></item>
+                /// <item><description><para><b>support</b>: indicates whether the SQL statement can be diagnosed. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The SQL statement can be diagnosed.</description></item>
+                /// <item><description><b>false</b>: The SQL statement cannot be diagnosed.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para><b>tuningAdvices</b>: the SQL rewrite suggestions.</para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// * **endTime**: the end time of the SQL diagnostics task.
-                /// * **errorCode**: indicates whether the SQL diagnostics task is complete. Valid values:
-                ///   * **0001**: The SQL diagnostics task is complete.
-                ///   * **0003**: The SQL diagnostics task failed.
-                /// 
-                /// * **errorMessage**: the error message.
-                /// * **estimateCost**: the estimated cost.
-                ///   * **cpu**: the estimated CPU utilization of the index.
-                ///   * **io**: the estimated I/O usage of the index.
-                ///   * **rows**: the estimated values of the rows returned for the index.
-                /// * **improvement**: the performance improvement ratio.
-                /// * **indexAdvices**: the index recommendations, which include the following information:
-                ///   * **columns**: the index columns.
-                ///   * **ddlAddIndex**: the DDL statement for the index.
-                ///   * **indexName**: the name of the index.
-                ///   * **schemaName**: the name of the database.
-                ///   * **tableName**: the name of the table.
-                ///   * **unique**: indicates whether the index is unique.
-                /// 
-                /// * **ip**: the IP address of the instance.
-                /// * **messageId**: the ID of the diagnostics task.
-                /// * **port**: the port used to connect to the instance.
-                /// * **sqlTag**: the SQL tag.
-                /// * **startTime**: the start time of the SQL diagnostics task.
-                /// * **success**: indicates whether the request was successful.
-                /// * **support**: indicates whether the SQL statement can be diagnosed. Valid values:
-                ///   * **true**: The SQL statement can be diagnosed.
-                ///   * **false**: The SQL statement cannot be diagnosed.
-                /// 
-                /// * **tuningAdvices**: the SQL rewrite suggestions.
+                /// <b>Example:</b>
+                /// <para>{ &quot;endTime&quot;:1636354256000, &quot;errorCode&quot;:&quot;0001&quot;, &quot;errorMessage&quot;:&quot;TFX Successful&quot;, &quot;estimateCost&quot;:{ &quot;cpu&quot;:1.7878745150389268, &quot;io&quot;:9.948402604746128, &quot;rows&quot;:8.889372575194633 }, &quot;improvement&quot;:12933.97, &quot;indexAdvices&quot;:[ { &quot;columns&quot;:[ &quot;work_no&quot; ], &quot;ddlAddIndex&quot;:&quot;ALTER TABLE <c>test</c>.<c>work_order</c> ADD INDEX <c>idx_workno</c> (<c>work_no</c>)&quot;, &quot;indexName&quot;:&quot;idx_workno&quot;, &quot;schemaName&quot;:&quot;test&quot;, &quot;tableName&quot;:&quot;work_order&quot;, &quot;unique&quot;:false } ], &quot;ip&quot;:&quot;<b><b>.mysql.rds.aliyuncs.com&quot;, &quot;messageId&quot;:&quot;6188c8cb2f1365b16aee</b></b>&quot;, &quot;port&quot;:3306, &quot;sqlTag&quot;:&quot;{\&quot;PRED_EQUAL\&quot;:\&quot;Y\&quot;,\&quot;CNT_QB\&quot;:\&quot;1\&quot;,\&quot;CNT_TB\&quot;:\&quot;1\&quot;}&quot;, &quot;startTime&quot;:1636354252000, &quot;success&quot;:true, &quot;support&quot;:true, &quot;tuningAdvices&quot;:[ ] }</para>
                 /// </summary>
                 [NameInMap("result")]
                 [Validation(Required=false)]
                 public string Result { get; set; }
 
                 /// <summary>
-                /// The SQL template ID.
+                /// <para>The SQL template ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0c95dae3afef77be06572612df9b****</para>
                 /// </summary>
                 [NameInMap("sqlId")]
                 [Validation(Required=false)]
                 public string SqlId { get; set; }
 
                 /// <summary>
-                /// The status of the diagnostics task. Valid values:
+                /// <para>The status of the diagnostics task. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>0</b>: The diagnostics task is in progress.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: A diagnostics error occurred.</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: The diagnostics task is complete.</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: An SQL error occurred.</para>
+                /// </description></item>
+                /// <item><description><para><b>4</b>: An engine error occurred.</para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// * **0**: The diagnostics task is in progress.
-                /// 
-                /// * **1**: A diagnostics error occurred.
-                /// 
-                /// * **2**: The diagnostics task is complete.
-                /// 
-                /// * **3**: An SQL error occurred.
-                /// 
-                /// * **4**: An engine error occurred.
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("state")]
                 [Validation(Required=false)]
                 public int? State { get; set; }
 
                 /// <summary>
-                /// The unique ID of the diagnostics instance.
+                /// <para>The unique ID of the diagnostics instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hdm_51fe9bc19ec413f4d530431af87a****</para>
                 /// </summary>
                 [NameInMap("uuid")]
                 [Validation(Required=false)]
@@ -165,21 +227,30 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The page number. The value must be a positive integer. Default value: 1.
+            /// <para>The page number. The value must be a positive integer. Default value: 1.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("pageNo")]
             [Validation(Required=false)]
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// The number of entries per page. The value must be a positive integer. Default value: 10.
+            /// <para>The number of entries per page. The value must be a positive integer. Default value: 10.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("pageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of returned entries.
+            /// <para>The total number of returned entries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("total")]
             [Validation(Required=false)]
@@ -188,26 +259,37 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>800FBAF5-A539-5B97-A09E-C63AB2F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

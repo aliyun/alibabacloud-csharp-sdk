@@ -10,138 +10,197 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDasProServiceUsageResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{         &quot;storageFreeQuotaInMB&quot;: 5120,         &quot;ip&quot;: &quot;rm-2ze8g2am97624****.mysql.<b><b>.com&quot;,         &quot;custinsId&quot;: 12448331,         &quot;userId&quot;: &quot;196278346919</b></b>&quot;,         &quot;uuid&quot;: &quot;hdm_b0ae36343407609bf3e8df8709d8****&quot;,         &quot;expireTime&quot;: 1924963200000,         &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,         &quot;storageUsed&quot;: 10773752667393,         &quot;engine&quot;: &quot;MySQL&quot;,         &quot;instanceAlias&quot;: &quot;TESTDB01_PROD&quot;,         &quot;port&quot;: 3310,         &quot;vpcId&quot;: &quot;hdm_****&quot;,         &quot;commodityInstanceId&quot;: &quot;daspro-****&quot;,         &quot;startTime&quot;: 1606381940000,         &quot;isSpare&quot;: false,         &quot;region&quot;: &quot;cn-shanghai&quot;,         &quot;serviceUnitId&quot;: &quot;5&quot;,         &quot;sqlRetention&quot;: 30     }</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDasProServiceUsageResponseBodyData Data { get; set; }
         public class GetDasProServiceUsageResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the DAS Enterprise Edition instance.
+            /// <para>The ID of the DAS Enterprise Edition instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>daspro-cn-v0h1l6i****</para>
             /// </summary>
             [NameInMap("commodityInstanceId")]
             [Validation(Required=false)]
             public string CommodityInstanceId { get; set; }
 
             /// <summary>
-            /// The type of the database engine.
+            /// <para>The type of the database engine.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MySQL</para>
             /// </summary>
             [NameInMap("engine")]
             [Validation(Required=false)]
             public string Engine { get; set; }
 
             /// <summary>
-            /// The point of time when DAS Enterprise Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The point of time when DAS Enterprise Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1648742400000</para>
             /// </summary>
             [NameInMap("expireTime")]
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// The name of the database instance.
+            /// <para>The name of the database instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TESTDB01</para>
             /// </summary>
             [NameInMap("instanceAlias")]
             [Validation(Required=false)]
             public string InstanceAlias { get; set; }
 
             /// <summary>
-            /// The database instance ID.
+            /// <para>The database instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rm-2ze8g2am97624****</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The endpoint of the database instance.
+            /// <para>The endpoint of the database instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rm-2ze8g2am97624****.mysql.****.com</para>
             /// </summary>
             [NameInMap("ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// Indicates whether DAS Enterprise Edition for the database instance has expired. Valid values:
+            /// <para>Indicates whether DAS Enterprise Edition for the database instance has expired. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("isSpare")]
             [Validation(Required=false)]
             public bool? IsSpare { get; set; }
 
             /// <summary>
-            /// The estimated remaining time for migrating the data generated by the SQL Explorer and Audit feature from the previous version to the new version. Unit: milliseconds.
+            /// <para>The estimated remaining time for migrating the data generated by the SQL Explorer and Audit feature from the previous version to the new version. Unit: milliseconds.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only when the SQL Explorer and Audit feature is migrated from the previous version to the new version.</para>
+            /// </remarks>
             /// 
-            /// >  This parameter is returned only when the SQL Explorer and Audit feature is migrated from the previous version to the new version.
+            /// <b>Example:</b>
+            /// <para>60000</para>
             /// </summary>
             [NameInMap("migrationPredictRemainingTime")]
             [Validation(Required=false)]
             public long? MigrationPredictRemainingTime { get; set; }
 
             /// <summary>
-            /// The port number that is used to connect to the database instance.
+            /// <para>The port number that is used to connect to the database instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3306</para>
             /// </summary>
             [NameInMap("port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The region in which the database instance resides.
+            /// <para>The region in which the database instance resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
             /// </summary>
             [NameInMap("region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The service unit ID.
+            /// <para>The service unit ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("serviceUnitId")]
             [Validation(Required=false)]
             public string ServiceUnitId { get; set; }
 
             /// <summary>
-            /// The storage duration of SQL Explorer data. Unit: days.
+            /// <para>The storage duration of SQL Explorer data. Unit: days.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>180</para>
             /// </summary>
             [NameInMap("sqlRetention")]
             [Validation(Required=false)]
             public string SqlRetention { get; set; }
 
             /// <summary>
-            /// The time when DAS Enterprise Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when DAS Enterprise Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1646100892000</para>
             /// </summary>
             [NameInMap("startTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// The SQL Explorer storage space that is offered free-of-charge. Unit: MB.
+            /// <para>The SQL Explorer storage space that is offered free-of-charge. Unit: MB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5120</para>
             /// </summary>
             [NameInMap("storageFreeQuotaInMB")]
             [Validation(Required=false)]
             public double? StorageFreeQuotaInMB { get; set; }
 
             /// <summary>
-            /// The storage usage of SQL Explorer of the database instance. Unit: bytes.
+            /// <para>The storage usage of SQL Explorer of the database instance. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>35903498</para>
             /// </summary>
             [NameInMap("storageUsed")]
             [Validation(Required=false)]
             public long? StorageUsed { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account that is used to create the database instance.
+            /// <para>The ID of the Alibaba Cloud account that is used to create the database instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>196278346919****</para>
             /// </summary>
             [NameInMap("userId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
             /// <summary>
-            /// The virtual private cloud (VPC) ID.
+            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-2zentqj1sk4qmolci****</para>
             /// </summary>
             [NameInMap("vpcId")]
             [Validation(Required=false)]
@@ -150,26 +209,37 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7172BECE-588A-5961-8126-C216E16B****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

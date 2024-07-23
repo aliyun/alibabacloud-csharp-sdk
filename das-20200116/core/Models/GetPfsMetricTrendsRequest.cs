@@ -10,44 +10,62 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetPfsMetricTrendsRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <remarks>
+        /// <para> The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</para>
+        /// </remarks>
         /// 
-        /// >  The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.
+        /// <b>Example:</b>
+        /// <para>1678432430967</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-m5ea73876ukci****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The metric whose trend you want to query. Valid values:
+        /// <para>The metric whose trend you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>count</b>: the number of executions.</description></item>
+        /// <item><description><b>avgRt</b>: the average execution duration.</description></item>
+        /// <item><description><b>rtRate</b>: the execution duration percentage.</description></item>
+        /// <item><description><b>rowsExamined</b>: the total number of scanned rows.</description></item>
+        /// </list>
         /// 
-        /// *   **count**: the number of executions.
-        /// *   **avgRt**: the average execution duration.
-        /// *   **rtRate**: the execution duration percentage.
-        /// *   **rowsExamined**: the total number of scanned rows.
+        /// <b>Example:</b>
+        /// <para>Count</para>
         /// </summary>
         [NameInMap("Metric")]
         [Validation(Required=false)]
         public string Metric { get; set; }
 
         /// <summary>
-        /// The node ID.
+        /// <para>The node ID.</para>
+        /// <remarks>
+        /// <para> You must specify this parameter for an ApsaraDB RDS for MySQL cluster instance and a PolarDB for MySQL cluster.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify this parameter for an ApsaraDB RDS for MySQL cluster instance and a PolarDB for MySQL cluster.
+        /// <b>Example:</b>
+        /// <para>r-x****-db-0</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1677461663092</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

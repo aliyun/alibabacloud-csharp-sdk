@@ -10,64 +10,82 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class EnableSqlConcurrencyControlRequest : TeaModel {
         /// <summary>
-        /// The duration within which the SQL throttling rule takes effect. Unit: seconds.
+        /// <para>The duration within which the SQL throttling rule takes effect. Unit: seconds.</para>
+        /// <remarks>
+        /// <para> The throttling rule takes effect only within this duration.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  The throttling rule takes effect only within this duration.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("ConcurrencyControlTime")]
         [Validation(Required=false)]
         public long? ConcurrencyControlTime { get; set; }
 
         /// <summary>
-        /// The reserved parameter.
+        /// <para>The reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("ConsoleContext")]
         [Validation(Required=false)]
         public string ConsoleContext { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para> You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-2ze1jdv45i7l6****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The maximum number of concurrent SQL statements. Set this parameter to a positive integer.
+        /// <para>The maximum number of concurrent SQL statements. Set this parameter to a positive integer.</para>
+        /// <remarks>
+        /// <para> When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("MaxConcurrency")]
         [Validation(Required=false)]
         public long? MaxConcurrency { get; set; }
 
         /// <summary>
-        /// The keywords that are used to identify the SQL statements that need to be throttled.
+        /// <para>The keywords that are used to identify the SQL statements that need to be throttled.</para>
+        /// <remarks>
+        /// <para> If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>call<del>open</del>api<del>test</del>4<del>from</del>POP</para>
         /// </summary>
         [NameInMap("SqlKeywords")]
         [Validation(Required=false)]
         public string SqlKeywords { get; set; }
 
         /// <summary>
-        /// The type of the SQL statements. Valid values:
+        /// <para>The type of the SQL statements. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>SELECT</b></description></item>
+        /// <item><description><b>UPDATE</b></description></item>
+        /// <item><description><b>DELETE</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **SELECT**
-        /// *   **UPDATE**
-        /// *   **DELETE**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SELECT</para>
         /// </summary>
         [NameInMap("SqlType")]
         [Validation(Required=false)]

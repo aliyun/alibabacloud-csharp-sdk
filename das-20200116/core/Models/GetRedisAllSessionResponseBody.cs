@@ -10,185 +10,253 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetRedisAllSessionResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The session data.
+        /// <para>The session data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetRedisAllSessionResponseBodyData Data { get; set; }
         public class GetRedisAllSessionResponseBodyData : TeaModel {
             /// <summary>
-            /// The information about the sessions.
+            /// <para>The information about the sessions.</para>
             /// </summary>
             [NameInMap("Sessions")]
             [Validation(Required=false)]
             public List<GetRedisAllSessionResponseBodyDataSessions> Sessions { get; set; }
             public class GetRedisAllSessionResponseBodyDataSessions : TeaModel {
                 /// <summary>
-                /// The IP address and port number of the client.
+                /// <para>The IP address and port number of the client.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.16.XX.XX:53458</para>
                 /// </summary>
                 [NameInMap("Addr")]
                 [Validation(Required=false)]
                 public string Addr { get; set; }
 
                 /// <summary>
-                /// The connection duration of the session. Unit: seconds.
+                /// <para>The connection duration of the session. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12</para>
                 /// </summary>
                 [NameInMap("Age")]
                 [Validation(Required=false)]
                 public string Age { get; set; }
 
                 /// <summary>
-                /// The IP address of the client.
+                /// <para>The IP address of the client.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.16.XX.XX</para>
                 /// </summary>
                 [NameInMap("Client")]
                 [Validation(Required=false)]
                 public string Client { get; set; }
 
                 /// <summary>
-                /// The alias of the client.
+                /// <para>The alias of the client.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>prod ip</para>
                 /// </summary>
                 [NameInMap("ClientDesc")]
                 [Validation(Required=false)]
                 public string ClientDesc { get; set; }
 
                 /// <summary>
-                /// The command that was last run.
+                /// <para>The command that was last run.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PING</para>
                 /// </summary>
                 [NameInMap("Cmd")]
                 [Validation(Required=false)]
                 public string Cmd { get; set; }
 
                 /// <summary>
-                /// The ID of the database that the client is using.
+                /// <para>The ID of the database that the client is using.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Db")]
                 [Validation(Required=false)]
                 public long? Db { get; set; }
 
                 /// <summary>
-                /// The file descriptor event. Valid values:
+                /// <para>The file descriptor event. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>r</b>: Client sockets are readable in the event loop.</description></item>
+                /// <item><description><b>w</b>: Client sockets are writable in the event loop.</description></item>
+                /// </list>
                 /// 
-                /// *   **r**: Client sockets are readable in the event loop.
-                /// *   **w**: Client sockets are writable in the event loop.
+                /// <b>Example:</b>
+                /// <para>r</para>
                 /// </summary>
                 [NameInMap("Events")]
                 [Validation(Required=false)]
                 public string Events { get; set; }
 
                 /// <summary>
-                /// The file descriptor that is used by sockets.
+                /// <para>The file descriptor that is used by sockets.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>73</para>
                 /// </summary>
                 [NameInMap("Fd")]
                 [Validation(Required=false)]
                 public long? Fd { get; set; }
 
                 /// <summary>
-                /// The client flag. Valid values:
+                /// <para>The client flag. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>A</b>: The connection needs to be closed at the earliest opportunity.</description></item>
+                /// <item><description><b>b</b>: The client is waiting for blocked events.</description></item>
+                /// <item><description><b>c</b>: The connection is closed after all replies are written.</description></item>
+                /// <item><description><b>d</b>: The monitored keys have been modified, and the <c>EXEC</c> command is about to fail.</description></item>
+                /// <item><description><b>i</b>: The client is waiting for VM I/O operations. This value is no longer used.</description></item>
+                /// <item><description><b>M</b>: The client is the primary node.</description></item>
+                /// <item><description><b>N</b>: No special flags are configured.</description></item>
+                /// <item><description><b>O</b>: The client is in monitor mode.</description></item>
+                /// <item><description><b>r</b>: The client is a cluster node in read-only mode.</description></item>
+                /// <item><description><b>S</b>: The client is a replica node in normal mode.</description></item>
+                /// <item><description><b>u</b>: The client is not blocked.</description></item>
+                /// <item><description><b>U</b>: The client is connected by using UNIX domain sockets.</description></item>
+                /// <item><description><b>x</b>: The client is executing a transaction.</description></item>
+                /// </list>
                 /// 
-                /// *   **A**: The connection needs to be closed at the earliest opportunity.
-                /// *   **b**: The client is waiting for blocked events.
-                /// *   **c**: The connection is closed after all replies are written.
-                /// *   **d**: The monitored keys have been modified, and the `EXEC` command is about to fail.
-                /// *   **i**: The client is waiting for VM I/O operations. This value is no longer used.
-                /// *   **M**: The client is the primary node.
-                /// *   **N**: No special flags are configured.
-                /// *   **O**: The client is in monitor mode.
-                /// *   **r**: The client is a cluster node in read-only mode.
-                /// *   **S**: The client is a replica node in normal mode.
-                /// *   **u**: The client is not blocked.
-                /// *   **U**: The client is connected by using UNIX domain sockets.
-                /// *   **x**: The client is executing a transaction.
+                /// <b>Example:</b>
+                /// <para>N</para>
                 /// </summary>
                 [NameInMap("Flags")]
                 [Validation(Required=false)]
                 public string Flags { get; set; }
 
                 /// <summary>
-                /// The client ID.
+                /// <para>The client ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9080586</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The duration during which the session is in the idle state. Unit: seconds.
+                /// <para>The duration during which the session is in the idle state. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8</para>
                 /// </summary>
                 [NameInMap("Idle")]
                 [Validation(Required=false)]
                 public long? Idle { get; set; }
 
                 /// <summary>
-                /// The number of commands in `MULTI` or `EXEC`.
+                /// <para>The number of commands in <c>MULTI</c> or <c>EXEC</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>-1</para>
                 /// </summary>
                 [NameInMap("Multi")]
                 [Validation(Required=false)]
                 public long? Multi { get; set; }
 
                 /// <summary>
-                /// The name of the client.
+                /// <para>The name of the client.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The node ID.
+                /// <para>The node ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>r-2zemyfd1sh1u2i****-proxy-14#1679****</para>
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// The size of the fixed output buffer. Unit: bytes.
+                /// <para>The size of the fixed output buffer. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Obl")]
                 [Validation(Required=false)]
                 public long? Obl { get; set; }
 
                 /// <summary>
-                /// The number of objects contained in the output list.
+                /// <para>The number of objects contained in the output list.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Oll")]
                 [Validation(Required=false)]
                 public long? Oll { get; set; }
 
                 /// <summary>
-                /// The size of the output buffer. Unit: bytes.
+                /// <para>The size of the output buffer. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Omem")]
                 [Validation(Required=false)]
                 public long? Omem { get; set; }
 
                 /// <summary>
-                /// The number of subscriptions that match the pattern.
+                /// <para>The number of subscriptions that match the pattern.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Psub")]
                 [Validation(Required=false)]
                 public long? Psub { get; set; }
 
                 /// <summary>
-                /// The size of the input buffer. Unit: bytes.
+                /// <para>The size of the input buffer. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Qbuf")]
                 [Validation(Required=false)]
                 public long? Qbuf { get; set; }
 
                 /// <summary>
-                /// The remaining size of the input buffer. Unit: bytes.
+                /// <para>The remaining size of the input buffer. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("QbufFree")]
                 [Validation(Required=false)]
                 public long? QbufFree { get; set; }
 
                 /// <summary>
-                /// The number of subscribed channels.
+                /// <para>The number of subscribed channels.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Sub")]
                 [Validation(Required=false)]
@@ -197,28 +265,34 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The statistics on the access source.
+            /// <para>The statistics on the access source.</para>
             /// </summary>
             [NameInMap("SourceStats")]
             [Validation(Required=false)]
             public List<GetRedisAllSessionResponseBodyDataSourceStats> SourceStats { get; set; }
             public class GetRedisAllSessionResponseBodyDataSourceStats : TeaModel {
                 /// <summary>
-                /// The total number of sessions from the access source.
+                /// <para>The total number of sessions from the access source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public string Count { get; set; }
 
                 /// <summary>
-                /// The client IDs.
+                /// <para>The client IDs.</para>
                 /// </summary>
                 [NameInMap("Ids")]
                 [Validation(Required=false)]
                 public List<long?> Ids { get; set; }
 
                 /// <summary>
-                /// The access source.
+                /// <para>The access source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.16.XX.XX</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -227,14 +301,20 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The time when the instance sessions were returned. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when the instance sessions were returned. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1660100753556</para>
             /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// The total number of sessions.
+            /// <para>The total number of sessions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -243,26 +323,37 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40C6E9AF-6C23-5614-AA83-34344CC6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

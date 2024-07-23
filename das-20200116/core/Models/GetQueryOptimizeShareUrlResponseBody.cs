@@ -10,40 +10,57 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetQueryOptimizeShareUrlResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The share URL.
+        /// <para>The share URL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://hdm.console.aliyun.com/#/queryOptimize?Keywords=&OnlyOptimizedSql=true&Time=1684771200000&Engine=MySQL&InstanceIds=&Rules=&PageNo=1&PageSize=10&OrderBy=count&Asc=false&SqlIds=&dbNames=&region=cn-china&user=">https://hdm.console.aliyun.com/#/queryOptimize?Keywords=&amp;OnlyOptimizedSql=true&amp;Time=1684771200000&amp;Engine=MySQL&amp;InstanceIds=&amp;Rules=&amp;PageNo=1&amp;PageSize=10&amp;OrderBy=count&amp;Asc=false&amp;SqlIds=&amp;dbNames=&amp;region=cn-china&amp;user=</a></para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

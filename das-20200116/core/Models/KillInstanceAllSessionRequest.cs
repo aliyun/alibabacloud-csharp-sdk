@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class KillInstanceAllSessionRequest : TeaModel {
         /// <summary>
-        /// The reserved parameter.
+        /// <para>The reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("ConsoleContext")]
         [Validation(Required=false)]
         public string ConsoleContext { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-8vbcyr4sw0c4yc****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -10,105 +10,144 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetBlockingDetailListResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBlockingDetailListResponseBodyData Data { get; set; }
         public class GetBlockingDetailListResponseBodyData : TeaModel {
             /// <summary>
-            /// The details of the data returned.
+            /// <para>The details of the data returned.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<GetBlockingDetailListResponseBodyDataList> List { get; set; }
             public class GetBlockingDetailListResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// The batch ID.
+                /// <para>The batch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1683530096156</para>
                 /// </summary>
                 [NameInMap("BatchId")]
                 [Validation(Required=false)]
                 public long? BatchId { get; set; }
 
                 /// <summary>
-                /// The client name.
+                /// <para>The client name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>.Net SqlClient Data Provider</para>
                 /// </summary>
                 [NameInMap("ClientAppName")]
                 [Validation(Required=false)]
                 public string ClientAppName { get; set; }
 
                 /// <summary>
-                /// The time when the blocking data was collected.
+                /// <para>The time when the blocking data was collected.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1700065800000</para>
                 /// </summary>
                 [NameInMap("CurrentCollectionTime")]
                 [Validation(Required=false)]
                 public long? CurrentCollectionTime { get; set; }
 
                 /// <summary>
-                /// The database name.
+                /// <para>The database name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>school</para>
                 /// </summary>
                 [NameInMap("DataBase")]
                 [Validation(Required=false)]
                 public string DataBase { get; set; }
 
                 /// <summary>
-                /// The client hostname.
+                /// <para>The client hostname.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALLBNMGTAPPRD01</para>
                 /// </summary>
                 [NameInMap("HostName")]
                 [Validation(Required=false)]
                 public string HostName { get; set; }
 
                 /// <summary>
-                /// The username that is used for the logon.
+                /// <para>The username that is used for the logon.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Cheney603</para>
                 /// </summary>
                 [NameInMap("LoginId")]
                 [Validation(Required=false)]
                 public string LoginId { get; set; }
 
                 /// <summary>
-                /// The hash value of the SQL statement.
+                /// <para>The hash value of the SQL statement.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>6977DD06CD9CAFF2</para>
                 /// </summary>
                 [NameInMap("QueryHash")]
                 [Validation(Required=false)]
                 public string QueryHash { get; set; }
 
                 /// <summary>
-                /// The session ID.
+                /// <para>The session ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1717</para>
                 /// </summary>
                 [NameInMap("Spid")]
                 [Validation(Required=false)]
                 public string Spid { get; set; }
 
                 /// <summary>
-                /// The SQL statement.
+                /// <para>The SQL statement.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>select * from test1</para>
                 /// </summary>
                 [NameInMap("SqlText")]
                 [Validation(Required=false)]
                 public string SqlText { get; set; }
 
                 /// <summary>
-                /// The time when the execution started.
+                /// <para>The time when the execution started.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1608888296000</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The blocking duration. Unit: milliseconds.
+                /// <para>The blocking duration. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>30000</para>
                 /// </summary>
                 [NameInMap("WaitTimeMs")]
                 [Validation(Required=false)]
                 public long? WaitTimeMs { get; set; }
 
                 /// <summary>
-                /// The wait type.
+                /// <para>The wait type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MISCELLANEOUS</para>
                 /// </summary>
                 [NameInMap("WaitType")]
                 [Validation(Required=false)]
@@ -117,21 +156,30 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The page number of the page returned.
+            /// <para>The page number of the page returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNo")]
             [Validation(Required=false)]
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// The number of entries returned on each page.
+            /// <para>The number of entries returned on each page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>19</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -140,26 +188,37 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request is successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

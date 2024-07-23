@@ -10,43 +10,60 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetAsyncErrorRequestStatByCodeRequest : TeaModel {
         /// <summary>
-        /// The name of a database.
+        /// <para>The name of a database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testdb01</para>
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <remarks>
+        /// <para> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</para>
+        /// </remarks>
         /// 
-        /// >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
+        /// <b>Example:</b>
+        /// <para>1642566830000</para>
         /// </summary>
         [NameInMap("End")]
         [Validation(Required=false)]
         public long? End { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-2ze8g2am97624****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The node ID.
+        /// <para>The node ID.</para>
+        /// <remarks>
+        /// <para> This parameter must be specified for PolarDB for MySQL clusters.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter must be specified for PolarDB for MySQL clusters.
+        /// <b>Example:</b>
+        /// <para>pi-wz9s658475e58****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <remarks>
+        /// <para> The start time must be within the storage duration of the SQL Explorer feature of the database instance and can be up to 90 days earlier than the current time.</para>
+        /// </remarks>
         /// 
-        /// >  The start time must be within the storage duration of the SQL Explorer feature of the database instance and can be up to 90 days earlier than the current time.
+        /// <b>Example:</b>
+        /// <para>1642556990714</para>
         /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]

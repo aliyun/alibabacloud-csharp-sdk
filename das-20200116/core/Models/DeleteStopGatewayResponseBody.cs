@@ -10,46 +10,64 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DeleteStopGatewayResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The result of the DeleteStopGateway operation. Valid values:
+        /// <para>The result of the DeleteStopGateway operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: The metadata of the DBGateway is deleted.</description></item>
+        /// <item><description><b>-1</b>: A system error occurs.</description></item>
+        /// <item><description><b>-2</b>: The DBGateway does not exist.</description></item>
+        /// <item><description><b>-3</b>: The DBGateway is not stopped and the metadata cannot be deleted.</description></item>
+        /// <item><description><b>-4</b>: The metadata of the DBGateway fails to be deleted.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: The metadata of the DBGateway is deleted.
-        /// *   **-1**: A system error occurs.
-        /// *   **-2**: The DBGateway does not exist.
-        /// *   **-3**: The DBGateway is not stopped and the metadata cannot be deleted.
-        /// *   **-4**: The metadata of the DBGateway fails to be deleted.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FC6C0929-29E1-59FD-8DFE-70D9D41E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

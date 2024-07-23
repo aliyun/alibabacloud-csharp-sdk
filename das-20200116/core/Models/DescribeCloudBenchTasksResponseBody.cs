@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeCloudBenchTasksResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The detailed information, including the error codes and the number of entries that are returned.
+        /// <para>The detailed information, including the error codes and the number of entries that are returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeCloudBenchTasksResponseBodyData Data { get; set; }
         public class DescribeCloudBenchTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// The reserved parameter.
+            /// <para>The reserved parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
             public string Extra { get; set; }
 
             /// <summary>
-            /// The detailed information of the stress testing task.
+            /// <para>The detailed information of the stress testing task.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -42,382 +48,521 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public List<DescribeCloudBenchTasksResponseBodyDataListCloudbenchTasks> CloudbenchTasks { get; set; }
                 public class DescribeCloudBenchTasksResponseBodyDataListCloudbenchTasks : TeaModel {
                     /// <summary>
-                    /// The archiving task ID.
+                    /// <para>The archiving task ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>\&quot;202105211430070112231480820340758****</para>
                     /// </summary>
                     [NameInMap("ArchiveJobId")]
                     [Validation(Required=false)]
                     public string ArchiveJobId { get; set; }
 
                     /// <summary>
-                    /// The name of the table that was archived to Object Storage Service (OSS).
+                    /// <para>The name of the table that was archived to Object Storage Service (OSS).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>custins15546355_161604665****</para>
                     /// </summary>
                     [NameInMap("ArchiveOssTableName")]
                     [Validation(Required=false)]
                     public string ArchiveOssTableName { get; set; }
 
                     /// <summary>
-                    /// The archiving status of the file that stores the analysis result of full SQL statistics. Valid values:
+                    /// <para>The archiving status of the file that stores the analysis result of full SQL statistics. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>0</b>: The file archiving is not started.</description></item>
+                    /// <item><description><b>1</b>: The file is archived.</description></item>
+                    /// <item><description><b>2</b>: An error occurred.</description></item>
+                    /// <item><description><b>3</b>: The file is being archived.</description></item>
+                    /// <item><description><b>4</b>: The archived file does not need to be downloaded.</description></item>
+                    /// </list>
                     /// 
-                    /// * **0**: The file archiving is not started.
-                    /// * **1**: The file is archived.
-                    /// * **2**: An error occurred.
-                    /// * **3**: The file is being archived.
-                    /// * **4**: The archived file does not need to be downloaded.
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("ArchiveState")]
                     [Validation(Required=false)]
                     public int? ArchiveState { get; set; }
 
                     /// <summary>
-                    /// The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID of the backup set.
+                    /// <para>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/26273.html">DescribeBackups</a> operation to query the ID of the backup set.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>229132</para>
                     /// </summary>
                     [NameInMap("BackupId")]
                     [Validation(Required=false)]
                     public string BackupId { get; set; }
 
                     /// <summary>
-                    /// The backup type. Valid values:
+                    /// <para>The backup type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>TIMESTAMP</b>: Data is restored to the state at a specific point in time.</description></item>
+                    /// <item><description><b>BACKUPID</b>: Data is restored from a backup set that is identified by an ID.</description></item>
+                    /// </list>
                     /// 
-                    /// * **TIMESTAMP**: Data is restored to the state at a specific point in time.
-                    /// * **BACKUPID**: Data is restored from a backup set that is identified by an ID.
+                    /// <b>Example:</b>
+                    /// <para>TIMESTAMP</para>
                     /// </summary>
                     [NameInMap("BackupType")]
                     [Validation(Required=false)]
                     public string BackupType { get; set; }
 
                     /// <summary>
-                    /// The substep in the stress testing task. Valid values:
+                    /// <para>The substep in the stress testing task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>NEW</b>: Initialize the stress testing task.</description></item>
+                    /// <item><description><b>WAIT_BUY_ECS</b>: Purchase an ECS instance.</description></item>
+                    /// <item><description><b>WAIT_START_ECS</b>: Start the ECS instance.</description></item>
+                    /// <item><description><b>WAIT_INSTALL_JDK</b>: Install the Java Development Kit (JDK).</description></item>
+                    /// <item><description><b>WAIT_INSTALL_DBGATEWAY</b>: Install the database gateway (DBGateway).</description></item>
+                    /// <item><description><b>ADD_SECURITY_IPS_STEP</b>: Configure the whitelist of the security group.</description></item>
+                    /// <item><description><b>ARCHIVE</b>: Archive the file that stores the analysis results of full SQL statistics.</description></item>
+                    /// <item><description><b>DOWNLOAD</b>: Download the file that stores the analysis result of full SQL statistics.</description></item>
+                    /// <item><description><b>PROCEED</b>: Preprocess the file that stores the analysis result of full SQL statistics.</description></item>
+                    /// <item><description><b>PRE_LOAD</b>: Preload the file that stores the analysis result of full SQL statistics.</description></item>
+                    /// <item><description><b>VALIDATE</b>: Verify the functionality of stress testing.</description></item>
+                    /// <item><description><b>PRESSURE</b>: Start the stress testing task.</description></item>
+                    /// </list>
                     /// 
-                    /// * **NEW**: Initialize the stress testing task.
-                    /// * **WAIT_BUY_ECS**: Purchase an ECS instance.
-                    /// * **WAIT_START_ECS**: Start the ECS instance.
-                    /// * **WAIT_INSTALL_JDK**: Install the Java Development Kit (JDK).
-                    /// * **WAIT_INSTALL_DBGATEWAY**: Install the database gateway (DBGateway).
-                    /// * **ADD_SECURITY_IPS_STEP**: Configure the whitelist of the security group.
-                    /// * **ARCHIVE**: Archive the file that stores the analysis results of full SQL statistics.
-                    /// * **DOWNLOAD**: Download the file that stores the analysis result of full SQL statistics.
-                    /// * **PROCEED**: Preprocess the file that stores the analysis result of full SQL statistics.
-                    /// * **PRE_LOAD**: Preload the file that stores the analysis result of full SQL statistics.
-                    /// * **VALIDATE**: Verify the functionality of stress testing.
-                    /// * **PRESSURE**: Start the stress testing task.
+                    /// <b>Example:</b>
+                    /// <para>PROCEED</para>
                     /// </summary>
                     [NameInMap("BenchStep")]
                     [Validation(Required=false)]
                     public string BenchStep { get; set; }
 
                     /// <summary>
-                    /// The status that indicates the substep performed for the stress testing task. Valid values:
+                    /// <para>The status that indicates the substep performed for the stress testing task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>NEW</b>: The task is being initialized.</description></item>
+                    /// <item><description><b>RUNNING</b>: The task is running.</description></item>
+                    /// <item><description><b>FAILED</b>: The task failed.</description></item>
+                    /// <item><description><b>FINISHED</b>: The task is complete.</description></item>
+                    /// <item><description><b>Terminated</b>: The task is terminated.</description></item>
+                    /// <item><description><b>Deleted</b>: The task is deleted.</description></item>
+                    /// </list>
                     /// 
-                    /// * **NEW**: The task is being initialized.
-                    /// * **RUNNING**: The task is running.
-                    /// * **FAILED**: The task failed.
-                    /// * **FINISHED**: The task is complete.
-                    /// * **Terminated**: The task is terminated.
-                    /// * **Deleted**: The task is deleted.
+                    /// <b>Example:</b>
+                    /// <para>FINISHED</para>
                     /// </summary>
                     [NameInMap("BenchStepStatus")]
                     [Validation(Required=false)]
                     public string BenchStepStatus { get; set; }
 
                     /// <summary>
-                    /// The DBGateway ID of the stress testing client.
+                    /// <para>The DBGateway ID of the stress testing client.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>58598b2af48a0193dfc16fc6964ef****</para>
                     /// </summary>
                     [NameInMap("ClientGatewayId")]
                     [Validation(Required=false)]
                     public string ClientGatewayId { get; set; }
 
                     /// <summary>
-                    /// The type of the stress testing client. Valid values:
+                    /// <para>The type of the stress testing client. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>ECS</b>: indicates that you must prepare the DBGateway.</description></item>
+                    /// <item><description><b>DAS_ECS</b>: indicates that DAS automatically purchases and deploys an ECS instance for stress testing.</description></item>
+                    /// </list>
                     /// 
-                    /// * **ECS**: indicates that you must prepare the DBGateway.
-                    /// * **DAS_ECS**: indicates that DAS automatically purchases and deploys an ECS instance for stress testing.
+                    /// <b>Example:</b>
+                    /// <para>ECS</para>
                     /// </summary>
                     [NameInMap("ClientType")]
                     [Validation(Required=false)]
                     public string ClientType { get; set; }
 
                     /// <summary>
-                    /// The description of the stress testing task.
+                    /// <para>The description of the stress testing task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test-das-bench-0501</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The UUID of the destination instance.
+                    /// <para>The UUID of the destination instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>hdm_d887b5ccf99fa0dc9a1e5aaac368****</para>
                     /// </summary>
                     [NameInMap("DstInstanceUuid")]
                     [Validation(Required=false)]
                     public string DstInstanceUuid { get; set; }
 
                     /// <summary>
-                    /// The reserved parameter.
+                    /// <para>The reserved parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>None</para>
                     /// </summary>
                     [NameInMap("DstIp")]
                     [Validation(Required=false)]
                     public string DstIp { get; set; }
 
                     /// <summary>
-                    /// The port number of the destination instance.
+                    /// <para>The port number of the destination instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3306</para>
                     /// </summary>
                     [NameInMap("DstPort")]
                     [Validation(Required=false)]
                     public int? DstPort { get; set; }
 
                     /// <summary>
-                    /// The type of the identifier that is used to indicate the destination instance. Valid values:
+                    /// <para>The type of the identifier that is used to indicate the destination instance. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>Instance</b> (default): the instance ID.</description></item>
+                    /// <item><description><b>ConnectionString</b>: the endpoint of the instance.</description></item>
+                    /// </list>
                     /// 
-                    /// * **Instance** (default): the instance ID.
-                    /// * **ConnectionString**: the endpoint of the instance.
+                    /// <b>Example:</b>
+                    /// <para>Instance</para>
                     /// </summary>
                     [NameInMap("DstType")]
                     [Validation(Required=false)]
                     public string DstType { get; set; }
 
                     /// <summary>
-                    /// The specification of the DTS instance.
+                    /// <para>The specification of the DTS instance.</para>
+                    /// <remarks>
+                    /// <para>For more information about the specifications of DTS instances and the test performance of each instance, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a>.</para>
+                    /// </remarks>
                     /// 
-                    /// > For more information about the specifications of DTS instances and the test performance of each instance, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html).
+                    /// <b>Example:</b>
+                    /// <para>medium</para>
                     /// </summary>
                     [NameInMap("DtsJobClass")]
                     [Validation(Required=false)]
                     public string DtsJobClass { get; set; }
 
                     /// <summary>
-                    /// The ID of the DTS migration task.
+                    /// <para>The ID of the DTS migration task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>i03e3zty16i****</para>
                     /// </summary>
                     [NameInMap("DtsJobId")]
                     [Validation(Required=false)]
                     public string DtsJobId { get; set; }
 
                     /// <summary>
-                    /// The name of the Data Transmission Service (DTS) migration task.
+                    /// <para>The name of the Data Transmission Service (DTS) migration task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>RDS_TO_RDS_MIGRATION</para>
                     /// </summary>
                     [NameInMap("DtsJobName")]
                     [Validation(Required=false)]
                     public string DtsJobName { get; set; }
 
                     /// <summary>
-                    /// The status of the DTS migration task. Valid values:
+                    /// <para>The status of the DTS migration task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>NOT_STARTED</b>: The task is not started.</description></item>
+                    /// <item><description><b>PRE_CHECKING</b>: The task is in precheck.</description></item>
+                    /// <item><description><b>PRE_CHECK_FAILED</b>: The precheck failed.</description></item>
+                    /// <item><description><b>CHECKING</b>: The task is being checked.</description></item>
+                    /// <item><description><b>MIGRATING</b>: The data is being migrated.</description></item>
+                    /// <item><description><b>CATCHED</b>: The data is migrated from the source instance to the destination instance.</description></item>
+                    /// <item><description><b>SUSPENDING</b>: The task is suspended.</description></item>
+                    /// <item><description><b>MIGRATION_FAILED</b>: The data failed to be migrated.</description></item>
+                    /// <item><description><b>FINISHED</b>: The task is complete.</description></item>
+                    /// <item><description><b>INITIALIZING</b>: The synchronization is being initialized.</description></item>
+                    /// <item><description><b>INITIALIZE_FAILED</b>: The synchronization failed to be initialized.</description></item>
+                    /// <item><description><b>SYNCHRONIZING</b>: The data is being synchronized.</description></item>
+                    /// <item><description><b>MODIFYING</b>: The roles of the instances are being changed.</description></item>
+                    /// <item><description><b>SWITCHING</b>: The roles of the instances are being switched.</description></item>
+                    /// <item><description><b>FAILED</b>: The task failed.</description></item>
+                    /// </list>
                     /// 
-                    /// * **NOT_STARTED**: The task is not started.
-                    /// * **PRE_CHECKING**: The task is in precheck.
-                    /// * **PRE_CHECK_FAILED**: The precheck failed.
-                    /// * **CHECKING**: The task is being checked.
-                    /// * **MIGRATING**: The data is being migrated.
-                    /// * **CATCHED**: The data is migrated from the source instance to the destination instance.
-                    /// * **SUSPENDING**: The task is suspended.
-                    /// * **MIGRATION_FAILED**: The data failed to be migrated.
-                    /// * **FINISHED**: The task is complete.
-                    /// * **INITIALIZING**: The synchronization is being initialized.
-                    /// * **INITIALIZE_FAILED**: The synchronization failed to be initialized.
-                    /// * **SYNCHRONIZING**: The data is being synchronized.
-                    /// * **MODIFYING**: The roles of the instances are being changed.
-                    /// * **SWITCHING**: The roles of the instances are being switched.
-                    /// * **FAILED**: The task failed.
+                    /// <b>Example:</b>
+                    /// <para>CHECKING</para>
                     /// </summary>
                     [NameInMap("DtsJobState")]
                     [Validation(Required=false)]
                     public int? DtsJobState { get; set; }
 
                     /// <summary>
-                    /// The status of the DTS migration task. Valid values:
+                    /// <para>The status of the DTS migration task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>NOT_STARTED</b>: The task is not started.</description></item>
+                    /// <item><description><b>PRE_CHECKING</b>: The task is in precheck.</description></item>
+                    /// <item><description><b>PRE_CHECK_FAILED</b>: The precheck failed.</description></item>
+                    /// <item><description><b>CHECKING</b>: The task is being checked.</description></item>
+                    /// <item><description><b>MIGRATING</b>: The data is being migrated.</description></item>
+                    /// <item><description><b>CATCHED</b>: The data is migrated from the source instance to the destination instance.</description></item>
+                    /// <item><description><b>SUSPENDING</b>: The task is suspended.</description></item>
+                    /// <item><description><b>MIGRATION_FAILED</b>: The data failed to be migrated.</description></item>
+                    /// <item><description><b>FINISHED</b>: The task is complete.</description></item>
+                    /// <item><description><b>INITIALIZING</b>: The synchronization is being initialized.</description></item>
+                    /// <item><description><b>INITIALIZE_FAILED</b>: The synchronization failed to be initialized.</description></item>
+                    /// <item><description><b>SYNCHRONIZING</b>: The data is being synchronized.</description></item>
+                    /// <item><description><b>MODIFYING</b>: The roles of the instances are being changed.</description></item>
+                    /// <item><description><b>SWITCHING</b>: The roles of the instances are being switched.</description></item>
+                    /// <item><description><b>FAILED</b>: The task failed.</description></item>
+                    /// </list>
                     /// 
-                    /// * **NOT_STARTED**: The task is not started.
-                    /// * **PRE_CHECKING**: The task is in precheck.
-                    /// * **PRE_CHECK_FAILED**: The precheck failed.
-                    /// * **CHECKING**: The task is being checked.
-                    /// * **MIGRATING**: The data is being migrated.
-                    /// * **CATCHED**: The data is migrated from the source instance to the destination instance.
-                    /// * **SUSPENDING**: The task is suspended.
-                    /// * **MIGRATION_FAILED**: The data failed to be migrated.
-                    /// * **FINISHED**: The task is complete.
-                    /// * **INITIALIZING**: The synchronization is being initialized.
-                    /// * **INITIALIZE_FAILED**: The synchronization failed to be initialized.
-                    /// * **SYNCHRONIZING**: The data is being synchronized.
-                    /// * **MODIFYING**: The roles of the instances are being changed.
-                    /// * **SWITCHING**: The roles of the instances are being switched.
-                    /// * **FAILED**: The task failed.
+                    /// <b>Example:</b>
+                    /// <para>PRE_CHECK_FAILED</para>
                     /// </summary>
                     [NameInMap("DtsJobStatus")]
                     [Validation(Required=false)]
                     public string DtsJobStatus { get; set; }
 
                     /// <summary>
-                    /// The ID of the Elastic Compute Service (ECS) instance.
+                    /// <para>The ID of the Elastic Compute Service (ECS) instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>i-bp1ecr5go2go1****</para>
                     /// </summary>
                     [NameInMap("EcsInstanceId")]
                     [Validation(Required=false)]
                     public string EcsInstanceId { get; set; }
 
                     /// <summary>
-                    /// The state that indicates the last operation performed for the stress testing task. Valid values:
+                    /// <para>The state that indicates the last operation performed for the stress testing task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>WAIT_TARGET</b>: prepares the destination instance.</description></item>
+                    /// <item><description><b>WAIT_DBGATEWAY</b>: prepares the DBGateway.</description></item>
+                    /// <item><description><b>WAIT_SQL</b>: prepares the full SQL statistics.</description></item>
+                    /// <item><description><b>WAIT_LOGIC</b>: prepares to replay the traffic.</description></item>
+                    /// </list>
+                    /// <remarks>
+                    /// <para>When the state of a stress testing task changes to the state that is specified by the EndState parameter, the stress testing task is complete.</para>
+                    /// </remarks>
                     /// 
-                    /// * **WAIT_TARGET**: prepares the destination instance.
-                    /// * **WAIT_DBGATEWAY**: prepares the DBGateway.
-                    /// * **WAIT_SQL**: prepares the full SQL statistics.
-                    /// * **WAIT_LOGIC**: prepares to replay the traffic.
-                    /// 
-                    /// > When the state of a stress testing task changes to the state that is specified by the EndState parameter, the stress testing task is complete.
+                    /// <b>Example:</b>
+                    /// <para>WAIT_TARGET</para>
                     /// </summary>
                     [NameInMap("EndState")]
                     [Validation(Required=false)]
                     public string EndState { get; set; }
 
                     /// <summary>
-                    /// The error code returned for the substep of the stress testing task.
+                    /// <para>The error code returned for the substep of the stress testing task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10109</para>
                     /// </summary>
                     [NameInMap("ErrorCode")]
                     [Validation(Required=false)]
                     public string ErrorCode { get; set; }
 
                     /// <summary>
-                    /// The error message returned if the task failed.
+                    /// <para>The error message returned if the task failed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</para>
                     /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
-                    /// The additional information.
+                    /// <para>The additional information.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Null</para>
                     /// </summary>
                     [NameInMap("External")]
                     [Validation(Required=false)]
                     public string External { get; set; }
 
                     /// <summary>
-                    /// The rate at which the stress testing task replayed the traffic. This value is a positive integer. Valid values: **0** to **30**. Default value: **1**.
+                    /// <para>The rate at which the stress testing task replayed the traffic. This value is a positive integer. Valid values: <b>0</b> to <b>30</b>. Default value: <b>1</b>.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Rate")]
                     [Validation(Required=false)]
                     public int? Rate { get; set; }
 
                     /// <summary>
-                    /// The duration of the stress testing task. Unit: millisecond.
+                    /// <para>The duration of the stress testing task. Unit: millisecond.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>86400000</para>
                     /// </summary>
                     [NameInMap("RequestDuration")]
                     [Validation(Required=false)]
                     public long? RequestDuration { get; set; }
 
                     /// <summary>
-                    /// The duration of the stress testing task of the smart pressure test type. Unit: millisecond.
+                    /// <para>The duration of the stress testing task of the smart pressure test type. Unit: millisecond.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>86400000</para>
                     /// </summary>
                     [NameInMap("SmartPressureTime")]
                     [Validation(Required=false)]
                     public int? SmartPressureTime { get; set; }
 
                     /// <summary>
-                    /// The source of the task. Valid values:
+                    /// <para>The source of the task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>DAS</b></description></item>
+                    /// <item><description><b>OPEN_API</b></description></item>
+                    /// </list>
                     /// 
-                    /// * **DAS**
-                    /// * **OPEN_API**
+                    /// <b>Example:</b>
+                    /// <para>DAS</para>
                     /// </summary>
                     [NameInMap("Source")]
                     [Validation(Required=false)]
                     public string Source { get; set; }
 
                     /// <summary>
-                    /// The reused information about the analysis result of full SQL statistics.
+                    /// <para>The reused information about the analysis result of full SQL statistics.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;sqlUuid&quot;:&quot;task_a37d2f07-45cb-4413-a2a6-c66c68****&quot;,&quot;metaUuid&quot;:&quot;task_211e2561-5c0c-486b-864c-56b511****&quot;,&quot;sqlFile&quot;:&quot;cl-1620057600000-1800626.sc&quot;,&quot;metaFile&quot;:&quot;cl-1620057600000-1800626.meta&quot;}</para>
                     /// </summary>
                     [NameInMap("SqlCompleteReuse")]
                     [Validation(Required=false)]
                     public string SqlCompleteReuse { get; set; }
 
                     /// <summary>
-                    /// The database engine of the source instance. Valid values:
+                    /// <para>The database engine of the source instance. Valid values:</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>RDS</para>
                     /// </summary>
                     [NameInMap("SrcInstanceArea")]
                     [Validation(Required=false)]
                     public string SrcInstanceArea { get; set; }
 
                     /// <summary>
-                    /// The UUID of the source instance.
+                    /// <para>The UUID of the source instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>hdm_3063db6792965c080a4bcb6e6304****</para>
                     /// </summary>
                     [NameInMap("SrcInstanceUuid")]
                     [Validation(Required=false)]
                     public string SrcInstanceUuid { get; set; }
 
                     /// <summary>
-                    /// The reserved parameter.
+                    /// <para>The reserved parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>None</para>
                     /// </summary>
                     [NameInMap("SrcPublicIp")]
                     [Validation(Required=false)]
                     public string SrcPublicIp { get; set; }
 
                     /// <summary>
-                    /// The state that indicates the operation performed for the stress testing task. Valid values:
+                    /// <para>The state that indicates the operation performed for the stress testing task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>WAIT_TARGET</b>: prepares the destination instance.</description></item>
+                    /// <item><description><b>WAIT_DBGATEWAY</b>: prepares the DBGateway.</description></item>
+                    /// <item><description><b>WAIT_SQL</b>: prepares the full SQL statistics.</description></item>
+                    /// <item><description><b>WAIT_LOGIC</b>: prepares to replay the traffic.</description></item>
+                    /// </list>
                     /// 
-                    /// * **WAIT_TARGET**: prepares the destination instance.
-                    /// * **WAIT_DBGATEWAY**: prepares the DBGateway.
-                    /// * **WAIT_SQL**: prepares the full SQL statistics.
-                    /// * **WAIT_LOGIC**: prepares to replay the traffic.
+                    /// <b>Example:</b>
+                    /// <para>WAIT_TARGET</para>
                     /// </summary>
                     [NameInMap("State")]
                     [Validation(Required=false)]
                     public string State { get; set; }
 
                     /// <summary>
-                    /// The status of the stress testing task. Valid values:
+                    /// <para>The status of the stress testing task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>SUCCESS</b>: The task was successful.</description></item>
+                    /// <item><description><b>IGNORED</b>: The task was ignored.</description></item>
+                    /// <item><description><b>RUNNING</b>: The task is running.</description></item>
+                    /// <item><description><b>EXCEPTION</b>: The task is abnormal.</description></item>
+                    /// </list>
                     /// 
-                    /// * **SUCCESS**: The task was successful.
-                    /// * **IGNORED**: The task was ignored.
-                    /// * **RUNNING**: The task is running.
-                    /// * **EXCEPTION**: The task is abnormal.
+                    /// <b>Example:</b>
+                    /// <para>RUNNING</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// The name of the table that is used for stress testing.
+                    /// <para>The name of the table that is used for stress testing.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>[{&quot;TABLE_NAME&quot;:&quot;customer1&quot;,&quot;TABLE_SCHEMA&quot;:&quot;tpcc&quot;}]</para>
                     /// </summary>
                     [NameInMap("TableSchema")]
                     [Validation(Required=false)]
                     public string TableSchema { get; set; }
 
                     /// <summary>
-                    /// The task ID.
+                    /// <para>The task ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>e5cec704-0518-430f-8263-76f4dcds****</para>
                     /// </summary>
                     [NameInMap("TaskId")]
                     [Validation(Required=false)]
                     public string TaskId { get; set; }
 
                     /// <summary>
-                    /// The type of the stress testing task. Valid values:
+                    /// <para>The type of the stress testing task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>pressure test</b> (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</description></item>
+                    /// <item><description><b>smart pressure test</b>: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.</description></item>
+                    /// </list>
                     /// 
-                    /// * **pressure test** (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.
-                    /// * **smart pressure test**: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.
+                    /// <b>Example:</b>
+                    /// <para>pressure test</para>
                     /// </summary>
                     [NameInMap("TaskType")]
                     [Validation(Required=false)]
                     public string TaskType { get; set; }
 
                     /// <summary>
-                    /// The topic that contains the consumed data. This topic is a topic in Message Queue for Apache Kafka.
+                    /// <para>The topic that contains the consumed data. This topic is a topic in Message Queue for Apache Kafka.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>das</para>
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }
 
                     /// <summary>
-                    /// The Alibaba Cloud account ID.
+                    /// <para>The Alibaba Cloud account ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1091411816252****</para>
                     /// </summary>
                     [NameInMap("UserId")]
                     [Validation(Required=false)]
                     public string UserId { get; set; }
 
                     /// <summary>
-                    /// The version of the stress testing task. Valid values:
+                    /// <para>The version of the stress testing task. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>V2.0</b></description></item>
+                    /// <item><description><b>V3.0</b></description></item>
+                    /// </list>
                     /// 
-                    /// * **V2.0**
-                    /// * **V3.0**
+                    /// <b>Example:</b>
+                    /// <para>V3.0</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
                     public string Version { get; set; }
 
                     /// <summary>
-                    /// The path of the temporary directory that is generated for stress testing.
+                    /// <para>The path of the temporary directory that is generated for stress testing.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/tmp/bench/</para>
                     /// </summary>
                     [NameInMap("WorkDir")]
                     [Validation(Required=false)]
@@ -428,21 +573,30 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNo")]
             [Validation(Required=false)]
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -451,26 +605,37 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,63 +10,84 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetAutoIncrementUsageStatisticResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAutoIncrementUsageStatisticResponseBodyData Data { get; set; }
         public class GetAutoIncrementUsageStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// The usage details of auto-increment IDs.
+            /// <para>The usage details of auto-increment IDs.</para>
             /// </summary>
             [NameInMap("AutoIncrementUsageList")]
             [Validation(Required=false)]
             public List<GetAutoIncrementUsageStatisticResponseBodyDataAutoIncrementUsageList> AutoIncrementUsageList { get; set; }
             public class GetAutoIncrementUsageStatisticResponseBodyDataAutoIncrementUsageList : TeaModel {
                 /// <summary>
-                /// The latest auto-increment ID.
+                /// <para>The latest auto-increment ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2147483647</para>
                 /// </summary>
                 [NameInMap("AutoIncrementCurrentValue")]
                 [Validation(Required=false)]
                 public long? AutoIncrementCurrentValue { get; set; }
 
                 /// <summary>
-                /// The usage ratio of auto-increment IDs.
+                /// <para>The usage ratio of auto-increment IDs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("AutoIncrementRatio")]
                 [Validation(Required=false)]
                 public double? AutoIncrementRatio { get; set; }
 
                 /// <summary>
-                /// The column name.
+                /// <para>The column name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>id</para>
                 /// </summary>
                 [NameInMap("ColumnName")]
                 [Validation(Required=false)]
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// The database name.
+                /// <para>The database name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>db01</para>
                 /// </summary>
                 [NameInMap("DbName")]
                 [Validation(Required=false)]
                 public string DbName { get; set; }
 
                 /// <summary>
-                /// The maximum auto-increment ID that is supported by the current data type.
+                /// <para>The maximum auto-increment ID that is supported by the current data type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2147483647</para>
                 /// </summary>
                 [NameInMap("MaximumValue")]
                 [Validation(Required=false)]
                 public long? MaximumValue { get; set; }
 
                 /// <summary>
-                /// The table name.
+                /// <para>The table name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_table</para>
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -75,36 +96,50 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The error message returned if the task fails.
+            /// <para>The error message returned if the task fails.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>the given database name list invalid, none of the database names in the list exist on the instance</para>
             /// </summary>
             [NameInMap("ErrorInfo")]
             [Validation(Required=false)]
             public string ErrorInfo { get; set; }
 
             /// <summary>
-            /// Indicates whether the task is complete. Valid values:
+            /// <para>Indicates whether the task is complete. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Finish")]
             [Validation(Required=false)]
             public bool? Finish { get; set; }
 
             /// <summary>
-            /// The task status. Valid values:
+            /// <para>The task status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>INIT</b>: The task is being initialized.</description></item>
+            /// <item><description><b>RUNNING</b>: The task is being executed.</description></item>
+            /// <item><description><b>SUCCESS</b>: The task succeeds.</description></item>
+            /// <item><description><b>FAIL</b>: The task fails.</description></item>
+            /// </list>
             /// 
-            /// *   **INIT**: The task is being initialized.
-            /// *   **RUNNING**: The task is being executed.
-            /// *   **SUCCESS**: The task succeeds.
-            /// *   **FAIL**: The task fails.
+            /// <b>Example:</b>
+            /// <para>INIT</para>
             /// </summary>
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
 
             /// <summary>
-            /// The time when the request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when the request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1697183353000</para>
             /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
@@ -113,26 +148,37 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request is successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0A74B755-98B7-59DB-8724-1321B394****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

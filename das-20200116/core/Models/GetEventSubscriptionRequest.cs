@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetEventSubscriptionRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-2ze8g2am97624****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

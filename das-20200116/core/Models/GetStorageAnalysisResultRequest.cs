@@ -10,27 +10,35 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetStorageAnalysisResultRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bp10xxxxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The node ID.
+        /// <para>The node ID.</para>
+        /// <remarks>
+        /// <para> This parameter is reserved.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is reserved.
+        /// <b>Example:</b>
+        /// <para>202****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The task ID. You can obtain the task ID from the response of the [CreateStorageAnalysisTask](https://help.aliyun.com/document_detail/2639140.html) operation.
+        /// <para>The task ID. You can obtain the task ID from the response of the <a href="https://help.aliyun.com/document_detail/2639140.html">CreateStorageAnalysisTask</a> operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>910f83f4b96df0524ddc5749f615****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

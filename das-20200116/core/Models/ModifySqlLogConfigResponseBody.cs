@@ -10,171 +10,233 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ModifySqlLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>403</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifySqlLogConfigResponseBodyData Data { get; set; }
         public class ModifySqlLogConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the cold data storage is enabled. Valid values:
+            /// <para>Indicates whether the cold data storage is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ColdEnable")]
             [Validation(Required=false)]
             public bool? ColdEnable { get; set; }
 
             /// <summary>
-            /// The number of days for which the SQL Explorer and Audit data is stored in cold storage. The value is calculated by using the following formula: Value of ColdRetention = Value of Retention - Value of HotRetention.``
+            /// <para>The number of days for which the SQL Explorer and Audit data is stored in cold storage. The value is calculated by using the following formula: Value of ColdRetention = Value of Retention - Value of HotRetention.``</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>23</para>
             /// </summary>
             [NameInMap("ColdRetention")]
             [Validation(Required=false)]
             public int? ColdRetention { get; set; }
 
             /// <summary>
-            /// The time when the cold data storage was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when the cold data storage was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1683712800000</para>
             /// </summary>
             [NameInMap("ColdStartTime")]
             [Validation(Required=false)]
             public long? ColdStartTime { get; set; }
 
             /// <summary>
-            /// The collector version. Valid values:
+            /// <para>The collector version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>MYSQL_V0</b></description></item>
+            /// <item><description><b>MYSQL_V1</b></description></item>
+            /// <item><description><b>MYSQL_V2</b></description></item>
+            /// <item><description><b>MYSQL_V3</b></description></item>
+            /// <item><description><b>PG_V1</b></description></item>
+            /// <item><description><b>rdspg_v1</b></description></item>
+            /// <item><description><b>polarpg_v1</b></description></item>
+            /// </list>
             /// 
-            /// *   **MYSQL_V0**
-            /// *   **MYSQL_V1**
-            /// *   **MYSQL_V2**
-            /// *   **MYSQL_V3**
-            /// *   **PG_V1**
-            /// *   **rdspg_v1**
-            /// *   **polarpg_v1**
+            /// <b>Example:</b>
+            /// <para>MYSQL_V3</para>
             /// </summary>
             [NameInMap("CollectorVersion")]
             [Validation(Required=false)]
             public string CollectorVersion { get; set; }
 
             /// <summary>
-            /// Indicates whether the hot data storage is enabled. Valid values:
+            /// <para>Indicates whether the hot data storage is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("HotEnable")]
             [Validation(Required=false)]
             public bool? HotEnable { get; set; }
 
             /// <summary>
-            /// The number of days for which the SQL Explorer and Audit data is stored in hot storage.
+            /// <para>The number of days for which the SQL Explorer and Audit data is stored in hot storage.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7</para>
             /// </summary>
             [NameInMap("HotRetention")]
             [Validation(Required=false)]
             public int? HotRetention { get; set; }
 
             /// <summary>
-            /// The time when the hot data storage was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when the hot data storage was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1683712800000</para>
             /// </summary>
             [NameInMap("HotStartTime")]
             [Validation(Required=false)]
             public long? HotStartTime { get; set; }
 
             /// <summary>
-            /// A reserved parameter.
+            /// <para>A reserved parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("LogFilter")]
             [Validation(Required=false)]
             public string LogFilter { get; set; }
 
             /// <summary>
-            /// Indicates whether the SQL Explorer feature is enabled. Valid values:
+            /// <para>Indicates whether the SQL Explorer feature is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("RequestEnable")]
             [Validation(Required=false)]
             public bool? RequestEnable { get; set; }
 
             /// <summary>
-            /// The time when the SQL Explorer feature was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when the SQL Explorer feature was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1683712800000</para>
             /// </summary>
             [NameInMap("RequestStartTime")]
             [Validation(Required=false)]
             public long? RequestStartTime { get; set; }
 
             /// <summary>
-            /// The time when DAS Enterprise Edition V1 expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when DAS Enterprise Edition V1 expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1715335200000</para>
             /// </summary>
             [NameInMap("RequestStopTime")]
             [Validation(Required=false)]
             public long? RequestStopTime { get; set; }
 
             /// <summary>
-            /// The total storage duration of the SQL Explorer and Audit data. Unit: day.
+            /// <para>The total storage duration of the SQL Explorer and Audit data. Unit: day.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
             /// </summary>
             [NameInMap("Retention")]
             [Validation(Required=false)]
             public int? Retention { get; set; }
 
             /// <summary>
-            /// Indicates whether DAS Enterprise Edition is enabled. Valid values:
+            /// <para>Indicates whether DAS Enterprise Edition is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("SqlLogEnable")]
             [Validation(Required=false)]
             public bool? SqlLogEnable { get; set; }
 
             /// <summary>
-            /// The state of data migration. Valid values:
+            /// <para>The state of data migration. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>FINISH</b>: The historical data is migrated.</description></item>
+            /// <item><description><b>RUNNING</b>: The historical data is being migrated.</description></item>
+            /// <item><description><b>FAILURE</b>: The historical data fails to be migrated.</description></item>
+            /// </list>
             /// 
-            /// *   **FINISH**: The historical data is migrated.
-            /// *   **RUNNING**: The historical data is being migrated.
-            /// *   **FAILURE**: The historical data fails to be migrated.
+            /// <b>Example:</b>
+            /// <para>FINISH</para>
             /// </summary>
             [NameInMap("SqlLogState")]
             [Validation(Required=false)]
             public string SqlLogState { get; set; }
 
             /// <summary>
-            /// The time when DAS Enterprise Edition was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when DAS Enterprise Edition was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1683712800000</para>
             /// </summary>
             [NameInMap("SqlLogVisibleTime")]
             [Validation(Required=false)]
             public long? SqlLogVisibleTime { get; set; }
 
             /// <summary>
-            /// The latest version of DAS Enterprise Edition that supports the database instance. Valid values:
+            /// <para>The latest version of DAS Enterprise Edition that supports the database instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SQL_LOG_V0</b>: DAS Enterprise Edition V0.</description></item>
+            /// <item><description><b>SQL_LOG_V1</b>: DAS Enterprise Edition V1.</description></item>
+            /// <item><description><b>SQL_LOG_V2</b>: DAS Enterprise Edition V2.</description></item>
+            /// <item><description><b>SQL_LOG_V3</b>: DAS Enterprise Edition V3.</description></item>
+            /// <item><description><b>SQL_LOG_NOT_ENABLE</b>: DAS Enterprise Edition is not enabled.</description></item>
+            /// <item><description><b>SQL_LOG_NOT_SUPPORT</b>: DAS Enterprise Edition is not supported.</description></item>
+            /// </list>
             /// 
-            /// *   **SQL_LOG_V0**: DAS Enterprise Edition V0.
-            /// *   **SQL_LOG_V1**: DAS Enterprise Edition V1.
-            /// *   **SQL_LOG_V2**: DAS Enterprise Edition V2.
-            /// *   **SQL_LOG_V3**: DAS Enterprise Edition V3.
-            /// *   **SQL_LOG_NOT_ENABLE**: DAS Enterprise Edition is not enabled.
-            /// *   **SQL_LOG_NOT_SUPPORT**: DAS Enterprise Edition is not supported.
+            /// <b>Example:</b>
+            /// <para>SQL_LOG_V3</para>
             /// </summary>
             [NameInMap("SupportVersion")]
             [Validation(Required=false)]
             public string SupportVersion { get; set; }
 
             /// <summary>
-            /// The version of DAS Enterprise Edition that is enabled for the database instance. Valid values:
+            /// <para>The version of DAS Enterprise Edition that is enabled for the database instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SQL_LOG_V0</b>: DAS Enterprise Edition V0.</description></item>
+            /// <item><description><b>SQL_LOG_V1</b>: DAS Enterprise Edition V1.</description></item>
+            /// <item><description><b>SQL_LOG_V2</b>: DAS Enterprise Edition V2.</description></item>
+            /// <item><description><b>SQL_LOG_V3</b>: DAS Enterprise Edition V3.</description></item>
+            /// <item><description><b>SQL_LOG_NOT_ENABLE</b>: DAS Enterprise Edition is not enabled.</description></item>
+            /// <item><description><b>SQL_LOG_NOT_SUPPORT</b>: DAS Enterprise Edition is not supported.</description></item>
+            /// </list>
             /// 
-            /// *   **SQL_LOG_V0**: DAS Enterprise Edition V0.
-            /// *   **SQL_LOG_V1**: DAS Enterprise Edition V1.
-            /// *   **SQL_LOG_V2**: DAS Enterprise Edition V2.
-            /// *   **SQL_LOG_V3**: DAS Enterprise Edition V3.
-            /// *   **SQL_LOG_NOT_ENABLE**: DAS Enterprise Edition is not enabled.
-            /// *   **SQL_LOG_NOT_SUPPORT**: DAS Enterprise Edition is not supported.
+            /// <b>Example:</b>
+            /// <para>SQL_LOG_V3</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -183,26 +245,37 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>03C88D8E-1541-518E-8BFF-BEC6589B6334</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>False</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

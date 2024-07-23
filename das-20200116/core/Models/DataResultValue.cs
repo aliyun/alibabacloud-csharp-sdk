@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,21 +10,30 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DataResultValue : TeaModel {
         /// <summary>
-        /// The SQL ID.
+        /// <para>The SQL ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ad78a4e7d3ce81590c9dc2d5f4bc****</para>
         /// </summary>
         [NameInMap("sqlId")]
         [Validation(Required=false)]
         public string SqlId { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-2ze8g2am97624****</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of failed executions.
+        /// <para>The number of failed executions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
