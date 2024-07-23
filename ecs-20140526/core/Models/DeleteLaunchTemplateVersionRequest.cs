@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteLaunchTemplateVersionRequest : TeaModel {
         /// <summary>
-        /// The version numbers of the launch template.
+        /// <para>The version numbers of the launch template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("DeleteVersion")]
         [Validation(Required=false)]
         public List<long?> DeleteVersion { get; set; }
 
         /// <summary>
-        /// The ID of the launch template. For more information, call the [DescribeLaunchTemplates](https://help.aliyun.com/document_detail/73759.html) operation.
+        /// <para>The ID of the launch template. For more information, call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lt-bp1apo0bbbkuy0rj****</para>
         /// </summary>
         [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// The name of the launch template.
+        /// <para>The name of the launch template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testLaunchTemplateName</para>
         /// </summary>
         [NameInMap("LaunchTemplateName")]
         [Validation(Required=false)]
@@ -41,9 +49,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the launch template. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

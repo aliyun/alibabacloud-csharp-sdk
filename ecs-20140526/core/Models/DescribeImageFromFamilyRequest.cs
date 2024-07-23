@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageFromFamilyRequest : TeaModel {
         /// <summary>
-        /// The name of the image family. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http://, https://, acs:, or aliyun.
+        /// <para>The name of the image family. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http://, https://, acs:, or aliyun.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>hangzhou-daily-update</para>
         /// </summary>
         [NameInMap("ImageFamily")]
         [Validation(Required=false)]
@@ -27,9 +29,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

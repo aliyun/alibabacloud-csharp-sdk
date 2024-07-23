@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceMaintenanceAttributesResponseBody : TeaModel {
         /// <summary>
-        /// The maintenance attributes.
+        /// <para>The maintenance attributes.</para>
         /// </summary>
         [NameInMap("MaintenanceAttributes")]
         [Validation(Required=false)]
@@ -21,21 +21,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute> MaintenanceAttribute { get; set; }
             public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute : TeaModel {
                 /// <summary>
-                /// The attributes of the maintenance action of the instance.
+                /// <para>The attributes of the maintenance action of the instance.</para>
                 /// </summary>
                 [NameInMap("ActionOnMaintenance")]
                 [Validation(Required=false)]
                 public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance ActionOnMaintenance { get; set; }
                 public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance : TeaModel {
                     /// <summary>
-                    /// The default maintenance action.
+                    /// <para>The default maintenance action.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>AutoRecover</para>
                     /// </summary>
                     [NameInMap("DefaultValue")]
                     [Validation(Required=false)]
                     public string DefaultValue { get; set; }
 
                     /// <summary>
-                    /// The supported maintenance actions.
+                    /// <para>The supported maintenance actions.</para>
                     /// </summary>
                     [NameInMap("SupportedValues")]
                     [Validation(Required=false)]
@@ -48,11 +51,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The current maintenance action. Valid values:
+                    /// <para>The current maintenance action. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Stop: stops the instance.</description></item>
+                    /// <item><description>AutoRecover: automatically recovers the instance.</description></item>
+                    /// <item><description>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</description></item>
+                    /// </list>
                     /// 
-                    /// *   Stop: stops the instance.
-                    /// *   AutoRecover: automatically recovers the instance.
-                    /// *   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.
+                    /// <b>Example:</b>
+                    /// <para>Stop</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -61,14 +68,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The instance ID.
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The maintenance windows.
+                /// <para>The maintenance windows.</para>
                 /// </summary>
                 [NameInMap("MaintenanceWindows")]
                 [Validation(Required=false)]
@@ -79,14 +89,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow> MaintenanceWindow { get; set; }
                     public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow : TeaModel {
                         /// <summary>
-                        /// The end time of the maintenance window.
+                        /// <para>The end time of the maintenance window.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>18:00:00</para>
                         /// </summary>
                         [NameInMap("EndTime")]
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
 
                         /// <summary>
-                        /// The start time of the maintenance window.
+                        /// <para>The start time of the maintenance window.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>02:00:00</para>
                         /// </summary>
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
@@ -97,7 +113,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Indicates whether an event notification was sent before maintenance.
+                /// <para>Indicates whether an event notification was sent before maintenance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("NotifyOnMaintenance")]
                 [Validation(Required=false)]
@@ -108,28 +127,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of queried maintenance attributes.
+        /// <para>The total number of queried maintenance attributes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

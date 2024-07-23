@@ -10,25 +10,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// The natural language that is used to filter responses. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
+        /// <para>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN</description></item>
+        /// <item><description>en-US</description></item>
+        /// <item><description>ja</description></item>
+        /// </list>
+        /// <para>Default value: zh-CN.</para>
         /// 
-        /// *   zh-CN
-        /// *   en-US
-        /// *   ja
-        /// 
-        /// Default value: zh-CN.
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The billing method of resources. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:
+        /// <para>The billing method of resources. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription</description></item>
+        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// </list>
+        /// <para>Default value: PostPaid.</para>
         /// 
-        /// *   PrePaid: subscription
-        /// *   PostPaid: pay-as-you-go
-        /// 
-        /// Default value: PostPaid.
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -43,9 +49,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -60,25 +68,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The bidding policy for pay-as-you-go instances. You can specify this parameter when the `InstanceChargeType` parameter is set to PostPaid. For more information, see [Preemptible instances](https://help.aliyun.com/document_detail/52088.html). Valid values:
+        /// <para>The bidding policy for pay-as-you-go instances. You can specify this parameter when the <c>InstanceChargeType</c> parameter is set to PostPaid. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Preemptible instances</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NoSpot: The instances are regular pay-as-you-go instances.</description></item>
+        /// <item><description>SpotWithPriceLimit: The instances are preemptible instances with user-defined maximum hourly prices.</description></item>
+        /// <item><description>SpotAsPriceGo: The instances are preemptible instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
+        /// </list>
+        /// <para>Default value: NoSpot.</para>
         /// 
-        /// *   NoSpot: The instances are regular pay-as-you-go instances.
-        /// *   SpotWithPriceLimit: The instances are preemptible instances with user-defined maximum hourly prices.
-        /// *   SpotAsPriceGo: The instances are preemptible instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
-        /// 
-        /// Default value: NoSpot.
+        /// <b>Example:</b>
+        /// <para>NoSpot</para>
         /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// Specifies whether to display detailed information.
+        /// <para>Specifies whether to display detailed information.</para>
+        /// <list type="bullet">
+        /// <item><description>true: displays detailed information.</description></item>
+        /// <item><description>false: does not display detailed information.</description></item>
+        /// </list>
+        /// <para>Default value: true.</para>
         /// 
-        /// *   true: displays detailed information.
-        /// *   false: does not display detailed information.
-        /// 
-        /// Default value: true.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Verbose")]
         [Validation(Required=false)]

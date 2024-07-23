@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachClassicLinkVpcRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance that is deployed in the classic network. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query available instances.
+        /// <para>The ID of the instance that is deployed in the classic network. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query available instances.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-bp1gtjxuuvwj17zr****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -23,9 +25,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -40,9 +44,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC for which the ClassicLink feature is enabled. You can call the [DescribeVpcs](https://help.aliyun.com/document_detail/35739.html) operation to query available VPCs.
+        /// <para>The ID of the VPC for which the ClassicLink feature is enabled. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query available VPCs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vpc-bp1j4z1sr8zxu4l8u****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

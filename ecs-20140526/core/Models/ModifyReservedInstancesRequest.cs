@@ -10,55 +10,68 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyReservedInstancesRequest : TeaModel {
         /// <summary>
-        /// The configurations of reserved instance N.
+        /// <para>The configurations of reserved instance N.</para>
         /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public List<ModifyReservedInstancesRequestConfiguration> Configuration { get; set; }
         public class ModifyReservedInstancesRequestConfiguration : TeaModel {
             /// <summary>
-            /// The ID of the request.
+            /// <para>The ID of the request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("InstanceAmount")]
             [Validation(Required=false)]
             public int? InstanceAmount { get; set; }
 
             /// <summary>
-            /// The number of pay-as-you-go instances of the same instance type that the reserved instance can match. The value of this parameter must be greater than or equal to 1. Valid values of N: 1 to 100.
+            /// <para>The number of pay-as-you-go instances of the same instance type that the reserved instance can match. The value of this parameter must be greater than or equal to 1. Valid values of N: 1 to 100.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecs.c5.4xlarge</para>
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// The zone ID of reserved instance N. Valid values of N: 1 to 100.
+            /// <para>The zone ID of reserved instance N. Valid values of N: 1 to 100.</para>
+            /// <para>This parameter is required when <c>Scope</c> is set to <c>Zone</c>.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeZones</a> operation to query the most recent zone list.</para>
             /// 
-            /// This parameter is required when `Scope` is set to `Zone`.
-            /// 
-            /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent zone list.
+            /// <b>Example:</b>
+            /// <para>testReservedInstanceName</para>
             /// </summary>
             [NameInMap("ReservedInstanceName")]
             [Validation(Required=false)]
             public string ReservedInstanceName { get; set; }
 
             /// <summary>
-            /// The instance type that reserved instance N can match. Valid values of N: 1 to 100.
+            /// <para>The instance type that reserved instance N can match. Valid values of N: 1 to 100.</para>
+            /// <remarks>
+            /// <para>The supported instance types are regularly updated. For more information, see the &quot;Attributes&quot; section of <a href="https://help.aliyun.com/document_detail/100370.html">Overview</a>.</para>
+            /// </remarks>
             /// 
-            /// > The supported instance types are regularly updated. For more information, see the "Attributes" section of [Overview](https://help.aliyun.com/document_detail/100370.html).
+            /// <b>Example:</b>
+            /// <para>Zone</para>
             /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }
 
             /// <summary>
-            /// The scope of reserved instance N. Valid values:
+            /// <para>The scope of reserved instance N. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Region</description></item>
+            /// <item><description>Zone</description></item>
+            /// </list>
+            /// <para>Valid values of N: 1 to 100.</para>
+            /// <para>Default value: Region.</para>
             /// 
-            /// *   Region
-            /// *   Zone
-            /// 
-            /// Valid values of N: 1 to 100.
-            /// 
-            /// Default value: Region.
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-i</para>
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
@@ -75,18 +88,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of reserved instances. Valid values of N: 1 to 20.
+        /// <para>The IDs of reserved instances. Valid values of N: 1 to 20.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of reserved instances. Valid values of N: 1 to 20.
+        /// <para>The IDs of reserved instances. Valid values of N: 1 to 20.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ReservedInstanceId.1=&quot;ecsri-bp1cx3****&quot;,ReservedInstanceId.2=&quot;ecsri-bp15xx2****&quot;......</para>
         /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]

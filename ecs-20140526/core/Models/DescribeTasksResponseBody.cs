@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTasksResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the task.
+        /// <para>The region ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the tasks.
+        /// <para>Details about the tasks.</para>
         /// </summary>
         [NameInMap("TaskSet")]
         [Validation(Required=false)]
@@ -49,49 +61,70 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeTasksResponseBodyTaskSetTask> Task { get; set; }
             public class DescribeTasksResponseBodyTaskSetTask : TeaModel {
                 /// <summary>
-                /// The time when the task was created.
+                /// <para>The time when the task was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-11-24T12:50Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The time when the task was completed.
+                /// <para>The time when the task was completed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-11-24T12:50Z</para>
                 /// </summary>
                 [NameInMap("FinishedTime")]
                 [Validation(Required=false)]
                 public string FinishedTime { get; set; }
 
                 /// <summary>
-                /// The ID of the resource.
+                /// <para>The ID of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>m-bp1i8huqm5u7****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the task can be canceled.
+                /// <para>Indicates whether the task can be canceled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("SupportCancel")]
                 [Validation(Required=false)]
                 public string SupportCancel { get; set; }
 
                 /// <summary>
-                /// The name of the task.
+                /// <para>The name of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ImportImage</para>
                 /// </summary>
                 [NameInMap("TaskAction")]
                 [Validation(Required=false)]
                 public string TaskAction { get; set; }
 
                 /// <summary>
-                /// The ID of the task.
+                /// <para>The ID of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>t-bp1hvgwromzv32iq****</para>
                 /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// The state of the task.
+                /// <para>The state of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Finished</para>
                 /// </summary>
                 [NameInMap("TaskStatus")]
                 [Validation(Required=false)]
@@ -102,7 +135,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

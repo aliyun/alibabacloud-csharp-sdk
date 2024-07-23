@@ -14,23 +14,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.
+            /// <para>The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.</para>
+            /// <list type="bullet">
+            /// <item><description>This parameter is required when <c>PrivatePoolOptions.MatchCriteria</c> is set to <c>Target</c>.</description></item>
+            /// <item><description>This parameter must be empty when <c>PrivatePoolOptions.MatchCriteria</c> is set to <c>Open</c> or <c>None</c>.</description></item>
+            /// </list>
             /// 
-            /// *   This parameter is required when `PrivatePoolOptions.MatchCriteria` is set to `Target`.
-            /// *   This parameter must be empty when `PrivatePoolOptions.MatchCriteria` is set to `Open` or `None`.
+            /// <b>Example:</b>
+            /// <para>eap-bp67acfmxazb4****</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The match mode of the private pool. Valid values:
+            /// <para>The match mode of the private pool. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Open: open private pool. The system matches the instance with open private pools.</description></item>
+            /// <item><description>Target: specified private pool. You must set the <c>PrivatePoolOptions.Id</c> parameter to specify the ID of a private pool.</description></item>
+            /// <item><description>None: no private pool. The instance starts normally without using private pools.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   Open: open private pool. The system matches the instance with open private pools.
-            /// *   Target: specified private pool. You must set the `PrivatePoolOptions.Id` parameter to specify the ID of a private pool.
-            /// *   None: no private pool. The instance starts normally without using private pools.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>Open</para>
             /// </summary>
             [NameInMap("MatchCriteria")]
             [Validation(Required=false)]
@@ -39,9 +46,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the instance for which you want to modify the attributes of the private pool.
+        /// <para>The ID of the instance for which you want to modify the attributes of the private pool.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-bp67acfmxazb4****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -56,9 +65,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the private pool. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the private pool. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

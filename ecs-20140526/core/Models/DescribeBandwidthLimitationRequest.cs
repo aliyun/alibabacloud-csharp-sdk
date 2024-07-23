@@ -10,34 +10,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeBandwidthLimitationRequest : TeaModel {
         /// <summary>
-        /// The billing method of the instance. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:
+        /// <para>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription</description></item>
+        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// </list>
+        /// <para>Default value: PostPaid.</para>
         /// 
-        /// *   PrePaid: subscription
-        /// *   PostPaid: pay-as-you-go
-        /// 
-        /// Default value: PostPaid.
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The instance type. For information about the values, see [Overview of ECS instance families](https://help.aliyun.com/document_detail/25378.html).
+        /// <para>The instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecs.g5.large</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// Specifies the operation for which to query the maximum public bandwidth. Valid values:
+        /// <para>Specifies the operation for which to query the maximum public bandwidth. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Upgrade: upgrades the public bandwidth.</description></item>
+        /// <item><description>Downgrade: downgrades the public bandwidth.</description></item>
+        /// <item><description>Create: creates an ECS instance.</description></item>
+        /// </list>
+        /// <para>Default value: Create.</para>
         /// 
-        /// *   Upgrade: upgrades the public bandwidth.
-        /// *   Downgrade: downgrades the public bandwidth.
-        /// *   Create: creates an ECS instance.
-        /// 
-        /// Default value: Create.
+        /// <b>Example:</b>
+        /// <para>Upgrade</para>
         /// </summary>
         [NameInMap("OperationType")]
         [Validation(Required=false)]
@@ -52,18 +60,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource ID.
+        /// <para>The resource ID.</para>
+        /// <remarks>
+        /// <para> This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
+        /// <b>Example:</b>
+        /// <para>i-bp67acfmxazb4ph***</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -78,15 +92,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The bidding policy for the pay-as-you-go instance. Valid values:
+        /// <para>The bidding policy for the pay-as-you-go instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NoSpot: The instance is a pay-as-you-go instance.</description></item>
+        /// <item><description>SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</description></item>
+        /// <item><description>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
+        /// </list>
+        /// <para>Default value: NoSpot.</para>
+        /// <remarks>
+        /// <para> The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</para>
+        /// </remarks>
         /// 
-        /// *   NoSpot: The instance is a pay-as-you-go instance.
-        /// *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
-        /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
-        /// 
-        /// Default value: NoSpot.
-        /// 
-        /// >  The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
+        /// <b>Example:</b>
+        /// <para>NoSpot</para>
         /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLaunchTemplateVersionsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the launch template versions.
+        /// <para>Details about the launch template versions.</para>
         /// </summary>
         [NameInMap("LaunchTemplateVersionSets")]
         [Validation(Required=false)]
@@ -21,28 +21,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSet> LaunchTemplateVersionSet { get; set; }
             public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSet : TeaModel {
                 /// <summary>
-                /// The time when the launch template was created.
+                /// <para>The time when the launch template version was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-01-17T08:22:43Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The creator of the launch template.
+                /// <para>The creator of the launch template version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123456789****</para>
                 /// </summary>
                 [NameInMap("CreatedBy")]
                 [Validation(Required=false)]
                 public string CreatedBy { get; set; }
 
                 /// <summary>
-                /// Indicates whether the launch template version is the default version.
+                /// <para>Indicates whether the launch template version is the default version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("DefaultVersion")]
                 [Validation(Required=false)]
                 public bool? DefaultVersion { get; set; }
 
                 /// <summary>
-                /// The configurations of the launch template.
+                /// <para>The configurations of the launch template.</para>
                 /// </summary>
                 [NameInMap("LaunchTemplateData")]
                 [Validation(Required=false)]
@@ -99,24 +108,58 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The automatic release time of the instance.
+                    /// <para>The automatic release time of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2018-05-14T14:18:00Z</para>
                     /// </summary>
                     [NameInMap("AutoReleaseTime")]
                     [Validation(Required=false)]
                     public string AutoReleaseTime { get; set; }
 
                     /// <summary>
-                    /// The performance mode of the burstable instance. Valid values:
+                    /// <para>Indicates whether auto-renewal is enabled for the instance. This parameter is valid only if <c>InstanceChargeType</c> is set to <c>PrePaid</c>. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
+                    /// <para>Default value: false.</para>
                     /// 
-                    /// *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
-                    /// *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("AutoRenew")]
+                    [Validation(Required=false)]
+                    public bool? AutoRenew { get; set; }
+
+                    /// <summary>
+                    /// <para>The auto-renewal period of the instance. Valid values:</para>
+                    /// <para>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
+                    /// <para>Default value: 1.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("AutoRenewPeriod")]
+                    [Validation(Required=false)]
+                    public int? AutoRenewPeriod { get; set; }
+
+                    /// <summary>
+                    /// <para>The performance mode of the burstable instance. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Standard: the standard mode. For more information, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
+                    /// <item><description>Unlimited: the unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Standard</para>
                     /// </summary>
                     [NameInMap("CreditSpecification")]
                     [Validation(Required=false)]
                     public string CreditSpecification { get; set; }
 
                     /// <summary>
-                    /// Details about the data disks.
+                    /// <para>Details about the data disks.</para>
                     /// </summary>
                     [NameInMap("DataDisks")]
                     [Validation(Required=false)]
@@ -127,98 +170,137 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk> DataDisk { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk : TeaModel {
                             /// <summary>
-                            /// The ID of the automatic snapshot policy.
+                            /// <para>The ID of the automatic snapshot policy.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>sp-wz91dz3ghear2a5s****</para>
                             /// </summary>
                             [NameInMap("AutoSnapshotPolicyId")]
                             [Validation(Required=false)]
                             public string AutoSnapshotPolicyId { get; set; }
 
                             /// <summary>
-                            /// Indicates whether to enable the performance burst feature. Valid values:
+                            /// <para>Indicates whether the performance burst feature is enabled. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description>true</description></item>
+                            /// <item><description>false</description></item>
+                            /// </list>
                             /// 
-                            /// *   true: enables the performance burst feature.
-                            /// *   false: does not enable the performance burst feature.
+                            /// <b>Example:</b>
+                            /// <para>true</para>
                             /// </summary>
                             [NameInMap("BurstingEnabled")]
                             [Validation(Required=false)]
                             public bool? BurstingEnabled { get; set; }
 
                             /// <summary>
-                            /// The category of the data disk.
+                            /// <para>The category of the data disk.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>cloud_ssd</para>
                             /// </summary>
                             [NameInMap("Category")]
                             [Validation(Required=false)]
                             public string Category { get; set; }
 
                             /// <summary>
-                            /// Indicates whether to release the data disk when the instance is released.
+                            /// <para>Indicates whether to release the data disk when the instance is released.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>true</para>
                             /// </summary>
                             [NameInMap("DeleteWithInstance")]
                             [Validation(Required=false)]
                             public bool? DeleteWithInstance { get; set; }
 
                             /// <summary>
-                            /// The description of the data disk.
+                            /// <para>The description of the data disk.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>testDiskDescription</para>
                             /// </summary>
                             [NameInMap("Description")]
                             [Validation(Required=false)]
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// The device name of the data disk.
+                            /// <para>The device name of the data disk.</para>
+                            /// <remarks>
+                            /// <para> This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.</para>
+                            /// </remarks>
                             /// 
-                            /// >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+                            /// <b>Example:</b>
+                            /// <para>/dev/xvda</para>
                             /// </summary>
                             [NameInMap("Device")]
                             [Validation(Required=false)]
                             public string Device { get; set; }
 
                             /// <summary>
-                            /// The name of the data disk.
+                            /// <para>The name of the data disk.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>testDiskName</para>
                             /// </summary>
                             [NameInMap("DiskName")]
                             [Validation(Required=false)]
                             public string DiskName { get; set; }
 
                             /// <summary>
-                            /// Indicates whether to encrypt the data disk.
+                            /// <para>Indicates whether the data disk is encrypted.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>false</para>
                             /// </summary>
                             [NameInMap("Encrypted")]
                             [Validation(Required=false)]
                             public string Encrypted { get; set; }
 
                             /// <summary>
-                            /// The performance level of ESSD to use as the data disk. This parameter is returned only when tne value of `Category` is cloud_essd. Valid values:
+                            /// <para>The performance level of the ESSD to use as a data disk. This parameter is returned only when the value of <c>Category</c> is cloud_essd. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
+                            /// <item><description>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
+                            /// <item><description>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
+                            /// <item><description>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
+                            /// </list>
                             /// 
-                            /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-                            /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-                            /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-                            /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+                            /// <b>Example:</b>
+                            /// <para>PL1</para>
                             /// </summary>
                             [NameInMap("PerformanceLevel")]
                             [Validation(Required=false)]
                             public string PerformanceLevel { get; set; }
 
                             /// <summary>
-                            /// The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+                            /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
+                            /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
+                            /// <remarks>
+                            /// <para> This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</para>
+                            /// </remarks>
                             /// 
-                            /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
-                            /// 
-                            /// >  This parameter is available only if the corresponding disk category parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).
+                            /// <b>Example:</b>
+                            /// <para>50000</para>
                             /// </summary>
                             [NameInMap("ProvisionedIops")]
                             [Validation(Required=false)]
                             public long? ProvisionedIops { get; set; }
 
                             /// <summary>
-                            /// The size of the data disk.
+                            /// <para>The size of the data disk.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2000</para>
                             /// </summary>
                             [NameInMap("Size")]
                             [Validation(Required=false)]
                             public int? Size { get; set; }
 
                             /// <summary>
-                            /// The ID of the snapshot to use to create the data disk.
+                            /// <para>The ID of the snapshot to use to create the data disk.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>s-bp67acfmxazb4p****</para>
                             /// </summary>
                             [NameInMap("SnapshotId")]
                             [Validation(Required=false)]
@@ -229,134 +311,185 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](https://help.aliyun.com/document_detail/25507.html) operation to release the instance. Valid values:
+                    /// <para>Indicates whether release protection is enabled for the instance. This parameter indicates whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
+                    /// <para>Default value: false.</para>
+                    /// <remarks>
+                    /// <para> This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.</para>
+                    /// </remarks>
                     /// 
-                    /// - true
-                    /// - false
-                    /// 
-                    /// Default value: false.
-                    /// 
-                    /// >This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
+                    /// <b>Example:</b>
+                    /// <para>false</para>
                     /// </summary>
                     [NameInMap("DeletionProtection")]
                     [Validation(Required=false)]
                     public bool? DeletionProtection { get; set; }
 
                     /// <summary>
-                    /// The ID of the deployment set.
+                    /// <para>The ID of the deployment set.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ds-bp1brhwhoqinyjd6****</para>
                     /// </summary>
                     [NameInMap("DeploymentSetId")]
                     [Validation(Required=false)]
                     public string DeploymentSetId { get; set; }
 
                     /// <summary>
-                    /// The description of the instance.
+                    /// <para>The description of the system disk.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testInstanceDescription</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// Indicates whether to enable the operating system configuration of the instance.
+                    /// <para>Indicates whether the operating system configuration of the instance is enabled.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
                     /// </summary>
                     [NameInMap("EnableVmOsConfig")]
                     [Validation(Required=false)]
                     public bool? EnableVmOsConfig { get; set; }
 
                     /// <summary>
-                    /// The hostname of the instance.
+                    /// <para>The hostname of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testHostName</para>
                     /// </summary>
                     [NameInMap("HostName")]
                     [Validation(Required=false)]
                     public string HostName { get; set; }
 
                     /// <summary>
-                    /// The ID of the image.
+                    /// <para>The ID of the image.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>m-bp67acfmxazb4p****</para>
                     /// </summary>
                     [NameInMap("ImageId")]
                     [Validation(Required=false)]
                     public string ImageId { get; set; }
 
                     /// <summary>
-                    /// The source of the image. Valid values:
+                    /// <para>The source of the image. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>system: public image provided by Alibaba Cloud</description></item>
+                    /// <item><description>self: custom image that you created</description></item>
+                    /// <item><description>others: shared image from another Alibaba Cloud account</description></item>
+                    /// <item><description>marketplace: Alibaba Cloud Marketplace image</description></item>
+                    /// </list>
                     /// 
-                    /// *   system: public images provided by Alibaba Cloud
-                    /// *   self: custom images that you create
-                    /// *   others: shared images from other Alibaba Cloud accounts
-                    /// *   marketplace: Alibaba Cloud Marketplace images
+                    /// <b>Example:</b>
+                    /// <para>system</para>
                     /// </summary>
                     [NameInMap("ImageOwnerAlias")]
                     [Validation(Required=false)]
                     public string ImageOwnerAlias { get; set; }
 
                     /// <summary>
-                    /// The billing method of the instance. Valid values:
+                    /// <para>The billing method of the instance. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>PrePaid: subscription</description></item>
+                    /// <item><description>PostPaid: pay-as-you-go</description></item>
+                    /// </list>
                     /// 
-                    /// *   PrePaid: subscription
-                    /// *   PostPaid: pay-as-you-go
+                    /// <b>Example:</b>
+                    /// <para>Postpaid</para>
                     /// </summary>
                     [NameInMap("InstanceChargeType")]
                     [Validation(Required=false)]
                     public string InstanceChargeType { get; set; }
 
                     /// <summary>
-                    /// The name of the instance.
+                    /// <para>The name of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testInstanceName</para>
                     /// </summary>
                     [NameInMap("InstanceName")]
                     [Validation(Required=false)]
                     public string InstanceName { get; set; }
 
                     /// <summary>
-                    /// The instance type.
+                    /// <para>The instance type of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ecs.g5.large</para>
                     /// </summary>
                     [NameInMap("InstanceType")]
                     [Validation(Required=false)]
                     public string InstanceType { get; set; }
 
                     /// <summary>
-                    /// The billing method for network usage.
+                    /// <para>The billing method for network usage.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>PayByTraffic</para>
                     /// </summary>
                     [NameInMap("InternetChargeType")]
                     [Validation(Required=false)]
                     public string InternetChargeType { get; set; }
 
                     /// <summary>
-                    /// The maximum inbound public bandwidth.
+                    /// <para>The maximum inbound public bandwidth.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
                     /// </summary>
                     [NameInMap("InternetMaxBandwidthIn")]
                     [Validation(Required=false)]
                     public int? InternetMaxBandwidthIn { get; set; }
 
                     /// <summary>
-                    /// The maximum outbound public bandwidth.
+                    /// <para>The maximum outbound public bandwidth.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
                     /// </summary>
                     [NameInMap("InternetMaxBandwidthOut")]
                     [Validation(Required=false)]
                     public int? InternetMaxBandwidthOut { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the instance is I/O optimized.
+                    /// <para>Indicates whether the instance is I/O optimized.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>none</para>
                     /// </summary>
                     [NameInMap("IoOptimized")]
                     [Validation(Required=false)]
                     public string IoOptimized { get; set; }
 
                     /// <summary>
-                    /// The number of IPv6 addresses to assign to the instance.
+                    /// <para>The number of IPv6 addresses to assign to the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Ipv6AddressCount")]
                     [Validation(Required=false)]
                     public int? Ipv6AddressCount { get; set; }
 
                     /// <summary>
-                    /// The name of the key pair.
+                    /// <para>The name of the key pair.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testKeyPairName</para>
                     /// </summary>
                     [NameInMap("KeyPairName")]
                     [Validation(Required=false)]
                     public string KeyPairName { get; set; }
 
                     /// <summary>
-                    /// Details about the secondary elastic network interfaces (ENIs).
+                    /// <para>Details about the secondary elastic network interfaces (ENIs).</para>
                     /// </summary>
                     [NameInMap("NetworkInterfaces")]
                     [Validation(Required=false)]
@@ -367,58 +500,77 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface> NetworkInterface { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface : TeaModel {
                             /// <summary>
-                            /// The description of the secondary ENI.
+                            /// <para>The description of the secondary ENI.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>testNetworkInterfacesDescription</para>
                             /// </summary>
                             [NameInMap("Description")]
                             [Validation(Required=false)]
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// The instance type.
+                            /// <para>The instance type of the instance.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>ecs.s2.xlarge</para>
                             /// </summary>
                             [NameInMap("InstanceType")]
                             [Validation(Required=false)]
                             public string InstanceType { get; set; }
 
                             /// <summary>
-                            /// The name of the secondary ENI.
+                            /// <para>The name of the secondary ENI.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>testNetworkInterfaceName</para>
                             /// </summary>
                             [NameInMap("NetworkInterfaceName")]
                             [Validation(Required=false)]
                             public string NetworkInterfaceName { get; set; }
 
                             /// <summary>
-                            /// The communication mode of the ENI. Valid values:
+                            /// <para>The communication mode of the primary ENI. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description>Standard: uses the TCP communication mode.</description></item>
+                            /// <item><description>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</description></item>
+                            /// </list>
                             /// 
-                            /// *   Standard: The TCP communication mode is used.
-                            /// *   HighPerformance: Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
-                            /// 
-                            /// > This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.
+                            /// <b>Example:</b>
+                            /// <para>Standard</para>
                             /// </summary>
                             [NameInMap("NetworkInterfaceTrafficMode")]
                             [Validation(Required=false)]
                             public string NetworkInterfaceTrafficMode { get; set; }
 
                             /// <summary>
-                            /// The primary private IP address of the secondary ENI.
+                            /// <para>The primary private IP address of the secondary ENI.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>203.0.<em>.</em></para>
                             /// </summary>
                             [NameInMap("PrimaryIpAddress")]
                             [Validation(Required=false)]
                             public string PrimaryIpAddress { get; set; }
 
                             /// <summary>
-                            /// The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.
+                            /// <para>The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.</para>
+                            /// <remarks>
+                            /// <para> SecurityGroupId and SecurityGroupIds are mutually exclusive in the response.</para>
+                            /// </remarks>
                             /// 
-                            /// > You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.
+                            /// <b>Example:</b>
+                            /// <para>sg-bp67acfmxazb4p****</para>
                             /// </summary>
                             [NameInMap("SecurityGroupId")]
                             [Validation(Required=false)]
                             public string SecurityGroupId { get; set; }
 
                             /// <summary>
-                            /// The ID of security group *N* with which you want to associate the ECS instance. Valid values of *N* vary based on the maximum number of security groups with which the instance can be associated. For more information, see the "Security group limits" section in the [Limits](https://help.aliyun.com/document_detail/25412.html) topic.
-                            /// 
-                            /// >  You cannot specify the **SecurityGroupId** and **SecurityGroupIds.N** parameters at the same time.
+                            /// <para>The IDs of the security groups to which to assign the secondary ENI.</para>
+                            /// <remarks>
+                            /// <para> SecurityGroupId and SecurityGroupIds are mutually exclusive in the response.</para>
+                            /// </remarks>
                             /// </summary>
                             [NameInMap("SecurityGroupIds")]
                             [Validation(Required=false)]
@@ -431,7 +583,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             }
 
                             /// <summary>
-                            /// The ID of the vSwitch to which to connect the secondary ENI.
+                            /// <para>The ID of the vSwitch to which to connect the ENI.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>vsw-bp67acfmxazb4p****</para>
                             /// </summary>
                             [NameInMap("VSwitchId")]
                             [Validation(Required=false)]
@@ -442,70 +597,108 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The network type. Valid values:
+                    /// <para>The network type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>classic: classic network</description></item>
+                    /// <item><description>vpc: VPC</description></item>
+                    /// </list>
                     /// 
-                    /// *   classic: classic network
-                    /// *   vpc: VPC
+                    /// <b>Example:</b>
+                    /// <para>vpc</para>
                     /// </summary>
                     [NameInMap("NetworkType")]
                     [Validation(Required=false)]
                     public string NetworkType { get; set; }
 
                     /// <summary>
-                    /// Indicates whether to use the password preset in the image.
+                    /// <para>Indicates whether the username and password preset in the image are used.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("PasswordInherit")]
                     [Validation(Required=false)]
                     public bool? PasswordInherit { get; set; }
 
                     /// <summary>
-                    /// The subscription duration.
+                    /// <para>The subscription duration of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Period")]
                     [Validation(Required=false)]
                     public int? Period { get; set; }
 
                     /// <summary>
-                    /// The private IP address to assign to the instance.
+                    /// <para>The unit of the subscription period. Valid values:</para>
+                    /// <para>Month (default)</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Month</para>
+                    /// </summary>
+                    [NameInMap("PeriodUnit")]
+                    [Validation(Required=false)]
+                    public string PeriodUnit { get; set; }
+
+                    /// <summary>
+                    /// <para>The private IP address to assign to the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10.1.**.**</para>
                     /// </summary>
                     [NameInMap("PrivateIpAddress")]
                     [Validation(Required=false)]
                     public string PrivateIpAddress { get; set; }
 
                     /// <summary>
-                    /// The name of the instance RAM role.
+                    /// <para>The name of the instance Resource Access Management (RAM) role.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testRamRoleName</para>
                     /// </summary>
                     [NameInMap("RamRoleName")]
                     [Validation(Required=false)]
                     public string RamRoleName { get; set; }
 
                     /// <summary>
-                    /// The ID of the resource group to which the launch template belongs.
+                    /// <para>The ID of the resource group to which the launch template belongs.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>rg-bp67acfmxazb4p****</para>
                     /// </summary>
                     [NameInMap("ResourceGroupId")]
                     [Validation(Required=false)]
                     public string ResourceGroupId { get; set; }
 
                     /// <summary>
-                    /// Indicates whether to enable security hardening.
+                    /// <para>Indicates whether Security Hardening is enabled.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>active</para>
                     /// </summary>
                     [NameInMap("SecurityEnhancementStrategy")]
                     [Validation(Required=false)]
                     public string SecurityEnhancementStrategy { get; set; }
 
                     /// <summary>
-                    /// The ID of the security group to which to assign the instance.
+                    /// <para>The ID of the security group to which to assign the instance.</para>
+                    /// <remarks>
+                    /// <para> <c>SecurityGroupId</c> and <c>SecurityGroupIds</c> are mutually exclusive in the response.</para>
+                    /// </remarks>
                     /// 
-                    /// >  The `SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.
+                    /// <b>Example:</b>
+                    /// <para>sg-bp67acfmxazb4p****</para>
                     /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// The IDs of the security groups to which to assign the instance. The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the "Security group limits" section in [Limits](https://help.aliyun.com/document_detail/25412.html).
-                    /// 
-                    /// > You cannot specify both the `SecurityGroupId` and `SecurityGroupIds.N` parameters.
+                    /// <para>The IDs of the security groups to which to assign the instance.</para>
+                    /// <remarks>
+                    /// <para> <c>SecurityGroupId</c> and <c>SecurityGroupIds</c> are mutually exclusive in the response.</para>
+                    /// </remarks>
                     /// </summary>
                     [NameInMap("SecurityGroupIds")]
                     [Validation(Required=false)]
@@ -518,39 +711,50 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The protection period of the preemptible instance. Unit: hours. Valid values:
+                    /// <para>The protection period of the preemptible instance. Unit: hours. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+                    /// <item><description>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+                    /// </list>
+                    /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</para>
+                    /// <remarks>
+                    /// <para> This parameter is returned when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</para>
+                    /// </remarks>
                     /// 
-                    /// - 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market prices and checks the resource inventory to determine whether to retain or release the instance. 
-                    /// - 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance can run for one hour. The system compares the biding price with the market prices and checks the resource inventory to determine whether to retain or release the instance. 
-                    /// 
-                    /// Alibaba Cloud sent ECS system events to notify you 5 minutes before the instance is released. Preemptible instances were billed by second. We recommend that you specify an appropriate protection period based on your business requirements. 
-                    /// 
-                    /// >This parameter was returned when the SpotStrategy parameter was set to SpotWithPriceLimit or SpotAsPriceGo.
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("SpotDuration")]
                     [Validation(Required=false)]
                     public int? SpotDuration { get; set; }
 
                     /// <summary>
-                    /// The maximum hourly price of the preemptible instance.
+                    /// <para>The maximum hourly price of the preemptible instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0.98</para>
                     /// </summary>
                     [NameInMap("SpotPriceLimit")]
                     [Validation(Required=false)]
                     public float? SpotPriceLimit { get; set; }
 
                     /// <summary>
-                    /// The bidding policy for the pay-as-you-go instance. Valid values:
+                    /// <para>The bidding policy for the pay-as-you-go instance. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>NoSpot: The instance is a regular pay-as-you-go instance.</description></item>
+                    /// <item><description>SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</description></item>
+                    /// <item><description>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
+                    /// </list>
                     /// 
-                    /// *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-                    /// *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-                    /// *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+                    /// <b>Example:</b>
+                    /// <para>NoSpot</para>
                     /// </summary>
                     [NameInMap("SpotStrategy")]
                     [Validation(Required=false)]
                     public string SpotStrategy { get; set; }
 
                     /// <summary>
-                    /// The tags to add to the instance.
+                    /// <para>The tags to add to the instance.</para>
                     /// </summary>
                     [NameInMap("Tags")]
                     [Validation(Required=false)]
@@ -561,14 +765,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag> InstanceTag { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag : TeaModel {
                             /// <summary>
-                            /// The key of the tag to add to the instance.
+                            /// <para>The key of the tag to add to the instance.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>TestKey</para>
                             /// </summary>
                             [NameInMap("Key")]
                             [Validation(Required=false)]
                             public string Key { get; set; }
 
                             /// <summary>
-                            /// The value of the tag to add to the instance.
+                            /// <para>The value of the tag to add to the instance.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>TestValue</para>
                             /// </summary>
                             [NameInMap("Value")]
                             [Validation(Required=false)]
@@ -579,28 +789,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The user data of the instance, which is Base64-encoded.
+                    /// <para>The user data of the instance, which is Base64-encoded.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>SGVsbG9FQ1M=</para>
                     /// </summary>
                     [NameInMap("UserData")]
                     [Validation(Required=false)]
                     public string UserData { get; set; }
 
                     /// <summary>
-                    /// The ID of the vSwitch to which to connect the instance.
+                    /// <para>The ID of the vSwitch to which to connect the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>vsw-bp67acfmxazb4p****</para>
                     /// </summary>
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// The ID of the virtual private cloud (VPC).
+                    /// <para>The ID of the virtual private cloud (VPC).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>v-bp67acfmxazb4p****</para>
                     /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
 
                     /// <summary>
-                    /// The ID of the zone.
+                    /// <para>The zone ID of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou-g</para>
                     /// </summary>
                     [NameInMap("ZoneId")]
                     [Validation(Required=false)]
@@ -609,35 +831,50 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the launch template.
+                /// <para>The ID of the launch template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>lt-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("LaunchTemplateId")]
                 [Validation(Required=false)]
                 public string LaunchTemplateId { get; set; }
 
                 /// <summary>
-                /// The name of the launch template.
+                /// <para>The name of the launch template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testLaunchTemplateName</para>
                 /// </summary>
                 [NameInMap("LaunchTemplateName")]
                 [Validation(Required=false)]
                 public string LaunchTemplateName { get; set; }
 
                 /// <summary>
-                /// The time when the launch template was modified.
+                /// <para>The time when the launch template version was modified.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-01-17T08:40:00Z</para>
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// The description of the launch template version.
+                /// <para>The description of the launch template version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testVersionDescription</para>
                 /// </summary>
                 [NameInMap("VersionDescription")]
                 [Validation(Required=false)]
                 public string VersionDescription { get; set; }
 
                 /// <summary>
-                /// The number of the launch template version.
+                /// <para>The number of the launch template version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("VersionNumber")]
                 [Validation(Required=false)]
@@ -648,28 +885,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3989ED0C-20A1-4351-A127-2067FF8390AX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of launch templates.
+        /// <para>The total number of launch templates.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

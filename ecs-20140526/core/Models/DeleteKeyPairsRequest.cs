@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteKeyPairsRequest : TeaModel {
         /// <summary>
-        /// The names of SSH key pairs. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate the names with commas (,).
+        /// <para>The names of SSH key pairs. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate the names with commas (,).</para>
+        /// <remarks>
+        /// <para> Before you delete an SSH key pair, you can call the <a href="https://help.aliyun.com/document_detail/51773.html">DescribeKeyPairs</a> operation to query existing key pairs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  Before you delete an SSH key pair, you can call the [DescribeKeyPairs](https://help.aliyun.com/document_detail/51773.html) operation to query existing key pairs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;skp-bp67acfmxazb41****&quot;, &quot;skp-bp67acfmxazb42****&quot;, … &quot;skp-bp67acfmxazb4p3***&quot;]</para>
         /// </summary>
         [NameInMap("KeyPairNames")]
         [Validation(Required=false)]
@@ -25,9 +28,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.
+        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

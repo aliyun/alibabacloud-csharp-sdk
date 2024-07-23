@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssociateEipAddressRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

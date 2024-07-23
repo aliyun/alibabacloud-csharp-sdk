@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesRequest : TeaModel {
         /// <summary>
-        /// The IDs of image templates. Valid values of N: 1 to 20.
+        /// <para>The IDs of image templates. Valid values of N: 1 to 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ip-2ze5tsl5bp6nf2b3****</para>
         /// </summary>
         [NameInMap("ImagePipelineId")]
         [Validation(Required=false)]
         public List<string> ImagePipelineId { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 500.
+        /// <para>The number of entries per page. Valid values: 1 to 500.</para>
+        /// <para>Default value: 50.</para>
         /// 
-        /// Default value: 50.
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The name of the image template.
+        /// <para>The name of the image template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testImagePipeline</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAdDWBF2****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -48,18 +59,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the image template. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the image template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+        /// <para>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</para>
+        /// <remarks>
+        /// <para> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
+        /// </remarks>
         /// 
-        /// >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+        /// <b>Example:</b>
+        /// <para>rg-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -74,21 +91,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags of the image template.
+        /// <para>The tags of the image template.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeImagePipelinesRequestTag> Tag { get; set; }
         public class DescribeImagePipelinesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N. Valid values of N: 1 to 20.
+            /// <para>The key of tag N. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N. Valid values of N: 1 to 20.
+            /// <para>The value of tag N. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

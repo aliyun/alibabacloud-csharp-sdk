@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DisableActivationRequest : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>4ECEEE12-56F1-4FBC-9AB1-890F1234****</para>
         /// </summary>
         [NameInMap("ActivationId")]
         [Validation(Required=false)]
@@ -27,9 +29,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The activation code ID.
+        /// <para>The activation code ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

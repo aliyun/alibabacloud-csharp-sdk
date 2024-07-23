@@ -10,39 +10,52 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceMaintenanceAttributesRequest : TeaModel {
         /// <summary>
-        /// The maintenance action. Valid values:
+        /// <para>The maintenance action. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Stop: stops the instance.</description></item>
+        /// <item><description>AutoRecover: automatically recovers the instance.</description></item>
+        /// <item><description>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</description></item>
+        /// </list>
         /// 
-        /// *   Stop: stops the instance.
-        /// *   AutoRecover: automatically recovers the instance.
-        /// *   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.
+        /// <b>Example:</b>
+        /// <para>AutoRecover</para>
         /// </summary>
         [NameInMap("ActionOnMaintenance")]
         [Validation(Required=false)]
         public string ActionOnMaintenance { get; set; }
 
         /// <summary>
-        /// The ID of instance N. Valid values of N: 1 to 100.
+        /// <para>The ID of instance N. Valid values of N: 1 to 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-bp67acfmxazb4ph****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// The maintenance windows.
+        /// <para>The maintenance windows.</para>
         /// </summary>
         [NameInMap("MaintenanceWindow")]
         [Validation(Required=false)]
         public List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> MaintenanceWindow { get; set; }
         public class ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow : TeaModel {
             /// <summary>
-            /// The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
+            /// <para>The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <c>HH:mm:ss</c> format. The time must be in UTC+8. Set the value of N to 1.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>18:00:00</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
             /// <summary>
-            /// The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
+            /// <para>The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <c>HH:mm:ss</c> format. The time must be in UTC+8. Set the value of N to 1.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>02:00:00</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -51,12 +64,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// Specifies whether to send an event notification before maintenance. Valid values:
+        /// <para>Specifies whether to send an event notification before maintenance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// *   true
-        /// *   false
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("NotifyOnMaintenance")]
         [Validation(Required=false)]
@@ -71,9 +87,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,32 +10,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRenewalPriceResponseBody : TeaModel {
         /// <summary>
-        /// Details about the prices and promotion rules.
+        /// <para>Details about the prices and promotion rules.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeRenewalPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeRenewalPriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// The price.
+            /// <para>The price.</para>
             /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribeRenewalPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// The currency unit.
+                /// <para>The currency unit.</para>
+                /// <para>Alibaba Cloud China site (aliyun.com): CNY.</para>
+                /// <para>Alibaba Cloud International site (alibabacloud.com): USD.</para>
                 /// 
-                /// Alibaba Cloud China site (aliyun.com): CNY.
-                /// 
-                /// Alibaba Cloud International site (alibabacloud.com): USD.
+                /// <b>Example:</b>
+                /// <para>CNY</para>
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// Details about the resource prices.
+                /// <para>Details about the resource prices.</para>
                 /// </summary>
                 [NameInMap("DetailInfos")]
                 [Validation(Required=false)]
@@ -46,28 +47,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> ResourcePriceModel { get; set; }
                     public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel : TeaModel {
                         /// <summary>
-                        /// The discount.
+                        /// <para>The discount.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>655.2</para>
                         /// </summary>
                         [NameInMap("DiscountPrice")]
                         [Validation(Required=false)]
                         public float? DiscountPrice { get; set; }
 
                         /// <summary>
-                        /// The original price.
+                        /// <para>The original price.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>4368</para>
                         /// </summary>
                         [NameInMap("OriginalPrice")]
                         [Validation(Required=false)]
                         public float? OriginalPrice { get; set; }
 
                         /// <summary>
-                        /// The name of the resource that corresponds to the price.
+                        /// <para>The name of the resource that corresponds to the price.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>instance</para>
                         /// </summary>
                         [NameInMap("Resource")]
                         [Validation(Required=false)]
                         public string Resource { get; set; }
 
                         /// <summary>
-                        /// The pricing rules.
+                        /// <para>The pricing rules.</para>
                         /// </summary>
                         [NameInMap("SubRules")]
                         [Validation(Required=false)]
@@ -78,14 +88,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule> Rule { get; set; }
                             public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule : TeaModel {
                                 /// <summary>
-                                /// The description of the pricing rule.
+                                /// <para>The description of the pricing rule.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>Receive a 15% discount on a 1-year subscription.</para>
                                 /// </summary>
                                 [NameInMap("Description")]
                                 [Validation(Required=false)]
                                 public string Description { get; set; }
 
                                 /// <summary>
-                                /// The ID of the pricing rule.
+                                /// <para>The ID of the pricing rule.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>1234567890</para>
                                 /// </summary>
                                 [NameInMap("RuleId")]
                                 [Validation(Required=false)]
@@ -96,7 +112,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The transaction price.
+                        /// <para>The transaction price.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>3712.8</para>
                         /// </summary>
                         [NameInMap("TradePrice")]
                         [Validation(Required=false)]
@@ -107,21 +126,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The discount.
+                /// <para>The discount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>655.2</para>
                 /// </summary>
                 [NameInMap("DiscountPrice")]
                 [Validation(Required=false)]
                 public float? DiscountPrice { get; set; }
 
                 /// <summary>
-                /// The original price.
+                /// <para>The original price.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4368</para>
                 /// </summary>
                 [NameInMap("OriginalPrice")]
                 [Validation(Required=false)]
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// The transaction price, which is equal to the original price minus the discount.
+                /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3712.8</para>
                 /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
@@ -130,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// Details about the promotion rules.
+            /// <para>Details about the promotion rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -141,14 +169,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<DescribeRenewalPriceResponseBodyPriceInfoRulesRule> Rule { get; set; }
                 public class DescribeRenewalPriceResponseBodyPriceInfoRulesRule : TeaModel {
                     /// <summary>
-                    /// The description of the promotion rule.
+                    /// <para>The description of the promotion rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Receive a 15% discount on a 1-year subscription</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The ID of the promotion rule.
+                    /// <para>The ID of the promotion rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1234567890</para>
                     /// </summary>
                     [NameInMap("RuleId")]
                     [Validation(Required=false)]
@@ -161,7 +195,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

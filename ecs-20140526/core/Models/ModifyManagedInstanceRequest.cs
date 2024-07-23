@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyManagedInstanceRequest : TeaModel {
         /// <summary>
-        /// The new name of the managed instance. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with a special character or a digit. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:) and cannot start with `http://` or `https://`.
+        /// <para>The new name of the managed instance. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with a special character or a digit. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:) and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mi-hz01nmcf****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testInstanceName</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -36,9 +40,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the managed instance.
+        /// <para>The ID of the managed instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

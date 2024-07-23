@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTaskAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The time when the task was created.
+        /// <para>The time when the task was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2015-11-23T02:13Z</para>
         /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// The number of failed tasks.
+        /// <para>The number of failed tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("FailedCount")]
         [Validation(Required=false)]
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// The time when the task was complete.
+        /// <para>The time when the task was complete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2015-11-23T02:19Z</para>
         /// </summary>
         [NameInMap("FinishedTime")]
         [Validation(Required=false)]
         public string FinishedTime { get; set; }
 
         /// <summary>
-        /// An array consisting of OperationProgress data of each subtask.
+        /// <para>An array consisting of OperationProgress data of each subtask.</para>
         /// </summary>
         [NameInMap("OperationProgressSet")]
         [Validation(Required=false)]
@@ -42,28 +51,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress : TeaModel {
                 /// <summary>
-                /// The error code.
+                /// <para>The error code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ParameterInvalid</para>
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// The error message.
+                /// <para>The error message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The specified RegionId parameter is invalid.</para>
                 /// </summary>
                 [NameInMap("ErrorMsg")]
                 [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
 
                 /// <summary>
-                /// The status of the operation.
+                /// <para>The status of the operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Success</para>
                 /// </summary>
                 [NameInMap("OperationStatus")]
                 [Validation(Required=false)]
                 public string OperationStatus { get; set; }
 
                 /// <summary>
-                /// An array consisting of RelatedItem data.
+                /// <para>An array consisting of RelatedItem data.</para>
                 /// </summary>
                 [NameInMap("RelatedItemSet")]
                 [Validation(Required=false)]
@@ -74,14 +92,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem> RelatedItem { get; set; }
                     public class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem : TeaModel {
                         /// <summary>
-                        /// The name of the related item.
+                        /// <para>The name of the related item.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>OSSObject</para>
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// The value of the related item.
+                        /// <para>The value of the related item.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>MYOSSPRE_m-23f8tcp***_t-23ym6mv***.vhd</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -96,66 +120,94 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The region ID of the task.
+        /// <para>The region ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of completed tasks.
+        /// <para>The number of completed tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SuccessCount")]
         [Validation(Required=false)]
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// Indicates whether the task can be canceled ([CancelTask](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask)). Valid values: 
+        /// <para>Indicates whether the task can be canceled (<a href="https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask">CancelTask</a>). Valid values: </para>
+        /// <list type="bullet">
+        /// <item><description>true: The task can be canceled.</description></item>
+        /// <item><description>false: The task cannot be canceled.</description></item>
+        /// </list>
         /// 
-        /// - true: The task can be canceled.
-        /// - false: The task cannot be canceled.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("SupportCancel")]
         [Validation(Required=false)]
         public string SupportCancel { get; set; }
 
         /// <summary>
-        /// The operation name of the task.
+        /// <para>The operation name of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ExportImage</para>
         /// </summary>
         [NameInMap("TaskAction")]
         [Validation(Required=false)]
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// The ID of the task.
+        /// <para>The ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>t-ce946ntx4wr****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The progress of the task.
+        /// <para>The progress of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100%</para>
         /// </summary>
         [NameInMap("TaskProcess")]
         [Validation(Required=false)]
         public string TaskProcess { get; set; }
 
         /// <summary>
-        /// The status of the task.
+        /// <para>The status of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Finished</para>
         /// </summary>
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// The total number of tasks.
+        /// <para>The total number of tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

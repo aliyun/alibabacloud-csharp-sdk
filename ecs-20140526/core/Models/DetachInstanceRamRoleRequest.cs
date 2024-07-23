@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachInstanceRamRoleRequest : TeaModel {
         /// <summary>
-        /// The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).
+        /// <para>The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;i-bp67acfmxazb4p****&quot;, &quot;i-bp67acfmxazb5p****&quot;, &quot;i-bp67acfmxazb6p****&quot;…]</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -23,16 +25,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The name of the instance RAM role. You can call the [ListRoles](https://help.aliyun.com/document_detail/28713.html) operation provided by RAM to query the instance RAM roles that you created.
+        /// <para>The name of the instance RAM role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RamRoleTest</para>
         /// </summary>
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
         public string RamRoleName { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

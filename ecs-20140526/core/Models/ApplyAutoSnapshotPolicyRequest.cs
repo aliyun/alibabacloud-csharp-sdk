@@ -22,27 +22,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the automatic snapshot policy.
+        /// <para>The ID of the automatic snapshot policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sp-bp14yziiuvu3s6jn****</para>
         /// </summary>
         [NameInMap("autoSnapshotPolicyId")]
         [Validation(Required=false)]
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// The IDs of disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).
+        /// <para>The IDs of disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;d-bp14k9cxvr5uzy54****&quot;, &quot;d-bp1dtj8v7x6u08iw****&quot;, &quot;d-bp1c0tyj9tfli2r8****&quot;]</para>
         /// </summary>
         [NameInMap("diskIds")]
         [Validation(Required=false)]
         public string DiskIds { get; set; }
 
         /// <summary>
-        /// The region ID of the automatic snapshot policy and the disks. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the automatic snapshot policy and the disks. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]

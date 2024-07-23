@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceTypeFamiliesResponseBody : TeaModel {
         /// <summary>
-        /// The instance families.
+        /// <para>The instance families.</para>
         /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
@@ -21,14 +21,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily> InstanceTypeFamily { get; set; }
             public class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily : TeaModel {
                 /// <summary>
-                /// The generation of the instance family.
+                /// <para>The generation of the instance family.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs-5</para>
                 /// </summary>
                 [NameInMap("Generation")]
                 [Validation(Required=false)]
                 public string Generation { get; set; }
 
                 /// <summary>
-                /// The ID of the instance family.
+                /// <para>The ID of the instance family.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs.g6</para>
                 /// </summary>
                 [NameInMap("InstanceTypeFamilyId")]
                 [Validation(Required=false)]
@@ -39,7 +45,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class GetInstanceScreenshotRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-bp1gbz20g229bvu5****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -27,9 +29,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-shenzhen</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -44,9 +48,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to wake up the hibernated instance.
+        /// <para>Specifies whether to wake up the hibernated instance.</para>
+        /// <para>Default value: false.</para>
         /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("WakeUp")]
         [Validation(Required=false)]

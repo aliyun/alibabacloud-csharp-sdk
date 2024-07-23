@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyCloudAssistantSettingsShrinkRequest : TeaModel {
         /// <summary>
-        /// The configurations for upgrading Cloud Assistant Agent.
+        /// <para>The configurations for upgrading Cloud Assistant Agent.</para>
         /// </summary>
         [NameInMap("AgentUpgradeConfig")]
         [Validation(Required=false)]
         public string AgentUpgradeConfigShrink { get; set; }
 
         /// <summary>
-        /// The configurations for delivering records to Object Storage Service (OSS).
+        /// <para>The configurations for delivering records to Object Storage Service (OSS).</para>
         /// </summary>
         [NameInMap("OssDeliveryConfig")]
         [Validation(Required=false)]
@@ -32,9 +32,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -49,19 +51,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The Cloud Assistant feature. Valid values:
+        /// <para>The Cloud Assistant feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SessionManagerDelivery: the Session Record Delivery feature</description></item>
+        /// <item><description>InvocationDelivery: the Operation Content and Result Delivery feature</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   SessionManagerDelivery: the Session Record Delivery feature
-        /// *   InvocationDelivery: the Operation Content and Result Delivery feature
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SessionManagerDelivery</para>
         /// </summary>
         [NameInMap("SettingType")]
         [Validation(Required=false)]
         public string SettingType { get; set; }
 
         /// <summary>
-        /// The configurations for delivering records to Simple Log Service.
+        /// <para>The configurations for delivering records to Simple Log Service.</para>
         /// </summary>
         [NameInMap("SlsDeliveryConfig")]
         [Validation(Required=false)]

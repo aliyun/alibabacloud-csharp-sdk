@@ -14,9 +14,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeCapacityReservationInstancesRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class DescribeCapacityReservationInstancesRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// The token used to start the next query.
+            /// <para>The token used to start the next query.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>crp-bp67acfmxazb4****</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -25,14 +27,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The ID of the capacity reservation.
+        /// <para>The ID of the capacity reservation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -47,13 +55,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Maximum value: 100.</para>
+        /// <para>Default value: 10.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Maximum value: 100.
-        /// 
-        /// Default value: 10.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

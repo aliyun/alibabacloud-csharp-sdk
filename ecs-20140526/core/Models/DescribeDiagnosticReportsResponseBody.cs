@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticReportsResponseBody : TeaModel {
         /// <summary>
-        /// The query token returned in this call.
+        /// <para>The query token returned in this call.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The list of reports.
+        /// <para>The list of reports.</para>
         /// </summary>
         [NameInMap("Reports")]
         [Validation(Required=false)]
@@ -28,28 +31,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDiagnosticReportsResponseBodyReportsReport> Report { get; set; }
             public class DescribeDiagnosticReportsResponseBodyReportsReport : TeaModel {
                 /// <summary>
-                /// The time when the diagnostic report was created.
+                /// <para>The time when the diagnostic report was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-07-11T12:00:00Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](https://help.aliyun.com/document_detail/442490.html) operation to create the diagnostic report.
+                /// <para>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-07-11T14:00:00Z</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The time when the diagnostic was complete.
+                /// <para>The time when the diagnostic was complete.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-07-11T14:00:00Z</para>
                 /// </summary>
                 [NameInMap("FinishedTime")]
                 [Validation(Required=false)]
                 public string FinishedTime { get; set; }
 
                 /// <summary>
-                /// The list of issues.
+                /// <para>The list of issues.</para>
                 /// </summary>
                 [NameInMap("Issues")]
                 [Validation(Required=false)]
@@ -60,32 +72,45 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue> Issue { get; set; }
                     public class DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue : TeaModel {
                         /// <summary>
-                        /// The unique ID of the diagnosed issue.
+                        /// <para>The unique ID of the diagnosed issue.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>GuestOS.CPU.HighUtiliz*****</para>
                         /// </summary>
                         [NameInMap("IssueId")]
                         [Validation(Required=false)]
                         public string IssueId { get; set; }
 
                         /// <summary>
-                        /// The category of the diagnostic metric.
+                        /// <para>The category of the diagnostic metric.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>ECSService.GuestOS</para>
                         /// </summary>
                         [NameInMap("MetricCategory")]
                         [Validation(Required=false)]
                         public string MetricCategory { get; set; }
 
                         /// <summary>
-                        /// The ID of the diagnostic metric.
+                        /// <para>The ID of the diagnostic metric.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>GuestOS.WinFirewall</para>
                         /// </summary>
                         [NameInMap("MetricId")]
                         [Validation(Required=false)]
                         public string MetricId { get; set; }
 
                         /// <summary>
-                        /// The severity level of the diagnostic metric. Valid values:
+                        /// <para>The severity level of the diagnostic metric. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>Info: Diagnostic information was recorded and may be related to exceptions.</description></item>
+                        /// <item><description>Warn: Diagnostic information was recorded and may indicate exceptions.</description></item>
+                        /// <item><description>Critical: Critical exceptions were detected.</description></item>
+                        /// </list>
                         /// 
-                        /// *   Info: Diagnostic information was recorded and may be related to exceptions.
-                        /// *   Warn: Diagnostic information was recorded and may indicate exceptions.
-                        /// *   Critical: Critical exceptions were detected.
+                        /// <b>Example:</b>
+                        /// <para>Info</para>
                         /// </summary>
                         [NameInMap("Severity")]
                         [Validation(Required=false)]
@@ -96,55 +121,77 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the diagnostic metric set.
+                /// <para>The ID of the diagnostic metric set.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dms-bp17p0qwtr72zmu*****</para>
                 /// </summary>
                 [NameInMap("MetricSetId")]
                 [Validation(Required=false)]
                 public string MetricSetId { get; set; }
 
                 /// <summary>
-                /// The ID of the diagnostic report.
+                /// <para>The ID of the diagnostic report.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dr-uf6i0tv2refv8wz*****</para>
                 /// </summary>
                 [NameInMap("ReportId")]
                 [Validation(Required=false)]
                 public string ReportId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource.
+                /// <para>The ID of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-uf6i0tv2refv8wz*****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource.
+                /// <para>The type of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instance</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The severity level of the diagnostic report. Valid values:
+                /// <para>The severity level of the diagnostic report. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</description></item>
+                /// <item><description>Normal: No exceptions were detected.</description></item>
+                /// <item><description>Info: Diagnostic information was recorded and may be related to exceptions.</description></item>
+                /// <item><description>Warn: Diagnostic information was recorded and may indicate exceptions.</description></item>
+                /// <item><description>Critical: Critical exceptions were detected.</description></item>
+                /// </list>
                 /// 
-                /// *   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
-                /// *   Normal: No exceptions were detected.
-                /// *   Info: Diagnostic information was recorded and may be related to exceptions.
-                /// *   Warn: Diagnostic information was recorded and may indicate exceptions.
-                /// *   Critical: Critical exceptions were detected.
+                /// <b>Example:</b>
+                /// <para>Normal</para>
                 /// </summary>
                 [NameInMap("Severity")]
                 [Validation(Required=false)]
                 public string Severity { get; set; }
 
                 /// <summary>
-                /// The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](https://help.aliyun.com/document_detail/442490.html) operation to create the diagnostic report.
+                /// <para>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-07-11T12:00:00Z</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The state of the diagnostic report.
+                /// <para>The state of the diagnostic report.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Finished</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -155,7 +202,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

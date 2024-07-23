@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RedeployDedicatedHostResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FCED4B7A-53D5-4C04-ABE3-26D4F3890D57</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

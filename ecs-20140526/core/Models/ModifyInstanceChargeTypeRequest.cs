@@ -10,72 +10,91 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceChargeTypeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically complete the payment. Valid values:
+        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled.</description></item>
+        /// <item><description>false: An order is generated but no payment is made.</description></item>
+        /// </list>
+        /// <para>Default value: true.</para>
+        /// <remarks>
+        /// <para>If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</para>
+        /// </remarks>
         /// 
-        /// *   true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled.
-        /// *   false: An order is generated but no payment is made.
-        /// 
-        /// Default value: true.
-        /// 
-        /// > If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run. Valid Values:
+        /// <para>Specifies whether to perform only a dry run. Valid Values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// *   true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Specifies whether to change the billing method of all data disks attached to the instance from pay-as-you-go to subscription.
+        /// <para>Specifies whether to change the billing method of all data disks attached to the instance from pay-as-you-go to subscription.</para>
+        /// <para>Default value: false.</para>
         /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IncludeDataDisks")]
         [Validation(Required=false)]
         public bool? IncludeDataDisks { get; set; }
 
         /// <summary>
-        /// The new billing method. Valid values:
+        /// <para>The new billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid</description></item>
+        /// <item><description>PostPaid</description></item>
+        /// </list>
+        /// <para>Default value: PrePaid.</para>
         /// 
-        /// *   PrePaid
-        /// *   PostPaid
-        /// 
-        /// Default value: PrePaid.
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The instance IDs. The value can be a JSON array that consists of up to 20 instance IDs. Separate the instance IDs with commas (,).
+        /// <para>The instance IDs. The value can be a JSON array that consists of up to 20 instance IDs. Separate the instance IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;i-bp67acfmxazb4p****&quot;,&quot;i-bp67acfmxazb4d****&quot;]</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go.
+        /// <para>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go.</para>
+        /// <para>Default value: false.</para>
         /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsDetailFee")]
         [Validation(Required=false)]
@@ -90,29 +109,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The renewal duration of the subscription instance. If the instance is hosted on a dedicated host, the renewal duration of the instance cannot exceed the subscription duration of the dedicated host. Valid values:
+        /// <para>The renewal duration of the subscription instance. If the instance is hosted on a dedicated host, the renewal duration of the instance cannot exceed the subscription duration of the dedicated host. Valid values:</para>
+        /// <para>Valid values when <c>PeriodUnit</c> is set to Month: <c>1, 2, 3, 4, 5, 6, 7, 8, 9, and 12</c>.</para>
         /// 
-        /// Valid values when `PeriodUnit` is set to Month: `1, 2, 3, 4, 5, 6, 7, 8, 9, and 12`.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the renewal duration specified by `Period`. Valid values:
+        /// <para>The unit of the renewal duration specified by <c>Period</c>. Valid values:</para>
+        /// <para>Month</para>
+        /// <para>Default value: Month.</para>
         /// 
-        /// Month
-        /// 
-        /// Default value: Month.
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

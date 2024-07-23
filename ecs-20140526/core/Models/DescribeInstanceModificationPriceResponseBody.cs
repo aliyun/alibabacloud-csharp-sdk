@@ -10,46 +10,56 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceModificationPriceResponseBody : TeaModel {
         /// <summary>
-        /// Details about the prices and promotion rules.
+        /// <para>Details about the prices and promotion rules.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeInstanceModificationPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeInstanceModificationPriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// The price.
+            /// <para>The price.</para>
             /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// The currency unit.
+                /// <para>The currency unit.</para>
+                /// <para>Alibaba Cloud China site (aliyun.com): CNY</para>
+                /// <para>Alibaba Cloud International site (alibabacloud.com): USD</para>
                 /// 
-                /// Alibaba Cloud China site (aliyun.com): CNY
-                /// 
-                /// Alibaba Cloud International site (alibabacloud.com): USD
+                /// <b>Example:</b>
+                /// <para>CNY</para>
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// The discount.
+                /// <para>The discount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>61.320</para>
                 /// </summary>
                 [NameInMap("DiscountPrice")]
                 [Validation(Required=false)]
                 public float? DiscountPrice { get; set; }
 
                 /// <summary>
-                /// The original price.
+                /// <para>The original price.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>175.200</para>
                 /// </summary>
                 [NameInMap("OriginalPrice")]
                 [Validation(Required=false)]
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// The transaction price, which is equal to the original price minus the discount.
+                /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>113.880</para>
                 /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
@@ -58,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// The promotion rules.
+            /// <para>The promotion rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -69,14 +79,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule> Rule { get; set; }
                 public class DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule : TeaModel {
                     /// <summary>
-                    /// The description of the promotion rule.
+                    /// <para>The description of the promotion rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Upgrade offers</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The ID of the promotion rule.
+                    /// <para>The ID of the promotion rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1234567890</para>
                     /// </summary>
                     [NameInMap("RuleId")]
                     [Validation(Required=false)]
@@ -89,7 +105,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A3DC3196-379B-4F32-A2C5-B937134FAD8A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

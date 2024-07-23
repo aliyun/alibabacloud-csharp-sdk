@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeEniMonitorDataRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2018-05-21T12:22:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The secondary ENI ID. By default, all secondary ENIs that are bound to the specified instance are queried.
+        /// <para>The secondary ENI ID. By default, all secondary ENIs that are bound to the specified instance are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eni-bp19da36d6xdwey****</para>
         /// </summary>
         [NameInMap("EniId")]
         [Validation(Required=false)]
         public string EniId { get; set; }
 
         /// <summary>
-        /// The ID of the instance to which the secondary ENI is bound.
+        /// <para>The ID of the instance to which the secondary ENI is bound.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-bp1a5zr3u7nq9cx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -43,22 +50,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The interval at which to retrieve monitoring data. Unit: seconds. Valid values:
+        /// <para>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>60</description></item>
+        /// <item><description>600</description></item>
+        /// <item><description>3600</description></item>
+        /// </list>
+        /// <para>Default value: 60.</para>
         /// 
-        /// *   60
-        /// *   600
-        /// *   3600
-        /// 
-        /// Default value: 60.
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -73,9 +85,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2018-05-21T12:19:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

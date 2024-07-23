@@ -10,25 +10,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The natural language that is used to filter responses. For more information, visit [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
+        /// <para>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN: Chinese</description></item>
+        /// <item><description>en-US: English</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
+        /// <para>Default value: zh-CN.</para>
         /// 
-        /// *   zh-CN: Chinese
-        /// *   en-US: English
-        /// *   ja: Japanese
-        /// 
-        /// Default value: zh-CN.
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:
+        /// <para>The billing method of instances. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// </list>
+        /// <para>Default value: PostPaid.</para>
         /// 
-        /// *   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.
-        /// *   PostPaid: pay-as-you-go.
-        /// 
-        /// Default value: PostPaid.
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -51,14 +57,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// <para>The resource type. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>instance: Elastic Compute Service (ECS) instance</description></item>
+        /// <item><description>disk: disk</description></item>
+        /// <item><description>reservedinstance: reserved instance</description></item>
+        /// <item><description>scu: storage capacity unit (SCU)</description></item>
+        /// </list>
+        /// <para>Default value: instance.</para>
         /// 
-        /// *   instance: Elastic Compute Service (ECS) instance
-        /// *   disk: disk
-        /// *   reservedinstance: reserved instance
-        /// *   scu: storage capacity unit (SCU)
-        /// 
-        /// Default value: instance.
+        /// <b>Example:</b>
+        /// <para>instance</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

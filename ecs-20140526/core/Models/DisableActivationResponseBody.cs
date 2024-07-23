@@ -10,74 +10,105 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DisableActivationResponseBody : TeaModel {
         /// <summary>
-        /// The time when the activation code was created.
+        /// <para>The time when the activation code was created.</para>
         /// </summary>
         [NameInMap("Activation")]
         [Validation(Required=false)]
         public DisableActivationResponseBodyActivation Activation { get; set; }
         public class DisableActivationResponseBodyActivation : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>4ECEEE12-56F1-4FBC-9AB1-890F1234****</para>
+            /// </summary>
             [NameInMap("ActivationId")]
             [Validation(Required=false)]
             public string ActivationId { get; set; }
 
             /// <summary>
-            /// The number of instances that were deregistered.
+            /// <para>The number of instances that were deregistered.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-01-20T06:00:00Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The maximum number of times that the activation code can be used to register managed instances.
+            /// <para>The maximum number of times that the activation code can be used to register managed instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("DeregisteredCount")]
             [Validation(Required=false)]
             public int? DeregisteredCount { get; set; }
 
             /// <summary>
-            /// The number of registered instances.
+            /// <para>The number of registered instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>This is description.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The IP addresses of the hosts that can use the activation code.
+            /// <para>The IP addresses of the hosts that can use the activation code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Disabled")]
             [Validation(Required=false)]
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// The description of the activation code.
+            /// <para>The description of the activation code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// Indicates whether the activation code is disabled.
+            /// <para>Indicates whether the activation code is disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-InstanceName</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The validity period of the activation code. Unit: hours.
+            /// <para>The validity period of the activation code. Unit: hours.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0.0.0/0</para>
             /// </summary>
             [NameInMap("IpAddressRange")]
             [Validation(Required=false)]
             public string IpAddressRange { get; set; }
 
             /// <summary>
-            /// The default prefix of the instance name.
+            /// <para>The default prefix of the instance name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RegisteredCount")]
             [Validation(Required=false)]
             public int? RegisteredCount { get; set; }
 
             /// <summary>
-            /// The activation code ID.
+            /// <para>The activation code ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("TimeToLiveInHours")]
             [Validation(Required=false)]
@@ -86,7 +117,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// Details about the activation code and its usage information.
+        /// <para>Details about the activation code and its usage information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4ECEEE12-56F1-4FBC-9AB1-890F74942176</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

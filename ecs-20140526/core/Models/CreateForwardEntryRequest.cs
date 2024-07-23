@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateForwardEntryRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExternalIp")]
         [Validation(Required=false)]
         public string ExternalIp { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExternalPort")]
         [Validation(Required=false)]
         public string ExternalPort { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ForwardTableId")]
         [Validation(Required=false)]
         public string ForwardTableId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InternalIp")]
         [Validation(Required=false)]
         public string InternalIp { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InternalPort")]
         [Validation(Required=false)]
         public string InternalPort { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

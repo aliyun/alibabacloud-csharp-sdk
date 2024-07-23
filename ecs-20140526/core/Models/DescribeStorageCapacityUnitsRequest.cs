@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeStorageCapacityUnitsRequest : TeaModel {
         /// <summary>
-        /// The allocation type. Valid values:
+        /// <para>The allocation type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Normal: queries SCUs that belong to the current Alibaba Cloud account.</description></item>
+        /// <item><description>Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</description></item>
+        /// </list>
+        /// <para>Default value: Normal.</para>
         /// 
-        /// *   Normal: queries SCUs that belong to the current Alibaba Cloud account.
-        /// *   Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.
-        /// 
-        /// Default value: Normal.
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("AllocationType")]
         [Validation(Required=false)]
         public string AllocationType { get; set; }
 
         /// <summary>
-        /// The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, and 51200.
+        /// <para>The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, and 51200.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("Capacity")]
         [Validation(Required=false)]
         public int? Capacity { get; set; }
 
         /// <summary>
-        /// The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
+        /// <para>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testScuName</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -44,31 +53,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Pages start from page 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Pages start from page 1.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Maximum value: 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
-        /// Maximum value: 100.
-        /// 
-        /// Default value: 10.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the SCU. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the SCU. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -83,40 +96,53 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The state of SCUs. You can specify 1 to 4 types of state. Valid values:
+        /// <para>The state of SCUs. You can specify 1 to 4 types of state. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Creating: The SCUs are being created.</description></item>
+        /// <item><description>Active: The SCUs are in effect.</description></item>
+        /// <item><description>Expired: The SCUs have expired.</description></item>
+        /// <item><description>Pending: The SCUs have not taken effect.</description></item>
+        /// </list>
         /// 
-        /// *   Creating: The SCUs are being created.
-        /// *   Active: The SCUs are in effect.
-        /// *   Expired: The SCUs have expired.
-        /// *   Pending: The SCUs have not taken effect.
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// One or multiple SCU IDs. You can specify 1 to 100 SCU IDs.
+        /// <para>One or multiple SCU IDs. You can specify 1 to 100 SCU IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>scu-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("StorageCapacityUnitId")]
         [Validation(Required=false)]
         public List<string> StorageCapacityUnitId { get; set; }
 
         /// <summary>
-        /// The tags of the SCUs.
+        /// <para>The tags of the SCUs.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeStorageCapacityUnitsRequestTag> Tag { get; set; }
         public class DescribeStorageCapacityUnitsRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.
+            /// <para>The key of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with `Tag.N.Key`. Valid values of N: 1 to 20.
+            /// <para>The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with <c>Tag.N.Key</c>. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

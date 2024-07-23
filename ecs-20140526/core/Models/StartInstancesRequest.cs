@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartInstancesRequest : TeaModel {
         /// <summary>
-        /// The IDs of the ECS instances. You can specify up to 100 ECS instance IDs.
+        /// <para>The IDs of the ECS instances. You can specify up to 100 ECS instance IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AllTogether</para>
         /// </summary>
         [NameInMap("BatchOptimization")]
         [Validation(Required=false)]
         public string BatchOptimization { get; set; }
 
         /// <summary>
-        /// The region ID of the ECS instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of instance N. Valid values of N: 1 to 100.
+        /// <para>The ID of instance N. Valid values of N: 1 to 100.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>i-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -41,14 +49,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The batch operation mode. Valid values:
+        /// <para>The batch operation mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</description></item>
+        /// <item><description>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</description></item>
+        /// </list>
+        /// <para>Default value: AllTogether.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.
-        /// *   SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.
-        /// 
-        /// Default value: AllTogether.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

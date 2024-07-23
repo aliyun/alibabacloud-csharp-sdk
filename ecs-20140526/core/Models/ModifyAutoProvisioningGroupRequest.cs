@@ -10,81 +10,110 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyAutoProvisioningGroupRequest : TeaModel {
         /// <summary>
-        /// The auto-provisioning group ID.
+        /// <para>The auto-provisioning group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>apg-bp67acfmxazb4ph****</para>
         /// </summary>
         [NameInMap("AutoProvisioningGroupId")]
         [Validation(Required=false)]
         public string AutoProvisioningGroupId { get; set; }
 
         /// <summary>
-        /// The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://.[ It can contain letters, digits, colons (:), underscores (_), and hyphens (-).](http://https://。、（:）、（_）（-）。)
+        /// <para>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</a></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>apg-test</para>
         /// </summary>
         [NameInMap("AutoProvisioningGroupName")]
         [Validation(Required=false)]
         public string AutoProvisioningGroupName { get; set; }
 
         /// <summary>
-        /// The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto-provisioning group creates instances of the specified type to meet the target capacity. Valid values:
+        /// <para>The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto-provisioning group creates instances of the specified type to meet the target capacity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PayAsYouGo: pay-as-you-go instances</description></item>
+        /// <item><description>Spot: preemptible instances</description></item>
+        /// </list>
         /// 
-        /// *   PayAsYouGo: pay-as-you-go instances
-        /// *   Spot: preemptible instances
+        /// <b>Example:</b>
+        /// <para>Spot</para>
         /// </summary>
         [NameInMap("DefaultTargetCapacityType")]
         [Validation(Required=false)]
         public string DefaultTargetCapacityType { get; set; }
 
         /// <summary>
-        /// Specifies whether to release the removed instances when the real-time capacity of the auto-provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:
+        /// <para>Specifies whether to release the removed instances when the real-time capacity of the auto-provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>termination: releases the removed instances.</description></item>
+        /// <item><description>no-termination: removes the instances from the auto-provisioning group but does not release them.</description></item>
+        /// </list>
         /// 
-        /// *   termination: releases the removed instances.
-        /// *   no-termination: removes the instances from the auto-provisioning group but does not release them.
+        /// <b>Example:</b>
+        /// <para>no-termination</para>
         /// </summary>
         [NameInMap("ExcessCapacityTerminationPolicy")]
         [Validation(Required=false)]
         public string ExcessCapacityTerminationPolicy { get; set; }
 
         /// <summary>
-        /// The extended configurations of the launch template.
+        /// <para>The extended configurations of the launch template.</para>
         /// </summary>
         [NameInMap("LaunchTemplateConfig")]
         [Validation(Required=false)]
         public List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> LaunchTemplateConfig { get; set; }
         public class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig : TeaModel {
             /// <summary>
-            /// The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
+            /// <para>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecs.g5.large</para>
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// The maximum price of preemptible instances in extended configuration N.
+            /// <para>The maximum price of preemptible instances in extended configuration N.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("MaxPrice")]
             [Validation(Required=false)]
             public double? MaxPrice { get; set; }
 
             /// <summary>
-            /// The priority of extended configuration N. A value of 0 indicates the highest priority. The value must be greater than 0.
+            /// <para>The priority of extended configuration N. A value of 0 indicates the highest priority. The value must be greater than 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch in extended configuration N. The zone of the instances created from the extended configuration is determined by the vSwitch.
+            /// <para>The ID of the vSwitch in extended configuration N. The zone of the instances created from the extended configuration is determined by the vSwitch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-sn5bsitu4lfzgc5o7****</para>
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The weight of the instance type specified in the extended configuration. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.
+            /// <para>The weight of the instance type specified in the extended configuration. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.</para>
+            /// <para>The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster that can created by the auto-provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.</para>
+            /// <list type="bullet">
+            /// <item><description>For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.</description></item>
+            /// <item><description>For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.</description></item>
+            /// </list>
             /// 
-            /// The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster that can created by the auto-provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.
-            /// 
-            /// *   For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.
-            /// *   For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("WeightedCapacity")]
             [Validation(Required=false)]
@@ -93,9 +122,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The maximum price of preemptible instances in the auto-provisioning group.
+        /// <para>The maximum price of preemptible instances in the auto-provisioning group.</para>
+        /// <remarks>
+        /// <para>When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto-provisioning group is created, and cannot be modified.</para>
+        /// </remarks>
         /// 
-        /// > When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto-provisioning group is created, and cannot be modified.
+        /// <b>Example:</b>
+        /// <para>0.5</para>
         /// </summary>
         [NameInMap("MaxSpotPrice")]
         [Validation(Required=false)]
@@ -110,16 +143,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The target capacity of pay-as-you-go instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
+        /// <para>The target capacity of pay-as-you-go instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PayAsYouGoTargetCapacity")]
         [Validation(Required=false)]
         public string PayAsYouGoTargetCapacity { get; set; }
 
         /// <summary>
-        /// The region ID of the auto-provisioning group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// <para>The region ID of the auto-provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -134,26 +172,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The target capacity of preemptible instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
+        /// <para>The target capacity of preemptible instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("SpotTargetCapacity")]
         [Validation(Required=false)]
         public string SpotTargetCapacity { get; set; }
 
         /// <summary>
-        /// Specifies whether to release instances that are located in the auto-provisioning group after the group expires. Valid values:
+        /// <para>Specifies whether to release instances that are located in the auto-provisioning group after the group expires. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: releases instances that are located in the auto-provisioning group.</description></item>
+        /// <item><description>false: removes instances from the auto-provisioning group but does not release them.</description></item>
+        /// </list>
         /// 
-        /// *   true: releases instances that are located in the auto-provisioning group.
-        /// *   false: removes instances from the auto-provisioning group but does not release them.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("TerminateInstancesWithExpiration")]
         [Validation(Required=false)]
         public bool? TerminateInstancesWithExpiration { get; set; }
 
         /// <summary>
-        /// The total target capacity of the auto-provisioning group. The value must be a positive integer.
+        /// <para>The total target capacity of the auto-provisioning group. The value must be a positive integer.</para>
+        /// <para>The total target capacity of the auto-provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter as well as the target capacity of preemptible instances specified by the SpotTargetCapacity parameter.</para>
         /// 
-        /// The total target capacity of the auto-provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter as well as the target capacity of preemptible instances specified by the SpotTargetCapacity parameter.
+        /// <b>Example:</b>
+        /// <para>70</para>
         /// </summary>
         [NameInMap("TotalTargetCapacity")]
         [Validation(Required=false)]

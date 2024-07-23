@@ -10,59 +10,72 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreatePrefixListRequest : TeaModel {
         /// <summary>
-        /// The IP address family. Valid values:
+        /// <para>The IP address family. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>IPv4</description></item>
+        /// <item><description>IPv6</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   IPv4
-        /// *   IPv6
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
         /// </summary>
         [NameInMap("AddressFamily")]
         [Validation(Required=false)]
         public string AddressFamily { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// <para>The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The details of entries in the prefix list.
+        /// <para>The details of entries in the prefix list.</para>
         /// </summary>
         [NameInMap("Entry")]
         [Validation(Required=false)]
         public List<CreatePrefixListRequestEntry> Entry { get; set; }
         public class CreatePrefixListRequestEntry : TeaModel {
             /// <summary>
-            /// The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:
+            /// <para>The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:</para>
+            /// <list type="bullet">
+            /// <item><description>The total number of entries cannot exceed the <c>MaxEntries</c> value.</description></item>
+            /// <item><description>CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</description></item>
+            /// <item><description>CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</description></item>
+            /// <item><description>IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.</description></item>
+            /// <item><description>If an IPv6 CIDR block is used, the system converts it into the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.</description></item>
+            /// </list>
+            /// <para>For more information about CIDR blocks, see the <a href="https://help.aliyun.com/document_detail/40637.html#title-gu4-uzk-12r">What is CIDR?</a> section in the &quot;Network FAQ&quot; topic.</para>
+            /// <para>This parameter is empty by default.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   The total number of entries cannot exceed the `MaxEntries` value.
-            /// *   CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.
-            /// *   CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.
-            /// *   IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.
-            /// *   If an IPv6 CIDR block is used, the system converts it into the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.
-            /// 
-            /// For more information about CIDR blocks, see the [What is CIDR?](https://help.aliyun.com/document_detail/40637.html#title-gu4-uzk-12r) section in the "Network FAQ" topic.
-            /// 
-            /// This parameter is empty by default.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>192.168.1.0/24</para>
             /// </summary>
             [NameInMap("Cidr")]
             [Validation(Required=false)]
             public string Cidr { get; set; }
 
             /// <summary>
-            /// The description in entry N. The description must be 2 to 32 characters in length and cannot start with `http://` or `https://`. Valid values of N: 0 to 200.
+            /// <para>The description in entry N. The description must be 2 to 32 characters in length and cannot start with <c>http://</c> or <c>https://</c>. Valid values of N: 0 to 200.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Description Sample 01</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -71,9 +84,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The maximum number of entries that the prefix list can contain. Valid values: 1 to 200.
+        /// <para>The maximum number of entries that the prefix list can contain. Valid values: 1 to 200.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxEntries")]
         [Validation(Required=false)]
@@ -88,18 +103,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.
+        /// <para>The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with <c>http://</c>, <c>https://</c>, <c>com.aliyun</c>, or <c>com.alibabacloud</c>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PrefixListNameSample</para>
         /// </summary>
         [NameInMap("PrefixListName")]
         [Validation(Required=false)]
         public string PrefixListName { get; set; }
 
         /// <summary>
-        /// The ID of the region in which to create the prefix list.
+        /// <para>The ID of the region in which to create the prefix list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-chengdu</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
