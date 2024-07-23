@@ -10,76 +10,104 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyEndpointResponseBody : TeaModel {
         /// <summary>
-        /// The proxy endpoint queried.
+        /// <para>The proxy endpoint queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testproxy****.rwlb.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("DBProxyConnectString")]
         [Validation(Required=false)]
         public string DBProxyConnectString { get; set; }
 
         /// <summary>
-        /// The network type of the proxy endpoint. Valid values:
+        /// <para>The network type of the proxy endpoint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>InnerString</b>: internal network</description></item>
+        /// <item><description><b>OuterString</b>: Internet</description></item>
+        /// </list>
         /// 
-        /// *   **InnerString**: internal network
-        /// *   **OuterString**: Internet
+        /// <b>Example:</b>
+        /// <para>InnerString</para>
         /// </summary>
         [NameInMap("DBProxyConnectStringNetType")]
         [Validation(Required=false)]
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// The port number that is associated with the proxy endpoint.
+        /// <para>The port number that is associated with the proxy endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("DBProxyConnectStringPort")]
         [Validation(Required=false)]
         public string DBProxyConnectStringPort { get; set; }
 
         /// <summary>
-        /// The ID of the proxy endpoint.
+        /// <para>The ID of the proxy endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>keaxncrjluwu0gue****</para>
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// An internal parameter. You can ignore this parameter.
+        /// <para>An internal parameter. You can ignore this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("DBProxyEngineType")]
         [Validation(Required=false)]
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// The configuration of the proxy terminal. The value of this parameter is a JSON string that consists of the following fields:
+        /// <para>The configuration of the proxy terminal. The value of this parameter is a JSON string that consists of the following fields:</para>
+        /// <list type="bullet">
+        /// <item><description><b>TransactionReadSqlRouteOptimizeStatus</b>: the status of the transaction splitting feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
+        /// <item><description><b>ConnectionPersist</b>: the status of the connection pooling feature. Valid values: <b>0</b>, <b>1</b>, and <b>2</b>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session connection pooling feature is enabled. The value 2 indicates that the transaction connection pooling feature is enabled.</description></item>
+        /// <item><description><b>ReadWriteSpliting</b>: the status of the read/write splitting feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
+        /// <item><description><b>PinPreparedStmt</b>: an internal field that is available only for ApsaraDB RDS for PostgreSQL instances.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If the instance runs PostgreSQL, you can change only the value of the <b>ReadWriteSpliting</b> field. The <b>TransactionReadSqlRouteOptimizeStatus</b> and <b>PinPreparedStmt</b> fields are set to their default values 1.</para>
+        /// </remarks>
         /// 
-        /// *   **TransactionReadSqlRouteOptimizeStatus**: the status of the transaction splitting feature. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.
-        /// *   **ConnectionPersist**: the status of the connection pooling feature. Valid values: **0**, **1**, and **2**. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session connection pooling feature is enabled. The value 2 indicates that the transaction connection pooling feature is enabled.
-        /// *   **ReadWriteSpliting**: the status of the read/write splitting feature. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.
-        /// *   **PinPreparedStmt**: an internal field that is available only for ApsaraDB RDS for PostgreSQL instances.
-        /// 
-        /// >  If the instance runs PostgreSQL, you can change only the value of the **ReadWriteSpliting** field. The **TransactionReadSqlRouteOptimizeStatus** and **PinPreparedStmt** fields are set to their default values 1.
+        /// <b>Example:</b>
+        /// <para>TransactionReadSqlRouteOptimizeStatus:1;ConnectionPersist:0;ReadWriteSpliting:1</para>
         /// </summary>
         [NameInMap("DBProxyFeatures")]
         [Validation(Required=false)]
         public string DBProxyFeatures { get; set; }
 
         /// <summary>
-        /// The description of the proxy terminal.
+        /// <para>The description of the proxy terminal.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>proxyterminal-test</para>
         /// </summary>
         [NameInMap("DbProxyEndpointAliases")]
         [Validation(Required=false)]
         public string DbProxyEndpointAliases { get; set; }
 
         /// <summary>
-        /// The read and write attributes of the proxy terminal. Valid values:
+        /// <para>The read and write attributes of the proxy terminal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ReadWrite</b>: The proxy terminal supports read and write requests.</description></item>
+        /// <item><description><b>ReadOnly</b>: The proxy terminal supports only read requests.</description></item>
+        /// </list>
         /// 
-        /// *   **ReadWrite**: The proxy terminal supports read and write requests.
-        /// *   **ReadOnly**: The proxy terminal supports only read requests.
+        /// <b>Example:</b>
+        /// <para>ReadWrite</para>
         /// </summary>
         [NameInMap("DbProxyEndpointReadWriteMode")]
         [Validation(Required=false)]
         public string DbProxyEndpointReadWriteMode { get; set; }
 
         /// <summary>
-        /// An array that consists of the information about the proxy endpoint.
+        /// <para>An array that consists of the information about the proxy endpoint.</para>
         /// </summary>
         [NameInMap("EndpointConnectItems")]
         [Validation(Required=false)]
@@ -90,25 +118,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems> EndpointConnectItems { get; set; }
             public class DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems : TeaModel {
                 /// <summary>
-                /// The proxy endpoint queried.
+                /// <para>The proxy endpoint queried.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testproxy****.rwlb.rds.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("DbProxyEndpointConnectString")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointConnectString { get; set; }
 
                 /// <summary>
-                /// The network type of the instance. Valid values:
+                /// <para>The network type of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: Internet</description></item>
+                /// <item><description><b>1</b>: classic network</description></item>
+                /// <item><description><b>2</b>: virtual private cloud (VPC)</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: Internet
-                /// *   **1**: classic network
-                /// *   **2**: virtual private cloud (VPC)
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("DbProxyEndpointNetType")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointNetType { get; set; }
 
                 /// <summary>
-                /// The port number that is associated with the proxy endpoint. Default value: **3306**.
+                /// <para>The port number that is associated with the proxy endpoint. Default value: <b>3306</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
                 /// </summary>
                 [NameInMap("DbProxyEndpointPort")]
                 [Validation(Required=false)]
@@ -119,37 +157,51 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The method that is used to assign read weights. For more information, see [Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/96076.html). Valid values:
+        /// <para>The method that is used to assign read weights. For more information, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Standard</b>: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.</description></item>
+        /// <item><description><b>Custom</b>: You must manually assign read weights to the instance and its read-only instances.</description></item>
+        /// </list>
         /// 
-        /// *   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.
-        /// *   **Custom**: You must manually assign read weights to the instance and its read-only instances.
+        /// <b>Example:</b>
+        /// <para>Standard</para>
         /// </summary>
         [NameInMap("ReadOnlyInstanceDistributionType")]
         [Validation(Required=false)]
         public string ReadOnlyInstanceDistributionType { get; set; }
 
         /// <summary>
-        /// The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.
+        /// <para>The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("ReadOnlyInstanceMaxDelayTime")]
         [Validation(Required=false)]
         public string ReadOnlyInstanceMaxDelayTime { get; set; }
 
         /// <summary>
-        /// The read weights of the instance and its read-only instances. The value of this parameter is a JSON string that consists of the following parameters:
+        /// <para>The read weights of the instance and its read-only instances. The value of this parameter is a JSON string that consists of the following parameters:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DBInstanceId</b>: the ID of the instance.</description></item>
+        /// <item><description><b>DBInstanceType</b>: the role of the instance. Valid values: <b>Master</b> and <b>ReadOnly</b>.</description></item>
+        /// <item><description><b>NodeID</b>: The IDs of the primary and secondary nodes of the cluster. An instance that runs RDS Cluster Edition refers to a cluster.</description></item>
+        /// <item><description><b>NodeType</b>: The node type. Valid values: <b>Primary</b> and <b>Secondary</b>.</description></item>
+        /// <item><description><b>Weight</b>: the read weight of the instance. The read weight increases in increments of <b>100</b> and cannot exceed <b>10000</b>.</description></item>
+        /// </list>
         /// 
-        /// *   **DBInstanceId**: the ID of the instance.
-        /// *   **DBInstanceType**: the role of the instance. Valid values: **Master** and **ReadOnly**.
-        /// *   **NodeID**: The IDs of the primary and secondary nodes of the cluster. An instance that runs RDS Cluster Edition refers to a cluster.
-        /// *   **NodeType**: The node type. Valid values: **Primary** and **Secondary**.
-        /// *   **Weight**: the read weight of the instance. The read weight increases in increments of **100** and cannot exceed **10000**.
+        /// <b>Example:</b>
+        /// <para>[{\&quot;Availability\&quot;:\&quot;Available\&quot;,\&quot;DBInstanceId\&quot;:\&quot;rr-bp176984qewd8****\&quot;,\&quot;DBInstanceType\&quot;:\&quot;ReadOnly\&quot;,\&quot;Weight\&quot;:400},{\&quot;Availability\&quot;:\&quot;Available\&quot;,\&quot;DBInstanceId\&quot;:\&quot;rm-bp1ja4f56s7us****\&quot;,\&quot;DBInstanceType\&quot;:\&quot;Master\&quot;,\&quot;Weight\&quot;:0}]</para>
         /// </summary>
         [NameInMap("ReadOnlyInstanceWeight")]
         [Validation(Required=false)]
         public string ReadOnlyInstanceWeight { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>847BA085-B377-4BFA-8267-F82345ECE1D2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceProxyConfigurationRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -23,39 +25,48 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The key of the **configuration item** for the database proxy. Valid values:
+        /// <para>The key of the <b>configuration item</b> for the database proxy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>TransparentSwitch</b>: transparent switchover</description></item>
+        /// <item><description><b>PersistentConnections</b>: short-lived connection optimization</description></item>
+        /// <item><description><b>AttacksProtection</b>: brute-force attack protection</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **TransparentSwitch**: transparent switchover
-        /// *   **PersistentConnections**: short-lived connection optimization
-        /// *   **AttacksProtection**: brute-force attack protection
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TransparentSwitch</para>
         /// </summary>
         [NameInMap("ProxyConfigurationKey")]
         [Validation(Required=false)]
         public string ProxyConfigurationKey { get; set; }
 
         /// <summary>
-        /// The features and status of the database proxy:
+        /// <para>The features and status of the database proxy:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>TransparentSwitch</b>: transparent switchover. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enable</b>: The feature is enabled. This is the default value.</description></item>
+        /// <item><description><b>Disable</b>: The feature is disabled.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>PersistentConnections</b>: short-lived connection optimization. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enable</b>: The feature is enabled.</description></item>
+        /// <item><description><b>Disable</b>: The feature is disabled. This is the default value.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>AttacksProtection</b>: brute-force attack protection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enable</b>: The feature is enabled.</description></item>
+        /// <item><description><b>Disable</b>: The feature is disabled. This is the default value.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <para>Format: {&quot;Feature 1&quot;:&quot;Status 1&quot;,&quot;Feature 2&quot;:&quot;Status 2&quot;...}</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **TransparentSwitch**: transparent switchover. Valid values:
-        /// 
-        ///     *   **Enable**: The feature is enabled. This is the default value.
-        ///     *   **Disable**: The feature is disabled.
-        /// 
-        /// *   **PersistentConnections**: short-lived connection optimization. Valid values:
-        /// 
-        ///     *   **Enable**: The feature is enabled.
-        ///     *   **Disable**: The feature is disabled. This is the default value.
-        /// 
-        /// *   **AttacksProtection**: brute-force attack protection. Valid values:
-        /// 
-        ///     *   **Enable**: The feature is enabled.
-        ///     *   **Disable**: The feature is disabled. This is the default value.
-        /// 
-        /// Format: {"Feature 1":"Status 1","Feature 2":"Status 2"...}
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{&quot;status&quot;:&quot;Enable&quot;}</para>
         /// </summary>
         [NameInMap("ProxyConfigurationValue")]
         [Validation(Required=false)]

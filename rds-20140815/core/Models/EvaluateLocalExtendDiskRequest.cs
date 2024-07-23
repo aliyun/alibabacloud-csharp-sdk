@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class EvaluateLocalExtendDiskRequest : TeaModel {
         /// <summary>
-        /// The instance name.
+        /// <para>The instance name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-m5e999iqm65******</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
@@ -23,16 +25,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-ac****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -47,7 +54,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The new storage capacity. Unit: GB.
+        /// <para>The new storage capacity. Unit: GB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("Storage")]
         [Validation(Required=false)]

@@ -14,16 +14,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

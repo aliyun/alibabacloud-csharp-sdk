@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryTasksStatRequest : TeaModel {
         /// <summary>
-        /// The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.
+        /// <para>The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("FromExecTime")]
         [Validation(Required=false)]
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*t*HH:mm:ss*z format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>t<em>HH:mm:ss</em>z format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2023-05-08T07:04:17Z</para>
         /// </summary>
         [NameInMap("FromStartTime")]
         [Validation(Required=false)]
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-2ze704f*****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -37,16 +45,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -65,47 +78,61 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The task status. Valid values:
+        /// <para>The task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Scheduled</description></item>
+        /// <item><description>Running</description></item>
+        /// <item><description>Succeed</description></item>
+        /// <item><description>Failed</description></item>
+        /// <item><description>Cancelling</description></item>
+        /// <item><description>Canceled</description></item>
+        /// <item><description>Waiting</description></item>
+        /// </list>
+        /// <para>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</para>
         /// 
-        /// *   Scheduled
-        /// *   Running
-        /// *   Succeed
-        /// *   Failed
-        /// *   Cancelling
-        /// *   Canceled
-        /// *   Waiting
-        /// 
-        /// Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.
+        /// <b>Example:</b>
+        /// <para>Scheduled</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The task ID.
+        /// <para>The task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12221</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The task type.
+        /// <para>The task type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>all</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
 
         /// <summary>
-        /// The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.
+        /// <para>The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ToExecTime")]
         [Validation(Required=false)]
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2023-02-24T10:01:37Z</para>
         /// </summary>
         [NameInMap("ToStartTime")]
         [Validation(Required=false)]

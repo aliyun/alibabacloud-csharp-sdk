@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstancePayTypeRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bp1842vmucoa5w874</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. The value is fixed as **Prepaid**, which indicates the subscription billing method.
+        /// <para>The billing method of the instance. The value is fixed as <b>Prepaid</b>, which indicates the subscription billing method.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Prepaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The renewal cycle of the instance.
+        /// <para>The renewal cycle of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Year</b></description></item>
+        /// <item><description><b>Month</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Year**
-        /// *   **Month**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Year</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -44,10 +51,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The subscription duration of the instance. Valid values:
+        /// <para>The subscription duration of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If you set the <b>Period</b> parameter to <b>Year</b>, the value of the <b>UsedTime</b> parameter ranges from 1 to 5.</description></item>
+        /// <item><description>If you set the <b>Period</b> parameter to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from 1 to 11.</description></item>
+        /// </list>
         /// 
-        /// *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from 1 to 5.
-        /// *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from 1 to 11.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]

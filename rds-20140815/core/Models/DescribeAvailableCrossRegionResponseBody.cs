@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableCrossRegionResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of destination regions for cross-region backups.
+        /// <para>An array that consists of destination regions for cross-region backups.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -23,7 +23,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>39265F46-EC77-4036-8AC4-F035F32F6BE2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

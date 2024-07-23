@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckCloudResourceAuthorizedRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-t4n7j9eb52y7c1960</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,14 +28,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy**********</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -51,7 +60,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The destination region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The destination region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>us-east-1</para>
         /// </summary>
         [NameInMap("TargetRegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceAutoRenewalAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The renewal information about the instance.
+        /// <para>The renewal information about the instance.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,35 +21,50 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem> Item { get; set; }
             public class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem : TeaModel {
                 /// <summary>
-                /// Indicates whether to enable auto-renewal for the instance.
+                /// <para>Indicates whether to enable auto-renewal for the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>True</para>
                 /// </summary>
                 [NameInMap("AutoRenew")]
                 [Validation(Required=false)]
                 public string AutoRenew { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-bpxxxxxxx</para>
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The renewal period.
+                /// <para>The renewal period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The instance status.
+                /// <para>The instance status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Normal</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -60,28 +75,40 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4182309D-CD29-49B1-B4A5-D7CB4D56C31F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

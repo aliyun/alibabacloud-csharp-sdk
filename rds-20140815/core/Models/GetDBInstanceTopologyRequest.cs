@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class GetDBInstanceTopologyRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5*******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

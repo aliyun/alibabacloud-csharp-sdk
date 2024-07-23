@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteBackupRequest : TeaModel {
         /// <summary>
-        /// The backup set ID. You can call the DescribeBackups operation to query the backup set ID. Separate multiple values with commas (,). You can specify a maximum of 100 values in a single request.
+        /// <para>The backup set ID. You can call the DescribeBackups operation to query the backup set ID. Separate multiple values with commas (,). You can specify a maximum of 100 values in a single request.</para>
+        /// <remarks>
+        /// <para> You can delete only backup sets whose <b>StoreStatus</b> is <b>Enabled</b> in the response to the DescribeBackups operation call.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can delete only backup sets whose **StoreStatus** is **Enabled** in the response to the DescribeBackups operation call.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>324******</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

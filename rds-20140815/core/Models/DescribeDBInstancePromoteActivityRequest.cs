@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancePromoteActivityRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account.
+        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>22973492**********</para>
         /// </summary>
         [NameInMap("AliUid")]
         [Validation(Required=false)]
         public string AliUid { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("DbInstanceName")]
         [Validation(Required=false)]
@@ -32,7 +36,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>111</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

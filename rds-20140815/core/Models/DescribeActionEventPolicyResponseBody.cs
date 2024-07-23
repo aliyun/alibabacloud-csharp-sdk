@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeActionEventPolicyResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the event history feature is enabled.
+        /// <para>Indicates whether the event history feature is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("EnableEventLog")]
         [Validation(Required=false)]
         public string EnableEventLog { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CCECD3CD-AB2D-4F6D-BEDE-47BC90A398D2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

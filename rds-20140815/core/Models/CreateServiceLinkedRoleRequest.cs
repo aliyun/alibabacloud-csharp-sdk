@@ -14,9 +14,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -31,12 +33,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The name of the service-linked role.
+        /// <para>The name of the service-linked role.</para>
+        /// <list type="bullet">
+        /// <item><description><b>AliyunServiceRoleForRdsPgsqlOnEcs</b>: the service-linked role for ApsaraDB RDS for PostgreSQL.</description></item>
+        /// <item><description><b>AliyunServiceRoleForRDSProxyOnEcs</b>: the service-linked role for the database proxy feature of ApsaraDB RDS for PostgreSQL.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **AliyunServiceRoleForRdsPgsqlOnEcs**: the service-linked role for ApsaraDB RDS for PostgreSQL.
-        /// *   **AliyunServiceRoleForRDSProxyOnEcs**: the service-linked role for the database proxy feature of ApsaraDB RDS for PostgreSQL.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>AliyunServiceRoleForRdsPgsqlOnEcs</para>
         /// </summary>
         [NameInMap("ServiceLinkedRole")]
         [Validation(Required=false)]

@@ -10,61 +10,76 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDBInstanceEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
-        /// The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <b>Example:</b>
+        /// <para>6000170000591aed949d0f****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The prefix of the public endpoint.
+        /// <para>The prefix of the public endpoint.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-*****</para>
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.
+        /// <para>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ep-****</para>
         /// </summary>
         [NameInMap("DBInstanceEndpointId")]
         [Validation(Required=false)]
         public string DBInstanceEndpointId { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The network type of the endpoint. Only Internet is supported. Set the value to **Public**.
+        /// <para>The network type of the endpoint. Only Internet is supported. Set the value to <b>Public</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Public</para>
         /// </summary>
         [NameInMap("IpType")]
         [Validation(Required=false)]
         public string IpType { get; set; }
 
         /// <summary>
-        /// The port number of the public endpoint.
+        /// <para>The port number of the public endpoint.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
 
         /// <summary>
-        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

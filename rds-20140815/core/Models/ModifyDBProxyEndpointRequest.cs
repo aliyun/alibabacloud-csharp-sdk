@@ -10,84 +10,116 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointRequest : TeaModel {
         /// <summary>
-        /// The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: `Feature 1:Status;Feature 2:Status;...`. Do not add a semicolon (;) at the end of the value.
+        /// <para>The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: <c>Feature 1:Status;Feature 2:Status;...</c>. Do not add a semicolon (;) at the end of the value.</para>
+        /// <para>Valid feature values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ReadWriteSpliting</b>: read/write splitting</description></item>
+        /// <item><description><b>ConnectionPersist</b>: connection pooling</description></item>
+        /// <item><description><b>TransactionReadSqlRouteOptimizeStatus</b>: transaction splitting</description></item>
+        /// </list>
+        /// <para>Valid status values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: enabled</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by <b>ReadWriteSpliting</b>.</para>
+        /// </remarks>
         /// 
-        /// Valid feature values:
-        /// 
-        /// *   **ReadWriteSpliting**: read/write splitting
-        /// *   **ConnectionPersist**: connection pooling
-        /// *   **TransactionReadSqlRouteOptimizeStatus**: transaction splitting
-        /// 
-        /// Valid status values:
-        /// 
-        /// *   **1**: enabled
-        /// *   **0**: disabled
-        /// 
-        /// >  If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by **ReadWriteSpliting**.
+        /// <b>Example:</b>
+        /// <para>ReadWriteSpliting:1;ConnectionPersist:0</para>
         /// </summary>
         [NameInMap("ConfigDBProxyFeatures")]
         [Validation(Required=false)]
         public string ConfigDBProxyFeatures { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bp145737x5bi6****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
+        /// <para>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If the instance runs MySQL and you set <b>DbEndpointOperator</b> to <b>Delete</b> or <b>Modify</b>, you must specify DBProxyEndpointId.</description></item>
+        /// <item><description>If the instance runs PostgreSQL and you set <b>DbEndpointOperator</b> to <b>Delete</b>, <b>Modify</b>, or <b>Create</b>, you must specify DBProxyEndpointId.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.
-        /// > *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.
+        /// <b>Example:</b>
+        /// <para>gos787jog2wk0y****</para>
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// A deprecated parameter. You do not need to specify this parameter.
+        /// <para>A deprecated parameter. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("DBProxyEngineType")]
         [Validation(Required=false)]
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// The description of the proxy terminal.
+        /// <para>The description of the proxy terminal.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-proxy</para>
         /// </summary>
         [NameInMap("DbEndpointAliases")]
         [Validation(Required=false)]
         public string DbEndpointAliases { get; set; }
 
         /// <summary>
-        /// The type of operation that you want to perform. Valid values:
+        /// <para>The type of operation that you want to perform. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Modify</b>: Modify a proxy terminal. This is the default value.</description></item>
+        /// <item><description><b>Create</b>: Create a proxy terminal.</description></item>
+        /// <item><description><b>Delete</b>: Delete a proxy terminal.</description></item>
+        /// </list>
         /// 
-        /// *   **Modify**: Modify a proxy terminal. This is the default value.
-        /// *   **Create**: Create a proxy terminal.
-        /// *   **Delete**: Delete a proxy terminal.
+        /// <b>Example:</b>
+        /// <para>Modify</para>
         /// </summary>
         [NameInMap("DbEndpointOperator")]
         [Validation(Required=false)]
         public string DbEndpointOperator { get; set; }
 
         /// <summary>
-        /// The read and write attributes of the proxy terminal. Valid values:
+        /// <para>The read and write attributes of the proxy terminal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ReadWrite</b>: The proxy terminal connects to the primary instance and can receive both read and write requests.</description></item>
+        /// <item><description><b>ReadOnly</b>: The proxy terminal does not connect to the primary instance and can receive only read requests. This is the default value.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set <b>DbEndpointOperator</b> to <b>Create</b>, you must also specify DbEndpointReadWriteMode.</description></item>
+        /// <item><description>If the instance runs MySQL and you change the value of this parameter from <b>ReadWrite</b> to <b>ReadOnly</b>, the transaction splitting feature is disabled.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **ReadWrite**: The proxy terminal connects to the primary instance and can receive both read and write requests.
-        /// *   **ReadOnly**: The proxy terminal does not connect to the primary instance and can receive only read requests. This is the default value.
-        /// 
-        /// > *   If you set **DbEndpointOperator** to **Create**, you must also specify DbEndpointReadWriteMode.
-        /// > *   If the instance runs MySQL and you change the value of this parameter from **ReadWrite** to **ReadOnly**, the transaction splitting feature is disabled.
+        /// <b>Example:</b>
+        /// <para>ReadWrite</para>
         /// </summary>
         [NameInMap("DbEndpointReadWriteMode")]
         [Validation(Required=false)]
         public string DbEndpointReadWriteMode { get; set; }
 
         /// <summary>
-        /// The type of the proxy terminal. This is a reserved parameter. You do not need to specify this parameter.
+        /// <para>The type of the proxy terminal. This is a reserved parameter. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RWSplit</para>
         /// </summary>
         [NameInMap("DbEndpointType")]
         [Validation(Required=false)]
@@ -98,45 +130,61 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The policy that is used to allocate read weights. Valid values:
+        /// <para>The policy that is used to allocate read weights. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Standard</b>: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</description></item>
+        /// <item><description><b>Custom</b>: You must manually allocate read weights to the instance and its read-only instances.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a> and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance</a>.</para>
+        /// </remarks>
         /// 
-        /// *   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.
-        /// *   **Custom**: You must manually allocate read weights to the instance and its read-only instances.
-        /// 
-        /// > You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see [Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/96076.html) and [Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418272.html).
+        /// <b>Example:</b>
+        /// <para>Standard</para>
         /// </summary>
         [NameInMap("ReadOnlyInstanceDistributionType")]
         [Validation(Required=false)]
         public string ReadOnlyInstanceDistributionType { get; set; }
 
         /// <summary>
-        /// The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. Unit: seconds If you do not specify this parameter, the original value of this parameter is retained. Valid values: **0** to **3600**. Default value: **30**.
+        /// <para>The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. Unit: seconds If you do not specify this parameter, the original value of this parameter is retained. Valid values: <b>0</b> to <b>3600</b>. Default value: <b>30</b>.</para>
+        /// <remarks>
+        /// <para>You must specify this parameter only when the read/write splitting feature is enabled.</para>
+        /// </remarks>
         /// 
-        /// > You must specify this parameter only when the read/write splitting feature is enabled.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("ReadOnlyInstanceMaxDelayTime")]
         [Validation(Required=false)]
         public string ReadOnlyInstanceMaxDelayTime { get; set; }
 
         /// <summary>
-        /// The read weights of the instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10000. Formats:
+        /// <para>The read weights of the instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10000. Formats:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Standard instance: <c>{&quot;ID of the primary instance&quot;:&quot;Weight&quot;,&quot;ID of the read-only instance&quot;:&quot;Weight&quot;...}</c></para>
+        /// <para>Example: <c>{&quot;rm-uf6wjk5****&quot;:&quot;500&quot;,&quot;rr-tfhfgk5xxx&quot;:&quot;200&quot;...}</c></para>
+        /// </description></item>
+        /// <item><description><para>Instance on RDS Cluster Edition: <c>{&quot;ID of the read-only instance&quot;:&quot;Weight&quot;,&quot;DBClusterNode&quot;:{&quot;ID of the primary node&quot;:&quot;Weight&quot;,&quot;ID of the secondary node&quot;:&quot;Weight&quot;,&quot;ID of the secondary node&quot;:&quot;Weight&quot;...}}</c></para>
+        /// <para>Example: <c>{&quot;rr-tfhfgk5****&quot;:&quot;200&quot;,&quot;DBClusterNode&quot;:{&quot;rn-2z****&quot;:&quot;0&quot;,&quot;rn-2z****&quot;:&quot;400&quot;,&quot;rn-2z****&quot;:&quot;400&quot;...}}</c></para>
+        /// <remarks>
+        /// <para><b>DBClusterNode</b> is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about <b>IDs</b> and <b>weights</b> of the primary and secondary nodes..</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   Standard instance: `{"ID of the primary instance":"Weight","ID of the read-only instance":"Weight"...}`
-        /// 
-        ///     Example: `{"rm-uf6wjk5****":"500","rr-tfhfgk5xxx":"200"...}`
-        /// 
-        /// *   Instance on RDS Cluster Edition: `{"ID of the read-only instance":"Weight","DBClusterNode":{"ID of the primary node":"Weight","ID of the secondary node":"Weight","ID of the secondary node":"Weight"...}}`
-        /// 
-        ///     Example: `{"rr-tfhfgk5****":"200","DBClusterNode":{"rn-2z****":"0","rn-2z****":"400","rn-2z****":"400"...}}`
-        /// 
-        ///     > **DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes..
+        /// <b>Example:</b>
+        /// <para>{&quot;rm-uf6wjk5xxxx&quot;:&quot;500&quot;,&quot;rr-tfhfgk5xxx&quot;:&quot;200&quot;...}</para>
         /// </summary>
         [NameInMap("ReadOnlyInstanceWeight")]
         [Validation(Required=false)]
         public string ReadOnlyInstanceWeight { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

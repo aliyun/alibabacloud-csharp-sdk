@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDTCSecurityIpHostsForSQLServerResponseBody : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The number of distributed transaction whitelists.
+        /// <para>The number of distributed transaction whitelists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("IpHostPairNum")]
         [Validation(Required=false)]
         public string IpHostPairNum { get; set; }
 
         /// <summary>
-        /// Details of distributed transaction whitelists.
+        /// <para>Details of distributed transaction whitelists.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -35,14 +41,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups> WhiteListGroups { get; set; }
             public class DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups : TeaModel {
                 /// <summary>
-                /// The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Multiple values are separated with semicolons (;).
+                /// <para>The IP address of the ECS instance and the hostname of the Windows computer. Format: <c>IP address,Hostname</c>. Multiple values are separated with semicolons (;).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.1.100,k3ecstest</para>
                 /// </summary>
                 [NameInMap("SecurityIpHosts")]
                 [Validation(Required=false)]
                 public string SecurityIpHosts { get; set; }
 
                 /// <summary>
-                /// The name of the distributed transaction whitelist.
+                /// <para>The name of the distributed transaction whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test1</para>
                 /// </summary>
                 [NameInMap("WhitelistGroupName")]
                 [Validation(Required=false)]
@@ -53,7 +65,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2CA62A70-2203-45C6-8E90-8971D5ACC0C2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

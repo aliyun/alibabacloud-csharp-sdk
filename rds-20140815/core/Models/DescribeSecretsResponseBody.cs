@@ -10,70 +10,97 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSecretsResponseBody : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DF4961DD-16F5-5B24-BD4C-0C7788F7ADAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the credential.
+        /// <para>The details of the credential.</para>
         /// </summary>
         [NameInMap("Secrets")]
         [Validation(Required=false)]
         public List<DescribeSecretsResponseBodySecrets> Secrets { get; set; }
         public class DescribeSecretsResponseBodySecrets : TeaModel {
             /// <summary>
-            /// The ID of the Alibaba Cloud account.
+            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1266348003******</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// The description of the credential.
+            /// <para>The description of the credential.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</para>
             /// </summary>
             [NameInMap("SecretArn")]
             [Validation(Required=false)]
             public string SecretArn { get; set; }
 
             /// <summary>
-            /// The name of the credential.
+            /// <para>The name of the credential.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Foo</para>
             /// </summary>
             [NameInMap("SecretName")]
             [Validation(Required=false)]
             public string SecretName { get; set; }
 
             /// <summary>
-            /// The username that is used to access the database.
+            /// <para>The username that is used to access the database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>user_jack</para>
             /// </summary>
             [NameInMap("Username")]
             [Validation(Required=false)]

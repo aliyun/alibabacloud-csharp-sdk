@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyPerformanceResponseBody : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lsmexxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// An internal parameter. You do not need to specify this parameter.
+        /// <para>An internal parameter. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("DBProxyEngineType")]
         [Validation(Required=false)]
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// The end time of the query.
+        /// <para>The end time of the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-09-21T18:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The performance list.
+        /// <para>The performance list.</para>
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
@@ -42,21 +51,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
                 /// <summary>
-                /// The performance parameter.
+                /// <para>The performance parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cpu_ratio</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The format in which the value of the performance metric is returned.
+                /// <para>The format in which the value of the performance metric is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>docker_container_cpu</para>
                 /// </summary>
                 [NameInMap("ValueFormat")]
                 [Validation(Required=false)]
                 public string ValueFormat { get; set; }
 
                 /// <summary>
-                /// The performance metrics.
+                /// <para>The performance metrics.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -67,14 +82,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue> PerformanceValue { get; set; }
                     public class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue : TeaModel {
                         /// <summary>
-                        /// The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                        /// <para>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2019-10-10T09:00:00Z</para>
                         /// </summary>
                         [NameInMap("Date")]
                         [Validation(Required=false)]
                         public string Date { get; set; }
 
                         /// <summary>
-                        /// The value of the performance metric.
+                        /// <para>The value of the performance metric.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2.83</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -89,14 +110,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DD31056F-A0CE-41D7-AD39-689B6ABAE982</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The start time of the query.
+        /// <para>The start time of the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-09-19T01:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

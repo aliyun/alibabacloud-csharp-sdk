@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDBProxyEndpointAddressResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F2911788-25E8-42E5-A3A3-1B38D263F01E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

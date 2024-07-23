@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySQLCollectorRetentionResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21383BB3-3845-4628-B422-B4FB5C83DEBD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

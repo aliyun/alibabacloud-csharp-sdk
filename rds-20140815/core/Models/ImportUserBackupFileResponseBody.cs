@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ImportUserBackupFileResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the full backup file.
+        /// <para>The ID of the full backup file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b-n8tpg24c6i0v********</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A140DD14-DCC9-4548-9C72-52A49A58A310</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the full backup file is successfully imported into the instance. If the full backup file is successfully imported, **true** is returned. Otherwise, an error message is returned.
+        /// <para>Indicates whether the full backup file is successfully imported into the instance. If the full backup file is successfully imported, <b>true</b> is returned. Otherwise, an error message is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

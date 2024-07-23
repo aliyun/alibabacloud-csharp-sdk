@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ConfirmNotifyRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account that is used to confirm the notification. You can set this parameter to **0**, which indicates that the notification is confirmed by the system.
+        /// <para>The ID of the Alibaba Cloud account that is used to confirm the notification. You can set this parameter to <b>0</b>, which indicates that the notification is confirmed by the system.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Confirmor")]
         [Validation(Required=false)]
         public long? Confirmor { get; set; }
 
         /// <summary>
-        /// The notification IDs.
+        /// <para>The notification IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("NotifyIdList")]
         [Validation(Required=false)]

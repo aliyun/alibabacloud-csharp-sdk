@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryEventsStatResponseBody : TeaModel {
         /// <summary>
-        /// The event.
+        /// <para>The event.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryEventsStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryEventsStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).
+            /// <para>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Exception</para>
             /// </summary>
             [NameInMap("EventCategory")]
             [Validation(Required=false)]
             public string EventCategory { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>31</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E52666CC-330E-418A-8E5B-A19E3FB42D13</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

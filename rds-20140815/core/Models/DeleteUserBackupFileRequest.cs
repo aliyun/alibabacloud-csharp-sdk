@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteUserBackupFileRequest : TeaModel {
         /// <summary>
-        /// The ID of the full backup file. You can call the ListUserBackupFiles operation to query the information about all full backup files in a region.
+        /// <para>The ID of the full backup file. You can call the ListUserBackupFiles operation to query the information about all full backup files in a region.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>b-w1haya7e4i25********</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -23,16 +25,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

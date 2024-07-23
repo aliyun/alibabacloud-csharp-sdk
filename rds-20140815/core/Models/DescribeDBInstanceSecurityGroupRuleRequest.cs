@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceSecurityGroupRuleRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the IDs of instances.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-2ze202******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceHAResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

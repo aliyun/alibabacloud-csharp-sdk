@@ -10,27 +10,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDBNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
-        /// The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <b>Example:</b>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The instance ID You can call the DescribeDBInstances operation to query the instance ID.
+        /// <para>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-2ze450g4ctg6t****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The details of the node.
-        /// 
-        /// This parameter is required.
+        /// <para>The details of the node.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DBNode")]
         [Validation(Required=false)]
@@ -45,7 +48,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

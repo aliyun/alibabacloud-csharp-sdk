@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeReadDBInstanceDelayRequest : TeaModel {
         /// <summary>
-        /// The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.
+        /// <para>The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-bp*****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -27,16 +29,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The read-only instance ID. You can call the DescribeDBInstances operation to query the read-only instance ID.
+        /// <para>The read-only instance ID. You can call the DescribeDBInstances operation to query the read-only instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rr-bp*****</para>
         /// </summary>
         [NameInMap("ReadInstanceId")]
         [Validation(Required=false)]
         public string ReadInstanceId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

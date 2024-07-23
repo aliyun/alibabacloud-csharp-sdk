@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyCustinsResourceRequest : TeaModel {
         /// <summary>
-        /// The deadline for the modification.
+        /// <para>The deadline for the modification.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-12-31 23:59:06</para>
         /// </summary>
         [NameInMap("AdjustDeadline")]
         [Validation(Required=false)]
         public string AdjustDeadline { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the instance ID.
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-j5ekvfeengm******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The increase rate in percentage.
+        /// <para>The increase rate in percentage.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("IncreaseRatio")]
         [Validation(Required=false)]
@@ -37,21 +45,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Memory</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The original value. This parameter must be specified when the **ResourceType** parameter is set to **instance**.
+        /// <para>The original value. This parameter must be specified when the <b>ResourceType</b> parameter is set to <b>instance</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("RestoreOriginalSpecification")]
         [Validation(Required=false)]
         public string RestoreOriginalSpecification { get; set; }
 
         /// <summary>
-        /// The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.
+        /// <para>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3000</para>
         /// </summary>
         [NameInMap("TargetValue")]
         [Validation(Required=false)]

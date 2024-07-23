@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyEventInfoResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mst.errorcode.success.errormessage</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error ID.
+        /// <para>The error ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12343</para>
         /// </summary>
         [NameInMap("ErrorEventId")]
         [Validation(Required=false)]
         public string ErrorEventId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>224DB9F7-3100-4899-AB9C-C938BCCB43E7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of successful records.
+        /// <para>The number of successful records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SuccessCount")]
         [Validation(Required=false)]
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// The ID of the successful event.
+        /// <para>The ID of the successful event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>234221</para>
         /// </summary>
         [NameInMap("SuccessEventId")]
         [Validation(Required=false)]
