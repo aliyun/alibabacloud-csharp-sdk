@@ -202,9 +202,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<Taint> Taints { get; set; }
 
-            /// <summary>
-            /// 扩容后的节点是否可调度。
-            /// </summary>
             [NameInMap("unschedulable")]
             [Validation(Required=false)]
             public bool? Unschedulable { get; set; }
@@ -235,69 +232,42 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public bool? AutoRepair { get; set; }
 
-            /// <summary>
-            /// 自动修复节点策略。
-            /// </summary>
             [NameInMap("auto_repair_policy")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
             public class DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy : TeaModel {
-                /// <summary>
-                /// 是否允许重启节点。
-                /// </summary>
                 [NameInMap("restart_node")]
                 [Validation(Required=false)]
                 public bool? RestartNode { get; set; }
 
             }
 
-            /// <summary>
-            /// 是否自动升级。
-            /// </summary>
             [NameInMap("auto_upgrade")]
             [Validation(Required=false)]
             public bool? AutoUpgrade { get; set; }
 
-            /// <summary>
-            /// 自动升级策略。
-            /// </summary>
             [NameInMap("auto_upgrade_policy")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolDetailResponseBodyManagementAutoUpgradePolicy AutoUpgradePolicy { get; set; }
             public class DescribeClusterNodePoolDetailResponseBodyManagementAutoUpgradePolicy : TeaModel {
-                /// <summary>
-                /// 是否允许自动升级kubelet。
-                /// </summary>
                 [NameInMap("auto_upgrade_kubelet")]
                 [Validation(Required=false)]
                 public bool? AutoUpgradeKubelet { get; set; }
 
             }
 
-            /// <summary>
-            /// 是否自动修复CVE。
-            /// </summary>
             [NameInMap("auto_vul_fix")]
             [Validation(Required=false)]
             public bool? AutoVulFix { get; set; }
 
-            /// <summary>
-            /// 自动修复CVE策略。
-            /// </summary>
             [NameInMap("auto_vul_fix_policy")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
             public class DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy : TeaModel {
-                /// <summary>
-                /// 是否允许重启节点。
-                /// </summary>
                 [NameInMap("restart_node")]
                 [Validation(Required=false)]
                 public bool? RestartNode { get; set; }
 
-                /// <summary>
-                /// 允许自动修复的漏洞级别，以逗号分隔。
-                /// </summary>
                 [NameInMap("vul_level")]
                 [Validation(Required=false)]
                 public string VulLevel { get; set; }
@@ -365,16 +335,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public long? MaxNodes { get; set; }
 
-        /// <summary>
-        /// 节点配置
-        /// </summary>
         [NameInMap("node_config")]
         [Validation(Required=false)]
         public DescribeClusterNodePoolDetailResponseBodyNodeConfig NodeConfig { get; set; }
         public class DescribeClusterNodePoolDetailResponseBodyNodeConfig : TeaModel {
-            /// <summary>
-            /// Kubelet参数配置。
-            /// </summary>
             [NameInMap("kubelet_configuration")]
             [Validation(Required=false)]
             public KubeletConfig KubeletConfiguration { get; set; }
@@ -449,7 +413,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// The configuration of the scaling group.
+        /// The configurations of the scaling group.
         /// </summary>
         [NameInMap("scaling_group")]
         [Validation(Required=false)]
@@ -474,9 +438,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public long? AutoRenewPeriod { get; set; }
 
-            /// <summary>
-            /// 【已废弃】请使用参数security_hardening_os替代。
-            /// </summary>
             [NameInMap("cis_enabled")]
             [Validation(Required=false)]
             [Obsolete]
@@ -520,9 +481,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
-            /// <summary>
-            /// 操作系统镜像类型。
-            /// </summary>
             [NameInMap("image_type")]
             [Validation(Required=false)]
             public string ImageType { get; set; }
@@ -537,6 +495,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string InstanceChargeType { get; set; }
 
+            /// <summary>
+            /// 实例属性
+            /// </summary>
             [NameInMap("instance_patterns")]
             [Validation(Required=false)]
             public List<InstancePatterns> InstancePatterns { get; set; }
@@ -569,9 +530,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string KeyPair { get; set; }
 
-            /// <summary>
-            /// 弹出的ECS实例是否使用以非root用户登录。
-            /// </summary>
             [NameInMap("login_as_non_root")]
             [Validation(Required=false)]
             public bool? LoginAsNonRoot { get; set; }
@@ -682,6 +640,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string RamPolicy { get; set; }
 
+            /// <summary>
+            /// Worker RAM角色名称。
+            /// </summary>
             [NameInMap("ram_role_name")]
             [Validation(Required=false)]
             public string RamRoleName { get; set; }
@@ -724,21 +685,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
-            /// <summary>
-            /// 阿里云OS安全加固。取值：
-            /// 
-            /// - `true`：开启阿里云OS安全加固。
-            /// - `false`：不开启阿里云OS安全加固。
-            /// 
-            /// 默认值：`false`。
-            /// </summary>
             [NameInMap("security_hardening_os")]
             [Validation(Required=false)]
             public bool? SecurityHardeningOs { get; set; }
 
-            /// <summary>
-            /// 是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。
-            /// </summary>
             [NameInMap("soc_enabled")]
             [Validation(Required=false)]
             public bool? SocEnabled { get; set; }
@@ -768,14 +718,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<DescribeClusterNodePoolDetailResponseBodyScalingGroupSpotPriceLimit> SpotPriceLimit { get; set; }
             public class DescribeClusterNodePoolDetailResponseBodyScalingGroupSpotPriceLimit : TeaModel {
                 /// <summary>
-                /// The instance type of preemptible instances.
+                /// The instance type of the preemptible instances.
                 /// </summary>
                 [NameInMap("instance_type")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// The price limit of a preemptible instance.
+                /// The price cap of a preemptible instance of the type.
                 /// 
                 /// Unit: USD/hour.
                 /// </summary>
@@ -798,57 +748,56 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
 
-            /// <summary>
-            /// 节点系统盘是否开启Burst（性能突发），磁盘类型为cloud_auto时配置。
-            /// </summary>
             [NameInMap("system_disk_bursting_enabled")]
             [Validation(Required=false)]
             public bool? SystemDiskBurstingEnabled { get; set; }
 
             /// <summary>
-            /// 系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值：
-            /// - `cloud`：普通云盘。
-            /// - `cloud_efficiency`：高效云盘。
-            /// - `cloud_ssd`：SSD云盘。
-            /// - `cloud_essd`：ESSD云盘。
-            /// - `cloud_auto`：ESSD AutoPL 云盘。
-            /// - `cloud_essd_entry`：ESSD Entry 云盘。
+            /// The system disk types. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: Valid values:
             /// 
-            /// 默认值：`cloud_efficiency`
+            /// *   `cloud`: basic disk
+            /// *   `cloud_efficiency`: ultra disk
+            /// *   `cloud_ssd`: standard SSD
+            /// *   `cloud_essd`: ESSD
+            /// *   `cloud_auto`: ESSD AutoPL disk
+            /// *   `cloud_essd_entry`: ESSD Entry disk
+            /// 
+            /// Default value: `cloud_efficiency`.
             /// </summary>
             [NameInMap("system_disk_categories")]
             [Validation(Required=false)]
             public List<string> SystemDiskCategories { get; set; }
 
             /// <summary>
-            /// The type of system disk. Valid values:
+            /// The system disk type. Valid values:
             /// 
-            /// *   `cloud_efficiency`: ultra disk.
-            /// *   `cloud_ssd`: standard SSD.
+            /// *   `cloud`: basic disk
+            /// *   `cloud_efficiency`: ultra disk
+            /// *   `cloud_ssd`: standard SSD
+            /// *   `cloud_essd`: Enterprise SSD (ESSD)
+            /// *   `cloud_auto`: ESSD AutoPL disk
+            /// *   `cloud_essd_entry`: ESSD Entry disk
+            /// 
+            /// Default value: `cloud_efficiency`.
             /// </summary>
             [NameInMap("system_disk_category")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
-            /// <summary>
-            /// 系统盘采用的加密算法。取值范围：aes-256。
-            /// </summary>
             [NameInMap("system_disk_encrypt_algorithm")]
             [Validation(Required=false)]
             public string SystemDiskEncryptAlgorithm { get; set; }
 
             /// <summary>
-            /// 是否加密系统盘。取值：
-            /// - `true`：加密。
-            /// - `false`：不加密。
+            /// Specifies whether to encrypt the system disk. Valid values: Valid values:
+            /// 
+            /// *   `true`: encrypts the system disk.
+            /// *   `false`: does not encrypt the system disk.
             /// </summary>
             [NameInMap("system_disk_encrypted")]
             [Validation(Required=false)]
             public bool? SystemDiskEncrypted { get; set; }
 
-            /// <summary>
-            /// 系统盘使用的KMS密钥ID。
-            /// </summary>
             [NameInMap("system_disk_kms_key_id")]
             [Validation(Required=false)]
             public string SystemDiskKmsKeyId { get; set; }
@@ -860,9 +809,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
 
-            /// <summary>
-            /// 节点系统盘预配置的读写IOPS，磁盘类型为cloud_auto时配置。
-            /// </summary>
             [NameInMap("system_disk_provisioned_iops")]
             [Validation(Required=false)]
             public long? SystemDiskProvisionedIops { get; set; }
