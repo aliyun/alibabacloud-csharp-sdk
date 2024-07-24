@@ -1,3 +1,6 @@
+2024-07-24 Version: 1.5.1
+- Generated csharp 2020-01-01 for Dts.
+
 2024-07-24 Version: 1.5.0
 - Support API DescribeDtsJobConfig.
 - Update API DescribeDtsJobs: add param DestProductType.
