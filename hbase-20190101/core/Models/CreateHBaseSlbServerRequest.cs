@@ -9,19 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CreateHBaseSlbServerRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxxxx-xxxxx-xxxxx</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hb-t4naqsay5gn****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>thrift</para>
         /// </summary>
         [NameInMap("SlbServer")]
         [Validation(Required=false)]

@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class SwitchServiceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ld-uf6r2hn2zrxxxxxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>open</para>
         /// </summary>
         [NameInMap("Operate")]
         [Validation(Required=false)]
         public string Operate { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HBaseProxy</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

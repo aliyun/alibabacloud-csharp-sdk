@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource> MasterResource { get; set; }
                     public class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResource : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>hbase.sn2.large</para>
+                        /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
@@ -33,10 +37,18 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                         [Validation(Required=false)]
                         public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail InstanceTypeDetail { get; set; }
                         public class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneMasterResourcesMasterResourceInstanceTypeDetail : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>4</para>
+                            /// </summary>
                             [NameInMap("Cpu")]
                             [Validation(Required=false)]
                             public int? Cpu { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>16</para>
+                            /// </summary>
                             [NameInMap("Mem")]
                             [Validation(Required=false)]
                             public int? Mem { get; set; }
@@ -47,6 +59,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
@@ -59,6 +75,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine> SupportedEngine { get; set; }
                     public class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>hbaseue</para>
+                        /// </summary>
                         [NameInMap("Engine")]
                         [Validation(Required=false)]
                         public string Engine { get; set; }
@@ -79,6 +99,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                                     [Validation(Required=false)]
                                     public List<DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories> SupportedCategories { get; set; }
                                     public class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategories : TeaModel {
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>cluster</para>
+                                        /// </summary>
                                         [NameInMap("Category")]
                                         [Validation(Required=false)]
                                         public string Category { get; set; }
@@ -103,20 +127,36 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                                                         [Validation(Required=false)]
                                                         public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange DBInstanceStorageRange { get; set; }
                                                         public class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceDBInstanceStorageRange : TeaModel {
+                                                            /// <summary>
+                                                            /// <b>Example:</b>
+                                                            /// <para>64000</para>
+                                                            /// </summary>
                                                             [NameInMap("MaxSize")]
                                                             [Validation(Required=false)]
                                                             public int? MaxSize { get; set; }
 
+                                                            /// <summary>
+                                                            /// <b>Example:</b>
+                                                            /// <para>400</para>
+                                                            /// </summary>
                                                             [NameInMap("MinSize")]
                                                             [Validation(Required=false)]
                                                             public int? MinSize { get; set; }
 
+                                                            /// <summary>
+                                                            /// <b>Example:</b>
+                                                            /// <para>40</para>
+                                                            /// </summary>
                                                             [NameInMap("StepSize")]
                                                             [Validation(Required=false)]
                                                             public int? StepSize { get; set; }
 
                                                         }
 
+                                                        /// <summary>
+                                                        /// <b>Example:</b>
+                                                        /// <para>hbase.sn2.2xlarge</para>
+                                                        /// </summary>
                                                         [NameInMap("InstanceType")]
                                                         [Validation(Required=false)]
                                                         public string InstanceType { get; set; }
@@ -125,16 +165,28 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                                                         [Validation(Required=false)]
                                                         public DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail InstanceTypeDetail { get; set; }
                                                         public class DescribeMultiZoneAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategoriesSupportedCategoriesSupportedStorageTypesSupportedStorageTypeCoreResourcesCoreResourceInstanceTypeDetail : TeaModel {
+                                                            /// <summary>
+                                                            /// <b>Example:</b>
+                                                            /// <para>32</para>
+                                                            /// </summary>
                                                             [NameInMap("Cpu")]
                                                             [Validation(Required=false)]
                                                             public int? Cpu { get; set; }
 
+                                                            /// <summary>
+                                                            /// <b>Example:</b>
+                                                            /// <para>8</para>
+                                                            /// </summary>
                                                             [NameInMap("Mem")]
                                                             [Validation(Required=false)]
                                                             public int? Mem { get; set; }
 
                                                         }
 
+                                                        /// <summary>
+                                                        /// <b>Example:</b>
+                                                        /// <para>30</para>
+                                                        /// </summary>
                                                         [NameInMap("MaxCoreCount")]
                                                         [Validation(Required=false)]
                                                         public int? MaxCoreCount { get; set; }
@@ -143,6 +195,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
                                                 }
 
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>cloud_efficiency</para>
+                                                /// </summary>
                                                 [NameInMap("StorageType")]
                                                 [Validation(Required=false)]
                                                 public string StorageType { get; set; }
@@ -155,6 +211,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
                                 }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>2.0</para>
+                                /// </summary>
                                 [NameInMap("Version")]
                                 [Validation(Required=false)]
                                 public string Version { get; set; }
@@ -167,6 +227,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-bef-aliyun</para>
+                /// </summary>
                 [NameInMap("ZoneCombination")]
                 [Validation(Required=false)]
                 public string ZoneCombination { get; set; }
@@ -175,6 +239,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>B2EEBBA9-C627-4415-81A0-B77BC54F1D52</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

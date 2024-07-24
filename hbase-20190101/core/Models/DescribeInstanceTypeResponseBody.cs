@@ -17,14 +17,26 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec> InstanceTypeSpec { get; set; }
             public class DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>8</para>
+                /// </summary>
                 [NameInMap("CpuSize")]
                 [Validation(Required=false)]
                 public long? CpuSize { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>hbase.n2.4xlarge</para>
+                /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>16</para>
+                /// </summary>
                 [NameInMap("MemSize")]
                 [Validation(Required=false)]
                 public long? MemSize { get; set; }
@@ -33,6 +45,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DD23BBB4-64C2-42A4-B2E2-7E56C7AA815A</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

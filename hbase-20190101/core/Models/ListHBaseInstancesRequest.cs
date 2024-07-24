@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ListHBaseInstancesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-t4nx81tmlixcq5i****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

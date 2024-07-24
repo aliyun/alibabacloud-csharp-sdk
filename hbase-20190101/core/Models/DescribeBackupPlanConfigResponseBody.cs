@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupPlanConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
         [NameInMap("FullBackupCycle")]
         [Validation(Required=false)]
         public int? FullBackupCycle { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("MinHFileBackupCount")]
         [Validation(Required=false)]
         public int? MinHFileBackupCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2020-11-09T18:00:00Z</para>
+        /// </summary>
         [NameInMap("NextFullBackupDate")]
         [Validation(Required=false)]
         public string NextFullBackupDate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>33A23201-6038-4A6A-B76A-61047EA04E6A</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

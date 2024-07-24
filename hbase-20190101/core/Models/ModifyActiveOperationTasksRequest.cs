@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1111,2222</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ImmediateStart")]
         [Validation(Required=false)]
         public int? ImmediateStart { get; set; }
@@ -41,7 +48,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-02-17T18:50:00Z</para>
         /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]

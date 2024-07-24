@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeActiveOperationTaskTypeRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("IsHistory")]
         [Validation(Required=false)]
         public int? IsHistory { get; set; }

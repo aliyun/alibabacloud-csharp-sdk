@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CreateBackupPlanRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ld-wz94lbcqc****4x93</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

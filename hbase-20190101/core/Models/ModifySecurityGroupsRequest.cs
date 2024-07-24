@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifySecurityGroupsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hb-bp16f1441y6p2kv**</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-t4ng4yyc916o81nu****,sg-x4gg4dyc9d6w********</para>
         /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]

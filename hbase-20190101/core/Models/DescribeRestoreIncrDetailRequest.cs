@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeRestoreIncrDetailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ld-m5eyf188hw481xxxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020110514xxxx</para>
         /// </summary>
         [NameInMap("RestoreRecordId")]
         [Validation(Required=false)]

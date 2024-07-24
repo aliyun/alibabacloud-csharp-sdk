@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyDiskWarningLineRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ld-m5eznlga4k5bcxxxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("WarningLine")]
         [Validation(Required=false)]

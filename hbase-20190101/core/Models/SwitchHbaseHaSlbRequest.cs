@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class SwitchHbaseHaSlbRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bds-t4n3496whj23ia4k</para>
         /// </summary>
         [NameInMap("BdsId")]
         [Validation(Required=false)]
         public string BdsId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ha-v21tmnxjwh2yuy1il</para>
         /// </summary>
         [NameInMap("HaId")]
         [Validation(Required=false)]
         public string HaId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>thrift</para>
         /// </summary>
         [NameInMap("HaTypes")]
         [Validation(Required=false)]
         public string HaTypes { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("HbaseType")]
         [Validation(Required=false)]

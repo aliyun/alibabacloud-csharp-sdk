@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DeleteGlobalResourceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hb-t4naqsay5gn******</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -21,14 +24,20 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PubPhoenixSLBQueryServerVip</para>
         /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GLOBAL_VIP</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

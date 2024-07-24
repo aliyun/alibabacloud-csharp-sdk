@@ -17,14 +17,26 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<ListHBaseInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class ListHBaseInstancesResponseBodyInstancesInstance : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>hb-t4naqsay5gn****</para>
+                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>name_test</para>
+                /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("IsDefault")]
                 [Validation(Required=false)]
                 public bool? IsDefault { get; set; }
@@ -33,6 +45,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>89F81C30-320B-4550-91DB-C37C81D2358F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CancelActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11111,22222</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
