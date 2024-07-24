@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListPrometheusInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful.
+        /// The status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

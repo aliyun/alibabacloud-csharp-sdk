@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// The struct returned.
+        /// The returned struct.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -117,40 +117,67 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                 }
 
+                /// <summary>
+                /// The reserved parameters.
+                /// </summary>
                 [NameInMap("CustomPrometheusSetting")]
                 [Validation(Required=false)]
                 public GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomPrometheusSetting CustomPrometheusSetting { get; set; }
                 public class GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomPrometheusSetting : TeaModel {
+                    /// <summary>
+                    /// A reserved parameter.
+                    /// </summary>
                     [NameInMap("PrometheusClusterId")]
                     [Validation(Required=false)]
                     public string PrometheusClusterId { get; set; }
 
+                    /// <summary>
+                    /// A reserved parameter.
+                    /// </summary>
                     [NameInMap("PrometheusClusterRegion")]
                     [Validation(Required=false)]
                     public string PrometheusClusterRegion { get; set; }
 
+                    /// <summary>
+                    /// A reserved parameter.
+                    /// </summary>
                     [NameInMap("PrometheusLabels")]
                     [Validation(Required=false)]
                     public Dictionary<string, string> PrometheusLabels { get; set; }
 
                 }
 
+                /// <summary>
+                /// User VPC information. If the dial-up is to the Alibaba Cloud intranet address, you need to configure the VPC information.
+                /// </summary>
                 [NameInMap("CustomVPCSetting")]
                 [Validation(Required=false)]
                 public GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomVPCSetting CustomVPCSetting { get; set; }
                 public class GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomVPCSetting : TeaModel {
+                    /// <summary>
+                    /// The region ID.
+                    /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
+                    /// <summary>
+                    /// Security group ID. This security group is where the dial-up client is located. The security group limits the inbound and outbound rules of the dial-up client in the VPC. You need to set the inbound rules of the security group where your VPC is located to allow the security group where the dial-up client is located to access. Otherwise, the dial-up client cannot smoothly access the resources in your VPC.
+                    /// </summary>
                     [NameInMap("SecureGroupId")]
                     [Validation(Required=false)]
                     public string SecureGroupId { get; set; }
 
+                    /// <summary>
+                    /// The vSwitch ID.
+                    /// </summary>
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
                     public string VSwitchId { get; set; }
 
+                    /// <summary>
+                    /// VPC ID.
+                    /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
@@ -169,7 +196,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public int? IpType { get; set; }
 
                 /// <summary>
-                /// 是否开启链路追踪。
+                /// Whether to enable tracing.
                 /// </summary>
                 [NameInMap("IsOpenTrace")]
                 [Validation(Required=false)]
@@ -186,18 +213,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public int? MonitorSamples { get; set; }
 
                 /// <summary>
-                /// 链路追踪客户端类型：
+                /// Tracing client type:
                 /// 
-                /// - 0：ARMS Agent
-                /// - 1：OpenTelemetry
-                /// - 2：Jaeger
+                /// - 0: ARMS Agent
+                /// - 1: Open Telemetry
+                /// - 2: Jaeger
                 /// </summary>
                 [NameInMap("TraceClientType")]
                 [Validation(Required=false)]
                 public int? TraceClientType { get; set; }
 
                 /// <summary>
-                /// 链路数据上报region。
+                /// Tracing data reporting region.
                 /// </summary>
                 [NameInMap("XtraceRegion")]
                 [Validation(Required=false)]
@@ -250,12 +277,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public GetTimingSyntheticTaskResponseBodyDataMonitorConf MonitorConf { get; set; }
             public class GetTimingSyntheticTaskResponseBodyDataMonitorConf : TeaModel {
                 /// <summary>
-                /// The HTTP(S) synthetic test parameters.
+                /// The parameters of the HTTP(S) synthetic test.
                 /// </summary>
                 [NameInMap("ApiHTTP")]
                 [Validation(Required=false)]
                 public GetTimingSyntheticTaskResponseBodyDataMonitorConfApiHTTP ApiHTTP { get; set; }
                 public class GetTimingSyntheticTaskResponseBodyDataMonitorConfApiHTTP : TeaModel {
+                    /// <summary>
+                    /// Whether to verify the certificate. The default is no.
+                    /// </summary>
                     [NameInMap("CheckCert")]
                     [Validation(Required=false)]
                     public bool? CheckCert { get; set; }
@@ -277,6 +307,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     [Validation(Required=false)]
                     public string Method { get; set; }
 
+                    /// <summary>
+                    /// The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:
+                    /// 
+                    /// 0: default
+                    /// 
+                    /// 1: HTTP/1.1
+                    /// 
+                    /// 2: HTTP/2
+                    /// 
+                    /// 3: disables the ALPN protocol
+                    /// </summary>
                     [NameInMap("ProtocolAlpnProtocol")]
                     [Validation(Required=false)]
                     public int? ProtocolAlpnProtocol { get; set; }
@@ -447,25 +488,25 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public long? TransmissionSize { get; set; }
 
                     /// <summary>
-                    /// 验证关键词。
+                    /// Verify keywords.
                     /// </summary>
                     [NameInMap("ValidateKeywords")]
                     [Validation(Required=false)]
                     public string ValidateKeywords { get; set; }
 
                     /// <summary>
-                    /// 验证方式。
+                    /// Verification method.
                     /// 
-                    /// - 0：不验证 
-                    /// - 1：验证字符串 
-                    /// - 2：MD5验证
+                    /// - 0: No verification
+                    /// - 1: Verification string
+                    /// - 2: MD5 verification
                     /// </summary>
                     [NameInMap("VerifyWay")]
                     [Validation(Required=false)]
                     public int? VerifyWay { get; set; }
 
                     /// <summary>
-                    /// DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。
+                    /// DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: `www.aliyun.com:203.0.3.55|203.3.44.67`, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the www.aliyun.com domain name are hijacked.
                     /// </summary>
                     [NameInMap("WhiteList")]
                     [Validation(Required=false)]
@@ -648,62 +689,65 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// 流媒体拨测配置。
+                /// Streaming media dial test configuration.
                 /// </summary>
                 [NameInMap("Stream")]
                 [Validation(Required=false)]
                 public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream Stream { get; set; }
                 public class GetTimingSyntheticTaskResponseBodyDataMonitorConfStream : TeaModel {
                     /// <summary>
-                    /// 自定义header，JSON Map格式。
+                    /// Custom header, JSON Map format.
                     /// </summary>
                     [NameInMap("CustomHeaderContent")]
                     [Validation(Required=false)]
                     public Dictionary<string, string> CustomHeaderContent { get; set; }
 
                     /// <summary>
-                    /// 播放器，不传默认12。
+                    /// Player, default is 12 if not specified.
                     /// 
-                    /// - 12：VLC
-                    /// - 2：FlashPlayer
+                    /// - 12: VLC
+                    /// - 2: Flash Player
                     /// </summary>
                     [NameInMap("PlayerType")]
                     [Validation(Required=false)]
                     public int? PlayerType { get; set; }
 
                     /// <summary>
-                    /// 资源地址类型：
+                    /// Resource address type:
                     /// 
-                    /// - 1：资源地址。
-                    /// - 0：页面地址。不传默认0。
+                    /// - 1: Resource address.
+                    /// - 0: Page address. If not passed, the default value is 0.
                     /// </summary>
                     [NameInMap("StreamAddressType")]
                     [Validation(Required=false)]
                     public int? StreamAddressType { get; set; }
 
                     /// <summary>
-                    /// 监测时长，单位秒，最长支持60s，不传默认60。
+                    /// Monitoring duration, in seconds, supports up to 60 seconds. If not specified, the default value is 60 seconds.
                     /// </summary>
                     [NameInMap("StreamMonitorTimeout")]
                     [Validation(Required=false)]
                     public int? StreamMonitorTimeout { get; set; }
 
                     /// <summary>
-                    /// 音视频标志：0-视频，1-音频。
+                    /// Audio and video flag:
+                    /// 
+                    /// - 0: video
+                    /// - 1: audio
                     /// </summary>
                     [NameInMap("StreamType")]
                     [Validation(Required=false)]
                     public int? StreamType { get; set; }
 
                     /// <summary>
-                    /// 流媒体资源地址。
+                    /// Streaming media resource address.
                     /// </summary>
                     [NameInMap("TargetUrl")]
                     [Validation(Required=false)]
                     public string TargetUrl { get; set; }
 
                     /// <summary>
-                    /// DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。
+                    /// DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: `www.aliyun.com:203.0.3.55|203.3.44.67`, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the www.aliyun.com domain name are hijacked.
                     /// </summary>
                     [NameInMap("WhiteList")]
                     [Validation(Required=false)]
@@ -740,9 +784,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public Dictionary<string, string> CustomHeaderContent { get; set; }
 
                     /// <summary>
-                    /// 域名（例如www.aliyun.com）解析时，解析出的IP地址或者CNAME不在DNS劫持白名单内，用户就会访问失败或者返回一个非Aliyun的目标IP；若解析结果中的IP或者CNAME在DNS白名单内，则会被认定为没有发生DNS劫持。
+                    /// When resolving a domain name (such as www.aliyun.com), if the resolved IP address or CNAME is not in the DNS hijacking whitelist, the user will fail to access or return a non-Aliyun target IP; if the IP or CNAME in the resolution result is in the DNS whitelist, it will be deemed that no DNS hijacking has occurred.
                     /// 
-                    /// 填写格式：域名:匹配规则。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。
+                    /// Fill in the format: `domain name: matching rule`. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). 
+                    /// 
+                    /// For example: `www.aliyun.com:203.0.3.55|203.3.44.67`, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the www.aliyun.com domain name are hijacked.
                     /// </summary>
                     [NameInMap("DNSHijackWhitelist")]
                     [Validation(Required=false)]
@@ -763,7 +809,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public int? DisableCompression { get; set; }
 
                     /// <summary>
-                    /// 在页面加载过程中如果出现元素黑名单中配置的元素，不会请求加载该元素 。
+                    /// If an element configured in the element blacklist appears during page loading, no request will be made to load the element.
                     /// </summary>
                     [NameInMap("ElementBlacklist")]
                     [Validation(Required=false)]
@@ -780,14 +826,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public int? FilterInvalidIP { get; set; }
 
                     /// <summary>
-                    /// 识别元素：设置浏览页面元素总个数。
+                    /// Identify elements: Set the total number of elements to browse the page.
                     /// </summary>
                     [NameInMap("FlowHijackJumpTimes")]
                     [Validation(Required=false)]
                     public int? FlowHijackJumpTimes { get; set; }
 
                     /// <summary>
-                    /// 劫持标识：设置匹配的关键信息。填写劫持判断关键字或关键元素，允许带星号（*）。
+                    /// Hijacking flag: Set the key information for matching. Fill in the hijacking judgment keyword or key element, and asterisks (*) are allowed.
                     /// </summary>
                     [NameInMap("FlowHijackLogo")]
                     [Validation(Required=false)]
@@ -808,9 +854,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public int? MonitorTimeout { get; set; }
 
                     /// <summary>
-                    /// 监测页面出现了域名设置之外的元素都属于页面被篡改。常见的表现形式为弹出广告、浮动广告、跳转等。
+                    /// If any element other than the domain name setting appears on the monitoring page, it means that the page has been tampered. Common manifestations include pop-up ads, floating ads, jumps, etc.
                     /// 
-                    /// 填写格式：域名:元素。元素支持填写通配符，可以填写多个元素，多个元素以竖线（|）隔开。例如：www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg，表示www.aliyun.com域名下除基础文档、/cc/bb/a.gif和/vv/bb/cc.jpg之外的其他元素都属于页面被篡改。
+                    /// Fill in the format: `domain name: element`. Elements support wildcards, and multiple elements can be filled in. Multiple elements are separated by vertical bars (|). For example: `www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg`, which means that all elements except the basic document, /cc/bb/a.gif and /vv/bb/cc.jpg under the www.aliyun.com domain name are considered to be tampered with.
                     /// </summary>
                     [NameInMap("PageTamper")]
                     [Validation(Required=false)]
@@ -838,14 +884,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string TargetUrl { get; set; }
 
                     /// <summary>
-                    /// 验证字符串即监测页面源代码中的某个任意字符串。若客户端返回的源码中包含任一黑名单中的字符串则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。
+                    /// The verification string is an arbitrary string in the source code of the monitoring page. If the source code returned by the client contains any string in the blacklist, an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by vertical bars (|).
                     /// </summary>
                     [NameInMap("VerifyStringBlacklist")]
                     [Validation(Required=false)]
                     public string VerifyStringBlacklist { get; set; }
 
                     /// <summary>
-                    /// 验证字符串即监测页面源代码中的某个任意字符串。客户端返回的源码必须包含所有白名单中的字符串，否则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。
+                    /// The verification string is an arbitrary string in the source code of the monitoring page. The source code returned by the client must contain all the strings in the whitelist, otherwise an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by a vertical bar (|).
                     /// </summary>
                     [NameInMap("VerifyStringWhitelist")]
                     [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ManageRecordingRuleRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// The ID of the cluster.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The user ID.
+        /// The ID of the user.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string QueryUserId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// 
         /// This parameter is required.
         /// </summary>

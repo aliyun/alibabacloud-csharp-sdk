@@ -10,56 +10,56 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetAppJVMConfigResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+        /// The response code. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// Java VM info list.
+        /// The list of JVM information.
         /// </summary>
         [NameInMap("JvmInfoList")]
         [Validation(Required=false)]
         public List<GetAppJVMConfigResponseBodyJvmInfoList> JvmInfoList { get; set; }
         public class GetAppJVMConfigResponseBodyJvmInfoList : TeaModel {
             /// <summary>
-            /// Agent version.
+            /// The version of the agent.
             /// </summary>
             [NameInMap("AgentVersion")]
             [Validation(Required=false)]
             public string AgentVersion { get; set; }
 
             /// <summary>
-            /// The name of the elastic container instance.
+            /// The hostname.
             /// </summary>
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
 
             /// <summary>
-            /// Ip address.
+            /// The IP address.
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The PID.
+            /// The application ID.
             /// </summary>
             [NameInMap("Pid")]
             [Validation(Required=false)]
             public string Pid { get; set; }
 
             /// <summary>
-            /// Process Id.
+            /// The process ID.
             /// </summary>
             [NameInMap("ProcId")]
             [Validation(Required=false)]
             public string ProcId { get; set; }
 
             /// <summary>
-            /// Java VM config.
+            /// The VM parameters.
             /// </summary>
             [NameInMap("VmArgs")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -82,10 +82,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   `true`
-        /// *   `false`
+        /// Indicates whether the request was successful. Valid values: true and false.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -17,29 +17,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The response parameters.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPrometheusInstanceResponseBodyData Data { get; set; }
         public class GetPrometheusInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// 权限类型：
-            /// readWrite、readOnly、httpReadOnly
+            /// Permission type: read Write, read Only, http Read Only
             /// </summary>
             [NameInMap("AccessType")]
             [Validation(Required=false)]
             public string AccessType { get; set; }
 
             /// <summary>
-            /// The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
+            /// The number of days for which data is automatically archived after the storage duration expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
             /// </summary>
             [NameInMap("ArchiveDuration")]
             [Validation(Required=false)]
             public int? ArchiveDuration { get; set; }
 
             /// <summary>
-            /// Authorization token.
+            /// The authorization token.
             /// </summary>
             [NameInMap("AuthToken")]
             [Validation(Required=false)]
@@ -79,14 +78,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string GrafanaInstanceId { get; set; }
 
             /// <summary>
-            /// Http API internet address.
+            /// The public URL for the HTTP API.
             /// </summary>
             [NameInMap("HttpApiInterUrl")]
             [Validation(Required=false)]
             public string HttpApiInterUrl { get; set; }
 
             /// <summary>
-            /// Http API intranet address.
+            /// The internal URL for the HTTP API.
             /// </summary>
             [NameInMap("HttpApiIntraUrl")]
             [Validation(Required=false)]
@@ -103,14 +102,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// Push gateway internet address.
+            /// The public URL for Pushgateway.
             /// </summary>
             [NameInMap("PushGatewayInterUrl")]
             [Validation(Required=false)]
             public string PushGatewayInterUrl { get; set; }
 
             /// <summary>
-            /// Push gateway intranet address.
+            /// The internal URL for Pushgateway.
             /// </summary>
             [NameInMap("PushGatewayIntraUrl")]
             [Validation(Required=false)]
@@ -124,28 +123,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// Remote read internet address.
+            /// The public URL for remote read.
             /// </summary>
             [NameInMap("RemoteReadInterUrl")]
             [Validation(Required=false)]
             public string RemoteReadInterUrl { get; set; }
 
             /// <summary>
-            /// Remote read intranet address.
+            /// The internal URL for remote read.
             /// </summary>
             [NameInMap("RemoteReadIntraUrl")]
             [Validation(Required=false)]
             public string RemoteReadIntraUrl { get; set; }
 
             /// <summary>
-            /// Remote write internet address.
+            /// The public URL for remote write.
             /// </summary>
             [NameInMap("RemoteWriteInterUrl")]
             [Validation(Required=false)]
             public string RemoteWriteInterUrl { get; set; }
 
             /// <summary>
-            /// Remote write intranet address.
+            /// The internal URL for remote write.
             /// </summary>
             [NameInMap("RemoteWriteIntraUrl")]
             [Validation(Required=false)]

@@ -11,7 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class ListPrometheusInstancesRequest : TeaModel {
         /// <summary>
         /// Optional instance types (if left blank, all types of instances will be queried):
-        /// - cloud-product-prometheus 
+        /// 
+        /// - cloud-product-prometheus
         /// - ManagedKubernetes
         /// - satellite
         /// - Ask
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -36,7 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to query global aggregation instances. Valid values:
+        /// Specifies whether to obtain global aggregation instances. Valid values:
         /// 
         /// *   true
         /// *   false

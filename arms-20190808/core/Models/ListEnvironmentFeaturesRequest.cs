@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentFeaturesRequest : TeaModel {
+        /// <summary>
+        /// The language. Valid values: zh and en. Default value: zh.
+        /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }

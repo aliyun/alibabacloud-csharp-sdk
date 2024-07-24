@@ -28,21 +28,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// 标签。
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetTraceAppRequestTags> Tags { get; set; }
         public class GetTraceAppRequestTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// 标签的键（key）。
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// 标签的值（value）。
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

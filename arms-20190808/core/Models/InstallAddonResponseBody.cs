@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string LastTransitionTime { get; set; }
 
                 /// <summary>
-                /// The detailed information.
+                /// The returned message.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// Whether or not it is a managed component.
+            /// Indicates whether the component is fully managed.
             /// </summary>
             [NameInMap("Managed")]
             [Validation(Required=false)]

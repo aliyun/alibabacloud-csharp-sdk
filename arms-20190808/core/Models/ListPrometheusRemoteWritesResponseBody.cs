@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListPrometheusRemoteWritesResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+        /// The HTTP status code that is returned. The HTTP status code 200 indicates that the call was successful. Otherwise, the call fails.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values: true and false.
+        /// Indicates whether the call was successful. Valid values: true and false.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

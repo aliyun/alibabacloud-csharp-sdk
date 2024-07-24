@@ -13,34 +13,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// The language. Default value: zh.
         /// 
         /// Valid values:
-        /// 
-        /// *   en
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     English
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
-        /// 
-        /// *   zh
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     Chinese
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
+        /// *   en: English
+        /// *   zh: Chinese
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
@@ -67,8 +41,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// The subtype of the environment. Valid values:
         /// 
-        /// *   CS: ACK
-        /// *   ECS: ECS
+        /// *   CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)
+        /// *   ECS: Elastic Compute Service (ECS)
         /// *   Cloud: cloud service
         /// 
         /// This parameter is required.
@@ -101,12 +75,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string FeePackage { get; set; }
 
         /// <summary>
-        /// 环境绑定的grafana工作区id。传空时，表示使用默认的共享grafana。
+        /// The ID of the Grafana workspace associated with the environment. If this parameter is left empty, the default shared Grafana workspace is used.
         /// </summary>
         [NameInMap("GrafanaWorkspaceId")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceId { get; set; }
 
+        /// <summary>
+        /// Whether to initialize the environment.
+        /// </summary>
         [NameInMap("InitEnvironment")]
         [Validation(Required=false)]
         public bool? InitEnvironment { get; set; }

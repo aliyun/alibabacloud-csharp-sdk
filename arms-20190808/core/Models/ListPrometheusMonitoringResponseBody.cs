@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public List<ListPrometheusMonitoringResponseBodyData> Data { get; set; }
         public class ListPrometheusMonitoringResponseBodyData : TeaModel {
             /// <summary>
-            /// Prometheus Instance ID.
+            /// The ID of the Prometheus instance.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]

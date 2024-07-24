@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddIntegrationResponseBody : TeaModel {
         /// <summary>
-        /// 状态码。200为成功，其他状态码为异常。
+        /// Status code. 200 means success, other status codes are exceptions.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the integration was successful.
+        /// Indicates whether the call was successful.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// 返回结果的提示信息。
+        /// The prompt information of the returned result.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The queried application monitoring tasks.
+        /// The list of Application Monitoring tasks.
         /// </summary>
         [NameInMap("TraceApps")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The tags of the application.
+            /// The labels of the application.
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public bool? Show { get; set; }
 
             /// <summary>
-            /// The source of the application.
+            /// The application source.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]

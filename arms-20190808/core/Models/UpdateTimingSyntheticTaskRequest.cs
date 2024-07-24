@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public UpdateTimingSyntheticTaskRequestCommonSetting CommonSetting { get; set; }
         public class UpdateTimingSyntheticTaskRequestCommonSetting : TeaModel {
             /// <summary>
-            /// The custom host.
+            /// The custom host settings.
             /// </summary>
             [NameInMap("CustomHost")]
             [Validation(Required=false)]
@@ -95,7 +95,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// The selection mode. 0: Random. 1: Polling.
+                /// The selection mode. Valid values:
+                /// 
+                /// *   0: random
+                /// *   1: polling
                 /// </summary>
                 [NameInMap("SelectType")]
                 [Validation(Required=false)]
@@ -121,22 +124,37 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             }
 
+            /// <summary>
+            /// The information about the virtual private cloud (VPC). If the destination URL is an Alibaba Cloud internal endpoint, you need to configure a VPC.
+            /// </summary>
             [NameInMap("CustomVPCSetting")]
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting CustomVPCSetting { get; set; }
             public class UpdateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting : TeaModel {
+                /// <summary>
+                /// The region ID.
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// The ID of the security group to which the client belongs. The security group specifies the inbound and outbound rules of the client for the VPC. You need to allow the security group to which the client belongs to access the security group to which the VPC belongs. Otherwise, the client cannot access resources in the VPC.
+                /// </summary>
                 [NameInMap("SecureGroupId")]
                 [Validation(Required=false)]
                 public string SecureGroupId { get; set; }
 
+                /// <summary>
+                /// The vSwitch ID.
+                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
+                /// <summary>
+                /// VPC ID.
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
@@ -155,7 +173,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public int? IpType { get; set; }
 
             /// <summary>
-            /// 是否开启链路追踪。
+            /// Specifies whether to enable tracing.
             /// </summary>
             [NameInMap("IsOpenTrace")]
             [Validation(Required=false)]
@@ -164,26 +182,26 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <summary>
             /// Specifies whether to evenly distribute monitoring samples. Valid values:
             /// 
-            /// *   0: No
-            /// *   1: Yes
+            /// *   0: no.
+            /// *   1: yes.
             /// </summary>
             [NameInMap("MonitorSamples")]
             [Validation(Required=false)]
             public int? MonitorSamples { get; set; }
 
             /// <summary>
-            /// 链路追踪客户端类型：
+            /// The type of the client for tracing. Valid values:
             /// 
-            /// - 0：ARMS Agent
-            /// - 1：OpenTelemetry
-            /// - 2：Jaeger
+            /// *   0: ARMS agent
+            /// *   1: OpenTelemetry
+            /// *   2: Jaeger
             /// </summary>
             [NameInMap("TraceClientType")]
             [Validation(Required=false)]
             public int? TraceClientType { get; set; }
 
             /// <summary>
-            /// 链路数据上报region。
+            /// The region to which trace data is reported.
             /// </summary>
             [NameInMap("XtraceRegion")]
             [Validation(Required=false)]
@@ -229,12 +247,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public UpdateTimingSyntheticTaskRequestMonitorConf MonitorConf { get; set; }
         public class UpdateTimingSyntheticTaskRequestMonitorConf : TeaModel {
             /// <summary>
-            /// The HTTP(S) synthetic test parameters.
+            /// The parameters of the HTTP(S) synthetic test.
             /// </summary>
             [NameInMap("ApiHTTP")]
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestMonitorConfApiHTTP ApiHTTP { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfApiHTTP : TeaModel {
+                /// <summary>
+                /// Specifies whether to verify the certificate. Default value: No.
+                /// </summary>
                 [NameInMap("CheckCert")]
                 [Validation(Required=false)]
                 public bool? CheckCert { get; set; }
@@ -268,7 +289,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public UpdateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody RequestBody { get; set; }
                 public class UpdateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody : TeaModel {
                     /// <summary>
-                    /// The content of the request body. Format: JSON string. The parameter is required if the type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.
+                    /// The content of the request body. Format: JSON string. The parameter is required if the type parameter is set to text/plain, application/json, application/xml, or text/html.
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -307,28 +328,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The file download parameters.
+            /// The parameters of file downloading.
             /// </summary>
             [NameInMap("FileDownload")]
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestMonitorConfFileDownload FileDownload { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfFileDownload : TeaModel {
                 /// <summary>
-                /// The connection timeout period. Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.
+                /// Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.
                 /// </summary>
                 [NameInMap("ConnectionTimeout")]
                 [Validation(Required=false)]
                 public long? ConnectionTimeout { get; set; }
 
                 /// <summary>
-                /// The content of the custom request header.
+                /// The content of the custom request header. Format: JSON map.
                 /// </summary>
                 [NameInMap("CustomHeaderContent")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> CustomHeaderContent { get; set; }
 
                 /// <summary>
-                /// The kernel type.
+                /// The kernel type. Valid values:
                 /// 
                 /// *   1: curl
                 /// *   0: WinInet
@@ -338,21 +359,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public int? DownloadKernel { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore CA certificate authentication errors. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore CA certificate authentication errors. Valid values: 0: No. 1: Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateAuthError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateAuthError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore certificate revocation errors. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore certificate revocation errors. Valid values: 0: No. 1: Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateCanceledError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateCanceledError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore certificate invalidity. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore certificate invalidity. Valid values: 0: No. 1: Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateOutOfDateError")]
                 [Validation(Required=false)]
@@ -366,21 +387,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public int? IgnoreCertificateStatusError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore certificate incredibility. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore certificate incredibility. Valid values: 0: No. 1: Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateUntrustworthyError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateUntrustworthyError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore certificate usage errors. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore certificate usage errors. Valid values: 0: No. 1: Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateUsingError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateUsingError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore host invalidity. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore host invalidity. Valid values: 0: No. 1: Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreInvalidHostError")]
                 [Validation(Required=false)]
@@ -394,25 +415,25 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? MonitorTimeout { get; set; }
 
                 /// <summary>
-                /// The QUIC protocol type.
+                /// The QUIC protocol type. Valid values:
                 /// 
-                /// *   1: http1
-                /// *   2: http2
-                /// *   3: http3
+                /// *   1: HTTP/1
+                /// *   2: HTTP/2
+                /// *   3: HTTP/3
                 /// </summary>
                 [NameInMap("QuickProtocol")]
                 [Validation(Required=false)]
                 public int? QuickProtocol { get; set; }
 
                 /// <summary>
-                /// Specifies whether to support redirection. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to support redirection. Valid values: 0: No. 1: Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("Redirection")]
                 [Validation(Required=false)]
                 public int? Redirection { get; set; }
 
                 /// <summary>
-                /// The file download URL.
+                /// The URL that is used to download the file.
                 /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
@@ -426,25 +447,25 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? TransmissionSize { get; set; }
 
                 /// <summary>
-                /// 验证关键词。
+                /// The keyword that is used in verification.
                 /// </summary>
                 [NameInMap("ValidateKeywords")]
                 [Validation(Required=false)]
                 public string ValidateKeywords { get; set; }
 
                 /// <summary>
-                /// 验证方式。
+                /// The verification method. Valid values:
                 /// 
-                /// - 0：不验证 
-                /// - 1：验证字符串 
-                /// - 2：MD5验证
+                /// *   0: no verification
+                /// *   1: string verification
+                /// *   2: MD5 verification
                 /// </summary>
                 [NameInMap("VerifyWay")]
                 [Validation(Required=false)]
                 public int? VerifyWay { get; set; }
 
                 /// <summary>
-                /// DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。
+                /// The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: www.aliyun.com:203.0.3.55|203.3.44.67. It indicates that all IP addresses that belong to the www.aliyun.com domain name except 203.0.3.55 and 203.3.44.67 are hijacked.
                 /// </summary>
                 [NameInMap("WhiteList")]
                 [Validation(Required=false)]
@@ -453,21 +474,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The DNS synthetic test parameters.
+            /// The parameters of the DNS synthetic test.
             /// </summary>
             [NameInMap("NetDNS")]
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestMonitorConfNetDNS NetDNS { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfNetDNS : TeaModel {
                 /// <summary>
-                /// Specifies whether to use dig to display the data. 0: No. 1: Yes.
+                /// Specifies whether to use the dig command to display the data. Valid values: 0: No. 1: Yes.
                 /// </summary>
                 [NameInMap("Dig")]
                 [Validation(Required=false)]
                 public int? Dig { get; set; }
 
                 /// <summary>
-                /// The IP version of the DNS server. 0: IPv4. 1: IPv6. 2: A version is automatically selected. Default value: 0.
+                /// The IP version of the DNS server. Valid values: 0: IPv4. 1: IPv6. 2: A version is automatically selected. Default value: 0.
                 /// </summary>
                 [NameInMap("DnsServerIpType")]
                 [Validation(Required=false)]
@@ -481,14 +502,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string NsServer { get; set; }
 
                 /// <summary>
-                /// The DNS query. 0: recursive, 1: iterative. Default value: 0.
+                /// The DNS query method. Valid values: 0: recursive. 1: iterative. Default value: 0.
                 /// </summary>
                 [NameInMap("QueryMethod")]
                 [Validation(Required=false)]
                 public int? QueryMethod { get; set; }
 
                 /// <summary>
-                /// The destination domain name.
+                /// The domain name.
                 /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
@@ -504,7 +525,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The ICMP synthetic test parameters.
+            /// The parameters of the ICMP synthetic test.
             /// </summary>
             [NameInMap("NetICMP")]
             [Validation(Required=false)]
@@ -525,7 +546,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public int? PackageNum { get; set; }
 
                 /// <summary>
-                /// The size of each ICMP packet. Unit: bytes. Valid values: 32, 64, 128, 256, 512, 1024.
+                /// The size of each ICMP packet. Unit: bytes. Valid values: 32, 64, 128, 256, 512, 1024, 1080, and 1450.
                 /// </summary>
                 [NameInMap("PackageSize")]
                 [Validation(Required=false)]
@@ -539,14 +560,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public bool? SplitPackage { get; set; }
 
                 /// <summary>
-                /// The destination host IP address or domain name. Port numbers, protocol headers, or request paths are not supported.
+                /// The IP address or domain name of the destination host. The value cannot contain port numbers, protocol headers, or request paths.
                 /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
 
                 /// <summary>
-                /// The timeout period for the TCP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.
+                /// The timeout period for the ICMP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.
                 /// </summary>
                 [NameInMap("Timeout")]
                 [Validation(Required=false)]
@@ -560,14 +581,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public bool? TracertEnable { get; set; }
 
                 /// <summary>
-                /// The maximum number of hops for tracert. Minimum value: 1. Maximum value: 128. Default value: 64.
+                /// The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.
                 /// </summary>
                 [NameInMap("TracertNumMax")]
                 [Validation(Required=false)]
                 public int? TracertNumMax { get; set; }
 
                 /// <summary>
-                /// The timeout period of tracert. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.
+                /// The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.
                 /// </summary>
                 [NameInMap("TracertTimeout")]
                 [Validation(Required=false)]
@@ -576,14 +597,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The TCP synthetic tests parameters. This parameter is required if the TaskType parameter is set to 2.
+            /// The parameters of the TCP synthetic test. This parameter is required if the TaskType parameter is set to 2.
             /// </summary>
             [NameInMap("NetTCP")]
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestMonitorConfNetTCP NetTCP { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfNetTCP : TeaModel {
                 /// <summary>
-                /// The number of TCP connections that are established in a test. Minimum value: 1. Maximum value: 16. Default value: 4.
+                /// The number of TCP connections that are established. Minimum value: 1. Maximum value: 16. Default value: 4.
                 /// </summary>
                 [NameInMap("ConnectTimes")]
                 [Validation(Required=false)]
@@ -597,7 +618,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? Interval { get; set; }
 
                 /// <summary>
-                /// The destination host IP address.
+                /// The IP address of the destination host.
                 /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
@@ -618,14 +639,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public bool? TracertEnable { get; set; }
 
                 /// <summary>
-                /// The maximum number of hops for tracert. Minimum value: 1. Maximum value: 128. Default value: 20.
+                /// The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.
                 /// </summary>
                 [NameInMap("TracertNumMax")]
                 [Validation(Required=false)]
                 public int? TracertNumMax { get; set; }
 
                 /// <summary>
-                /// The timeout period of tracert. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.
+                /// The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.
                 /// </summary>
                 [NameInMap("TracertTimeout")]
                 [Validation(Required=false)]
@@ -634,62 +655,62 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// 流媒体拨测配置。
+            /// The parameters of the streaming-media synthetic test.
             /// </summary>
             [NameInMap("Stream")]
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestMonitorConfStream Stream { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfStream : TeaModel {
                 /// <summary>
-                /// 自定义header，JSON Map格式。
+                /// The custom header. Format: JSON map.
                 /// </summary>
                 [NameInMap("CustomHeaderContent")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> CustomHeaderContent { get; set; }
 
                 /// <summary>
-                /// 播放器，不传默认12。
+                /// The player. Default value: 12. Valid values:
                 /// 
-                /// - 12：VLC
-                /// - 2：FlashPlayer
+                /// *   12: VLC
+                /// *   2: Flash Player
                 /// </summary>
                 [NameInMap("PlayerType")]
                 [Validation(Required=false)]
                 public int? PlayerType { get; set; }
 
                 /// <summary>
-                /// 资源地址类型：
+                /// The address type of the resource. Valid values:
                 /// 
-                /// - 1：资源地址。
-                /// - 0：页面地址。不传默认0。
+                /// *   1: resource URL
+                /// *   0: page URL Default value: 0.
                 /// </summary>
                 [NameInMap("StreamAddressType")]
                 [Validation(Required=false)]
                 public int? StreamAddressType { get; set; }
 
                 /// <summary>
-                /// 监测时长，单位秒，最长支持60s，不传默认60。
+                /// The monitoring duration. Unit: seconds. Maximum and default value: 60.
                 /// </summary>
                 [NameInMap("StreamMonitorTimeout")]
                 [Validation(Required=false)]
                 public int? StreamMonitorTimeout { get; set; }
 
                 /// <summary>
-                /// 音视频标志：0-视频，1-音频。
+                /// Specifies whether the resource is a video or audio. Valid values: 0: video. 1: audio.
                 /// </summary>
                 [NameInMap("StreamType")]
                 [Validation(Required=false)]
                 public int? StreamType { get; set; }
 
                 /// <summary>
-                /// 流媒体地址。
+                /// The resource URL of the streaming media.
                 /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
 
                 /// <summary>
-                /// DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。
+                /// The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: www.aliyun.com:203.0.3.55|203.3.44.67. It indicates that all IP addresses that belong to the www.aliyun.com domain name except 203.0.3.55 and 203.3.44.67 are hijacked.
                 /// </summary>
                 [NameInMap("WhiteList")]
                 [Validation(Required=false)]
@@ -698,21 +719,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The website-speed measurement parameters.
+            /// The parameters of the website speed measurement.
             /// </summary>
             [NameInMap("Website")]
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestMonitorConfWebsite Website { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfWebsite : TeaModel {
                 /// <summary>
-                /// Specifies whether to automatically scroll up and down the screen to load a page. 0: No. 1: Yes. Default value: 0.
+                /// Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: No. 1: Yes. Default value: 0.
                 /// </summary>
                 [NameInMap("AutomaticScrolling")]
                 [Validation(Required=false)]
                 public int? AutomaticScrolling { get; set; }
 
                 /// <summary>
-                /// Specifies whether to create a custom header. 0: No. 1: The first packet is modified. 2: All packets are modified. Default value: 0.
+                /// Specifies whether to create a custom header. Valid values: 0: No. 1: The first packet is modified. 2: All packets are modified. Default value: 0.
                 /// </summary>
                 [NameInMap("CustomHeader")]
                 [Validation(Required=false)]
@@ -726,37 +747,37 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public Dictionary<string, string> CustomHeaderContent { get; set; }
 
                 /// <summary>
-                /// 域名（例如www.aliyun.com）解析时，解析出的IP地址或者CNAME不在DNS劫持白名单内，用户就会访问失败或者返回一个非Aliyun的目标IP；若解析结果中的IP或者CNAME在DNS白名单内，则会被认定为没有发生DNS劫持。
+                /// If the IP address or CNAME record resolved from a domain name is not included in the DNS whitelist, you cannot access the domain name, or an IP address that belongs to a different domain name is returned. If the IP address or CNAME record is included in the DNS whitelist, DNS hijacking does not occur.
                 /// 
-                /// 填写格式：域名:匹配规则。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。
+                /// Format: \\<domain name>:\\<objects>. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: www.aliyun.com:203.0.3.55|203.3.44.67. It indicates that all IP addresses that belong to the www.aliyun.com domain name except 203.0.3.55 and 203.3.44.67 are hijacked.
                 /// </summary>
                 [NameInMap("DNSHijackWhitelist")]
                 [Validation(Required=false)]
                 public string DNSHijackWhitelist { get; set; }
 
                 /// <summary>
-                /// Specifies whether to disable the cache. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to disable the cache. Valid values: 0: No. 1: Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("DisableCache")]
                 [Validation(Required=false)]
                 public int? DisableCache { get; set; }
 
                 /// <summary>
-                /// Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. 0: No. 1: Yes. Default value: 0.
+                /// Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: No. 1: Yes. Default value: 0.
                 /// </summary>
                 [NameInMap("DisableCompression")]
                 [Validation(Required=false)]
                 public int? DisableCompression { get; set; }
 
                 /// <summary>
-                /// 在页面加载过程中如果出现元素黑名单中配置的元素，不会请求加载该元素 。
+                /// The elements not to be loaded in the page loading process.
                 /// </summary>
                 [NameInMap("ElementBlacklist")]
                 [Validation(Required=false)]
                 public string ElementBlacklist { get; set; }
 
                 /// <summary>
-                /// Specifies whether to filter invalid IP addresses.
+                /// Specifies whether to exclude invalid IP addresses. Valid values:
                 /// 
                 /// *   1: No
                 /// *   0: Yes
@@ -766,21 +787,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public int? FilterInvalidIP { get; set; }
 
                 /// <summary>
-                /// 识别元素：设置浏览页面元素总个数。
+                /// The total number of elements on the page.
                 /// </summary>
                 [NameInMap("FlowHijackJumpTimes")]
                 [Validation(Required=false)]
                 public int? FlowHijackJumpTimes { get; set; }
 
                 /// <summary>
-                /// 劫持标识：设置匹配的关键信息。填写劫持判断关键字或关键元素，允许带星号（*）。
+                /// The keyword that is used to identify hijacking. Asterisks (\\*) are allowed.
                 /// </summary>
                 [NameInMap("FlowHijackLogo")]
                 [Validation(Required=false)]
                 public string FlowHijackLogo { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore SSL certificate errors during browsing. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: No. 1: Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateError")]
                 [Validation(Required=false)]
@@ -794,14 +815,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? MonitorTimeout { get; set; }
 
                 /// <summary>
-                /// 监测页面出现了域名设置之外的元素都属于页面被篡改。常见的表现形式为弹出广告、浮动广告、跳转等。
+                /// Elements that are not included in the whitelist and appear on the page are manipulated. These elements can be pop-up ads, floating ads, and page redirection.
                 /// </summary>
                 [NameInMap("PageTamper")]
                 [Validation(Required=false)]
                 public string PageTamper { get; set; }
 
                 /// <summary>
-                /// Specifies whether to continue browsing after redirection. 0: No, 1:Yes. Default value: 1.
+                /// Specifies whether to continue browsing after redirection. Valid values: 0: No. 1:Yes. Default value: 1.
                 /// </summary>
                 [NameInMap("Redirection")]
                 [Validation(Required=false)]
@@ -815,21 +836,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? SlowElementThreshold { get; set; }
 
                 /// <summary>
-                /// The destination URL.
+                /// The URL of the website.
                 /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
 
                 /// <summary>
-                /// 验证字符串即监测页面源代码中的某个任意字符串。若客户端返回的源码中包含任一黑名单中的字符串则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。
+                /// An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is in the blacklist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).
                 /// </summary>
                 [NameInMap("VerifyStringBlacklist")]
                 [Validation(Required=false)]
                 public string VerifyStringBlacklist { get; set; }
 
                 /// <summary>
-                /// 验证字符串即监测页面源代码中的某个任意字符串。客户端返回的源码必须包含所有白名单中的字符串，否则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。
+                /// An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is not in the whitelist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).
                 /// </summary>
                 [NameInMap("VerifyStringWhitelist")]
                 [Validation(Required=false)]

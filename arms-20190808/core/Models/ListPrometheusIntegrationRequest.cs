@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The integration type.
+        /// The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
         /// 
         /// This parameter is required.
         /// </summary>

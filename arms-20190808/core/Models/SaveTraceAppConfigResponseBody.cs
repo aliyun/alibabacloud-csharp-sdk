@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class SaveTraceAppConfigResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+        /// The HTTP status code. 2XX indicates that the request was successful. 3XX indicates that the request was redirected. 4XX indicates that a request error occurred. 5XX indicates that a server error occurred.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   `true`
-        /// *   `false`
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

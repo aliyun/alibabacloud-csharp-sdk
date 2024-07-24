@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpgradeAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// Version of Addon.
+        /// The version of the add-on.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AddonVersion { get; set; }
 
         /// <summary>
-        /// Whether to pre-check this request.
+        /// Specifies whether to perform only a dry run, without performing the actual request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Environment ID.
+        /// The environment ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of Release.
+        /// The name of the release.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ReleaseName { get; set; }
 
         /// <summary>
-        /// Metadata information.
+        /// The metadata information.
         /// 
         /// This parameter is required.
         /// </summary>

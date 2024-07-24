@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.
+        /// The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
         /// </summary>
         [NameInMap("ArchiveDuration")]
         [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// Storage duration (days).
+        /// The data storage duration. Unit: days.
         /// </summary>
         [NameInMap("StorageDuration")]
         [Validation(Required=false)]

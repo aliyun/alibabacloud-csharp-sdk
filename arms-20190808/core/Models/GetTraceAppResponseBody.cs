@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            /// <summary>
+            /// Cluster ID, used only in K8s scenarios.
+            /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
@@ -55,6 +58,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<string> Labels { get; set; }
 
+            /// <summary>
+            /// Coding Language.
+            /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }

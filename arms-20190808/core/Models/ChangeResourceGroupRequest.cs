@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource.
+        /// The region ID.
         /// 
         /// This parameter is required.
         /// </summary>

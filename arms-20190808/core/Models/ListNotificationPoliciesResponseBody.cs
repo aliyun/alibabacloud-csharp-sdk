@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesGroupRule GroupRule { get; set; }
                 public class ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesGroupRule : TeaModel {
                     /// <summary>
-                    /// The time interval of grouping. Unit: seconds. Default value: 30.
+                    /// The time interval for grouping. Unit: seconds. Default value: 30.
                     /// </summary>
                     [NameInMap("GroupInterval")]
                     [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The notification rules.
+                /// The notification rule.
                 /// </summary>
                 [NameInMap("NotifyRule")]
                 [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// The notification templates.
+                /// The notification template.
                 /// </summary>
                 [NameInMap("NotifyTemplate")]
                 [Validation(Required=false)]
@@ -308,6 +308,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public bool? SendRecoverMessage { get; set; }
 
+                /// <summary>
+                /// Indicates whether the notification policy is enabled. Valid values: enable and disable.
+                /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }

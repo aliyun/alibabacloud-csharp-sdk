@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the ID to troubleshoot issues.
+        /// The ID of the request. You can use the ID to troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

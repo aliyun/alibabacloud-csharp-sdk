@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class OpenArmsDefaultSLRResponseBody : TeaModel {
         /// <summary>
-        /// The returned result.
+        /// Indicates whether the call was successful. Valid values:
+        /// 
+        /// *   `true`: The call was successful.
+        /// *   `false`: The call failed.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

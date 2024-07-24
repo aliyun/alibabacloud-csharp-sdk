@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The monitoring configuration. Specify a YAML string.
+        /// The monitoring configuration. The value is a YAML string.
         /// 
         /// This parameter is required.
         /// </summary>

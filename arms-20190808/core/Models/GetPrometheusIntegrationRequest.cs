@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetPrometheusIntegrationRequest : TeaModel {
         /// <summary>
-        /// The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
+        /// The ID of the Prometheus instance. Valid values: aliyun-cs and ecs.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The exporter ID.
+        /// The ID of the exporter.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// The type of the integration.
+        /// The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
         /// 
         /// This parameter is required.
         /// </summary>

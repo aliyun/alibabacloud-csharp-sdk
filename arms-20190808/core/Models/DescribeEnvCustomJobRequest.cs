@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string CustomJobName { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the encrypted YAML string.
+        /// Specifies whether to return an encrypted YAML string.
         /// </summary>
         [NameInMap("EncryptYaml")]
         [Validation(Required=false)]

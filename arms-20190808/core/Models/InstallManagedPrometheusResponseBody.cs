@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The response content. The status of the Prometheus instance is returned.
+        /// The response content. In most cases, the installation status of the Prometheus agent is returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The error message returned if the Prometheus instance fails to be created.
+        /// The error message returned if the Prometheus agent failed to be installed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the Prometheus instance was created.
+        /// Indicates whether the Prometheus agent was installed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

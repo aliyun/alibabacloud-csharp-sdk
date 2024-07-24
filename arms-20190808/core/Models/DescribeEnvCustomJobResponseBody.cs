@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public DescribeEnvCustomJobResponseBodyData Data { get; set; }
         public class DescribeEnvCustomJobResponseBodyData : TeaModel {
             /// <summary>
-            /// If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
+            /// If the **encryptYaml** parameter is set to `true`, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
             /// </summary>
             [NameInMap("ConfigYaml")]
             [Validation(Required=false)]
@@ -52,7 +52,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The status of the custom job. Valid values: run and stop.
+            /// The status. Valid values:
+            /// 
+            /// *   run
+            /// *   stop
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class OpenVClusterResponseBody : TeaModel {
         /// <summary>
-        /// The cluster ID. The value is a string.
+        /// The cluster ID.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the ID to find logs and troubleshoot issues.
+        /// The request ID. You can use the ID to query logs and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

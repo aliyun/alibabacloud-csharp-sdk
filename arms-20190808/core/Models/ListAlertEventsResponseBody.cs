@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListAlertEventsResponseBody : TeaModel {
         /// <summary>
-        /// The struct returned.
+        /// The returned struct.
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
         public ListAlertEventsResponseBodyPageBean PageBean { get; set; }
         public class ListAlertEventsResponseBodyPageBean : TeaModel {
             /// <summary>
-            /// The list of information about historical alert events.
+            /// The queried historical alert events.
             /// </summary>
             [NameInMap("Events")]
             [Validation(Required=false)]
             public List<ListAlertEventsResponseBodyPageBeanEvents> Events { get; set; }
             public class ListAlertEventsResponseBodyPageBeanEvents : TeaModel {
                 /// <summary>
-                /// The list of associated alerts.
+                /// The associated alerts.
                 /// </summary>
                 [NameInMap("Alarms")]
                 [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string AlertName { get; set; }
 
                 /// <summary>
-                /// The list of annotations.
+                /// The annotations.
                 /// </summary>
                 [NameInMap("Annotations")]
                 [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The end time of the alert event.
+                /// The end time.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
@@ -121,20 +121,29 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string IntegrationType { get; set; }
 
                 /// <summary>
-                /// The list of tags.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public string Labels { get; set; }
 
+                /// <summary>
+                /// The information about the notification policy.
+                /// </summary>
                 [NameInMap("NotificationPolicies")]
                 [Validation(Required=false)]
                 public List<ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies> NotificationPolicies { get; set; }
                 public class ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies : TeaModel {
+                    /// <summary>
+                    /// The ID of the notification policy.
+                    /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
+                    /// <summary>
+                    /// The name of the notification policy.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -149,7 +158,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string ReceiveTime { get; set; }
 
                 /// <summary>
-                /// The severity level of the alert. Valid value:
+                /// The severity level of the alert. Valid values:
                 /// 
                 /// *   critical: P1
                 /// *   error: P2
@@ -162,7 +171,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Severity { get; set; }
 
                 /// <summary>
-                /// The start time of the alert event.
+                /// The start time.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -179,6 +188,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The number of times the alert is triggered.
+                /// </summary>
                 [NameInMap("TriggerCount")]
                 [Validation(Required=false)]
                 public long? TriggerCount { get; set; }

@@ -17,11 +17,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Sub-services:
-        /// - apm: Application Monitoring
-        /// - rum: Real User Monitoring
-        /// - prometheus: Managed Service for Prometheus
-        /// - xtrace: Managed Service for OpenTelemetry
+        /// The ARMS sub-service. Valid values:
+        /// 
+        /// *   apm: Application Monitoring
+        /// *   rum: RUM
+        /// *   prometheus: Managed Service for Prometheus
+        /// *   xtrace: Managed Service for OpenTelemetry
         /// 
         /// This parameter is required.
         /// </summary>

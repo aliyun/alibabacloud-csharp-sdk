@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AvailableAssertionsShrink { get; set; }
 
+        /// <summary>
+        /// The general settings.
+        /// </summary>
         [NameInMap("CommonSetting")]
         [Validation(Required=false)]
         public string CommonSettingShrink { get; set; }
@@ -36,6 +39,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? MonitorCategory { get; set; }
 
         /// <summary>
+        /// The monitoring configurations.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorConf")]
@@ -50,6 +55,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string MonitorsShrink { get; set; }
 
         /// <summary>
+        /// The name of the task.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
@@ -57,6 +64,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// The region ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -72,6 +81,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
+        /// The type of the task. Valid values:
+        /// 
+        /// 1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed measurement. 6: file download.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]

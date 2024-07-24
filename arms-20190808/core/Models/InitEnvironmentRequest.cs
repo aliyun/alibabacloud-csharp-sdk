@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// Whether to create a Token in order to enhance the security of data retrieval.
+        /// Specifies whether to create a token to improve data security.
         /// </summary>
         [NameInMap("CreateAuthToken")]
         [Validation(Required=false)]

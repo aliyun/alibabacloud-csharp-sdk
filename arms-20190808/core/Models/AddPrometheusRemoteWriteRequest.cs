@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddPrometheusRemoteWriteRequest : TeaModel {
         /// <summary>
-        /// The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
+        /// The ID of the Prometheus instance.
         /// 
         /// This parameter is required.
         /// </summary>

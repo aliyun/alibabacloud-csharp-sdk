@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The status of the monitoring configuration. Valid values: run and stop.
+        /// The status of the monitoring configuration. Valid values: run and stop. The status of Probe cannot be modified.
         /// 
         /// This parameter is required.
         /// </summary>

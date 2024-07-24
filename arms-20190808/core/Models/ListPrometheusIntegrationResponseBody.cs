@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ExporterType { get; set; }
 
             /// <summary>
-            /// The exporter ID.
+            /// The ID of the exporter.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The integration type.
+            /// The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
             /// </summary>
             [NameInMap("IntegrationType")]
             [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public bool? ShowLog { get; set; }
 
             /// <summary>
-            /// The state of the exporter.
+            /// The status of the exporter.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

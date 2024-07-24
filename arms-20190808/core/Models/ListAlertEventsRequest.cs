@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public long? Page { get; set; }
 
+        /// <summary>
+        /// Whether to display the associated notification policies.
+        /// </summary>
         [NameInMap("ShowNotificationPolicies")]
         [Validation(Required=false)]
         public bool? ShowNotificationPolicies { get; set; }

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The struct returned.
+        /// The returned struct.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances> PrometheusInstances { get; set; }
             public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances : TeaModel {
                 /// <summary>
-                /// Auth Token string.
+                /// The authorization token.
                 /// </summary>
                 [NameInMap("AuthToken")]
                 [Validation(Required=false)]
@@ -52,13 +52,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string ClusterName { get; set; }
 
                 /// <summary>
-                /// The type of the cluster. Valid values: remote-write: Prometheus instance for remote write.
+                /// The instance type. Valid values:
                 /// 
-                /// *   ecs: Prometheus instances for ECS.
-                /// *   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland.
-                /// *   cloud-product: Prometheus instance for Alibaba Cloud services outside China.
-                /// *   global-view: Prometheus instance for GlobalView.
-                /// *   aliyun-cs: Prometheus instance for Container Service.
+                /// *   remote-write: Prometheus instance for Remote Write
+                /// *   ecs: Prometheus instances for ECS
+                /// *   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland
+                /// *   cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland
+                /// *   global-view: global aggregation instance
+                /// *   aliyun-cs: Prometheus instance for Container Service
                 /// </summary>
                 [NameInMap("ClusterType")]
                 [Validation(Required=false)]
@@ -72,14 +73,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string GrafanaInstanceId { get; set; }
 
                 /// <summary>
-                /// HTTP Api internet url.
+                /// The public URL for the HTTP API.
                 /// </summary>
                 [NameInMap("HttpApiInterUrl")]
                 [Validation(Required=false)]
                 public string HttpApiInterUrl { get; set; }
 
                 /// <summary>
-                /// HTTP Api intranet url.
+                /// The internal URL for the HTTP API.
                 /// </summary>
                 [NameInMap("HttpApiIntraUrl")]
                 [Validation(Required=false)]
@@ -88,57 +89,57 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// The billing method. Valid values:
                 /// 
-                /// *   PREPAY: subscription.
-                /// *   POSTPAY: pay-as-you-go.
+                /// *   PREPAY: subscription
+                /// *   POSTPAY: pay-as-you-go
                 /// </summary>
                 [NameInMap("PaymentType")]
                 [Validation(Required=false)]
                 public string PaymentType { get; set; }
 
                 /// <summary>
-                /// Push Gateway internet url.
+                /// The public URL for Pushgateway.
                 /// </summary>
                 [NameInMap("PushGatewayInterUrl")]
                 [Validation(Required=false)]
                 public string PushGatewayInterUrl { get; set; }
 
                 /// <summary>
-                /// Push Gateway intranet url.
+                /// The internal URL for Pushgateway.
                 /// </summary>
                 [NameInMap("PushGatewayIntraUrl")]
                 [Validation(Required=false)]
                 public string PushGatewayIntraUrl { get; set; }
 
                 /// <summary>
-                /// The region ID of the Prometheus instance.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// Remote Read internet url.
+                /// The public URL for remote read.
                 /// </summary>
                 [NameInMap("RemoteReadInterUrl")]
                 [Validation(Required=false)]
                 public string RemoteReadInterUrl { get; set; }
 
                 /// <summary>
-                /// Remote Read intranet url.
+                /// The internal URL for remote read.
                 /// </summary>
                 [NameInMap("RemoteReadIntraUrl")]
                 [Validation(Required=false)]
                 public string RemoteReadIntraUrl { get; set; }
 
                 /// <summary>
-                /// Remote Write internet url.
+                /// The public URL for remote write.
                 /// </summary>
                 [NameInMap("RemoteWriteInterUrl")]
                 [Validation(Required=false)]
                 public string RemoteWriteInterUrl { get; set; }
 
                 /// <summary>
-                /// Remote Write intranet url.
+                /// The internal URL for remote write.
                 /// </summary>
                 [NameInMap("RemoteWriteIntraUrl")]
                 [Validation(Required=false)]
@@ -152,7 +153,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// Resource type.
+                /// The resource type.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -166,28 +167,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// The child instances of the Prometheus instance for GlobalView instance. The value is a JSON string.
+                /// The child instances of the global aggregation instance. The value is a JSON string.
                 /// </summary>
                 [NameInMap("SubClustersJson")]
                 [Validation(Required=false)]
                 public string SubClustersJson { get; set; }
 
                 /// <summary>
-                /// The tags.
+                /// The list of tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstancesTags> Tags { get; set; }
                 public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstancesTags : TeaModel {
                     /// <summary>
-                    /// The key of the tag.
+                    /// The tag key.
                     /// </summary>
                     [NameInMap("TagKey")]
                     [Validation(Required=false)]
                     public string TagKey { get; set; }
 
                     /// <summary>
-                    /// The value of the tag.
+                    /// The tag value.
                     /// </summary>
                     [NameInMap("TagValue")]
                     [Validation(Required=false)]

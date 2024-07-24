@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The namespace where the ServiceMonitor is located.
+        /// The namespace where the ServiceMonitor resides.
         /// 
         /// This parameter is required.
         /// </summary>

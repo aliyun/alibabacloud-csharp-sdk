@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetManagedPrometheusStatusResponseBody : TeaModel {
         /// <summary>
-        /// The status code or error code.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The status of the Prometheus instance.
+        /// The installation status of the Prometheus agent.
         /// 
-        /// *   Installing: The Prometheus instance is created and the Prometheus agent has no registration information.
-        /// *   Succeed: The Prometheus instance is created and the Prometheus agent is registered.
-        /// *   Failure: The Prometheus instance failed to be created or the Prometheus agent failed to be registered.
-        /// *   Unknown: No status of the Prometheus instance is available.
+        /// *   Installing: The Prometheus agent is installed and no registration information is available.
+        /// *   Succeed: The Prometheus agent is installed and registered.
+        /// *   Failure: The Prometheus agent failed to be installed or registered.
+        /// *   Unknown: The installation status of the Prometheus agent is unknown.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

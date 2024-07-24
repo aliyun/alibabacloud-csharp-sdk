@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Length { get; set; }
 
         /// <summary>
-        /// The name of the cloud service. This parameter is required if you set ClusterType to `cloud-product-prometheus`. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.
+        /// The name of the cloud service. This parameter must be specified when ClusterType is set to `cloud-product-prometheus`. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]

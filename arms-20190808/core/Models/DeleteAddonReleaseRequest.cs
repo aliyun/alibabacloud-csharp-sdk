@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteAddonReleaseRequest : TeaModel {
+        /// <summary>
+        /// The name of the add-on.
+        /// </summary>
         [NameInMap("AddonName")]
         [Validation(Required=false)]
         public string AddonName { get; set; }

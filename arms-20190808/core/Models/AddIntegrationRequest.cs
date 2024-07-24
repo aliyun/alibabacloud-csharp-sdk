@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddIntegrationRequest : TeaModel {
         /// <summary>
-        /// The ID of an Alibaba Cloud Container Service for Kubernetes cluster.
+        /// The ID of the Container Service for Kubernetes (ACK) cluster.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The software abbreviation that is supported by ARMS. Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
+        /// The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Integration { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// The ID of the region.
         /// 
         /// This parameter is required.
         /// </summary>

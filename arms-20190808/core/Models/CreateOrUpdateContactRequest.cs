@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ContactName { get; set; }
 
+        /// <summary>
+        /// The ID of the alert contact that is shown to the enterprise when the contact is mentioned with the at sign (@) by a third-party instant messaging (IM) tool.
+        /// </summary>
         [NameInMap("CorpUserId")]
         [Validation(Required=false)]
         public string CorpUserId { get; set; }

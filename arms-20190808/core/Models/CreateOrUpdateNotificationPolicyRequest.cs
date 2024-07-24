@@ -158,6 +158,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public bool? SendRecoverMessage { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the notification policy. Valid values: enable and disable.
+        /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }

@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string GrafanaFolderUrl { get; set; }
 
             /// <summary>
-            /// grafana工作区id
+            /// The ID of the Grafana workspace.
             /// </summary>
             [NameInMap("GrafanaWorkspaceId")]
             [Validation(Required=false)]
@@ -240,6 +240,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// The security group ID bound to the environment.
+            /// </summary>
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+            /// <summary>
             /// The tags.
             /// </summary>
             [NameInMap("Tags")]
@@ -247,14 +254,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<DescribeEnvironmentResponseBodyDataTags> Tags { get; set; }
             public class DescribeEnvironmentResponseBodyDataTags : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the tag
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -275,6 +282,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+
+            /// <summary>
+            /// The switch ID bound to the environment.
+            /// </summary>
+            [NameInMap("VswitchId")]
+            [Validation(Required=false)]
+            public string VswitchId { get; set; }
 
         }
 

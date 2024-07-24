@@ -117,67 +117,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <summary>
             /// The type of the remote procedure call (RPC) mode.
             /// 
-            /// - 0 http
-            /// - 25 http_client
-            /// - 1 hsf_client
-            /// - 2 hsf
-            /// - 40 local
-            /// - 41 async
-            /// - 52 DB2
-            /// - 53 Informix
-            /// - 54 SequoiaDB
-            /// - 55 Gbase
-            /// - 56 GaussDB
-            /// - 57 KingBase
-            /// - 58 infuxdb
-            /// - 59 clickhouse
-            /// - 60 mysql
-            /// - 61 mysql
-            /// - 62 oracle
-            /// - 63 postgresql
-            /// - 64 mongodb
-            /// - 65 ppas
-            /// - 66 sqlserver
-            /// - 67 mariadb
-            /// - 68 dmdb
-            /// - 69 oceanbase
-            /// - 70 redis
-            /// - 71 memcached
-            /// - 72 elasticsearch
-            /// - 73 kudu
-            /// - 4 tddl
-            /// - 5 tair
-            /// - 13 mq_client
-            /// - 252 mq
-            /// - 23 kafka_client
-            /// - 256 kafka
-            /// - 3 notify_client
-            /// - 254 notify
-            /// - 7 dubbo_client
-            /// - 8 dubbo
-            /// - 11 dsf_client
-            /// - 12 dsf
-            /// - 9 grpc
-            /// - 10 grpc_client
-            /// - 16 thrift
-            /// - 17 thrift_client
-            /// - 18 sofa
-            /// - 19 sofa_client
-            /// - -1 unknown
-            /// - 98 user_method
-            /// - 100 root
-            /// - 101 client
-            /// - 102 server
-            /// - 103 producer
-            /// - 104 consumer
-            /// - 105 db
-            /// - 106 xtrace_other
-            /// - 1301 schedulerx
-            /// - 1302 XXL_Job
-            /// - 1303 Spring_Scheduled
-            /// - 1304 Quartz
-            /// - 1305 ElasticJob
-            /// - 1308 Jdk_Timer
+            /// *   0: HTTP entry
+            /// *   25: HTTP call
+            /// *   1: High-speed Service Framework (HSF) call
+            /// *   2: HSF provision
+            /// *   40: on-premises API call
+            /// *   60: MySQL call
+            /// *   62: Oracle call
+            /// *   63: PostgreSQL call
+            /// *   70: Redis call
+            /// *   4: Taobao Distributed Data Layer (TDDL) call
+            /// *   5: Tair call
+            /// *   13: MetaQ message sending
+            /// *   252: MetaQ message receiving
+            /// *   3: notification sending
+            /// *   254: notification receiving
+            /// *   7: Apache Dubbo call
+            /// *   8: Apache Dubbo provision
+            /// *   19: SOFARPC call
+            /// *   18: SOFARPC provision
+            /// *   11: Distributed Service Framework (DSF) call
+            /// *   12: DSF provision
+            /// *   \\-1: unknown call
             /// </summary>
             [NameInMap("RpcType")]
             [Validation(Required=false)]

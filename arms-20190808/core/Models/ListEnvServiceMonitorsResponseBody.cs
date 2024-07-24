@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public List<ListEnvServiceMonitorsResponseBodyData> Data { get; set; }
         public class ListEnvServiceMonitorsResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the component to which the ServiceMonitor belongs.
+            /// The name of the add-on to which the ServiceMonitor belongs.
             /// </summary>
             [NameInMap("AddonName")]
             [Validation(Required=false)]
             public string AddonName { get; set; }
 
             /// <summary>
-            /// The instance name of the component.
+            /// The instance name of the add-on.
             /// </summary>
             [NameInMap("AddonReleaseName")]
             [Validation(Required=false)]
             public string AddonReleaseName { get; set; }
 
             /// <summary>
-            /// The version of the component.
+            /// The version of the add-on.
             /// </summary>
             [NameInMap("AddonVersion")]
             [Validation(Required=false)]

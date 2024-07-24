@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string HttpsUrl { get; set; }
 
             /// <summary>
-            /// The information about the Grafana dashboards.
+            /// The information about the Grafana dashboard.
             /// </summary>
             [NameInMap("I18nChild")]
             [Validation(Required=false)]
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// Indicates whether the exporter was provided by ARMS. Valid values:
+                /// Indicates whether the exporter is provided by ARMS.
                 /// 
-                /// *   `true`: The exporter is provided by ARMS.
-                /// *   `false`: The exporter is not provided by ARMS.
+                /// *   `true:` The exporter is provided by ARMS.
+                /// *   `false:`: The exporter is not provided by ARMS.
                 /// </summary>
                 [NameInMap("IsArmsExporter")]
                 [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Indicates whether the Grafana dashboard has a new version that was available for upgrade.
+                /// Indicates whether the Grafana dashboard has a new version that is available for upgrade.
                 /// </summary>
                 [NameInMap("NeedUpdate")]
                 [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public List<string> Tags { get; set; }
 
                 /// <summary>
-                /// The timestamp when the Grafana dashboard was created.
+                /// The time when the Grafana dashboard was created. The value is a timestamp.
                 /// </summary>
                 [NameInMap("Time")]
                 [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.
+                /// The unique identifier of the Grafana dashboard.
                 /// </summary>
                 [NameInMap("Uid")]
                 [Validation(Required=false)]
@@ -220,17 +220,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// Indicates whether the exporter was provided by ARMS. Valid values:
+            /// Indicates whether the exporter is provided by Application Real-Time Monitoring Service (ARMS).
             /// 
-            /// *   `true`: The exporter is provided by ARMS.
-            /// *   `false`: The exporter is not provided by ARMS.
+            /// *   `true:` The exporter is provided by ARMS.
+            /// *   `false:`: The exporter is not provided by ARMS.
             /// </summary>
             [NameInMap("IsArmsExporter")]
             [Validation(Required=false)]
             public bool? IsArmsExporter { get; set; }
 
             /// <summary>
-            /// The type of the dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM. BASIC indicates a basic dashboard. THIRD indicates a third-party dashboard. LIMIT indicates a time-limited free dashboard. CUSTOM indicates a custom dashboard.
+            /// The category of the Grafana dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM.
             /// </summary>
             [NameInMap("Kind")]
             [Validation(Required=false)]
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// Indicates whether the Grafana dashboard has a new version that was available for upgrade.
+            /// Indicates whether the Grafana dashboard has a new version that is available for upgrade.
             /// </summary>
             [NameInMap("NeedUpdate")]
             [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<string> Tags { get; set; }
 
             /// <summary>
-            /// The timestamp generated when the Grafana dashboard was created. Unit: seconds
+            /// The time when the Grafana dashboard was created. The value is a timestamp. Unit: seconds.
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.
+            /// The unique identifier of the Grafana dashboard.
             /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
@@ -312,14 +312,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The environment ID.
+        /// The ID of the environment instance.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// Whether to enable Grafana service.
+        /// Indicates whether Managed Service for Grafana is activated.
         /// </summary>
         [NameInMap("GrafanaServiceOpened")]
         [Validation(Required=false)]

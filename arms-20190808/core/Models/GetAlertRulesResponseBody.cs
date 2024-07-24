@@ -10,31 +10,31 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetAlertRulesResponseBody : TeaModel {
         /// <summary>
-        /// The pages returned.
+        /// The returned pages.
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
         public GetAlertRulesResponseBodyPageBean PageBean { get; set; }
         public class GetAlertRulesResponseBodyPageBean : TeaModel {
             /// <summary>
-            /// The list of alert rules.
+            /// The alert rules.
             /// </summary>
             [NameInMap("AlertRules")]
             [Validation(Required=false)]
             public List<GetAlertRulesResponseBodyPageBeanAlertRules> AlertRules { get; set; }
             public class GetAlertRulesResponseBodyPageBeanAlertRules : TeaModel {
                 /// <summary>
-                /// The alert check type of the Prometheus alert rule. Valid values:
+                /// The alert check type of the Prometheus alert rule.
                 /// 
-                /// *   STATIC: static threshold value
-                /// *   CUSTOM: custom PromQL statement
+                /// *   STATIC: static threshold
+                /// *   CUSTOM: custom PromQL
                 /// </summary>
                 [NameInMap("AlertCheckType")]
                 [Validation(Required=false)]
                 public string AlertCheckType { get; set; }
 
                 /// <summary>
-                /// The ID of the alert contact group to which the alert rule belongs. Valid values:
+                /// The alert contact group ID of the Prometheus alert rule.
                 /// 
                 /// *   \\-1: custom PromQL
                 /// *   1: Kubernetes load
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? AlertGroup { get; set; }
 
                 /// <summary>
-                /// The ID of the alert rule.
+                /// The alert rule ID.
                 /// </summary>
                 [NameInMap("AlertId")]
                 [Validation(Required=false)]
@@ -92,23 +92,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         public string MetricKey { get; set; }
 
                         /// <summary>
-                        /// Indicates the last N minutes.
+                        /// The last N minutes.
                         /// </summary>
                         [NameInMap("N")]
                         [Validation(Required=false)]
                         public long? N { get; set; }
 
                         /// <summary>
-                        /// The comparison operator that was used to compare the metric value with the threshold. Valid values:
+                        /// The operator that is used to compare the metric value with the threshold. Valid values:
                         /// 
                         /// *   CURRENT_GTE: greater than or equal to
                         /// *   CURRENT_LTE: less than or equal to
-                        /// *   PREVIOUS_UP: the increase percentage compared with the last period
-                        /// *   PREVIOUS_DOWN: the decrease percentage compared with the last period
-                        /// *   HOH_UP: the increase percentage compared with the last hour
-                        /// *   HOH_DOWN: the decrease percentage compared with the last hour
-                        /// *   DOD_UP: the increase percentage compared with the last day
-                        /// *   DOD_DOWN: the decrease percentage compared with the last day
+                        /// *   PREVIOUS_UP: increase in percentage compared with the previous period
+                        /// *   PREVIOUS_DOWN: decrease in percentage compared with the previous period
+                        /// *   HOH_UP: increase in percentage compared with the same period in the previous hour
+                        /// *   HOH_DOWN: decrease in percentage compared with the same period in the previous hour
+                        /// *   DOD_UP: increase in percentage compared with the same period in the previous day
+                        /// *   DOD_DOWN: decrease in percentage compared with the same period in the previous day
                         /// </summary>
                         [NameInMap("Operator")]
                         [Validation(Required=false)]
@@ -126,8 +126,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <summary>
                     /// The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:
                     /// 
-                    /// *   OR: meets any of the specified conditions.
-                    /// *   AND: meets all the specified conditions.
+                    /// *   OR: The alert rule is triggered if one of the conditions is met.
+                    /// *   AND: The alert rule is triggered if all the conditions are met.
                     /// </summary>
                     [NameInMap("Condition")]
                     [Validation(Required=false)]
@@ -142,18 +142,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// *   STOPPED
                 /// *   PAUSED
                 /// 
-                /// > The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.
+                /// >  The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.
                 /// </summary>
                 [NameInMap("AlertStatus")]
                 [Validation(Required=false)]
                 public string AlertStatus { get; set; }
 
                 /// <summary>
-                /// The type of the alert rule.
+                /// The type of the alert rule. Valid values:
                 /// 
                 /// *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
                 /// *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
-                /// *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus
+                /// *   PROMETHEUS_MONITORING_ALERT_RULE: Prometheus alert rule
                 /// </summary>
                 [NameInMap("AlertType")]
                 [Validation(Required=false)]
@@ -183,10 +183,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:
+                /// Indicates whether the alert rule is applied to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:
                 /// 
-                /// *   `true`
-                /// *   `false`
+                /// *   `true`: yes
+                /// *   `false`: no
                 /// </summary>
                 [NameInMap("AutoAddNewApplication")]
                 [Validation(Required=false)]
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// The extended fields.
                 /// 
-                /// > For existing Application Monitoring alert rules, the fields contained information such as contacts, alert template, and notification content.
+                /// >  For existing Application Monitoring alert rules, the fields contain information such as contacts, alert template, and notification content.
                 /// </summary>
                 [NameInMap("Extend")]
                 [Validation(Required=false)]
@@ -254,14 +254,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         public string Opt { get; set; }
 
                         /// <summary>
-                        /// Indicates whether this filter condition was displayed on the frontend.
+                        /// Indicates whether this filter condition is displayed on the frontend.
                         /// </summary>
                         [NameInMap("Show")]
                         [Validation(Required=false)]
                         public bool? Show { get; set; }
 
                         /// <summary>
-                        /// Indicates the log type of Browser Monitoring. This field was not included in other filter conditions.
+                        /// The log type of Browser Monitoring. This field is not included in other filter conditions.
                         /// </summary>
                         [NameInMap("T")]
                         [Validation(Required=false)]
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     }
 
                     /// <summary>
-                    /// The information of the aggregation dimension.
+                    /// The information about the aggregation dimension.
                     /// </summary>
                     [NameInMap("CustomSLSGroupByDimensions")]
                     [Validation(Required=false)]
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string NotifyStrategy { get; set; }
 
                 /// <summary>
-                /// The process ID (PID) that was associated with the Application Monitoring or Browser Monitoring alert rule.
+                /// The process ID (PID) of the application to which the Application Monitoring or Browser Monitoring alert rule is applied.
                 /// </summary>
                 [NameInMap("Pids")]
                 [Validation(Required=false)]
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The list of tags.
+                /// The tags of the alert rule.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? UpdatedTime { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the resource belongs.
+                /// The ID of the Alibaba Cloud account.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]

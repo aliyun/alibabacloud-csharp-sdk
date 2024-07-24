@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpgradeAddonReleaseResponseBody : TeaModel {
         /// <summary>
-        /// The status code. 200 indicates success.
+        /// The status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// Return a message.
+        /// The returned message.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The information returned when the request parameter is incorrect.
+        /// The error message returned if the request parameters are invalid.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Whether the call was successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

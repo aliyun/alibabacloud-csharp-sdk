@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListAddonReleasesRequest : TeaModel {
         /// <summary>
-        /// Name of Addon.
+        /// The name of the add-on.
         /// </summary>
         [NameInMap("AddonName")]
         [Validation(Required=false)]
         public string AddonName { get; set; }
 
         /// <summary>
-        /// Environment instance ID.
+        /// The environment ID.
         /// 
         /// This parameter is required.
         /// </summary>

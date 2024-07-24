@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateEnvServiceMonitorRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values: zh and en. Default value: zh.
+        /// The language. Valid values:
+        /// 
+        /// *   zh (default): Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// The YAML configuration string of the ServiceMonitor.
+        /// The YAML configuration file of the ServiceMonitor.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ConfigYaml { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request.
+        /// Specifies whether to perform only a dry run, without performing the actual request. The system checks whether the format is valid and whether targets are matched.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

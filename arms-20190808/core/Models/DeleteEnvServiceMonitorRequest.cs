@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteEnvServiceMonitorRequest : TeaModel {
         /// <summary>
-        /// Environment instance ID.
+        /// The ID of the environment instance.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// The namespace where the ServiceMonitor is located.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// ServiceMonitor name.
+        /// The name of the ServiceMonitor.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetCloudClusterAllUrlResponseBody : TeaModel {
         /// <summary>
-        /// 状态码。200为成功，其他状态码为异常。
+        /// The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// 详细信息。
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 操作是否成功：true：操作成功                                 false：操作失败
+        /// Indicates whether the request was successful. Valid values: true and false.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

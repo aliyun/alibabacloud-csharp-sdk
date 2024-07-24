@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListSilencePoliciesResponseBody : TeaModel {
         /// <summary>
-        /// The objects that were returned.
+        /// The returned pages.
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? Page { get; set; }
 
             /// <summary>
-            /// An array of silence policy objects.
+            /// The queried silence policies.
             /// </summary>
             [NameInMap("SilencePolicies")]
             [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// An array of matching rule objects.
+                /// The matching rules.
                 /// </summary>
                 [NameInMap("MatchingRules")]
                 [Validation(Required=false)]
                 public List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules> MatchingRules { get; set; }
                 public class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules : TeaModel {
                     /// <summary>
-                    /// An array of matching condition objects.
+                    /// The matching conditions.
                     /// </summary>
                     [NameInMap("MatchingConditions")]
                     [Validation(Required=false)]
@@ -90,6 +90,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// Indicates whether the silence policy is enabled. Valid values: enable and disable.
+                /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }

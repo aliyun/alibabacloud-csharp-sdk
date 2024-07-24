@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListRetcodeAppsRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags that you want to add to the task.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

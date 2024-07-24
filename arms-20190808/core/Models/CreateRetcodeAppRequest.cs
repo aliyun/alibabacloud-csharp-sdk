@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The name of the application that is monitored by Browser Monitoring.
+        /// The name of the application.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -35,7 +35,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RetcodeAppName { get; set; }
 
         /// <summary>
-        /// The site type.
+        /// The type of the application. Valid values:
+        /// 
+        /// *   `web`: web application
+        /// *   `weex`: Weex mobile app
+        /// *   `mini_dd`: DingTalk mini program
+        /// *   `mini_alipay`: Alipay mini program
+        /// *   `mini_wx`: WeChat mini program
+        /// *   `mini_common`: mini program on other platforms
         /// 
         /// This parameter is required.
         /// </summary>
@@ -44,7 +51,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RetcodeAppType { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// The tags that you want to add to the task.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

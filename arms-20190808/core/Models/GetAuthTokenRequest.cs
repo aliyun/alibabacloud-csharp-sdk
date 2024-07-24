@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetAuthTokenRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the ACK cluster.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// 
         /// This parameter is required.
         /// </summary>

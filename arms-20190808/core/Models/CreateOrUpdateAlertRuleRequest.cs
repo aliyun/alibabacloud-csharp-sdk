@@ -91,14 +91,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AlertStatus { get; set; }
 
         /// <summary>
-        /// The following alert rule types are available:
-        /// 
-        /// *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
-        /// *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
-        /// *   RUM_MONITORING_ALERT_RULE: alert rule for RUM Monitoring
-        /// *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus
-        /// *   XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry
-        /// *   EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition
+        /// *   APPLICATION_MONITORING_ALERT_RULE
+        /// *   BROWSER_MONITORING_ALERT_RULE
+        /// *   XTRACE_MONITORING_ALERT_RULE
+        /// *   RUM_MONITORING_ALERT_RULE
+        /// *   EBPF_MONITORING_ALERT_RULE
+        /// *   PROMETHEUS_MONITORING_ALERT_RULE
         /// 
         /// This parameter is required.
         /// </summary>
@@ -123,6 +121,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public bool? AutoAddNewApplication { get; set; }
 
+        /// <summary>
+        /// Application monitoring alarm rules - Alarm application automatically adds configuration. auto Add Match Type: Matching method: regular match (REGULAR)/regular non-match (NOT_REGULAR) auto Add Match Exp: regular expression
+        /// </summary>
         [NameInMap("AutoAddTargetConfig")]
         [Validation(Required=false)]
         public string AutoAddTargetConfig { get; set; }
@@ -146,7 +147,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string DataConfig { get; set; }
 
         /// <summary>
-        /// The duration of the Prometheus alert rule. Unit: minutes.
+        /// The duration of the Prometheus alert rule, in minutes, in the range of [0,1440].
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -271,7 +272,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Pids { get; set; }
 
         /// <summary>
-        /// It is determined when creating the underlying rules of Prometheus. The background will verify whether the product exists, which is used to distinguish cloud product filtering queries.
+        /// When creating a Prometheus alert rule, the backend will verify whether this product exists, which is used to distinguish cloud product filtering queries.
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]

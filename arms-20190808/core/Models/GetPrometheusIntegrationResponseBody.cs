@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The struct returned.
+        /// The returned struct.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ExporterType { get; set; }
 
             /// <summary>
-            /// The exporter ID.
+            /// The ID of the exporter.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The type of the integration.
+            /// The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
             /// </summary>
             [NameInMap("IntegrationType")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public bool? NeedUpgrade { get; set; }
 
             /// <summary>
-            /// The configurations of the exporter. The value is a JSON string.
+            /// The parameters of the exporter. Format: JSON string.
             /// </summary>
             [NameInMap("Param")]
             [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

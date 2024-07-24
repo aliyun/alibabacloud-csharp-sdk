@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteEnvCustomJobRequest : TeaModel {
         /// <summary>
-        /// Custom job name.
+        /// The name of the custom job.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string CustomJobName { get; set; }
 
         /// <summary>
-        /// Environment ID.
+        /// The ID of the environment instance.
         /// 
         /// This parameter is required.
         /// </summary>

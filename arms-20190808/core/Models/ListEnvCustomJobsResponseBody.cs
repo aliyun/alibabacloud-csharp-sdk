@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public List<ListEnvCustomJobsResponseBodyData> Data { get; set; }
         public class ListEnvCustomJobsResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the component to which the custom job belongs.
+            /// The name of the add-on to which the custom job belongs.
             /// </summary>
             [NameInMap("AddonName")]
             [Validation(Required=false)]
             public string AddonName { get; set; }
 
             /// <summary>
-            /// The instance name of the component.
+            /// The instance name of the add-on.
             /// </summary>
             [NameInMap("AddonReleaseName")]
             [Validation(Required=false)]
             public string AddonReleaseName { get; set; }
 
             /// <summary>
-            /// The version of the component.
+            /// The version of the add-on.
             /// </summary>
             [NameInMap("AddonVersion")]
             [Validation(Required=false)]

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class OpenXtraceDefaultSLRResponseBody : TeaModel {
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
-        /// 
+        ///  
         /// *   `true`
         /// *   `false`
         /// </summary>

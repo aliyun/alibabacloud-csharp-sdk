@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteRetcodeAppResponseBody : TeaModel {
         /// <summary>
-        /// 状态码。200为成功，其他状态码为异常。
+        /// Status code. 200 means success, other status codes are exceptions.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -27,7 +27,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// 附加信息。取值说明如下：请求正常，返回success。请求异常，返回具体异常信息。
+        /// Additional information. The value description is as follows:
+        /// - If the request is normal, return success.
+        /// - If the request is abnormal, return specific abnormal information.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -41,10 +43,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 操作是否成功：
-        /// 
-        /// - `true`：操作成功
-        /// - `false`：操作失败
+        /// Whether the operation was successful:
+        /// - `true`: The operation was successful
+        /// - `false`: The operation failed
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ManageGetRecordingRuleResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+        /// 状态码。200为成功，其他状态码为异常。
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// 返回信息。
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

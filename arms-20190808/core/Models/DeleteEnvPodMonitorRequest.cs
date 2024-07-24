@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteEnvPodMonitorRequest : TeaModel {
         /// <summary>
-        /// Environment instance ID.
+        /// The ID of the environment instance.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The namespace where podMonitor is located
+        /// The namespace where the PodMonitor is located.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// PodMonitor name.
+        /// The name of the PodMonitor.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the application.
+        /// The application ID.
         /// 
         /// Log on to the **ARMS console**. In the left-side navigation pane, choose **Browser Monitoring** > **Browser Monitoring**. On the Browser Monitoring page, click the name of an application. The URL in the browser address bar contains the pid of this application in the format of `pid=xxx`. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is `xxx%4074xxx`, you must replace **%40** with the at sign (@). The actual PID is `xxx@74xxx`.
         /// </summary>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RetcodeAppId { get; set; }
 
         /// <summary>
-        /// The name of the application that is monitored by Browser Monitoring.
+        /// The name of the application.
         /// </summary>
         [NameInMap("RetcodeAppName")]
         [Validation(Required=false)]
         public string RetcodeAppName { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tag.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

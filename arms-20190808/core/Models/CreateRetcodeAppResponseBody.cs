@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The return detail.
+        /// The information of the Browser Monitoring task.
         /// </summary>
         [NameInMap("RetcodeAppDataBean")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? AppId { get; set; }
 
             /// <summary>
-            /// PID.
+            /// The process identifier (PID) of the application.
             /// </summary>
             [NameInMap("Pid")]
             [Validation(Required=false)]
@@ -60,15 +60,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             /// <summary>
             /// The ID of the resource group.
-            /// 
-            /// If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// The tags of the task.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -101,8 +99,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// Indicates whether the call was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// - true: The call was successful.
+        /// - false: The call failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

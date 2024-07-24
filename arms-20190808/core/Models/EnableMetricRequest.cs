@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Enable metric name.
+        /// The metric name.
         /// </summary>
         [NameInMap("DropMetric")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetAuthTokenResponseBody : TeaModel {
         /// <summary>
-        /// The status code. The status code 200 indicates that the request was successful.
+        /// Status code. 200 means success, other status codes are exceptions.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,24 +24,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// Additional Information.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   `true`
-        /// *   `false`
+        /// Whether the query was successful:
+        /// - true: Success
+        /// - false: Failure
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

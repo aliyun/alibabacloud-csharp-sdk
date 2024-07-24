@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public DescribeEnvPodMonitorResponseBodyData Data { get; set; }
         public class DescribeEnvPodMonitorResponseBodyData : TeaModel {
             /// <summary>
-            /// The YAML configuration string of the PodMonitor.
+            /// The YAML string of the PodMonitor.
             /// </summary>
             [NameInMap("ConfigYaml")]
             [Validation(Required=false)]
@@ -59,7 +59,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The status of the PodMonitor. Valid values: run and stop.
+            /// The status. Valid values:
+            /// 
+            /// *   run
+            /// *   stop
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

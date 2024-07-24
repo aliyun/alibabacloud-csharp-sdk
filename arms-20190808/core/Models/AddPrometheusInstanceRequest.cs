@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddPrometheusInstanceRequest : TeaModel {
         /// <summary>
+        /// The name of the Prometheus instance for Remote Write.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// The region ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// The type of the Prometheus instance. Only Prometheus instances for Remote Write is supported. Set the value to RW.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]

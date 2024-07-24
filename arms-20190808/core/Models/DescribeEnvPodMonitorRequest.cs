@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The namespace where the PodMonitor is located.
+        /// The namespace where the PodMonitor resides.
         /// 
         /// This parameter is required.
         /// </summary>

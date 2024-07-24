@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public List<ListInsightsEventsResponseBodyInsightsEvents> InsightsEvents { get; set; }
         public class ListInsightsEventsResponseBodyInsightsEvents : TeaModel {
             /// <summary>
-            /// The time at which the event occurred. The value is a timestamp.
+            /// The time when the event occurred. The value is a timestamp.
             /// </summary>
             [NameInMap("Date")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// 问题标识。
+            /// The problem identifier.
             /// </summary>
             [NameInMap("ProblemId")]
             [Validation(Required=false)]

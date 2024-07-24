@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy NotificationPolicy { get; set; }
         public class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy : TeaModel {
-            /// <summary>
-            /// 极简模式
-            /// </summary>
             [NameInMap("DirectedMode")]
             [Validation(Required=false)]
             public bool? DirectedMode { get; set; }
@@ -82,7 +79,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRules> MatchingRules { get; set; }
             public class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRules : TeaModel {
                 /// <summary>
-                /// An array of alert event matching condition objects.
+                /// The matching conditions.
                 /// </summary>
                 [NameInMap("MatchingConditions")]
                 [Validation(Required=false)]
@@ -162,7 +159,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public List<CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects> NotifyObjects { get; set; }
                 public class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects : TeaModel {
                     /// <summary>
-                    /// 通知对象为联系人时的单独的联系方式
+                    /// The notification methods specified for a contact.
                     /// </summary>
                     [NameInMap("NotifyChannels")]
                     [Validation(Required=false)]
@@ -176,19 +173,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public long? NotifyObjectId { get; set; }
 
                     /// <summary>
-                    /// The name of the notification contact.
+                    /// The name of the notification object.
                     /// </summary>
                     [NameInMap("NotifyObjectName")]
                     [Validation(Required=false)]
                     public string NotifyObjectName { get; set; }
 
                     /// <summary>
-                    /// The type of the notification contact. Valid values: 
+                    /// The type of the notification object. Valid values:
                     /// 
-                    /// - CONTACT: an individual contact
-                    /// - CONTACT_GROUP: a contact group
-                    /// - DING_ROBOT: an instant messaging (IM) robot
-                    /// - CONTACT_SCHEDULE: a person on duty based on an established schedule
+                    /// *   CONTACT: individual contact
+                    /// *   CONTACT_GROUP: contact group
+                    /// *   ARMS_CONTACT: individual ARMS contact
+                    /// *   ARMS_CONTACT_GROUP: ARMS contact group
+                    /// *   DING_ROBOT_GROUP: DingTalk, Lark, or WeCom IM chatbot
+                    /// *   CONTACT_SCHEDULE: user on duty defined by a schedule
                     /// </summary>
                     [NameInMap("NotifyObjectType")]
                     [Validation(Required=false)]
@@ -304,6 +303,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public bool? SendRecoverMessage { get; set; }
 
+            /// <summary>
+            /// Indicates whether the notification policy is enabled. Valid values: enable and disable.
+            /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }

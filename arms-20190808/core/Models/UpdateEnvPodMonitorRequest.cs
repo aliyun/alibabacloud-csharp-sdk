@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateEnvPodMonitorRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values: zh and en. Default value: zh.
+        /// The language. Valid values:
+        /// 
+        /// *   zh (default value): Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// The YAML configuration string.
+        /// The YAML configuration file of the ServiceMonitor.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ConfigYaml { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request.
+        /// Checks whether the format is valid and whether targets are matched.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -42,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The namespace where the PodMonitor is located.
+        /// The namespace where the PodMonitor resides.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateEnvPodMonitorResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the request was successful.
+        /// The response code.
+        /// 
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

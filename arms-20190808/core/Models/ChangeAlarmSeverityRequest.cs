@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// The severity level of the alert. Valid values: P1, P2, P3, and P4. P4 indicates the lowest severity, whereas P1 indicates the highest severity.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Severity")]

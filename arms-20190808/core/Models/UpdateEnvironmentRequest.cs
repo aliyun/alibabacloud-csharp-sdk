@@ -26,16 +26,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// The environment name.
+        /// The name of the environment instance.
         /// </summary>
         [NameInMap("EnvironmentName")]
         [Validation(Required=false)]
         public string EnvironmentName { get; set; }
 
         /// <summary>
-        /// Fee package.
-        /// * When the EnvironmentType is CS: it can be specified as CS_Basic (default) or CS-Pro.
-        /// * When the EnvironmentType is a different value, please enter a null value.
+        /// The payable resource plan. Valid values:
+        /// 
+        /// *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
+        /// *   Otherwise, leave the parameter empty.
         /// </summary>
         [NameInMap("FeePackage")]
         [Validation(Required=false)]

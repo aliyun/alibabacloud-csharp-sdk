@@ -17,49 +17,49 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned struct.
+        /// The queried add-ons.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAddonsResponseBodyData> Data { get; set; }
         public class ListAddonsResponseBodyData : TeaModel {
             /// <summary>
-            /// Ailas of the Addon.
+            /// The alias of the add-on.
             /// </summary>
             [NameInMap("Alias")]
             [Validation(Required=false)]
             public string Alias { get; set; }
 
             /// <summary>
-            /// Categories list.
+            /// The tags of the add-on.
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// Dashboard list.
+            /// The dashboards.
             /// </summary>
             [NameInMap("Dashboards")]
             [Validation(Required=false)]
             public List<ListAddonsResponseBodyDataDashboards> Dashboards { get; set; }
             public class ListAddonsResponseBodyDataDashboards : TeaModel {
                 /// <summary>
-                /// Description of the dashboard.
+                /// The description of the dashboard.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Name of the dashboard.
+                /// The name of the dashboard.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// URL of the dashboard.
+                /// The URL of the dashboard.
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
@@ -68,21 +68,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// Description of the Addon.
+            /// The description of the add-on.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// Environment list.
+            /// The supported environments.
             /// </summary>
             [NameInMap("Environments")]
             [Validation(Required=false)]
             public List<ListAddonsResponseBodyDataEnvironments> Environments { get; set; }
             public class ListAddonsResponseBodyDataEnvironments : TeaModel {
                 /// <summary>
-                /// Dependency list.
+                /// The dependencies of the environment.
                 /// </summary>
                 [NameInMap("Dependencies")]
                 [Validation(Required=false)]
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public List<string> ClusterTypes { get; set; }
 
                     /// <summary>
-                    /// Name of the Feature.
+                    /// The feature on which the environment depends.
                     /// </summary>
                     [NameInMap("Features")]
                     [Validation(Required=false)]
                     public Dictionary<string, bool?> Features { get; set; }
 
                     /// <summary>
-                    /// Service list.
+                    /// The services.
                     /// </summary>
                     [NameInMap("Services")]
                     [Validation(Required=false)]
@@ -109,70 +109,70 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// Description of environment.
+                /// The description of the environment.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Whether to enable it.
+                /// Indicates whether the feature is enabled.
                 /// </summary>
                 [NameInMap("Enable")]
                 [Validation(Required=false)]
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// Label of the environment.
+                /// The tag of the environment.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// Name of the environment.
+                /// The name of the environment.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Policies list.
+                /// The control policies in the environment.
                 /// </summary>
                 [NameInMap("Policies")]
                 [Validation(Required=false)]
                 public ListAddonsResponseBodyDataEnvironmentsPolicies Policies { get; set; }
                 public class ListAddonsResponseBodyDataEnvironmentsPolicies : TeaModel {
                     /// <summary>
-                    /// Default alert status.
+                    /// The default alert status.
                     /// </summary>
                     [NameInMap("AlertDefaultStatus")]
                     [Validation(Required=false)]
                     public string AlertDefaultStatus { get; set; }
 
                     /// <summary>
-                    /// Default install status.
+                    /// The default installation status.
                     /// </summary>
                     [NameInMap("DefaultInstall")]
                     [Validation(Required=false)]
                     public bool? DefaultInstall { get; set; }
 
                     /// <summary>
-                    /// Whether to enable a service account.
+                    /// Indicates whether a service account is enabled.
                     /// </summary>
                     [NameInMap("EnableServiceAccount")]
                     [Validation(Required=false)]
                     public bool? EnableServiceAccount { get; set; }
 
                     /// <summary>
-                    /// Metric check rule PromQL.
+                    /// The metric check rule.
                     /// </summary>
                     [NameInMap("MetricCheckRule")]
                     [Validation(Required=false)]
                     public ListAddonsResponseBodyDataEnvironmentsPoliciesMetricCheckRule MetricCheckRule { get; set; }
                     public class ListAddonsResponseBodyDataEnvironmentsPoliciesMetricCheckRule : TeaModel {
                         /// <summary>
-                        /// PromQL list.
+                        /// The PromQL statements.
                         /// </summary>
                         [NameInMap("PromQL")]
                         [Validation(Required=false)]
@@ -181,42 +181,42 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     }
 
                     /// <summary>
-                    /// Whether to restart after integration.
+                    /// Indicates whether a restart is required after the installation.
                     /// </summary>
                     [NameInMap("NeedRestartAfterIntegration")]
                     [Validation(Required=false)]
                     public bool? NeedRestartAfterIntegration { get; set; }
 
                     /// <summary>
-                    /// Protocol list.
+                    /// The supported protocols.
                     /// </summary>
                     [NameInMap("Protocols")]
                     [Validation(Required=false)]
                     public List<ListAddonsResponseBodyDataEnvironmentsPoliciesProtocols> Protocols { get; set; }
                     public class ListAddonsResponseBodyDataEnvironmentsPoliciesProtocols : TeaModel {
                         /// <summary>
-                        /// Description of the Protocol.
+                        /// The description of the protocol.
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// Icon address.
+                        /// The URL of the protocol icon.
                         /// </summary>
                         [NameInMap("Icon")]
                         [Validation(Required=false)]
                         public string Icon { get; set; }
 
                         /// <summary>
-                        /// Label of the Protocol.
+                        /// The tag of the protocol.
                         /// </summary>
                         [NameInMap("Label")]
                         [Validation(Required=false)]
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// Name of the Protocol.
+                        /// The name of the protocol.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     }
 
                     /// <summary>
-                    /// Target Addon name.
+                    /// The target name of the add-on.
                     /// </summary>
                     [NameInMap("TargetAddonName")]
                     [Validation(Required=false)]
@@ -236,63 +236,63 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// Icon address.
+            /// The URL of the icon.
             /// </summary>
             [NameInMap("Icon")]
             [Validation(Required=false)]
             public string Icon { get; set; }
 
             /// <summary>
-            /// Keyword list.
+            /// The collection of keywords.
             /// </summary>
             [NameInMap("Keywords")]
             [Validation(Required=false)]
             public List<string> Keywords { get; set; }
 
             /// <summary>
-            /// Language.
+            /// The language.
             /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }
 
             /// <summary>
-            /// Last installation time.
+            /// The time when the instance was last created.
             /// </summary>
             [NameInMap("LatestReleaseCreateTime")]
             [Validation(Required=false)]
             public string LatestReleaseCreateTime { get; set; }
 
             /// <summary>
-            /// Name of the Addon.
+            /// The name of the add-on.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// Whether to install it only once.
+            /// Indicates whether the add-on can be installed only once.
             /// </summary>
             [NameInMap("Once")]
             [Validation(Required=false)]
             public bool? Once { get; set; }
 
             /// <summary>
-            /// Scene of the Addon.
+            /// The scenario.
             /// </summary>
             [NameInMap("Scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }
 
             /// <summary>
-            /// Version of the Addon.
+            /// The version of the agent.
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
 
             /// <summary>
-            /// Weight of the Addon.
+            /// The weight.
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]

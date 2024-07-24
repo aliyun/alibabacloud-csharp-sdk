@@ -10,55 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class InstallManagedPrometheusRequest : TeaModel {
         /// <summary>
-        /// The ID of the ACK cluster.
+        /// The ID of the ASK cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the ECS instance. If you set the ClusterType parameter to ecs, you must configure this parameter.
+        /// The name of the cluster. This parameter is required if the ClusterType parameter is set to ecs.
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The cluster type.
-        /// 
-        /// Valid values:
-        /// 
-        /// *   ecs
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   one
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   ask
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   pro
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// The type of the cluster. Valid values: ask and ecs.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -67,14 +33,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The ID of the Grafana workspace used by the ASK cluster or ECS instance. If you set the value to free or leave the parameter empty, a shared Grafana workspace is used.
+        /// The ID of the Grafana workspace in which the cluster resides. If you set this parameter to free or leave this parameter empty, the cluster is deployed in a shared Grafana workspace.
         /// </summary>
         [NameInMap("GrafanaInstanceId")]
         [Validation(Required=false)]
         public string GrafanaInstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is not supported.
+        /// The parameter is not supported.
         /// </summary>
         [NameInMap("KubeConfig")]
         [Validation(Required=false)]
@@ -88,14 +54,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the Prometheus instance belongs.
+        /// Prometheus实例的资源组ID。
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The security group of the ASK cluster or ECS instance.
+        /// The ID of the security group to which the cluster belongs.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -104,7 +70,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// The vSwitch used by the ASK cluster or ECS instance.
+        /// The ID of the vSwitch that is used by the cluster.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -113,7 +79,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.
+        /// The virtual private cloud (VPC) where the cluster resides.
         /// 
         /// This parameter is required.
         /// </summary>

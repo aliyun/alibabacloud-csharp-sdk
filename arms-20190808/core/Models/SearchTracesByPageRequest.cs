@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The list of tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -141,13 +141,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// *   traceId: the ID of the trace.
             /// *   serverApp: the name of the server application.
             /// *   clientApp: the name of the client application.
-            /// *   service: the name of the API operation.
+            /// *   service: the name of the interface.
             /// *   rpc: the type of the call.
             /// *   msOfSpan: the duration exceeds a specific value.
             /// *   clientIp: the IP address of the client.
             /// *   serverIp: the IP address of the server.
             /// *   isError: specifies whether the call is abnormal.
-            /// *   hasTprof: contains only thread profiling.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

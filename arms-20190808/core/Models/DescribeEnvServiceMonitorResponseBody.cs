@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public DescribeEnvServiceMonitorResponseBodyData Data { get; set; }
         public class DescribeEnvServiceMonitorResponseBodyData : TeaModel {
             /// <summary>
-            /// The YAML configuration string of the ServiceMonitor.
+            /// The YAML configuration file of the ServiceMonitor.
             /// </summary>
             [NameInMap("ConfigYaml")]
             [Validation(Required=false)]
@@ -59,7 +59,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ServiceMonitorName { get; set; }
 
             /// <summary>
-            /// The status of the ServiceMonitor. Valid values: run and stop.
+            /// The status. Valid values:
+            /// 
+            /// *   run
+            /// *   stop
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

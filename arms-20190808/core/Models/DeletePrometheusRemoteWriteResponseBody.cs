@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The remote write configuration items. If the request fails, an error message is returned.
+        /// The number of remote write configuration items that are deleted, or an error message.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

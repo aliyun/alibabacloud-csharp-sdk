@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateGrafanaWorkspaceVersionRequest : TeaModel {
+        /// <summary>
+        /// The language. Valid values: zh and en. Default value: zh.
+        /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
+        /// The Grafana version.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("GrafanaVersion")]
@@ -21,6 +26,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string GrafanaVersion { get; set; }
 
         /// <summary>
+        /// The ID of the workspace.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("GrafanaWorkspaceId")]
@@ -28,6 +35,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string GrafanaWorkspaceId { get; set; }
 
         /// <summary>
+        /// The region ID. Default value: cn-hangzhou.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

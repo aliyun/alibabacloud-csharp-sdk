@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListRetcodeAppsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string NickName { get; set; }
 
             /// <summary>
-            /// The PID of the application.
+            /// The process identifier (PID) of the application.
             /// </summary>
             [NameInMap("Pid")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RetcodeAppType { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// The tags of the task.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

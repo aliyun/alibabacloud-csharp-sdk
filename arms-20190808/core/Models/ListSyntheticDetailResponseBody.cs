@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// The returned struct.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListSyntheticDetailResponseBodyData Data { get; set; }
         public class ListSyntheticDetailResponseBodyData : TeaModel {
+            /// <summary>
+            /// The list of results.
+            /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Items { get; set; }

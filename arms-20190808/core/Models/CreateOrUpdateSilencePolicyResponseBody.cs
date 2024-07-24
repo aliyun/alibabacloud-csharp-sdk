@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// A list of silence policies.
+        /// The silence policy.
         /// </summary>
         [NameInMap("SilencePolicy")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRules> MatchingRules { get; set; }
             public class CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRules : TeaModel {
                 /// <summary>
-                /// A list of matching conditions.
+                /// The matching conditions.
                 /// </summary>
                 [NameInMap("MatchingConditions")]
                 [Validation(Required=false)]
@@ -83,6 +83,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// Indicates whether the silence policy is enabled. Valid values: enable and disable.
+            /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }

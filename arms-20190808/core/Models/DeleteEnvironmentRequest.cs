@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteEnvironmentRequest : TeaModel {
         /// <summary>
-        /// cascade delete Prometheus instance.
+        /// Specifies whether to delete the related Prometheus instance.
         /// </summary>
         [NameInMap("DeletePromInstance")]
         [Validation(Required=false)]
