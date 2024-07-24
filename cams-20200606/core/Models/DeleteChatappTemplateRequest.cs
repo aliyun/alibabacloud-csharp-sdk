@@ -23,7 +23,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
-        [Obsolete]
         public string CustWabaId { get; set; }
 
         /// <summary>
@@ -36,6 +35,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         /// <summary>
         /// The code of the message template.

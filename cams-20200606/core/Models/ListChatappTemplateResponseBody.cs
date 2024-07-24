@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string Language { get; set; }
 
+            [NameInMap("LastUpdateTime")]
+            [Validation(Required=false)]
+            public long? LastUpdateTime { get; set; }
+
             /// <summary>
             /// The reason for the review failure.
             /// </summary>
