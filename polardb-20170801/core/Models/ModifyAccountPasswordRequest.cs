@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The password type.
+        /// </summary>
         [NameInMap("PasswordType")]
         [Validation(Required=false)]
         public string PasswordType { get; set; }

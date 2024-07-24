@@ -49,32 +49,33 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeDBClusterVersionResponseBodyDBRevisionVersionList> DBRevisionVersionList { get; set; }
         public class DescribeDBClusterVersionResponseBodyDBRevisionVersionList : TeaModel {
             /// <summary>
-            /// The release notes for the revision version.
+            /// The release notes for the database engine revision version.
             /// </summary>
             [NameInMap("ReleaseNote")]
             [Validation(Required=false)]
             public string ReleaseNote { get; set; }
 
             /// <summary>
-            /// The release status of the revision version. Valid values:
+            /// The release status of the database engine revision version. Valid values:
             /// 
-            /// *   **Stable**: The revision version is stable.
-            /// *   **Old**: The revision version is outdated. We recommend that you do not update the cluster to this version.
-            /// *   **HighRisk**: The revision version has critical defects. We recommend that you do not update the cluster to this version.
+            /// *   **Stable**: The database engine revision version is stable.
+            /// *   **Old**: The database engine revision version is outdated. We recommend that you do not update the database engine to this revision version.
+            /// *   **HighRisk**: The database engine revision version has critical defects. We recommend that you do not update the database engine to this revision version.
+            /// *   **Beta**: The database engine revision version is a Beta version.
             /// </summary>
             [NameInMap("ReleaseType")]
             [Validation(Required=false)]
             public string ReleaseType { get; set; }
 
             /// <summary>
-            /// The code of the revision version of the database engine to which the cluster can be upgraded.
+            /// The code of the database engine revision version. You can use the code to specify the database engine revision version.
             /// </summary>
             [NameInMap("RevisionVersionCode")]
             [Validation(Required=false)]
             public string RevisionVersionCode { get; set; }
 
             /// <summary>
-            /// The revision version of the database engine.
+            /// The database engine revision version number.
             /// </summary>
             [NameInMap("RevisionVersionName")]
             [Validation(Required=false)]
@@ -140,22 +141,45 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ProxyRevisionVersion { get; set; }
 
+        /// <summary>
+        /// The release status of the PolarProxy version. Valid values:
+        /// 
+        /// *   **Stable**: The PolarProxy revision version is stable.
+        /// *   **Old**: The PolarProxy revision version is outdated. We recommend that you do not update the PolarProxy to this revision version.
+        /// *   **HighRisk**: The PolarProxy revision version has critical defects. We recommend that you do not update the PolarProxy to this revision version.
+        /// *   **Beta**: The PolarProxy revision version is a Beta version.
+        /// </summary>
         [NameInMap("ProxyRevisionVersionList")]
         [Validation(Required=false)]
         public List<DescribeDBClusterVersionResponseBodyProxyRevisionVersionList> ProxyRevisionVersionList { get; set; }
         public class DescribeDBClusterVersionResponseBodyProxyRevisionVersionList : TeaModel {
+            /// <summary>
+            /// The release notes for the PolarProxy revision version.
+            /// </summary>
             [NameInMap("ReleaseNote")]
             [Validation(Required=false)]
             public string ReleaseNote { get; set; }
 
+            /// <summary>
+            /// The release type. Valid values:
+            /// 
+            /// *   **LTS**: a long-term version
+            /// *   **BETA**: a preview version
+            /// </summary>
             [NameInMap("ReleaseType")]
             [Validation(Required=false)]
             public string ReleaseType { get; set; }
 
+            /// <summary>
+            /// The PolarProxy revision version code. You can use this code to specify the PolarProxy revision version.
+            /// </summary>
             [NameInMap("RevisionVersionCode")]
             [Validation(Required=false)]
             public string RevisionVersionCode { get; set; }
 
+            /// <summary>
+            /// The PolarProxy revision version number.
+            /// </summary>
             [NameInMap("RevisionVersionName")]
             [Validation(Required=false)]
             public string RevisionVersionName { get; set; }

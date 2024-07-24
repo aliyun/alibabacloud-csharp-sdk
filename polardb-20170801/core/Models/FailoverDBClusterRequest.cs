@@ -41,6 +41,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to fail back to the original primary zone after a failover. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("RollBackForDisaster")]
         [Validation(Required=false)]
         public bool? RollBackForDisaster { get; set; }

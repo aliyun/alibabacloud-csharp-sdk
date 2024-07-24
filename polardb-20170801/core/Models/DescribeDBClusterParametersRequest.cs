@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The kernel parameter. Valid values:
+        /// The type of the parameter information to query. Valid values:
         /// 
-        /// *   **Normal**: the kernel parameters.
-        /// *   **MigrationFromRDS**: compares the current parameters with the parameters of the source RDS instance.
+        /// *   **Normal**: the information about the cluster parameters
+        /// *   **MigrationFromRDS**: a comparison of parameters between the source RDS instance and the destination PolarDB cluster
         /// </summary>
         [NameInMap("DescribeType")]
         [Validation(Required=false)]

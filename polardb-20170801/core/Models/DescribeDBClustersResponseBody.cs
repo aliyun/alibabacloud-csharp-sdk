@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBClusterStatus { get; set; }
 
                 /// <summary>
-                /// The node specifications.
+                /// The specifications of the node.
                 /// </summary>
                 [NameInMap("DBNodeClass")]
                 [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string ImciSwitch { get; set; }
 
                         /// <summary>
-                        /// The region ID of the node.
+                        /// The region ID of the cluster.
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string Serverless { get; set; }
 
                         /// <summary>
-                        /// The zone ID of node.
+                        /// The zone ID of the cluster.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -243,6 +243,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string Expired { get; set; }
 
+                [NameInMap("HotStandbyCluster")]
+                [Validation(Required=false)]
+                public string HotStandbyCluster { get; set; }
+
                 /// <summary>
                 /// The lock state of the cluster. Valid values:
                 /// 
@@ -286,14 +290,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string RemoteMemorySize { get; set; }
 
                 /// <summary>
-                /// The resource group ID.
+                /// The ID of the resource group.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the cluster is a serverless cluster. **AgileServerless** indicates a serverless cluster. No value is returned for a common cluster.
+                /// Indicates whether the cluster is a serverless cluster. **AgileServerless** indicates the cluster is a serverless cluster. No value is returned for a common cluster.
                 /// </summary>
                 [NameInMap("ServerlessType")]
                 [Validation(Required=false)]
@@ -316,6 +320,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public long? StorageSpace { get; set; }
 
+                /// <summary>
+                /// The storage type.
+                /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
                 public string StorageType { get; set; }

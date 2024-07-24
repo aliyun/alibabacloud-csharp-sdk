@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The database engine that the cluster runs. Valid values:
+        /// The database engine that the clusters runs. Valid values:
         /// 
         /// *   **MySQL**
         /// *   **PostgreSQL**
@@ -30,12 +30,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The version of the database engine. 
         /// 
-        /// - Valid values for the MySQL database engine:    - **5.6**
+        /// - Valid values for the MySQL database engine:   
+        ///   - **5.6**
         ///   - **5.7**
         ///   - **8.0**
-        /// - Valid value for the PostgreSQL database engine:    - **11**
+        /// - Valid value for the PostgreSQL database engine:    
+        ///   - **11**
         ///   - **14**
-        /// - Valid value for the Oracle database engine: **11**
+        /// - Valid value for the Oracle database engine:  **11**
         /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterNumbers { get; set; }
 
         /// <summary>
-        /// A comparison between the current parameters of the PolarDB cluster and the parameters of the source RDS instance before migration.
+        /// A comparison of parameters between the source RDS instance and the destination PolarDB cluster.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -67,51 +69,75 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeDBClusterParametersResponseBodyParametersParameters> Parameters { get; set; }
             public class DescribeDBClusterParametersResponseBodyParametersParameters : TeaModel {
                 /// <summary>
-                /// Indicates whether the source parameters and current parameters have the same value.
+                /// Indicates whether the source and current parameters have the same value.
                 /// </summary>
                 [NameInMap("IsEqual")]
                 [Validation(Required=false)]
                 public string IsEqual { get; set; }
 
+                /// <summary>
+                /// Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:
+                /// 
+                /// *   **1**: The parameter is a primary parameter of the destination cluster.
+                /// *   **0**: The parameter is not a primary parameter of the destination cluster.
+                /// </summary>
                 [NameInMap("IsInstancePolarDBKey")]
                 [Validation(Required=false)]
                 public string IsInstancePolarDBKey { get; set; }
 
+                /// <summary>
+                /// Indicate whether the parameter is a primary parameter of the source instance. Valid values:
+                /// 
+                /// *   **1**: The parameter is a primary parameter of the source instance.
+                /// *   **0**: The parameter is not a primary parameter of the source instance.
+                /// </summary>
                 [NameInMap("IsInstanceRdsKey")]
                 [Validation(Required=false)]
                 public string IsInstanceRdsKey { get; set; }
 
+                /// <summary>
+                /// Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:
+                /// 
+                /// *   **1**: The parameter is a primary parameter of the destination cluster.
+                /// *   **0**: The parameter is not a primary parameter of the destination cluster.
+                /// </summary>
                 [NameInMap("IsPolarDBKey")]
                 [Validation(Required=false)]
                 public string IsPolarDBKey { get; set; }
 
+                /// <summary>
+                /// Indicate whether the parameter is a primary parameter of the source instance. Valid values:
+                /// 
+                /// *   **1**: The parameter is a primary parameter of the source instance.
+                /// *   **0**: The parameter is not a primary parameter of the source instance.
+                /// </summary>
                 [NameInMap("IsRdsKey")]
                 [Validation(Required=false)]
                 public string IsRdsKey { get; set; }
 
                 /// <summary>
-                /// The description of the parameter of the current cluster.
+                /// The description of the parameter of the destination cluster.
                 /// </summary>
                 [NameInMap("distParameterDescription")]
                 [Validation(Required=false)]
                 public string DistParameterDescription { get; set; }
 
                 /// <summary>
-                /// The name of the parameter of the current cluster.
+                /// The name of the parameter of the destination cluster.
                 /// </summary>
                 [NameInMap("distParameterName")]
                 [Validation(Required=false)]
                 public string DistParameterName { get; set; }
 
                 /// <summary>
-                /// The valid values of the parameter of the current cluster.
+                /// The valid values of the parameter of the destination cluster.
                 /// </summary>
                 [NameInMap("distParameterOptional")]
                 [Validation(Required=false)]
                 public string DistParameterOptional { get; set; }
 
                 /// <summary>
-                /// The value of the parameter of the current cluster.
+                /// The value of the parameter of the destination cluster.
                 /// </summary>
                 [NameInMap("distParameterValue")]
                 [Validation(Required=false)]
@@ -157,7 +183,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The parameters that are in use.
+        /// The parameters of the PolarDB cluster.
         /// </summary>
         [NameInMap("RunningParameters")]
         [Validation(Required=false)]
@@ -200,7 +226,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Factor { get; set; }
 
                 /// <summary>
-                /// Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:
+                /// Indicates whether a cluster restart is required for the parameter modification to take effect. Valid values:
                 /// 
                 /// *   **false**
                 /// *   **true**
@@ -222,8 +248,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// Indicates whether the parameter is a global parameter. Valid values:
                 /// 
-                /// *   **0**: yes. The modified parameter value is synchronized to other nodes.
-                /// *   **1**: no. You can customize the nodes to which the modified parameter value can be synchronized.
+                /// *   **0**: The parameter is a global parameter. The modified parameter value is synchronized to other nodes.
+                /// *   **1**: The parameter is not a global parameter. You can specify the nodes to which the modified parameter value can be synchronized.
                 /// </summary>
                 [NameInMap("IsNodeAvailable")]
                 [Validation(Required=false)]

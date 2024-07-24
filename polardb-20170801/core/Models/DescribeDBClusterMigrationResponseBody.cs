@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems> AddressItems { get; set; }
             public class DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems : TeaModel {
                 /// <summary>
-                /// The connection string.
+                /// The endpoint.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
@@ -100,12 +100,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// 
             /// *   **Cluster**: the default cluster endpoint
             /// *   **Primary**: the primary endpoint
-            /// *   **Custom**: the custom cluster endpoint
+            /// *   **Custom**: the custom endpoint
             /// </summary>
             [NameInMap("EndpointType")]
             [Validation(Required=false)]
             public string EndpointType { get; set; }
 
+            /// <summary>
+            /// The read/write mode. Valid values:
+            /// 
+            /// *   ReadWrite: receives and forwards read and write requests (automatic read-write splitting).
+            /// *   ReadOnly (default): receives and forwards read requests only.
+            /// </summary>
             [NameInMap("ReadWriteMode")]
             [Validation(Required=false)]
             public string ReadWriteMode { get; set; }
@@ -180,7 +186,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems> AddressItems { get; set; }
             public class DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems : TeaModel {
                 /// <summary>
-                /// The connection string.
+                /// The endpoint.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
@@ -237,6 +243,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             }
 
+            /// <summary>
+            /// The type of the source database.
+            /// </summary>
             [NameInMap("CustinsType")]
             [Validation(Required=false)]
             public string CustinsType { get; set; }

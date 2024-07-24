@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specify to return the latest version information or a list of upgradeable versions.Valid values:
+        /// Specifies whether to query the information about the latest versions or the versions to which the cluster can be updated. Valid values:
         /// 
-        /// - AVAILABLE_VERSION
-        /// - LATEST_VERSION
+        /// *   LATEST_VERSION: the information about the latest versions.
+        /// *   AVAILABLE_VERSION: the information about the versions to which the cluster can be updated.
         /// </summary>
         [NameInMap("DescribeType")]
         [Validation(Required=false)]
