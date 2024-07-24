@@ -7056,6 +7056,138 @@ namespace AlibabaCloud.SDK.Dts20200101
         }
 
         /**
+         * @summary 查询DTS任务配置
+         *
+         * @param request DescribeDtsJobConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDtsJobConfigResponse
+         */
+        public DescribeDtsJobConfigResponse DescribeDtsJobConfigWithOptions(DescribeDtsJobConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForAcceleration))
+            {
+                query["ForAcceleration"] = request.ForAcceleration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDtsJobConfig",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDtsJobConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询DTS任务配置
+         *
+         * @param request DescribeDtsJobConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDtsJobConfigResponse
+         */
+        public async Task<DescribeDtsJobConfigResponse> DescribeDtsJobConfigWithOptionsAsync(DescribeDtsJobConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForAcceleration))
+            {
+                query["ForAcceleration"] = request.ForAcceleration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDtsJobConfig",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDtsJobConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询DTS任务配置
+         *
+         * @param request DescribeDtsJobConfigRequest
+         * @return DescribeDtsJobConfigResponse
+         */
+        public DescribeDtsJobConfigResponse DescribeDtsJobConfig(DescribeDtsJobConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDtsJobConfigWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询DTS任务配置
+         *
+         * @param request DescribeDtsJobConfigRequest
+         * @return DescribeDtsJobConfigResponse
+         */
+        public async Task<DescribeDtsJobConfigResponse> DescribeDtsJobConfigAsync(DescribeDtsJobConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDtsJobConfigWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary The latency of incremental data migration or synchronization.
          * >  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
          *

@@ -1,3 +1,9 @@
+2024-07-24 Version: 1.5.0
+- Support API DescribeDtsJobConfig.
+- Update API DescribeDtsJobs: add param DestProductType.
+- Update API DescribeDtsJobs: add param SrcProductType.
+
+
 2024-06-27 Version: 1.4.4
 - Update API DescribeDtsJobs: add param DestProductType.
 - Update API DescribeDtsJobs: add param SrcProductType.
