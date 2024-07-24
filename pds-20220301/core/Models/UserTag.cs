@@ -12,16 +12,16 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("Value")]
+        [NameInMap("key")]
         [Validation(Required=false)]
-        public string Value { get; set; }
+        public string Key { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("key")]
+        [NameInMap("value")]
         [Validation(Required=false)]
-        public string Key { get; set; }
+        public string Value { get; set; }
 
     }
 

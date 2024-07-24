@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class IdentityBenefitPkg : TeaModel {
-        [NameInMap("benefit_pkg_id")]
+    public class KnowledgeFileItem : TeaModel {
+        [NameInMap("drive_id")]
         [Validation(Required=false)]
-        public string BenefitPkgId { get; set; }
+        public string DriveId { get; set; }
 
-        [NameInMap("name")]
+        [NameInMap("file_id")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string FileId { get; set; }
 
     }
 

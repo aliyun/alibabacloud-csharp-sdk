@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string FileName { get; set; }
 
+        [NameInMap("response_content_type")]
+        [Validation(Required=false)]
+        public string ResponseContentType { get; set; }
+
         /// <summary>
         /// The share ID. If you want to manage a file by using a sharing link, carry the `x-share-token` header in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify at least either `share_id` or `drive_id`.
         /// </summary>

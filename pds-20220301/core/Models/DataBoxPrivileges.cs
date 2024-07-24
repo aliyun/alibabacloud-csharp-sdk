@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class BenefitMeta : TeaModel {
-        [NameInMap("config")]
+    public class DataBoxPrivileges : TeaModel {
+        [NameInMap("feature_attr_id")]
         [Validation(Required=false)]
-        public string Config { get; set; }
+        public string FeatureAttrId { get; set; }
 
-        [NameInMap("enabled")]
+        [NameInMap("feature_id")]
         [Validation(Required=false)]
-        public bool? Enabled { get; set; }
+        public string FeatureId { get; set; }
 
         [NameInMap("quota")]
         [Validation(Required=false)]

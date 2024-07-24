@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        [NameInMap("recursive")]
+        [Validation(Required=false)]
+        public bool? Recursive { get; set; }
+
         /// <summary>
         /// Specifies whether to return the total number of retrieved files.
         /// </summary>
