@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UploadDataSyncResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -47,6 +51,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             [Validation(Required=false)]
                             public List<UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoConditionInfoConditionBasicInfo> ConditionBasicInfo { get; set; }
                             public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoConditionInfoConditionBasicInfo : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>xxx</para>
+                                /// </summary>
                                 [NameInMap("ConditionInfoCid")]
                                 [Validation(Required=false)]
                                 public string ConditionInfoCid { get; set; }
@@ -81,18 +89,34 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [Validation(Required=false)]
                                     public List<UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord> HitKeyWord { get; set; }
                                     public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord : TeaModel {
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>1</para>
+                                        /// </summary>
                                         [NameInMap("From")]
                                         [Validation(Required=false)]
                                         public int? From { get; set; }
 
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>1</para>
+                                        /// </summary>
                                         [NameInMap("Pid")]
                                         [Validation(Required=false)]
                                         public int? Pid { get; set; }
 
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>1</para>
+                                        /// </summary>
                                         [NameInMap("Tid")]
                                         [Validation(Required=false)]
                                         public string Tid { get; set; }
 
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>1</para>
+                                        /// </summary>
                                         [NameInMap("To")]
                                         [Validation(Required=false)]
                                         public int? To { get; set; }
@@ -109,18 +133,34 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                 [Validation(Required=false)]
                                 public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoPhrase Phrase { get; set; }
                                 public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoPhrase : TeaModel {
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>0</para>
+                                    /// </summary>
                                     [NameInMap("Begin")]
                                     [Validation(Required=false)]
                                     public long? Begin { get; set; }
 
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>1564574</para>
+                                    /// </summary>
                                     [NameInMap("BeginTime")]
                                     [Validation(Required=false)]
                                     public string BeginTime { get; set; }
 
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>2090</para>
+                                    /// </summary>
                                     [NameInMap("End")]
                                     [Validation(Required=false)]
                                     public long? End { get; set; }
 
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>1</para>
+                                    /// </summary>
                                     [NameInMap("Identity")]
                                     [Validation(Required=false)]
                                     public string Identity { get; set; }
@@ -139,10 +179,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                         }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>801</para>
+                        /// </summary>
                         [NameInMap("Rid")]
                         [Validation(Required=false)]
                         public string Rid { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>88888888</para>
+                        /// </summary>
                         [NameInMap("Tid")]
                         [Validation(Required=false)]
                         public string Tid { get; set; }
@@ -151,6 +199,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public int? Score { get; set; }
@@ -159,14 +211,26 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>successful</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4987D326-83D9-4A42-B9A5-0B27F9B***</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
