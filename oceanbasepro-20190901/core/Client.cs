@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息
+         * @summary You can call this operation to close sessions between the ApsaraDB for OceanBase and the application in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeSessionList.
          *
          * @param request BatchKillSessionListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息
+         * @summary You can call this operation to close sessions between the ApsaraDB for OceanBase and the application in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeSessionList.
          *
          * @param request BatchKillSessionListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息
+         * @summary You can call this operation to close sessions between the ApsaraDB for OceanBase and the application in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeSessionList.
          *
          * @param request BatchKillSessionListRequest
          * @return BatchKillSessionListResponse
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息
+         * @summary You can call this operation to close sessions between the ApsaraDB for OceanBase and the application in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeSessionList.
          *
          * @param request BatchKillSessionListRequest
          * @return BatchKillSessionListResponse
@@ -9038,6 +9038,146 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary 获取单个 SQL 的调优建议，包括计划推荐和索引推荐
+         *
+         * @param request DescribeSQLTuningAdvicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLTuningAdvicesResponse
+         */
+        public DescribeSQLTuningAdvicesResponse DescribeSQLTuningAdvicesWithOptions(DescribeSQLTuningAdvicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                body["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlId))
+            {
+                body["SqlId"] = request.SqlId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSQLTuningAdvices",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSQLTuningAdvicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取单个 SQL 的调优建议，包括计划推荐和索引推荐
+         *
+         * @param request DescribeSQLTuningAdvicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLTuningAdvicesResponse
+         */
+        public async Task<DescribeSQLTuningAdvicesResponse> DescribeSQLTuningAdvicesWithOptionsAsync(DescribeSQLTuningAdvicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                body["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlId))
+            {
+                body["SqlId"] = request.SqlId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSQLTuningAdvices",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSQLTuningAdvicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取单个 SQL 的调优建议，包括计划推荐和索引推荐
+         *
+         * @param request DescribeSQLTuningAdvicesRequest
+         * @return DescribeSQLTuningAdvicesResponse
+         */
+        public DescribeSQLTuningAdvicesResponse DescribeSQLTuningAdvices(DescribeSQLTuningAdvicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSQLTuningAdvicesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取单个 SQL 的调优建议，包括计划推荐和索引推荐
+         *
+         * @param request DescribeSQLTuningAdvicesRequest
+         * @return DescribeSQLTuningAdvicesResponse
+         */
+        public async Task<DescribeSQLTuningAdvicesResponse> DescribeSQLTuningAdvicesAsync(DescribeSQLTuningAdvicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSQLTuningAdvicesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 查询采样SQL的原始文本
          *
          * @param request DescribeSampleSqlRawTextsRequest
@@ -9278,7 +9418,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息
+         * @summary You can call this operation to query sessions between the ApsaraDB for OceanBase and the application.
          *
          * @param request DescribeSessionListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9316,7 +9456,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息
+         * @summary You can call this operation to query sessions between the ApsaraDB for OceanBase and the application.
          *
          * @param request DescribeSessionListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9354,7 +9494,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息
+         * @summary You can call this operation to query sessions between the ApsaraDB for OceanBase and the application.
          *
          * @param request DescribeSessionListRequest
          * @return DescribeSessionListResponse
@@ -9366,7 +9506,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息
+         * @summary You can call this operation to query sessions between the ApsaraDB for OceanBase and the application.
          *
          * @param request DescribeSessionListRequest
          * @return DescribeSessionListResponse
