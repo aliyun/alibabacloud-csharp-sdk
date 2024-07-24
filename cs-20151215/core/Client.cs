@@ -9206,6 +9206,78 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterAuditProjectResponse
+         */
+        public GetClusterAuditProjectResponse GetClusterAuditProjectWithOptions(string clusterid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClusterAuditProject",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid) + "/audit",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClusterAuditProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterAuditProjectResponse
+         */
+        public async Task<GetClusterAuditProjectResponse> GetClusterAuditProjectWithOptionsAsync(string clusterid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClusterAuditProject",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterid) + "/audit",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClusterAuditProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @return GetClusterAuditProjectResponse
+         */
+        public GetClusterAuditProjectResponse GetClusterAuditProject(string clusterid)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetClusterAuditProjectWithOptions(clusterid, headers, runtime);
+        }
+
+        /**
+         * @return GetClusterAuditProjectResponse
+         */
+        public async Task<GetClusterAuditProjectResponse> GetClusterAuditProjectAsync(string clusterid)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetClusterAuditProjectWithOptionsAsync(clusterid, headers, runtime);
+        }
+
+        /**
          * @summary Queries a cluster check task by cluster ID and task ID. You can view the status, check items, creation time, and end time of the task. Container Intelligence Service (CIS) provides a variety of Kubernetes cluster check features, including cluster update check, cluster migration check, component installation check, component update check, and node pool check.
          *
          * @param headers map
