@@ -55,6 +55,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
+                /// <summary>
+                /// The database engine of the cluster. Valid values:
+                /// 
+                /// *   **AnalyticDB**: the AnalyticDB for MySQL engine.
+                /// *   **Clickhouse**: the wide table engine.
+                /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }

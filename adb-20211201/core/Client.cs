@@ -8249,6 +8249,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -8300,6 +8304,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -15601,6 +15609,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
+         * @summary Releases the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
          * @param request ReleaseClusterPublicConnectionRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ReleaseClusterPublicConnectionResponse
@@ -15637,6 +15649,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
+         * @summary Releases the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
          * @param request ReleaseClusterPublicConnectionRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ReleaseClusterPublicConnectionResponse
@@ -15673,6 +15689,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
+         * @summary Releases the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
          * @param request ReleaseClusterPublicConnectionRequest
          * @return ReleaseClusterPublicConnectionResponse
          */
@@ -15683,6 +15703,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
+         * @summary Releases the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
          * @param request ReleaseClusterPublicConnectionRequest
          * @return ReleaseClusterPublicConnectionResponse
          */

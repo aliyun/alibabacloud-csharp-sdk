@@ -20,10 +20,19 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterAttributeResponseBodyItemsDBCluster> DBCluster { get; set; }
             public class DescribeDBClusterAttributeResponseBodyItemsDBCluster : TeaModel {
+                /// <summary>
+                /// The cache size of the ClickHouse wide table engine. Unit: GB. If a value of -1 is returned, the ClickHouse wide table engine is disabled. If a value other than -1 is returned, this parameter indicates the disk cache size.
+                /// </summary>
                 [NameInMap("ClickhouseEngineCacheSize")]
                 [Validation(Required=false)]
                 public int? ClickhouseEngineCacheSize { get; set; }
 
+                /// <summary>
+                /// Indicates whether the ClickHouse wide table engine is enabled. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// </summary>
                 [NameInMap("ClickhouseEngineEnabled")]
                 [Validation(Required=false)]
                 public bool? ClickhouseEngineEnabled { get; set; }
@@ -158,6 +167,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Expired { get; set; }
 
+                /// <summary>
+                /// The ID of the key that is used to encrypt disk data.
+                /// 
+                /// >  This parameter is returned only when disk encryption is enabled.
+                /// </summary>
                 [NameInMap("KmsId")]
                 [Validation(Required=false)]
                 public string KmsId { get; set; }
@@ -215,10 +229,19 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("ProductForm")]
                 [Validation(Required=false)]
                 public string ProductForm { get; set; }
 
+                /// <summary>
+                /// The edition of the cluster. Valid values:
+                /// 
+                /// *   **BasicVersion**: Basic Edition.
+                /// *   **EnterpriseVersion**: Enterprise Edition.
+                /// </summary>
                 [NameInMap("ProductVersion")]
                 [Validation(Required=false)]
                 public string ProductVersion { get; set; }
@@ -237,10 +260,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ReservedACU { get; set; }
 
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("ReservedNodeCount")]
                 [Validation(Required=false)]
                 public int? ReservedNodeCount { get; set; }
 
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("ReservedNodeSize")]
                 [Validation(Required=false)]
                 public string ReservedNodeSize { get; set; }
@@ -267,7 +296,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string StorageResourceTotal { get; set; }
 
                 /// <summary>
-                /// A reserved parameter.
+                /// Reserved parameters.
                 /// </summary>
                 [NameInMap("SupportedFeatures")]
                 [Validation(Required=false)]

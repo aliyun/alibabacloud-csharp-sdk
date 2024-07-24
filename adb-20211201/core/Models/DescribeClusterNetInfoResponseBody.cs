@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ClusterNetworkType { get; set; }
 
         /// <summary>
-        /// The network information about the cluster.
+        /// The queried network information about the cluster.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The endpoint of the cluster.
                 /// 
-                /// *   If the network type of the cluster is VPC, the VPC endpoint of the cluster is returned.
-                /// *   If the network type of the cluster is Public, the public endpoint of the cluster is returned.
+                /// *   If NetType is set to VPC, the VPC endpoint of the cluster is returned.
+                /// *   If NetType is set to Public, the public endpoint of the cluster is returned.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The prefix of the endpoint.
                 /// 
-                /// *   If the network type of the cluster is VPC, the prefix of the private endpoint is returned.
-                /// *   If the network type of the cluster is Public, the prefix of the public endpoint is returned.
+                /// *   If NetType is set to VPC, the prefix of the VPC endpoint is returned.
+                /// *   If NetType is set to Public, the prefix of the public endpoint is returned.
                 /// </summary>
                 [NameInMap("ConnectionStringPrefix")]
                 [Validation(Required=false)]
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The IP address of the endpoint.
                 /// 
-                /// *   If the network type of the cluster is VPC, the IP address of the private endpoint is returned.
-                /// *   If the network type of the cluster is Public, the IP address of the public endpoint is returned.
+                /// *   If NetType is set to VPC, the private IP address of the cluster is returned.
+                /// *   If NetType is set to Public, the public IP address of the cluster is returned.
                 /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
@@ -74,6 +74,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                /// <summary>
+                /// The ports.
+                /// </summary>
                 [NameInMap("Ports")]
                 [Validation(Required=false)]
                 public DescribeClusterNetInfoResponseBodyItemsAddressPorts Ports { get; set; }
@@ -82,10 +85,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     [Validation(Required=false)]
                     public List<DescribeClusterNetInfoResponseBodyItemsAddressPortsPorts> Ports { get; set; }
                     public class DescribeClusterNetInfoResponseBodyItemsAddressPortsPorts : TeaModel {
+                        /// <summary>
+                        /// The port.
+                        /// </summary>
                         [NameInMap("Port")]
                         [Validation(Required=false)]
                         public string Port { get; set; }
 
+                        /// <summary>
+                        /// The type of the protocol. Valid values:
+                        /// 
+                        /// *   **tcp**
+                        /// *   **http**
+                        /// *   **https**
+                        /// *   **mysql**
+                        /// </summary>
                         [NameInMap("Protocol")]
                         [Validation(Required=false)]
                         public string Protocol { get; set; }
@@ -97,7 +111,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The VPC ID.
                 /// 
-                /// > If NetType is set to Public, an empty string is returned for this parameter.
+                /// >  If NetType is set to Public, an empty string is returned.
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
@@ -106,7 +120,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The vSwitch ID of the cluster.
                 /// 
-                /// > If NetType is set to Public, an empty string is returned for this parameter.
+                /// >  If NetType is set to Public, an empty string is returned.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
