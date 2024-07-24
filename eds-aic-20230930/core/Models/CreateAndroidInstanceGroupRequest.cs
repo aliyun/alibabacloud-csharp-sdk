@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("GpuAcceleration")]
+        [Validation(Required=false)]
+        public bool? GpuAcceleration { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

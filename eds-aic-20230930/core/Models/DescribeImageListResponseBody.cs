@@ -53,6 +53,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string Language { get; set; }
 
+            [NameInMap("ReleaseTime")]
+            [Validation(Required=false)]
+            public string ReleaseTime { get; set; }
+
+            [NameInMap("RenderingType")]
+            [Validation(Required=false)]
+            public string RenderingType { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

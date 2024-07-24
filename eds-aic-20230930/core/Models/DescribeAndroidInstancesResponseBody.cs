@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("RenderingType")]
+            [Validation(Required=false)]
+            public string RenderingType { get; set; }
+
         }
 
         [NameInMap("NextToken")]

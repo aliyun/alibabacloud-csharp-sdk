@@ -509,6 +509,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
+            {
+                query["GpuAcceleration"] = request.GpuAcceleration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
@@ -594,6 +598,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 query["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
+            {
+                query["GpuAcceleration"] = request.GpuAcceleration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
