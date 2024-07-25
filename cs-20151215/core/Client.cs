@@ -12914,6 +12914,86 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary You can call the RevokeK8sClusterKubeConfig operation to revoke the kubeconfig file that the current Resource Access Management (RAM) user uses to log on to a Kubernetes cluster. The kubeconfig file contains the identity information of the RAM user.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RevokeK8sClusterKubeConfigResponse
+         */
+        public RevokeK8sClusterKubeConfigResponse RevokeK8sClusterKubeConfigWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeK8sClusterKubeConfig",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/certs",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeK8sClusterKubeConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call the RevokeK8sClusterKubeConfig operation to revoke the kubeconfig file that the current Resource Access Management (RAM) user uses to log on to a Kubernetes cluster. The kubeconfig file contains the identity information of the RAM user.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RevokeK8sClusterKubeConfigResponse
+         */
+        public async Task<RevokeK8sClusterKubeConfigResponse> RevokeK8sClusterKubeConfigWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeK8sClusterKubeConfig",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/k8s/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/certs",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeK8sClusterKubeConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call the RevokeK8sClusterKubeConfig operation to revoke the kubeconfig file that the current Resource Access Management (RAM) user uses to log on to a Kubernetes cluster. The kubeconfig file contains the identity information of the RAM user.
+         *
+         * @return RevokeK8sClusterKubeConfigResponse
+         */
+        public RevokeK8sClusterKubeConfigResponse RevokeK8sClusterKubeConfig(string ClusterId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RevokeK8sClusterKubeConfigWithOptions(ClusterId, headers, runtime);
+        }
+
+        /**
+         * @summary You can call the RevokeK8sClusterKubeConfig operation to revoke the kubeconfig file that the current Resource Access Management (RAM) user uses to log on to a Kubernetes cluster. The kubeconfig file contains the identity information of the RAM user.
+         *
+         * @return RevokeK8sClusterKubeConfigResponse
+         */
+        public async Task<RevokeK8sClusterKubeConfigResponse> RevokeK8sClusterKubeConfigAsync(string ClusterId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RevokeK8sClusterKubeConfigWithOptionsAsync(ClusterId, headers, runtime);
+        }
+
+        /**
          * @summary Initiates cluster checks such as cluster update checks.
          *
          * @param request RunClusterCheckRequest
