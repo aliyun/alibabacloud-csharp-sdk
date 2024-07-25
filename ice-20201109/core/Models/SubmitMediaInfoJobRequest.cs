@@ -10,27 +10,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitMediaInfoJobRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public SubmitMediaInfoJobRequestInput Input { get; set; }
         public class SubmitMediaInfoJobRequestInput : TeaModel {
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>oss://bucket/path/to/video.mp4</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>OSS</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -38,10 +32,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>job-name</para>
-        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -50,28 +40,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public SubmitMediaInfoJobRequestScheduleConfig ScheduleConfig { get; set; }
         public class SubmitMediaInfoJobRequestScheduleConfig : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>e37ebee5d98b4781897f6086e89f9c56</para>
-            /// </summary>
             [NameInMap("PipelineId")]
             [Validation(Required=false)]
             public string PipelineId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>5</para>
-            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>user-data</para>
-        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

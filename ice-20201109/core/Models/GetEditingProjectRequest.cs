@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetEditingProjectRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><b><b>fb2101bf24b2754cb318787dc</b></b></para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

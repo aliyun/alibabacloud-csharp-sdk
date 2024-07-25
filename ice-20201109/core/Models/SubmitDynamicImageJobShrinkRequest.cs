@@ -10,22 +10,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitDynamicImageJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string InputShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>SampleJob</para>
-        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
@@ -36,16 +32,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ScheduleConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public string TemplateConfigShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{&quot;SampleKey&quot;: &quot;SampleValue&quot;}</para>
-        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

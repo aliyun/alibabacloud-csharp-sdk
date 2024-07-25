@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetAvatarRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Avatar-XXXX</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AvatarId")]
         [Validation(Required=false)]

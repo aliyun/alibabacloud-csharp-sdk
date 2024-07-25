@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetSnapshotJobRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><b><b>d80e4e4044975745c14b</b></b></para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

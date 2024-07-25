@@ -18,10 +18,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><b><b>96e8864746a0b6f3</b></b></para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -10,54 +10,38 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitLiveRecordJobRequest : TeaModel {
         /// <summary>
-        /// <para>代表资源名称的资源属性字段</para>
-        /// <para>This parameter is required.</para>
+        /// 代表资源名称的资源属性字段
         /// 
-        /// <b>Example:</b>
-        /// <para>live stream record 1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>回调地址</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></para>
+        /// 回调地址
         /// </summary>
         [NameInMap("NotifyUrl")]
         [Validation(Required=false)]
         public string NotifyUrl { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RecordOutput")]
         [Validation(Required=false)]
         public SubmitLiveRecordJobRequestRecordOutput RecordOutput { get; set; }
         public class SubmitLiveRecordJobRequestRecordOutput : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>imsbucket1</para>
-            /// </summary>
             [NameInMap("Bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>oss-cn-hangzhou.aliyuncs.com</para>
-            /// </summary>
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>oss</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -66,26 +50,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StreamInput")]
         [Validation(Required=false)]
         public SubmitLiveRecordJobRequestStreamInput StreamInput { get; set; }
         public class SubmitLiveRecordJobRequestStreamInput : TeaModel {
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rtmp</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>rtmp://example.com/live/stream1</para>
-            /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
@@ -93,11 +70,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>录制模板ID</para>
-        /// <para>This parameter is required.</para>
+        /// 录制模板ID
         /// 
-        /// <b>Example:</b>
-        /// <para>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

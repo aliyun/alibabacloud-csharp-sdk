@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetCustomizedVoiceRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>xiaozhuan</para>
-        /// </summary>
         [NameInMap("VoiceId")]
         [Validation(Required=false)]
         public string VoiceId { get; set; }

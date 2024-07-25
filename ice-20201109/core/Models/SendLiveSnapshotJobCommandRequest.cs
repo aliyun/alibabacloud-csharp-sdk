@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SendLiveSnapshotJobCommandRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>start</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Command")]
         [Validation(Required=false)]
         public string Command { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>43</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CateId")]
         [Validation(Required=false)]
         public long? CateId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CateName")]
         [Validation(Required=false)]

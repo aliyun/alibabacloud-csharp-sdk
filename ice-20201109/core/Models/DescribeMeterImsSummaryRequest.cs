@@ -10,28 +10,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DescribeMeterImsSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1656995036</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTs")]
         [Validation(Required=false)]
         public long? EndTs { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>cn-shanghai</para>
-        /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1654403036</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTs")]
         [Validation(Required=false)]

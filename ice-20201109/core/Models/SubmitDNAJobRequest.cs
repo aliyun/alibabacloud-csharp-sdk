@@ -9,46 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitDNAJobRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</para>
-        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2288c6ca184c0e47098a5b665e2a12****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBId")]
         [Validation(Required=false)]
         public string DBId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public SubmitDNAJobRequestInput Input { get; set; }
         public class SubmitDNAJobRequestInput : TeaModel {
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1b1b9cd148034739af413150fded****</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>Media</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -64,19 +51,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>5246b8d12a62433ab77845074039****</para>
-        /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>3ca84a39a9024f19853b21be9cf9****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PrimaryKey")]
         [Validation(Required=false)]
@@ -90,18 +70,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>S00000101-100060</para>
-        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>userData</para>
-        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

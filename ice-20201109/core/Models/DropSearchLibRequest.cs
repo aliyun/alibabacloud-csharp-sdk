@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DropSearchLibRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]

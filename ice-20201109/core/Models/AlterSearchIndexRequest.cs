@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AlterSearchIndexRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("IndexConfig")]
         [Validation(Required=false)]
         public string IndexConfig { get; set; }
@@ -22,19 +18,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string IndexStatus { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>mm</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IndexType")]
         [Validation(Required=false)]
         public string IndexType { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>test1</para>
-        /// </summary>
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }
