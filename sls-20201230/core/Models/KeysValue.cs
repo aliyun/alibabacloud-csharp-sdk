@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? DocValue { get; set; }
 
+        [NameInMap("vector_index")]
+        [Validation(Required=false)]
+        public string VectorIndex { get; set; }
+
+        [NameInMap("embedding")]
+        [Validation(Required=false)]
+        public string Embedding { get; set; }
+
     }
 
 }

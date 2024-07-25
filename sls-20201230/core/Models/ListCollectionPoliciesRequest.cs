@@ -9,19 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListCollectionPoliciesRequest : TeaModel {
-        [NameInMap("attribute")]
+        [NameInMap("centralProject")]
         [Validation(Required=false)]
-        public ListCollectionPoliciesRequestAttribute Attribute { get; set; }
-        public class ListCollectionPoliciesRequestAttribute : TeaModel {
-            [NameInMap("app")]
-            [Validation(Required=false)]
-            public string App { get; set; }
-
-            [NameInMap("policyGroup")]
-            [Validation(Required=false)]
-            public string PolicyGroup { get; set; }
-
-        }
+        public string CentralProject { get; set; }
 
         [NameInMap("dataCode")]
         [Validation(Required=false)]
@@ -31,13 +21,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("pageNum")]
+        [NameInMap("offset")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
-
-        [NameInMap("pageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public int? Offset { get; set; }
 
         [NameInMap("policyName")]
         [Validation(Required=false)]
@@ -46,6 +32,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("productCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
+
+        [NameInMap("size")]
+        [Validation(Required=false)]
+        public int? Size { get; set; }
 
     }
 

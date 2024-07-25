@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public long? FromTime { get; set; }
 
+        [NameInMap("lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

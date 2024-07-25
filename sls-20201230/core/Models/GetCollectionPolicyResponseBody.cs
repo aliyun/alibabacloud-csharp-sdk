@@ -13,20 +13,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public GetCollectionPolicyResponseBodyCollectionPolicy CollectionPolicy { get; set; }
         public class GetCollectionPolicyResponseBodyCollectionPolicy : TeaModel {
-            [NameInMap("attribute")]
-            [Validation(Required=false)]
-            public GetCollectionPolicyResponseBodyCollectionPolicyAttribute Attribute { get; set; }
-            public class GetCollectionPolicyResponseBodyCollectionPolicyAttribute : TeaModel {
-                [NameInMap("app")]
-                [Validation(Required=false)]
-                public string App { get; set; }
-
-                [NameInMap("policyGroup")]
-                [Validation(Required=false)]
-                public string PolicyGroup { get; set; }
-
-            }
-
             [NameInMap("centralizeConfig")]
             [Validation(Required=false)]
             public GetCollectionPolicyResponseBodyCollectionPolicyCentralizeConfig CentralizeConfig { get; set; }
@@ -57,9 +43,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string DataCode { get; set; }
 
+            [NameInMap("dataConfig")]
+            [Validation(Required=false)]
+            public GetCollectionPolicyResponseBodyCollectionPolicyDataConfig DataConfig { get; set; }
+            public class GetCollectionPolicyResponseBodyCollectionPolicyDataConfig : TeaModel {
+                [NameInMap("dataProject")]
+                [Validation(Required=false)]
+                public string DataProject { get; set; }
+
+                [NameInMap("dataRegion")]
+                [Validation(Required=false)]
+                public string DataRegion { get; set; }
+
+            }
+
             [NameInMap("enabled")]
             [Validation(Required=false)]
-            public string Enabled { get; set; }
+            public bool? Enabled { get; set; }
+
+            [NameInMap("internalPolicy")]
+            [Validation(Required=false)]
+            public bool? InternalPolicy { get; set; }
 
             [NameInMap("policyConfig")]
             [Validation(Required=false)]
@@ -87,9 +91,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string PolicyName { get; set; }
 
+            [NameInMap("policyUid")]
+            [Validation(Required=false)]
+            public string PolicyUid { get; set; }
+
             [NameInMap("productCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }
+
+            [NameInMap("resourceDirectory")]
+            [Validation(Required=false)]
+            public GetCollectionPolicyResponseBodyCollectionPolicyResourceDirectory ResourceDirectory { get; set; }
+            public class GetCollectionPolicyResponseBodyCollectionPolicyResourceDirectory : TeaModel {
+                [NameInMap("accountGroupType")]
+                [Validation(Required=false)]
+                public string AccountGroupType { get; set; }
+
+                [NameInMap("members")]
+                [Validation(Required=false)]
+                public List<string> Members { get; set; }
+
+            }
 
         }
 

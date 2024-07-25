@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Obsolete]
         public string AccessKeySecret { get; set; }
 
+        [NameInMap("datasets")]
+        [Validation(Required=false)]
+        public List<string> Datasets { get; set; }
+
         [NameInMap("endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }

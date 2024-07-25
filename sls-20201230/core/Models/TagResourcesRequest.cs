@@ -19,7 +19,13 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to project.
+        /// The type of the resource. Valid values:
+        /// 
+        /// *   project
+        /// *   logstore
+        /// *   dashboard
+        /// *   machinegroup
+        /// *   logtailconfig
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +34,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags that you want to add to the resource. Up to 20 tags are supported at a time. Each tag is a key-value pair.
+        /// The tags that you want to add to the resource. You can specify up to 20 tags in each call. Each tag is a key-value pair.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -40,8 +46,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// The key of the tag. The key must meet the following requirements:
             /// 
             /// *   The key must be `1 to 128` characters in length.
-            /// *   The key cannot contain `"http://"` or `"https://"`.
-            /// *   The key cannot start with `"acs:"` or `"aliyun"`.
+            /// *   The key cannot contain `http://` or `https://`.
+            /// *   The key cannot start with `acs:` or `aliyun`.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -53,7 +59,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// The value of the tag. The value must meet the following requirements:
             /// 
             /// *   The value must be `1 to 128` characters in length.
-            /// *   The value cannot contain `"http://"` or `"https://"`.
+            /// *   The value cannot contain `http://` or `https://`.
             /// 
             /// This parameter is required.
             /// </summary>

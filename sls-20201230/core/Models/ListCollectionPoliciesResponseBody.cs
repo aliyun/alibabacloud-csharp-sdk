@@ -17,20 +17,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public List<ListCollectionPoliciesResponseBodyData> Data { get; set; }
         public class ListCollectionPoliciesResponseBodyData : TeaModel {
-            [NameInMap("attribute")]
-            [Validation(Required=false)]
-            public ListCollectionPoliciesResponseBodyDataAttribute Attribute { get; set; }
-            public class ListCollectionPoliciesResponseBodyDataAttribute : TeaModel {
-                [NameInMap("app")]
-                [Validation(Required=false)]
-                public string App { get; set; }
-
-                [NameInMap("policyGroup")]
-                [Validation(Required=false)]
-                public string PolicyGroup { get; set; }
-
-            }
-
             [NameInMap("centralizeConfig")]
             [Validation(Required=false)]
             public ListCollectionPoliciesResponseBodyDataCentralizeConfig CentralizeConfig { get; set; }
@@ -61,9 +47,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string DataCode { get; set; }
 
+            [NameInMap("dataConfig")]
+            [Validation(Required=false)]
+            public ListCollectionPoliciesResponseBodyDataDataConfig DataConfig { get; set; }
+            public class ListCollectionPoliciesResponseBodyDataDataConfig : TeaModel {
+                [NameInMap("dataProject")]
+                [Validation(Required=false)]
+                public string DataProject { get; set; }
+
+                [NameInMap("dataRegion")]
+                [Validation(Required=false)]
+                public string DataRegion { get; set; }
+
+            }
+
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
+
+            [NameInMap("internalPolicy")]
+            [Validation(Required=false)]
+            public bool? InternalPolicy { get; set; }
 
             [NameInMap("policyConfig")]
             [Validation(Required=false)]
@@ -90,6 +94,48 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [NameInMap("policyName")]
             [Validation(Required=false)]
             public string PolicyName { get; set; }
+
+            [NameInMap("policyUid")]
+            [Validation(Required=false)]
+            public string PolicyUid { get; set; }
+
+            [NameInMap("productCode")]
+            [Validation(Required=false)]
+            public string ProductCode { get; set; }
+
+            [NameInMap("resourceDirectory")]
+            [Validation(Required=false)]
+            public ListCollectionPoliciesResponseBodyDataResourceDirectory ResourceDirectory { get; set; }
+            public class ListCollectionPoliciesResponseBodyDataResourceDirectory : TeaModel {
+                [NameInMap("accountGroupType")]
+                [Validation(Required=false)]
+                public string AccountGroupType { get; set; }
+
+                [NameInMap("members")]
+                [Validation(Required=false)]
+                public List<string> Members { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("statistics")]
+        [Validation(Required=false)]
+        public List<ListCollectionPoliciesResponseBodyStatistics> Statistics { get; set; }
+        public class ListCollectionPoliciesResponseBodyStatistics : TeaModel {
+            [NameInMap("policySourceList")]
+            [Validation(Required=false)]
+            public List<ListCollectionPoliciesResponseBodyStatisticsPolicySourceList> PolicySourceList { get; set; }
+            public class ListCollectionPoliciesResponseBodyStatisticsPolicySourceList : TeaModel {
+                [NameInMap("policyName")]
+                [Validation(Required=false)]
+                public string PolicyName { get; set; }
+
+                [NameInMap("policyUid")]
+                [Validation(Required=false)]
+                public string PolicyUid { get; set; }
+
+            }
 
             [NameInMap("productCode")]
             [Validation(Required=false)]

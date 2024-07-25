@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class PutProjectTransferAccelerationRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }

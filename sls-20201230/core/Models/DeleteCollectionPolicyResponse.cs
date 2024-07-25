@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public DeleteCollectionPolicyResponseBody Body { get; set; }
-
     }
 
 }

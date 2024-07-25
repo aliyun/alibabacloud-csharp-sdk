@@ -15,12 +15,11 @@ namespace AlibabaCloud.SDK.Sls20201230
 {
     public class Client : AlibabaCloud.OpenApiClient.Client
     {
-        protected AlibabaCloud.GatewaySpi.Client _client;
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._client = new AlibabaCloud.GatewaySls.Client();
-            this._spi = _client;
+            AlibabaCloud.GatewaySls.Client gatewayClient = new AlibabaCloud.GatewaySls.Client();
+            this._spi = gatewayClient;
             this._signatureAlgorithm = "v2";
             this._endpointRule = "central";
         }
@@ -363,7 +362,13 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 更新指定消费组消费数据时Shard的checkpoint。
+         * @summary Updates the data consumption progress.
+         *
+         * @description *   If you do not specify a consumer, you must set **forceSuccess** to **true**. Otherwise, the checkpoint cannot be updated.
+         * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) and [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
          *
          * @param request ConsumerGroupUpdateCheckPointRequest
          * @param headers map
@@ -384,12 +389,21 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["forceSuccess"] = request.ForceSuccess;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Checkpoint))
+            {
+                body["checkpoint"] = request.Checkpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Shard))
+            {
+                body["shard"] = request.Shard;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -407,7 +421,13 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 更新指定消费组消费数据时Shard的checkpoint。
+         * @summary Updates the data consumption progress.
+         *
+         * @description *   If you do not specify a consumer, you must set **forceSuccess** to **true**. Otherwise, the checkpoint cannot be updated.
+         * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) and [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
          *
          * @param request ConsumerGroupUpdateCheckPointRequest
          * @param headers map
@@ -428,12 +448,21 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["forceSuccess"] = request.ForceSuccess;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Checkpoint))
+            {
+                body["checkpoint"] = request.Checkpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Shard))
+            {
+                body["shard"] = request.Shard;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -451,7 +480,13 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 更新指定消费组消费数据时Shard的checkpoint。
+         * @summary Updates the data consumption progress.
+         *
+         * @description *   If you do not specify a consumer, you must set **forceSuccess** to **true**. Otherwise, the checkpoint cannot be updated.
+         * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) and [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
          *
          * @param request ConsumerGroupUpdateCheckPointRequest
          * @return ConsumerGroupUpdateCheckPointResponse
@@ -464,7 +499,13 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 更新指定消费组消费数据时Shard的checkpoint。
+         * @summary Updates the data consumption progress.
+         *
+         * @description *   If you do not specify a consumer, you must set **forceSuccess** to **true**. Otherwise, the checkpoint cannot be updated.
+         * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) and [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
          *
          * @param request ConsumerGroupUpdateCheckPointRequest
          * @return ConsumerGroupUpdateCheckPointResponse
@@ -927,7 +968,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Creates a consumer group for a Logstore.
+         * @summary Creates a consumer group for a specified Logstore.
          *
          * @description ### Usage notes
          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
@@ -979,7 +1020,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Creates a consumer group for a Logstore.
+         * @summary Creates a consumer group for a specified Logstore.
          *
          * @description ### Usage notes
          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
@@ -1031,7 +1072,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Creates a consumer group for a Logstore.
+         * @summary Creates a consumer group for a specified Logstore.
          *
          * @description ### Usage notes
          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
@@ -1049,7 +1090,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Creates a consumer group for a Logstore.
+         * @summary Creates a consumer group for a specified Logstore.
          *
          * @description ### Usage notes
          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
@@ -3957,6 +3998,8 @@ namespace AlibabaCloud.SDK.Sls20201230
         /**
          * @summary 通过调用DeleteCollectionPolicy删除配置的日志采集规则
          *
+         * @description You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.
+         *
          * @param request DeleteCollectionPolicyRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -3989,13 +4032,15 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteCollectionPolicyResponse>(Execute(params_, req, runtime));
         }
 
         /**
          * @summary 通过调用DeleteCollectionPolicy删除配置的日志采集规则
+         *
+         * @description You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.
          *
          * @param request DeleteCollectionPolicyRequest
          * @param headers map
@@ -4029,13 +4074,15 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteCollectionPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         /**
          * @summary 通过调用DeleteCollectionPolicy删除配置的日志采集规则
+         *
+         * @description You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.
          *
          * @param request DeleteCollectionPolicyRequest
          * @return DeleteCollectionPolicyResponse
@@ -4049,6 +4096,8 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /**
          * @summary 通过调用DeleteCollectionPolicy删除配置的日志采集规则
+         *
+         * @description You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.
          *
          * @param request DeleteCollectionPolicyRequest
          * @return DeleteCollectionPolicyResponse
@@ -5131,7 +5180,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 删除OSS投递任务
+         * @summary Deletes an Object Storage Service (OSS) data shipping job.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -5162,7 +5211,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 删除OSS投递任务
+         * @summary Deletes an Object Storage Service (OSS) data shipping job.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -5193,7 +5242,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 删除OSS投递任务
+         * @summary Deletes an Object Storage Service (OSS) data shipping job.
          *
          * @return DeleteOSSExportResponse
          */
@@ -5205,7 +5254,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 删除OSS投递任务
+         * @summary Deletes an Object Storage Service (OSS) data shipping job.
          *
          * @return DeleteOSSExportResponse
          */
@@ -5754,112 +5803,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteScheduledSQLWithOptionsAsync(project, scheduledSQLName, headers, runtime);
-        }
-
-        /**
-         * @deprecated OpenAPI DeleteShipper is deprecated
-         *
-         * @summary Deletes the log shipping job of a Logstore.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteShipperResponse
-         */
-        // Deprecated
-        public DeleteShipperResponse DeleteShipperWithOptions(string project, string logstore, string shipperName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteShipper",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
-                Method = "DELETE",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "none",
-            };
-            return TeaModel.ToObject<DeleteShipperResponse>(Execute(params_, req, runtime));
-        }
-
-        /**
-         * @deprecated OpenAPI DeleteShipper is deprecated
-         *
-         * @summary Deletes the log shipping job of a Logstore.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteShipperResponse
-         */
-        // Deprecated
-        public async Task<DeleteShipperResponse> DeleteShipperWithOptionsAsync(string project, string logstore, string shipperName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteShipper",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName,
-                Method = "DELETE",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "none",
-            };
-            return TeaModel.ToObject<DeleteShipperResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        /**
-         * @deprecated OpenAPI DeleteShipper is deprecated
-         *
-         * @summary Deletes the log shipping job of a Logstore.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @return DeleteShipperResponse
-         */
-        // Deprecated
-        public DeleteShipperResponse DeleteShipper(string project, string logstore, string shipperName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteShipperWithOptions(project, logstore, shipperName, headers, runtime);
-        }
-
-        /**
-         * @deprecated OpenAPI DeleteShipper is deprecated
-         *
-         * @summary Deletes the log shipping job of a Logstore.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @return DeleteShipperResponse
-         */
-        // Deprecated
-        public async Task<DeleteShipperResponse> DeleteShipperAsync(string project, string logstore, string shipperName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteShipperWithOptionsAsync(project, logstore, shipperName, headers, runtime);
         }
 
         /**
@@ -6539,7 +6482,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Queries a tag table by using a label id.
+         * @summary Queries a tag table by using a label ID.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -6567,7 +6510,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Queries a tag table by using a label id.
+         * @summary Queries a tag table by using a label ID.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -6595,7 +6538,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Queries a tag table by using a label id.
+         * @summary Queries a tag table by using a label ID.
          *
          * @return GetAnnotationLabelResponse
          */
@@ -6607,7 +6550,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Queries a tag table by using a label id.
+         * @summary Queries a tag table by using a label ID.
          *
          * @return GetAnnotationLabelResponse
          */
@@ -9675,8 +9618,11 @@ namespace AlibabaCloud.SDK.Sls20201230
         /**
          * @summary Queries a project policy.
          *
-         * @description ### Usage notes
-         * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * @description ### [](#)Usage notes
+         * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -9709,8 +9655,11 @@ namespace AlibabaCloud.SDK.Sls20201230
         /**
          * @summary Queries a project policy.
          *
-         * @description ### Usage notes
-         * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * @description ### [](#)Usage notes
+         * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -9743,8 +9692,11 @@ namespace AlibabaCloud.SDK.Sls20201230
         /**
          * @summary Queries a project policy.
          *
-         * @description ### Usage notes
-         * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * @description ### [](#)Usage notes
+         * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
          *
          * @return GetProjectPolicyResponse
          */
@@ -9758,8 +9710,11 @@ namespace AlibabaCloud.SDK.Sls20201230
         /**
          * @summary Queries a project policy.
          *
-         * @description ### Usage notes
-         * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * @description ### [](#)Usage notes
+         * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
          *
          * @return GetProjectPolicyResponse
          */
@@ -9952,162 +9907,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetScheduledSQLWithOptionsAsync(project, scheduledSQLName, headers, runtime);
-        }
-
-        /**
-         * @deprecated OpenAPI GetShipperStatus is deprecated
-         *
-         * @summary Queries the status of a log shipping job.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param request GetShipperStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetShipperStatusResponse
-         */
-        // Deprecated
-        public GetShipperStatusResponse GetShipperStatusWithOptions(string project, string logstore, string shipperName, GetShipperStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
-            {
-                query["from"] = request.From;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
-            {
-                query["offset"] = request.Offset;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
-            {
-                query["size"] = request.Size;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["status"] = request.Status;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
-            {
-                query["to"] = request.To;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetShipperStatus",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName + "/tasks",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetShipperStatusResponse>(Execute(params_, req, runtime));
-        }
-
-        /**
-         * @deprecated OpenAPI GetShipperStatus is deprecated
-         *
-         * @summary Queries the status of a log shipping job.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param request GetShipperStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetShipperStatusResponse
-         */
-        // Deprecated
-        public async Task<GetShipperStatusResponse> GetShipperStatusWithOptionsAsync(string project, string logstore, string shipperName, GetShipperStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
-            {
-                query["from"] = request.From;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
-            {
-                query["offset"] = request.Offset;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
-            {
-                query["size"] = request.Size;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["status"] = request.Status;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
-            {
-                query["to"] = request.To;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetShipperStatus",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/shipper/" + shipperName + "/tasks",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetShipperStatusResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        /**
-         * @deprecated OpenAPI GetShipperStatus is deprecated
-         *
-         * @summary Queries the status of a log shipping job.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param request GetShipperStatusRequest
-         * @return GetShipperStatusResponse
-         */
-        // Deprecated
-        public GetShipperStatusResponse GetShipperStatus(string project, string logstore, string shipperName, GetShipperStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetShipperStatusWithOptions(project, logstore, shipperName, request, headers, runtime);
-        }
-
-        /**
-         * @deprecated OpenAPI GetShipperStatus is deprecated
-         *
-         * @summary Queries the status of a log shipping job.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param request GetShipperStatusRequest
-         * @return GetShipperStatusResponse
-         */
-        // Deprecated
-        public async Task<GetShipperStatusResponse> GetShipperStatusAsync(string project, string logstore, string shipperName, GetShipperStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetShipperStatusWithOptionsAsync(project, logstore, shipperName, request, headers, runtime);
         }
 
         /**
@@ -10569,7 +10368,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Queries data in a dataset.
+         * @summary Queries data in datasets.
          *
          * @param request ListAnnotationDataRequest
          * @param headers map
@@ -10609,7 +10408,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Queries data in a dataset.
+         * @summary Queries data in datasets.
          *
          * @param request ListAnnotationDataRequest
          * @param headers map
@@ -10649,7 +10448,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Queries data in a dataset.
+         * @summary Queries data in datasets.
          *
          * @param request ListAnnotationDataRequest
          * @return ListAnnotationDataResponse
@@ -10662,7 +10461,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Queries data in a dataset.
+         * @summary Queries data in datasets.
          *
          * @param request ListAnnotationDataRequest
          * @return ListAnnotationDataResponse
@@ -10889,24 +10688,18 @@ namespace AlibabaCloud.SDK.Sls20201230
         /**
          * @summary 通过调用ListCollectionPolicies接口查看配置的日志采集规则
          *
-         * @param tmpReq ListCollectionPoliciesRequest
+         * @param request ListCollectionPoliciesRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCollectionPoliciesResponse
          */
-        public ListCollectionPoliciesResponse ListCollectionPoliciesWithOptions(ListCollectionPoliciesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListCollectionPoliciesResponse ListCollectionPoliciesWithOptions(ListCollectionPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListCollectionPoliciesShrinkRequest request = new ListCollectionPoliciesShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attribute))
-            {
-                request.AttributeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attribute, "attribute", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributeShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CentralProject))
             {
-                query["attribute"] = request.AttributeShrink;
+                query["centralProject"] = request.CentralProject;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCode))
             {
@@ -10916,13 +10709,9 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["instanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
-                query["pageNum"] = request.PageNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["pageSize"] = request.PageSize;
+                query["offset"] = request.Offset;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
             {
@@ -10931,6 +10720,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["productCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10955,24 +10748,18 @@ namespace AlibabaCloud.SDK.Sls20201230
         /**
          * @summary 通过调用ListCollectionPolicies接口查看配置的日志采集规则
          *
-         * @param tmpReq ListCollectionPoliciesRequest
+         * @param request ListCollectionPoliciesRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCollectionPoliciesResponse
          */
-        public async Task<ListCollectionPoliciesResponse> ListCollectionPoliciesWithOptionsAsync(ListCollectionPoliciesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListCollectionPoliciesResponse> ListCollectionPoliciesWithOptionsAsync(ListCollectionPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListCollectionPoliciesShrinkRequest request = new ListCollectionPoliciesShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attribute))
-            {
-                request.AttributeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attribute, "attribute", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributeShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CentralProject))
             {
-                query["attribute"] = request.AttributeShrink;
+                query["centralProject"] = request.CentralProject;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCode))
             {
@@ -10982,13 +10769,9 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["instanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
-                query["pageNum"] = request.PageNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["pageSize"] = request.PageSize;
+                query["offset"] = request.Offset;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
             {
@@ -10997,6 +10780,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["productCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11680,134 +11467,6 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListETLsWithOptionsAsync(project, request, headers, runtime);
-        }
-
-        /**
-         * @summary Queries a list of external stores.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param request ListExternalStoreRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListExternalStoreResponse
-         */
-        public ListExternalStoreResponse ListExternalStoreWithOptions(string project, ListExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
-            {
-                query["externalStoreName"] = request.ExternalStoreName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
-            {
-                query["offset"] = request.Offset;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sizs))
-            {
-                query["sizs"] = request.Sizs;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListExternalStore",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/externalstores",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListExternalStoreResponse>(Execute(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries a list of external stores.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param request ListExternalStoreRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListExternalStoreResponse
-         */
-        public async Task<ListExternalStoreResponse> ListExternalStoreWithOptionsAsync(string project, ListExternalStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStoreName))
-            {
-                query["externalStoreName"] = request.ExternalStoreName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
-            {
-                query["offset"] = request.Offset;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sizs))
-            {
-                query["sizs"] = request.Sizs;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListExternalStore",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/externalstores",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListExternalStoreResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries a list of external stores.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param request ListExternalStoreRequest
-         * @return ListExternalStoreResponse
-         */
-        public ListExternalStoreResponse ListExternalStore(string project, ListExternalStoreRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListExternalStoreWithOptions(project, request, headers, runtime);
-        }
-
-        /**
-         * @summary Queries a list of external stores.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param request ListExternalStoreRequest
-         * @return ListExternalStoreResponse
-         */
-        public async Task<ListExternalStoreResponse> ListExternalStoreAsync(string project, ListExternalStoreRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListExternalStoreWithOptionsAsync(project, request, headers, runtime);
         }
 
         /**
@@ -13207,112 +12866,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @deprecated OpenAPI ListShipper is deprecated
-         *
-         * @summary Queries a list of log shipping jobs in a Logstore.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListShipperResponse
-         */
-        // Deprecated
-        public ListShipperResponse ListShipperWithOptions(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListShipper",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/shipper",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListShipperResponse>(Execute(params_, req, runtime));
-        }
-
-        /**
-         * @deprecated OpenAPI ListShipper is deprecated
-         *
-         * @summary Queries a list of log shipping jobs in a Logstore.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListShipperResponse
-         */
-        // Deprecated
-        public async Task<ListShipperResponse> ListShipperWithOptionsAsync(string project, string logstore, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListShipper",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "/shipper",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListShipperResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        /**
-         * @deprecated OpenAPI ListShipper is deprecated
-         *
-         * @summary Queries a list of log shipping jobs in a Logstore.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @return ListShipperResponse
-         */
-        // Deprecated
-        public ListShipperResponse ListShipper(string project, string logstore)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListShipperWithOptions(project, logstore, headers, runtime);
-        }
-
-        /**
-         * @deprecated OpenAPI ListShipper is deprecated
-         *
-         * @summary Queries a list of log shipping jobs in a Logstore.
-         *
-         * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-         *
-         * @return ListShipperResponse
-         */
-        // Deprecated
-        public async Task<ListShipperResponse> ListShipperAsync(string project, string logstore)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListShipperWithOptionsAsync(project, logstore, headers, runtime);
-        }
-
-        /**
          * @summary 查询StoreView列表
          *
          * @param request ListStoreViewsRequest
@@ -13444,7 +12997,16 @@ namespace AlibabaCloud.SDK.Sls20201230
          * @summary Queries a list of tags for one or more resources. You can query tags for resources by resource type or filter resources by tag. Each tag is a key-value pair.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
+         * * For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:ListTagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param tmpReq ListTagResourcesRequest
          * @param headers map
@@ -13501,7 +13063,16 @@ namespace AlibabaCloud.SDK.Sls20201230
          * @summary Queries a list of tags for one or more resources. You can query tags for resources by resource type or filter resources by tag. Each tag is a key-value pair.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
+         * * For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:ListTagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param tmpReq ListTagResourcesRequest
          * @param headers map
@@ -13558,7 +13129,16 @@ namespace AlibabaCloud.SDK.Sls20201230
          * @summary Queries a list of tags for one or more resources. You can query tags for resources by resource type or filter resources by tag. Each tag is a key-value pair.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
+         * * For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:ListTagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request ListTagResourcesRequest
          * @return ListTagResourcesResponse
@@ -13574,7 +13154,16 @@ namespace AlibabaCloud.SDK.Sls20201230
          * @summary Queries a list of tags for one or more resources. You can query tags for resources by resource type or filter resources by tag. Each tag is a key-value pair.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
+         * * For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:ListTagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request ListTagResourcesRequest
          * @return ListTagResourcesResponse
@@ -15389,10 +14978,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Creates and adds one or more tags to a specified resource. You can add tags only to projects.
+         * @summary Creates and adds tags to a resource. You can add tags only to projects.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
+         * * For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:TagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request TagResourcesRequest
          * @param headers map
@@ -15436,10 +15034,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Creates and adds one or more tags to a specified resource. You can add tags only to projects.
+         * @summary Creates and adds tags to a resource. You can add tags only to projects.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
+         * * For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:TagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request TagResourcesRequest
          * @param headers map
@@ -15483,10 +15090,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Creates and adds one or more tags to a specified resource. You can add tags only to projects.
+         * @summary Creates and adds tags to a resource. You can add tags only to projects.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
+         * * For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:TagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request TagResourcesRequest
          * @return TagResourcesResponse
@@ -15499,10 +15115,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Creates and adds one or more tags to a specified resource. You can add tags only to projects.
+         * @summary Creates and adds tags to a resource. You can add tags only to projects.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html)
+         * * For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:TagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request TagResourcesRequest
          * @return TagResourcesResponse
@@ -15518,7 +15143,15 @@ namespace AlibabaCloud.SDK.Sls20201230
          * @summary Detaches one or more tags from a resource. You can detach tags only from Simple Log Service projects. You can detach multiple or all tags from a Simple Log Service project at a time.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:UntagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request UntagResourcesRequest
          * @param headers map
@@ -15569,7 +15202,15 @@ namespace AlibabaCloud.SDK.Sls20201230
          * @summary Detaches one or more tags from a resource. You can detach tags only from Simple Log Service projects. You can detach multiple or all tags from a Simple Log Service project at a time.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:UntagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request UntagResourcesRequest
          * @param headers map
@@ -15620,7 +15261,15 @@ namespace AlibabaCloud.SDK.Sls20201230
          * @summary Detaches one or more tags from a resource. You can detach tags only from Simple Log Service projects. You can detach multiple or all tags from a Simple Log Service project at a time.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:UntagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request UntagResourcesRequest
          * @return UntagResourcesResponse
@@ -15636,7 +15285,15 @@ namespace AlibabaCloud.SDK.Sls20201230
          * @summary Detaches one or more tags from a resource. You can detach tags only from Simple Log Service projects. You can detach multiple or all tags from a Simple Log Service project at a time.
          *
          * @description ### Usage notes
-         * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+         * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+         * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
+         * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
+         * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) For more information, see [Authorization rules](https://help.aliyun.com/document_detail/29049.html). The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.
+         * ### Authentication resources
+         * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+         * |Action|Resource|
+         * |:---|:---|
+         * |`log:UntagResources`|The resource format varies based on the resource type.\\-`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}`\\-`acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}`|
          *
          * @param request UntagResourcesRequest
          * @return UntagResourcesResponse
@@ -15961,7 +15618,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Updates a Logtail configuration.
+         * @summary Modifies a Logtail configuration.
          *
          * @description ### [](#)Usage notes
          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
@@ -16003,7 +15660,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Updates a Logtail configuration.
+         * @summary Modifies a Logtail configuration.
          *
          * @description ### [](#)Usage notes
          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
@@ -16045,7 +15702,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Updates a Logtail configuration.
+         * @summary Modifies a Logtail configuration.
          *
          * @description ### [](#)Usage notes
          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
@@ -16066,7 +15723,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary Updates a Logtail configuration.
+         * @summary Modifies a Logtail configuration.
          *
          * @description ### [](#)Usage notes
          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
@@ -16851,7 +16508,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 更新LogStore计量模式
+         * @summary Changes the billing mode of a Logstore.
          *
          * @param request UpdateLogStoreMeteringModeRequest
          * @param headers map
@@ -16890,7 +16547,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 更新LogStore计量模式
+         * @summary Changes the billing mode of a Logstore.
          *
          * @param request UpdateLogStoreMeteringModeRequest
          * @param headers map
@@ -16929,7 +16586,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 更新LogStore计量模式
+         * @summary Changes the billing mode of a Logstore.
          *
          * @param request UpdateLogStoreMeteringModeRequest
          * @return UpdateLogStoreMeteringModeResponse
@@ -16942,7 +16599,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 更新LogStore计量模式
+         * @summary Changes the billing mode of a Logstore.
          *
          * @param request UpdateLogStoreMeteringModeRequest
          * @return UpdateLogStoreMeteringModeResponse
@@ -18829,7 +18486,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 调用UpsertCollectionPolicy接口更新采集策略的属性信息
+         * @summary 调用UpsertCollectionPolicy接口创建或更新日志采集规则
          *
          * @param request UpsertCollectionPolicyRequest
          * @param headers map
@@ -18840,10 +18497,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attribute))
-            {
-                body["attribute"] = request.Attribute;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CentralizeConfig))
             {
                 body["centralizeConfig"] = request.CentralizeConfig;
@@ -18855,6 +18508,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCode))
             {
                 body["dataCode"] = request.DataCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConfig))
+            {
+                body["dataConfig"] = request.DataConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
             {
@@ -18872,6 +18529,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["productCode"] = request.ProductCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectory))
+            {
+                body["resourceDirectory"] = request.ResourceDirectory;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -18887,13 +18548,13 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UpsertCollectionPolicyResponse>(Execute(params_, req, runtime));
         }
 
         /**
-         * @summary 调用UpsertCollectionPolicy接口更新采集策略的属性信息
+         * @summary 调用UpsertCollectionPolicy接口创建或更新日志采集规则
          *
          * @param request UpsertCollectionPolicyRequest
          * @param headers map
@@ -18904,10 +18565,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attribute))
-            {
-                body["attribute"] = request.Attribute;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CentralizeConfig))
             {
                 body["centralizeConfig"] = request.CentralizeConfig;
@@ -18919,6 +18576,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataCode))
             {
                 body["dataCode"] = request.DataCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConfig))
+            {
+                body["dataConfig"] = request.DataConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
             {
@@ -18936,6 +18597,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["productCode"] = request.ProductCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectory))
+            {
+                body["resourceDirectory"] = request.ResourceDirectory;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -18951,13 +18616,13 @@ namespace AlibabaCloud.SDK.Sls20201230
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UpsertCollectionPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         /**
-         * @summary 调用UpsertCollectionPolicy接口更新采集策略的属性信息
+         * @summary 调用UpsertCollectionPolicy接口创建或更新日志采集规则
          *
          * @param request UpsertCollectionPolicyRequest
          * @return UpsertCollectionPolicyResponse
@@ -18970,7 +18635,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @summary 调用UpsertCollectionPolicy接口更新采集策略的属性信息
+         * @summary 调用UpsertCollectionPolicy接口创建或更新日志采集规则
          *
          * @param request UpsertCollectionPolicyRequest
          * @return UpsertCollectionPolicyResponse

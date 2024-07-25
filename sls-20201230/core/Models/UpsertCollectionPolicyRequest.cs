@@ -9,20 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpsertCollectionPolicyRequest : TeaModel {
-        [NameInMap("attribute")]
-        [Validation(Required=false)]
-        public UpsertCollectionPolicyRequestAttribute Attribute { get; set; }
-        public class UpsertCollectionPolicyRequestAttribute : TeaModel {
-            [NameInMap("app")]
-            [Validation(Required=false)]
-            public string App { get; set; }
-
-            [NameInMap("policyGroup")]
-            [Validation(Required=false)]
-            public string PolicyGroup { get; set; }
-
-        }
-
         [NameInMap("centralizeConfig")]
         [Validation(Required=false)]
         public UpsertCollectionPolicyRequestCentralizeConfig CentralizeConfig { get; set; }
@@ -55,6 +41,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("dataCode")]
         [Validation(Required=false)]
         public string DataCode { get; set; }
+
+        [NameInMap("dataConfig")]
+        [Validation(Required=false)]
+        public UpsertCollectionPolicyRequestDataConfig DataConfig { get; set; }
+        public class UpsertCollectionPolicyRequestDataConfig : TeaModel {
+            [NameInMap("dataRegion")]
+            [Validation(Required=false)]
+            public string DataRegion { get; set; }
+
+        }
 
         /// <summary>
         /// This parameter is required.
@@ -104,6 +100,20 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("productCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
+
+        [NameInMap("resourceDirectory")]
+        [Validation(Required=false)]
+        public UpsertCollectionPolicyRequestResourceDirectory ResourceDirectory { get; set; }
+        public class UpsertCollectionPolicyRequestResourceDirectory : TeaModel {
+            [NameInMap("accountGroupType")]
+            [Validation(Required=false)]
+            public string AccountGroupType { get; set; }
+
+            [NameInMap("members")]
+            [Validation(Required=false)]
+            public List<string> Members { get; set; }
+
+        }
 
     }
 

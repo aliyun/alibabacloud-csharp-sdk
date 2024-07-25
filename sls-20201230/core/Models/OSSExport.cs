@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("scheduleId")]
+        [Validation(Required=false)]
+        public string ScheduleId { get; set; }
+
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }

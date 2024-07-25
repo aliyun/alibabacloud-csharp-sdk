@@ -10,37 +10,38 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ConsumerGroupUpdateCheckPointRequest : TeaModel {
         /// <summary>
-        /// Shard ID。
+        /// The value of the checkpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("body")]
+        [NameInMap("checkpoint")]
         [Validation(Required=false)]
-        public List<ConsumerGroupUpdateCheckPointRequestBody> Body { get; set; }
-        public class ConsumerGroupUpdateCheckPointRequestBody : TeaModel {
-            /// <summary>
-            /// This parameter is required.
-            /// </summary>
-            [NameInMap("checkpoint")]
-            [Validation(Required=false)]
-            public string Checkpoint { get; set; }
-
-            /// <summary>
-            /// Shard ID。
-            /// 
-            /// This parameter is required.
-            /// </summary>
-            [NameInMap("shard")]
-            [Validation(Required=false)]
-            public int? Shard { get; set; }
-
-        }
+        public string Checkpoint { get; set; }
 
         /// <summary>
+        /// The ID of the shard.
+        /// 
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("shard")]
+        [Validation(Required=false)]
+        public int? Shard { get; set; }
+
+        /// <summary>
+        /// The consumer.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("consumer")]
         [Validation(Required=false)]
         public string Consumer { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable forceful updates. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("forceSuccess")]
         [Validation(Required=false)]
         public bool? ForceSuccess { get; set; }
