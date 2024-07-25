@@ -458,6 +458,126 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
+         * @summary 创建AI任务
+         *
+         * @param request CreateAITaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAITaskResponse
+         */
+        public CreateAITaskResponse CreateAITaskWithOptions(CreateAITaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                query["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Template))
+            {
+                body["Template"] = request.Template;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAITask",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAITaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建AI任务
+         *
+         * @param request CreateAITaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAITaskResponse
+         */
+        public async Task<CreateAITaskResponse> CreateAITaskWithOptionsAsync(CreateAITaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                query["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Template))
+            {
+                body["Template"] = request.Template;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAITask",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAITaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建AI任务
+         *
+         * @param request CreateAITaskRequest
+         * @return CreateAITaskResponse
+         */
+        public CreateAITaskResponse CreateAITask(CreateAITaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAITaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建AI任务
+         *
+         * @param request CreateAITaskRequest
+         * @return CreateAITaskResponse
+         */
+        public async Task<CreateAITaskResponse> CreateAITaskAsync(CreateAITaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAITaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Creates a change set for a stack. You can view proposed changes before you execute the change set.
          *
          * @description ### [](#)Scenarios
@@ -3938,6 +4058,106 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
+         * @summary 查询指定AI任务信息
+         *
+         * @param request GetAITaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAITaskResponse
+         */
+        public GetAITaskResponse GetAITaskWithOptions(GetAITaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputOption))
+            {
+                query["OutputOption"] = request.OutputOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAITask",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAITaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询指定AI任务信息
+         *
+         * @param request GetAITaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAITaskResponse
+         */
+        public async Task<GetAITaskResponse> GetAITaskWithOptionsAsync(GetAITaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputOption))
+            {
+                query["OutputOption"] = request.OutputOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAITask",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAITaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询指定AI任务信息
+         *
+         * @param request GetAITaskRequest
+         * @return GetAITaskResponse
+         */
+        public GetAITaskResponse GetAITask(GetAITaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAITaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询指定AI任务信息
+         *
+         * @param request GetAITaskRequest
+         * @return GetAITaskResponse
+         */
+        public async Task<GetAITaskResponse> GetAITaskAsync(GetAITaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAITaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries change sets. You can determine whether to query the templates of change sets.
          *
          * @description In this example, the details of a change set whose ID is `4c11658d-bd47-4dd0-ba64-727edc62****` is queried. The change set is created in the China (Hangzhou) region.
@@ -6647,6 +6867,230 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTemplateSummaryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 获取指定AITask事件列表
+         *
+         * @param request ListAITaskEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAITaskEventsResponse
+         */
+        public ListAITaskEventsResponse ListAITaskEventsWithOptions(ListAITaskEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAITaskEvents",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAITaskEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取指定AITask事件列表
+         *
+         * @param request ListAITaskEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAITaskEventsResponse
+         */
+        public async Task<ListAITaskEventsResponse> ListAITaskEventsWithOptionsAsync(ListAITaskEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAITaskEvents",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAITaskEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取指定AITask事件列表
+         *
+         * @param request ListAITaskEventsRequest
+         * @return ListAITaskEventsResponse
+         */
+        public ListAITaskEventsResponse ListAITaskEvents(ListAITaskEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAITaskEventsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取指定AITask事件列表
+         *
+         * @param request ListAITaskEventsRequest
+         * @return ListAITaskEventsResponse
+         */
+        public async Task<ListAITaskEventsResponse> ListAITaskEventsAsync(ListAITaskEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAITaskEventsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询AI任务列表
+         *
+         * @param request ListAITasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAITasksResponse
+         */
+        public ListAITasksResponse ListAITasksWithOptions(ListAITasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAITasks",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAITasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询AI任务列表
+         *
+         * @param request ListAITasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAITasksResponse
+         */
+        public async Task<ListAITasksResponse> ListAITasksWithOptionsAsync(ListAITasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAITasks",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAITasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询AI任务列表
+         *
+         * @param request ListAITasksRequest
+         * @return ListAITasksResponse
+         */
+        public ListAITasksResponse ListAITasks(ListAITasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAITasksWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询AI任务列表
+         *
+         * @param request ListAITasksRequest
+         * @return ListAITasksResponse
+         */
+        public async Task<ListAITasksResponse> ListAITasksAsync(ListAITasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAITasksWithOptionsAsync(request, runtime);
         }
 
         /**
