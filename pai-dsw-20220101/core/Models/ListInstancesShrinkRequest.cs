@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("CreateUserId")]
+        [Validation(Required=false)]
+        public string CreateUserId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

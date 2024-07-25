@@ -2415,6 +2415,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 query["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateUserId))
+            {
+                query["CreateUserId"] = request.CreateUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -2502,6 +2506,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
             {
                 query["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateUserId))
+            {
+                query["CreateUserId"] = request.CreateUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
