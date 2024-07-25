@@ -4635,7 +4635,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 创建网关路由流控规则
+         * @summary Creates a throttling rule for a gateway.
          *
          * @param request CreateGatewayFlowRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4713,7 +4713,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 创建网关路由流控规则
+         * @summary Creates a throttling rule for a gateway.
          *
          * @param request CreateGatewayFlowRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4791,7 +4791,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 创建网关路由流控规则
+         * @summary Creates a throttling rule for a gateway.
          *
          * @param request CreateGatewayFlowRuleRequest
          * @return CreateGatewayFlowRuleResponse
@@ -4803,7 +4803,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 创建网关路由流控规则
+         * @summary Creates a throttling rule for a gateway.
          *
          * @param request CreateGatewayFlowRuleRequest
          * @return CreateGatewayFlowRuleResponse
@@ -6264,6 +6264,158 @@ namespace AlibabaCloud.SDK.Mse20190531
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateOrUpdateSwimmingLaneGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建插件配置
+         *
+         * @param tmpReq CreatePluginConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreatePluginConfigResponse
+         */
+        public CreatePluginConfigResponse CreatePluginConfigWithOptions(CreatePluginConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePluginConfigShrinkRequest request = new CreatePluginConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceIdList))
+            {
+                request.ResourceIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceIdList, "ResourceIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigLevel))
+            {
+                query["ConfigLevel"] = request.ConfigLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdListShrink))
+            {
+                query["ResourceIdList"] = request.ResourceIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePluginConfig",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePluginConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建插件配置
+         *
+         * @param tmpReq CreatePluginConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreatePluginConfigResponse
+         */
+        public async Task<CreatePluginConfigResponse> CreatePluginConfigWithOptionsAsync(CreatePluginConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePluginConfigShrinkRequest request = new CreatePluginConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceIdList))
+            {
+                request.ResourceIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceIdList, "ResourceIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigLevel))
+            {
+                query["ConfigLevel"] = request.ConfigLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdListShrink))
+            {
+                query["ResourceIdList"] = request.ResourceIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePluginConfig",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePluginConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建插件配置
+         *
+         * @param request CreatePluginConfigRequest
+         * @return CreatePluginConfigResponse
+         */
+        public CreatePluginConfigResponse CreatePluginConfig(CreatePluginConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreatePluginConfigWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建插件配置
+         *
+         * @param request CreatePluginConfigRequest
+         * @return CreatePluginConfigResponse
+         */
+        public async Task<CreatePluginConfigResponse> CreatePluginConfigAsync(CreatePluginConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreatePluginConfigWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -9111,6 +9263,114 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
+         * @summary 删除插件配置
+         *
+         * @param request DeletePluginConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeletePluginConfigResponse
+         */
+        public DeletePluginConfigResponse DeletePluginConfigWithOptions(DeletePluginConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginConfigId))
+            {
+                query["PluginConfigId"] = request.PluginConfigId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePluginConfig",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePluginConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除插件配置
+         *
+         * @param request DeletePluginConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeletePluginConfigResponse
+         */
+        public async Task<DeletePluginConfigResponse> DeletePluginConfigWithOptionsAsync(DeletePluginConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginConfigId))
+            {
+                query["PluginConfigId"] = request.PluginConfigId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePluginConfig",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePluginConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除插件配置
+         *
+         * @param request DeletePluginConfigRequest
+         * @return DeletePluginConfigResponse
+         */
+        public DeletePluginConfigResponse DeletePluginConfig(DeletePluginConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeletePluginConfigWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除插件配置
+         *
+         * @param request DeletePluginConfigRequest
+         * @return DeletePluginConfigResponse
+         */
+        public async Task<DeletePluginConfigResponse> DeletePluginConfigAsync(DeletePluginConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeletePluginConfigWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Deletes a security group rule from a gateway.
          *
          * @param request DeleteSecurityGroupRuleRequest
@@ -9675,7 +9935,115 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary Proxy Protocol开关
+         * @summary Enables HTTP/2 for negotiation between the server and client. The modification takes effect in one to two minutes.
+         *
+         * @param request EnableHttp2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableHttp2Response
+         */
+        public EnableHttp2Response EnableHttp2WithOptions(EnableHttp2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHttp2))
+            {
+                query["EnableHttp2"] = request.EnableHttp2;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableHttp2",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableHttp2Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Enables HTTP/2 for negotiation between the server and client. The modification takes effect in one to two minutes.
+         *
+         * @param request EnableHttp2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableHttp2Response
+         */
+        public async Task<EnableHttp2Response> EnableHttp2WithOptionsAsync(EnableHttp2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHttp2))
+            {
+                query["EnableHttp2"] = request.EnableHttp2;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableHttp2",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableHttp2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Enables HTTP/2 for negotiation between the server and client. The modification takes effect in one to two minutes.
+         *
+         * @param request EnableHttp2Request
+         * @return EnableHttp2Response
+         */
+        public EnableHttp2Response EnableHttp2(EnableHttp2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableHttp2WithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Enables HTTP/2 for negotiation between the server and client. The modification takes effect in one to two minutes.
+         *
+         * @param request EnableHttp2Request
+         * @return EnableHttp2Response
+         */
+        public async Task<EnableHttp2Response> EnableHttp2Async(EnableHttp2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableHttp2WithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Enables the proxy protocol. When an NLB instance is used as an ingress, you cannot obtain the real IP address of the client if you do not enable the proxy protocol. After you enable the proxy protocol, non-proxy requests are not adversely affected.
          *
          * @param request EnableProxyProtocolRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9717,7 +10085,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary Proxy Protocol开关
+         * @summary Enables the proxy protocol. When an NLB instance is used as an ingress, you cannot obtain the real IP address of the client if you do not enable the proxy protocol. After you enable the proxy protocol, non-proxy requests are not adversely affected.
          *
          * @param request EnableProxyProtocolRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9759,7 +10127,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary Proxy Protocol开关
+         * @summary Enables the proxy protocol. When an NLB instance is used as an ingress, you cannot obtain the real IP address of the client if you do not enable the proxy protocol. After you enable the proxy protocol, non-proxy requests are not adversely affected.
          *
          * @param request EnableProxyProtocolRequest
          * @return EnableProxyProtocolResponse
@@ -9771,7 +10139,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary Proxy Protocol开关
+         * @summary Enables the proxy protocol. When an NLB instance is used as an ingress, you cannot obtain the real IP address of the client if you do not enable the proxy protocol. After you enable the proxy protocol, non-proxy requests are not adversely affected.
          *
          * @param request EnableProxyProtocolRequest
          * @return EnableProxyProtocolResponse
@@ -18231,7 +18599,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 获取网关可用区列表
+         * @summary Obtains a list of zones where a gateway is available.
          *
          * @param request ListGatewayZoneRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18265,7 +18633,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 获取网关可用区列表
+         * @summary Obtains a list of zones where a gateway is available.
          *
          * @param request ListGatewayZoneRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18299,7 +18667,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 获取网关可用区列表
+         * @summary Obtains a list of zones where a gateway is available.
          *
          * @param request ListGatewayZoneRequest
          * @return ListGatewayZoneResponse
@@ -18311,7 +18679,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 获取网关可用区列表
+         * @summary Obtains a list of zones where a gateway is available.
          *
          * @param request ListGatewayZoneRequest
          * @return ListGatewayZoneResponse
@@ -20932,6 +21300,114 @@ namespace AlibabaCloud.SDK.Mse20190531
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OrderClusterHealthCheckRiskNoticeWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Specifies whether to convert all letters of a header into lowercase letters. For requests and responses, HTTP/1.1 headers are not case-sensitive. By default, all letters of headers are converted into lowercase letters.
+         *
+         * @param request PreserveHeaderFormatRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PreserveHeaderFormatResponse
+         */
+        public PreserveHeaderFormatResponse PreserveHeaderFormatWithOptions(PreserveHeaderFormatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreserveHeaderFormat))
+            {
+                query["PreserveHeaderFormat"] = request.PreserveHeaderFormat;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreserveHeaderFormat",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreserveHeaderFormatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Specifies whether to convert all letters of a header into lowercase letters. For requests and responses, HTTP/1.1 headers are not case-sensitive. By default, all letters of headers are converted into lowercase letters.
+         *
+         * @param request PreserveHeaderFormatRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PreserveHeaderFormatResponse
+         */
+        public async Task<PreserveHeaderFormatResponse> PreserveHeaderFormatWithOptionsAsync(PreserveHeaderFormatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreserveHeaderFormat))
+            {
+                query["PreserveHeaderFormat"] = request.PreserveHeaderFormat;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreserveHeaderFormat",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreserveHeaderFormatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Specifies whether to convert all letters of a header into lowercase letters. For requests and responses, HTTP/1.1 headers are not case-sensitive. By default, all letters of headers are converted into lowercase letters.
+         *
+         * @param request PreserveHeaderFormatRequest
+         * @return PreserveHeaderFormatResponse
+         */
+        public PreserveHeaderFormatResponse PreserveHeaderFormat(PreserveHeaderFormatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PreserveHeaderFormatWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Specifies whether to convert all letters of a header into lowercase letters. For requests and responses, HTTP/1.1 headers are not case-sensitive. By default, all letters of headers are converted into lowercase letters.
+         *
+         * @param request PreserveHeaderFormatRequest
+         * @return PreserveHeaderFormatResponse
+         */
+        public async Task<PreserveHeaderFormatResponse> PreserveHeaderFormatAsync(PreserveHeaderFormatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PreserveHeaderFormatWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -27911,7 +28387,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 更新路由waf状态
+         * @summary Updates the WAF status of a route.
          *
          * @param request UpdateGatewayRouteWafStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -27957,7 +28433,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 更新路由waf状态
+         * @summary Updates the WAF status of a route.
          *
          * @param request UpdateGatewayRouteWafStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -28003,7 +28479,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 更新路由waf状态
+         * @summary Updates the WAF status of a route.
          *
          * @param request UpdateGatewayRouteWafStatusRequest
          * @return UpdateGatewayRouteWafStatusResponse
@@ -28015,7 +28491,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 更新路由waf状态
+         * @summary Updates the WAF status of a route.
          *
          * @param request UpdateGatewayRouteWafStatusRequest
          * @return UpdateGatewayRouteWafStatusResponse

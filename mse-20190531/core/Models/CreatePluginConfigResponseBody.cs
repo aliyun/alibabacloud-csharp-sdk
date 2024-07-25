@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class CreateGatewayFlowRuleResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the rule.
-        /// </summary>
-        [NameInMap("Data")]
+    public class CreatePluginConfigResponseBody : TeaModel {
+        [NameInMap("PluginConfigID")]
         [Validation(Required=false)]
-        public long? Data { get; set; }
+        public long? PluginConfigID { get; set; }
 
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

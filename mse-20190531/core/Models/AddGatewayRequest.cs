@@ -20,38 +20,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The billing method.
+        /// The billing method you specify when you purchase an ordinary instance.
         /// 
         /// Valid values:
         /// 
-        /// *   PREPAY
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     the subscription billing method
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   POSTPAY
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     the pay-as-you-go billing method
-        /// 
-        ///     <!-- -->
+        /// *   PREPAY: subscription
+        /// *   POSTPAY: pay-as-you-go
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// The network type of the purchased Classic Load Balancer (CLB) instance that is billed based on LCUs.
+        /// 
+        /// *   pubnet: Internet
+        /// *   privatenet: private network
+        /// *   privatepubnet: Internet and private network
+        /// </summary>
         [NameInMap("ClbNetworkType")]
         [Validation(Required=false)]
         public string ClbNetworkType { get; set; }
@@ -85,7 +71,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnterpriseSecurityGroup { get; set; }
 
         /// <summary>
-        /// The ID of the secondary vSwitch.
+        /// The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:
+        /// 
+        /// *   slb.s1.small
+        /// *   slb.s2.smal
+        /// *   slb.s2.medium
+        /// *   slb.s3.small
+        /// *   slb.s3.medium
+        /// *   slb.s3.large
         /// </summary>
         [NameInMap("InternetSlbSpec")]
         [Validation(Required=false)]
@@ -94,8 +87,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The MSE instance type. Valid values:
         /// 
-        /// *   mse_pro: ordinary instance.
-        /// *   mse_serverless: serverless instance.
+        /// *   mse_pro: ordinary instance
+        /// *   mse_serverless: serverless instance
         /// </summary>
         [NameInMap("MserVersion")]
         [Validation(Required=false)]
@@ -109,11 +102,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The network type of the Network Load Balancer (NLB) instance when the serverless NLB instance is purchased. Valid values:
+        /// The network type of the Network Load Balancer (NLB) instance you specify when you purchase a serverless instance.
         /// 
-        /// *   pubnet
-        /// *   privatenet
-        /// *   privatepubnet
+        /// *   pubnet: Internet
+        /// *   privatenet: private network
+        /// *   privatepubnet: Internet and private network
         /// </summary>
         [NameInMap("NlbNetworkType")]
         [Validation(Required=false)]
@@ -136,7 +129,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// The number of nodes.
+        /// The number of nodes you specify when you purchase an ordinary instance.
         /// </summary>
         [NameInMap("Replica")]
         [Validation(Required=false)]
@@ -174,7 +167,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SlbSpec { get; set; }
 
         /// <summary>
-        /// The node specifications. Valid values:
+        /// The node specifications you specify when you purchase an ordinary instance. Valid values:
         /// 
         /// *   MSE_GTW_16_32_200_c(16C32G)
         /// *   MSE_GTW_2_4_200_c(2C4G)

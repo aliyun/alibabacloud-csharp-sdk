@@ -17,12 +17,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryConfigResponseBodyData Data { get; set; }
         public class QueryConfigResponseBodyData : TeaModel {
+            /// <summary>
+            /// Indicates whether Simple Authentication and Security Layer (SASL) forced identity authentication is enabled for the ZooKeeper instance.
+            /// </summary>
             [NameInMap("AuthEnabled")]
             [Validation(Required=false)]
             public bool? AuthEnabled { get; set; }

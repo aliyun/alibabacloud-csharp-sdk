@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class EnableProxyProtocolResponseBody : TeaModel {
+    public class EnableHttp2ResponseBody : TeaModel {
         /// <summary>
         /// The status code. A value of 200 is returned if the request is successful.
         /// </summary>
@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// Indicates whether HTTP/2 is enabled.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+        /// The dynamic part in the error message. This parameter is used to replace the \\*\\*%s\\*\\* variable in the **ErrMessage** parameter.
         /// 
-        /// >  For example, if the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the **DtsJobId** parameter in the request is invalid.
+        /// >  The request parameter **DtsJobId** is invalid if **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **DtsJobId** is returned for **DynamicMessage**.
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// *   `true`
+        /// *   `false`
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

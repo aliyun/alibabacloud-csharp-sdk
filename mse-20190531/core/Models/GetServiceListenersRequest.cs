@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The ID of the MSE instance to which the service belongs.
         /// 
-        /// > You must specify InstanceId or ClusterId.
+        /// >  You must specify InstanceId or ClusterId.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

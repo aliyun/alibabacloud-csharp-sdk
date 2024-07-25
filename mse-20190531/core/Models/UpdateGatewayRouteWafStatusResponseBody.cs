@@ -550,7 +550,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// The source type.
+                /// The source type of the service.
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]

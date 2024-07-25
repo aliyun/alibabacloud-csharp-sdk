@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The ID of the MSE cluster.
         /// 
-        /// > The MSE cluster is different from the cluster of the Nacos service.
+        /// >  The MSE cluster is different from the cluster of the Nacos service.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

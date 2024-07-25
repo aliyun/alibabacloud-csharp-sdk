@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Ip { get; set; }
 
+            /// <summary>
+            /// The label of the listener.
+            /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public Dictionary<string, string> Labels { get; set; }
@@ -55,6 +58,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The current version of the listener. Valid values: gray and normal.
+            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }

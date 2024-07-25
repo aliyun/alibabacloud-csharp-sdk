@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class EnableProxyProtocolRequest : TeaModel {
+    public class EnableHttp2Request : TeaModel {
         /// <summary>
         /// The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
         /// </summary>
@@ -17,16 +17,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:
+        /// Specifies whether to enable HTTP/2 for negotiation between the server and client. This parameter applies to requests. Valid values:
         /// 
         /// *   **true**
-        /// *   **false** (default)
+        /// *   **false**
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("EnableProxyProtocol")]
+        [NameInMap("EnableHttp2")]
         [Validation(Required=false)]
-        public bool? EnableProxyProtocol { get; set; }
+        public bool? EnableHttp2 { get; set; }
 
         /// <summary>
         /// The unique ID of the gateway.

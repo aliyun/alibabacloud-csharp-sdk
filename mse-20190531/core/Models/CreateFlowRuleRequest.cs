@@ -40,29 +40,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// Valid values:
         /// 
-        /// *   0
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     fast failure
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   2
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     in queue
-        /// 
-        ///     <!-- -->
+        /// *   0: fast failure
+        /// *   2: in queue
         /// </summary>
         [NameInMap("ControlBehavior")]
         [Validation(Required=false)]

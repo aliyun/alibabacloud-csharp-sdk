@@ -115,6 +115,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Resource { get; set; }
 
+        /// <summary>
+        /// The resource type.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   0: custom interface
+        /// *   1: web
+        /// *   2: RPC
+        /// *   3: route
+        /// *   4: SQL
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public int? ResourceType { get; set; }
