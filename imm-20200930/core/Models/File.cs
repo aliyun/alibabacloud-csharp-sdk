@@ -133,10 +133,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string FileModifiedTime { get; set; }
 
-        [NameInMap("FileStatus")]
-        [Validation(Required=false)]
-        public string FileStatus { get; set; }
-
         [NameInMap("Filename")]
         [Validation(Required=false)]
         public string Filename { get; set; }
@@ -232,6 +228,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("ObjectId")]
         [Validation(Required=false)]
         public string ObjectId { get; set; }
+
+        [NameInMap("ObjectStatus")]
+        [Validation(Required=false)]
+        public string ObjectStatus { get; set; }
 
         [NameInMap("ObjectType")]
         [Validation(Required=false)]
