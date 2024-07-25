@@ -9,30 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class VideoModerationResponseBody : TeaModel {
+        /// <summary>
+        /// The returned HTTP status code.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// The data returned.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VideoModerationResponseBodyData Data { get; set; }
         public class VideoModerationResponseBodyData : TeaModel {
+            /// <summary>
+            /// The ID of the moderated object.
+            /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            /// <summary>
+            /// The task ID.
+            /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
         }
 
+        /// <summary>
+        /// The message that is returned in response to the request.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
