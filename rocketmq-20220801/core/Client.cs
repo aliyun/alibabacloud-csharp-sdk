@@ -1508,14 +1508,20 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
          *
          * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
          *
-         * @param request ListInstancesRequest
+         * @param tmpReq ListInstancesRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListInstancesResponse
          */
-        public ListInstancesResponse ListInstancesWithOptions(ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListInstancesResponse ListInstancesWithOptions(ListInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListInstancesShrinkRequest request = new ListInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SeriesCodes))
+            {
+                request.SeriesCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SeriesCodes, "seriesCodes", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
@@ -1532,6 +1538,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeriesCodesShrink))
+            {
+                query["seriesCodes"] = request.SeriesCodesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
@@ -1562,14 +1572,20 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
          *
          * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
          *
-         * @param request ListInstancesRequest
+         * @param tmpReq ListInstancesRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListInstancesResponse
          */
-        public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(ListInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListInstancesShrinkRequest request = new ListInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SeriesCodes))
+            {
+                request.SeriesCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SeriesCodes, "seriesCodes", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
@@ -1586,6 +1602,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeriesCodesShrink))
+            {
+                query["seriesCodes"] = request.SeriesCodesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {

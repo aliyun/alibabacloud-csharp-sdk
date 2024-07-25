@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
-    public class ListInstancesRequest : TeaModel {
+    public class ListInstancesShrinkRequest : TeaModel {
         /// <summary>
         /// The filter condition that is used to query instances. If you do not configure this parameter, all instances are queried.
         /// </summary>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         [NameInMap("seriesCodes")]
         [Validation(Required=false)]
-        public List<string> SeriesCodes { get; set; }
+        public string SeriesCodesShrink { get; set; }
 
         /// <summary>
         /// The tags that are used to filter instances.
