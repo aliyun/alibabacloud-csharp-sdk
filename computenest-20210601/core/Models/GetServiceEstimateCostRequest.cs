@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public GetServiceEstimateCostRequestCommodity Commodity { get; set; }
         public class GetServiceEstimateCostRequestCommodity : TeaModel {
+            [NameInMap("CouponId")]
+            [Validation(Required=false)]
+            public string CouponId { get; set; }
+
             /// <summary>
             /// The subscription duration.
             /// </summary>

@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstanceLogsRequest : TeaModel {
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public List<ListServiceInstanceLogsRequestFilter> Filter { get; set; }
+        public class ListServiceInstanceLogsRequestFilter : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public List<string> Value { get; set; }
+
+        }
+
         /// <summary>
         /// The log source. Valid values:
         /// 

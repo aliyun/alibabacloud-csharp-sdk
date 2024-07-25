@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Commodity { get; set; }
+        public Dictionary<string, CommodityValue> Commodity { get; set; }
 
         /// <summary>
         /// The request ID.

@@ -1708,6 +1708,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSource))
             {
                 query["LogSource"] = request.LogSource;
@@ -1762,6 +1766,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSource))
             {
                 query["LogSource"] = request.LogSource;
