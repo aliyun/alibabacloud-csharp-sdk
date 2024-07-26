@@ -782,6 +782,104 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
         }
 
         /**
+         * @summary 删除DSW实例的标签
+         *
+         * @param request DeleteInstanceLabelsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteInstanceLabelsResponse
+         */
+        public DeleteInstanceLabelsResponse DeleteInstanceLabelsWithOptions(string InstanceId, DeleteInstanceLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKeys))
+            {
+                query["LabelKeys"] = request.LabelKeys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstanceLabels",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/labels",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstanceLabelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除DSW实例的标签
+         *
+         * @param request DeleteInstanceLabelsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteInstanceLabelsResponse
+         */
+        public async Task<DeleteInstanceLabelsResponse> DeleteInstanceLabelsWithOptionsAsync(string InstanceId, DeleteInstanceLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKeys))
+            {
+                query["LabelKeys"] = request.LabelKeys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstanceLabels",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/labels",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstanceLabelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除DSW实例的标签
+         *
+         * @param request DeleteInstanceLabelsRequest
+         * @return DeleteInstanceLabelsResponse
+         */
+        public DeleteInstanceLabelsResponse DeleteInstanceLabels(string InstanceId, DeleteInstanceLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteInstanceLabelsWithOptions(InstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除DSW实例的标签
+         *
+         * @param request DeleteInstanceLabelsRequest
+         * @return DeleteInstanceLabelsResponse
+         */
+        public async Task<DeleteInstanceLabelsResponse> DeleteInstanceLabelsAsync(string InstanceId, DeleteInstanceLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteInstanceLabelsWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 删除定时关机任务
          *
          * @param headers map
@@ -3015,6 +3113,104 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 修改DSW实例的标签
+         *
+         * @param request UpdateInstanceLabelsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateInstanceLabelsResponse
+         */
+        public UpdateInstanceLabelsResponse UpdateInstanceLabelsWithOptions(string InstanceId, UpdateInstanceLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceLabels",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/labels",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceLabelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改DSW实例的标签
+         *
+         * @param request UpdateInstanceLabelsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateInstanceLabelsResponse
+         */
+        public async Task<UpdateInstanceLabelsResponse> UpdateInstanceLabelsWithOptionsAsync(string InstanceId, UpdateInstanceLabelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceLabels",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/labels",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceLabelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改DSW实例的标签
+         *
+         * @param request UpdateInstanceLabelsRequest
+         * @return UpdateInstanceLabelsResponse
+         */
+        public UpdateInstanceLabelsResponse UpdateInstanceLabels(string InstanceId, UpdateInstanceLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateInstanceLabelsWithOptions(InstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 修改DSW实例的标签
+         *
+         * @param request UpdateInstanceLabelsRequest
+         * @return UpdateInstanceLabelsResponse
+         */
+        public async Task<UpdateInstanceLabelsResponse> UpdateInstanceLabelsAsync(string InstanceId, UpdateInstanceLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateInstanceLabelsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
     }
