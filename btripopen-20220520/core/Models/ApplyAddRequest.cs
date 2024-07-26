@@ -35,6 +35,100 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string CorpName { get; set; }
 
+        [NameInMap("default_standard")]
+        [Validation(Required=false)]
+        public ApplyAddRequestDefaultStandard DefaultStandard { get; set; }
+        public class ApplyAddRequestDefaultStandard : TeaModel {
+            [NameInMap("business_discount")]
+            [Validation(Required=false)]
+            public int? BusinessDiscount { get; set; }
+
+            [NameInMap("economy_discount")]
+            [Validation(Required=false)]
+            public int? EconomyDiscount { get; set; }
+
+            [NameInMap("first_discount")]
+            [Validation(Required=false)]
+            public int? FirstDiscount { get; set; }
+
+            [NameInMap("flight_cabins")]
+            [Validation(Required=false)]
+            public string FlightCabins { get; set; }
+
+            [NameInMap("flight_intl_rule_code")]
+            [Validation(Required=false)]
+            public long? FlightIntlRuleCode { get; set; }
+
+            [NameInMap("flight_rule_code")]
+            [Validation(Required=false)]
+            public long? FlightRuleCode { get; set; }
+
+            [NameInMap("hotel_citys")]
+            [Validation(Required=false)]
+            public List<ApplyAddRequestDefaultStandardHotelCitys> HotelCitys { get; set; }
+            public class ApplyAddRequestDefaultStandardHotelCitys : TeaModel {
+                [NameInMap("city_code")]
+                [Validation(Required=false)]
+                public string CityCode { get; set; }
+
+                [NameInMap("city_name")]
+                [Validation(Required=false)]
+                public string CityName { get; set; }
+
+                [NameInMap("fee")]
+                [Validation(Required=false)]
+                public long? Fee { get; set; }
+
+            }
+
+            [NameInMap("hotel_intl_citys")]
+            [Validation(Required=false)]
+            public List<ApplyAddRequestDefaultStandardHotelIntlCitys> HotelIntlCitys { get; set; }
+            public class ApplyAddRequestDefaultStandardHotelIntlCitys : TeaModel {
+                [NameInMap("city_code")]
+                [Validation(Required=false)]
+                public string CityCode { get; set; }
+
+                [NameInMap("city_name")]
+                [Validation(Required=false)]
+                public string CityName { get; set; }
+
+                [NameInMap("fee")]
+                [Validation(Required=false)]
+                public long? Fee { get; set; }
+
+            }
+
+            [NameInMap("hotel_intl_rule_code")]
+            [Validation(Required=false)]
+            public long? HotelIntlRuleCode { get; set; }
+
+            [NameInMap("hotel_rule_code")]
+            [Validation(Required=false)]
+            public long? HotelRuleCode { get; set; }
+
+            [NameInMap("international_flight_cabins")]
+            [Validation(Required=false)]
+            public string InternationalFlightCabins { get; set; }
+
+            [NameInMap("premium_economy_discount")]
+            [Validation(Required=false)]
+            public int? PremiumEconomyDiscount { get; set; }
+
+            [NameInMap("reserve_type")]
+            [Validation(Required=false)]
+            public int? ReserveType { get; set; }
+
+            [NameInMap("train_rule_code")]
+            [Validation(Required=false)]
+            public long? TrainRuleCode { get; set; }
+
+            [NameInMap("train_seats")]
+            [Validation(Required=false)]
+            public string TrainSeats { get; set; }
+
+        }
+
         [NameInMap("depart_id")]
         [Validation(Required=false)]
         public string DepartId { get; set; }
@@ -309,6 +403,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
 
+            [NameInMap("province_travel_city_adcodes")]
+            [Validation(Required=false)]
+            public List<string> ProvinceTravelCityAdcodes { get; set; }
+
             [NameInMap("third_part_invoice_id")]
             [Validation(Required=false)]
             public string ThirdPartInvoiceId { get; set; }
@@ -405,6 +503,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("project_title")]
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
+
+            [NameInMap("province_travel_city_adcodes")]
+            [Validation(Required=false)]
+            public List<string> ProvinceTravelCityAdcodes { get; set; }
 
             [NameInMap("third_part_invoice_id")]
             [Validation(Required=false)]

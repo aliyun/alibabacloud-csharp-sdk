@@ -88,6 +88,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrCityCode { get; set; }
 
+                [NameInMap("arr_country")]
+                [Validation(Required=false)]
+                public string ArrCountry { get; set; }
+
+                [NameInMap("arr_country_code")]
+                [Validation(Required=false)]
+                public string ArrCountryCode { get; set; }
+
                 [NameInMap("arr_date")]
                 [Validation(Required=false)]
                 public string ArrDate { get; set; }
@@ -179,6 +187,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("dep_city_code")]
                 [Validation(Required=false)]
                 public string DepCityCode { get; set; }
+
+                [NameInMap("dep_country")]
+                [Validation(Required=false)]
+                public string DepCountry { get; set; }
+
+                [NameInMap("dep_country_code")]
+                [Validation(Required=false)]
+                public string DepCountryCode { get; set; }
 
                 [NameInMap("department")]
                 [Validation(Required=false)]

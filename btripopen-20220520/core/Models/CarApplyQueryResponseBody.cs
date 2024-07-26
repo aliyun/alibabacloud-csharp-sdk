@@ -129,6 +129,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("order_id")]
+            [Validation(Required=false)]
+            public long? OrderId { get; set; }
+
+            [NameInMap("related_third_apply_id")]
+            [Validation(Required=false)]
+            public string RelatedThirdApplyId { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public int? Status { get; set; }

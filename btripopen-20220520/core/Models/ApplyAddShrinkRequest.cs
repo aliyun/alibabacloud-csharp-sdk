@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string CorpName { get; set; }
 
+        [NameInMap("default_standard")]
+        [Validation(Required=false)]
+        public string DefaultStandardShrink { get; set; }
+
         [NameInMap("depart_id")]
         [Validation(Required=false)]
         public string DepartId { get; set; }
