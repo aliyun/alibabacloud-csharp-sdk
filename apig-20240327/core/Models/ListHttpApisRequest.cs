@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("publishedOnly")]
+        [Validation(Required=false)]
+        public bool? PublishedOnly { get; set; }
+
     }
 
 }
