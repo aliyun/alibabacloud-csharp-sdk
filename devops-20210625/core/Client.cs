@@ -570,6 +570,104 @@ namespace AlibabaCloud.SDK.Devops20210625
         }
 
         /**
+         * @summary 取消执行研发阶段流水线
+         *
+         * @param request CancelExecutionReleaseStageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelExecutionReleaseStageResponse
+         */
+        public CancelExecutionReleaseStageResponse CancelExecutionReleaseStageWithOptions(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, CancelExecutionReleaseStageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelExecutionReleaseStage",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "/executions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(executionNumber) + "%3Acancel",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelExecutionReleaseStageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 取消执行研发阶段流水线
+         *
+         * @param request CancelExecutionReleaseStageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelExecutionReleaseStageResponse
+         */
+        public async Task<CancelExecutionReleaseStageResponse> CancelExecutionReleaseStageWithOptionsAsync(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, CancelExecutionReleaseStageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelExecutionReleaseStage",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "/executions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(executionNumber) + "%3Acancel",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelExecutionReleaseStageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 取消执行研发阶段流水线
+         *
+         * @param request CancelExecutionReleaseStageRequest
+         * @return CancelExecutionReleaseStageResponse
+         */
+        public CancelExecutionReleaseStageResponse CancelExecutionReleaseStage(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, CancelExecutionReleaseStageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CancelExecutionReleaseStageWithOptions(appName, releaseWorkflowSn, releaseStageSn, executionNumber, request, headers, runtime);
+        }
+
+        /**
+         * @summary 取消执行研发阶段流水线
+         *
+         * @param request CancelExecutionReleaseStageRequest
+         * @return CancelExecutionReleaseStageResponse
+         */
+        public async Task<CancelExecutionReleaseStageResponse> CancelExecutionReleaseStageAsync(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, CancelExecutionReleaseStageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CancelExecutionReleaseStageWithOptionsAsync(appName, releaseWorkflowSn, releaseStageSn, executionNumber, request, headers, runtime);
+        }
+
+        /**
          * @summary 关闭代码评审
          *
          * @param request CloseMergeRequestRequest
@@ -8768,6 +8866,116 @@ namespace AlibabaCloud.SDK.Devops20210625
         }
 
         /**
+         * @summary 执行研发阶段流水线
+         *
+         * @param request ExecuteChangeRequestReleaseStageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExecuteChangeRequestReleaseStageResponse
+         */
+        public ExecuteChangeRequestReleaseStageResponse ExecuteChangeRequestReleaseStageWithOptions(string appName, string releaseWorkflowSn, string releaseStageSn, ExecuteChangeRequestReleaseStageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["params"] = request.Params;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteChangeRequestReleaseStage",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "%3Aexecute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteChangeRequestReleaseStageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 执行研发阶段流水线
+         *
+         * @param request ExecuteChangeRequestReleaseStageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExecuteChangeRequestReleaseStageResponse
+         */
+        public async Task<ExecuteChangeRequestReleaseStageResponse> ExecuteChangeRequestReleaseStageWithOptionsAsync(string appName, string releaseWorkflowSn, string releaseStageSn, ExecuteChangeRequestReleaseStageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["params"] = request.Params;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteChangeRequestReleaseStage",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "%3Aexecute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteChangeRequestReleaseStageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 执行研发阶段流水线
+         *
+         * @param request ExecuteChangeRequestReleaseStageRequest
+         * @return ExecuteChangeRequestReleaseStageResponse
+         */
+        public ExecuteChangeRequestReleaseStageResponse ExecuteChangeRequestReleaseStage(string appName, string releaseWorkflowSn, string releaseStageSn, ExecuteChangeRequestReleaseStageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteChangeRequestReleaseStageWithOptions(appName, releaseWorkflowSn, releaseStageSn, request, headers, runtime);
+        }
+
+        /**
+         * @summary 执行研发阶段流水线
+         *
+         * @param request ExecuteChangeRequestReleaseStageRequest
+         * @return ExecuteChangeRequestReleaseStageResponse
+         */
+        public async Task<ExecuteChangeRequestReleaseStageResponse> ExecuteChangeRequestReleaseStageAsync(string appName, string releaseWorkflowSn, string releaseStageSn, ExecuteChangeRequestReleaseStageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteChangeRequestReleaseStageWithOptionsAsync(appName, releaseWorkflowSn, releaseStageSn, request, headers, runtime);
+        }
+
+        /**
          * @summary 导出Insight custom_value表
          *
          * @param request ExportInsightCustomValueRequest
@@ -12799,6 +13007,104 @@ namespace AlibabaCloud.SDK.Devops20210625
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetPushRuleWithOptionsAsync(repositoryId, pushRuleId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取研发阶段流水线运行实例
+         *
+         * @param request GetReleaseStagePipelineRunRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetReleaseStagePipelineRunResponse
+         */
+        public GetReleaseStagePipelineRunResponse GetReleaseStagePipelineRunWithOptions(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, GetReleaseStagePipelineRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetReleaseStagePipelineRun",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "/executions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(executionNumber) + "%3AgetPipelineRun",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetReleaseStagePipelineRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取研发阶段流水线运行实例
+         *
+         * @param request GetReleaseStagePipelineRunRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetReleaseStagePipelineRunResponse
+         */
+        public async Task<GetReleaseStagePipelineRunResponse> GetReleaseStagePipelineRunWithOptionsAsync(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, GetReleaseStagePipelineRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetReleaseStagePipelineRun",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "/executions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(executionNumber) + "%3AgetPipelineRun",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetReleaseStagePipelineRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取研发阶段流水线运行实例
+         *
+         * @param request GetReleaseStagePipelineRunRequest
+         * @return GetReleaseStagePipelineRunResponse
+         */
+        public GetReleaseStagePipelineRunResponse GetReleaseStagePipelineRun(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, GetReleaseStagePipelineRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetReleaseStagePipelineRunWithOptions(appName, releaseWorkflowSn, releaseStageSn, executionNumber, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取研发阶段流水线运行实例
+         *
+         * @param request GetReleaseStagePipelineRunRequest
+         * @return GetReleaseStagePipelineRunResponse
+         */
+        public async Task<GetReleaseStagePipelineRunResponse> GetReleaseStagePipelineRunAsync(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, GetReleaseStagePipelineRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetReleaseStagePipelineRunWithOptionsAsync(appName, releaseWorkflowSn, releaseStageSn, executionNumber, request, headers, runtime);
         }
 
         /**
