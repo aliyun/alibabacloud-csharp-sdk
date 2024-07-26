@@ -24,19 +24,24 @@ namespace AlibabaCloud.SDK.Dybaseapi20170525.Models
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
+
             [NameInMap("AccessKeySecret")]
             [Validation(Required=false)]
             public string AccessKeySecret { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
+
             [NameInMap("SecurityToken")]
             [Validation(Required=false)]
             public string SecurityToken { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

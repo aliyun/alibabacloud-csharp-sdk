@@ -12,6 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dybaseapi20170525.Models
 {
     public class QueryTokenForMnsQueueRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MessageType")]
         [Validation(Required=false)]
         public string MessageType { get; set; }
