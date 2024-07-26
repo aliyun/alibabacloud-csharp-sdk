@@ -1,3 +1,10 @@
+2024-07-26 Version: 2.4.0
+- Support API ListServiceInstanceUpgradeHistory.
+- Support API RollbackServiceInstance.
+- Support API UpdateServiceInstanceAttributes.
+- Support API UpgradeServiceInstance.
+
+
 2024-07-25 Version: 2.3.1
 - Update API CreateServiceInstance: update param Commodity.
 - Update API GetServiceEstimateCost: update param Commodity.
