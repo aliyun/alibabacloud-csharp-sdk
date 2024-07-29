@@ -23690,6 +23690,112 @@ namespace AlibabaCloud.SDK.Devops20210625
         }
 
         /**
+         * @summary 通过人工卡点
+         *
+         * @param request PassReleaseStagePipelineValidateRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PassReleaseStagePipelineValidateResponse
+         */
+        public PassReleaseStagePipelineValidateResponse PassReleaseStagePipelineValidateWithOptions(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, PassReleaseStagePipelineValidateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["jobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PassReleaseStagePipelineValidate",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "/executions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(executionNumber) + "%3ApassPipelineValidate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PassReleaseStagePipelineValidateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 通过人工卡点
+         *
+         * @param request PassReleaseStagePipelineValidateRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PassReleaseStagePipelineValidateResponse
+         */
+        public async Task<PassReleaseStagePipelineValidateResponse> PassReleaseStagePipelineValidateWithOptionsAsync(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, PassReleaseStagePipelineValidateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["jobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PassReleaseStagePipelineValidate",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "/executions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(executionNumber) + "%3ApassPipelineValidate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PassReleaseStagePipelineValidateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 通过人工卡点
+         *
+         * @param request PassReleaseStagePipelineValidateRequest
+         * @return PassReleaseStagePipelineValidateResponse
+         */
+        public PassReleaseStagePipelineValidateResponse PassReleaseStagePipelineValidate(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, PassReleaseStagePipelineValidateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PassReleaseStagePipelineValidateWithOptions(appName, releaseWorkflowSn, releaseStageSn, executionNumber, request, headers, runtime);
+        }
+
+        /**
+         * @summary 通过人工卡点
+         *
+         * @param request PassReleaseStagePipelineValidateRequest
+         * @return PassReleaseStagePipelineValidateResponse
+         */
+        public async Task<PassReleaseStagePipelineValidateResponse> PassReleaseStagePipelineValidateAsync(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, PassReleaseStagePipelineValidateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PassReleaseStagePipelineValidateWithOptionsAsync(appName, releaseWorkflowSn, releaseStageSn, executionNumber, request, headers, runtime);
+        }
+
+        /**
          * @summary 拒绝人工卡点
          *
          * @param headers map
@@ -23767,6 +23873,112 @@ namespace AlibabaCloud.SDK.Devops20210625
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RefusePipelineValidateWithOptionsAsync(organizationId, pipelineId, pipelineRunId, jobId, headers, runtime);
+        }
+
+        /**
+         * @summary 拒绝人工卡点
+         *
+         * @param request RefuseReleaseStagePipelineValidateRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RefuseReleaseStagePipelineValidateResponse
+         */
+        public RefuseReleaseStagePipelineValidateResponse RefuseReleaseStagePipelineValidateWithOptions(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, RefuseReleaseStagePipelineValidateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["jobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefuseReleaseStagePipelineValidate",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "/executions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(executionNumber) + "%3ArefusePipelineValidate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefuseReleaseStagePipelineValidateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 拒绝人工卡点
+         *
+         * @param request RefuseReleaseStagePipelineValidateRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RefuseReleaseStagePipelineValidateResponse
+         */
+        public async Task<RefuseReleaseStagePipelineValidateResponse> RefuseReleaseStagePipelineValidateWithOptionsAsync(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, RefuseReleaseStagePipelineValidateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["jobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["organizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefuseReleaseStagePipelineValidate",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/appstack/apps/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/releaseWorkflows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseWorkflowSn) + "/releaseStages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(releaseStageSn) + "/executions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(executionNumber) + "%3ArefusePipelineValidate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefuseReleaseStagePipelineValidateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 拒绝人工卡点
+         *
+         * @param request RefuseReleaseStagePipelineValidateRequest
+         * @return RefuseReleaseStagePipelineValidateResponse
+         */
+        public RefuseReleaseStagePipelineValidateResponse RefuseReleaseStagePipelineValidate(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, RefuseReleaseStagePipelineValidateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RefuseReleaseStagePipelineValidateWithOptions(appName, releaseWorkflowSn, releaseStageSn, executionNumber, request, headers, runtime);
+        }
+
+        /**
+         * @summary 拒绝人工卡点
+         *
+         * @param request RefuseReleaseStagePipelineValidateRequest
+         * @return RefuseReleaseStagePipelineValidateResponse
+         */
+        public async Task<RefuseReleaseStagePipelineValidateResponse> RefuseReleaseStagePipelineValidateAsync(string appName, string releaseWorkflowSn, string releaseStageSn, string executionNumber, RefuseReleaseStagePipelineValidateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RefuseReleaseStagePipelineValidateWithOptionsAsync(appName, releaseWorkflowSn, releaseStageSn, executionNumber, request, headers, runtime);
         }
 
         /**
