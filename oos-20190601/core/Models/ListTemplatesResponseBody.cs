@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// The constraints of template
+            /// The template constraints.
             /// </summary>
             [NameInMap("Constraints")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// The time when the template was created.
+            /// The creation time of the template.
             /// </summary>
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public bool? HasTrigger { get; set; }
 
             /// <summary>
-            /// The SHA-256 value of the template content.
+            /// The SHA256 value of the template content.
             /// </summary>
             [NameInMap("Hash")]
             [Validation(Required=false)]
             public string Hash { get; set; }
 
             /// <summary>
-            /// The template is favorite or not.
+            /// Indicates whether the template is added to favorites.
             /// </summary>
             [NameInMap("IsFavorite")]
             [Validation(Required=false)]
@@ -96,21 +96,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             /// <summary>
             /// The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If **ShareType** is set to **Private**, the value of this parameter is `-1`.
             /// 
-            /// >  This parameter is valid only if the value of **ShareType** is set to **Public**.
+            /// >  This parameter is valid only if **ShareType** is set to **Public**.
             /// </summary>
             [NameInMap("Popularity")]
             [Validation(Required=false)]
             public int? Popularity { get; set; }
 
             /// <summary>
-            /// The publisher of template.
+            /// The user who published the template.
             /// </summary>
             [NameInMap("Publisher")]
             [Validation(Required=false)]
             public string Publisher { get; set; }
 
             /// <summary>
-            /// The resource group ID.
+            /// The ID of the resource group.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// The template format. The system automatically determines whether the format is JSON or YAML.
+            /// The template format. The system automatically determines whether the format of the template is JSON or YAML.
             /// </summary>
             [NameInMap("TemplateFormat")]
             [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// The template version. The name of the version consists of the letter v and a number. The number starts from 1.
+            /// The template version. The version contains the letter v and a number. The number starts from 1.
             /// </summary>
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             /// <summary>
             /// The number of times for which the private template is executed. If **ShareType** is set to **Public**, the value of this parameter is `-1`.
             /// 
-            /// >  This parameter is valid only if the value of **ShareType** is **Private**.
+            /// >  This parameter is valid only if **ShareType** is set to **Private**.
             /// </summary>
             [NameInMap("TotalExecutionCount")]
             [Validation(Required=false)]

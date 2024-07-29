@@ -51,19 +51,22 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public bool? HasTrigger { get; set; }
 
+        /// <summary>
+        /// Specifies whether the template is an example template
+        /// </summary>
         [NameInMap("IsExample")]
         [Validation(Required=false)]
         public bool? IsExample { get; set; }
 
         /// <summary>
-        /// The template is favorite or not.
+        /// Specifies whether the template is added to favorites.
         /// </summary>
         [NameInMap("IsFavorite")]
         [Validation(Required=false)]
         public bool? IsFavorite { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
+        /// The number of entries per page. Valid values: 10 to 100. Default value: 50.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

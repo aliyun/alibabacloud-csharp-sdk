@@ -5862,6 +5862,130 @@ namespace AlibabaCloud.SDK.Oos20190601
         }
 
         /**
+         * @summary 列出实例软件包状态
+         *
+         * @param request ListInstancePackageStatesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListInstancePackageStatesResponse
+         */
+        public ListInstancePackageStatesResponse ListInstancePackageStatesWithOptions(ListInstancePackageStatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateNames))
+            {
+                query["TemplateNames"] = request.TemplateNames;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstancePackageStates",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstancePackageStatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列出实例软件包状态
+         *
+         * @param request ListInstancePackageStatesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListInstancePackageStatesResponse
+         */
+        public async Task<ListInstancePackageStatesResponse> ListInstancePackageStatesWithOptionsAsync(ListInstancePackageStatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateNames))
+            {
+                query["TemplateNames"] = request.TemplateNames;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstancePackageStates",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstancePackageStatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列出实例软件包状态
+         *
+         * @param request ListInstancePackageStatesRequest
+         * @return ListInstancePackageStatesResponse
+         */
+        public ListInstancePackageStatesResponse ListInstancePackageStates(ListInstancePackageStatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListInstancePackageStatesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 列出实例软件包状态
+         *
+         * @param request ListInstancePackageStatesRequest
+         * @return ListInstancePackageStatesResponse
+         */
+        public async Task<ListInstancePackageStatesResponse> ListInstancePackageStatesAsync(ListInstancePackageStatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListInstancePackageStatesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the information about the patches of an instance.
          *
          * @param request ListInstancePatchStatesRequest
@@ -10019,6 +10143,150 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 更新实例软件包状态
+         *
+         * @param tmpReq UpdateInstancePackageStateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateInstancePackageStateResponse
+         */
+        public UpdateInstancePackageStateResponse UpdateInstancePackageStateWithOptions(UpdateInstancePackageStateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateInstancePackageStateShrinkRequest request = new UpdateInstancePackageStateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigureAction))
+            {
+                query["ConfigureAction"] = request.ConfigureAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParametersShrink))
+            {
+                query["Parameters"] = request.ParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                query["TemplateVersion"] = request.TemplateVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstancePackageState",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstancePackageStateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新实例软件包状态
+         *
+         * @param tmpReq UpdateInstancePackageStateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateInstancePackageStateResponse
+         */
+        public async Task<UpdateInstancePackageStateResponse> UpdateInstancePackageStateWithOptionsAsync(UpdateInstancePackageStateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateInstancePackageStateShrinkRequest request = new UpdateInstancePackageStateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigureAction))
+            {
+                query["ConfigureAction"] = request.ConfigureAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParametersShrink))
+            {
+                query["Parameters"] = request.ParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                query["TemplateVersion"] = request.TemplateVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstancePackageState",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstancePackageStateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新实例软件包状态
+         *
+         * @param request UpdateInstancePackageStateRequest
+         * @return UpdateInstancePackageStateResponse
+         */
+        public UpdateInstancePackageStateResponse UpdateInstancePackageState(UpdateInstancePackageStateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateInstancePackageStateWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 更新实例软件包状态
+         *
+         * @param request UpdateInstancePackageStateRequest
+         * @return UpdateInstancePackageStateResponse
+         */
+        public async Task<UpdateInstancePackageStateResponse> UpdateInstancePackageStateAsync(UpdateInstancePackageStateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateInstancePackageStateWithOptionsAsync(request, runtime);
         }
 
         /**
