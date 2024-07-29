@@ -151,6 +151,42 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public bool? PptExtractionEnabled { get; set; }
 
+            [NameInMap("ServiceInspection")]
+            [Validation(Required=false)]
+            public CreateTaskRequestParametersServiceInspection ServiceInspection { get; set; }
+            public class CreateTaskRequestParametersServiceInspection : TeaModel {
+                [NameInMap("InspectionContents")]
+                [Validation(Required=false)]
+                public List<CreateTaskRequestParametersServiceInspectionInspectionContents> InspectionContents { get; set; }
+                public class CreateTaskRequestParametersServiceInspectionInspectionContents : TeaModel {
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                }
+
+                [NameInMap("InspectionIntroduction")]
+                [Validation(Required=false)]
+                public string InspectionIntroduction { get; set; }
+
+                [NameInMap("SceneIntroduction")]
+                [Validation(Required=false)]
+                public string SceneIntroduction { get; set; }
+
+                [NameInMap("SpeakerMap")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> SpeakerMap { get; set; }
+
+            }
+
+            [NameInMap("ServiceInspectionEnabled")]
+            [Validation(Required=false)]
+            public bool? ServiceInspectionEnabled { get; set; }
+
             [NameInMap("Summarization")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersSummarization Summarization { get; set; }
