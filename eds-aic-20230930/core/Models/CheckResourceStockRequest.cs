@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        [NameInMap("GpuAcceleration")]
+        [Validation(Required=false)]
+        public bool? GpuAcceleration { get; set; }
+
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
