@@ -222,8 +222,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
                 public string Specification { get; set; }
 
                 /// <summary>
-                /// The creation mode. Valid values:\
-                /// 1: creates a new instance.\
+                /// The creation mode. Valid values:\\
+                /// 1: creates a new instance.\\
                 /// 2: imports an instance.
                 /// </summary>
                 [NameInMap("type")]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
     public class ValuateApplicationRequest : TeaModel {
         /// <summary>
         /// The operation that you want to perform. Set the value to ValuateApplication.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]

@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         /// <summary>
         /// Template ID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
     public class GetExecuteOperationResultRequest : TeaModel {
         /// <summary>
         /// The ID of the operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]

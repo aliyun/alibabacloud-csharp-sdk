@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         /// 
         /// Example of enumerating more than one set of parameters:
         /// 
-        /// *   { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\"change_type\\":\\"modify_instance_type\\",\\"instance_type\\":\\"ecs.hfr7.2xlarge\\",\\"instanceId\\":\\"i-xxxxxxxxx\\",\\"regionId\\":\\"cn-beijing\\",\\"appId\\":\\"xxxxxxxxxxxxx\\"}" }
+        /// *   { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\\\"change_type\\\\":\\\\"modify_instance_type\\\\",\\\\"instance_type\\\\":\\\\"ecs.hfr7.2xlarge\\\\",\\\\"instanceId\\\\":\\\\"i-xxxxxxxxx\\\\",\\\\"regionId\\\\":\\\\"cn-beijing\\\\",\\\\"appId\\\\":\\\\"xxxxxxxxxxxxx\\\\"}" }
         /// 
         ///     <!-- -->
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\"change_type\\":\\"modify_instance_type\\",\\"instance_type\\":\\"ecs.hfr7.2xlarge\\",\\"instanceId\\":\\"i-xxxxxxxxx\\",\\"regionId\\":\\"cn-beijing\\",\\"appId\\":\\"xxxxxxxxxxxxx\\"}" }
+        ///     { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\\\"change_type\\\\":\\\\"modify_instance_type\\\\",\\\\"instance_type\\\\":\\\\"ecs.hfr7.2xlarge\\\\",\\\\"instanceId\\\\":\\\\"i-xxxxxxxxx\\\\",\\\\"regionId\\\\":\\\\"cn-beijing\\\\",\\\\"appId\\\\":\\\\"xxxxxxxxxxxxx\\\\"}" }
         /// 
         ///     <!-- -->
         /// </summary>
@@ -60,6 +60,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         /// - Ecs Tag: addTags
         /// - Deletion of ecs: ecsDelete
         /// - Paid type for ecs: modifyPayType
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]
@@ -74,6 +76,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         /// <summary>
         /// The type of the service. If you want to perform operations on an Elastic Compute Service (ECS) instance, set ServiceType to ecs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]

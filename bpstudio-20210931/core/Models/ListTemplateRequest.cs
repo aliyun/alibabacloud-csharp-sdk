@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         /// <summary>
         /// The number of entries to return on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -59,6 +63,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         /// <summary>
         /// The type of the templates to be returned. Valid values: public and private
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

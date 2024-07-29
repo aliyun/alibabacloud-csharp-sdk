@@ -122,9 +122,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
                     public float? TradePrice { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the instance is newly created. Valid values:\
-                    /// 1: The instance is newly created.\
-                    /// 2: The instance already exists.\
+                    /// Indicates whether the instance is newly created. Valid values:\\
+                    /// 1: The instance is newly created.\\
+                    /// 2: The instance already exists.\\
                     /// 0: The price of the instance is not included.
                     /// </summary>
                     [NameInMap("Type")]

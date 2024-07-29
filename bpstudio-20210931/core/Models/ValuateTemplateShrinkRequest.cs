@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         /// <summary>
         /// The template ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -1,3 +1,6 @@
+2024-07-29 Version: 2.2.1
+- Generated csharp 2021-09-31 for BPStudio.
+
 2024-04-07 Version: 2.2.0
 - Support API ExecuteOperationSync.
 - Update API CreateApplication: update param ClientToken.

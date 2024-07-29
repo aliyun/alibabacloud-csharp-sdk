@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
     public class ReleaseApplicationRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]

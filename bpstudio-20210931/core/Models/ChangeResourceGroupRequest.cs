@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the new resource group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         /// <summary>
         /// The ID of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         /// <summary>
         /// The type of the resource for which you want to change the resource group. Valid values: APPLICATION and TEMPLATE.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
