@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeDistributionProductsLinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Codes")]
         [Validation(Required=false)]
         public List<string> Codes { get; set; }

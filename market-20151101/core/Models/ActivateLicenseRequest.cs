@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string Identification { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LicenseCode")]
         [Validation(Required=false)]
         public string LicenseCode { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeInstanceResponseBody : TeaModel {
+        [NameInMap("ActiveAddress")]
+        [Validation(Required=false)]
+        public string ActiveAddress { get; set; }
+
         [NameInMap("AppJson")]
         [Validation(Required=false)]
         public string AppJson { get; set; }
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [NameInMap("IsTrial")]
         [Validation(Required=false)]
         public bool? IsTrial { get; set; }
+
+        [NameInMap("LicenseCode")]
+        [Validation(Required=false)]
+        public string LicenseCode { get; set; }
 
         [NameInMap("Modules")]
         [Validation(Required=false)]

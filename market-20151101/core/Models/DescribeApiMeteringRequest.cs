@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeApiMeteringRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("pageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }

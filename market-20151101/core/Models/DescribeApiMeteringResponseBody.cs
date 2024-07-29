@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public string ProductName { get; set; }
 
+            [NameInMap("TotalCapacity")]
+            [Validation(Required=false)]
+            public long? TotalCapacity { get; set; }
+
             [NameInMap("TotalQuota")]
             [Validation(Required=false)]
             public long? TotalQuota { get; set; }
