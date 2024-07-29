@@ -2403,6 +2403,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
             {
                 query["nameLike"] = request.NameLike;
@@ -2447,6 +2451,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
             {
                 query["nameLike"] = request.NameLike;

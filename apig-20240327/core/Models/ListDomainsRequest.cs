@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListDomainsRequest : TeaModel {
+        [NameInMap("gatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
+
         [NameInMap("nameLike")]
         [Validation(Required=false)]
         public string NameLike { get; set; }
