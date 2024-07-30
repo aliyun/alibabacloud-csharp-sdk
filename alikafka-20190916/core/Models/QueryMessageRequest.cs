@@ -45,20 +45,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.
         /// *   byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.
         /// 
-        /// <!---->
-        /// 
-        /// *   <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("QueryType")]

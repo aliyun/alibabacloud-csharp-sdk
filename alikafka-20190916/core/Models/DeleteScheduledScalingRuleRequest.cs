@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DeleteScheduledScalingRuleRequest : TeaModel {
         /// <summary>
+        /// The instance ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// The ID of the region where the instance resides.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// The name of the scheduled scaling rule.
+        /// 
+        /// >  You can delete only rules that are disabled and rules that are scheduled only once and have been executed.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]

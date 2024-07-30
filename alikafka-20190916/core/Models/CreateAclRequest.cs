@@ -56,10 +56,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclPermissionType { get; set; }
 
         /// <summary>
-        /// The name or ID of the resource.
+        /// The resource name.
         /// 
-        /// *   The value can be the name of a topic, consumer group, or cluster, or the ID of a transaction.
-        /// *   You can use an asterisk (\\*) to represent the names or IDs of all relevant resources.
+        /// *   The value can be a topic name, a group ID, a cluster name, or a transaction ID.
+        /// *   You can use an asterisk (\\*) to specify the names of all resources of the specified type.
+        /// 
+        /// > You can use an asterisk (\\*) to query the resources on which permissions are granted only after you grant the user the required permissions on all resources.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -96,11 +98,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The source IP address.
         /// 
-        /// > 
-        /// 
-        /// *   You can specify only a specific IP address or use the asterisk (\\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.
-        /// 
-        /// *   This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+        /// > -  You can specify only a specific IP address or use the asterisk (\\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.
+        /// > -  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
@@ -127,7 +126,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The username.
         /// 
-        /// You can use an asterisk (\\*) to represent all usernames.
+        /// *   You can use an asterisk (\\*) to specify all usernames.
+        /// 
+        /// > You can use an asterisk (\\*) to query the authorized users only after you grant the required permissions to all users.
         /// 
         /// This parameter is required.
         /// </summary>

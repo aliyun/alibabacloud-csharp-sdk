@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag key.
+        /// The key of the resource tag.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

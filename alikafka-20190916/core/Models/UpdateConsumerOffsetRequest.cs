@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   The name must be **3 to 64** characters in length. If a name contains more than **64** characters, the name is automatically truncated.
         /// *   The name of a topic cannot be changed after the topic is created.
         /// 
-        /// **If you want to reset the consumer offsets of all topics to which the consumer subscribes, specify an empty string.
+        /// **If you want to reset the consumer offsets of all topics to which the consumer subscribes, specify an empty string.**
         /// 
         /// This parameter is required.
         /// </summary>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The instance ID.
         /// 
-        /// You can call the [GetInstanceList](https://help.aliyun.com/document_detail/437663.html) operation to query instances.
+        /// You can call the [GetInstanceList](https://help.aliyun.com/document_detail/437663.html) operation to query the list of instances.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The topic name.
         /// 
-        /// You can call the [GetTopicList](https://help.aliyun.com/document_detail/437677.html) operation to query topics.
+        /// You can call the [GetTopicList](https://help.aliyun.com/document_detail/437677.html) operation to query the list of topics.
         /// 
         /// This parameter is required.
         /// </summary>

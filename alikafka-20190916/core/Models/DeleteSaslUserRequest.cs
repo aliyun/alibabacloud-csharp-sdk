@@ -40,10 +40,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The SASL mechanism. Valid values:
+        /// The type of the Simple Authentication and Security Layer (SASL) user. Valid values:
         /// 
-        /// *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.
-        /// *   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.
+        /// *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.
+        /// *   **SCRAM**: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.
+        /// *   **LDAP**: This value is available only for the SASL users of ApsaraMQ for Confluent instances.
         /// 
         /// Default value: **plain**.
         /// </summary>

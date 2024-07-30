@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? DiskSize { get; set; }
 
                 /// <summary>
-                /// The disk type. Valid values:
+                /// The disk type of the instance. Valid values:
                 /// 
                 /// *   **0**: ultra disk
                 /// *   **1**: standard SSD
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? ReservedSubscribeCapacity { get; set; }
 
                 /// <summary>
-                /// The resource group ID.
+                /// The ID of the resource group.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string SecurityGroup { get; set; }
 
                 /// <summary>
-                /// 实例系列标识。返回值有 v2 ，v3，confluent。
+                /// The instance version. Valid values: v2, v3, and confluent.
                 /// </summary>
                 [NameInMap("Series")]
                 [Validation(Required=false)]

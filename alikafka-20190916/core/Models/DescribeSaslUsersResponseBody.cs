@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 /// <summary>
                 /// The encryption method.
                 /// 
-                /// >  This field is available only for ApsaraMQ for Kafka V3 Serverless instances.
+                /// >  This field is available only for serverless ApsaraMQ for Kafka V3 instances.
                 /// </summary>
                 [NameInMap("Mechanism")]
                 [Validation(Required=false)]
@@ -58,10 +58,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string Password { get; set; }
 
                 /// <summary>
-                /// The type. Valid values:
+                /// The type of the SASL user. Valid values:
                 /// 
                 /// *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.
                 /// *   **SCRAM**: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.
+                /// *   **LDAP**: This value is available only for the SASL users of ApsaraMQ for Confluent instances.
                 /// 
                 /// Default value: **plain**.
                 /// </summary>

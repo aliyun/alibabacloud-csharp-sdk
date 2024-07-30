@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The port range. Valid values:
         /// 
-        /// *   **9092/9092**: the port range for access from virtual private clouds (VPCs) by using the default endpoint.
-        /// *   **9093/9093**: the port range for access from the Internet.
-        /// *   **9094/9094**: the port range for access from VPCs by using the Simple Authentication and Security Layer (SASL) endpoint.
-        /// *   **9095/9095**: the port range for access from VPCs by using the Secure Sockets Layer (SSL) endpoint.
+        /// *   **9092/9092**: Messages are transmitted in a virtual private cloud (VPC) by using the PLAINTEXT protocol.
+        /// *   **9093/9093**: Messages are transmitted over the Internet by using the SASL_SSL protocol.
+        /// *   **9094/9094**: Messages are transmitted in a VPC by using the SASL_PLAINTEXT protocol.
+        /// *   **9095/9095**: Messages are transmitted in a VPC by using the SASL_SSL protocol.
         /// 
         /// This parameter must correspond to **AllowdedListType**.
         /// 

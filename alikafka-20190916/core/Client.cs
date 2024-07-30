@@ -1118,7 +1118,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 创建定时伸缩配置
+         * @summary Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param tmpReq CreateScheduledScalingRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1202,7 +1204,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 创建定时伸缩配置
+         * @summary Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param tmpReq CreateScheduledScalingRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1286,7 +1290,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 创建定时伸缩配置
+         * @summary Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request CreateScheduledScalingRuleRequest
          * @return CreateScheduledScalingRuleResponse
@@ -1298,7 +1304,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 创建定时伸缩配置
+         * @summary Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request CreateScheduledScalingRuleRequest
          * @return CreateScheduledScalingRuleResponse
@@ -1990,7 +1998,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 删除定时伸缩规则
+         * @summary Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.
          *
          * @param request DeleteScheduledScalingRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2032,7 +2042,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 删除定时伸缩规则
+         * @summary Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.
          *
          * @param request DeleteScheduledScalingRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2074,7 +2086,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 删除定时伸缩规则
+         * @summary Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.
          *
          * @param request DeleteScheduledScalingRuleRequest
          * @return DeleteScheduledScalingRuleResponse
@@ -2086,7 +2100,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 删除定时伸缩规则
+         * @summary Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.
          *
          * @param request DeleteScheduledScalingRuleRequest
          * @return DeleteScheduledScalingRuleResponse
@@ -2878,7 +2894,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 查询自动伸缩配置
+         * @summary Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request GetAutoScalingConfigurationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2916,7 +2934,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 查询自动伸缩配置
+         * @summary Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request GetAutoScalingConfigurationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2954,7 +2974,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 查询自动伸缩配置
+         * @summary Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request GetAutoScalingConfigurationRequest
          * @return GetAutoScalingConfigurationResponse
@@ -2966,7 +2988,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 查询自动伸缩配置
+         * @summary Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request GetAutoScalingConfigurationRequest
          * @return GetAutoScalingConfigurationResponse
@@ -3116,6 +3140,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             {
                 query["ConsumerId"] = request.ConsumerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HideLastTimestamp))
+            {
+                query["HideLastTimestamp"] = request.HideLastTimestamp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -3157,6 +3185,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
             {
                 query["ConsumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HideLastTimestamp))
+            {
+                query["HideLastTimestamp"] = request.HideLastTimestamp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -3566,7 +3598,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Queries the status information about messages in a specified topic.
+         * @summary Queries the messaging status of a topic.
          *
          * @param request GetTopicStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3608,7 +3640,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Queries the status information about messages in a specified topic.
+         * @summary Queries the messaging status of a topic.
          *
          * @param request GetTopicStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3650,7 +3682,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Queries the status information about messages in a specified topic.
+         * @summary Queries the messaging status of a topic.
          *
          * @param request GetTopicStatusRequest
          * @return GetTopicStatusResponse
@@ -3662,7 +3694,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Queries the status information about messages in a specified topic.
+         * @summary Queries the messaging status of a topic.
          *
          * @param request GetTopicStatusRequest
          * @return GetTopicStatusResponse
@@ -3674,7 +3706,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Obtains the information about a group that subscribes to a topic.
+         * @summary Queries the information about the groups that subscribe to a topic.
          *
          * @param request GetTopicSubscribeStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3716,7 +3748,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Obtains the information about a group that subscribes to a topic.
+         * @summary Queries the information about the groups that subscribe to a topic.
          *
          * @param request GetTopicSubscribeStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3758,7 +3790,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Obtains the information about a group that subscribes to a topic.
+         * @summary Queries the information about the groups that subscribe to a topic.
          *
          * @param request GetTopicSubscribeStatusRequest
          * @return GetTopicSubscribeStatusResponse
@@ -3770,7 +3802,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Obtains the information about a group that subscribes to a topic.
+         * @summary Queries the information about the groups that subscribe to a topic.
          *
          * @param request GetTopicSubscribeStatusRequest
          * @return GetTopicSubscribeStatusResponse
@@ -4014,7 +4046,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Changes the number of partitions in a specified topic.
+         * @summary Changes the number of partitions in a topic.
          *
          * @param request ModifyPartitionNumRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4060,7 +4092,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Changes the number of partitions in a specified topic.
+         * @summary Changes the number of partitions in a topic.
          *
          * @param request ModifyPartitionNumRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4106,7 +4138,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Changes the number of partitions in a specified topic.
+         * @summary Changes the number of partitions in a topic.
          *
          * @param request ModifyPartitionNumRequest
          * @return ModifyPartitionNumResponse
@@ -4118,7 +4150,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Changes the number of partitions in a specified topic.
+         * @summary Changes the number of partitions in a topic.
          *
          * @param request ModifyPartitionNumRequest
          * @return ModifyPartitionNumResponse
@@ -4130,7 +4162,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 修改定时伸缩规则
+         * @summary Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request ModifyScheduledScalingRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4176,7 +4210,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 修改定时伸缩规则
+         * @summary Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request ModifyScheduledScalingRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4222,7 +4258,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 修改定时伸缩规则
+         * @summary Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request ModifyScheduledScalingRuleRequest
          * @return ModifyScheduledScalingRuleResponse
@@ -4234,7 +4272,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary 修改定时伸缩规则
+         * @summary Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.
+         *
+         * @description ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
          *
          * @param request ModifyScheduledScalingRuleRequest
          * @return ModifyScheduledScalingRuleResponse
@@ -4446,7 +4486,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Releases a pay-as-you-go Message Queue for Apache Kafka instance.
+         * @summary Releases a pay-as-you-go instance.
          *
          * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
          *
@@ -4490,7 +4530,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Releases a pay-as-you-go Message Queue for Apache Kafka instance.
+         * @summary Releases a pay-as-you-go instance.
          *
          * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
          *
@@ -4534,7 +4574,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Releases a pay-as-you-go Message Queue for Apache Kafka instance.
+         * @summary Releases a pay-as-you-go instance.
          *
          * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
          *
@@ -4548,7 +4588,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         }
 
         /**
-         * @summary Releases a pay-as-you-go Message Queue for Apache Kafka instance.
+         * @summary Releases a pay-as-you-go instance.
          *
          * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
          *

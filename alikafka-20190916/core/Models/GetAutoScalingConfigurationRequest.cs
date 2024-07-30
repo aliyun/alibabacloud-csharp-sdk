@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetAutoScalingConfigurationRequest : TeaModel {
         /// <summary>
+        /// The instance ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// The ID of the region where the instance resides.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

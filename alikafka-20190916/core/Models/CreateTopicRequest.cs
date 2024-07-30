@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The additional configurations.
         /// 
-        /// *   The value of this parameter must be in JSON format.
-        /// *   The key must be **replications**. The value indicates the number of replicas for the topic. The value must be an integer that ranges from 1 to 3.
-        /// *   This parameter is available only when **LocalTopic** is set to **true**, or the instance is of the **Open Source Edition (Local Disk)**.****
+        /// *   The value must be in JSON format.
+        /// *   Set Key to **replications**. This value specifies the number of replicas of the topic. The value must be an integer that ranges from 1 to 3.
+        /// *   You can configure this parameter only if you set **LocalTopic** to **true** or specify **Open Source Edition (Local Disk)** as the instance edition.****
         /// 
-        /// > If you specify this parameter, **ReplicationFactor** does not take effect.
+        /// >  If you specify replications in this parameter, **ReplicationFactor** does not take effect.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]

@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string ConsumerId { get; set; }
 
+        [NameInMap("HideLastTimestamp")]
+        [Validation(Required=false)]
+        public bool? HideLastTimestamp { get; set; }
+
         /// <summary>
         /// The ID of the instance.
         /// 

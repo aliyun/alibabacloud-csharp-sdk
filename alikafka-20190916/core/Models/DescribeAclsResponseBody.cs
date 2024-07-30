@@ -28,15 +28,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public List<DescribeAclsResponseBodyKafkaAclListKafkaAclVO> KafkaAclVO { get; set; }
             public class DescribeAclsResponseBodyKafkaAclListKafkaAclVO : TeaModel {
                 /// <summary>
-                /// The operation type. Valid values:
-                /// 
-                /// *   **Write**
-                /// *   **Read**
+                /// The types of operations allowed by the ACL. Separate multiple operation types with commas (,).
+                /// - Valid values:
+                /// - Write
+                /// - Read
+                /// - Describe: reads of transactional IDs.
+                /// - IdempotentWrite: idempotent data writes to clusters.
+                /// - IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
+                /// - DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.
+                /// > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
                 /// </summary>
                 [NameInMap("AclOperationType")]
                 [Validation(Required=false)]
                 public string AclOperationType { get; set; }
 
+                /// <summary>
+                /// The authorization method. Valid values:
+                /// - DENY
+                /// - ALLOW
+                /// > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+                /// </summary>
                 [NameInMap("AclPermissionType")]
                 [Validation(Required=false)]
                 public string AclPermissionType { get; set; }

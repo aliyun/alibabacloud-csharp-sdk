@@ -188,6 +188,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string Topic { get; set; }
 
+                /// <summary>
+                /// The topic configuration.
+                /// </summary>
                 [NameInMap("TopicConfig")]
                 [Validation(Required=false)]
                 public string TopicConfig { get; set; }
