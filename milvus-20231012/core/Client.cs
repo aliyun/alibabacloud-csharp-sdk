@@ -807,6 +807,10 @@ namespace AlibabaCloud.SDK.Milvus20231012
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cidr))
+            {
+                query["Cidr"] = request.Cidr;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentType))
             {
                 query["ComponentType"] = request.ComponentType;
@@ -851,6 +855,10 @@ namespace AlibabaCloud.SDK.Milvus20231012
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cidr))
+            {
+                query["Cidr"] = request.Cidr;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentType))
             {
                 query["ComponentType"] = request.ComponentType;

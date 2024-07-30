@@ -12,6 +12,13 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         /// <summary>
         /// This parameter is required.
         /// </summary>
+        [NameInMap("Cidr")]
+        [Validation(Required=false)]
+        public string Cidr { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ComponentType")]
         [Validation(Required=false)]
         public string ComponentType { get; set; }
@@ -23,6 +30,9 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PublicNetworkEnabled")]
         [Validation(Required=false)]
         public bool? PublicNetworkEnabled { get; set; }
