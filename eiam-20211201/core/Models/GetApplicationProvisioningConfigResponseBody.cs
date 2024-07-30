@@ -64,9 +64,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// Client-side rendering, Valid values: 
-            /// - standard：standard mode.
-            /// - template：template mode.
+            /// The rendering mode of the account synchronization page. Valid values:
+            /// 
+            /// *   standard: standard mode
+            /// *   template: template mode
             /// </summary>
             [NameInMap("ConfigOperateMode")]
             [Validation(Required=false)]
@@ -233,7 +234,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

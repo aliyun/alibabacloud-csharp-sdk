@@ -60,8 +60,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.
-            /// 
-            /// *
             /// </summary>
             [NameInMap("GroupSourceType")]
             [Validation(Required=false)]

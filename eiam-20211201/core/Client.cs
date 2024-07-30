@@ -4450,7 +4450,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
-         * @summary Queries the configuration of the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).
+         * @summary Queries the configuration of the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).
          *
          * @param request GetApplicationProvisioningConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4488,7 +4488,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
-         * @summary Queries the configuration of the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).
+         * @summary Queries the configuration of the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).
          *
          * @param request GetApplicationProvisioningConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4526,7 +4526,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
-         * @summary Queries the configuration of the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).
+         * @summary Queries the configuration of the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).
          *
          * @param request GetApplicationProvisioningConfigRequest
          * @return GetApplicationProvisioningConfigResponse
@@ -4538,7 +4538,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
-         * @summary Queries the configuration of the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).
+         * @summary Queries the configuration of the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).
          *
          * @param request GetApplicationProvisioningConfigRequest
          * @return GetApplicationProvisioningConfigResponse
@@ -5891,6 +5891,106 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRootOrganizationalUnitWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询同步任务
+         *
+         * @param request GetSynchronizationJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSynchronizationJobResponse
+         */
+        public GetSynchronizationJobResponse GetSynchronizationJobWithOptions(GetSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizationJobId))
+            {
+                query["SynchronizationJobId"] = request.SynchronizationJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSynchronizationJob",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSynchronizationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询同步任务
+         *
+         * @param request GetSynchronizationJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSynchronizationJobResponse
+         */
+        public async Task<GetSynchronizationJobResponse> GetSynchronizationJobWithOptionsAsync(GetSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizationJobId))
+            {
+                query["SynchronizationJobId"] = request.SynchronizationJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSynchronizationJob",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询同步任务
+         *
+         * @param request GetSynchronizationJobRequest
+         * @return GetSynchronizationJobResponse
+         */
+        public GetSynchronizationJobResponse GetSynchronizationJob(GetSynchronizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSynchronizationJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询同步任务
+         *
+         * @param request GetSynchronizationJobRequest
+         * @return GetSynchronizationJobResponse
+         */
+        public async Task<GetSynchronizationJobResponse> GetSynchronizationJobAsync(GetSynchronizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSynchronizationJobWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -8198,6 +8298,178 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
+         * @summary 查询同步任务
+         *
+         * @param request ListSynchronizationJobsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSynchronizationJobsResponse
+         */
+        public ListSynchronizationJobsResponse ListSynchronizationJobsWithOptions(ListSynchronizationJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetIds))
+            {
+                query["TargetIds"] = request.TargetIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSynchronizationJobs",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSynchronizationJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询同步任务
+         *
+         * @param request ListSynchronizationJobsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSynchronizationJobsResponse
+         */
+        public async Task<ListSynchronizationJobsResponse> ListSynchronizationJobsWithOptionsAsync(ListSynchronizationJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetIds))
+            {
+                query["TargetIds"] = request.TargetIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSynchronizationJobs",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSynchronizationJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询同步任务
+         *
+         * @param request ListSynchronizationJobsRequest
+         * @return ListSynchronizationJobsResponse
+         */
+        public ListSynchronizationJobsResponse ListSynchronizationJobs(ListSynchronizationJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSynchronizationJobsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询同步任务
+         *
+         * @param request ListSynchronizationJobsRequest
+         * @return ListSynchronizationJobsResponse
+         */
+        public async Task<ListSynchronizationJobsResponse> ListSynchronizationJobsAsync(ListSynchronizationJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSynchronizationJobsWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the details of accounts in Identity as a Service (IDaaS) Employee IAM (EIAM) by page.
          *
          * @param request ListUsersRequest
@@ -9398,6 +9670,114 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
+         * @summary 运行同步任务
+         *
+         * @param request RunSynchronizationJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunSynchronizationJobResponse
+         */
+        public RunSynchronizationJobResponse RunSynchronizationJobWithOptions(RunSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSynchronizationJob",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSynchronizationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 运行同步任务
+         *
+         * @param request RunSynchronizationJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunSynchronizationJobResponse
+         */
+        public async Task<RunSynchronizationJobResponse> RunSynchronizationJobWithOptionsAsync(RunSynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSynchronizationJob",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 运行同步任务
+         *
+         * @param request RunSynchronizationJobRequest
+         * @return RunSynchronizationJobResponse
+         */
+        public RunSynchronizationJobResponse RunSynchronizationJob(RunSynchronizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunSynchronizationJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 运行同步任务
+         *
+         * @param request RunSynchronizationJobRequest
+         * @return RunSynchronizationJobResponse
+         */
+        public async Task<RunSynchronizationJobResponse> RunSynchronizationJobAsync(RunSynchronizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunSynchronizationJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Configures the permissions of the Developer API feature of an Employee Identity and Access Management (EIAM) application.
          *
          * @param request SetApplicationGrantScopeRequest
@@ -9506,7 +9886,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
-         * @summary Configures the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).
+         * @summary Configures the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).
          *
          * @param request SetApplicationProvisioningConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9560,7 +9940,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
-         * @summary Configures the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).
+         * @summary Configures the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).
          *
          * @param request SetApplicationProvisioningConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9614,7 +9994,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
-         * @summary Configures the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).
+         * @summary Configures the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).
          *
          * @param request SetApplicationProvisioningConfigRequest
          * @return SetApplicationProvisioningConfigResponse
@@ -9626,7 +10006,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         }
 
         /**
-         * @summary Configures the account synchronization feature for an application in Identity as a Service (IDaaS) Employee IAM (EIAM).
+         * @summary Configures the account synchronization feature for an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).
          *
          * @param request SetApplicationProvisioningConfigRequest
          * @return SetApplicationProvisioningConfigResponse

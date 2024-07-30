@@ -8,24 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
-    public class GetApplicationProvisioningConfigRequest : TeaModel {
+    public class GetSynchronizationJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the application.
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("ApplicationId")]
-        [Validation(Required=false)]
-        public string ApplicationId { get; set; }
-
-        /// <summary>
-        /// The instance ID.
+        /// IDaaS EIAM实例的ID。
         /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// 同步任务ID
+        /// 
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("SynchronizationJobId")]
+        [Validation(Required=false)]
+        public string SynchronizationJobId { get; set; }
 
     }
 
