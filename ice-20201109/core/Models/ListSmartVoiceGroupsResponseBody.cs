@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
+                [NameInMap("SupportSampleRate")]
+                [Validation(Required=false)]
+                public string SupportSampleRate { get; set; }
+
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
