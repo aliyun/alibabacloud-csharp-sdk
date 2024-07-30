@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmSummaryRequest : TeaModel {
+        /// <summary>
+        /// The language of the response. Valid values:
+        /// 
+        /// *   zh-CN: Chinese
+        /// *   en-US: English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }

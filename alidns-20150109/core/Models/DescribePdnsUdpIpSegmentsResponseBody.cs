@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public string TotalPages { get; set; }
+
     }
 
 }
