@@ -2075,6 +2075,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarSccTimeoutAction))
+            {
+                query["PolarSccTimeoutAction"] = request.PolarSccTimeoutAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarSccWaitTimeout))
+            {
+                query["PolarSccWaitTimeout"] = request.PolarSccWaitTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadWriteMode))
             {
                 query["ReadWriteMode"] = request.ReadWriteMode;
@@ -2086,6 +2094,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SccMode))
+            {
+                query["SccMode"] = request.SccMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2153,6 +2165,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarSccTimeoutAction))
+            {
+                query["PolarSccTimeoutAction"] = request.PolarSccTimeoutAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarSccWaitTimeout))
+            {
+                query["PolarSccWaitTimeout"] = request.PolarSccWaitTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadWriteMode))
             {
                 query["ReadWriteMode"] = request.ReadWriteMode;
@@ -2164,6 +2184,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SccMode))
+            {
+                query["SccMode"] = request.SccMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16299,6 +16323,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarSccTimeoutAction))
+            {
+                query["PolarSccTimeoutAction"] = request.PolarSccTimeoutAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarSccWaitTimeout))
+            {
+                query["PolarSccWaitTimeout"] = request.PolarSccWaitTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadWriteMode))
             {
                 query["ReadWriteMode"] = request.ReadWriteMode;
@@ -16310,6 +16342,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SccMode))
+            {
+                query["SccMode"] = request.SccMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16373,6 +16409,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarSccTimeoutAction))
+            {
+                query["PolarSccTimeoutAction"] = request.PolarSccTimeoutAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarSccWaitTimeout))
+            {
+                query["PolarSccWaitTimeout"] = request.PolarSccWaitTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadWriteMode))
             {
                 query["ReadWriteMode"] = request.ReadWriteMode;
@@ -16384,6 +16428,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SccMode))
+            {
+                query["SccMode"] = request.SccMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

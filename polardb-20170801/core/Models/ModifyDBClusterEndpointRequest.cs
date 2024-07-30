@@ -132,6 +132,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PolarSccTimeoutAction")]
+        [Validation(Required=false)]
+        public string PolarSccTimeoutAction { get; set; }
+
+        [NameInMap("PolarSccWaitTimeout")]
+        [Validation(Required=false)]
+        public string PolarSccWaitTimeout { get; set; }
+
         /// <summary>
         /// The read/write mode. Valid values:
         /// 
@@ -149,6 +157,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SccMode")]
+        [Validation(Required=false)]
+        public string SccMode { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterServerlessConfResponseBody : TeaModel {
+        [NameInMap("AgileScaleMax")]
+        [Validation(Required=false)]
+        public string AgileScaleMax { get; set; }
+
         /// <summary>
         /// Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:
         /// 
@@ -91,6 +95,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("Switchs")]
         [Validation(Required=false)]
         public string Switchs { get; set; }
+
+        [NameInMap("TraditionalScaleMaxThreshold")]
+        [Validation(Required=false)]
+        public string TraditionalScaleMaxThreshold { get; set; }
 
     }
 

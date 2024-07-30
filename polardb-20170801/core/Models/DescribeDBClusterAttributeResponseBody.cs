@@ -223,6 +223,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string MemorySize { get; set; }
 
+            [NameInMap("MirrorInsName")]
+            [Validation(Required=false)]
+            public string MirrorInsName { get; set; }
+
             [NameInMap("Orca")]
             [Validation(Required=false)]
             public string Orca { get; set; }

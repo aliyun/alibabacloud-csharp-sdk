@@ -169,6 +169,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Nodes { get; set; }
 
+            [NameInMap("PolarSccTimeoutAction")]
+            [Validation(Required=false)]
+            public string PolarSccTimeoutAction { get; set; }
+
+            [NameInMap("PolarSccWaitTimeout")]
+            [Validation(Required=false)]
+            public string PolarSccWaitTimeout { get; set; }
+
             /// <summary>
             /// The read/write mode. Valid values:
             /// 
@@ -178,6 +186,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("ReadWriteMode")]
             [Validation(Required=false)]
             public string ReadWriteMode { get; set; }
+
+            [NameInMap("SccMode")]
+            [Validation(Required=false)]
+            public string SccMode { get; set; }
 
         }
 
