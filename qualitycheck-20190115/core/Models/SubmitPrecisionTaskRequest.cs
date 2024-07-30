@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class SubmitPrecisionTaskRequest : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// baseMeAgentId
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>&quot;{&quot;name&quot;:&quot;test&quot;,&quot;dataSetId&quot;:1865}&quot;</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JsonStr")]
         [Validation(Required=false)]

@@ -10,22 +10,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class AddRuleV4Request : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// baseMeAgentId
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("IsCopy")]
         [Validation(Required=false)]
         public bool? IsCopy { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JsonStrForRule")]
         [Validation(Required=false)]

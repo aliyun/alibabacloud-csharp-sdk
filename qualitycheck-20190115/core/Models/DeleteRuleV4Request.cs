@@ -10,25 +10,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class DeleteRuleV4Request : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// baseMeAgentId
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("ForceDelete")]
         [Validation(Required=false)]
         public bool? ForceDelete { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

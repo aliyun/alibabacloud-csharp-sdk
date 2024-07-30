@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class DeleteTaskAssignRuleRequest : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// baseMeAgentId
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;ruleId&quot;: 24}</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JsonStr")]
         [Validation(Required=false)]

@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UpdateSyncQualityCheckDataRequest : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// baseMeAgentId
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;tid&quot;:&quot;xxx&quot;}</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JsonStr")]
         [Validation(Required=false)]

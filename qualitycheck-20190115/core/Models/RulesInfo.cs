@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class RulesInfo : TeaModel {
-        /// <summary>
-        /// <b>if can be null:</b>
-        /// <c>true</c>
-        /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public List<ConditionBasicInfo> Conditions { get; set; }
@@ -21,10 +17,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public int? Count { get; set; }
 
-        /// <summary>
-        /// <b>if can be null:</b>
-        /// <c>true</c>
-        /// </summary>
         [NameInMap("Dialogues")]
         [Validation(Required=false)]
         public List<RuleTestDialogue> Dialogues { get; set; }
