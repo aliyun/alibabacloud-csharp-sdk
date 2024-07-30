@@ -18,20 +18,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string DocumentIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>79c0aly8zw</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IndexId")]
         [Validation(Required=false)]
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>DATA_CENTER_FILE</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,20 +11,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class DeleteIndexDocumentShrinkRequest : TeaModel {
+    public class AddCategoryRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("DocumentIds")]
+        [NameInMap("CategoryName")]
         [Validation(Required=false)]
-        public string DocumentIdsShrink { get; set; }
+        public string CategoryName { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("IndexId")]
+        [NameInMap("CategoryType")]
         [Validation(Required=false)]
-        public string IndexId { get; set; }
+        public string CategoryType { get; set; }
+
+        [NameInMap("ParentCategoryId")]
+        [Validation(Required=false)]
+        public string ParentCategoryId { get; set; }
 
     }
 

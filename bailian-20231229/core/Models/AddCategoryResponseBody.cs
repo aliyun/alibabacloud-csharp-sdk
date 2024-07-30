@@ -8,32 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class RetrieveResponseBody : TeaModel {
+    public class AddCategoryResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public RetrieveResponseBodyData Data { get; set; }
-        public class RetrieveResponseBodyData : TeaModel {
-            [NameInMap("Nodes")]
+        public AddCategoryResponseBodyData Data { get; set; }
+        public class AddCategoryResponseBodyData : TeaModel {
+            [NameInMap("CategoryId")]
             [Validation(Required=false)]
-            public List<RetrieveResponseBodyDataNodes> Nodes { get; set; }
-            public class RetrieveResponseBodyDataNodes : TeaModel {
-                [NameInMap("Metadata")]
-                [Validation(Required=false)]
-                public object Metadata { get; set; }
+            public string CategoryId { get; set; }
 
-                [NameInMap("Score")]
-                [Validation(Required=false)]
-                public double? Score { get; set; }
-
-                [NameInMap("Text")]
-                [Validation(Required=false)]
-                public string Text { get; set; }
-
-            }
+            [NameInMap("CategoryName")]
+            [Validation(Required=false)]
+            public string CategoryName { get; set; }
 
         }
 

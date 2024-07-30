@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class SubmitIndexJobRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>79c0aly8zw</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IndexId")]
         [Validation(Required=false)]

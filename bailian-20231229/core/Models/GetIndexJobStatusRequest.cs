@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetIndexJobStatusRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>79c0aly8zw</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IndexId")]
         [Validation(Required=false)]
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>20230718xxxx-146c93bf</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
