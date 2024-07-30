@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
+                    [NameInMap("ContentList")]
+                    [Validation(Required=false)]
+                    public string ContentList { get; set; }
+
                     /// <summary>
                     /// The match field.
                     /// </summary>

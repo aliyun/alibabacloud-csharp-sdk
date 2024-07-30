@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ModifyHeadersRequest : TeaModel {
         /// <summary>
-        /// The key-value pair of the custom header. Key indicates the header name and Value indicates the header value. You can specify up to five key-value pairs. The key-value pairs can be up to 200 characters in length.
+        /// The key-value pair of the custom header. The key specifies the header name, and the value specifies the header value. You can specify up to five key-value pairs. The key-value pairs can be up to 200 characters in length.
         /// 
         /// Take note of the following items:
         /// 
         /// *   Do not use X-Forwarded-ClientSrcPort as a custom header.
-        /// *   Do not use a standard HTTP header such as User-Agent. If you use a standard HTTP header, the original header may be overwritten.
+        /// *   Do not use a standard HTTP header such as User-Agent. Otherwise, the original header may be overwritten.
         /// 
-        /// > If you set Key to X-Forwarded-ClientSrcPort, the actual source port of the client that accesses Anti-DDoS Pro or Anti-DDoS Premium (a Layer 7 proxy) is obtained. In this case, the Value is "".
+        /// >  If you specify a key of X-Forwarded-ClientSrcPort, the system obtains the originating port of the client that accesses Anti-DDoS Proxy (a Layer 7 proxy). In this case, the value is an empty string.
         /// 
         /// This parameter is required.
         /// </summary>

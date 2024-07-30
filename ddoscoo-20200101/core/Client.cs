@@ -6750,7 +6750,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary 查询目的端口事件
+         * @summary Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.
          *
          * @param request DescribeDestinationPortEventRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6800,7 +6800,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary 查询目的端口事件
+         * @summary Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.
          *
          * @param request DescribeDestinationPortEventRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6850,7 +6850,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary 查询目的端口事件
+         * @summary Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.
          *
          * @param request DescribeDestinationPortEventRequest
          * @return DescribeDestinationPortEventResponse
@@ -6862,7 +6862,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary 查询目的端口事件
+         * @summary Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.
          *
          * @param request DescribeDestinationPortEventRequest
          * @return DescribeDestinationPortEventResponse
