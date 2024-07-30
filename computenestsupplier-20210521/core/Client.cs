@@ -1078,7 +1078,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建代销申请
+         * @summary Create  Service resell application.
          *
          * @param request CreateServiceUsageRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1120,7 +1120,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建代销申请
+         * @summary Create  Service resell application.
          *
          * @param request CreateServiceUsageRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1162,7 +1162,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建代销申请
+         * @summary Create  Service resell application.
          *
          * @param request CreateServiceUsageRequest
          * @return CreateServiceUsageResponse
@@ -1174,7 +1174,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 创建代销申请
+         * @summary Create  Service resell application.
          *
          * @param request CreateServiceUsageRequest
          * @return CreateServiceUsageResponse
@@ -4078,6 +4078,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Remove  service shared account.
+         *
          * @param request RemoveServiceSharedAccountsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return RemoveServiceSharedAccountsResponse
@@ -4126,6 +4128,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Remove  service shared account.
+         *
          * @param request RemoveServiceSharedAccountsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return RemoveServiceSharedAccountsResponse
@@ -4174,6 +4178,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Remove  service shared account.
+         *
          * @param request RemoveServiceSharedAccountsRequest
          * @return RemoveServiceSharedAccountsResponse
          */
@@ -4184,6 +4190,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Remove  service shared account.
+         *
          * @param request RemoveServiceSharedAccountsRequest
          * @return RemoveServiceSharedAccountsResponse
          */

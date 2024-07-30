@@ -398,6 +398,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public UpdateServiceRequestUpdateOption UpdateOption { get; set; }
         public class UpdateServiceRequestUpdateOption : TeaModel {
+            [NameInMap("UpdateArtifact")]
+            [Validation(Required=false)]
+            public bool? UpdateArtifact { get; set; }
+
             /// <summary>
             /// The options for update the service. Valid values:
             /// - CODE
