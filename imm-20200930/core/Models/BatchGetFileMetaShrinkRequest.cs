@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string URIsShrink { get; set; }
 
+        [NameInMap("WithFields")]
+        [Validation(Required=false)]
+        public string WithFieldsShrink { get; set; }
+
     }
 
 }

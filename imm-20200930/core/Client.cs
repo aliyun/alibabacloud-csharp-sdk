@@ -693,6 +693,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.URIsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.URIs, "URIs", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WithFields))
+            {
+                request.WithFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WithFields, "WithFields", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
@@ -705,6 +709,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URIsShrink))
             {
                 query["URIs"] = request.URIsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
+            {
+                query["WithFields"] = request.WithFieldsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -741,6 +749,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.URIsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.URIs, "URIs", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WithFields))
+            {
+                request.WithFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WithFields, "WithFields", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
@@ -753,6 +765,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URIsShrink))
             {
                 query["URIs"] = request.URIsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
+            {
+                query["WithFields"] = request.WithFieldsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9320,13 +9336,19 @@ namespace AlibabaCloud.SDK.Imm20200930
         /**
          * @summary 获取文件元信息
          *
-         * @param request GetFileMetaRequest
+         * @param tmpReq GetFileMetaRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetFileMetaResponse
          */
-        public GetFileMetaResponse GetFileMetaWithOptions(GetFileMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetFileMetaResponse GetFileMetaWithOptions(GetFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetFileMetaShrinkRequest request = new GetFileMetaShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WithFields))
+            {
+                request.WithFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WithFields, "WithFields", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
@@ -9339,6 +9361,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URI))
             {
                 query["URI"] = request.URI;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
+            {
+                query["WithFields"] = request.WithFieldsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9362,13 +9388,19 @@ namespace AlibabaCloud.SDK.Imm20200930
         /**
          * @summary 获取文件元信息
          *
-         * @param request GetFileMetaRequest
+         * @param tmpReq GetFileMetaRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetFileMetaResponse
          */
-        public async Task<GetFileMetaResponse> GetFileMetaWithOptionsAsync(GetFileMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetFileMetaResponse> GetFileMetaWithOptionsAsync(GetFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetFileMetaShrinkRequest request = new GetFileMetaShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WithFields))
+            {
+                request.WithFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WithFields, "WithFields", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
@@ -9381,6 +9413,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URI))
             {
                 query["URI"] = request.URI;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
+            {
+                query["WithFields"] = request.WithFieldsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

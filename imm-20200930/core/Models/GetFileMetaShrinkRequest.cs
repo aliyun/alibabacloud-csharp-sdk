@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class GetFileMetaRequest : TeaModel {
+    public class GetFileMetaShrinkRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("WithFields")]
         [Validation(Required=false)]
-        public List<string> WithFields { get; set; }
+        public string WithFieldsShrink { get; set; }
 
     }
 

@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<string> URIs { get; set; }
 
+        [NameInMap("WithFields")]
+        [Validation(Required=false)]
+        public List<string> WithFields { get; set; }
+
     }
 
 }
