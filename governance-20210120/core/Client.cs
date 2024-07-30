@@ -621,5 +621,129 @@ namespace AlibabaCloud.SDK.Governance20210120
             return await ListEnrolledAccountsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 更新账号工厂基线
+         *
+         * @param request UpdateAccountFactoryBaselineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateAccountFactoryBaselineResponse
+         */
+        public UpdateAccountFactoryBaselineResponse UpdateAccountFactoryBaselineWithOptions(UpdateAccountFactoryBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineId))
+            {
+                query["BaselineId"] = request.BaselineId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineItems))
+            {
+                query["BaselineItems"] = request.BaselineItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineName))
+            {
+                query["BaselineName"] = request.BaselineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAccountFactoryBaseline",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAccountFactoryBaselineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新账号工厂基线
+         *
+         * @param request UpdateAccountFactoryBaselineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateAccountFactoryBaselineResponse
+         */
+        public async Task<UpdateAccountFactoryBaselineResponse> UpdateAccountFactoryBaselineWithOptionsAsync(UpdateAccountFactoryBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineId))
+            {
+                query["BaselineId"] = request.BaselineId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineItems))
+            {
+                query["BaselineItems"] = request.BaselineItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineName))
+            {
+                query["BaselineName"] = request.BaselineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAccountFactoryBaseline",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAccountFactoryBaselineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新账号工厂基线
+         *
+         * @param request UpdateAccountFactoryBaselineRequest
+         * @return UpdateAccountFactoryBaselineResponse
+         */
+        public UpdateAccountFactoryBaselineResponse UpdateAccountFactoryBaseline(UpdateAccountFactoryBaselineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAccountFactoryBaselineWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 更新账号工厂基线
+         *
+         * @param request UpdateAccountFactoryBaselineRequest
+         * @return UpdateAccountFactoryBaselineResponse
+         */
+        public async Task<UpdateAccountFactoryBaselineResponse> UpdateAccountFactoryBaselineAsync(UpdateAccountFactoryBaselineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAccountFactoryBaselineWithOptionsAsync(request, runtime);
+        }
+
     }
 }
