@@ -8,11 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class ClearMajorProtectionBlackIpRequest : TeaModel {
+    public class DescribeHybridCloudClusterRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the Web Application Firewall (WAF) instance.
+        /// The ID of the hybrid cloud cluster.
         /// 
-        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public long? ClusterId { get; set; }
+
+        /// <summary>
+        /// The ID of the WAF instance.
+        /// 
+        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -21,10 +30,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region where the WAF instance resides. Valid values:
+        /// The region in which the WAF instance is deployed. Valid value:
         /// 
-        /// *   **cn-hangzhou:** the Chinese mainland.
-        /// *   **ap-southeast-1:** outside the Chinese mainland.
+        /// *   **cn-hangzhou**: Chinese mainland.
+        /// *   **ap-southeast-1**: outside the Chinese mainland.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -38,22 +47,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the IP address blacklist rule for major event protection.
+        /// The type of the rule. Valid values:
+        /// 
+        /// *   **pullin**: The traffic redirection rule of the hybrid cloud cluster.
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("RuleId")]
+        [NameInMap("RuleType")]
         [Validation(Required=false)]
-        public long? RuleId { get; set; }
-
-        /// <summary>
-        /// The ID of the IP address blacklist rule template for major event protection.
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public long? TemplateId { get; set; }
+        public string RuleType { get; set; }
 
     }
 

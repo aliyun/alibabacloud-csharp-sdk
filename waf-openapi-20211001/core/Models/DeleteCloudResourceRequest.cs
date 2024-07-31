@@ -8,12 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribePauseProtectionStatusRequest : TeaModel {
+    public class DeleteCloudResourceRequest : TeaModel {
         /// <summary>
-        /// The ID of the WAF instance.
-        /// 
-        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
@@ -21,21 +17,36 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region in which the WAF instance is deployed. Valid values:
-        /// 
-        /// *   **cn-hangzhou**: the Chinese mainland.
-        /// *   **ap-southeast-1**: outside the Chinese mainland.
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public int? Port { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud resource group.
+        /// This parameter is required.
         /// </summary>
+        [NameInMap("ResourceInstanceId")]
+        [Validation(Required=false)]
+        public string ResourceInstanceId { get; set; }
+
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ResourceProduct")]
+        [Validation(Required=false)]
+        public string ResourceProduct { get; set; }
 
     }
 

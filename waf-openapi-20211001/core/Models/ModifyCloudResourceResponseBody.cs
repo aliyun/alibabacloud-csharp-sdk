@@ -8,10 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class ModifyPauseProtectionStatusResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
+    public class ModifyCloudResourceResponseBody : TeaModel {
+        [NameInMap("CloudResource")]
+        [Validation(Required=false)]
+        public string CloudResource { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

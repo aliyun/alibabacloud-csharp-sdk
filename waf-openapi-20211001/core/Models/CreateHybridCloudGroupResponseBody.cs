@@ -8,9 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class ModifyPauseProtectionStatusResponseBody : TeaModel {
+    public class CreateHybridCloudGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the node group.
+        /// </summary>
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public long? Data { get; set; }
+
+        /// <summary>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

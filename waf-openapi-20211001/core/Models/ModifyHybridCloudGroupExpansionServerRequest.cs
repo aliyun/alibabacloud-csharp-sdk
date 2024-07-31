@@ -8,7 +8,25 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribePauseProtectionStatusRequest : TeaModel {
+    public class ModifyHybridCloudGroupExpansionServerRequest : TeaModel {
+        /// <summary>
+        /// The ID of the hybrid cloud cluster.
+        /// 
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public long? ClusterId { get; set; }
+
+        /// <summary>
+        /// The ID of the node group.
+        /// 
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public long? GroupId { get; set; }
+
         /// <summary>
         /// The ID of the WAF instance.
         /// 
@@ -21,9 +39,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region in which the WAF instance is deployed. Valid values:
+        /// The ID of the node.
         /// 
-        /// *   **cn-hangzhou**: the Chinese mainland.
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Mids")]
+        [Validation(Required=false)]
+        public string Mids { get; set; }
+
+        /// <summary>
+        /// The region in which the WAF instance is deployed. Valid value:
+        /// 
+        /// *   **cn-hangzhou**: Chinese mainland.
         /// *   **ap-southeast-1**: outside the Chinese mainland.
         /// </summary>
         [NameInMap("RegionId")]

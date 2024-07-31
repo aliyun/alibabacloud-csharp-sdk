@@ -1,3 +1,25 @@
+2024-07-31 Version: 4.5.0
+- Support API ChangeResourceGroup.
+- Support API CreateCloudResource.
+- Support API CreateHybridCloudGroup.
+- Support API DeleteCloudResource.
+- Support API DescribeCloudResourceAccessPortDetails.
+- Support API DescribeCloudResourceAccessedPorts.
+- Support API DescribeDefaultHttps.
+- Support API DescribeHybridCloudClusterRule.
+- Support API DescribeHybridCloudClusters.
+- Support API DescribeHybridCloudServerRegions.
+- Support API DescribeHybridCloudUnassignedMachines.
+- Support API ModifyCloudResource.
+- Support API ModifyDefaultHttps.
+- Support API ModifyHybridCloudClusterRule.
+- Support API ModifyHybridCloudGroup.
+- Support API ModifyHybridCloudGroupExpansionServer.
+- Support API ModifyHybridCloudGroupShrinkServer.
+- Support API ModifyHybridCloudSdkPullinStatus.
+- Support API ModifyHybridCloudServer.
+
+
 2024-07-09 Version: 4.4.0
 - Support API DescribeCnameCount.
 - Update API DescribeCloudResources: add param ResourceInstanceName.
