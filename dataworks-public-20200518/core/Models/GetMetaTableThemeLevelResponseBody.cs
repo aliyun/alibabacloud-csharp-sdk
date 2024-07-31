@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetMetaTableThemeLevelResponseBodyEntity Entity { get; set; }
         public class GetMetaTableThemeLevelResponseBodyEntity : TeaModel {
             /// <summary>
-            /// The information about the table level.
+            /// The information about the levels of the metatable.
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public List<GetMetaTableThemeLevelResponseBodyEntityLevel> Level { get; set; }
             public class GetMetaTableThemeLevelResponseBodyEntityLevel : TeaModel {
                 /// <summary>
-                /// The description of the table level.
+                /// The description of the level.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the table level.
+                /// The ID of the level.
                 /// </summary>
                 [NameInMap("LevelId")]
                 [Validation(Required=false)]
                 public long? LevelId { get; set; }
 
                 /// <summary>
-                /// The name of the table level.
+                /// The name of the level.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The type of the table level. Valid values:
+                /// The type of the level. Valid values:
                 /// 
                 /// *   1: indicates the logical level.
                 /// *   2: indicates the physical level.
@@ -57,38 +57,38 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The information about the table folder.
+            /// The information about the themes of the metatable.
             /// </summary>
             [NameInMap("Theme")]
             [Validation(Required=false)]
             public List<GetMetaTableThemeLevelResponseBodyEntityTheme> Theme { get; set; }
             public class GetMetaTableThemeLevelResponseBodyEntityTheme : TeaModel {
                 /// <summary>
-                /// The level of the table folder. Valid values:
+                /// The level of the theme. Valid values:
                 /// 
-                /// *   1: indicates a table folder of level 1.
-                /// *   2: indicates a table folder of level 2.
+                /// *   1
+                /// *   2
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public int? Level { get; set; }
 
                 /// <summary>
-                /// The name of the table folder.
+                /// The name of the theme.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the parent table folder.
+                /// The ID of the parent theme.
                 /// </summary>
                 [NameInMap("ParentId")]
                 [Validation(Required=false)]
                 public long? ParentId { get; set; }
 
                 /// <summary>
-                /// The ID of the table folder.
+                /// The ID of the theme.
                 /// </summary>
                 [NameInMap("ThemeId")]
                 [Validation(Required=false)]
@@ -99,35 +99,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can troubleshoot errors based on the ID.
+        /// The request ID. You can troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

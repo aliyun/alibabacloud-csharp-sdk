@@ -24,42 +24,42 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Bizdate { get; set; }
 
             /// <summary>
-            /// The time at which the DAG was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// The time when the DAG was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The user who created the DAG.
+            /// The creator.
             /// </summary>
             [NameInMap("CreateUser")]
             [Validation(Required=false)]
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// The ID of the DAG.
+            /// The DAG ID.
             /// </summary>
             [NameInMap("DagId")]
             [Validation(Required=false)]
             public long? DagId { get; set; }
 
             /// <summary>
-            /// The time at which the DAG finished running. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// The time when the DAG finished running.
             /// </summary>
             [NameInMap("FinishTime")]
             [Validation(Required=false)]
             public long? FinishTime { get; set; }
 
             /// <summary>
-            /// The time at which the DAG was scheduled to run.
+            /// The time when the DAG was scheduled to run.
             /// </summary>
             [NameInMap("Gmtdate")]
             [Validation(Required=false)]
             public long? Gmtdate { get; set; }
 
             /// <summary>
-            /// The time at which the DAG was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// The time when the DAG was last modified.
             /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? OpSeq { get; set; }
 
             /// <summary>
-            /// The ID of the workspace.
+            /// The workspace ID.
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// The time at which the DAG started to run.
+            /// The time when the DAG started to run.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG.
+            /// The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG. The value MANUAL indicates the DAG for a manually triggered workflow. The value SMOKE_TEST indicates the DAG for a smoke testing workflow. The value SUPPLY_DATA indicates the DAG for a data backfill instance. The value BUSINESS_PROCESS_DAG indicates the DAG for a one-time workflow.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -110,32 +110,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// The HTTP status code.
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

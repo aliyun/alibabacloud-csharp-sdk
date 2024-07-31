@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// The GUID of the metatable. Specify the GUID in the format of odps.{projectName}.{tableName}.
+        /// The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.
         /// 
         /// This parameter is required.
         /// </summary>

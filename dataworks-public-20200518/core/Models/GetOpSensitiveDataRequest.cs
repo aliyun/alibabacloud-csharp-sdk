@@ -19,19 +19,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// The parameters that you can specify to query the access records. Valid values:
+        /// The parameters that you can configure to query the access records. Valid values:
         /// 
-        /// *   dbType: the data type
-        /// *   instanceName: the name of the instance
-        /// *   databaseName: the name of the database
-        /// *   projectName: the name of the workspace
-        /// *   clusterName: the name of the cluster
+        /// *   dbType
+        /// *   instanceName
+        /// *   databaseName
+        /// *   projectName
+        /// *   clusterName
         /// 
-        /// The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the ABC Hologres instance:
+        /// The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC: [ {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"} ]
         /// 
-        /// {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"}
-        /// 
-        /// You must specify the parameters based on the compute engine that you use in your business.
+        /// You must configure the parameters based on the compute engine that you use in your business.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -42,15 +40,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The operation that is performed on the data. Valid values:
         /// 
-        /// *   SQL_SELECT: indicates that the data is accessed. For example, the SELECT statement is executed to query the data.
-        /// *   TUNNEL_DOWNLOAD: indicates that the data is downloaded. For example, a Tunnel command is run to download the data.
+        /// *   SQL_SELECT: specifies the data access operation. For example, execute a SELECT statement to query data.
+        /// *   TUNNEL_DOWNLOAD: specifies the data download operation. For example, run a Tunnel command to download data.
         /// </summary>
         [NameInMap("OpType")]
         [Validation(Required=false)]
         public string OpType { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Minimum value:1. Maximum value: 1000.
+        /// The page number. Minimum value: 1. Maximum value: 1000.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Minimum value: 1. Maximum value: 1000.
+        /// The number of entries per page. Minimum value: 1. Maximum value: 1000.
         /// 
         /// This parameter is required.
         /// </summary>

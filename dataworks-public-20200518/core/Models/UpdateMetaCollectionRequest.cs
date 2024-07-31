@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateMetaCollectionRequest : TeaModel {
         /// <summary>
-        /// The comment of the collection.
-        /// 
-        /// The comment must be 1 to 64 characters in length.
+        /// The comment of the collection. The comment must be 1 to 64 characters in length.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]

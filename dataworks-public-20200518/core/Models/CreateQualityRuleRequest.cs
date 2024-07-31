@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityRuleRequest : TeaModel {
         /// <summary>
-        /// The strength of the monitoring rule. Valid values: 0 and 1. 0 indicates that the monitoring rule is a weak rule. 1 indicates that the monitoring rule is a strong rule.
+        /// The strength type of the monitoring rule. Valid values: 0 and 1. The value 0 indicates that the monitoring rule is a weak rule. The value 1 indicates that the monitoring rule is a strong rule.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? BlockType { get; set; }
 
         /// <summary>
-        /// The ID of the checker.
+        /// The checker ID.
         /// </summary>
         [NameInMap("Checker")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.
+        /// The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is triggered, nodes are blocked.
         /// </summary>
         [NameInMap("CriticalThreshold")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// The expected value of the monitoring result.
+        /// The expected value.
         /// </summary>
         [NameInMap("ExpectValue")]
         [Validation(Required=false)]
@@ -63,14 +63,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MethodName { get; set; }
 
         /// <summary>
-        /// The comparison operator of the monitoring rule.
+        /// The comparison operator, such as >, >=, =, ≠, <, or <=.
+        /// 
+        /// > If you set the Checker parameter to 9, you must configure the Operator parameter.
         /// </summary>
         [NameInMap("Operator")]
         [Validation(Required=false)]
         public string Operator { get; set; }
 
         /// <summary>
-        /// Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. 0 indicates that the monitoring rule is not a dynamic threshold rule. 2 indicates that the monitoring rule is a dynamic threshold rule.
+        /// Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. The value 0 indicates that the monitoring rule is not a dynamic threshold rule. The value 2 indicates that the monitoring rule is a dynamic threshold rule.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -78,12 +80,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PredictType { get; set; }
 
+        /// <summary>
+        /// The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the compute engine instance or data source.
+        /// The name of the compute engine or data source.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -115,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The type of the monitoring rule. Valid values: 0, 1, and 2. 0 indicates that the monitoring rule is created by the system. 1 indicates that the monitoring rule is created by a user. 2 indicates that the monitoring rule is a workspace-level rule.
+        /// The type of the monitoring rule. Valid values: 0, 1, and 2. The value 0 indicates that the monitoring rule is created by the system. The value 1 indicates that the monitoring rule is created by a user. The value 2 indicates that the monitoring rule is a workspace-level rule.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -123,12 +128,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
+        /// <summary>
+        /// The variable settings inserted before the custom rule. Format: x=a,y=b.
+        /// </summary>
         [NameInMap("TaskSetting")]
         [Validation(Required=false)]
         public string TaskSetting { get; set; }
 
         /// <summary>
-        /// The ID of the template that is used to create the monitoring rule.
+        /// The template ID.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

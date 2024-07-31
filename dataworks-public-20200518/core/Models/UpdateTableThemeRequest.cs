@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableThemeRequest : TeaModel {
         /// <summary>
-        /// The name of the table folder.
+        /// The name of the theme.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// The workspace ID.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the table folder.
+        /// The ID of the theme.
         /// 
         /// This parameter is required.
         /// </summary>

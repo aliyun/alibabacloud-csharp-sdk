@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// Specifies whether to enable the automatic parsing feature for the file. Valid values:
         /// 
-        /// *   true: enables the automatic parsing feature for the file.
-        /// *   false: does not enable the automatic parsing feature for the file.
+        /// *   true
+        /// *   false
         /// 
         /// This parameter corresponds to the Analyze Code parameter that is displayed after Same Cycle is selected in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
         /// </summary>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? CreateFolderIfNotExists { get; set; }
 
         /// <summary>
-        /// The CRON expression that represents the automatic scheduling policy of the node. This parameter corresponds to the Cron Expression parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). After you configure the Scheduling Cycle and Run At parameters in the DataWorks console, DataWorks generates the value of the Cron Expression parameter.
+        /// The CRON expression that represents the periodic scheduling policy of the node. This parameter corresponds to the Cron Expression parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). After you configure the Scheduling Cycle and Scheduled time parameters in the DataWorks console, DataWorks generates the value of the Cron Expression parameter.
         /// 
         /// Examples:
         /// 
@@ -80,20 +80,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   CRON expression for a node that is scheduled to run every 10 minutes: `00 00/10 * * * ?`
         /// *   CRON expression for a node that is scheduled to run every 10 minutes from 08:00 to 17:00 every day: `00 00-59/10 8-17 * * * ?`
         /// *   CRON expression for a node that is scheduled to run at 00:20 on the first day of each month: `00 20 00 1 * ?`
-        /// *   CRON expression for a node that is scheduled to run every three months starting from 00:10 on January 1: `00 10 00 1 1-12/3 ?`
+        /// *   CRON expression for a node that is scheduled to run every three months from 00:10 on January 1: `00 10 00 1 1-12/3 ?`
         /// *   CRON expression for a node that is scheduled to run at 00:05 every Tuesday and Friday: `00 05 00 * * 2,5`
         /// 
         /// The scheduling system of DataWorks imposes the following limits on CRON expressions:
         /// 
-        /// *   A node can be scheduled to run at a minimum interval of 5 minutes.
-        /// *   A node can be scheduled to run at 00:05 every day at the earliest.
+        /// *   The minimum interval specified in a CRON expression to schedule a node is 5 minutes.
+        /// *   The earliest time specified in a CRON expression to schedule a node every day is 00:05.
         /// </summary>
         [NameInMap("CronExpress")]
         [Validation(Required=false)]
         public string CronExpress { get; set; }
 
         /// <summary>
-        /// The type of the scheduling cycle. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.
+        /// The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.
         /// 
         /// This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
         /// </summary>
@@ -112,15 +112,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The type of the cross-cycle scheduling dependency of the node. Valid values:
         /// 
         /// *   SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.
-        /// 
         /// *   CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.
-        /// 
         /// *   USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.
-        /// 
         /// *   NONE: No cross-cycle scheduling dependency type is selected for the node.
-        /// 
         /// *   USER_DEFINE_AND_SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle and the instances generated for one or more specified nodes in the previous cycle.
-        /// 
         /// *   CHILD_AND_SELF: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle and the instance generated for the node in the previous cycle.
         /// </summary>
         [NameInMap("DependentType")]
@@ -262,19 +257,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The identifier of the resource group that is used to run the node. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the available resource groups in the workspace.
+        /// The identifier of the resource group that is used to run the node. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the available resource groups in the workspace. The **Identifier** parameter in the response of the operation indicates the identifier of an available resource group.
+        /// 
+        /// >  You must make sure that the available resource groups in the response of the ListResourceGroups operation are associated with the workspace for which you want to create a file by calling the CreateFile operation.
         /// </summary>
         [NameInMap("ResourceGroupIdentifier")]
         [Validation(Required=false)]
         public string ResourceGroupIdentifier { get; set; }
 
         /// <summary>
-        /// The scheduling type of the inner node. Valid values:
+        /// The scheduling type of the node. Valid values:
         /// 
         /// *   NORMAL: The node is an auto triggered node.
         /// *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.
         /// *   PAUSE: The node is a paused node.
-        /// *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.
+        /// *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the scheduling system sets the status of the nodes to successful when the scheduling system starts to run the nodes.
         /// </summary>
         [NameInMap("SchedulerType")]
         [Validation(Required=false)]
@@ -283,14 +280,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The start time of automatic scheduling. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
-        /// This parameter corresponds to the Validity Period parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
+        /// Configuring this parameter is equivalent to specifying a start time for the Validity Period parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
         /// </summary>
         [NameInMap("StartEffectDate")]
         [Validation(Required=false)]
         public long? StartEffectDate { get; set; }
 
         /// <summary>
-        /// Specifies whether to immediately run a node after the node is deployed to the production environment.
+        /// Specifies whether to immediately run a node after the node is deployed.
         /// 
         /// This parameter is valid only for an EMR Spark Streaming node or an EMR Streaming SQL node. This parameter corresponds to the Start Method parameter in the Schedule section of the Configure tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
         /// </summary>
@@ -301,8 +298,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// Specifies whether to suspend the scheduling of the node. Valid values:
         /// 
-        /// *   true: suspends the scheduling of the node.
-        /// *   false: does not suspend the scheduling of the node.
+        /// *   true
+        /// *   false
         /// 
         /// This parameter corresponds to the Recurrence parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
         /// </summary>

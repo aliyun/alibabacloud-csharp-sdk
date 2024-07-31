@@ -26,9 +26,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// The advanced configurations of the node.
                 /// 
-                /// This parameter is valid only for an EMR Spark Streaming node or an EMR Streaming SQL node. This parameter corresponds to the Advanced Settings tab of the node in the [DataWorks console](https://workbench.data.aliyun.com/console).
+                /// This parameter is valid for an EMR node. This parameter corresponds to the Advanced Settings tab in the right-side navigation pane on the configuration tab of the node in the [DataWorks console](https://workbench.data.aliyun.com/console).
                 /// 
-                /// This parameter is configured in the JSON format.
+                /// >  You cannot configure advanced parameters for EMR Shell nodes.
+                /// 
+                /// For information about the advanced parameters of each type of EMR node, see [Develop EMR tasks](https://help.aliyun.com/document_detail/473077.html).
                 /// </summary>
                 [NameInMap("AdvancedSettings")]
                 [Validation(Required=false)]
@@ -286,7 +288,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// The output name of the parent file on which the current file depends.
                     /// 
-                    /// This parameter corresponds to the Output Name parameter under Parent Nodes after Same Cycle is selected in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
+                    /// This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes after Same Cycle is selected in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
                     /// </summary>
                     [NameInMap("Input")]
                     [Validation(Required=false)]

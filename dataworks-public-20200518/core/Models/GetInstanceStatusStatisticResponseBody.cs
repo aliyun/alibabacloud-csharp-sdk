@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceStatusStatisticResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// The total number of instances.
+            /// The total number of instances returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]

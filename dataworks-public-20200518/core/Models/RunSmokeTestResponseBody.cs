@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunSmokeTestResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the workflow.
+        /// The workflow ID.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public long? Data { get; set; }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// The request ID. You can use the ID to locate logs and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

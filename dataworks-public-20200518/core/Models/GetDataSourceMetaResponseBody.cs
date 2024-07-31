@@ -10,15 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataSourceMetaResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the metadata of the data source was retrieved. Valid values:
-        /// 
-        /// *   success: The metadata of the data source was retrieved.
-        /// *   fail: The metadata of the data source failed to be retrieved. You can troubleshoot issues based on the Message parameter.
+        /// The returned result.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataSourceMetaResponseBodyData Data { get; set; }
         public class GetDataSourceMetaResponseBodyData : TeaModel {
+            /// <summary>
+            /// The reason why the metadata of the data source fails to be obtained. If the metadata of the data source is obtained, no value is returned for this parameter.
+            /// </summary>
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
             /// <summary>
             /// The returned metadata of the data source. The returned metadata is in the JSON format.
             /// 
@@ -28,20 +32,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// 
             /// *   dbName: the name of the database in which the data source resides.
             /// *   schema: the schema of the database.
-            /// *   enable: indicates whether the database is available. A value of true indicates that the database is available. A value of false indicates that the database is unavailable.
+            /// *   enable: indicates whether the database is available. The valid values are true and false. The value true indicates that the database is available. The value false indicates that the database is unavailable.
             /// *   tableName: the name of the table in the database.
             /// *   tableInfos: the information about the table in the database.
             /// </summary>
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
             [NameInMap("Meta")]
             [Validation(Required=false)]
             public string Meta { get; set; }
 
             /// <summary>
-            /// The reason why the metadata of the data source failed to be retrieved. If the metadata of the data source was retrieved, this parameter is left empty.
+            /// Indicates whether the metadata of the data source is obtained. Valid values:
+            /// 
+            /// *   success: The metadata of the data source is obtained.
+            /// *   fail: The metadata of the data source failed to be obtained. You can troubleshoot issues based on the Message parameter.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -50,14 +53,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The information about the query operation.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The unique ID of the request. You can query logs and troubleshoot issues based on the unique ID.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

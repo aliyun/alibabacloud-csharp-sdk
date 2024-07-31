@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityRelativeNodeRequest : TeaModel {
         /// <summary>
-        /// The environment in which the compute engine instance runs. Valid values: DEV and PRD. The value DEV indicates the development environment, and the value PRD indicates the production environment.
+        /// The type of the compute engine or data source. Valid values:
+        /// 
+        /// *   cdh
+        /// *   analyticdb_for_mysql
+        /// *   odps
+        /// *   emr
+        /// *   hadoop
+        /// *   holodb
+        /// *   hybriddb_for_postgresql
         /// 
         /// This parameter is required.
         /// </summary>

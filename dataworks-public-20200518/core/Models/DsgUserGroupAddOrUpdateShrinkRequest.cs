@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgUserGroupAddOrUpdateShrinkRequest : TeaModel {
         /// <summary>
+        /// The information about the user group.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("UserGroups")]

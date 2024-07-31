@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The type of node that you want to query. Valid values:
         /// 
-        /// *   input: ancestor nodes
-        /// *   output: descendant nodes
+        /// *   input: ancestor node
+        /// *   output: descendant node
         /// 
         /// This parameter is required.
         /// </summary>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string IoType { get; set; }
 
         /// <summary>
-        /// The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.
+        /// The node ID. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// The environment of the workspace. Valid values: DEV and PROD. A value of DEV indicates the development environment. A value of PROD indicates the production environment.
+        /// The environment of the workspace. Valid values: DEV and PROD.
         /// 
         /// This parameter is required.
         /// </summary>

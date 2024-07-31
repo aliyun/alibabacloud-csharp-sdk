@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOpRiskDataRequest : TeaModel {
         /// <summary>
-        /// The date on which the access records were queried. Specify the value in the yyyyMMdd format.
+        /// The date on which access records were generated. Specify the value in the yyyyMMdd format.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,26 +19,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// The parameters that you can specify to query the access records. Valid values:
+        /// The parameters that you can configure to query the access records. Valid values:
         /// 
-        /// *   dbType: the data type
-        /// *   instanceName: the name of the instance
-        /// *   databaseName: the name of the database
-        /// *   projectName: the name of the workspace
-        /// *   clusterName: the name of the cluster
+        /// *   dbType
+        /// *   instanceName
+        /// *   databaseName
+        /// *   projectName
+        /// *   clusterName
         /// 
-        /// The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the ABC Hologres instance:
+        /// The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC: [ {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"} ]
         /// 
-        /// {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"}
-        /// 
-        /// You must specify the parameters based on the compute engine that you use in your business.
+        /// You must configure the parameters based on the compute engine that you use in your business.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Minimum value: 1.
+        /// The page number. Pages start from 1.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 1000.
+        /// The number of entries per page. Maximum value: 1000.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -56,10 +54,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The method that you use to identify risks.
+        /// The method that you use to identify risks. Valid values:
         /// 
         /// *   You can manually identify risks.
-        /// *   You can also use a risk rule to identify risks. You can go to the DataWorks console to obtain the name of the risk rule on the Custom Identification Rules page of Data Security Guard.
+        /// *   You can also use a sensitive data identification rule to identify risks. You can log on to the DataWorks console and go to the Risk Identification Rules page in Data Security Guard to obtain the name of the rule.
         /// </summary>
         [NameInMap("RiskType")]
         [Validation(Required=false)]

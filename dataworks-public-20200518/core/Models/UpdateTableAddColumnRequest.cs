@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableAddColumnRequest : TeaModel {
         /// <summary>
+        /// The list of fields.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Column")]

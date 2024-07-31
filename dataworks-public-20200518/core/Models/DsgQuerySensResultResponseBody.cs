@@ -9,34 +9,61 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgQuerySensResultResponseBody : TeaModel {
+        /// <summary>
+        /// The data returned.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public object Data { get; set; }
 
+        /// <summary>
+        /// The error code. The value is the same as that of ErrorCode.
+        /// </summary>
         [NameInMap("DynamicErrorCode")]
         [Validation(Required=false)]
         public string DynamicErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message. The value is the same as that of ErrorMessage.
+        /// </summary>
         [NameInMap("DynamicErrorMessage")]
         [Validation(Required=false)]
         public string DynamicErrorMessage { get; set; }
 
+        /// <summary>
+        /// The error code.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// The HTTP status code.
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful.
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

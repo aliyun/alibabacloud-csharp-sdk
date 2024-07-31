@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10. Maximum value: 20.
+        /// The number of entries per page. Default value: 10. Maximum value: 20.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -36,12 +36,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The DataWorks workspace ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the compute engine instance or data source. You can obtain the name from data source configurations.
+        /// The name of the compute engine or data source. You can obtain the name from data source configurations.
         /// 
         /// This parameter is required.
         /// </summary>

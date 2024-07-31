@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetPermissionApplyOrderDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.
+        /// The ID of the permission request order. You can call the [ListPermissionApplyOrders](https://help.aliyun.com/document_detail/211008.html) operation to obtain the ID.
         /// 
         /// This parameter is required.
         /// </summary>

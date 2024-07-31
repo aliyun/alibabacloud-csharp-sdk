@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public ListQualityResultsByRuleResponseBodyData Data { get; set; }
         public class ListQualityResultsByRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 10. Maximum value: 100.
+            /// The number of entries per page. Default value: 10. Maximum value: 100.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The monitoring results returned.
+            /// The returned monitoring results.
             /// </summary>
             [NameInMap("RuleChecks")]
             [Validation(Required=false)]
@@ -52,20 +52,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginTime { get; set; }
 
                 /// <summary>
-                /// The date on which the business was performed. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
+                /// The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
                 /// </summary>
                 [NameInMap("BizDate")]
                 [Validation(Required=false)]
                 public long? BizDate { get; set; }
 
                 /// <summary>
-                /// The type of the monitoring rule. The type of a monitoring rule indicates the importance of the rule. Valid values:
+                /// The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:
                 /// 
                 /// *   1: indicates that the monitoring rule is a strong rule.
-                /// 
-                /// *   0: indicates that the monitoring rule is a weak rule.
-                /// 
-                ///     You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.
+                /// *   0: indicates that the monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
                 /// </summary>
                 [NameInMap("BlockType")]
                 [Validation(Required=false)]
@@ -86,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? CheckResultStatus { get; set; }
 
                 /// <summary>
-                /// The ID of the checker.
+                /// The checker ID.
                 /// </summary>
                 [NameInMap("CheckerId")]
                 [Validation(Required=false)]
@@ -114,14 +111,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.
+                /// The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
                 /// </summary>
                 [NameInMap("CriticalThreshold")]
                 [Validation(Required=false)]
                 public float? CriticalThreshold { get; set; }
 
                 /// <summary>
-                /// The type of the scheduling cycle. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.
+                /// The scheduling frequency. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.
                 /// </summary>
                 [NameInMap("DateType")]
                 [Validation(Required=false)]
@@ -130,8 +127,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// Indicates whether the monitoring is discrete monitoring. Valid values:
                 /// 
-                /// *   true: indicates that the monitoring is discrete monitoring.
-                /// *   false: indicates that the monitoring is not discrete monitoring.
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("DiscreteCheck")]
                 [Validation(Required=false)]
@@ -159,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public float? ExpectValue { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The node ID.
                 /// </summary>
                 [NameInMap("ExternalId")]
                 [Validation(Required=false)]
@@ -175,15 +172,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// Indicates whether the monitoring is performed based on a fixed value. Valid values:
                 /// 
-                /// *   true: indicates that the monitoring is performed based on a fixed value.
-                /// *   false: indicates that the monitoring is performed based on a non-fixed value.
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("FixedCheck")]
                 [Validation(Required=false)]
                 public bool? FixedCheck { get; set; }
 
                 /// <summary>
-                /// The ID of the primary key.
+                /// The primary key ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -192,15 +189,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// Indicates whether the monitoring result is the same as the predicted result. Valid values:
                 /// 
-                /// *   true: indicates that the monitoring result is the same as the predicted result.
-                /// *   false: indicates that the monitoring result is different from the predicted result.
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("IsPrediction")]
                 [Validation(Required=false)]
                 public bool? IsPrediction { get; set; }
 
                 /// <summary>
-                /// The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.
+                /// The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.
                 /// </summary>
                 [NameInMap("LowerValue")]
                 [Validation(Required=false)]
@@ -214,7 +211,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string MatchExpression { get; set; }
 
                 /// <summary>
-                /// The method used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
+                /// The method used to collect sample data, such as such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
                 /// </summary>
                 [NameInMap("MethodName")]
                 [Validation(Required=false)]
@@ -227,19 +224,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string Op { get; set; }
 
+                /// <summary>
+                /// Indicates whether the monitoring rule is enabled.
+                /// </summary>
                 [NameInMap("Open")]
                 [Validation(Required=false)]
                 public bool? Open { get; set; }
 
                 /// <summary>
-                /// The name of the compute engine instance or data source for which data quality is monitored.
+                /// The name of the compute engine or data source for which data quality is monitored.
                 /// </summary>
                 [NameInMap("ProjectName")]
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// The field of the rule attribute. This field is the column name of the data source table that is monitored.
+                /// The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.
                 /// </summary>
                 [NameInMap("Property")]
                 [Validation(Required=false)]
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<ListQualityResultsByRuleResponseBodyDataRuleChecksReferenceValue> ReferenceValue { get; set; }
                 public class ListQualityResultsByRuleResponseBodyDataRuleChecksReferenceValue : TeaModel {
                     /// <summary>
-                    /// The date on which the business was performed. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
+                    /// The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
                     /// </summary>
                     [NameInMap("BizDate")]
                     [Validation(Required=false)]
@@ -311,14 +311,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// The sample values.
+                /// The current sample values.
                 /// </summary>
                 [NameInMap("SampleValue")]
                 [Validation(Required=false)]
                 public List<ListQualityResultsByRuleResponseBodyDataRuleChecksSampleValue> SampleValue { get; set; }
                 public class ListQualityResultsByRuleResponseBodyDataRuleChecksSampleValue : TeaModel {
                     /// <summary>
-                    /// The date on which the business was performed. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
+                    /// The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
                     /// </summary>
                     [NameInMap("BizDate")]
                     [Validation(Required=false)]
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The ID of the monitoring task.
+                /// The monitoring task ID.
                 /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
@@ -383,21 +383,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Trend { get; set; }
 
                 /// <summary>
-                /// The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.
+                /// The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.
                 /// </summary>
                 [NameInMap("UpperValue")]
                 [Validation(Required=false)]
                 public float? UpperValue { get; set; }
 
                 /// <summary>
-                /// The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.
+                /// The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.
                 /// </summary>
                 [NameInMap("WarningThreshold")]
                 [Validation(Required=false)]
                 public float? WarningThreshold { get; set; }
 
                 /// <summary>
-                /// The filter condition of the monitoring rule.
+                /// The filter condition of the monitoring task.
                 /// </summary>
                 [NameInMap("WhereCondition")]
                 [Validation(Required=false)]
@@ -415,35 +415,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

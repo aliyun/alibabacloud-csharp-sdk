@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ImportDataSourcesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the import operation.
+        /// The information about the imported data sources.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// Indicates whether the data sources were imported. Valid values:
             /// 
-            /// *   true: All the data sources were imported.
-            /// *   false: Some of the data sources failed to be imported. You can troubleshoot issues based on the Message parameter.
+            /// *   true: All data sources were imported.
+            /// *   false: Specific data sources failed to be imported. You can troubleshoot issues based on the Message parameter.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

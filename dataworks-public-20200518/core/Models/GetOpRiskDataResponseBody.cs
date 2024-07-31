@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOpRiskDataResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the risky sensitive data returned. The information includes totalCount and opRiskDatas.
-        /// 
-        /// opRiskDatas includes the following parameters:
+        /// The information about the high-risk sensitive data. The information includes totalCount and opRiskDatas. opRiskDatas includes the following parameters:
         /// 
         /// *   sensType: the type of the sensitive data
         /// *   sensLevel: the sensitivity level of the sensitive data

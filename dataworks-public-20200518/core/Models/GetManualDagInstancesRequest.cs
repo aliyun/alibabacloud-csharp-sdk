@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetManualDagInstancesRequest : TeaModel {
         /// <summary>
+        /// The ID of the directed acyclic graph (DAG) for the manually triggered workflow. You can call the [CreateManualDag](https://help.aliyun.com/document_detail/189728.html) operation to query the ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DagId")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DagId { get; set; }
 
         /// <summary>
+        /// The environment of Operation Center. Valid values: PROD and DEV.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectEnv")]
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
+        /// The name of the workspace to which the manually triggered workflow belongs. You can log on to the DataWorks console and go to the Workspace Settings panel to query the name.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]

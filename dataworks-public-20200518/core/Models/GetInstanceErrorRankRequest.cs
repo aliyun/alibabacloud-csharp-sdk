@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceErrorRankRequest : TeaModel {
         /// <summary>
+        /// The DataWorks workspace ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]

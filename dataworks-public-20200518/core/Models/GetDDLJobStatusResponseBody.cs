@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string NextTaskId { get; set; }
 
             /// <summary>
-            /// The status of the task
+            /// The status of the task.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

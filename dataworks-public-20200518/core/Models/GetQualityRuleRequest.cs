@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityRuleRequest : TeaModel {
+        /// <summary>
+        /// The DataWorks workspace ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the compute engine instance or data source.
+        /// The name of the compute engine or data source.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -23,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// The ID of the monitoring rule. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to query the ID.
+        /// The monitoring rule ID. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>

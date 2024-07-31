@@ -10,19 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetSensitiveDataRequest : TeaModel {
         /// <summary>
-        /// The parameters that you can specify to query the access records. Valid values:
+        /// The parameters that you can configure to query the access records. Valid values:
         /// 
-        /// *   dbType: the data type
-        /// *   instanceName: the name of the instance
-        /// *   databaseName: the name of the database
-        /// *   projectName: the name of the workspace
-        /// *   clusterName: the name of the cluster
+        /// *   dbType
+        /// *   instanceName
+        /// *   databaseName
+        /// *   projectName
+        /// *   clusterName
         /// 
-        /// The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the ABC Hologres instance:
-        /// 
-        /// {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"}
-        /// 
-        /// You must specify the parameters based on the compute engine that you use in your business.
+        /// The sample value shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC. You must configure the parameters based on the compute engine that you use in your business.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -31,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Minimum value:1.
+        /// The page number. Pages start from page 1.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -40,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 1000.
+        /// The number of entries per page. Maximum value: 1000.
         /// 
         /// This parameter is required.
         /// </summary>

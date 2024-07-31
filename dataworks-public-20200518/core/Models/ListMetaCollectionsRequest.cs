@@ -17,8 +17,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Administrator { get; set; }
 
         /// <summary>
-        /// - **ALBUM**: data album
-        /// - **ALBUM_CATEGORY**: category in a data album
+        /// - ALBUM: data album 
+        /// - ALBUM_CATEGORY: category in a data album
         /// 
         /// This parameter is required.
         /// </summary>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The paging information. This parameter specifies the start point of the query.
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// The number of entries per page. Default value: 10. Maximum value: 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ApprovePermissionApplyOrderResponseBody : TeaModel {
         /// <summary>
-        /// Indicates that the approval is successful.
+        /// Indicates whether the permission request order is processed.
         /// </summary>
         [NameInMap("ApproveSuccess")]
         [Validation(Required=false)]
         public bool? ApproveSuccess { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

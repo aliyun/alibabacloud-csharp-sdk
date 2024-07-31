@@ -9,28 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunCycleDagNodesRequest : TeaModel {
+        /// <summary>
+        /// The alert notification method. Valid values:
+        /// 
+        /// *   SMS
+        /// *   MAIL
+        /// *   SMS_MAIL
+        /// </summary>
         [NameInMap("AlertNoticeType")]
         [Validation(Required=false)]
         public string AlertNoticeType { get; set; }
 
+        /// <summary>
+        /// The alert type. Valid values:
+        /// 
+        /// *   SUCCESS: An alert is generated when data backfill succeeds.
+        /// *   FAILURE: An alert is generated when data backfill fails.
+        /// *   SUCCESS_FAILURE: An alert is generated regardless of whether data backfill succeeds or fails.
+        /// </summary>
         [NameInMap("AlertType")]
         [Validation(Required=false)]
         public string AlertType { get; set; }
 
         /// <summary>
-        /// The time when the node started to run. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.
+        /// The time when the node starts to run. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.
         /// </summary>
         [NameInMap("BizBeginTime")]
         [Validation(Required=false)]
         public string BizBeginTime { get; set; }
 
         /// <summary>
-        /// The time when the node stopped running. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.
+        /// The time when the node stops running. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.
         /// </summary>
         [NameInMap("BizEndTime")]
         [Validation(Required=false)]
         public string BizEndTime { get; set; }
 
+        /// <summary>
+        /// The number of nodes that can run in parallel. Valid values: 2 to 10.
+        /// </summary>
         [NameInMap("ConcurrentRuns")]
         [Validation(Required=false)]
         public int? ConcurrentRuns { get; set; }
@@ -52,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExcludeNodeIds { get; set; }
 
         /// <summary>
-        /// The ID of the node for which you want to backfill data. If you want to backfill data for multiple nodes, separate the IDs of the nodes with commas (,). You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.
+        /// The ID of the node for which you want to backfill data. If you want to backfill data for multiple nodes, separate the IDs of the nodes with commas (,). You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to obtain the node ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -95,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// The ID of the node for which data is first backfilled. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.
+        /// The ID of the node for which data is first backfilled. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to obtain the node ID.
         /// 
         /// This parameter is required.
         /// </summary>

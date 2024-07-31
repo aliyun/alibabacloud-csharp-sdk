@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the table level to be updated. You can call the ListTableLevel operation to obtain the ID.
+        /// The ID of the table level. You can call the ListTableLevel operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? LevelId { get; set; }
 
         /// <summary>
-        /// The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
+        /// The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
         /// </summary>
         [NameInMap("LevelType")]
         [Validation(Required=false)]

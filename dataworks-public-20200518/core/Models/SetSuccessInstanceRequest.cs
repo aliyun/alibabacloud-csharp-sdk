@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SetSuccessInstanceRequest : TeaModel {
         /// <summary>
-        /// The environment of the workspace. Valid values: PROD and DEV.
+        /// The instance ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The environment of the workspace. Valid values: PROD and DEV.
         /// 
         /// This parameter is required.
         /// </summary>

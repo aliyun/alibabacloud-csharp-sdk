@@ -10,63 +10,63 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListTableThemeResponseBody : TeaModel {
         /// <summary>
-        /// The returned data about the level of the table folder.
+        /// The returned result.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListTableThemeResponseBodyData Data { get; set; }
         public class ListTableThemeResponseBodyData : TeaModel {
             /// <summary>
-            /// The list of levels of the table folders.
+            /// The list of table levels.
             /// </summary>
             [NameInMap("ThemeList")]
             [Validation(Required=false)]
             public List<ListTableThemeResponseBodyDataThemeList> ThemeList { get; set; }
             public class ListTableThemeResponseBodyDataThemeList : TeaModel {
                 /// <summary>
-                /// The time when the level was created.
+                /// The time when the table level was created.
                 /// </summary>
                 [NameInMap("CreateTimeStamp")]
                 [Validation(Required=false)]
                 public long? CreateTimeStamp { get; set; }
 
                 /// <summary>
-                /// The creator of the level.
+                /// The creator of the table level.
                 /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a table folder of level 1. A value of 2 indicates a table folder of level 2.
+                /// The level of the table folder. Valid values: 1 and 2. The value 1 indicates the first level. The value 2 indicates the second level.
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public int? Level { get; set; }
 
                 /// <summary>
-                /// The name of the level of the table folder.
+                /// The name of the table level.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the parent node.
+                /// The ancestor node ID.
                 /// </summary>
                 [NameInMap("ParentId")]
                 [Validation(Required=false)]
                 public long? ParentId { get; set; }
 
                 /// <summary>
-                /// The ID of the DataWorks workspace.
+                /// The DataWorks workspace ID.
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// The ID of the table folder.
+                /// The table theme ID.
                 /// </summary>
                 [NameInMap("ThemeId")]
                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The total number of table folders.
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -84,35 +84,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

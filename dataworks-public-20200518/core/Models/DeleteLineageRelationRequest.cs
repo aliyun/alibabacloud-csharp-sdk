@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteLineageRelationRequest : TeaModel {
         /// <summary>
+        /// The unique identifier of the destination entity.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DestEntityQualifiedName")]
         [Validation(Required=false)]
         public string DestEntityQualifiedName { get; set; }
 
+        /// <summary>
+        /// The unique identifier of the lineage.
+        /// </summary>
         [NameInMap("RelationshipGuid")]
         [Validation(Required=false)]
         public string RelationshipGuid { get; set; }
 
         /// <summary>
+        /// The unique identifier of the source entity.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("SrcEntityQualifiedName")]

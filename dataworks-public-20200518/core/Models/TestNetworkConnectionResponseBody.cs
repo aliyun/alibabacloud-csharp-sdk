@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TestNetworkConnectionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

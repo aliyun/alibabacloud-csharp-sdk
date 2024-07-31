@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckMetaPartitionRequest : TeaModel {
         /// <summary>
-        /// The name of the table.
+        /// This parameter is deprecated.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Indicates whether the partition exists.
+        /// The type of the data source. Set the value to odps.
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// The type of the data source. Valid values: odps and emr.
+        /// The name of the metadatabase.
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// The name of the partition in the MaxCompute metatable.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Partition { get; set; }
 
         /// <summary>
-        /// The ID of the E-MapReduce (EMR) cluster.
+        /// The GUID of the MaxCompute metatable.
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]
         public string TableGuid { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The name of the metatable.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

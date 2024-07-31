@@ -12,11 +12,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The notification method. Valid values:
         /// 
-        /// *   MAIL: email
-        /// 
-        /// *   SMS: text message
-        /// 
-        ///     Alert notifications can be sent by text message only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.
+        /// *   MAIL
+        /// *   SMS Alert notifications can be sent by text message only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.
         /// 
         /// You can specify multiple notification methods. Separate them with commas (,).
         /// </summary>
@@ -39,16 +36,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertUser { get; set; }
 
         /// <summary>
-        /// The ID of the baseline. This parameter takes effect if the AlertRuleTypes parameter is set to GLOBAL.
-        /// 
-        /// You can configure either this parameter or RemindId.
+        /// The baseline ID. This parameter takes effect if the AlertRuleTypes parameter is set to GLOBAL. You can configure either this parameter or the RemindId parameter.
         /// </summary>
         [NameInMap("BaselineId")]
         [Validation(Required=false)]
         public long? BaselineId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the yyyy-MM-dd\\"T\\"HH:mm:ssZ format. The time must be in UTC.
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\\"T\\"HH:mm:ssZ format. The time must be in UTC.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -57,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BeginTime { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the yyyy-MM-dd\\"T\\"HH:mm:ssZ format. The time must be in UTC.
+        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\\"T\\"HH:mm:ssZ format. The time must be in UTC.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -66,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: 1 to 30. Default value: 1.
+        /// The page number. Default value: 1. Minimum value: 1. Maximum value: 30.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -75,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// The number of entries per page. Default value: 10. Maximum value: 100.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -84,9 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the custom alert rule. This parameter takes effect if the AlertRuleTypes parameter is set to USER_DEFINE.
-        /// 
-        /// You can configure either this parameter or BaselineId.
+        /// The custom alert rule ID. This parameter takes effect if the AlertRuleTypes parameter is set to USER_DEFINE. You can configure either this parameter or the BaselineId parameter.
         /// </summary>
         [NameInMap("RemindId")]
         [Validation(Required=false)]

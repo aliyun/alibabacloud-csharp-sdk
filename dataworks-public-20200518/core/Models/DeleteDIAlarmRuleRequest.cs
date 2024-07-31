@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDIAlarmRuleRequest : TeaModel {
         /// <summary>
+        /// The alert rule ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DIAlarmRuleId")]

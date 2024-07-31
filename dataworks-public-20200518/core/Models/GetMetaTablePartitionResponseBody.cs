@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTablePartitionResponseBody : TeaModel {
         /// <summary>
-        /// The business data returned.
+        /// The returned result.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? RecordCount { get; set; }
 
                 /// <summary>
-                /// The GUID of the metatable.
+                /// The unique identifier of the metatable.
                 /// </summary>
                 [NameInMap("TableGuid")]
                 [Validation(Required=false)]
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 10. Maximum value: 100.
+            /// The number of entries per page. Default value: 10. Maximum value: 100.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

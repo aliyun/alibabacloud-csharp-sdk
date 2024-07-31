@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityRuleRequest : TeaModel {
+        /// <summary>
+        /// The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the database engine or data source.
+        /// The name of the compute engine or data source.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -23,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// The monitoring rule ID.
         /// 
         /// This parameter is required.
         /// </summary>

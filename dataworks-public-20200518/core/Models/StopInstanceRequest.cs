@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class StopInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the [ListInstances](https://help.aliyun.com/document_detail/173982.html) operation to query the ID.
+        /// The instance ID. You can call the [ListInstances](https://help.aliyun.com/document_detail/173982.html) operation to obtain the ID.
         /// 
         /// This parameter is required.
         /// </summary>

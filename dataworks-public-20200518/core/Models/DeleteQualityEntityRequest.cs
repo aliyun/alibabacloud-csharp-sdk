@@ -19,7 +19,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// The type of the compute engine instance or data source. Valid values: EMR, Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka and DataHub.
+        /// The type of the compute engine or data source. The following types are supported: E-MapReduce (EMR), Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka, and DataHub.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   odps
+        /// *   emr
+        /// *   hadoop
+        /// *   cdh
+        /// *   hybriddb_for_postgresql
+        /// *   holodb
         /// 
         /// This parameter is required.
         /// </summary>
@@ -27,12 +36,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string EnvType { get; set; }
 
+        /// <summary>
+        /// The DataWorks workspace ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the compute engine instance or data source.
+        /// The name of the compute engine or data source.
         /// 
         /// This parameter is required.
         /// </summary>

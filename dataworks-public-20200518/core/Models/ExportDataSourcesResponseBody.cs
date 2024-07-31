@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ExportDataSourcesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the export operation.
+        /// The information about the exported data sources.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ExportDataSourcesResponseBodyData Data { get; set; }
         public class ExportDataSourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// The details of the exported data sources.
-            /// 
-            /// The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.
+            /// The details of the exported data sources. The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.
             /// </summary>
             [NameInMap("DataSources")]
             [Validation(Required=false)]
             public List<ExportDataSourcesResponseBodyDataDataSources> DataSources { get; set; }
             public class ExportDataSourcesResponseBodyDataDataSources : TeaModel {
                 /// <summary>
-                /// The ID of the compute engine to which the data source is bound.
+                /// The ID of the compute engine that is added as the data source.
                 /// </summary>
                 [NameInMap("BindingCalcEngineId")]
                 [Validation(Required=false)]
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DataSourceType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the compute engine to which the data source is bound is the default compute engine. Valid values:
+                /// Indicates whether the compute engine that is added as the data source is the default compute engine. Valid values:
                 /// 
                 /// *   true: The compute engine is the default compute engine.
                 /// *   false: The compute engine is not the default compute engine.
@@ -88,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The environment to which the data source belongs. Valid values:
+                /// The environment in which the data source resides. Valid values:
                 /// 
                 /// *   0: development environment
                 /// *   1: production environment
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The ID of the data source.
+                /// The data source ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -167,7 +165,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// The subtype of the data source. This parameter is returned only if the value of the DataSourceType parameter is rds.
+                /// The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.
                 /// 
                 /// If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.
                 /// </summary>
@@ -185,14 +183,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number of the returned page. The value of this parameter is a positive integer greater than or equal to 1.
+            /// The page number. Pages start from page 1.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned on each page.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -218,7 +216,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -227,8 +225,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

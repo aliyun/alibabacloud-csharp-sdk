@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateImportMigrationAdvanceRequest : TeaModel {
         /// <summary>
-        /// The mapping between the source compute engine instance and the destination compute engine instance.
-        /// 
-        /// The following types of compute engine instances are supported: MaxCompute, E-MapReduce (EMR), Hadoop CDH, and Hologres.
+        /// The mapping between the source compute engine instance and the destination compute engine instance. The following types of compute engine instances are supported: MaxCompute, E-MapReduce (EMR), Hadoop CDH, and Hologres.
         /// </summary>
         [NameInMap("CalculateEngineMap")]
         [Validation(Required=false)]
@@ -21,15 +19,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The rule configured for automatically committing and deploying the import task. The rule contains the following parameters:
         /// 
-        /// *   resourceAutoCommit: specifies whether resources are automatically committed. The value true indicates that the resources are automatically committed, and the value false indicates that the resources are not automatically committed.
-        /// *   resourceAutoDeploy: specifies whether resources are automatically deployed. The value true indicates that the resources are automatically deployed, and the value false indicates that the resources are not automatically deployed.
-        /// *   functionAutoCommit: specifies whether the function is automatically committed. The value true indicates that the function is automatically committed, and the value false indicates that the function is not automatically committed.
-        /// *   functionAutoDeploy: specifies whether the function is automatically deployed. The value true indicates that the function is automatically deployed, and the value false indicates that the function is not automatically deployed.
-        /// *   tableAutoCommitToDev: specifies whether the table is automatically committed to the development environment. The value true indicates that the table is automatically committed to the development environment, and the value false indicates that the table is not automatically committed to the development environment.
-        /// *   tableAutoCommitToProd: specifies whether the table is automatically committed to the production environment. The value true indicates that the table is automatically committed to the production environment, and the value false indicates that the table is not automatically committed to the production environment.
-        /// *   ignoreLock: specifies whether the lock is automatically ignored when an import task is locked. The value true indicates that the lock is automatically ignored, and the value false indicates that the lock is not automatically ignored. If you set this parameter to true for an import task, you can forcibly update the task even if the task is locked.
-        /// *   fileAutoCommit: specifies whether the file is automatically committed. The value true indicates that the file is automatically committed, and the value false indicates that the file is not automatically committed.
-        /// *   fileAutoDeploy: specifies whether the file is automatically deployed. The value true indicates that the file is automatically deployed, and the value false indicates that the file is not automatically deployed.
+        /// *   resourceAutoCommit: specifies whether resources are automatically committed. The value true indicates yes and the value false indicates no.
+        /// *   resourceAutoDeploy: specifies whether resources are automatically deployed. The value true indicates yes and the value false indicates no.
+        /// *   functionAutoCommit: specifies whether the function is automatically committed. The value true indicates yes and the value false indicates no.
+        /// *   functionAutoDeploy: specifies whether the function is automatically deployed. The value true indicates yes and the value false indicates no.
+        /// *   tableAutoCommitToDev: specifies whether the table is automatically committed to the development environment. The value true indicates yes and the value false indicates no.
+        /// *   tableAutoCommitToProd: specifies whether the table is automatically committed to the production environment. The value true indicates yes and the value false indicates no.
+        /// *   ignoreLock: specifies whether the lock is automatically ignored when an import task is locked. The value true indicates yes and the value false indicates no. If you set this parameter to true for an import task, you can forcefully update the task even if the task is locked.
+        /// *   fileAutoCommit: specifies whether the file is automatically committed. The value true indicates yes and the value false indicates no.
+        /// *   fileAutoDeploy: specifies whether the file is automatically deployed. The value true indicates yes and the value false indicates no.
         /// </summary>
         [NameInMap("CommitRule")]
         [Validation(Required=false)]
@@ -52,9 +50,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The path of the import package.
+        /// The path of the import package. **The import package must be uploaded. Example of the upload method:**
         /// 
-        /// **The import package must be uploaded. Example of the upload method:**`  Config config = new Config(); config.setAccessKeyId(accessId); config.setAccessKeySecret(accessKey); config.setEndpoint(popEndpoint); config.setRegionId(regionId); Client client = new Client(config); CreateImportMigrationAdvanceRequest request = new CreateImportMigrationAdvanceRequest(); request.setName("test_migration_api_" + System.currentTimeMillis()); request.setProjectId(123456L); request.setPackageType("DATAWORKS_MODEL"); request.setPackageFileObject(new FileInputStream("/home/admin/Downloads/test.zip")); RuntimeOptions runtime = new RuntimeOptions(); CreateImportMigrationResponse response = client.createImportMigrationAdvance(request, runtime); ... `
+        /// ```java
+        ///         Config config = new Config();
+        ///         config.setAccessKeyId(accessId);
+        ///         config.setAccessKeySecret(accessKey);
+        ///         config.setEndpoint(popEndpoint);
+        ///         config.setRegionId(regionId);
+        /// 
+        ///         Client client = new Client(config);
+        /// 
+        ///         CreateImportMigrationAdvanceRequest request = new CreateImportMigrationAdvanceRequest();
+        ///         request.setName("test_migration_api_" + System.currentTimeMillis());
+        ///         request.setProjectId(123456L); 
+        ///         request.setPackageType("DATAWORKS_MODEL");
+        ///         request.setPackageFileObject(new FileInputStream("/home/admin/Downloads/test.zip"));
+        /// 
+        ///         RuntimeOptions runtime = new RuntimeOptions();
+        ///         CreateImportMigrationResponse response = client.createImportMigrationAdvance(request, runtime);
+        /// ```
         /// 
         /// This parameter is required.
         /// </summary>
@@ -76,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
+        /// The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -87,8 +102,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The mapping between the resource group for scheduling and the resource group for Data Integration. The keys and values in the mapping are the identifiers of the resource groups. Specify the mapping in the following format:
         /// 
-        /// ```
-        /// 
+        /// ```json
         /// {
         ///     "SCHEDULER_RESOURCE_GROUP": {
         ///         "xxx": "yyy"
@@ -97,8 +111,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///         "ccc": "dfdd"
         ///     }
         /// }
-        /// 
-        ///                                 
         /// ```
         /// </summary>
         [NameInMap("ResourceGroupMap")]

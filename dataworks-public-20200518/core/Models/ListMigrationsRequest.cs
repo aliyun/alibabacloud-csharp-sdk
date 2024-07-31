@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMigrationsRequest : TeaModel {
         /// <summary>
-        /// The ID of the owner.
+        /// The migration task type. Valid values: IMPORT and EXPORT.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,28 +19,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MigrationType { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The owner ID.
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The number of entries per page. Maximum value: 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the migration task. Valid values: IMPORT and EXPORT.
+        /// The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>

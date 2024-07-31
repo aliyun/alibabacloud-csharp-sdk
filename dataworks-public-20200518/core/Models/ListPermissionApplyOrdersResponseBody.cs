@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder> ApplyOrder { get; set; }
             public class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder : TeaModel {
                 /// <summary>
-                /// The unique ID of the Alibaba Cloud account that was used to submit the permission request order.
+                /// The ID of the Alibaba Cloud account that was used to submit the permission request order.
                 /// </summary>
                 [NameInMap("ApplyBaseId")]
                 [Validation(Required=false)]
@@ -72,11 +72,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         [Validation(Required=false)]
                         public List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList> ObjectMetaList { get; set; }
                         public class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList : TeaModel {
-                            /// <summary>
-                            /// The permission that you wanted to request. If you wanted to request multiple permissions at the same time, separate them with commas (,).
-                            /// 
-                            /// You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.
-                            /// </summary>
                             [NameInMap("Actions")]
                             [Validation(Required=false)]
                             public List<string> Actions { get; set; }
@@ -91,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         }
 
                         /// <summary>
-                        /// The name of the DataWorks workspace that was associated with the MaxCompute project in which you requested permissions on a table.
+                        /// The name of the DataWorks workspace that is associated with the MaxCompute project in which you requested permissions on a table.
                         /// </summary>
                         [NameInMap("WorkspaceName")]
                         [Validation(Required=false)]
@@ -111,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// The status of the permission request order. Valid values:
                 /// 
-                /// *   1: pending approval
+                /// *   1: to be processed
                 /// *   2: approved and authorized
                 /// *   3: approved but authorization failed
                 /// *   4: rejected
@@ -123,21 +118,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of permission request orders returned.
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -146,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

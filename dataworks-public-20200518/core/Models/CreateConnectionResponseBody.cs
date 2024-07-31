@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateConnectionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the data source.
+        /// The data source ID.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request has failed.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public ListDataServiceApiAuthoritiesResponseBodyData Data { get; set; }
         public class ListDataServiceApiAuthoritiesResponseBodyData : TeaModel {
             /// <summary>
-            /// The APIs on which other users are granted the access permissions and the authorization records.
+            /// The APIs on which other users are granted the access permissions.
             /// </summary>
             [NameInMap("ApiAuthorizationList")]
             [Validation(Required=false)]
             public List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> ApiAuthorizationList { get; set; }
             public class ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList : TeaModel {
                 /// <summary>
-                /// The ID of the API.
+                /// The API ID.
                 /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string CreatedTime { get; set; }
 
                     /// <summary>
-                    /// The ID of the Alibaba Cloud account used by the user who granted other users the access permissions on the API.
+                    /// The ID of the Alibaba Cloud account used by the API owner.
                     /// </summary>
                     [NameInMap("CreatorId")]
                     [Validation(Required=false)]
@@ -103,28 +103,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// The ID of the group.
+                /// The group ID.
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The time when the API was last updated.
+                /// The time when the API was last modified.
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// The ID of the workspace.
+                /// The workspace ID.
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// The ID of the tenant.
+                /// The tenant ID.
                 /// </summary>
                 [NameInMap("TenantId")]
                 [Validation(Required=false)]
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
+            /// The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 10. Maximum value: 100.
+            /// The number of entries per page. Valid values: 1 to 100. Default value: 10.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -156,28 +156,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

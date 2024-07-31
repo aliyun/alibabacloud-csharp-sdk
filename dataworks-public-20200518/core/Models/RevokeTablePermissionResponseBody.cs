@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RevokeTablePermissionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the permissions on the table are revoked.
+        /// Indicates whether the permissions are revoked.
         /// </summary>
         [NameInMap("RevokeSuccess")]
         [Validation(Required=false)]

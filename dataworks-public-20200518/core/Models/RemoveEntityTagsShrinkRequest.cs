@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RemoveEntityTagsShrinkRequest : TeaModel {
         /// <summary>
+        /// The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("QualifiedName")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string QualifiedName { get; set; }
 
         /// <summary>
+        /// The tag keys.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("TagKeys")]

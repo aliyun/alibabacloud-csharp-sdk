@@ -10,84 +10,81 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMigrationSummaryResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// 
-        /// *   true: The request is successful.
-        /// *   false: The request fails. You can locate the error based on the request ID.
+        /// The details of the migration task.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMigrationSummaryResponseBodyData Data { get; set; }
         public class GetMigrationSummaryResponseBodyData : TeaModel {
             /// <summary>
-            /// The time when the migration task was modified.
+            /// The ID of the user who created the task.
             /// </summary>
             [NameInMap("CreateUser")]
             [Validation(Required=false)]
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// The ID of the DataWorks workspace.
+            /// The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.
             /// </summary>
             [NameInMap("DownloadUrl")]
             [Validation(Required=false)]
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// The name of the migration task.
+            /// The time when the task was created.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// The time when the migration task was created.
+            /// The time when the task was modified.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// The details of the migration task.
+            /// The task ID.
             /// </summary>
             [NameInMap("MigrationId")]
             [Validation(Required=false)]
             public long? MigrationId { get; set; }
 
             /// <summary>
-            /// The ID of the migration task.
+            /// The task name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the user who creates the migration task.
+            /// The ID of the user who managed the task.
             /// </summary>
             [NameInMap("OpUser")]
             [Validation(Required=false)]
             public string OpUser { get; set; }
 
             /// <summary>
-            /// The status of the migration task. Valid values:
-            /// 
-            /// *   INIT: The migration task is initiating.
-            /// *   EDITING: The migration task is being edited.
-            /// *   IMPORTING: The migration task is importing data objects.
-            /// *   IMPORT_ERROR: The migration task fails to import data objects.
-            /// *   IMPORT_SUCCESS: Data objects are imported.
-            /// *   EXPORTING: The migration task is exporting data objects.
-            /// *   EXPORT_ERROR: The migration task fails to export data objects.
-            /// *   EXPORT_SUCCESS: The migration task successfully exports data objects.
-            /// *   REVOKED: The migration task is canceled.
-            /// *   PARTIAL_SUCCESS: The migration task successfully imports or exports only some data objects.
+            /// The ID of the DataWorks workspace to which the migration task belongs.
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// The ID of the user who manages the migration task.
+            /// The status of the migration task. Valid values:
+            /// 
+            /// *   INIT
+            /// *   EDITING
+            /// *   IMPORTING
+            /// *   IMPORT_ERROR
+            /// *   IMPORT_SUCCESS
+            /// *   EXPORTING
+            /// *   EXPORT_ERROR
+            /// *   EXPORT_SUCCESS
+            /// *   REVOKED
+            /// *   PARTIAL_SUCCESS
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -96,16 +93,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the migration task.
-        /// 
-        /// You can call the [CreateImportMigration](https://help.aliyun.com/document_detail/2780280.html) operation to obtain the ID of the import task and call the [CreateExportMigration](https://help.aliyun.com/document_detail/2780281.html) operation to obtain the ID of the export task.
+        /// The request ID. You can use the request ID to query logs and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

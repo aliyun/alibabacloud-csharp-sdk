@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDISyncTaskRequest : TeaModel {
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// *   If you set TaskType to DI_REALTIME, set this parameter to the ID of the real-time synchronization task that you want to deploy.
+        /// *   If you set TaskType to DI_SOLUTION, set this parameter to the ID of the data synchronization solution that you want to deploy.
         /// 
-        /// *   true: The request is successful.
-        /// *   false: The request fails.
+        /// You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID of the real-time synchronization task or data synchronization solution.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -22,10 +22,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FileId { get; set; }
 
         /// <summary>
-        /// The type of the object that you want to query. Valid values:
+        /// The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
         /// 
-        /// *   DI_REALTIME: real-time synchronization node
-        /// *   DI_SOLUTION: data synchronization solution
+        /// You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -34,10 +33,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// *   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to query.
-        /// *   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to query.
+        /// The type of the object that you want to query. Valid values:
         /// 
-        /// You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID of the real-time synchronization node or data synchronization solution.
+        /// *   DI_REALTIME: real-time synchronization task
+        /// *   DI_SOLUTION: data synchronization solution
         /// 
         /// This parameter is required.
         /// </summary>

@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOptionValueForProjectResponseBody : TeaModel {
+        /// <summary>
+        /// The data returned In the example, cuNumber is a custom key.
+        /// </summary>
         [NameInMap("OptionValue")]
         [Validation(Required=false)]
         public string OptionValue { get; set; }
 
         /// <summary>
-        /// The option settings. In the example, cuNumber is a custom key.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

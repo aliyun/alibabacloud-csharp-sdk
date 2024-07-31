@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateExportMigrationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the export task.
+        /// The export task ID.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public long? Data { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to locate logs and troubleshoot errors.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call succeeded.
-        /// *   false: The call failed. You can locate errors based on the request ID.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

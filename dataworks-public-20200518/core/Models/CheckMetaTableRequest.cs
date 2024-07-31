@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckMetaTableRequest : TeaModel {
         /// <summary>
-        /// The name of the EMR table.
+        /// The E-MapReduce (EMR) cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The type of the data source. Valid values: odps and emr.
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// The type of the data source. Valid values: odps and emr.
+        /// The name of the metadatabase of the EMR cluster.
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// The name of the EMR database.
+        /// The GUID of the metatable.
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]
         public string TableGuid { get; set; }
 
         /// <summary>
-        /// Indicates whether the table exists.
+        /// The name of the EMR metatable.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

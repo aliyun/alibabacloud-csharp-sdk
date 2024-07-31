@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateDISyncTaskResponseBody : TeaModel {
         /// <summary>
-        /// The information that indicates whether the sync node was updated.
+        /// The information that indicates whether the data synchronization task is updated.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateDISyncTaskResponseBodyData Data { get; set; }
         public class UpdateDISyncTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// The reason why the sync node failed to be updated. If the sync node was updated, this parameter is left empty.
+            /// The error message returned if the data synchronization task fails to be updated. If the data synchronization task is successfully updated, the value null is returned for this parameter.
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// Indicates whether the sync node was updated. Valid values:
+            /// The update status of the data synchronization task. Valid values:
             /// 
-            /// *   success: The sync node was updated.
-            /// *   fail: The sync node failed to be updated.
+            /// *   success
+            /// *   fail
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

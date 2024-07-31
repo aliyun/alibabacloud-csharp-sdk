@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The status of the data objects that you want to export in the export task. The system exports data objects in the state that is specified by this parameter. Valid values:
         /// 
-        /// *   SAVED: Data objects that are in the SAVED state are exported.
-        /// *   SUBMITTED: Data objects that are in the SUBMITTED state are exported.
-        /// *   DEPLOYED: Data objects that are in the DEPLOYED state are exported.
+        /// *   SAVED
+        /// *   SUBMITTED
+        /// *   DEPLOYED
         /// </summary>
         [NameInMap("ExportObjectStatus")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+        /// The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>

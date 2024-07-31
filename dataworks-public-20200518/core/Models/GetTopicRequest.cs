@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicRequest : TeaModel {
         /// <summary>
-        /// The ID of the request. You can troubleshoot issues based on the ID.
+        /// The event ID. You can call the [ListTopics](https://help.aliyun.com/document_detail/173973.html) operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>

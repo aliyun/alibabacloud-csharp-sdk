@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the workspace.
+        /// The workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The tenant ID. This parameter is deprecated.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

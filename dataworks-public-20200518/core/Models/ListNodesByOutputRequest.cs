@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesByOutputRequest : TeaModel {
         /// <summary>
-        /// The output name of the node. You can specify multiple output names. In this case, separate them with commas (,).
+        /// The output name of the node. You can specify multiple output names. Separate them with commas (,).
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Outputs { get; set; }
 
         /// <summary>
-        /// The environment type. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
+        /// The environment of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
         /// 
         /// This parameter is required.
         /// </summary>

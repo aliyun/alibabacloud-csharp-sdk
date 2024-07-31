@@ -12,18 +12,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:
         /// 
-        /// *   1: indicates that the monitoring rule is a strong rule.
-        /// 
-        /// *   0: indicates that the monitoring rule is a weak rule.
-        /// 
-        ///     You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and a critical alert is triggered, nodes are blocked.
+        /// *   1: The monitoring rule is a strong rule.
+        /// *   0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
         /// </summary>
         [NameInMap("BlockType")]
         [Validation(Required=false)]
         public int? BlockType { get; set; }
 
         /// <summary>
-        /// The ID of the checker. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the checker.
+        /// The checker ID. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the checker.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -39,28 +36,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.
+        /// The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
         /// </summary>
         [NameInMap("CriticalThreshold")]
         [Validation(Required=false)]
         public string CriticalThreshold { get; set; }
 
         /// <summary>
-        /// The ID of the partition filter expression. You can call the [GetQualityEntity](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the partition filter expression.
+        /// The ID of the partition filter expression. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the partition filter expression.
         /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// The expected value of the monitoring result.
+        /// The expected value of the monitoring rule.
         /// </summary>
         [NameInMap("ExpectValue")]
         [Validation(Required=false)]
         public string ExpectValue { get; set; }
 
         /// <summary>
-        /// The ID of the monitoring rule. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the monitoring rule.
+        /// The monitoring rule ID. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to query the ID of the monitoring rule.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -78,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MethodName { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the monitoring rule in the production environment.
+        /// Specifies whether to enable the monitoring rule in the production environment. Valid values:
         /// 
         /// *   true: The monitoring rule is triggered when the associated auto triggered node that generates the output data starts to run.
         /// *   false: The monitoring rule is not triggered when the associated auto triggered node that generates the output data starts to run.
@@ -97,19 +94,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// Specifies whether the threshold is a dynamic threshold. Valid values:
         /// 
-        /// *   0: indicates that the threshold is not a dynamic threshold.
-        /// *   2: indicates that the threshold is a dynamic threshold.
+        /// *   0: The threshold is not a dynamic threshold.
+        /// *   2: The threshold is a dynamic threshold.
         /// </summary>
         [NameInMap("PredictType")]
         [Validation(Required=false)]
         public int? PredictType { get; set; }
 
+        /// <summary>
+        /// The DataWorks workspace ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the compute engine instance or data source. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the name.
+        /// The name of the compute engine or data source. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the name of the compute engine or data source.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// The name of the field to be monitored.
+        /// The name of the field.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -151,12 +151,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
+        /// <summary>
+        /// The variable settings inserted before the custom rule. Format: x=a,y=b.
+        /// </summary>
         [NameInMap("TaskSetting")]
         [Validation(Required=false)]
         public string TaskSetting { get; set; }
 
         /// <summary>
-        /// The ID of the monitoring template. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the monitoring template that is used to create the monitoring rule.
+        /// The ID of the monitoring template. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the monitoring template.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
@@ -174,7 +177,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Trend { get; set; }
 
         /// <summary>
-        /// The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.
+        /// The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.
         /// </summary>
         [NameInMap("WarningThreshold")]
         [Validation(Required=false)]

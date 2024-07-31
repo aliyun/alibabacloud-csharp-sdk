@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetPermissionApplyOrderDetailResponseBody : TeaModel {
         /// <summary>
-        /// Details about the permission request order.
+        /// The details of the permission request order.
         /// </summary>
         [NameInMap("ApplyOrderDetail")]
         [Validation(Required=false)]
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail ApplyOrderDetail { get; set; }
         public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail : TeaModel {
             /// <summary>
-            /// The unique ID of the Alibaba Cloud account that is used to submit the permission request order.
+            /// The ID of the Alibaba Cloud account that was used to submit the permission request order.
             /// </summary>
             [NameInMap("ApplyBaseId")]
             [Validation(Required=false)]
             public string ApplyBaseId { get; set; }
 
             /// <summary>
-            /// The time when the permission request order was submitted. The parameter value is a UNIX timestamp.
+            /// The time when the permission request order was submitted. The value is a UNIX timestamp.
             /// </summary>
             [NameInMap("ApplyTimestamp")]
             [Validation(Required=false)]
             public long? ApplyTimestamp { get; set; }
 
             /// <summary>
-            /// The list of Alibaba Cloud accounts that are used to approve the permission request order.
+            /// The list of Alibaba Cloud accounts that are used to process the permission request order.
             /// </summary>
             [NameInMap("ApproveAccountList")]
             [Validation(Required=false)]
             public List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList> ApproveAccountList { get; set; }
             public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList : TeaModel {
                 /// <summary>
-                /// The unique ID of the Alibaba Cloud account that is used to approve the permission request order.
+                /// The ID of the Alibaba Cloud account that is used to process the permission request order.
                 /// </summary>
                 [NameInMap("BaseId")]
                 [Validation(Required=false)]
@@ -54,30 +54,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent ApproveContent { get; set; }
             public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent : TeaModel {
                 /// <summary>
-                /// The reason for your request. The administrator decides whether to approve the request based on the request reason.
+                /// The reason of the permission request. The administrator processes the request based on the reason.
                 /// </summary>
                 [NameInMap("ApplyReason")]
                 [Validation(Required=false)]
                 public string ApplyReason { get; set; }
 
                 /// <summary>
-                /// The expiration time of the permissions that you requested. The parameter value is a UNIX timestamp.
-                /// 
-                /// If LabelSecurity is disabled in the MaxCompute project, or the security level of fields in the MaxCompute table on which you request permissions is 0 or is less than or equal to the security level of the Alibaba Cloud account for which you request permissions, you can request only permanent permissions.
+                /// The expiration time of the permissions that you request. The value is a UNIX timestamp. If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions.
                 /// </summary>
                 [NameInMap("Deadline")]
                 [Validation(Required=false)]
                 public long? Deadline { get; set; }
 
                 /// <summary>
-                /// The type of the permission request order. The parameter value is 1 and cannot be changed. 1 indicates that ACL-based authorization is requested.
+                /// The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.
                 /// </summary>
                 [NameInMap("OrderType")]
                 [Validation(Required=false)]
                 public int? OrderType { get; set; }
 
                 /// <summary>
-                /// The information about the project and workspace that are associated with the object on which you requested permissions.
+                /// The information about the project and workspace that are associated with the object on which you request permissions.
                 /// </summary>
                 [NameInMap("ProjectMeta")]
                 [Validation(Required=false)]
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string MaxComputeProjectName { get; set; }
 
                     /// <summary>
-                    /// Details about the object on which you request permissions.
+                    /// The details about the object on which you request permissions.
                     /// </summary>
                     [NameInMap("ObjectMetaList")]
                     [Validation(Required=false)]
@@ -118,6 +116,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                             [Validation(Required=false)]
                             public string ColumnName { get; set; }
 
+                            /// <summary>
+                            /// The security level of the column on which you request permissions. Valid values: 0 to 9.
+                            /// </summary>
                             [NameInMap("SecurityLevel")]
                             [Validation(Required=false)]
                             public string SecurityLevel { get; set; }
@@ -154,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// The status of the permission request order. Valid values:
             /// 
-            /// *   1: pending approval
+            /// *   1: to be processed
             /// *   2: approved and authorized
             /// *   3: approved but authorization failed
             /// *   4: rejected
@@ -164,14 +165,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? FlowStatus { get; set; }
 
             /// <summary>
-            /// Information about the account that is used to request permissions.
+            /// The information about the account that is used to request permissions.
             /// </summary>
             [NameInMap("GranteeObjectList")]
             [Validation(Required=false)]
             public List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList> GranteeObjectList { get; set; }
             public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList : TeaModel {
                 /// <summary>
-                /// The unique ID of the account that is used to request permissions.
+                /// The ID of the account that is used to request permissions.
                 /// </summary>
                 [NameInMap("GranteeId")]
                 [Validation(Required=false)]
@@ -180,15 +181,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// The name of the account that is used to request permissions. The name is in the same format as that of the account used to access the MaxCompute project.
                 /// 
-                /// *   An Alibaba Cloud account is in the format of ALIYUN$+Account name.
-                /// *   A RAM user is in the format of RAM$+Account name.
+                /// *   If the account is an Alibaba Cloud account, the value is in the ALIYUN$+Account name format.
+                /// *   If the account is a RAM user, the value is in the RAM$+Account name format.
                 /// </summary>
                 [NameInMap("GranteeName")]
                 [Validation(Required=false)]
                 public string GranteeName { get; set; }
 
                 /// <summary>
-                /// The type of the subject that requests permissions. The parameter value is 1 and cannot be changed. It indicates user.
+                /// The type of the subject that requests permissions. The value is fixed as 1, which indicates users.
                 /// </summary>
                 [NameInMap("GranteeType")]
                 [Validation(Required=false)]
@@ -210,7 +211,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

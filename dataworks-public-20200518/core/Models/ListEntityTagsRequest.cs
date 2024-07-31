@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListEntityTagsRequest : TeaModel {
         /// <summary>
+        /// The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("QualifiedName")]

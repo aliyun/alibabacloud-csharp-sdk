@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgSceneQuerySceneListByNameRequest : TeaModel {
+        /// <summary>
+        /// The name of the data masking scenario. A fuzzy match is performed in the platform based on a keyword to search for the data masking scenario.
+        /// </summary>
         [NameInMap("SceneName")]
         [Validation(Required=false)]
         public string SceneName { get; set; }

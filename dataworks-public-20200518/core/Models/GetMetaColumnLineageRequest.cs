@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The GUID of the field.
+        /// The unique identifier of the field.
         /// </summary>
         [NameInMap("ColumnGuid")]
         [Validation(Required=false)]

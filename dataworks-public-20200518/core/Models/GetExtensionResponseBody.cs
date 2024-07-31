@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetExtensionResponseBodyExtension Extension { get; set; }
         public class GetExtensionResponseBodyExtension : TeaModel {
             /// <summary>
-            /// The extension point events.
+            /// The list of extension points.
             /// </summary>
             [NameInMap("BindEventList")]
             [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The URL of the help document about the extension. You can visit the URL for the details of the extension.
+            /// The URL of the extension details page, on which users can view the details of the process blocked by the extension.
             /// </summary>
             [NameInMap("DetailUrl")]
             [Validation(Required=false)]
             public string DetailUrl { get; set; }
 
             /// <summary>
-            /// The types of the events.
+            /// The list of event types.
             /// </summary>
             [NameInMap("EventCategoryList")]
             [Validation(Required=false)]
@@ -91,35 +91,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ExtensionName { get; set; }
 
             /// <summary>
-            /// The URL of the help document about the extension.
+            /// The URL of the help documentation of the extension.
             /// </summary>
             [NameInMap("HelpDocUrl")]
             [Validation(Required=false)]
             public string HelpDocUrl { get; set; }
 
             /// <summary>
-            /// The option settings of the extension.
+            /// The options defined for the extension.
             /// </summary>
             [NameInMap("OptionSetting")]
             [Validation(Required=false)]
             public string OptionSetting { get; set; }
 
             /// <summary>
-            /// The parameter settings of the extension. For more information, visit https://www.alibabacloud.com/help/en/dataworks/latest/set-extension-parameters.
+            /// The parameter settings of the extension. For more information, see [Configure extension parameters](https://help.aliyun.com/document_detail/405354.html).
             /// </summary>
             [NameInMap("ParameterSetting")]
             [Validation(Required=false)]
             public string ParameterSetting { get; set; }
 
             /// <summary>
-            /// The workspace for testing. If the extension is in the testing state, the extension can be used only in the workspace for testing.
+            /// The workspace for testing. If the extension is being tested, the extension can be used only in the workspace for testing.
             /// </summary>
             [NameInMap("ProjectTesting")]
             [Validation(Required=false)]
             public long? ProjectTesting { get; set; }
 
             /// <summary>
-            /// The state of the extension. 0: testing. 1: publishing. 3: disabled. 4: approving. 5: approved. 6: approval failed.
+            /// The state of the extension. 0: Testing, 1: Publishing, 3: Disabled, 4: Processing, 5: Approved, 6: Approve Failed
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
+        /// The request ID. You can use the request ID to query logs and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

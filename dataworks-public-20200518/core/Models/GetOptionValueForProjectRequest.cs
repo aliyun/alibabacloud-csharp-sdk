@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOptionValueForProjectRequest : TeaModel {
         /// <summary>
-        /// The ID of the workspace.
+        /// The unique code of the extension.
         /// </summary>
         [NameInMap("ExtensionCode")]
         [Validation(Required=false)]
         public string ExtensionCode { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The workspace ID.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

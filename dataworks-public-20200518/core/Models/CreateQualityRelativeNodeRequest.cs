@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityRelativeNodeRequest : TeaModel {
         /// <summary>
-        /// The type of the compute engine instance or data source.
+        /// The type of the compute engine or data source.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MatchExpression { get; set; }
 
         /// <summary>
-        /// The ID of the node.
+        /// The node ID. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// The ID of the workspace.
+        /// The workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the compute engine instance or data source.
+        /// The name of the compute engine or data source.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// The ID of the workspace to which the node to be associated with the partition filter expression belongs.
+        /// The ID of the workspace to which the node belongs.
         /// 
         /// This parameter is required.
         /// </summary>

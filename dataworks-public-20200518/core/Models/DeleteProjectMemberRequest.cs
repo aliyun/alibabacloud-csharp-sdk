@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteProjectMemberRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// The user ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]

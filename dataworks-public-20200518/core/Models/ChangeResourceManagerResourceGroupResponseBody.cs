@@ -10,31 +10,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ChangeResourceManagerResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the resource group was successfully modified.
+        /// Indicates whether the resource group is changed.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

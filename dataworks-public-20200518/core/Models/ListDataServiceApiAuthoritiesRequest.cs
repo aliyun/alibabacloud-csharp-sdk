@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApiNameKeyword { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// The page number. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// The number of entries per page. Valid values: 1 to 100. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The tenant ID. This parameter is deprecated.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

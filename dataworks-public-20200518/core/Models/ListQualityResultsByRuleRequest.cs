@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// The number of entries per page. Default value: 10. Maximum value: 100.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -38,12 +38,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The DataWorks workspace ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the compute engine instance or data source for which data quality is monitored.
+        /// The name of the compute engine or data source for which data quality is monitored.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// The ID of the monitoring rule. You can use the ID and information such as a partition filter expression to perform a joint query.
+        /// The monitoring rule ID. You can use the ID and information such as a partition filter expression to perform a joint query.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -9,44 +9,74 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeOnBaselineResponseBody : TeaModel {
+        /// <summary>
+        /// The list of nodes.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetNodeOnBaselineResponseBodyData> Data { get; set; }
         public class GetNodeOnBaselineResponseBodyData : TeaModel {
+            /// <summary>
+            /// The node ID.
+            /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public long? NodeId { get; set; }
 
+            /// <summary>
+            /// The name of the node.
+            /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
+            /// <summary>
+            /// The ID of the Alibaba Cloud account used by the node owner.
+            /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
 
+            /// <summary>
+            /// The ID of the workspace to which the node belongs.
+            /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
         }
 
+        /// <summary>
+        /// The error code.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// The HTTP status code.
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }

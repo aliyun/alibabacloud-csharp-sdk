@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProgramTypeCountRequest : TeaModel {
         /// <summary>
-        /// The environment of the workspace, including projects in PROD and DEV.
+        /// The environment of the workspace. Valid values: PROD and DEV.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// The workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>

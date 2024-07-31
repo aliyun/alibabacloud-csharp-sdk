@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataSourceMetaRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// The name of the data source.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,34 +19,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// The environment in which the data source resides. Valid values:
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// *   0: development environment
+        /// *   1: production environment
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The environment to which the data source belongs. Valid values:
-        /// 
-        /// *   0: development environment
-        /// *   1: production environment
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the data source.
+        /// The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
         /// 
         /// This parameter is required.
         /// </summary>

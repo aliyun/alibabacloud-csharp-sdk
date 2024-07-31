@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateNodeRunModeRequest : TeaModel {
         /// <summary>
-        /// The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.
+        /// The node ID. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// The environment where the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment. The value PROD indicates the production environment.
+        /// The environment in which the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment, and the value PROD indicates the production environment.
+        /// 
+        /// *   PROD
+        /// *   DEV
         /// 
         /// This parameter is required.
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProgramTypeCountResponseBody : TeaModel {
         /// <summary>
-        /// The type and number of nodes.
+        /// The list of node types and quantity.
         /// </summary>
         [NameInMap("ProgramTypeAndCounts")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// The type of the node.
+            /// The node type.
             /// </summary>
             [NameInMap("ProgramType")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate logs and troubleshoot problems.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

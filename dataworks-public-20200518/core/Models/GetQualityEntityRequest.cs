@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityEntityRequest : TeaModel {
         /// <summary>
-        /// The type of the compute engine instance or data source.
+        /// The type of the compute engine or data source. Valid values:
+        /// 
+        /// *   cdh
+        /// *   analyticdb_for_mysql
+        /// *   odps
+        /// *   emr
+        /// *   hadoop
+        /// *   holodb
+        /// *   hybriddb_for_postgresql
         /// 
         /// This parameter is required.
         /// </summary>

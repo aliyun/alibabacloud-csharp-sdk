@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMigrationProcessRequest : TeaModel {
         /// <summary>
-        /// The ID of the migration package. You can call the CreateImportMigration operation to query the ID.
+        /// The migration package ID. You can call the CreateImportMigration operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? MigrationId { get; set; }
 
         /// <summary>
-        /// The ID of the workspace. You can go to the Workspace Management page of the DataWorks console to view the ID.
+        /// The workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>

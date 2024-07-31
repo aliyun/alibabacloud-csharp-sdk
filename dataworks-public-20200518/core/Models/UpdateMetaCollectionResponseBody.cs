@@ -10,39 +10,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateMetaCollectionResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of the operation. Valid values:
-        /// 
-        /// true: succeeded
-        /// 
-        /// false: failed
+        /// The result of the operation. Valid values: true false
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

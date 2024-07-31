@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodeIORequest : TeaModel {
         /// <summary>
+        /// Specifies whether to query the information about ancestor or descendant nodes of the current node. Valid values: input and output.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("IoType")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string IoType { get; set; }
 
         /// <summary>
+        /// The node ID. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
+        /// The runtime environment. Valid values: DEV and PROD.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectEnv")]

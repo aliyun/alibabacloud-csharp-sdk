@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the business process.
+            /// The business process ID.
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// The ID of the workspace.
+            /// The workspace ID.
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// The ID of the tenant.
+            /// The tenant ID.
             /// </summary>
             [NameInMap("TenantId")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

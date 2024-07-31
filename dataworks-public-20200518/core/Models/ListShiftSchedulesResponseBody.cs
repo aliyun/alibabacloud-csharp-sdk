@@ -10,40 +10,43 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListShiftSchedulesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page. Minimum value:1. Maximum value: 100.
+        /// The pagination data.
         /// </summary>
         [NameInMap("Paging")]
         [Validation(Required=false)]
         public ListShiftSchedulesResponseBodyPaging Paging { get; set; }
         public class ListShiftSchedulesResponseBodyPaging : TeaModel {
             /// <summary>
-            /// The number of entries returned per page.
+            /// The page number. Minimum value: 1. Maximum value: 100.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The unique identifier of the shift schedule. You can use the identifier to query the on-duty engineers in the shift schedule.
+            /// The shift schedules.
             /// </summary>
             [NameInMap("ShiftSchedules")]
             [Validation(Required=false)]
             public List<ListShiftSchedulesResponseBodyPagingShiftSchedules> ShiftSchedules { get; set; }
             public class ListShiftSchedulesResponseBodyPagingShiftSchedules : TeaModel {
                 /// <summary>
-                /// The name of the shift schedule.
+                /// The unique identifier of the shift schedule. You can use the identifier to query the on-duty engineers in the shift schedule.
                 /// </summary>
                 [NameInMap("ShiftScheduleIdentifier")]
                 [Validation(Required=false)]
                 public string ShiftScheduleIdentifier { get; set; }
 
+                /// <summary>
+                /// The name of the shift schedule.
+                /// </summary>
                 [NameInMap("ShiftScheduleName")]
                 [Validation(Required=false)]
                 public string ShiftScheduleName { get; set; }
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The shift schedules.
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The pagination data.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

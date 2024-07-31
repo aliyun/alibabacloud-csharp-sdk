@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListDataServiceGroupsResponseBodyGroupPagingResultGroups> Groups { get; set; }
             public class ListDataServiceGroupsResponseBodyGroupPagingResultGroups : TeaModel {
                 /// <summary>
-                /// The ID of the API group that is associated with the business process in the API Gateway console.
+                /// The ID of the API Gateway group to which the workflow is bound.
                 /// </summary>
                 [NameInMap("ApiGatewayGroupId")]
                 [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the business process.
+                /// The business process ID.
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// The ID of the workspace.
+                /// The workspace ID.
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// The ID of the tenant.
+                /// The tenant ID.
                 /// </summary>
                 [NameInMap("TenantId")]
                 [Validation(Required=false)]
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
+            /// The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 10. Maximum value: 100.
+            /// The number of entries per page. Valid values: 1 to 100. Default value: 10.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

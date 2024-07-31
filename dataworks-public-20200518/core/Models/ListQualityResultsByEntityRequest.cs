@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListQualityResultsByEntityRequest : TeaModel {
         /// <summary>
-        /// The name of the compute engine instance or data source. You can obtain the name from data source configurations.
+        /// The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// The ID of the partition filter expression. You can call the [GetQualityEntity](https://help.aliyun.com/document_detail/174003.html) operation to query the ID of the partition filter expression.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The page number.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The number of entries per page. Default value: 10. Maximum value: 20.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -45,12 +45,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The DataWorks workspace ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The name of the compute engine or data source. You can obtain the name from data source configurations.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
         /// 
         /// This parameter is required.
         /// </summary>

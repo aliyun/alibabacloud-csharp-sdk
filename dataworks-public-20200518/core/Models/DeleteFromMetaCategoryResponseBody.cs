@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteFromMetaCategoryResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the metatable was removed from the specified category.
+        /// Indicates whether the table was removed from the specified category.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

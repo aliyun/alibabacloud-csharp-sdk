@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableOutputRequest : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// The end date.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,21 +19,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The Globally Unique Identifier (GUID) of the MaxCompute metatable.
+        /// The page number. Valid values: 1 to 30. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The start date of the time range to query. The start date must be within the previous 30 days.
+        /// The number of entries per page. Default value: 10. Maximum value: 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the node.
+        /// The start date.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// The end date of the time range to query. The end date must be within the previous 30 days.
+        /// The GUID of the metatable.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableGuid { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The task ID.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

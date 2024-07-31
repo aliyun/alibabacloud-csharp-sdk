@@ -10,63 +10,63 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceStatusCountResponseBody : TeaModel {
         /// <summary>
-        /// The request ID, which is used to locate the logs and troubleshoot problems.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status statistics of the instance.
+        /// The statistics of instances.
         /// </summary>
         [NameInMap("StatusCount")]
         [Validation(Required=false)]
         public GetInstanceStatusCountResponseBodyStatusCount StatusCount { get; set; }
         public class GetInstanceStatusCountResponseBodyStatusCount : TeaModel {
             /// <summary>
-            /// The number of failed instances.
+            /// The number of instances that failed.
             /// </summary>
             [NameInMap("FailureCount")]
             [Validation(Required=false)]
             public int? FailureCount { get; set; }
 
             /// <summary>
-            /// The number of instances that are not running.
+            /// The number of instances that are not run.
             /// </summary>
             [NameInMap("NotRunCount")]
             [Validation(Required=false)]
             public int? NotRunCount { get; set; }
 
             /// <summary>
-            /// The number of running instances.
+            /// The number of instances that are running.
             /// </summary>
             [NameInMap("RunningCount")]
             [Validation(Required=false)]
             public int? RunningCount { get; set; }
 
             /// <summary>
-            /// The number of successful instances.
+            /// The number of instances that are successfully run.
             /// </summary>
             [NameInMap("SuccessCount")]
             [Validation(Required=false)]
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// The total number of instances.
+            /// The total number of instances returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// The number of instances waiting for resources.
+            /// The number of instances that are waiting for resources.
             /// </summary>
             [NameInMap("WaitResCount")]
             [Validation(Required=false)]
             public int? WaitResCount { get; set; }
 
             /// <summary>
-            /// The number of instances to be run that meet the conditions.
+            /// The number of instances that are waiting for their scheduling time to arrive.
             /// </summary>
             [NameInMap("WaitTimeCount")]
             [Validation(Required=false)]

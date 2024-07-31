@@ -10,43 +10,49 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UmountDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// The number of directories that are removed. Valid values:
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// *   0: No directories are removed. The left-side navigation pane may not contain the specified directory.
+        /// *   1: One directory is removed.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public int? Data { get; set; }
 
+        /// <summary>
+        /// The error code. The value 200 indicates that the task is successful.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error code returned. The value 200 indicates that the remove task is successful.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// The HTTP status code. The value 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The number of directories that are removed. Valid values:
-        /// 
-        /// *   0: No directories are removed. The left-side navigation pane may not contain the specified directory.
-        /// *   1: One directory is removed.
+        /// The request ID. You can use the ID to troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public SetDataSourceShareResponseBodyData Data { get; set; }
         public class SetDataSourceShareResponseBodyData : TeaModel {
             /// <summary>
-            /// The reason why the data source failed to be shared. If the data source was shared, this parameter is left empty.
+            /// The reason why the data source failed to be shared. If the data source is successfully shared, the value of this parameter is an empty string.
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// Indicates whether the data source was shared. Valid values:
             /// 
-            /// *   success: The data source was shared.
-            /// *   fail: The data source failed to be shared. You can troubleshoot issues based on the Message parameter.
+            /// *   success.
+            /// *   fail. You can view the value of the Message parameter to identify the cause of the failure.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

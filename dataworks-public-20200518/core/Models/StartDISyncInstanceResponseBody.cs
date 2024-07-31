@@ -10,23 +10,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class StartDISyncInstanceResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the real-time synchronization node or the data synchronization solution is started. Valid values:
-        /// 
-        /// *   success: The real-time synchronization node or the data synchronization solution is started.
-        /// *   fail: The real-time synchronization node or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.
+        /// The result returned for the start.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public StartDISyncInstanceResponseBodyData Data { get; set; }
         public class StartDISyncInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// The reason why the real-time synchronization task or the data synchronization solution fails to be started.
+            /// 
+            /// If the real-time synchronization task or the data synchronization solution is started, the value null is returned.
+            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The reason why the real-time synchronization node or the data synchronization solution fails to be started.
+            /// Indicates whether the real-time synchronization task or the data synchronization solution is started. Valid values:
             /// 
-            /// If the real-time synchronization node or the data synchronization solution is started, the value null is returned.
+            /// *   success: The real-time synchronization task or the data synchronization solution is started.
+            /// *   fail: The real-time synchronization task or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -35,14 +38,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The result returned for the start.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

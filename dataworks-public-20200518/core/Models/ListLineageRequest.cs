@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListLineageRequest : TeaModel {
         /// <summary>
-        /// The lineage type. Valid values:
-        /// 
-        /// *   up: ancestor lineage
-        /// *   down: descendant lineage
+        /// The lineage type. Valid values:\\
+        /// up: ancestor lineage\\
+        /// down: descendant lineage
         /// 
         /// This parameter is required.
         /// </summary>
@@ -38,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceStatusCountRequest : TeaModel {
         /// <summary>
-        /// The business date of the instance.
+        /// The data timestamp of instances.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizDate { get; set; }
 
         /// <summary>
-        /// The running environment in PROD and DEV modes.
+        /// The runtime environment. Valid values: PROD and DEV.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// The workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>

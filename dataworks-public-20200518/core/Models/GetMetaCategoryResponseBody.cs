@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaCategoryResponseBody : TeaModel {
         /// <summary>
-        /// The returned result.
+        /// The business data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<GetMetaCategoryResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaCategoryResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// The ID of the category.
+                /// The category ID.
                 /// </summary>
                 [NameInMap("CategoryId")]
                 [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the category owner.
+                /// The category owner ID.
                 /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// The ID of the parent category.
+                /// The parent category ID.
                 /// </summary>
                 [NameInMap("ParentCategoryId")]
                 [Validation(Required=false)]
@@ -89,21 +89,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 10. Maximum value: 100.
+            /// The number of entries per page. Default value: 10. Maximum value: 100.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of categories.
+            /// The total number of categories returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -112,28 +112,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

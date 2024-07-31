@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// Indicates whether the metatable is a partitioned table. Valid values:
             /// 
-            /// *   true: The metatable is a partitioned table.
-            /// *   false: The metatable is a non-partitioned table.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("IsPartitionTable")]
             [Validation(Required=false)]
@@ -95,8 +95,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// Indicates whether the metatable is a view. Valid values:
             /// 
-            /// *   true: The metatable is a view.
-            /// *   false: The metatable is not a view.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("IsView")]
             [Validation(Required=false)]
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ReadCount { get; set; }
 
             /// <summary>
-            /// The schema information of the metatable. This parameter is returned only if you enable the table schema in MaxCompute.
+            /// The schema information of the metatable. This parameter is returned if the three-layer model of MaxCompute is enabled.
             /// </summary>
             [NameInMap("Schema")]
             [Validation(Required=false)]

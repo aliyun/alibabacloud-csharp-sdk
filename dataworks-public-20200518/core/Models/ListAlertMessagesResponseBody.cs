@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListAlertMessagesResponseBodyDataAlertMessages> AlertMessages { get; set; }
             public class ListAlertMessagesResponseBodyDataAlertMessages : TeaModel {
                 /// <summary>
-                /// The ID of the alert.
+                /// The alert ID.
                 /// </summary>
                 [NameInMap("AlertId")]
                 [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string AlertMessageStatus { get; set; }
 
                 /// <summary>
-                /// The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. The value SMS indicates that the notification is sent by text message. The value PHONE indicates that the notification is sent by phone call. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.
+                /// The notification method. Valid values: MAIL, SMS, and PHONE. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.
                 /// </summary>
                 [NameInMap("AlertMethod")]
                 [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<ListAlertMessagesResponseBodyDataAlertMessagesInstances> Instances { get; set; }
                 public class ListAlertMessagesResponseBodyDataAlertMessagesInstances : TeaModel {
                     /// <summary>
-                    /// The ID of the instance.
+                    /// The instance ID.
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public long? InstanceId { get; set; }
 
                     /// <summary>
-                    /// The ID of the node.
+                    /// The node ID.
                     /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public long? ProjectId { get; set; }
 
                     /// <summary>
-                    /// The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the node. The value CHECKING_CONDITION indicates that branch conditions are being checked for the node. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is successfully run.
+                    /// The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the node for which the instance is generated. The value CHECKING_CONDITION indicates that branch conditions are being checked for the node for which the instance is generated. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is successfully run.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<ListAlertMessagesResponseBodyDataAlertMessagesNodes> Nodes { get; set; }
                 public class ListAlertMessagesResponseBodyDataAlertMessagesNodes : TeaModel {
                     /// <summary>
-                    /// The ID of the node.
+                    /// The node ID.
                     /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string NodeName { get; set; }
 
                     /// <summary>
-                    /// The ID of the Alibaba Cloud account used by the owner of the node.
+                    /// The ID of the Alibaba Cloud account used by the node owner.
                     /// </summary>
                     [NameInMap("Owner")]
                     [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert SlaAlert { get; set; }
                 public class ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert : TeaModel {
                     /// <summary>
-                    /// The ID of the baseline.
+                    /// The baseline ID.
                     /// </summary>
                     [NameInMap("BaselineId")]
                     [Validation(Required=false)]
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public long? Bizdate { get; set; }
 
                     /// <summary>
-                    /// The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: 1 to 24. The ID of a day-level cycle is 1.
+                    /// The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: [1,24]. The ID of a day-level cycle is 1.
                     /// </summary>
                     [NameInMap("InGroupId")]
                     [Validation(Required=false)]
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public long? ProjectId { get; set; }
 
                     /// <summary>
-                    /// The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGROUS indicates that nodes are still running after the alert duration ends but the committed time does not arrive. The value OVER indicates that nodes are still running after the committed time.
+                    /// The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public long? NodeId { get; set; }
 
                     /// <summary>
-                    /// The ID of the event.
+                    /// The event ID.
                     /// </summary>
                     [NameInMap("TopicId")]
                     [Validation(Required=false)]
@@ -282,21 +282,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public string PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public string PageSize { get; set; }
 
             /// <summary>
-            /// The total number of returned alerts.
+            /// The total number of alerts returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -305,28 +305,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to troubleshoot issues.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

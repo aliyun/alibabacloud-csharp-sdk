@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QueryDISyncTaskConfigProcessResultRequest : TeaModel {
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// The asynchronous thread ID. You can call the [GenerateDISyncTaskConfigForCreating](https://help.aliyun.com/document_detail/383463.html) or [GenerateDISyncTaskConfigForUpdating](https://help.aliyun.com/document_detail/383464.html) operation to obtain the ID.
         /// 
-        /// *   true: The request is successful.
-        /// *   false: The request fails.
+        /// *   The GenerateDISyncTaskConfigForCreating operation is used to generate the ID of the asynchronous thread that is used to create a real-time synchronization task in Data Integration.
+        /// *   The GenerateDISyncTaskConfigForUpdating operation is used to generate the ID of the asynchronous thread that is used to update a real-time synchronization task in Data Integration.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -22,13 +22,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? AsyncProcessId { get; set; }
 
         /// <summary>
-        /// The type of the object that you want to create or update in Data Integration in asynchronous mode. Valid values:
+        /// The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
         /// 
-        /// *   DI_REALTIME: real-time synchronization node
-        /// 
-        /// *   DI_SOLUTION: synchronization solution
-        /// 
-        ///     DataWorks allows you to create or update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+        /// You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -37,10 +33,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the asynchronous thread. You can call the [GenerateDISyncTaskConfigForCreating](https://help.aliyun.com/document_detail/383463.html) or [GenerateDISyncTaskConfigForUpdating](https://help.aliyun.com/document_detail/383464.html) operation to generate the ID.
+        /// The type of the object that you want to create or update in Data Integration in asynchronous mode. Valid values:
         /// 
-        /// *   The GenerateDISyncTaskConfigForCreating operation is used to generate the ID of the asynchronous thread that is used to create a real-time synchronization node or a synchronization solution in Data Integration.
-        /// *   The GenerateDISyncTaskConfigForUpdating operation is used to generate the ID of the asynchronous thread that is used to update a real-time synchronization node or a synchronization solution in Data Integration.
+        /// *   DI_REALTIME: real-time synchronization task
+        /// *   DI_SOLUTION: synchronization solution DataWorks allows you to create or update real-time synchronization tasks and synchronization solutions in Data Integration only in asynchronous mode.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   DI_OFFLINE
+        /// *   DI_REALTIME
+        /// *   DI_SOLUTION
         /// 
         /// This parameter is required.
         /// </summary>

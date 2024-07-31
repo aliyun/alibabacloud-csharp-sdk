@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the table folder.
+        /// The ID of the theme.
         /// 
         /// This parameter is required.
         /// </summary>

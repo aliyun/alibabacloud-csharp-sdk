@@ -10,14 +10,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityEntityRequest : TeaModel {
         /// <summary>
-        /// Valid values: 0 (corrected when SQl is completed) and 1 (corrected when task is completed).
+        /// This parameter is deprecated.
+        /// 
+        /// The value 0 indicates that the partition filter expression is at the SQL level, and the system checks data quality after each SQL statement is executed.
+        /// 
+        /// *
+        /// *
         /// </summary>
         [NameInMap("EntityLevel")]
         [Validation(Required=false)]
         public int? EntityLevel { get; set; }
 
         /// <summary>
-        /// The engine or data source type.
+        /// The type of the compute engine or data source.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   odps
+        /// *   emr
+        /// *   hadoop
+        /// *   cdh
+        /// *   analyticdb_for_mysql
+        /// *   hybriddb_for_postgresql
+        /// *   holodb
         /// 
         /// This parameter is required.
         /// </summary>
@@ -26,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// The partition expression.
+        /// The partition filter expression.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -34,12 +49,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string MatchExpression { get; set; }
 
+        /// <summary>
+        /// The DataWorks workspace ID. You can log on to the DataWorks console to query the ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The name of the maxcompute project or data source.
+        /// The name of the compute engine or data source.
         /// 
         /// This parameter is required.
         /// </summary>

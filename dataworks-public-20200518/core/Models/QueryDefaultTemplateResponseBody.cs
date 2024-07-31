@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QueryDefaultTemplateResponseBody : TeaModel {
         /// <summary>
+        /// The returned data about the default data category and data sensitivity level template. The data is in the JSON array format.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Data")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public object Data { get; set; }
 
         /// <summary>
+        /// The error code.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// The error message.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ErrorMessage")]
@@ -31,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// The HTTP status code.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("HttpStatusCode")]
@@ -38,6 +46,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RequestId")]
@@ -45,6 +55,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Success")]

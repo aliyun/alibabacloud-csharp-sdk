@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// The returned result.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListDataServiceApplicationsResponseBodyDataApplications> Applications { get; set; }
             public class ListDataServiceApplicationsResponseBodyDataApplications : TeaModel {
                 /// <summary>
-                /// The ID of the application.
+                /// The application ID.
                 /// </summary>
                 [NameInMap("ApplicationId")]
                 [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ApplicationName { get; set; }
 
                 /// <summary>
-                /// The ID of the workspace.
+                /// The workspace ID.
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
+            /// The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 10. Maximum value: 100.
+            /// The number of entries per page. Default value: 10. Maximum value: 100.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -70,28 +70,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

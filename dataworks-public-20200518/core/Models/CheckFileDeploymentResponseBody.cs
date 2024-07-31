@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckFileDeploymentResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request. You can use the ID to troubleshoot issues.
+        /// The request ID. You can use the ID to troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

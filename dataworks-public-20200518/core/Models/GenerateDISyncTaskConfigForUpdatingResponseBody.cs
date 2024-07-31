@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GenerateDISyncTaskConfigForUpdatingResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the ID of the asynchronous thread is generated. Valid values:
-        /// 
-        /// *   success: indicates that the ID of the asynchronous thread is generated.
-        /// *   fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.
+        /// The information returned for the ID of the asynchronous thread.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GenerateDISyncTaskConfigForUpdatingResponseBodyData Data { get; set; }
         public class GenerateDISyncTaskConfigForUpdatingResponseBodyData : TeaModel {
+            /// <summary>
+            /// The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, no value is returned for this parameter.
+            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, the value null is returned.
+            /// The ID of the asynchronous thread. You can call the [QueryDISyncTaskConfigProcessResult](https://help.aliyun.com/document_detail/383465.html) operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to update a real-time synchronization task in Data Integration.
             /// </summary>
             [NameInMap("ProcessId")]
             [Validation(Required=false)]
             public long? ProcessId { get; set; }
 
             /// <summary>
-            /// The ID of the asynchronous thread. You can call the [QueryDISyncTaskConfigProcessResult](https://help.aliyun.com/document_detail/383465.html) operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to update a real-time synchronization node or a synchronization solution in Data Integration.
+            /// Indicates whether the ID of the asynchronous thread is generated. Valid values:
+            /// 
+            /// *   success: indicates that the ID of the asynchronous thread is generated.
+            /// *   fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -40,14 +43,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The information returned for the ID of the asynchronous thread.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

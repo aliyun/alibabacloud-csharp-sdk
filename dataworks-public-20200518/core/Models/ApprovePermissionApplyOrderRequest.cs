@@ -10,10 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ApprovePermissionApplyOrderRequest : TeaModel {
         /// <summary>
-        /// The approval action. Valid values:
+        /// The action for the permission request order. Valid values:
         /// 
-        /// *   1: Approve the permission request order.
-        /// *   2: Reject the permission request order.
+        /// *   1: approve
+        /// *   2: reject
+        /// 
+        /// <!---->
+        /// 
+        /// *   0
+        /// *   1
+        /// *   2\\.
+        /// *   3\\.
+        /// *   4
+        /// *   5
         /// 
         /// This parameter is required.
         /// </summary>
@@ -22,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? ApproveAction { get; set; }
 
         /// <summary>
-        /// The comment on the approval.
+        /// The comment on the order.
         /// 
         /// This parameter is required.
         /// </summary>

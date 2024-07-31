@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class StopDIJobRequest : TeaModel {
         /// <summary>
+        /// The task ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DIJobId")]

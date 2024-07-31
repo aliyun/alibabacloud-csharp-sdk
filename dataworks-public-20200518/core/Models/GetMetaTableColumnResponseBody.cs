@@ -10,88 +10,94 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableColumnResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page. Default value: 10. Maximum value: 100.
+        /// The business data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMetaTableColumnResponseBodyData Data { get; set; }
         public class GetMetaTableColumnResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the field.
+            /// The information about fields.
             /// </summary>
             [NameInMap("ColumnList")]
             [Validation(Required=false)]
             public List<GetMetaTableColumnResponseBodyDataColumnList> ColumnList { get; set; }
             public class GetMetaTableColumnResponseBodyDataColumnList : TeaModel {
                 /// <summary>
-                /// The number of times the field is read.
+                /// The description of the field.
                 /// </summary>
                 [NameInMap("Caption")]
                 [Validation(Required=false)]
                 public string Caption { get; set; }
 
                 /// <summary>
-                /// Indicates whether the field is a partition field. Valid values:
-                /// 
-                /// *   true: The field is a partition field.
-                /// *   false: The field is not a partition field.
+                /// The GUID of the field.
                 /// </summary>
                 [NameInMap("ColumnGuid")]
                 [Validation(Required=false)]
                 public string ColumnGuid { get; set; }
 
                 /// <summary>
-                /// The remarks of the field.
+                /// The name of the field.
                 /// </summary>
                 [NameInMap("ColumnName")]
                 [Validation(Required=false)]
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// The ordinal number of the field.
+                /// The data type of the field.
                 /// </summary>
                 [NameInMap("ColumnType")]
                 [Validation(Required=false)]
                 public string ColumnType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the field is the primary key. Valid values:
-                /// 
-                /// *   true: The field is the primary key.
-                /// *   false: The field is not the primary key.
+                /// The remarks of the field.
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
+                /// <summary>
+                /// Indicates whether the field is a foreign key. Valid values:
+                /// 
+                /// *   true
+                /// *   false
+                /// </summary>
                 [NameInMap("IsForeignKey")]
                 [Validation(Required=false)]
                 public bool? IsForeignKey { get; set; }
 
                 /// <summary>
-                /// The data type of the field.
+                /// Indicates whether the field is a partition field. Valid values:
+                /// 
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("IsPartitionColumn")]
                 [Validation(Required=false)]
                 public bool? IsPartitionColumn { get; set; }
 
                 /// <summary>
-                /// The description of the field.
+                /// Indicates whether the field is a primary key. Valid values:
+                /// 
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("IsPrimaryKey")]
                 [Validation(Required=false)]
                 public bool? IsPrimaryKey { get; set; }
 
                 /// <summary>
-                /// Indicates whether the field is a foreign key. Valid values:
-                /// 
-                /// *   true: The field is a foreign key.
-                /// *   false: The field is not a foreign key.
+                /// The sequence number of the field.
                 /// </summary>
                 [NameInMap("Position")]
                 [Validation(Required=false)]
                 public int? Position { get; set; }
 
+                /// <summary>
+                /// The number of times the field is read.
+                /// </summary>
                 [NameInMap("RelationCount")]
                 [Validation(Required=false)]
                 public long? RelationCount { get; set; }
@@ -99,21 +105,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The total number of fields.
+            /// The page number.
             /// </summary>
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// The information of fields.
+            /// The number of entries per page. Default value: 10. Maximum value: 100.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The GUID of the field.
+            /// The total number of fields.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -122,35 +128,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error code.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The business data.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ScanSensitiveDataResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of the check.
+        /// The check result. sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:
         /// 
-        /// sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:
-        /// 
-        /// *   hitCount: the number of times that the sensitive data hits the rule
-        /// *   ruleName: the name of the rule
+        /// *   hitCount: the number of times that the sensitive data hits the rule.
+        /// *   ruleName: the name of the rule.
         /// </summary>
         [NameInMap("Sensitives")]
         [Validation(Required=false)]

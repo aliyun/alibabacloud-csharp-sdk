@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// The environment to which the data source belongs. Valid values:
+        /// The environment in which the data source resides. Valid values:
         /// 
         /// *   0: development environment
         /// *   1: production environment
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.
+        /// The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.
         /// 
         /// This parameter is required.
         /// </summary>

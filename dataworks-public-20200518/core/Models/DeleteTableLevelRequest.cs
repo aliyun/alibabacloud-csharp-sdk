@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableLevelRequest : TeaModel {
         /// <summary>
-        /// The ID of the table level to be deleted. You can call the ListTableLevel operation to obtain the ID.
+        /// The ID of the table level that you want to delete. You can call the ListTableLevel operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? LevelId { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// The DataWorks workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>

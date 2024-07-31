@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RemoveProjectMemberFromRoleRequest : TeaModel {
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// The DataWorks workspace ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,9 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The role in the DataWorks workspace. You can call the ListProjectRoles operation to query codes of the roles in the workspace.
-        /// 
-        /// Valid values:
+        /// The code of the role in the DataWorks workspace. You can call the ListProjectRoles operation to query the codes of all roles in a DataWorks workspace. Valid values:
         /// 
         /// *   role_project_owner: workspace owner
         /// *   role_project_admin: workspace administrator
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RoleCode { get; set; }
 
         /// <summary>
-        /// The ID of the user.
+        /// The user ID.
         /// 
         /// This parameter is required.
         /// </summary>

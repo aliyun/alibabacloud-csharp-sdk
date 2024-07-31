@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TopTenErrorTimesInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The ranking of nodes on which errors occur.
+        /// The ranking data of nodes on which errors occurred.
         /// </summary>
         [NameInMap("InstanceErrorRank")]
         [Validation(Required=false)]
         public TopTenErrorTimesInstanceResponseBodyInstanceErrorRank InstanceErrorRank { get; set; }
         public class TopTenErrorTimesInstanceResponseBodyInstanceErrorRank : TeaModel {
             /// <summary>
-            /// The ranking of nodes on which errors occur within the last month.
+            /// The ranking data of nodes on which errors occurred within the last month.
             /// </summary>
             [NameInMap("ErrorRank")]
             [Validation(Required=false)]
             public List<TopTenErrorTimesInstanceResponseBodyInstanceErrorRankErrorRank> ErrorRank { get; set; }
             public class TopTenErrorTimesInstanceResponseBodyInstanceErrorRankErrorRank : TeaModel {
                 /// <summary>
-                /// The number of errors that occur on the node.
+                /// The number of errors that occurred on the node.
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The node ID.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
@@ -45,25 +45,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// The user identifier (UID) of the Alibaba Cloud account used by the owner of the node.
+                /// The ID of the Alibaba Cloud account used by the node owner.
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The type of the node.
-                /// 
-                /// Valid values:
-                /// 
-                /// 6 (Shell node), 10 (ODPS SQL node), 11 (ODPS MR node), 23 (Data Integration node), 24 (ODPS Script node), 99 (zero load node), 221 (PyODPS 2 node), 225 (ODPS Spark node), 227 (EMR Hive node), 228 (EMR Spark node), 229 (EMR Spark SQL node), 230 (EMR MR node), 239 (OSS object inspection node), 257 (EMR Shell node), 258 (EMR Spark Shell node), 259 (EMR Presto node), 260 (EMR Impala node), 900 (real-time data synchronization node), 1089 (cross-tenant collaboration node), 1091 (Hologres development node), 1093 (Hologres SQL node), 1100 (assignment node), and 1221 (PyODPS 3 node).
+                /// The type of the node. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
                 /// </summary>
                 [NameInMap("ProgramType")]
                 [Validation(Required=false)]
                 public int? ProgramType { get; set; }
 
                 /// <summary>
-                /// The ID of the DataWorks workspace.
+                /// The DataWorks workspace ID.
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
@@ -72,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The time when the ranking was updated.
+            /// The timestamp at which the rankings were updated.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to troubleshoot issues.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

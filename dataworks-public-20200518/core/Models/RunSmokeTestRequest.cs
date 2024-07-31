@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.
+        /// The node ID. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -44,9 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeParams { get; set; }
 
         /// <summary>
-        /// The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
-        /// 
-        /// A workspace in basic mode does not have a development environment. For more information, see [Basic mode and standard mode](https://help.aliyun.com/document_detail/85772.html).
+        /// The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment. A workspace in basic mode does not have a development environment. For more information, see [Differences between workspaces in basic mode and workspaces in standard mode](https://help.aliyun.com/document_detail/85772.html).
         /// 
         /// This parameter is required.
         /// </summary>

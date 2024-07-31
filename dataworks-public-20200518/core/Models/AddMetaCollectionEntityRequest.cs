@@ -19,9 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CollectionQualifiedName { get; set; }
 
         /// <summary>
-        /// The unique identifier of the entity.
-        /// 
-        /// Example: maxcompute-table.projectA.tableA.
+        /// The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -30,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EntityQualifiedName { get; set; }
 
         /// <summary>
-        /// The remarks on the entity. Example: latest product table.
+        /// The remarks of the entity. Example: latest product table.
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

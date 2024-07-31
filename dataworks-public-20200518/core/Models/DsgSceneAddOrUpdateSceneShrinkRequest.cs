@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgSceneAddOrUpdateSceneShrinkRequest : TeaModel {
         /// <summary>
+        /// The information about the level-2 data masking scenario.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("scenes")]

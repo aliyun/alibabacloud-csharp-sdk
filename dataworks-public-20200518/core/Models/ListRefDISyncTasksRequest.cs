@@ -19,21 +19,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number. Valid values: 1 to 100.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+        /// The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The condition used to filter sync nodes. Valid values:
+        /// The condition used to filter synchronization tasks. Valid values:
         /// 
-        /// *   from: queries the sync nodes that use the data source as the source data source.
-        /// *   to: queries the sync nodes that use the data source as the destination data source.
+        /// *   from: queries the synchronization tasks that use the data source as the source.
+        /// *   to: queries the synchronization tasks that use the data source as the destination.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -54,12 +54,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RefType { get; set; }
 
         /// <summary>
-        /// The type of the sync node that you want to query. Valid values:
+        /// The type of the synchronization task that you want to query. Valid values:
         /// 
-        /// *   DI_OFFLINE: batch sync node
-        /// *   DI_REALTIME: real-time sync node
+        /// *   DI_OFFLINE: batch synchronization task
+        /// *   DI_REALTIME: real-time synchronization task
         /// 
-        /// You can specify only one type. The sync solution type is not supported.
+        /// You can call the ListRefDISyncTasks operation to query only one type of the task.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+        /// The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function on the DataStudio page.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FunctionType { get; set; }
 
         /// <summary>
-        /// The description of the input parameters of the function. This parameter corresponds to the Parameter Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+        /// The description of the input parameters of the function. This parameter corresponds to the Parameter Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.
         /// </summary>
         [NameInMap("ParameterDescription")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Resources { get; set; }
 
         /// <summary>
-        /// The description of the return value of the function. This parameter corresponds to the Return Value parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+        /// The description of the return value of the function. This parameter corresponds to the Return Value parameter in the Register Function section of the configuration tab of the function on the DataStudio page.
         /// </summary>
         [NameInMap("ReturnValue")]
         [Validation(Required=false)]

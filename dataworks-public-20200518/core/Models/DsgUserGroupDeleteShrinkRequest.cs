@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgUserGroupDeleteShrinkRequest : TeaModel {
+        /// <summary>
+        /// The information about the user group.
+        /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string IdsShrink { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineConfigsRequest : TeaModel {
         /// <summary>
-        /// The type of the baseline. Valid values: DAILY and HOURLY. A value of DAILY indicates that the baseline is a day-level baseline. A value of HOURLY indicates that the baseline is an hour-level baseline. Separate multiple baseline types with commas (,).
+        /// The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple baseline types with commas (,).
         /// </summary>
         [NameInMap("BaselineTypes")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: 1 to 30. Default value: 1.
+        /// The page number. Valid values: 1 to 30. Default value: 1.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.
+        /// The number of entries per page. Valid values: 1 to 100. Default value: 10.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Separate multiple priorities with commas (,).
+        /// The priority of the baseline. Valid values: {1,3,5,7,8}. Separate multiple priorities with commas (,).
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public string Priority { get; set; }
 
         /// <summary>
-        /// The ID of the workspace. You can call the ListProjects operation to query the ID.
+        /// The workspace ID. You can call the ListProjects operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The keyword in the baseline name used to search for the baseline.
+        /// The keyword in the baseline name, which is used to search for the baseline.
         /// </summary>
         [NameInMap("SearchText")]
         [Validation(Required=false)]

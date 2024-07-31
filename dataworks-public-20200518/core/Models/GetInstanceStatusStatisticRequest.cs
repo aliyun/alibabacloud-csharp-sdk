@@ -25,13 +25,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   SMOKE_TEST: DAG for a smoke testing workflow
         /// *   SUPPLY_DATA: DAG for a data backfill instance
         /// *   BUSINESS_PROCESS_DAG: DAG for a one-time workflow
+        /// 
+        /// <!---->
+        /// 
+        /// *   DAILY
+        /// *   MANUAL
+        /// *   SMOKE_TEST
+        /// *   SUPPLY_DATA
+        /// *   BUSINESS_PROCESS_DAG
         /// </summary>
         [NameInMap("DagType")]
         [Validation(Required=false)]
         public string DagType { get; set; }
 
         /// <summary>
-        /// The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
+        /// The runtime environment. Valid values: PROD and DEV.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -40,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.
+        /// The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -48,6 +56,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// The scheduling cycle. Valid values:
+        /// 
+        /// *   MINUTE
+        /// *   HOUR
+        /// *   DAY
+        /// *   WEEK
+        /// *   MONTH
+        /// </summary>
         [NameInMap("SchedulerPeriod")]
         [Validation(Required=false)]
         public string SchedulerPeriod { get; set; }

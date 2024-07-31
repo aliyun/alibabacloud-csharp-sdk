@@ -10,23 +10,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class StopDISyncInstanceResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the synchronization node is stopped. Valid values:
-        /// 
-        /// *   success: The synchronization node is stopped.
-        /// *   fail: The synchronization node fails to be stopped.
+        /// The information returned for the synchronization task.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public StopDISyncInstanceResponseBodyData Data { get; set; }
         public class StopDISyncInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// The reason why the synchronization task fails to be stopped.
+            /// 
+            /// If the synchronization task is stopped, the value null is returned.
+            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The reason why the synchronization node fails to be stopped.
+            /// Indicates whether the synchronization task is stopped. Valid values:
             /// 
-            /// If the synchronization node is stopped, the value null is returned.
+            /// *   success
+            /// *   fail
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -35,14 +38,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The information returned for the synchronization node.
+        /// The request ID. You can locate logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

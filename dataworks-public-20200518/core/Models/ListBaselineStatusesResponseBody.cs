@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineStatusesResponseBody : TeaModel {
         /// <summary>
-        /// The list of baseline instances returned.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListBaselineStatusesResponseBodyDataBaselineStatuses> BaselineStatuses { get; set; }
             public class ListBaselineStatusesResponseBodyDataBaselineStatuses : TeaModel {
                 /// <summary>
-                /// The ID of the baseline.
+                /// The baseline ID.
                 /// </summary>
                 [NameInMap("BaselineId")]
                 [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string BaselineName { get; set; }
 
                 /// <summary>
-                /// The data timestamp of the baseline instance.
+                /// The data timestamp.
                 /// </summary>
                 [NameInMap("Bizdate")]
                 [Validation(Required=false)]
@@ -52,21 +52,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Buffer { get; set; }
 
                 /// <summary>
-                /// The predicted time when the baseline instance finished running.
+                /// The timestamp of the predicted time when the baseline instance finished running.
                 /// </summary>
                 [NameInMap("EndCast")]
                 [Validation(Required=false)]
                 public long? EndCast { get; set; }
 
                 /// <summary>
-                /// The alerting time of the baseline instance.
+                /// The timestamp of the alerting time of the baseline instance.
                 /// </summary>
                 [NameInMap("ExpTime")]
                 [Validation(Required=false)]
                 public long? ExpTime { get; set; }
 
                 /// <summary>
-                /// The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running.
+                /// The status of the baseline instance. Valid values: UNFINISH and FINISH.
                 /// </summary>
                 [NameInMap("FinishStatus")]
                 [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
-                /// The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.
+                /// The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: [1,24]. The ID of a day-level cycle is 1.
                 /// </summary>
                 [NameInMap("InGroupId")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The priority of the baseline. Valid values: 1, 3, 5, 7, and 8.
+                /// The priority of the baseline. Valid values: {1,3,5,7,8}.
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// The actual time when the baseline instance finished running.
+                /// The timestamp of the actual time when the baseline instance finished running.
                 /// </summary>
                 [NameInMap("SlaTime")]
                 [Validation(Required=false)]
                 public long? SlaTime { get; set; }
 
                 /// <summary>
-                /// The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time.
+                /// The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

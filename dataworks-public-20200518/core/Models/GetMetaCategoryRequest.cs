@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the category tree.
+        /// The category tree ID.
         /// </summary>
         [NameInMap("ParentCategoryId")]
         [Validation(Required=false)]

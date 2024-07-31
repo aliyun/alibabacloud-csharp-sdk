@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// The code of the data masking scene. You can view the code on the Data Masking page in Data Security Guard of the DataWorks console.
+        /// The code of the data masking scenario. You can view the code on the Data Masking Management page in Data Security Guard of the DataWorks console.
         /// 
         /// This parameter is required.
         /// </summary>

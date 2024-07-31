@@ -38,35 +38,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? EnvType { get; set; }
 
         /// <summary>
-        /// The ID of the new owner. If this parameter is not specified, the owner ID is not updated.
+        /// The new owner ID. If you leave this parameter empty, the owner ID is not updated.
         /// </summary>
         [NameInMap("NewOwnerId")]
         [Validation(Required=false)]
         public string NewOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// The DataWorks workspace ID.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The names of labels that you want to delete. Separate the labels with commas (,).
+        /// The names of labels that you want to remove. Separate the labels with commas (,).
         /// </summary>
         [NameInMap("RemovedLabels")]
         [Validation(Required=false)]
         public string RemovedLabels { get; set; }
 
         /// <summary>
-        /// The schema information of the table. You need to configure this parameter if you enable the table schema in MaxCompute.
+        /// The schema information about the table. You must configure this parameter if you enable the three-layer model of MaxCompute.
         /// </summary>
         [NameInMap("Schema")]
         [Validation(Required=false)]
         public string Schema { get; set; }
 
         /// <summary>
-        /// The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.
+        /// The GUID of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.
+        /// The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all members. The value 1 indicates that the table is visible to all members. The value 2 indicates that the table is visible to workspace members.
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateTableThemeRequest : TeaModel {
         /// <summary>
-        /// The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a first-level table folder. A value of 2 indicates a second-level table folder.
+        /// The level of the table theme. Valid values: 1 and 2. The value 1 indicates the first level. The value 2 indicates the second level.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? Level { get; set; }
 
         /// <summary>
-        /// The name of the table folder.
+        /// The name of the table theme.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the level of the parent table folder.
+        /// The ID of the level of the parent table theme.
         /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]
         public long? ParentId { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// The DataWorks workspace ID.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

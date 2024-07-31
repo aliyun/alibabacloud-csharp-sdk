@@ -19,18 +19,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CollectionType { get; set; }
 
         /// <summary>
-        /// The comment of the collection.
-        /// 
-        /// The comment must be 1 to 64 characters in length.
+        /// The comment of the collection. The comment must be 1 to 64 characters in length.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The name of the collection.
-        /// 
-        /// The name must be 1 to 32 characters in length.
+        /// The name of the collection. The name must be 1 to 32 characters in length.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -10,57 +10,63 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMetaDBResponseBody : TeaModel {
         /// <summary>
-        /// The list of metadatabases.
+        /// The information about the metadatabases.
         /// </summary>
         [NameInMap("DatabaseInfo")]
         [Validation(Required=false)]
         public ListMetaDBResponseBodyDatabaseInfo DatabaseInfo { get; set; }
         public class ListMetaDBResponseBodyDatabaseInfo : TeaModel {
             /// <summary>
-            /// The timestamp at which the metadatabase was created. You can convert the timestamp to the related date based on the time zone that you use.
+            /// The metadatabases.
             /// </summary>
             [NameInMap("DbList")]
             [Validation(Required=false)]
             public List<ListMetaDBResponseBodyDatabaseInfoDbList> DbList { get; set; }
             public class ListMetaDBResponseBodyDatabaseInfoDbList : TeaModel {
                 /// <summary>
-                /// The timestamp at which the metadatabase was updated.
+                /// The timestamp at which the metadatabase was created. You can convert the timestamp to the date based on the time zone that you use.
                 /// </summary>
                 [NameInMap("CreateTimeStamp")]
                 [Validation(Required=false)]
                 public long? CreateTimeStamp { get; set; }
 
+                /// <summary>
+                /// The URL of the metadatabase.
+                /// </summary>
                 [NameInMap("Location")]
                 [Validation(Required=false)]
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The ID of the metadatabase owner.
+                /// The timestamp at which the metadatabase was updated.
                 /// </summary>
                 [NameInMap("ModifiedTimeStamp")]
                 [Validation(Required=false)]
                 public long? ModifiedTimeStamp { get; set; }
 
                 /// <summary>
-                /// The URL of the metadatabase.
+                /// The name of the metadatabase.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The owner ID.
+                /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// The universally unique identifier (UUID) of the metadatabase.
+                /// The type of the metadatabase.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The name of the metadatabase.
+                /// The UUID of the metadatabase.
                 /// </summary>
                 [NameInMap("UUID")]
                 [Validation(Required=false)]
@@ -69,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The type of the metadatabase.
+            /// The total number of the metadatabases returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The total number of the metadatabases.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

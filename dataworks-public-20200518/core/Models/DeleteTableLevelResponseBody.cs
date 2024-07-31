@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableLevelResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the table level is deleted.
+        /// Indicates whether the table level was deleted.
         /// </summary>
         [NameInMap("DeleteResult")]
         [Validation(Required=false)]
         public bool? DeleteResult { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

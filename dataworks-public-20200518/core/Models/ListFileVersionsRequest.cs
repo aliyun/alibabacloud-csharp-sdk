@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FileId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value:10. Maximum value: 100.
+        /// The number of entries per page. Default value: 10. Maximum value: 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

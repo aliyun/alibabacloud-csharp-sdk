@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetIDEEventDetailResponseBody : TeaModel {
         /// <summary>
-        /// The data snapshot that is generated when the extension point event is triggered.
+        /// The data snapshot that is generated when an extension point event is triggered.
         /// 
         /// The fields contained in data snapshots vary based on the types of the triggered extension point events. For more information, see the description of the fields.
         /// </summary>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// The data snapshot when the file is committed and deployed.
             /// 
-            /// The value of this parameter is not empty only when the message type is IDE_FILE_SUBMIT_BEFORE or IDE_FILE_DEPLOY_BEFORE.
+            /// This parameter is valid only if the message type is IDE_FILE_SUBMIT_BEFORE or IDE_FILE_DEPLOY_BEFORE.
             /// </summary>
             [NameInMap("CommittedFile")]
             [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account that is used to create the file of the current version.
+                /// The ID of the Alibaba Cloud account that is used to generate the file of the current version.
                 /// </summary>
                 [NameInMap("Committor")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// The ID of the file.
+                /// The file ID.
                 /// </summary>
                 [NameInMap("FileId")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public long? CurrentVersion { get; set; }
 
                     /// <summary>
-                    /// The name of the compute engine instance with which the file is associated.
+                    /// The name of the data source with which the file is associated.
                     /// </summary>
                     [NameInMap("DataSourceName")]
                     [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string FolderId { get; set; }
 
                     /// <summary>
-                    /// The owner of the file.
+                    /// The file owner.
                     /// </summary>
                     [NameInMap("Owner")]
                     [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
+                /// The type of the code for the file. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
                 /// </summary>
                 [NameInMap("FileType")]
                 [Validation(Required=false)]
@@ -156,25 +156,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string CronExpress { get; set; }
 
                     /// <summary>
-                    /// The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. A value of NOT_DAY indicates that the node is scheduled to run by minute or hour. A value of DAY indicates that the node is scheduled to run by day, week, or month.
+                    /// The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.
                     /// 
-                    /// This parameter is equivalent to the Scheduling Cycle parameter in the Schedule section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+                    /// This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
                     /// </summary>
                     [NameInMap("CycleType")]
                     [Validation(Required=false)]
                     public string CycleType { get; set; }
 
                     /// <summary>
-                    /// The IDs of the nodes on which the node corresponding to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).
+                    /// The ID of the node on which the node that corresponds to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).
                     /// 
-                    /// This parameter is equivalent to the field that appears after Previous Cycle is selected and the Depend On parameter is set to Other Nodes in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+                    /// The value of this parameter is equivalent to the ID of the node that you specified after you select Other Nodes for Cross-Cycle Dependency (Original Previous-Cycle Dependency) in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
                     /// </summary>
                     [NameInMap("DependentNodeIdList")]
                     [Validation(Required=false)]
                     public string DependentNodeIdList { get; set; }
 
                     /// <summary>
-                    /// The type of the cross-cycle scheduling dependency of the node that corresponds to the file. Valid values:
+                    /// The type of the cross-cycle scheduling dependency of the node. Valid values:
                     /// 
                     /// *   SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.
                     /// *   CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.
@@ -193,9 +193,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public List<GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationInputList> InputList { get; set; }
                     public class GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationInputList : TeaModel {
                         /// <summary>
-                        /// The output names of the parent files on which the current file depends.
+                        /// The output name of the parent file on which the current file depends.
                         /// 
-                        /// This parameter is equivalent to the Output Name parameter under Parent Nodes in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+                        /// This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
                         /// </summary>
                         [NameInMap("Input")]
                         [Validation(Required=false)]
@@ -204,8 +204,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         /// <summary>
                         /// The mode of the configuration file dependency. Valid values:
                         /// 
-                        /// *   MANUAL: The scheduling dependencies are manually configured.
-                        /// *   AUTO: The scheduling dependencies are automatically parsed.
+                        /// *   MANUAL: Scheduling dependencies are manually configured.
+                        /// *   AUTO: Scheduling dependencies are automatically parsed.
                         /// </summary>
                         [NameInMap("ParseType")]
                         [Validation(Required=false)]
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// The output names of the current file.
                     /// 
-                    /// This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+                    /// This parameter corresponds to the Output Name of Current Node parameter in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
                     /// </summary>
                     [NameInMap("OutputList")]
                     [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         /// <summary>
                         /// The output name of the current file.
                         /// 
-                        /// This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+                        /// This parameter corresponds to the Output Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
                         /// </summary>
                         [NameInMap("Output")]
                         [Validation(Required=false)]
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         /// <summary>
                         /// The output table name of the current file.
                         /// 
-                        /// This parameter is equivalent to the Output Table Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+                        /// This parameter corresponds to the Output Table Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
                         /// </summary>
                         [NameInMap("RefTableName")]
                         [Validation(Required=false)]
@@ -243,22 +243,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     }
 
                     /// <summary>
-                    /// The scheduling parameters.
+                    /// The scheduling parameters of the node.
                     /// 
-                    /// This parameter is equivalent to the configuration of the scheduling parameters in the Parameters section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information, see [Configure scheduling parameters](https://help.aliyun.com/document_detail/137548.html).
+                    /// This parameter corresponds to the Scheduling Parameter section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information about the configurations of the scheduling parameters, see [Configure scheduling parameters](https://help.aliyun.com/document_detail/137548.html).
                     /// </summary>
                     [NameInMap("ParaValue")]
                     [Validation(Required=false)]
                     public string ParaValue { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the node can be rerun. Valid values:
+                    /// Indicates whether the node that corresponds to the file can be rerun. Valid values:
                     /// 
                     /// *   ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.
                     /// *   FAILURE_ALLOWED: The node can be rerun only after it fails to run.
                     /// *   ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.
                     /// 
-                    /// This parameter is equivalent to the Rerun parameter in the Schedule section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+                    /// This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
                     /// </summary>
                     [NameInMap("RerunMode")]
                     [Validation(Required=false)]
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// *   NORMAL: The node is an auto triggered node.
                     /// *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.
                     /// *   PAUSE: The node is a paused node.
-                    /// *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
+                    /// *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.
                     /// </summary>
                     [NameInMap("SchedulerType")]
                     [Validation(Required=false)]
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The data snapshot when the file is deleted. The value of this parameter is not empty only when the message type is IDE_FILE_DELETE_BEFORE.
+            /// The data snapshot when the file is deleted. This parameter is valid only if the message type is IDE_FILE_DELETE_BEFORE.
             /// </summary>
             [NameInMap("DeletedFile")]
             [Validation(Required=false)]
@@ -337,14 +337,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CurrentVersion { get; set; }
 
                 /// <summary>
-                /// The name of the compute engine instance with which the file is associated.
+                /// The name of the data source with which the file is associated.
                 /// </summary>
                 [NameInMap("DataSourceName")]
                 [Validation(Required=false)]
                 public string DataSourceName { get; set; }
 
                 /// <summary>
-                /// The ID of the file.
+                /// The file ID.
                 /// </summary>
                 [NameInMap("FileId")]
                 [Validation(Required=false)]
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
+                /// The type of the code for the file. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
                 /// </summary>
                 [NameInMap("FileType")]
                 [Validation(Required=false)]
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// The owner of the file.
+                /// The file owner.
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The data snapshot when the code in the file is run. The value of this parameter is not empty only when the message type is IDE_FILE_EXECUTE_BEFORE.
+            /// The data snapshot when the code in the file is run. This parameter is valid only if the message type is IDE_FILE_EXECUTE_BEFORE.
             /// </summary>
             [NameInMap("FileExecutionCommand")]
             [Validation(Required=false)]
@@ -423,21 +423,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// The name of the compute engine instance with which the file is associated.
+                /// The name of the data source with which the file is associated.
                 /// </summary>
                 [NameInMap("DataSourceName")]
                 [Validation(Required=false)]
                 public string DataSourceName { get; set; }
 
                 /// <summary>
-                /// The ID of the file.
+                /// The file ID.
                 /// </summary>
                 [NameInMap("FileId")]
                 [Validation(Required=false)]
                 public long? FileId { get; set; }
 
                 /// <summary>
-                /// The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
+                /// The type of the code for the file. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
                 /// </summary>
                 [NameInMap("FileType")]
                 [Validation(Required=false)]
@@ -446,7 +446,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The data snapshot when the table is committed and deployed. The value of this parameter is not empty only when the message type is IDE_TABLE_SUBMIT_BEFORE or IDE_TABLE_DEPLOY_BEFORE.
+            /// The data snapshot when the table is committed and deployed. This parameter is valid only if the message type is IDE_TABLE_SUBMIT_BEFORE or IDE_TABLE_DEPLOY_BEFORE.
             /// </summary>
             [NameInMap("TableModel")]
             [Validation(Required=false)]
@@ -483,8 +483,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// Indicates whether the column is a partition key column. Valid values:
                     /// 
-                    /// - true: The column is a partition key column.
-                    /// - false: The column is not a partition key column.
+                    /// *   true
+                    /// *   false
                     /// </summary>
                     [NameInMap("IsPartitionColumn")]
                     [Validation(Required=false)]
@@ -493,14 +493,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// The description of the table.
+                /// The remarks of the table.
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// The name of the compute engine instance to which the table belongs.
+                /// The name of the data source to which the table belongs.
                 /// </summary>
                 [NameInMap("DataSourceName")]
                 [Validation(Required=false)]
@@ -509,15 +509,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// The environment in which the table is used. Valid values:
                 /// 
-                /// - DEV: development environment
-                /// - PROD: production environment
+                /// *   DEV
+                /// *   PROD
                 /// </summary>
                 [NameInMap("Env")]
                 [Validation(Required=false)]
                 public string Env { get; set; }
 
                 /// <summary>
-                /// The lifecycle of the table. Unit: days.
+                /// The lifecycle of the metatable. Unit: day.
                 /// </summary>
                 [NameInMap("LifeCycle")]
                 [Validation(Required=false)]
@@ -542,7 +542,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request. You can troubleshoot errors based on the ID.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

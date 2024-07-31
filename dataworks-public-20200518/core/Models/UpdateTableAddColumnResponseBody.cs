@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableAddColumnResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the request task.
-        /// 
-        /// After a request task is submitted, it is divided into multiple subtasks that are run in sequence. After the current subtask is complete, the next subtask starts to run. After all subtasks are complete, the request task is complete. If a request task is aborted due to one of the following issues, address the issue based on the error code and initiate the request task again:
+        /// The information about the request task. After a request task is submitted, it is divided into multiple subtasks that are run in sequence. After the current subtask is complete, the next subtask starts to run. After all subtasks are complete, the request task is complete. If a request task is aborted due to one of the following issues, address the issue based on the error code and initiate the request task again:
         /// 
         /// *   The request task fails to be submitted.
         /// *   After the request task is submitted, a subtask fails to run.
@@ -29,9 +27,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public UpdateTableAddColumnResponseBodyTaskInfo TaskInfo { get; set; }
         public class UpdateTableAddColumnResponseBodyTaskInfo : TeaModel {
             /// <summary>
-            /// Details about the status of the current subtask. Valid values:
+            /// The details about the status of the current subtask.
             /// 
-            /// *   If the current subtask succeeds, success is returned.
+            /// *   If the current subtask is successful, success is returned.
             /// *   If the current subtask fails, the error details are displayed.
             /// </summary>
             [NameInMap("Content")]
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete. You can call the [GetDDLJobStatus](https://help.aliyun.com/document_detail/185659.html) operation to query the status of the subtask based on the subtask ID.
+            /// The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete.
             /// </summary>
             [NameInMap("NextTaskId")]
             [Validation(Required=false)]
