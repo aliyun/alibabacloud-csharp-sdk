@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string SettleTime { get; set; }
 
+            [NameInMap("third_part_apply_id")]
+            [Validation(Required=false)]
+            public string ThirdPartApplyId { get; set; }
+
             [NameInMap("user_alipay_id")]
             [Validation(Required=false)]
             public string UserAlipayId { get; set; }
