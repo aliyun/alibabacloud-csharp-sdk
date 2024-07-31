@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
     public class ReleaseAnycastEipAddressRequest : TeaModel {
         /// <summary>
         /// The ID of the Anycast EIP to be released.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AnycastId")]
         [Validation(Required=false)]

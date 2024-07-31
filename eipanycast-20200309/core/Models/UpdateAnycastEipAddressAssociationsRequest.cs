@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
     public class UpdateAnycastEipAddressAssociationsRequest : TeaModel {
         /// <summary>
         /// The ID of the Anycast EIP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AnycastId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 
         /// <summary>
         /// The ID of the cloud resource with which you want to associate the Anycast EIP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindInstanceId")]
         [Validation(Required=false)]
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             /// <summary>
             /// The access points in the access areas to be added.
             /// 
-            /// You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query the access points in supported access areas.
+            /// You can call the [DescribeAnycastPopLocations](https://help.aliyun.com/document_detail/171938.html) operation to query the access points in supported access areas.
             /// </summary>
             [NameInMap("PopLocation")]
             [Validation(Required=false)]

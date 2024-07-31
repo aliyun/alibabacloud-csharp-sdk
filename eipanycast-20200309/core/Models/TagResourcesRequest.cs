@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
     public class TagResourcesRequest : TeaModel {
         /// <summary>
         /// The resource ID. You can specify at most 20 IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 
         /// <summary>
         /// The resource type. Set the value to **ANYCASTEIPADDRESS**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 
         /// <summary>
         /// The tag information.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

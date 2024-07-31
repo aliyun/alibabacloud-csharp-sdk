@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
     public class AssociateAnycastEipAddressRequest : TeaModel {
         /// <summary>
         /// The ID of the Anycast EIP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AnycastId")]
         [Validation(Required=false)]
@@ -22,7 +24,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         /// *   **Default**: the default mode. In this mode, the endpoint to be associated serves as the default origin server.
         /// *   **Normal**: the standard mode. In this mode, the endpoint to be associated serves as a standard origin server.
         /// 
-        /// > You can associate endpoints in multiple regions with an Anycast EIP. However, only one endpoint can serve as the default origin server. Others serve as standard origin servers. If you do not specify or add an access point, requests are forwarded to the default origin server.\
+        /// > You can associate endpoints in multiple regions with an Anycast EIP. However, only one endpoint can serve as the default origin server. Others serve as standard origin servers. If you do not specify or add an access point, requests are forwarded to the default origin server.\\
         /// 
         /// 
         /// *   If this is your first time to associate an Anycast EIP with an endpoint, set the value to **Default**.
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 
         /// <summary>
         /// The ID of the endpoint with which you want to associate the Anycast EIP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindInstanceId")]
         [Validation(Required=false)]
@@ -42,7 +46,9 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         /// <summary>
         /// The ID of the region where the endpoint is deployed.
         /// 
-        /// You can associate Anycast EIPs only with endpoints in specific regions. You can call the [DescribeAnycastServerRegions](~~171939~~) operation to query the region IDs.
+        /// You can associate Anycast EIPs only with endpoints in specific regions. You can call the [DescribeAnycastServerRegions](https://help.aliyun.com/document_detail/171939.html) operation to query the region IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindInstanceRegionId")]
         [Validation(Required=false)]
@@ -53,6 +59,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         /// 
         /// *   **SlbInstance**: internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)
         /// *   **NetworkInterface**: elastic network interface (ENI)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindInstanceType")]
         [Validation(Required=false)]
@@ -84,7 +92,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         /// 
         /// If this is your first time to associate an Anycast EIP with an endpoint, ignore this parameter. The system automatically associates all access areas.
         /// 
-        /// You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query information about access points in supported access areas.
+        /// You can call the [DescribeAnycastPopLocations](https://help.aliyun.com/document_detail/171938.html) operation to query information about access points in supported access areas.
         /// </summary>
         [NameInMap("PopLocations")]
         [Validation(Required=false)]
@@ -95,7 +103,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             /// 
             /// If this is your first time to associate an Anycast EIP with an endpoint, ignore this parameter. The system automatically associates all access areas.
             /// 
-            /// You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query information about access points in supported access areas.
+            /// You can call the [DescribeAnycastPopLocations](https://help.aliyun.com/document_detail/171938.html) operation to query information about access points in supported access areas.
             /// </summary>
             [NameInMap("PopLocation")]
             [Validation(Required=false)]

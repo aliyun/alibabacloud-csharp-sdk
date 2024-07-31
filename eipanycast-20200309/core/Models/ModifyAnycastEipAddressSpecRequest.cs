@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
     public class ModifyAnycastEipAddressSpecRequest : TeaModel {
         /// <summary>
         /// The ID of the Anycast EIP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AnycastId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         /// The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.
         /// 
         /// Valid values: **200** to **1000**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
     public class UnassociateAnycastEipAddressRequest : TeaModel {
         /// <summary>
         /// The ID of the Anycast EIP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AnycastId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 
         /// <summary>
         /// The ID of the endpoint from which you want to disassociate the Anycast EIP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindInstanceId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 
         /// <summary>
         /// The region where the endpoint is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindInstanceRegionId")]
         [Validation(Required=false)]
@@ -35,6 +41,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         /// 
         /// *   **SlbInstance**: an internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)
         /// *   **NetworkInterface**: elastic network interface (ENI)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindInstanceType")]
         [Validation(Required=false)]

@@ -212,6 +212,10 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         [Validation(Required=false)]
         public string ServiceLocation { get; set; }
 
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public int? ServiceManaged { get; set; }
+
         /// <summary>
         /// The status of the Anycast EIP.
         /// 

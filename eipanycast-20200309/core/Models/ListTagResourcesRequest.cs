@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 
         /// <summary>
         /// The resource type. Set the value to **ANYCASTEIPADDRESS**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

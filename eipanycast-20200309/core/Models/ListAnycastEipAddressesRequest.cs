@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         /// <summary>
         /// The name of the Anycast EIP.
         /// 
-        /// The name must be 0 to 128 characters in length, and can contain digits, hyphens (-), and underscores (\_). The name must start with a letter.
+        /// The name must be 0 to 128 characters in length, and can contain digits, hyphens (-), and underscores (_). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             /// <summary>
             /// The tag key of the resource. You can specify up to 20 tag keys. You cannot specify empty strings as tag keys.
             /// 
-            /// The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
             /// 
             /// >  You must specify at least one of **Tag.N** (**Tag.N.Key** and **Tag.N.Value**).
             /// </summary>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             /// <summary>
             /// The tag value of the resource. You can specify up to 20 tag values. It can be an empty string.
             /// 
-            /// The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
+            /// The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
             /// 
             /// >  You must specify at least one of **Tag.N** (**Tag.N.Key** and **Tag.N.Value**).
             /// </summary>

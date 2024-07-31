@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
         /// The resource ID. You can specify up to 20 resource IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 
         /// <summary>
         /// The resource type. Set the value to **ANYCASTEIPADDRESS**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
