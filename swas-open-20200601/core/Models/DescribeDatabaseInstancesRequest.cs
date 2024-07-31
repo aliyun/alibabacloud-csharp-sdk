@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         /// <summary>
         /// The region ID of the Simple Database Service instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

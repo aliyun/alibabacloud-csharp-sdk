@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// The regions.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]

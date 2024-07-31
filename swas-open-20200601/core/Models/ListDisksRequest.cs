@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string DiskIds { get; set; }
 
         /// <summary>
-        /// The type of the disk. Valid values:
+        /// The disk type. Valid values:
         /// 
-        /// *   System: system disk.
-        /// *   Data: data disk.
+        /// *   system: system disk
+        /// *   data: data disk
         /// 
         /// By default, system disks and data disks are both queried.
         /// </summary>
@@ -57,10 +57,42 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         /// <summary>
         /// The region ID of the disks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// The tags that are added to the disks.
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListDisksRequestTag> Tag { get; set; }
+        public class ListDisksRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key. The tag key can be up to 64 characters in length. Valid values of N: 1 to 20.
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// The tag value. The tag value can be up to 64 characters in length. Valid values of N: 1 to 20.
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

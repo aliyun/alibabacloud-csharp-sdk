@@ -51,44 +51,73 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The database name.
+        /// The slow query logs returned.
         /// </summary>
         [NameInMap("SlowLogs")]
         [Validation(Required=false)]
         public List<DescribeDatabaseSlowLogRecordsResponseBodySlowLogs> SlowLogs { get; set; }
         public class DescribeDatabaseSlowLogRecordsResponseBodySlowLogs : TeaModel {
+            /// <summary>
+            /// The name of the database.
+            /// </summary>
             [NameInMap("DBName")]
             [Validation(Required=false)]
             public string DBName { get; set; }
 
+            /// <summary>
+            /// The time when the execution of the SQL statement started. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// 
+            /// >  The time displayed in the Simple Application Server console is in the format of UTC+8.
+            /// </summary>
             [NameInMap("ExecutionStartTime")]
             [Validation(Required=false)]
             public string ExecutionStartTime { get; set; }
 
+            /// <summary>
+            /// The name and IP address of the client that is connected to the database.
+            /// </summary>
             [NameInMap("HostAddress")]
             [Validation(Required=false)]
             public string HostAddress { get; set; }
 
+            /// <summary>
+            /// The lock duration of the SQL statement. Unit: seconds.
+            /// </summary>
             [NameInMap("LockTimes")]
             [Validation(Required=false)]
             public long? LockTimes { get; set; }
 
+            /// <summary>
+            /// The number of rows parsed by the SQL statement.
+            /// </summary>
             [NameInMap("ParseRowCounts")]
             [Validation(Required=false)]
             public long? ParseRowCounts { get; set; }
 
+            /// <summary>
+            /// The execution duration of the slow query. Unit: millisecond.
+            /// </summary>
             [NameInMap("QueryTimeMS")]
             [Validation(Required=false)]
             public long? QueryTimeMS { get; set; }
 
+            /// <summary>
+            /// The execution duration of the slow query. Unit: seconds.
+            /// </summary>
             [NameInMap("QueryTimes")]
             [Validation(Required=false)]
             public long? QueryTimes { get; set; }
 
+            /// <summary>
+            /// The number of rows returned by the SQL statement.
+            /// </summary>
             [NameInMap("ReturnRowCounts")]
             [Validation(Required=false)]
             public long? ReturnRowCounts { get; set; }
 
+            /// <summary>
+            /// The details of the SQL statement.
+            /// </summary>
             [NameInMap("SQLText")]
             [Validation(Required=false)]
             public string SQLText { get; set; }

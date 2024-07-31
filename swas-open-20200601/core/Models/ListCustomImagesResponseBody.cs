@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListCustomImagesResponseBody : TeaModel {
         /// <summary>
-        /// The queried custom images.
+        /// The array of queried custom images.
         /// </summary>
         [NameInMap("CustomImages")]
         [Validation(Required=false)]
         public List<ListCustomImagesResponseBodyCustomImages> CustomImages { get; set; }
         public class ListCustomImagesResponseBodyCustomImages : TeaModel {
+            [NameInMap("CreateInstances")]
+            [Validation(Required=false)]
+            public List<string> CreateInstances { get; set; }
+
             /// <summary>
-            /// The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -52,11 +56,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// Indicates whether the custom image is shared with Elastic Compute Service (ECS).
+            /// Indicates whether the custom image is shared to Elastic Compute Service (ECS).
             /// </summary>
             [NameInMap("InShare")]
             [Validation(Required=false)]
             public bool? InShare { get; set; }
+
+            [NameInMap("InShareUser")]
+            [Validation(Required=false)]
+            public bool? InShareUser { get; set; }
 
             /// <summary>
             /// The ID of the simple application server.
@@ -79,12 +87,23 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("OsType")]
+            [Validation(Required=false)]
+            public string OsType { get; set; }
+
             /// <summary>
-            /// The region ID of the custom images.
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
 
             /// <summary>
             /// The status of the custom image.
@@ -106,6 +125,33 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [NameInMap("SystemSnapshotName")]
             [Validation(Required=false)]
             public string SystemSnapshotName { get; set; }
+
+            /// <summary>
+            /// The tags of the custom image.
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListCustomImagesResponseBodyCustomImagesTags> Tags { get; set; }
+            public class ListCustomImagesResponseBodyCustomImagesTags : TeaModel {
+                /// <summary>
+                /// The tag key of the custom image.
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// The tag value of the custom image.
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public long? UserId { get; set; }
 
         }
 

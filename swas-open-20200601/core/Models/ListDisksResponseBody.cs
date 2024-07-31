@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListDisksResponseBody : TeaModel {
         /// <summary>
-        /// Details about the disks.
+        /// The queried disks.
         /// </summary>
         [NameInMap("Disks")]
         [Validation(Required=false)]
@@ -19,22 +19,23 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// The category of the disk. Valid values:
             /// 
-            /// *   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).
-            /// *   SSD: a standard SSD.
+            /// *   ESSD: enhanced SSD (ESSD) of PL0
+            /// *   SSD: standard SSD
+            /// *   CLOUD_EFFICIENCY: ultra disk
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
             /// <summary>
-            /// The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The time when the disk was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The device name of the disk on the simple application server.
+            /// The device name of the disk after the disk is attached to the simple application server.
             /// </summary>
             [NameInMap("Device")]
             [Validation(Required=false)]
@@ -48,7 +49,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string DiskChargeType { get; set; }
 
             /// <summary>
-            /// The ID of the disk.
+            /// The disk ID.
             /// </summary>
             [NameInMap("DiskId")]
             [Validation(Required=false)]
@@ -62,10 +63,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string DiskName { get; set; }
 
             /// <summary>
-            /// The type of the disk. Valid values:
+            /// The disk type. Valid values:
             /// 
-            /// *   System: system disk.
-            /// *   Data: data disk.
+            /// *   system: system disk
+            /// *   data: data disk
             /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
@@ -79,25 +80,32 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// Name of the simple application server.
+            /// The name of the simple application server.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The region ID of the disks.
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// Description about the disk.
+            /// The remarks of the disk.
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
+
+            /// <summary>
+            /// The ID of the resource group to which the disk belongs.
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
 
             /// <summary>
             /// The size of the disk. Unit: GB.
@@ -111,7 +119,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// 
             /// *   ReIniting: The disk is being initialized.
             /// *   Creating: The disk is being created.
-            /// *   In_Use: The disk is being used.
+            /// *   In_use: The disk is in use.
             /// *   Available: The disk can be attached.
             /// *   Attaching: The disk is being attached.
             /// *   Detaching: The disk is being detached.
@@ -119,6 +127,29 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// The tags that are added to the disks.
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListDisksResponseBodyDisksTags> Tags { get; set; }
+            public class ListDisksResponseBodyDisksTags : TeaModel {
+                /// <summary>
+                /// The tag key.
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// The tag value.
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
         }
 

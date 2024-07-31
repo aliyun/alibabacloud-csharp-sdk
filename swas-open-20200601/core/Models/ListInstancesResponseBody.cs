@@ -35,21 +35,21 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// Indicates whether the plan is a bundle plan.
+            /// Indicates whether the simple application server uses a bundle plan.
             /// </summary>
             [NameInMap("Combination")]
             [Validation(Required=false)]
             public bool? Combination { get; set; }
 
             /// <summary>
-            /// The ID of the bundle plan.
+            /// The ID of the simple application server that uses a bundle plan.
             /// </summary>
             [NameInMap("CombinationInstanceId")]
             [Validation(Required=false)]
             public string CombinationInstanceId { get; set; }
 
             /// <summary>
-            /// The time when the simple application server was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The time when the simple application server was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -70,15 +70,145 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// The reason why the server is disabled. Valid values:
             /// 
             /// *   FINANCIAL: The server is locked due to overdue payments.
-            /// *   SECURITY: The server is locked due to security reasons.
-            /// *   EXPIRED: The server has expired.
+            /// *   SECURITY: The server is locked for security reasons.
+            /// *   EXPIRED: The server is expired.
             /// </summary>
             [NameInMap("DisableReason")]
             [Validation(Required=false)]
             public string DisableReason { get; set; }
 
             /// <summary>
-            /// The time when the server expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The disks that are attached to the simple application server.
+            /// </summary>
+            [NameInMap("Disks")]
+            [Validation(Required=false)]
+            public List<ListInstancesResponseBodyInstancesDisks> Disks { get; set; }
+            public class ListInstancesResponseBodyInstancesDisks : TeaModel {
+                /// <summary>
+                /// The category of the disk. Valid values:
+                /// 
+                /// *   ESSD: ESSD of PL0
+                /// *   SSD: standard SSD
+                /// *   CLOUD_EFFICIENCY: an ultra disk.
+                /// </summary>
+                [NameInMap("Category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
+                /// <summary>
+                /// The time when the simple application server was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// </summary>
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
+                public string CreationTime { get; set; }
+
+                /// <summary>
+                /// The device name of the disk after the disk is attached to the simple application server.
+                /// </summary>
+                [NameInMap("Device")]
+                [Validation(Required=false)]
+                public string Device { get; set; }
+
+                /// <summary>
+                /// The billing method of the disk.
+                /// </summary>
+                [NameInMap("DiskChargeType")]
+                [Validation(Required=false)]
+                public string DiskChargeType { get; set; }
+
+                /// <summary>
+                /// The disk ID.
+                /// </summary>
+                [NameInMap("DiskId")]
+                [Validation(Required=false)]
+                public string DiskId { get; set; }
+
+                /// <summary>
+                /// The disk name.
+                /// </summary>
+                [NameInMap("DiskName")]
+                [Validation(Required=false)]
+                public string DiskName { get; set; }
+
+                /// <summary>
+                /// The tags that are added to the disk.
+                /// </summary>
+                [NameInMap("DiskTags")]
+                [Validation(Required=false)]
+                public List<ListInstancesResponseBodyInstancesDisksDiskTags> DiskTags { get; set; }
+                public class ListInstancesResponseBodyInstancesDisksDiskTags : TeaModel {
+                    /// <summary>
+                    /// The tag key.
+                    /// </summary>
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    /// <summary>
+                    /// The tag value.
+                    /// </summary>
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                /// <summary>
+                /// The disk type. Valid values:
+                /// 
+                /// *   system: system disk
+                /// *   data: data disk
+                /// </summary>
+                [NameInMap("DiskType")]
+                [Validation(Required=false)]
+                public string DiskType { get; set; }
+
+                /// <summary>
+                /// The region ID.
+                /// </summary>
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                /// <summary>
+                /// The remarks of the disk.
+                /// </summary>
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
+                public string Remark { get; set; }
+
+                /// <summary>
+                /// The ID of the resource group to which the disk belongs.
+                /// </summary>
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
+                /// <summary>
+                /// The disk size. Unit: GB.
+                /// </summary>
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public int? Size { get; set; }
+
+                /// <summary>
+                /// The status of the disk. Valid values:
+                /// 
+                /// *   ReIniting: The disk is being initialized.
+                /// *   Creating: The disk is being created.
+                /// *   In_use: The disk is in use.
+                /// *   Available: The disk can be attached.
+                /// *   Attaching: The disk is being attached.
+                /// *   Detaching: The disk is being detached.
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
+            /// The time when the simple application server expires. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
@@ -106,14 +236,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ImageIconUrl { get; set; }
 
                 /// <summary>
-                /// The image name.
+                /// The name of the image.
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// The image type. Valid values:
+                /// The type of the image. Valid values:
                 /// 
                 /// *   system
                 /// *   app
@@ -140,14 +270,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// The ID of an image.
+            /// The ID of the image.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The internal IP address of the simple application server.
+            /// The private IP address of the simple application server.
             /// </summary>
             [NameInMap("InnerIpAddress")]
             [Validation(Required=false)]
@@ -161,32 +291,39 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// The name of the simple application server.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The plan ID.
+            /// The ID of the instance plan.
             /// </summary>
             [NameInMap("PlanId")]
             [Validation(Required=false)]
             public string PlanId { get; set; }
 
             /// <summary>
-            /// The public IP address of the server.
+            /// The public IP address.
             /// </summary>
             [NameInMap("PublicIpAddress")]
             [Validation(Required=false)]
             public string PublicIpAddress { get; set; }
 
             /// <summary>
-            /// The region ID of the servers.
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            /// <summary>
+            /// The ID of the resource group to which the server belongs.
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
 
             /// <summary>
             /// The specifications of the resource.
@@ -203,7 +340,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public int? Bandwidth { get; set; }
 
                 /// <summary>
-                /// The number of vCPUs.
+                /// The number of vCPUs of the simple application server.
                 /// </summary>
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
@@ -212,9 +349,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 /// <summary>
                 /// The category of the disk. Valid values:
                 /// 
-                /// *   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).
-                /// *   SSD: a standard SSD.
-                /// *   CLOUD_EFFICIENCY: an ultra disk.
+                /// *   ESSD: enhanced SSD (ESSD) of PL0
+                /// *   SSD: standard SSD
+                /// *   CLOUD_EFFICIENCY: ultra disk
                 /// </summary>
                 [NameInMap("DiskCategory")]
                 [Validation(Required=false)]
@@ -230,15 +367,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 /// <summary>
                 /// The amount of the traffic.
                 /// 
-                /// *   A value of 0 indicates that the server is a bandwidth-based server.
-                /// *   A value of none-zero indicates that the server is a data transfer plan-based server.
+                /// *   A value of 0 indicates the traffic amount of a bandwidth-based simple application server.
+                /// *   A non-zero value indicates the traffic amount of a data transfer plan-based simple application server.
                 /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
                 public double? Flow { get; set; }
 
                 /// <summary>
-                /// The memory size.
+                /// The memory size of the server.
                 /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
@@ -249,21 +386,44 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// The status of the simple application server. Valid values:
             /// 
-            /// *   Pending
-            /// *   Starting
-            /// *   Running
-            /// *   Stopping
-            /// *   Stopped
-            /// *   Resetting
-            /// *   Upgrading
-            /// *   Disabled
+            /// *   Pending: The server is being prepared.
+            /// *   Starting: The server is being started.
+            /// *   Running: The server is running.
+            /// *   Stopping: The server is being stopped.
+            /// *   Stopped: The server is stopped.
+            /// *   Resetting: The server is being reset.
+            /// *   Upgrading: The server is being upgraded.
+            /// *   Disabled: The server is not available.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The universally unique identifier (UUID) of the server.
+            /// The tags that are added to the simple application server.
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListInstancesResponseBodyInstancesTags> Tags { get; set; }
+            public class ListInstancesResponseBodyInstancesTags : TeaModel {
+                /// <summary>
+                /// The tag key of the simple application server.
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// The tag value of the simple application server.
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            /// <summary>
+            /// The universally unique identifier (UUID) of the simple application server.
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

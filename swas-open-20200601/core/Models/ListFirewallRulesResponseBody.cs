@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListFirewallRulesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the firewall rules.
+        /// The array of firewall rules.
         /// </summary>
         [NameInMap("FirewallRules")]
         [Validation(Required=false)]
         public List<ListFirewallRulesResponseBodyFirewallRules> FirewallRules { get; set; }
         public class ListFirewallRulesResponseBodyFirewallRules : TeaModel {
             /// <summary>
-            /// The firewall policy.
+            /// The firewall policy. Valid values:
             /// 
             /// *   accept: Access is allowed.
             /// *   drop: Access is refused.
@@ -50,20 +50,43 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// The transport layer protocol. Valid values:
             /// 
-            /// *   TCP: the TCP protocol.
-            /// *   UDP: the UDP protocol
-            /// *   TCP+UDP: the TCP and UDP protocols
+            /// *   TCP
+            /// *   UDP
+            /// *   TCP+UDP
             /// </summary>
             [NameInMap("RuleProtocol")]
             [Validation(Required=false)]
             public string RuleProtocol { get; set; }
 
             /// <summary>
-            /// The IP address or CIDR block that is allowed by the firewall rule.
+            /// The source CIDR block.
             /// </summary>
             [NameInMap("SourceCidrIp")]
             [Validation(Required=false)]
             public string SourceCidrIp { get; set; }
+
+            /// <summary>
+            /// The tags of the firewall rule.
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListFirewallRulesResponseBodyFirewallRulesTags> Tags { get; set; }
+            public class ListFirewallRulesResponseBodyFirewallRulesTags : TeaModel {
+                /// <summary>
+                /// The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
         }
 

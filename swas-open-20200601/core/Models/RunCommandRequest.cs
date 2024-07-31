@@ -15,8 +15,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// *   If you set `EnableParameter` to true, the custom parameter feature is enabled in the command content and you can configure custom parameters based on the following rules:
         /// *   Define custom parameters in the {{}} format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.
         /// *   The number of custom parameters cannot be greater than 20.
-        /// *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive.
+        /// *   A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive.
         /// *   Each custom parameter name cannot exceed 64 bytes in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommandContent")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         /// <summary>
         /// The ID of the simple application server.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         /// <summary>
         /// The name of the command.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -62,7 +68,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public Dictionary<string, object> Parameters { get; set; }
 
         /// <summary>
-        /// The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+        /// The region ID of the simple application server. You can call the [ListRegions](https://help.aliyun.com/document_detail/189315.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -85,6 +93,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// *   RunBatScript: batch commands (applicable to Windows servers).
         /// *   RunPowerShellScript: PowerShell commands (applicable to Windows servers).
         /// *   RunShellScript: shell commands (applicable to Linux servers).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -100,10 +110,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string WindowsPasswordName { get; set; }
 
         /// <summary>
-        /// The execution path of the command. You can specify a value for the parameter. Default execution paths vary based on the operating systems of the servers.
+        /// The execution path of the command. Custom paths are supported. Default execution paths vary based on the operating systems of the servers.
         /// 
-        /// *   For Linux servers, the default execution path is the /home directory of the root user.
-        /// *   For Windows servers, the default execution path is C:\Windows\system32.
+        /// *   For Linux servers, the default path is /root of the root user.
+        /// *   For Windows servers, the default path is C:\\Windows\\system32.
         /// </summary>
         [NameInMap("WorkingDir")]
         [Validation(Required=false)]

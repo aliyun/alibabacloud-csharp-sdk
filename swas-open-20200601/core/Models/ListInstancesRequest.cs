@@ -28,6 +28,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
+        /// The name of the simple application servers, which supports fuzzy search using wildcard *.
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        /// <summary>
         /// The page number.
         /// 
         /// Default value: 1.
@@ -56,26 +63,58 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         /// <summary>
         /// The region ID of the simple application servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 实例状态，可能值：
+        /// The ID of the resource group to which the simple application servers belong.
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// The status of the simple application servers. Valid values:
         /// 
-        /// - Pending：准备中
-        /// - Starting：启动中
-        /// - Running：运行中
-        /// - Stopping：停止中
-        /// - Stopped：停止
-        /// - Resetting：重置中
-        /// - Upgrading：升级中
-        /// - Disabled：不可用
+        /// *   Pending
+        /// *   Starting
+        /// *   Running
+        /// *   Stopping
+        /// *   Stopped
+        /// *   Resetting
+        /// *   Upgrading
+        /// *   Disabled
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// The tags that are added to the simple application servers.
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListInstancesRequestTag> Tag { get; set; }
+        public class ListInstancesRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the simple application servers. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// The tag value of the simple application servers. A tag value can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

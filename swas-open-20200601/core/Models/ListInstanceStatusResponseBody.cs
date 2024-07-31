@@ -16,10 +16,25 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         [Validation(Required=false)]
         public List<ListInstanceStatusResponseBodyInstanceStatuses> InstanceStatuses { get; set; }
         public class ListInstanceStatusResponseBodyInstanceStatuses : TeaModel {
+            /// <summary>
+            /// The ID of the simple application server.
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// The status of the simple application server. Valid values:
+            /// 
+            /// *   Pending
+            /// *   Starting
+            /// *   Running
+            /// *   Stopping
+            /// *   Stopped
+            /// *   Resetting
+            /// *   Upgrading
+            /// *   Disabled
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

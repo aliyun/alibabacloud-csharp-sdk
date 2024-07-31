@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public List<ListSnapshotsResponseBodySnapshots> Snapshots { get; set; }
         public class ListSnapshotsResponseBodySnapshots : TeaModel {
             /// <summary>
-            /// The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The time when the snapshot was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// The ID of the simple application server.
             /// 
-            /// Note: This parameter has a value for system disk snapshots. This parameter is left empty for data disk snapshots.
+            /// Note: This parameter has a value returned for only system disk snapshots.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// The region ID of the snapshots.
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -73,6 +73,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
+
+            /// <summary>
+            /// The ID of the resource group to which the snapshot belongs.
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
 
             /// <summary>
             /// The time when the last disk rollback was performed.
@@ -96,7 +103,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string SnapshotName { get; set; }
 
             /// <summary>
-            /// The ID of the source disk based on which the snapshot is created. This parameter has a value even if the source disk is released.
+            /// The ID of the source disk. This parameter has a value even after the source disk is released.
             /// </summary>
             [NameInMap("SourceDiskId")]
             [Validation(Required=false)]
@@ -122,6 +129,29 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// The tags of the snapshot.
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListSnapshotsResponseBodySnapshotsTags> Tags { get; set; }
+            public class ListSnapshotsResponseBodySnapshotsTags : TeaModel {
+                /// <summary>
+                /// The tag key of the snapshot.
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// The tag value of the snapshot.
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
         }
 

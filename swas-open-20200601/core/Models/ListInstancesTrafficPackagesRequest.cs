@@ -9,19 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListInstancesTrafficPackagesRequest : TeaModel {
-        [NameInMap("AcsProduct")]
-        [Validation(Required=false)]
-        public string AcsProduct { get; set; }
-
         /// <summary>
         /// The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The region ID of the simple application servers. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+        /// The region ID of the simple application servers. You can call the [ListRegions](https://help.aliyun.com/document_detail/189315.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

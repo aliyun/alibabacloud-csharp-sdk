@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseErrorLogsResponseBody : TeaModel {
         /// <summary>
-        /// The time when the error log entry was generated. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /// The time when the error log entry was generated. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         /// 
         /// > The time displayed in the Simple Application Server console is in the format of UTC+8.
         /// </summary>
@@ -18,10 +18,16 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         [Validation(Required=false)]
         public List<DescribeDatabaseErrorLogsResponseBodyErrorLogs> ErrorLogs { get; set; }
         public class DescribeDatabaseErrorLogsResponseBodyErrorLogs : TeaModel {
+            /// <summary>
+            /// The time when the resource was created. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// The error message returned.
+            /// </summary>
             [NameInMap("ErrorInfo")]
             [Validation(Required=false)]
             public string ErrorInfo { get; set; }

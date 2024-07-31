@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// The data format. Valid values:
         /// 
-        /// *   cpuusage\&memusage
-        /// *   active_session\&total_session
-        /// *   ins_size\&data_size\&log_size\&tmp_size\&other_size
+        /// *   cpuusage\\&memusage
+        /// *   active_session\\&total_session
+        /// *   ins_size\\&data_size\\&log_size\\&tmp_size\\&other_size
         /// *   io
         /// </summary>
         [NameInMap("DataFormat")]
