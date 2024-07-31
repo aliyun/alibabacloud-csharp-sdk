@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string JobName { get; set; }
 
+        [NameInMap("JobScheduler")]
+        [Validation(Required=false)]
+        public string JobScheduler { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

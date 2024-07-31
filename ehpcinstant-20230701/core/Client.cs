@@ -214,6 +214,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             {
                 query["JobName"] = request.JobName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobScheduler))
+            {
+                query["JobScheduler"] = request.JobScheduler;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TasksShrink))
             {
                 query["Tasks"] = request.TasksShrink;
@@ -269,6 +273,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
             {
                 query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobScheduler))
+            {
+                query["JobScheduler"] = request.JobScheduler;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TasksShrink))
             {
