@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public int? DailyQuota { get; set; }
 
+        [NameInMap("DailyRemainFreeQuota")]
+        [Validation(Required=false)]
+        public string DailyRemainFreeQuota { get; set; }
+
         [NameInMap("DayuStatus")]
         [Validation(Required=false)]
         public int? DayuStatus { get; set; }
