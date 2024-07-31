@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateQueue
+         * @summary Creates a queue.
          *
          * @param request CreateQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateQueue
+         * @summary Creates a queue.
          *
          * @param request CreateQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateQueue
+         * @summary Creates a queue.
          *
          * @param request CreateQueueRequest
          * @return CreateQueueResponse
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateQueue
+         * @summary Creates a queue.
          *
          * @param request CreateQueueRequest
          * @return CreateQueueResponse
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateTopic
+         * @summary Creates a topic.
          *
          * @param request CreateTopicRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateTopic
+         * @summary Creates a topic.
          *
          * @param request CreateTopicRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateTopic
+         * @summary Creates a topic.
          *
          * @param request CreateTopicRequest
          * @return CreateTopicResponse
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateTopic
+         * @summary Creates a topic.
          *
          * @param request CreateTopicRequest
          * @return CreateTopicResponse
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary DeleteQueue
+         * @summary Deletes a queue.
          *
          * @param request DeleteQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary DeleteQueue
+         * @summary Deletes a queue.
          *
          * @param request DeleteQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary DeleteQueue
+         * @summary Deletes a queue.
          *
          * @param request DeleteQueueRequest
          * @return DeleteQueueResponse
@@ -386,7 +386,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary DeleteQueue
+         * @summary Deletes a queue.
          *
          * @param request DeleteQueueRequest
          * @return DeleteQueueResponse
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 删除订阅主题
+         * @summary Deletes a topic.
          *
          * @param request DeleteTopicRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 删除订阅主题
+         * @summary Deletes a topic.
          *
          * @param request DeleteTopicRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 删除订阅主题
+         * @summary Deletes a topic.
          *
          * @param request DeleteTopicRequest
          * @return DeleteTopicResponse
@@ -478,7 +478,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 删除订阅主题
+         * @summary Deletes a topic.
          *
          * @param request DeleteTopicRequest
          * @return DeleteTopicResponse
@@ -490,7 +490,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary GetQueueAttributes
+         * @summary Queries the attributes of an existing queue.
          *
          * @param request GetQueueAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary GetQueueAttributes
+         * @summary Queries the attributes of an existing queue.
          *
          * @param request GetQueueAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -566,7 +566,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary GetQueueAttributes
+         * @summary Queries the attributes of an existing queue.
          *
          * @param request GetQueueAttributesRequest
          * @return GetQueueAttributesResponse
@@ -578,7 +578,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary GetQueueAttributes
+         * @summary Queries the attributes of an existing queue.
          *
          * @param request GetQueueAttributesRequest
          * @return GetQueueAttributesResponse
@@ -590,7 +590,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary GetSubscription
+         * @summary Queries the attributes of a subscription.
          *
          * @param request GetSubscriptionAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -628,7 +628,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary GetSubscription
+         * @summary Queries the attributes of a subscription.
          *
          * @param request GetSubscriptionAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -666,7 +666,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary GetSubscription
+         * @summary Queries the attributes of a subscription.
          *
          * @param request GetSubscriptionAttributesRequest
          * @return GetSubscriptionAttributesResponse
@@ -678,7 +678,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary GetSubscription
+         * @summary Queries the attributes of a subscription.
          *
          * @param request GetSubscriptionAttributesRequest
          * @return GetSubscriptionAttributesResponse
@@ -690,7 +690,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 查询主题
+         * @summary Queries the attributes of a topic.
          *
          * @param request GetTopicAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -728,7 +728,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 查询主题
+         * @summary Queries the attributes of a topic.
          *
          * @param request GetTopicAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -766,7 +766,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 查询主题
+         * @summary Queries the attributes of a topic.
          *
          * @param request GetTopicAttributesRequest
          * @return GetTopicAttributesResponse
@@ -778,7 +778,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 查询主题
+         * @summary Queries the attributes of a topic.
          *
          * @param request GetTopicAttributesRequest
          * @return GetTopicAttributesResponse
@@ -790,7 +790,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListQueue
+         * @summary Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.
          *
          * @param request ListQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -836,7 +836,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListQueue
+         * @summary Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.
          *
          * @param request ListQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -882,7 +882,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListQueue
+         * @summary Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.
          *
          * @param request ListQueueRequest
          * @return ListQueueResponse
@@ -894,7 +894,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListQueue
+         * @summary Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.
          *
          * @param request ListQueueRequest
          * @return ListQueueResponse
@@ -906,7 +906,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListSubscription
+         * @summary Queries all subscriptions to a topic. The subscriptions are displayed by page.
          *
          * @param request ListSubscriptionByTopicRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -952,7 +952,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListSubscription
+         * @summary Queries all subscriptions to a topic. The subscriptions are displayed by page.
          *
          * @param request ListSubscriptionByTopicRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -998,7 +998,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListSubscription
+         * @summary Queries all subscriptions to a topic. The subscriptions are displayed by page.
          *
          * @param request ListSubscriptionByTopicRequest
          * @return ListSubscriptionByTopicResponse
@@ -1010,7 +1010,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListSubscription
+         * @summary Queries all subscriptions to a topic. The subscriptions are displayed by page.
          *
          * @param request ListSubscriptionByTopicRequest
          * @return ListSubscriptionByTopicResponse
@@ -1022,7 +1022,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListTopic
+         * @summary Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.
          *
          * @param request ListTopicRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1068,7 +1068,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListTopic
+         * @summary Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.
          *
          * @param request ListTopicRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1114,7 +1114,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListTopic
+         * @summary Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.
          *
          * @param request ListTopicRequest
          * @return ListTopicResponse
@@ -1126,7 +1126,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ListTopic
+         * @summary Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.
          *
          * @param request ListTopicRequest
          * @return ListTopicResponse
@@ -1138,7 +1138,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary SetQueueAttributes
+         * @summary Modifies a queue.
          *
          * @param request SetQueueAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1196,7 +1196,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary SetQueueAttributes
+         * @summary Modifies a queue.
          *
          * @param request SetQueueAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1254,7 +1254,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary SetQueueAttributes
+         * @summary Modifies a queue.
          *
          * @param request SetQueueAttributesRequest
          * @return SetQueueAttributesResponse
@@ -1266,7 +1266,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary SetQueueAttributes
+         * @summary Modifies a queue.
          *
          * @param request SetQueueAttributesRequest
          * @return SetQueueAttributesResponse
@@ -1278,7 +1278,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ModifySubscription
+         * @summary Modifies the attributes of a subscription.
          *
          * @param request SetSubscriptionAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1320,7 +1320,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ModifySubscription
+         * @summary Modifies the attributes of a subscription.
          *
          * @param request SetSubscriptionAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1362,7 +1362,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ModifySubscription
+         * @summary Modifies the attributes of a subscription.
          *
          * @param request SetSubscriptionAttributesRequest
          * @return SetSubscriptionAttributesResponse
@@ -1374,7 +1374,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary ModifySubscription
+         * @summary Modifies the attributes of a subscription.
          *
          * @param request SetSubscriptionAttributesRequest
          * @return SetSubscriptionAttributesResponse
@@ -1386,7 +1386,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 编辑订阅主题
+         * @summary Modifies the attributes of a topic.
          *
          * @param request SetTopicAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1428,7 +1428,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 编辑订阅主题
+         * @summary Modifies the attributes of a topic.
          *
          * @param request SetTopicAttributesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1470,7 +1470,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 编辑订阅主题
+         * @summary Modifies the attributes of a topic.
          *
          * @param request SetTopicAttributesRequest
          * @return SetTopicAttributesResponse
@@ -1482,7 +1482,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary 编辑订阅主题
+         * @summary Modifies the attributes of a topic.
          *
          * @param request SetTopicAttributesRequest
          * @return SetTopicAttributesResponse
@@ -1494,7 +1494,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateSubscription
+         * @summary Creates a subscription to a topic.
          *
          * @param request SubscribeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1552,7 +1552,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateSubscription
+         * @summary Creates a subscription to a topic.
          *
          * @param request SubscribeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1610,7 +1610,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateSubscription
+         * @summary Creates a subscription to a topic.
          *
          * @param request SubscribeRequest
          * @return SubscribeResponse
@@ -1622,7 +1622,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary CreateSubscription
+         * @summary Creates a subscription to a topic.
          *
          * @param request SubscribeRequest
          * @return SubscribeResponse
@@ -1634,7 +1634,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary DeleteSubscription
+         * @summary Deletes a subscription.
          *
          * @param request UnsubscribeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1672,7 +1672,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary DeleteSubscription
+         * @summary Deletes a subscription.
          *
          * @param request UnsubscribeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1710,7 +1710,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary DeleteSubscription
+         * @summary Deletes a subscription.
          *
          * @param request UnsubscribeRequest
          * @return UnsubscribeResponse
@@ -1722,7 +1722,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         }
 
         /**
-         * @summary DeleteSubscription
+         * @summary Deletes a subscription.
          *
          * @param request UnsubscribeRequest
          * @return UnsubscribeResponse

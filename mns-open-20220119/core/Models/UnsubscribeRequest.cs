@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class UnsubscribeRequest : TeaModel {
         /// <summary>
+        /// The name of the subscription.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionName")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string SubscriptionName { get; set; }
 
         /// <summary>
+        /// The name of the topic.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("TopicName")]

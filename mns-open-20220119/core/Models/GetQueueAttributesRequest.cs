@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class GetQueueAttributesRequest : TeaModel {
         /// <summary>
+        /// The name of the queue.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("QueueName")]

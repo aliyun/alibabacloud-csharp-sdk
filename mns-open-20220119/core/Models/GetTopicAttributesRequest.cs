@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
+        /// The name of the topic.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("TopicName")]
