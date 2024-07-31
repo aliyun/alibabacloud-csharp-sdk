@@ -2690,7 +2690,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Deletes a public endpoint.
+         * @summary 删除公网域名
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2718,7 +2718,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Deletes a public endpoint.
+         * @summary 删除公网域名
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2746,7 +2746,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Deletes a public endpoint.
+         * @summary 删除公网域名
          *
          * @return DeletePublicUrlResponse
          */
@@ -2758,7 +2758,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Deletes a public endpoint.
+         * @summary 删除公网域名
          *
          * @return DeletePublicUrlResponse
          */
@@ -3160,11 +3160,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Performs a forced switchover.
          *
-         * @description \\### Method
+         * @description ### [](#)Method
          * ```java
          * PUT
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
          * ```
@@ -3197,11 +3197,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Performs a forced switchover.
          *
-         * @description \\### Method
+         * @description ### [](#)Method
          * ```java
          * PUT
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
          * ```
@@ -3234,11 +3234,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Performs a forced switchover.
          *
-         * @description \\### Method
+         * @description ### [](#)Method
          * ```java
          * PUT
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
          * ```
@@ -3255,11 +3255,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /**
          * @summary Performs a forced switchover.
          *
-         * @description \\### Method
+         * @description ### [](#)Method
          * ```java
          * PUT
          * ```
-         * ### URI
+         * ### [](#uri)URI
          * ```java
          * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
          * ```
@@ -9218,7 +9218,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Modifies an online policy of an index.
+         * @summary Modifies the online policy of an index.
          *
          * @param request ModifyIndexOnlineStrategyRequest
          * @param headers map
@@ -9254,7 +9254,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Modifies an online policy of an index.
+         * @summary Modifies the online policy of an index.
          *
          * @param request ModifyIndexOnlineStrategyRequest
          * @param headers map
@@ -9290,7 +9290,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Modifies an online policy of an index.
+         * @summary Modifies the online policy of an index.
          *
          * @param request ModifyIndexOnlineStrategyRequest
          * @return ModifyIndexOnlineStrategyResponse
@@ -9303,7 +9303,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Modifies an online policy of an index.
+         * @summary Modifies the online policy of an index.
          *
          * @param request ModifyIndexOnlineStrategyRequest
          * @return ModifyIndexOnlineStrategyResponse

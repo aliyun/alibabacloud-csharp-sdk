@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListInstanceSpecsRequest : TeaModel {
         /// <summary>
-        /// The node type. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster.
+        /// The node type. Valid values:
+        /// 
+        /// *   qrs: Query Result Searcher (QRS) Worker
+        /// *   search: Searcher Worker
+        /// *   index: index node
+        /// *   cluster: cluster
         /// 
         /// This parameter is required.
         /// </summary>

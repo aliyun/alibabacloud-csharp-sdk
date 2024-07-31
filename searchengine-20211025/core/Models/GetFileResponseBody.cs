@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string DataSource { get; set; }
 
+            [NameInMap("extend")]
+            [Validation(Required=false)]
+            public Dictionary<string, List<string>> Extend { get; set; }
+
             /// <summary>
             /// The full path of the file.
             /// </summary>

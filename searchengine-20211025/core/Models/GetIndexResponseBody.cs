@@ -225,6 +225,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            [NameInMap("extend")]
+            [Validation(Required=false)]
+            public Dictionary<string, List<string>> Extend { get; set; }
+
             /// <summary>
             /// The time when full data in the index was last updated.
             /// </summary>
