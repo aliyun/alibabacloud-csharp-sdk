@@ -372,6 +372,140 @@ namespace AlibabaCloud.SDK.Bailian20231229
         }
 
         /**
+         * @summary 创建并发布智能体应用
+         *
+         * @param tmpReq CreateAndPulishAgentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAndPulishAgentResponse
+         */
+        public CreateAndPulishAgentResponse CreateAndPulishAgentWithOptions(string workspaceId, CreateAndPulishAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAndPulishAgentShrinkRequest request = new CreateAndPulishAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationConfig))
+            {
+                request.ApplicationConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationConfig, "applicationConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigShrink))
+            {
+                body["applicationConfig"] = request.ApplicationConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["instructions"] = request.Instructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAndPulishAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAndPulishAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建并发布智能体应用
+         *
+         * @param tmpReq CreateAndPulishAgentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAndPulishAgentResponse
+         */
+        public async Task<CreateAndPulishAgentResponse> CreateAndPulishAgentWithOptionsAsync(string workspaceId, CreateAndPulishAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAndPulishAgentShrinkRequest request = new CreateAndPulishAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationConfig))
+            {
+                request.ApplicationConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationConfig, "applicationConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigShrink))
+            {
+                body["applicationConfig"] = request.ApplicationConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["instructions"] = request.Instructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAndPulishAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAndPulishAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建并发布智能体应用
+         *
+         * @param request CreateAndPulishAgentRequest
+         * @return CreateAndPulishAgentResponse
+         */
+        public CreateAndPulishAgentResponse CreateAndPulishAgent(string workspaceId, CreateAndPulishAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAndPulishAgentWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建并发布智能体应用
+         *
+         * @param request CreateAndPulishAgentRequest
+         * @return CreateAndPulishAgentResponse
+         */
+        public async Task<CreateAndPulishAgentResponse> CreateAndPulishAgentAsync(string workspaceId, CreateAndPulishAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAndPulishAgentWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 创建并运行pipeline
          *
          * @param tmpReq CreateIndexRequest
@@ -615,6 +749,86 @@ namespace AlibabaCloud.SDK.Bailian20231229
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateIndexWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除智能体
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAgentResponse
+         */
+        public DeleteAgentResponse DeleteAgentWithOptions(string workspaceId, string appCode, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appCode),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除智能体
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAgentResponse
+         */
+        public async Task<DeleteAgentResponse> DeleteAgentWithOptionsAsync(string workspaceId, string appCode, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appCode),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除智能体
+         *
+         * @return DeleteAgentResponse
+         */
+        public DeleteAgentResponse DeleteAgent(string workspaceId, string appCode)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAgentWithOptions(workspaceId, appCode, headers, runtime);
+        }
+
+        /**
+         * @summary 删除智能体
+         *
+         * @return DeleteAgentResponse
+         */
+        public async Task<DeleteAgentResponse> DeleteAgentAsync(string workspaceId, string appCode)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAgentWithOptionsAsync(workspaceId, appCode, headers, runtime);
         }
 
         /**
@@ -1172,6 +1386,86 @@ namespace AlibabaCloud.SDK.Bailian20231229
         }
 
         /**
+         * @summary 获取发布态智能体应用
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetPublishedAgentResponse
+         */
+        public GetPublishedAgentResponse GetPublishedAgentWithOptions(string workspaceId, string appCode, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPublishedAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appCode),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPublishedAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取发布态智能体应用
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetPublishedAgentResponse
+         */
+        public async Task<GetPublishedAgentResponse> GetPublishedAgentWithOptionsAsync(string workspaceId, string appCode, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPublishedAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appCode),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPublishedAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取发布态智能体应用
+         *
+         * @return GetPublishedAgentResponse
+         */
+        public GetPublishedAgentResponse GetPublishedAgent(string workspaceId, string appCode)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetPublishedAgentWithOptions(workspaceId, appCode, headers, runtime);
+        }
+
+        /**
+         * @summary 获取发布态智能体应用
+         *
+         * @return GetPublishedAgentResponse
+         */
+        public async Task<GetPublishedAgentResponse> GetPublishedAgentAsync(string workspaceId, string appCode)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetPublishedAgentWithOptionsAsync(workspaceId, appCode, headers, runtime);
+        }
+
+        /**
          * @summary ListCategory
          *
          * @param request ListCategoryRequest
@@ -1668,6 +1962,112 @@ namespace AlibabaCloud.SDK.Bailian20231229
         }
 
         /**
+         * @summary 查询已发布的智能体应用列表
+         *
+         * @param request ListPublishedAgentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListPublishedAgentResponse
+         */
+        public ListPublishedAgentResponse ListPublishedAgentWithOptions(string workspaceId, ListPublishedAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["pageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPublishedAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPublishedAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询已发布的智能体应用列表
+         *
+         * @param request ListPublishedAgentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListPublishedAgentResponse
+         */
+        public async Task<ListPublishedAgentResponse> ListPublishedAgentWithOptionsAsync(string workspaceId, ListPublishedAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["pageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPublishedAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPublishedAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询已发布的智能体应用列表
+         *
+         * @param request ListPublishedAgentRequest
+         * @return ListPublishedAgentResponse
+         */
+        public ListPublishedAgentResponse ListPublishedAgent(string workspaceId, ListPublishedAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPublishedAgentWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 查询已发布的智能体应用列表
+         *
+         * @param request ListPublishedAgentRequest
+         * @return ListPublishedAgentResponse
+         */
+        public async Task<ListPublishedAgentResponse> ListPublishedAgentAsync(string workspaceId, ListPublishedAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPublishedAgentWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 召回测试
          *
          * @param tmpReq RetrieveRequest
@@ -2119,6 +2519,140 @@ namespace AlibabaCloud.SDK.Bailian20231229
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SubmitIndexJobWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新并发布智能体应用
+         *
+         * @param tmpReq UpdateAndPublishAgentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateAndPublishAgentResponse
+         */
+        public UpdateAndPublishAgentResponse UpdateAndPublishAgentWithOptions(string workspaceId, string appCode, UpdateAndPublishAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAndPublishAgentShrinkRequest request = new UpdateAndPublishAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationConfig))
+            {
+                request.ApplicationConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationConfig, "applicationConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigShrink))
+            {
+                body["applicationConfig"] = request.ApplicationConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["instructions"] = request.Instructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAndPublishAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appCode),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAndPublishAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新并发布智能体应用
+         *
+         * @param tmpReq UpdateAndPublishAgentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateAndPublishAgentResponse
+         */
+        public async Task<UpdateAndPublishAgentResponse> UpdateAndPublishAgentWithOptionsAsync(string workspaceId, string appCode, UpdateAndPublishAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAndPublishAgentShrinkRequest request = new UpdateAndPublishAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationConfig))
+            {
+                request.ApplicationConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationConfig, "applicationConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigShrink))
+            {
+                body["applicationConfig"] = request.ApplicationConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["instructions"] = request.Instructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAndPublishAgent",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/application/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appCode),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAndPublishAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新并发布智能体应用
+         *
+         * @param request UpdateAndPublishAgentRequest
+         * @return UpdateAndPublishAgentResponse
+         */
+        public UpdateAndPublishAgentResponse UpdateAndPublishAgent(string workspaceId, string appCode, UpdateAndPublishAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAndPublishAgentWithOptions(workspaceId, appCode, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新并发布智能体应用
+         *
+         * @param request UpdateAndPublishAgentRequest
+         * @return UpdateAndPublishAgentResponse
+         */
+        public async Task<UpdateAndPublishAgentResponse> UpdateAndPublishAgentAsync(string workspaceId, string appCode, UpdateAndPublishAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAndPublishAgentWithOptionsAsync(workspaceId, appCode, request, headers, runtime);
         }
 
     }
