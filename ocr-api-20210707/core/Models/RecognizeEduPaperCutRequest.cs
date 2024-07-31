@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public string ImageType { get; set; }
 
+        [NameInMap("OutputOricoord")]
+        [Validation(Required=false)]
+        public bool? OutputOricoord { get; set; }
+
         [NameInMap("Subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }

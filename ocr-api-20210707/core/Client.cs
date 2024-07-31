@@ -2500,6 +2500,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             {
                 query["ImageType"] = request.ImageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputOricoord))
+            {
+                query["OutputOricoord"] = request.OutputOricoord;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
             {
                 query["Subject"] = request.Subject;
@@ -2547,6 +2551,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
             {
                 query["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputOricoord))
+            {
+                query["OutputOricoord"] = request.OutputOricoord;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
             {
