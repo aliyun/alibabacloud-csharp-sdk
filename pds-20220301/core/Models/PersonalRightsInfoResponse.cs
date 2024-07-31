@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         [NameInMap("privileges")]
         [Validation(Required=false)]
-        public DataBoxPrivileges Privileges { get; set; }
+        public List<DataBoxPrivileges> Privileges { get; set; }
 
         [NameInMap("spu_id")]
         [Validation(Required=false)]
