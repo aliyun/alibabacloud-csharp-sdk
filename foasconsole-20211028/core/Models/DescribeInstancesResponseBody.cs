@@ -29,6 +29,20 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string ClusterStatus { get; set; }
 
+            [NameInMap("ClusterUsedStorage")]
+            [Validation(Required=false)]
+            public DescribeInstancesResponseBodyInstancesClusterUsedStorage ClusterUsedStorage { get; set; }
+            public class DescribeInstancesResponseBodyInstancesClusterUsedStorage : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
+                public string ClusterId { get; set; }
+
+                [NameInMap("UsedStorage")]
+                [Validation(Required=false)]
+                public float? UsedStorage { get; set; }
+
+            }
+
             [NameInMap("Ha")]
             [Validation(Required=false)]
             public bool? Ha { get; set; }
@@ -55,14 +69,23 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string HaZoneId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("HostAliases")]
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesHostAliases> HostAliases { get; set; }
             public class DescribeInstancesResponseBodyInstancesHostAliases : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("HostNames")]
                 [Validation(Required=false)]
                 public List<string> HostNames { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
@@ -123,6 +146,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesStorage Storage { get; set; }
             public class DescribeInstancesResponseBodyInstancesStorage : TeaModel {
+                [NameInMap("FullyManaged")]
+                [Validation(Required=false)]
+                public bool? FullyManaged { get; set; }
+
+                [NameInMap("OrderState")]
+                [Validation(Required=false)]
+                public string OrderState { get; set; }
+
                 [NameInMap("Oss")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesStorageOss Oss { get; set; }

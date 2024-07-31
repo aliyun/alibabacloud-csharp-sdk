@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public long? OrderId { get; set; }
 
+            [NameInMap("StorageInstanceId")]
+            [Validation(Required=false)]
+            public string StorageInstanceId { get; set; }
+
+            [NameInMap("StorageOrderId")]
+            [Validation(Required=false)]
+            public long? StorageOrderId { get; set; }
+
         }
 
         [NameInMap("RequestId")]

@@ -35,22 +35,37 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string HaZoneId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ResourceSpec")]
         [Validation(Required=false)]
         public ModifyPrepayInstanceSpecRequestResourceSpec ResourceSpec { get; set; }
         public class ModifyPrepayInstanceSpecRequestResourceSpec : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("MemoryGB")]
             [Validation(Required=false)]
             public int? MemoryGB { get; set; }
