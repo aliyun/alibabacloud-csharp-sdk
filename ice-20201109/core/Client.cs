@@ -5674,6 +5674,98 @@ namespace AlibabaCloud.SDK.ICE20201109
         }
 
         /**
+         * @summary 查询实例
+         *
+         * @param request DescribeRtcRobotInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRtcRobotInstanceResponse
+         */
+        public DescribeRtcRobotInstanceResponse DescribeRtcRobotInstanceWithOptions(DescribeRtcRobotInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRtcRobotInstance",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRtcRobotInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询实例
+         *
+         * @param request DescribeRtcRobotInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRtcRobotInstanceResponse
+         */
+        public async Task<DescribeRtcRobotInstanceResponse> DescribeRtcRobotInstanceWithOptionsAsync(DescribeRtcRobotInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRtcRobotInstance",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRtcRobotInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询实例
+         *
+         * @param request DescribeRtcRobotInstanceRequest
+         * @return DescribeRtcRobotInstanceResponse
+         */
+        public DescribeRtcRobotInstanceResponse DescribeRtcRobotInstance(DescribeRtcRobotInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRtcRobotInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询实例
+         *
+         * @param request DescribeRtcRobotInstanceRequest
+         * @return DescribeRtcRobotInstanceResponse
+         */
+        public async Task<DescribeRtcRobotInstanceResponse> DescribeRtcRobotInstanceAsync(DescribeRtcRobotInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRtcRobotInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等
          *
          * @param request DetectAudioForCustomizedVoiceJobRequest
@@ -16990,6 +17082,150 @@ namespace AlibabaCloud.SDK.ICE20201109
         }
 
         /**
+         * @summary 开启一个机器人实例
+         *
+         * @param tmpReq StartRtcRobotInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartRtcRobotInstanceResponse
+         */
+        public StartRtcRobotInstanceResponse StartRtcRobotInstanceWithOptions(StartRtcRobotInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartRtcRobotInstanceShrinkRequest request = new StartRtcRobotInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Config))
+            {
+                request.ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Config, "Config", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                query["AuthToken"] = request.AuthToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigShrink))
+            {
+                query["Config"] = request.ConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotId))
+            {
+                query["RobotId"] = request.RobotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRtcRobotInstance",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRtcRobotInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 开启一个机器人实例
+         *
+         * @param tmpReq StartRtcRobotInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartRtcRobotInstanceResponse
+         */
+        public async Task<StartRtcRobotInstanceResponse> StartRtcRobotInstanceWithOptionsAsync(StartRtcRobotInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartRtcRobotInstanceShrinkRequest request = new StartRtcRobotInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Config))
+            {
+                request.ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Config, "Config", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                query["AuthToken"] = request.AuthToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigShrink))
+            {
+                query["Config"] = request.ConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotId))
+            {
+                query["RobotId"] = request.RobotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRtcRobotInstance",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRtcRobotInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 开启一个机器人实例
+         *
+         * @param request StartRtcRobotInstanceRequest
+         * @return StartRtcRobotInstanceResponse
+         */
+        public StartRtcRobotInstanceResponse StartRtcRobotInstance(StartRtcRobotInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartRtcRobotInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 开启一个机器人实例
+         *
+         * @param request StartRtcRobotInstanceRequest
+         * @return StartRtcRobotInstanceResponse
+         */
+        public async Task<StartRtcRobotInstanceResponse> StartRtcRobotInstanceAsync(StartRtcRobotInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartRtcRobotInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 启动工作流
          *
          * @param request StartWorkflowRequest
@@ -17095,6 +17331,98 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartWorkflowWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 停止一个机器人实例
+         *
+         * @param request StopRtcRobotInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopRtcRobotInstanceResponse
+         */
+        public StopRtcRobotInstanceResponse StopRtcRobotInstanceWithOptions(StopRtcRobotInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRtcRobotInstance",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRtcRobotInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止一个机器人实例
+         *
+         * @param request StopRtcRobotInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopRtcRobotInstanceResponse
+         */
+        public async Task<StopRtcRobotInstanceResponse> StopRtcRobotInstanceWithOptionsAsync(StopRtcRobotInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRtcRobotInstance",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRtcRobotInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止一个机器人实例
+         *
+         * @param request StopRtcRobotInstanceRequest
+         * @return StopRtcRobotInstanceResponse
+         */
+        public StopRtcRobotInstanceResponse StopRtcRobotInstance(StopRtcRobotInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopRtcRobotInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 停止一个机器人实例
+         *
+         * @param request StopRtcRobotInstanceRequest
+         * @return StopRtcRobotInstanceResponse
+         */
+        public async Task<StopRtcRobotInstanceResponse> StopRtcRobotInstanceAsync(StopRtcRobotInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopRtcRobotInstanceWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -22495,6 +22823,118 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdatePipelineWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 修改实例的配置
+         *
+         * @param tmpReq UpdateRtcRobotInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateRtcRobotInstanceResponse
+         */
+        public UpdateRtcRobotInstanceResponse UpdateRtcRobotInstanceWithOptions(UpdateRtcRobotInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateRtcRobotInstanceShrinkRequest request = new UpdateRtcRobotInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Config))
+            {
+                request.ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Config, "Config", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigShrink))
+            {
+                query["Config"] = request.ConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRtcRobotInstance",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRtcRobotInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改实例的配置
+         *
+         * @param tmpReq UpdateRtcRobotInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateRtcRobotInstanceResponse
+         */
+        public async Task<UpdateRtcRobotInstanceResponse> UpdateRtcRobotInstanceWithOptionsAsync(UpdateRtcRobotInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateRtcRobotInstanceShrinkRequest request = new UpdateRtcRobotInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Config))
+            {
+                request.ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Config, "Config", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigShrink))
+            {
+                query["Config"] = request.ConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRtcRobotInstance",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRtcRobotInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改实例的配置
+         *
+         * @param request UpdateRtcRobotInstanceRequest
+         * @return UpdateRtcRobotInstanceResponse
+         */
+        public UpdateRtcRobotInstanceResponse UpdateRtcRobotInstance(UpdateRtcRobotInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRtcRobotInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改实例的配置
+         *
+         * @param request UpdateRtcRobotInstanceRequest
+         * @return UpdateRtcRobotInstanceResponse
+         */
+        public async Task<UpdateRtcRobotInstanceResponse> UpdateRtcRobotInstanceAsync(UpdateRtcRobotInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRtcRobotInstanceWithOptionsAsync(request, runtime);
         }
 
         /**
