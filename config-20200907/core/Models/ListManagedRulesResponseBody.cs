@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public ListManagedRulesResponseBodyManagedRules ManagedRules { get; set; }
         public class ListManagedRulesResponseBodyManagedRules : TeaModel {
             /// <summary>
-            /// The name of the remediation template.
+            /// The details of the managed rule.
             /// </summary>
             [NameInMap("ManagedRuleList")]
             [Validation(Required=false)]
@@ -52,32 +52,32 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// Classification description of the managed rule.
+                /// The classification description of the managed rule.
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public List<string> Labels { get; set; }
 
                 /// <summary>
-                /// Supported remediation template id.
+                /// The ID of the remediation template.
                 /// </summary>
                 [NameInMap("RemediationTemplateIdentifier")]
                 [Validation(Required=false)]
                 public string RemediationTemplateIdentifier { get; set; }
 
                 /// <summary>
-                /// Supported remediation template name.
+                /// The name of the remediation template.
                 /// </summary>
                 [NameInMap("RemediationTemplateName")]
                 [Validation(Required=false)]
                 public string RemediationTemplateName { get; set; }
 
                 /// <summary>
-                /// The risk level of the resources that do not comply with the managed rule. Valid values:
+                /// The risk level of the resources that do not comply with the rule. Valid values:
                 /// 
-                /// *   1: high risk level
-                /// *   2: medium risk level
-                /// *   3: low risk level
+                /// *   1: high
+                /// *   2: medium
+                /// *   3: low
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public ListManagedRulesResponseBodyManagedRulesManagedRuleListScope Scope { get; set; }
                 public class ListManagedRulesResponseBodyManagedRulesManagedRuleListScope : TeaModel {
                     /// <summary>
-                    /// The type of resource to which the managed rule applies.
+                    /// The types of resources to which the managed rule applies.
                     /// </summary>
                     [NameInMap("ComplianceResourceTypes")]
                     [Validation(Required=false)]
@@ -100,11 +100,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// Whether pre-check is supported. Value:
+                /// Indicates whether precheck is supported. Valid values:
                 /// 
-                /// - true: Supported
-                /// 
-                /// - false: not supported
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("SupportPreviewManagedRule")]
                 [Validation(Required=false)]
@@ -113,7 +112,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The page number of the returned page. Minimum value: 1.
+            /// The page number.
+            /// 
+            /// Page start from page 1.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
@@ -127,7 +128,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of managed rules returned.
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]

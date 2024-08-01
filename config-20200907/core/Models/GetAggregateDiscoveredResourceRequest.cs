@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to query the compliance results of the resource. Valid values:
+        /// 
+        /// *   0 (default): does not query the compliance results of the resource.
+        /// *   1: queries the compliance results of the resource.
+        /// </summary>
         [NameInMap("ComplianceOption")]
         [Validation(Required=false)]
         public int? ComplianceOption { get; set; }
@@ -36,8 +42,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the resources in the account group belong.
-        /// > You can use either the `ResourceAccountId` or `ResourceOwnerId` parameter. We recommend that you use the ResourceAccountId parameter.
+        /// The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.
         /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
@@ -46,7 +51,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The resource ID.
         /// 
-        /// For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/411691.html).
+        /// For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/411691.html).
         /// 
         /// This parameter is required.
         /// </summary>

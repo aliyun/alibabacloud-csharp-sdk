@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateAggregatorShrinkRequest : TeaModel {
         /// <summary>
-        /// The information about the member accounts in the account group.
+        /// The members in the account group.
         /// 
-        /// >  When you modify the configurations of an account group, this parameter can be left empty. In this case, the member account list is not updated. If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
+        /// >  When you modify the configurations of an account group, this parameter can be left empty. In this case, the member list is not updated. If you want to update the member list, you must configure both the `AccountId` and `AccountType` parameters.
         /// </summary>
         [NameInMap("AggregatorAccounts")]
         [Validation(Required=false)]

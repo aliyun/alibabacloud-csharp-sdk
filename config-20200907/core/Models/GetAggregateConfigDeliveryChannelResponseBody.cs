@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string AggregatorId { get; set; }
 
+            [NameInMap("CompliantSnapshot")]
+            [Validation(Required=false)]
+            public bool? CompliantSnapshot { get; set; }
+
             /// <summary>
             /// Indicates whether the specified destination receives resource change logs. If the value of this parameter is true, Cloud Config delivers the resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:
             /// 

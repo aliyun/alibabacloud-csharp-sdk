@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The identifier of the cloud service. Valid values:
             /// 
-            /// *   eventbridge: event bus
+            /// *   eventbridge: EventBridge
             /// *   cms: CloudMonitor
-            /// *   bpstudio: Cloud Architect Design Tools (CADT)
+            /// *   bpstudio: Cloud Architect Design Tools
             /// </summary>
             [NameInMap("ServiceCode")]
             [Validation(Required=false)]
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The integration status of the cloud service. Valid values:
             /// 
-            /// *   1: The cloud service is integrated.
-            /// *   0: The cloud service is not integrated.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

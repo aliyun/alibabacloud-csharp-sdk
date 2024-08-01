@@ -46,7 +46,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string CompliancePackTemplateId { get; set; }
 
         /// <summary>
-        /// The rules in the compliance package. You must specify one of ConfigRules and TemplateContent.
+        /// The rules in the compliance package.
+        /// 
+        /// >  You must configure this parameter or the `TemplateContent` parameter.
         /// </summary>
         [NameInMap("ConfigRules")]
         [Validation(Required=false)]
@@ -117,11 +119,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceIdsScope { get; set; }
 
         /// <summary>
-        /// The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:
+        /// The risk level of the compliance package. Valid values:
         /// 
-        /// *   1: high.
-        /// *   2: medium.
-        /// *   3: low.
+        /// *   1: high
+        /// *   2 (default): medium
+        /// *   3: low
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
@@ -158,7 +160,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The information about the template that is used to create the compliance package. You can call the GetAggregateCompliancePack operation to view the details of an existing compliance package or write a compliance package template. For more information, see [Write a compliance package template in a configuration file](https://help.aliyun.com/document_detail/2659733.html). You must specify one of ConfigRules and TemplateContent.
+        /// The information about the template that is used to create the compliance package. You can call the GetAggregateCompliancePack operation to view the details of an existing compliance package. You can also write a compliance package template. For more information, see [Write a compliance package template in a configuration file](https://help.aliyun.com/document_detail/2659733.html).
+        /// 
+        /// >  You must configure this parameter or the `TemplateContent` parameter.
         /// </summary>
         [NameInMap("TemplateContent")]
         [Validation(Required=false)]

@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule. Separate multiple member account IDs with commas (,).
+        /// The IDs of the member accounts to which the rule does not apply, which means that the resources within the member accounts are not evaluated based on the rule. Separate multiple member account IDs with commas (,).
         /// 
         /// >  This parameter applies only to a managed rule.
         /// </summary>
@@ -80,10 +80,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeAccountIdsScope { get; set; }
 
         /// <summary>
-        /// The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).
+        /// The IDs of the resource directories to which the rule does not apply, which means that the resources within member accounts in the resource directories are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).
         /// 
         /// > 
+        /// 
         /// *   This parameter applies only to a rule of a global account group.
+        /// 
         /// *   This parameter applies only to a managed rule.
         /// </summary>
         [NameInMap("ExcludeFolderIdsScope")]
@@ -99,7 +101,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
+        /// The IDs of the resources excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
         /// 
         /// >  This parameter applies only to a managed rule.
         /// </summary>
@@ -122,10 +124,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.
+        /// The IDs of the resource directories to which the rule applies, which means that the resources within member accounts in the resource directories are evaluated based on the rule.
         /// 
         /// > 
+        /// 
         /// *   This parameter applies only to a rule of a global account group.
+        /// 
         /// *   This parameter applies only to a managed rule.
         /// </summary>
         [NameInMap("FolderIdsScope")]
@@ -155,7 +159,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string MaximumExecutionFrequency { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).
+        /// The IDs of the regions to which the rule applies. Separate multiple region IDs with commas (,).
         /// 
         /// >  This parameter applies only to a managed rule.
         /// </summary>
@@ -164,7 +168,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RegionIdsScope { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).
+        /// The IDs of the resource groups to which the rule applies. Separate multiple resource group IDs with commas (,).
         /// 
         /// >  This parameter applies only to a managed rule.
         /// </summary>
@@ -207,16 +211,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
         /// 
-        /// >  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.
+        /// >  This parameter applies only to a managed rule. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
         /// </summary>
         [NameInMap("TagKeyScope")]
         [Validation(Required=false)]
         public string TagKeyScope { get; set; }
 
         /// <summary>
-        /// The tag value used to filter resources. The rule applies only to the resources with the specified tag value.
+        /// The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.
         /// 
-        /// >  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.
+        /// >  This parameter applies only to a managed rule. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
         /// </summary>
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]

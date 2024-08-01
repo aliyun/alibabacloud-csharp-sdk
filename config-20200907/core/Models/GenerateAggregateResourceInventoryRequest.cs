@@ -32,6 +32,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Regions { get; set; }
 
+        /// <summary>
+        /// Indicates whether the resource is deleted. Valid values:
+        /// 
+        /// *   1 (default): The resource is retained.
+        /// *   0: The resource is deleted.
+        /// </summary>
         [NameInMap("ResourceDeleted")]
         [Validation(Required=false)]
         public int? ResourceDeleted { get; set; }

@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// The description of the rule.
+                /// The rule description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ManagedRuleIdentifier { get; set; }
 
                 /// <summary>
-                /// The types of the resources evaluated based on the rule. Multiple resource types are separated with commas (,).
+                /// The type of the resource evaluated based on the rule. Separate multiple resource types with commas (,).
                 /// </summary>
                 [NameInMap("ResourceTypesScope")]
                 [Validation(Required=false)]
@@ -122,9 +122,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The risk level of the resources that do not comply with the rule. Valid values:
                 /// 
-                /// *   1: high.
-                /// *   2: medium.
-                /// *   3: low.
+                /// *   1: high
+                /// *   2: medium
+                /// *   3: low
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]

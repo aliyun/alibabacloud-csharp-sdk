@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// *   COMPLIANT: The resource is evaluated as compliant.
         /// *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-        /// *   NOT_APPLICABLE: The rule does not apply to the resource.
+        /// *   NOT_APPLICABLE: The rule does not apply to the resources.
         /// *   INSUFFICIENT_DATA: No data is available.
         /// *   IGNORED: The resource is ignored during compliance evaluation.
         /// </summary>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ComplianceType { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return for a single request. Valid values: 1 to 100.
+        /// The maximum number of entries to return in a request. Valid values: 1 to 100.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

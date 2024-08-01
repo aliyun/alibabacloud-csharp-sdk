@@ -43,9 +43,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Enables one or more rules in an account group.
+         * @summary Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.
          *
-         * @description This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+         * @description ### [](#)Prerequisites
+         * The rule is in the `INACTIVE` state.
+         * ### [](#)Description
+         * This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
          *
          * @param request ActiveAggregateConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -83,9 +86,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Enables one or more rules in an account group.
+         * @summary Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.
          *
-         * @description This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+         * @description ### [](#)Prerequisites
+         * The rule is in the `INACTIVE` state.
+         * ### [](#)Description
+         * This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
          *
          * @param request ActiveAggregateConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -123,9 +129,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Enables one or more rules in an account group.
+         * @summary Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.
          *
-         * @description This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+         * @description ### [](#)Prerequisites
+         * The rule is in the `INACTIVE` state.
+         * ### [](#)Description
+         * This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
          *
          * @param request ActiveAggregateConfigRulesRequest
          * @return ActiveAggregateConfigRulesResponse
@@ -137,9 +146,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Enables one or more rules in an account group.
+         * @summary Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.
          *
-         * @description This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+         * @description ### [](#)Prerequisites
+         * The rule is in the `INACTIVE` state.
+         * ### [](#)Description
+         * This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
          *
          * @param request ActiveAggregateConfigRulesRequest
          * @return ActiveAggregateConfigRulesResponse
@@ -151,7 +163,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Enables multiple rules at a time so that these rules enter the Active state.
+         * @summary Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.
+         *
+         * @description ### [](#)Prerequisites
+         * The rule is in the `INACTIVE` state.
          *
          * @param request ActiveConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -185,7 +200,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Enables multiple rules at a time so that these rules enter the Active state.
+         * @summary Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.
+         *
+         * @description ### [](#)Prerequisites
+         * The rule is in the `INACTIVE` state.
          *
          * @param request ActiveConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -219,7 +237,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Enables multiple rules at a time so that these rules enter the Active state.
+         * @summary Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.
+         *
+         * @description ### [](#)Prerequisites
+         * The rule is in the `INACTIVE` state.
          *
          * @param request ActiveConfigRulesRequest
          * @return ActiveConfigRulesResponse
@@ -231,7 +252,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Enables multiple rules at a time so that these rules enter the Active state.
+         * @summary Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.
+         *
+         * @description ### [](#)Prerequisites
+         * The rule is in the `INACTIVE` state.
          *
          * @param request ActiveConfigRulesRequest
          * @return ActiveConfigRulesResponse
@@ -885,8 +909,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Creates a compliance package for an account group.
          *
-         * @description You can use your management account to create up to five compliance packages for each account group.
-         * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck for the `ca-f632626622af0079****` account group. The compliance package contains the `eip-bandwidth-limit` managed rule.
+         * @description This topic provides an example on how to create a compliance package for the account group `ca-f632626622af0079****` by using the compliance package template `ClassifiedProtectionPreCheck`.
          *
          * @param tmpReq CreateAggregateCompliancePackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1006,8 +1029,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Creates a compliance package for an account group.
          *
-         * @description You can use your management account to create up to five compliance packages for each account group.
-         * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck for the `ca-f632626622af0079****` account group. The compliance package contains the `eip-bandwidth-limit` managed rule.
+         * @description This topic provides an example on how to create a compliance package for the account group `ca-f632626622af0079****` by using the compliance package template `ClassifiedProtectionPreCheck`.
          *
          * @param tmpReq CreateAggregateCompliancePackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1127,8 +1149,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Creates a compliance package for an account group.
          *
-         * @description You can use your management account to create up to five compliance packages for each account group.
-         * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck for the `ca-f632626622af0079****` account group. The compliance package contains the `eip-bandwidth-limit` managed rule.
+         * @description This topic provides an example on how to create a compliance package for the account group `ca-f632626622af0079****` by using the compliance package template `ClassifiedProtectionPreCheck`.
          *
          * @param request CreateAggregateCompliancePackRequest
          * @return CreateAggregateCompliancePackResponse
@@ -1142,8 +1163,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Creates a compliance package for an account group.
          *
-         * @description You can use your management account to create up to five compliance packages for each account group.
-         * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck for the `ca-f632626622af0079****` account group. The compliance package contains the `eip-bandwidth-limit` managed rule.
+         * @description This topic provides an example on how to create a compliance package for the account group `ca-f632626622af0079****` by using the compliance package template `ClassifiedProtectionPreCheck`.
          *
          * @param request CreateAggregateCompliancePackRequest
          * @return CreateAggregateCompliancePackResponse
@@ -1174,6 +1194,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliantSnapshot))
+            {
+                query["CompliantSnapshot"] = request.CompliantSnapshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationItemChangeNotification))
             {
@@ -1254,6 +1278,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliantSnapshot))
+            {
+                query["CompliantSnapshot"] = request.CompliantSnapshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationItemChangeNotification))
             {
@@ -2299,6 +2327,10 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliantSnapshot))
+            {
+                query["CompliantSnapshot"] = request.CompliantSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationItemChangeNotification))
             {
                 query["ConfigurationItemChangeNotification"] = request.ConfigurationItemChangeNotification;
@@ -2374,6 +2406,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliantSnapshot))
+            {
+                query["CompliantSnapshot"] = request.CompliantSnapshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationItemChangeNotification))
             {
@@ -3099,9 +3135,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Disables one or more rules in an account group.
+         * @summary Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.
          *
-         * @description This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+         * @description ### [](#)Prerequisites
+         * The status of the rule is `ACTIVE`.
+         * ### [](#)Description
+         * This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
          *
          * @param request DeactiveAggregateConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3139,9 +3178,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Disables one or more rules in an account group.
+         * @summary Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.
          *
-         * @description This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+         * @description ### [](#)Prerequisites
+         * The status of the rule is `ACTIVE`.
+         * ### [](#)Description
+         * This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
          *
          * @param request DeactiveAggregateConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3179,9 +3221,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Disables one or more rules in an account group.
+         * @summary Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.
          *
-         * @description This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+         * @description ### [](#)Prerequisites
+         * The status of the rule is `ACTIVE`.
+         * ### [](#)Description
+         * This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
          *
          * @param request DeactiveAggregateConfigRulesRequest
          * @return DeactiveAggregateConfigRulesResponse
@@ -3193,9 +3238,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Disables one or more rules in an account group.
+         * @summary Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.
          *
-         * @description This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+         * @description ### [](#)Prerequisites
+         * The status of the rule is `ACTIVE`.
+         * ### [](#)Description
+         * This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
          *
          * @param request DeactiveAggregateConfigRulesRequest
          * @return DeactiveAggregateConfigRulesResponse
@@ -3207,9 +3255,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Disables one or more rules.
+         * @summary Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.
          *
-         * @description In this example, the `cr-19a56457e0d90058****` rule is used.
+         * @description ### [](#)Prerequisites
+         * The status of the rule is `ACTIVE`.
+         * ### [](#)Description
+         * This topic provides an example on how to disable the `cr-19a56457e0d90058****` rule.
          *
          * @param request DeactiveConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3243,9 +3294,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Disables one or more rules.
+         * @summary Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.
          *
-         * @description In this example, the `cr-19a56457e0d90058****` rule is used.
+         * @description ### [](#)Prerequisites
+         * The status of the rule is `ACTIVE`.
+         * ### [](#)Description
+         * This topic provides an example on how to disable the `cr-19a56457e0d90058****` rule.
          *
          * @param request DeactiveConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3279,9 +3333,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Disables one or more rules.
+         * @summary Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.
          *
-         * @description In this example, the `cr-19a56457e0d90058****` rule is used.
+         * @description ### [](#)Prerequisites
+         * The status of the rule is `ACTIVE`.
+         * ### [](#)Description
+         * This topic provides an example on how to disable the `cr-19a56457e0d90058****` rule.
          *
          * @param request DeactiveConfigRulesRequest
          * @return DeactiveConfigRulesResponse
@@ -3293,9 +3350,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Disables one or more rules.
+         * @summary Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.
          *
-         * @description In this example, the `cr-19a56457e0d90058****` rule is used.
+         * @description ### [](#)Prerequisites
+         * The status of the rule is `ACTIVE`.
+         * ### [](#)Description
+         * This topic provides an example on how to disable the `cr-19a56457e0d90058****` rule.
          *
          * @param request DeactiveConfigRulesRequest
          * @return DeactiveConfigRulesResponse
@@ -3539,12 +3599,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Deletes one or more rules from an account group.
+         * @summary Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
          *
-         * @description ### Background information
-         * You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
-         * ### Usage notes
-         * This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
+         * @description This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
          *
          * @param request DeleteAggregateConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3582,12 +3639,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Deletes one or more rules from an account group.
+         * @summary Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
          *
-         * @description ### Background information
-         * You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
-         * ### Usage notes
-         * This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
+         * @description This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
          *
          * @param request DeleteAggregateConfigRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3625,12 +3679,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Deletes one or more rules from an account group.
+         * @summary Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
          *
-         * @description ### Background information
-         * You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
-         * ### Usage notes
-         * This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
+         * @description This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
          *
          * @param request DeleteAggregateConfigRulesRequest
          * @return DeleteAggregateConfigRulesResponse
@@ -3642,12 +3693,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Deletes one or more rules from an account group.
+         * @summary Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
          *
-         * @description ### Background information
-         * You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
-         * ### Usage notes
-         * This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
+         * @description This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
          *
          * @param request DeleteAggregateConfigRulesRequest
          * @return DeleteAggregateConfigRulesResponse
@@ -3767,9 +3815,16 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Deletes an account group.
+         * @summary The management account or delegated administrator account of a resource directory can delete an account group.
          *
-         * @description This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
+         * @description ### [](#)Background information
+         * After you delete an account group, the following changes occur to Cloud Config:
+         * *   The rules and compliance packages of the account group are deleted and cannot be recovered.
+         * *   All compliance results generated in the account group are automatically deleted and cannot be recovered.
+         * *   Service-linked roles for Cloud Config of member accounts in the account group are retained.
+         * *   If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.
+         * ### [](#)Description
+         * This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
          *
          * @param request DeleteAggregatorsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3807,9 +3862,16 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Deletes an account group.
+         * @summary The management account or delegated administrator account of a resource directory can delete an account group.
          *
-         * @description This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
+         * @description ### [](#)Background information
+         * After you delete an account group, the following changes occur to Cloud Config:
+         * *   The rules and compliance packages of the account group are deleted and cannot be recovered.
+         * *   All compliance results generated in the account group are automatically deleted and cannot be recovered.
+         * *   Service-linked roles for Cloud Config of member accounts in the account group are retained.
+         * *   If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.
+         * ### [](#)Description
+         * This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
          *
          * @param request DeleteAggregatorsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3847,9 +3909,16 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Deletes an account group.
+         * @summary The management account or delegated administrator account of a resource directory can delete an account group.
          *
-         * @description This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
+         * @description ### [](#)Background information
+         * After you delete an account group, the following changes occur to Cloud Config:
+         * *   The rules and compliance packages of the account group are deleted and cannot be recovered.
+         * *   All compliance results generated in the account group are automatically deleted and cannot be recovered.
+         * *   Service-linked roles for Cloud Config of member accounts in the account group are retained.
+         * *   If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.
+         * ### [](#)Description
+         * This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
          *
          * @param request DeleteAggregatorsRequest
          * @return DeleteAggregatorsResponse
@@ -3861,9 +3930,16 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Deletes an account group.
+         * @summary The management account or delegated administrator account of a resource directory can delete an account group.
          *
-         * @description This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
+         * @description ### [](#)Background information
+         * After you delete an account group, the following changes occur to Cloud Config:
+         * *   The rules and compliance packages of the account group are deleted and cannot be recovered.
+         * *   All compliance results generated in the account group are automatically deleted and cannot be recovered.
+         * *   Service-linked roles for Cloud Config of member accounts in the account group are retained.
+         * *   If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.
+         * ### [](#)Description
+         * This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
          *
          * @param request DeleteAggregatorsRequest
          * @return DeleteAggregatorsResponse
@@ -4855,7 +4931,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Generates a compliance evaluation report based on all rules in an account group.
+         * @summary Generates a compliance evaluation report for the rules in a specified account group.
          *
          * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see [GetAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262706.html).
          * The topic provides an example on how to generate a compliance evaluation report based on all rules in the `ca-f632626622af0079****` account group.
@@ -4900,7 +4976,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Generates a compliance evaluation report based on all rules in an account group.
+         * @summary Generates a compliance evaluation report for the rules in a specified account group.
          *
          * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see [GetAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262706.html).
          * The topic provides an example on how to generate a compliance evaluation report based on all rules in the `ca-f632626622af0079****` account group.
@@ -4945,7 +5021,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Generates a compliance evaluation report based on all rules in an account group.
+         * @summary Generates a compliance evaluation report for the rules in a specified account group.
          *
          * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see [GetAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262706.html).
          * The topic provides an example on how to generate a compliance evaluation report based on all rules in the `ca-f632626622af0079****` account group.
@@ -4960,7 +5036,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Generates a compliance evaluation report based on all rules in an account group.
+         * @summary Generates a compliance evaluation report for the rules in a specified account group.
          *
          * @description > You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see [GetAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262706.html).
          * The topic provides an example on how to generate a compliance evaluation report based on all rules in the `ca-f632626622af0079****` account group.
@@ -5219,7 +5295,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Generates a compliance evaluation report based on all existing rules.
+         * @summary Generates a compliance evaluation report for a rule.
          *
          * @description >  You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see [GetConfigRulesReport](https://help.aliyun.com/document_detail/263608.html).
          * This topic provides an example of how to generate a compliance evaluation report based on all existing rules.
@@ -5260,7 +5336,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Generates a compliance evaluation report based on all existing rules.
+         * @summary Generates a compliance evaluation report for a rule.
          *
          * @description >  You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see [GetConfigRulesReport](https://help.aliyun.com/document_detail/263608.html).
          * This topic provides an example of how to generate a compliance evaluation report based on all existing rules.
@@ -5301,7 +5377,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Generates a compliance evaluation report based on all existing rules.
+         * @summary Generates a compliance evaluation report for a rule.
          *
          * @description >  You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see [GetConfigRulesReport](https://help.aliyun.com/document_detail/263608.html).
          * This topic provides an example of how to generate a compliance evaluation report based on all existing rules.
@@ -5316,7 +5392,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Generates a compliance evaluation report based on all existing rules.
+         * @summary Generates a compliance evaluation report for a rule.
          *
          * @description >  You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see [GetConfigRulesReport](https://help.aliyun.com/document_detail/263608.html).
          * This topic provides an example of how to generate a compliance evaluation report based on all existing rules.
@@ -6395,7 +6471,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation report that is generated based on all rules in an account group.
+         * @summary Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.
          *
          * @description > Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see [GenerateAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262701.html).
          * This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the `ca-f632626622af0079****` account group.
@@ -6436,7 +6512,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation report that is generated based on all rules in an account group.
+         * @summary Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.
          *
          * @description > Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see [GenerateAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262701.html).
          * This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the `ca-f632626622af0079****` account group.
@@ -6477,7 +6553,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation report that is generated based on all rules in an account group.
+         * @summary Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.
          *
          * @description > Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see [GenerateAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262701.html).
          * This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the `ca-f632626622af0079****` account group.
@@ -6492,7 +6568,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation report that is generated based on all rules in an account group.
+         * @summary Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.
          *
          * @description > Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see [GenerateAggregateConfigRulesReport](https://help.aliyun.com/document_detail/262701.html).
          * This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the `ca-f632626622af0079****` account group.
@@ -6507,9 +6583,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a resource in an account group.
+         * @summary Queries the details of a specific resource in an account group.
          *
-         * @description This topic provides an example on how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+         * @description This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region in the account group `ca-5885626622af0008****`.
          *
          * @param request GetAggregateDiscoveredResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6567,9 +6643,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a resource in an account group.
+         * @summary Queries the details of a specific resource in an account group.
          *
-         * @description This topic provides an example on how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+         * @description This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region in the account group `ca-5885626622af0008****`.
          *
          * @param request GetAggregateDiscoveredResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6627,9 +6703,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a resource in an account group.
+         * @summary Queries the details of a specific resource in an account group.
          *
-         * @description This topic provides an example on how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+         * @description This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region in the account group `ca-5885626622af0008****`.
          *
          * @param request GetAggregateDiscoveredResourceRequest
          * @return GetAggregateDiscoveredResourceResponse
@@ -6641,9 +6717,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a resource in an account group.
+         * @summary Queries the details of a specific resource in an account group.
          *
-         * @description This topic provides an example on how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+         * @description This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region in the account group `ca-5885626622af0008****`.
          *
          * @param request GetAggregateDiscoveredResourceRequest
          * @return GetAggregateDiscoveredResourceResponse
@@ -7639,7 +7715,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of an account group.
+         * @summary Queries the details of an account group. You can query the name, creation time, member, and type of an account group.
          *
          * @description The sample request in this topic shows you how to query the details of the `ca-88ea626622af0055****` account group. The return result shows that the account group is named `Test_Group`, its description is `Test account group`, and it is of the `CUSTOM` type. The account group is in the `1` state, which indicates that it is created.
          *
@@ -7675,7 +7751,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of an account group.
+         * @summary Queries the details of an account group. You can query the name, creation time, member, and type of an account group.
          *
          * @description The sample request in this topic shows you how to query the details of the `ca-88ea626622af0055****` account group. The return result shows that the account group is named `Test_Group`, its description is `Test account group`, and it is of the `CUSTOM` type. The account group is in the `1` state, which indicates that it is created.
          *
@@ -7711,7 +7787,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of an account group.
+         * @summary Queries the details of an account group. You can query the name, creation time, member, and type of an account group.
          *
          * @description The sample request in this topic shows you how to query the details of the `ca-88ea626622af0055****` account group. The return result shows that the account group is named `Test_Group`, its description is `Test account group`, and it is of the `CUSTOM` type. The account group is in the `1` state, which indicates that it is created.
          *
@@ -7725,7 +7801,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of an account group.
+         * @summary Queries the details of an account group. You can query the name, creation time, member, and type of an account group.
          *
          * @description The sample request in this topic shows you how to query the details of the `ca-88ea626622af0055****` account group. The return result shows that the account group is named `Test_Group`, its description is `Test account group`, and it is of the `CUSTOM` type. The account group is in the `1` state, which indicates that it is created.
          *
@@ -8291,7 +8367,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the summary of compliance evaluation results by rule risk level.
+         * @summary Queries the compliance summary based on the risk level of a rule.
          *
          * @description This topic provides an example of how to query the summary of compliance evaluation results by rule risk level. The return result shows four rules that are specified with the high risk level. One of them detects non-compliant resources, and the resources evaluated by the remaining three are all compliant.
          *
@@ -8318,7 +8394,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the summary of compliance evaluation results by rule risk level.
+         * @summary Queries the compliance summary based on the risk level of a rule.
          *
          * @description This topic provides an example of how to query the summary of compliance evaluation results by rule risk level. The return result shows four rules that are specified with the high risk level. One of them detects non-compliant resources, and the resources evaluated by the remaining three are all compliant.
          *
@@ -8345,7 +8421,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the summary of compliance evaluation results by rule risk level.
+         * @summary Queries the compliance summary based on the risk level of a rule.
          *
          * @description This topic provides an example of how to query the summary of compliance evaluation results by rule risk level. The return result shows four rules that are specified with the high risk level. One of them detects non-compliant resources, and the resources evaluated by the remaining three are all compliant.
          *
@@ -8358,7 +8434,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the summary of compliance evaluation results by rule risk level.
+         * @summary Queries the compliance summary based on the risk level of a rule.
          *
          * @description This topic provides an example of how to query the summary of compliance evaluation results by rule risk level. The return result shows four rules that are specified with the high risk level. One of them detects non-compliant resources, and the resources evaluated by the remaining three are all compliant.
          *
@@ -8371,7 +8447,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation report that is generated based on all existing rules.
+         * @summary Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.
          *
          * @description >  Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see [GenerateConfigRulesReport](https://help.aliyun.com/document_detail/263601.html).
          * This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.
@@ -8408,7 +8484,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation report that is generated based on all existing rules.
+         * @summary Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.
          *
          * @description >  Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see [GenerateConfigRulesReport](https://help.aliyun.com/document_detail/263601.html).
          * This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.
@@ -8445,7 +8521,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation report that is generated based on all existing rules.
+         * @summary Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.
          *
          * @description >  Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see [GenerateConfigRulesReport](https://help.aliyun.com/document_detail/263601.html).
          * This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.
@@ -8460,7 +8536,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation report that is generated based on all existing rules.
+         * @summary Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.
          *
          * @description >  Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see [GenerateConfigRulesReport](https://help.aliyun.com/document_detail/263601.html).
          * This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.
@@ -8555,9 +8631,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a resource.
+         * @summary Queries the details of a specific resource.
          *
-         * @description The sample request in this topic shows you how to query the details of the `new-bucket` resource.
+         * @description This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region.
          *
          * @param request GetDiscoveredResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8603,9 +8679,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a resource.
+         * @summary Queries the details of a specific resource.
          *
-         * @description The sample request in this topic shows you how to query the details of the `new-bucket` resource.
+         * @description This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region.
          *
          * @param request GetDiscoveredResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8651,9 +8727,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a resource.
+         * @summary Queries the details of a specific resource.
          *
-         * @description The sample request in this topic shows you how to query the details of the `new-bucket` resource.
+         * @description This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region.
          *
          * @param request GetDiscoveredResourceRequest
          * @return GetDiscoveredResourceResponse
@@ -8665,9 +8741,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a resource.
+         * @summary Queries the details of a specific resource.
          *
-         * @description The sample request in this topic shows you how to query the details of the `new-bucket` resource.
+         * @description This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region.
          *
          * @param request GetDiscoveredResourceRequest
          * @return GetDiscoveredResourceResponse
@@ -8879,7 +8955,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the status of a cloud service that is integrated with Cloud Config.
+         * @summary Queries the integration status of a specific cloud service.
          *
          * @param request GetIntegratedServiceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8913,7 +8989,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the status of a cloud service that is integrated with Cloud Config.
+         * @summary Queries the integration status of a specific cloud service.
          *
          * @param request GetIntegratedServiceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8947,7 +9023,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the status of a cloud service that is integrated with Cloud Config.
+         * @summary Queries the integration status of a specific cloud service.
          *
          * @param request GetIntegratedServiceStatusRequest
          * @return GetIntegratedServiceStatusResponse
@@ -8959,7 +9035,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the status of a cloud service that is integrated with Cloud Config.
+         * @summary Queries the integration status of a specific cloud service.
          *
          * @param request GetIntegratedServiceStatusRequest
          * @return GetIntegratedServiceStatusResponse
@@ -8971,9 +9047,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a managed rule.
+         * @summary Queries the details of a specific managed rule.
          *
-         * @description In this topic, the `cdn-domain-https-enabled` managed rule is used as an example.
+         * @description This topic provides an example on how to query the details of the managed rule `cdn-domain-https-enabled`.
          *
          * @param request GetManagedRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9007,9 +9083,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a managed rule.
+         * @summary Queries the details of a specific managed rule.
          *
-         * @description In this topic, the `cdn-domain-https-enabled` managed rule is used as an example.
+         * @description This topic provides an example on how to query the details of the managed rule `cdn-domain-https-enabled`.
          *
          * @param request GetManagedRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9043,9 +9119,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a managed rule.
+         * @summary Queries the details of a specific managed rule.
          *
-         * @description In this topic, the `cdn-domain-https-enabled` managed rule is used as an example.
+         * @description This topic provides an example on how to query the details of the managed rule `cdn-domain-https-enabled`.
          *
          * @param request GetManagedRuleRequest
          * @return GetManagedRuleResponse
@@ -9057,9 +9133,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the details of a managed rule.
+         * @summary Queries the details of a specific managed rule.
          *
-         * @description In this topic, the `cdn-domain-https-enabled` managed rule is used as an example.
+         * @description This topic provides an example on how to query the details of the managed rule `cdn-domain-https-enabled`.
          *
          * @param request GetManagedRuleRequest
          * @return GetManagedRuleResponse
@@ -9171,7 +9247,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation result of a resource by using a rule.
+         * @summary Queries the compliance summary based on the compliance evaluation result of a rule.
          *
          * @description In this topic, the `cr-d369626622af008e****` rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and `five` of them are evaluated as compliant.
          *
@@ -9203,7 +9279,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation result of a resource by using a rule.
+         * @summary Queries the compliance summary based on the compliance evaluation result of a rule.
          *
          * @description In this topic, the `cr-d369626622af008e****` rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and `five` of them are evaluated as compliant.
          *
@@ -9235,7 +9311,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation result of a resource by using a rule.
+         * @summary Queries the compliance summary based on the compliance evaluation result of a rule.
          *
          * @description In this topic, the `cr-d369626622af008e****` rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and `five` of them are evaluated as compliant.
          *
@@ -9249,7 +9325,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation result of a resource by using a rule.
+         * @summary Queries the compliance summary based on the compliance evaluation result of a rule.
          *
          * @description In this topic, the `cr-d369626622af008e****` rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and `five` of them are evaluated as compliant.
          *
@@ -11839,7 +11915,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of compliance package templates.
+         * @summary Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.
          *
          * @description This topic provides an example on how to query the details of a compliance package template whose ID is `ct-d254ff4e06a300cf****`. The returned result indicates that the template name is `BestPracticesForNetwork`, the template ID is `ct-d254ff4e06a300cf****`, and the ID of the managed rule of the template is `slb-servercertificate-expired-check`.
          *
@@ -11887,7 +11963,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of compliance package templates.
+         * @summary Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.
          *
          * @description This topic provides an example on how to query the details of a compliance package template whose ID is `ct-d254ff4e06a300cf****`. The returned result indicates that the template name is `BestPracticesForNetwork`, the template ID is `ct-d254ff4e06a300cf****`, and the ID of the managed rule of the template is `slb-servercertificate-expired-check`.
          *
@@ -11935,7 +12011,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of compliance package templates.
+         * @summary Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.
          *
          * @description This topic provides an example on how to query the details of a compliance package template whose ID is `ct-d254ff4e06a300cf****`. The returned result indicates that the template name is `BestPracticesForNetwork`, the template ID is `ct-d254ff4e06a300cf****`, and the ID of the managed rule of the template is `slb-servercertificate-expired-check`.
          *
@@ -11949,7 +12025,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of compliance package templates.
+         * @summary Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.
          *
          * @description This topic provides an example on how to query the details of a compliance package template whose ID is `ct-d254ff4e06a300cf****`. The returned result indicates that the template name is `BestPracticesForNetwork`, the template ID is `ct-d254ff4e06a300cf****`, and the ID of the managed rule of the template is `slb-servercertificate-expired-check`.
          *
@@ -12171,7 +12247,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of compliance evaluation results of resources based on a rule.
+         * @summary Queries the compliance evaluation results of resources based on a rule.
          *
          * @description This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is `cr-cac56457e0d900d3****`. The returned result indicates that the `i-hp3e4kvhzqn2s11t****` resource is evaluated as `NON_COMPLIANT` by using the rule. The resource is an Elastic Compute Service (ECS) instance.
          *
@@ -12203,7 +12279,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of compliance evaluation results of resources based on a rule.
+         * @summary Queries the compliance evaluation results of resources based on a rule.
          *
          * @description This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is `cr-cac56457e0d900d3****`. The returned result indicates that the `i-hp3e4kvhzqn2s11t****` resource is evaluated as `NON_COMPLIANT` by using the rule. The resource is an Elastic Compute Service (ECS) instance.
          *
@@ -12235,7 +12311,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of compliance evaluation results of resources based on a rule.
+         * @summary Queries the compliance evaluation results of resources based on a rule.
          *
          * @description This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is `cr-cac56457e0d900d3****`. The returned result indicates that the `i-hp3e4kvhzqn2s11t****` resource is evaluated as `NON_COMPLIANT` by using the rule. The resource is an Elastic Compute Service (ECS) instance.
          *
@@ -12249,7 +12325,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of compliance evaluation results of resources based on a rule.
+         * @summary Queries the compliance evaluation results of resources based on a rule.
          *
          * @description This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is `cr-cac56457e0d900d3****`. The returned result indicates that the `i-hp3e4kvhzqn2s11t****` resource is evaluated as `NON_COMPLIANT` by using the rule. The resource is an Elastic Compute Service (ECS) instance.
          *
@@ -12631,7 +12707,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the cloud services that can be integrated by the current Alibaba Cloud account.
+         * @summary Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.
          *
          * @description This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
          *
@@ -12658,7 +12734,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the cloud services that can be integrated by the current Alibaba Cloud account.
+         * @summary Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.
          *
          * @description This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
          *
@@ -12685,7 +12761,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the cloud services that can be integrated by the current Alibaba Cloud account.
+         * @summary Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.
          *
          * @description This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
          *
@@ -12698,7 +12774,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the cloud services that can be integrated by the current Alibaba Cloud account.
+         * @summary Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.
          *
          * @description This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
          *
@@ -12711,9 +12787,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries managed rules.
+         * @summary Queries a list of managed rules supported by Cloud Config.
          *
-         * @description This topic describes how to query the managed rules of Alibaba Cloud CDN by using the `CDN` keyword. The returned result shows that only one managed rule exists. You can view the rule details in the result.
+         * @description ### [](#)Background information
+         * For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](https://help.aliyun.com/document_detail/470802.html).
+         * ### [](#)Usage notes
+         * This topic provides an example on how to query all managed rules whose keyword is `CDN`. The response shows that 21 managed rules exist.
          *
          * @param request ListManagedRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12763,9 +12842,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries managed rules.
+         * @summary Queries a list of managed rules supported by Cloud Config.
          *
-         * @description This topic describes how to query the managed rules of Alibaba Cloud CDN by using the `CDN` keyword. The returned result shows that only one managed rule exists. You can view the rule details in the result.
+         * @description ### [](#)Background information
+         * For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](https://help.aliyun.com/document_detail/470802.html).
+         * ### [](#)Usage notes
+         * This topic provides an example on how to query all managed rules whose keyword is `CDN`. The response shows that 21 managed rules exist.
          *
          * @param request ListManagedRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12815,9 +12897,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries managed rules.
+         * @summary Queries a list of managed rules supported by Cloud Config.
          *
-         * @description This topic describes how to query the managed rules of Alibaba Cloud CDN by using the `CDN` keyword. The returned result shows that only one managed rule exists. You can view the rule details in the result.
+         * @description ### [](#)Background information
+         * For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](https://help.aliyun.com/document_detail/470802.html).
+         * ### [](#)Usage notes
+         * This topic provides an example on how to query all managed rules whose keyword is `CDN`. The response shows that 21 managed rules exist.
          *
          * @param request ListManagedRulesRequest
          * @return ListManagedRulesResponse
@@ -12829,9 +12914,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries managed rules.
+         * @summary Queries a list of managed rules supported by Cloud Config.
          *
-         * @description This topic describes how to query the managed rules of Alibaba Cloud CDN by using the `CDN` keyword. The returned result shows that only one managed rule exists. You can view the rule details in the result.
+         * @description ### [](#)Background information
+         * For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](https://help.aliyun.com/document_detail/470802.html).
+         * ### [](#)Usage notes
+         * This topic provides an example on how to query all managed rules whose keyword is `CDN`. The response shows that 21 managed rules exist.
          *
          * @param request ListManagedRulesRequest
          * @return ListManagedRulesResponse
@@ -12843,7 +12931,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of evaluation rules.
+         * @summary Queries a list of evaluation rules supported by Cloud Config.
+         *
+         * @description For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](https://help.aliyun.com/document_detail/470802.html).
+         * After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.
          *
          * @param tmpReq ListPreManagedRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12891,7 +12982,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of evaluation rules.
+         * @summary Queries a list of evaluation rules supported by Cloud Config.
+         *
+         * @description For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](https://help.aliyun.com/document_detail/470802.html).
+         * After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.
          *
          * @param tmpReq ListPreManagedRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12939,7 +13033,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of evaluation rules.
+         * @summary Queries a list of evaluation rules supported by Cloud Config.
+         *
+         * @description For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](https://help.aliyun.com/document_detail/470802.html).
+         * After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.
          *
          * @param request ListPreManagedRulesRequest
          * @return ListPreManagedRulesResponse
@@ -12951,7 +13048,10 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries a list of evaluation rules.
+         * @summary Queries a list of evaluation rules supported by Cloud Config.
+         *
+         * @description For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](https://help.aliyun.com/document_detail/470802.html).
+         * After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.
          *
          * @param request ListPreManagedRulesRequest
          * @return ListPreManagedRulesResponse
@@ -13327,7 +13427,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation result of a resource.
+         * @summary Queries the compliance evaluation results of resources.
          *
          * @description In this example, the compliance evaluation result of the `23642660635396****` resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as `NON_COMPLIANT` by using the `cr-7f7d626622af0041****` rule.
          *
@@ -13383,7 +13483,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation result of a resource.
+         * @summary Queries the compliance evaluation results of resources.
          *
          * @description In this example, the compliance evaluation result of the `23642660635396****` resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as `NON_COMPLIANT` by using the `cr-7f7d626622af0041****` rule.
          *
@@ -13439,7 +13539,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation result of a resource.
+         * @summary Queries the compliance evaluation results of resources.
          *
          * @description In this example, the compliance evaluation result of the `23642660635396****` resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as `NON_COMPLIANT` by using the `cr-7f7d626622af0041****` rule.
          *
@@ -13453,7 +13553,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Queries the compliance evaluation result of a resource.
+         * @summary Queries the compliance evaluation results of resources.
          *
          * @description In this example, the compliance evaluation result of the `23642660635396****` resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as `NON_COMPLIANT` by using the `cr-7f7d626622af0041****` rule.
          *
@@ -13983,7 +14083,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Submits the evaluation results of a custom rule to Function Compute.
+         * @summary Submits the evaluation results of a rule from Function Compute.
+         *
+         * @description For more information about the definition, use scenarios, and execution of custom function rules, see [Definition and execution of custom function rules](https://help.aliyun.com/document_detail/127405.html).
          *
          * @param request PutEvaluationsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14025,7 +14127,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Submits the evaluation results of a custom rule to Function Compute.
+         * @summary Submits the evaluation results of a rule from Function Compute.
+         *
+         * @description For more information about the definition, use scenarios, and execution of custom function rules, see [Definition and execution of custom function rules](https://help.aliyun.com/document_detail/127405.html).
          *
          * @param request PutEvaluationsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14067,7 +14171,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Submits the evaluation results of a custom rule to Function Compute.
+         * @summary Submits the evaluation results of a rule from Function Compute.
+         *
+         * @description For more information about the definition, use scenarios, and execution of custom function rules, see [Definition and execution of custom function rules](https://help.aliyun.com/document_detail/127405.html).
          *
          * @param request PutEvaluationsRequest
          * @return PutEvaluationsResponse
@@ -14079,7 +14185,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Submits the evaluation results of a custom rule to Function Compute.
+         * @summary Submits the evaluation results of a rule from Function Compute.
+         *
+         * @description For more information about the definition, use scenarios, and execution of custom function rules, see [Definition and execution of custom function rules](https://help.aliyun.com/document_detail/127405.html).
          *
          * @param request PutEvaluationsRequest
          * @return PutEvaluationsResponse
@@ -14091,12 +14199,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates one or more incompliant resources that are evaluated based on a rule in an account group.
+         * @summary Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.
          *
-         * @description ### Prerequisites
-         * One or more non-compliant resources that are evaluated based on a rule are ignored.
-         * ### Usage notes
-         * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051***` rule in the `120886317861****` member account of the `ca-5b6c626622af008f****` account group. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
+         * @description ### [](#)Prerequisites
+         * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreAggregateEvaluationResults](https://help.aliyun.com/document_detail/607054.html).
+         * ### [](#)Description
+         * This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule of the `120886317861****` member in the `ca-5b6c626622af008f****` group account. The ID of the region in which the resource resides is `cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
          *
          * @param tmpReq RevertAggregateEvaluationResultsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14144,12 +14252,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates one or more incompliant resources that are evaluated based on a rule in an account group.
+         * @summary Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.
          *
-         * @description ### Prerequisites
-         * One or more non-compliant resources that are evaluated based on a rule are ignored.
-         * ### Usage notes
-         * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051***` rule in the `120886317861****` member account of the `ca-5b6c626622af008f****` account group. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
+         * @description ### [](#)Prerequisites
+         * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreAggregateEvaluationResults](https://help.aliyun.com/document_detail/607054.html).
+         * ### [](#)Description
+         * This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule of the `120886317861****` member in the `ca-5b6c626622af008f****` group account. The ID of the region in which the resource resides is `cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
          *
          * @param tmpReq RevertAggregateEvaluationResultsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14197,12 +14305,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates one or more incompliant resources that are evaluated based on a rule in an account group.
+         * @summary Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.
          *
-         * @description ### Prerequisites
-         * One or more non-compliant resources that are evaluated based on a rule are ignored.
-         * ### Usage notes
-         * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051***` rule in the `120886317861****` member account of the `ca-5b6c626622af008f****` account group. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
+         * @description ### [](#)Prerequisites
+         * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreAggregateEvaluationResults](https://help.aliyun.com/document_detail/607054.html).
+         * ### [](#)Description
+         * This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule of the `120886317861****` member in the `ca-5b6c626622af008f****` group account. The ID of the region in which the resource resides is `cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
          *
          * @param request RevertAggregateEvaluationResultsRequest
          * @return RevertAggregateEvaluationResultsResponse
@@ -14214,12 +14322,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates one or more incompliant resources that are evaluated based on a rule in an account group.
+         * @summary Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.
          *
-         * @description ### Prerequisites
-         * One or more non-compliant resources that are evaluated based on a rule are ignored.
-         * ### Usage notes
-         * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051***` rule in the `120886317861****` member account of the `ca-5b6c626622af008f****` account group. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
+         * @description ### [](#)Prerequisites
+         * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreAggregateEvaluationResults](https://help.aliyun.com/document_detail/607054.html).
+         * ### [](#)Description
+         * This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule of the `120886317861****` member in the `ca-5b6c626622af008f****` group account. The ID of the region in which the resource resides is `cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
          *
          * @param request RevertAggregateEvaluationResultsRequest
          * @return RevertAggregateEvaluationResultsResponse
@@ -14231,12 +14339,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates non-compliant resources that are evaluated based on a rule.
+         * @summary Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.
          *
-         * @description ### Prerequisites
-         * One or more non-compliant resources that are evaluated by a rule are ignored.
-         * ### Usage notes
-         * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.``
+         * @description ### [](#)Prerequisites
+         * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreEvaluationResults](https://help.aliyun.com/document_detail/606990.html).
+         * ### [](#)Description
+         * This topic provides an example on how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is`cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
          *
          * @param tmpReq RevertEvaluationResultsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14280,12 +14388,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates non-compliant resources that are evaluated based on a rule.
+         * @summary Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.
          *
-         * @description ### Prerequisites
-         * One or more non-compliant resources that are evaluated by a rule are ignored.
-         * ### Usage notes
-         * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.``
+         * @description ### [](#)Prerequisites
+         * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreEvaluationResults](https://help.aliyun.com/document_detail/606990.html).
+         * ### [](#)Description
+         * This topic provides an example on how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is`cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
          *
          * @param tmpReq RevertEvaluationResultsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14329,12 +14437,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates non-compliant resources that are evaluated based on a rule.
+         * @summary Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.
          *
-         * @description ### Prerequisites
-         * One or more non-compliant resources that are evaluated by a rule are ignored.
-         * ### Usage notes
-         * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.``
+         * @description ### [](#)Prerequisites
+         * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreEvaluationResults](https://help.aliyun.com/document_detail/606990.html).
+         * ### [](#)Description
+         * This topic provides an example on how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is`cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
          *
          * @param request RevertEvaluationResultsRequest
          * @return RevertEvaluationResultsResponse
@@ -14346,12 +14454,12 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates non-compliant resources that are evaluated based on a rule.
+         * @summary Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.
          *
-         * @description ### Prerequisites
-         * One or more non-compliant resources that are evaluated by a rule are ignored.
-         * ### Usage notes
-         * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.``
+         * @description ### [](#)Prerequisites
+         * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreEvaluationResults](https://help.aliyun.com/document_detail/606990.html).
+         * ### [](#)Description
+         * This topic provides an example on how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is`cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
          *
          * @param request RevertEvaluationResultsRequest
          * @return RevertEvaluationResultsResponse
@@ -14363,7 +14471,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Starts to evaluate the involved resources by using a rule in an account group.
+         * @summary Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.
          *
          * @description > After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see [ListAggregateConfigRuleEvaluationResults](https://help.aliyun.com/document_detail/265979.html).
          * The sample request in this topic shows how to use the `cr-c169626622af009f****` rule in the `ca-3a58626622af0005****` account group to evaluate resources.
@@ -14412,7 +14520,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Starts to evaluate the involved resources by using a rule in an account group.
+         * @summary Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.
          *
          * @description > After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see [ListAggregateConfigRuleEvaluationResults](https://help.aliyun.com/document_detail/265979.html).
          * The sample request in this topic shows how to use the `cr-c169626622af009f****` rule in the `ca-3a58626622af0005****` account group to evaluate resources.
@@ -14461,7 +14569,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Starts to evaluate the involved resources by using a rule in an account group.
+         * @summary Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.
          *
          * @description > After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see [ListAggregateConfigRuleEvaluationResults](https://help.aliyun.com/document_detail/265979.html).
          * The sample request in this topic shows how to use the `cr-c169626622af009f****` rule in the `ca-3a58626622af0005****` account group to evaluate resources.
@@ -14476,7 +14584,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Starts to evaluate the involved resources by using a rule in an account group.
+         * @summary Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.
          *
          * @description > After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see [ListAggregateConfigRuleEvaluationResults](https://help.aliyun.com/document_detail/265979.html).
          * The sample request in this topic shows how to use the `cr-c169626622af009f****` rule in the `ca-3a58626622af0005****` account group to evaluate resources.
@@ -14607,7 +14715,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates the compliance of resources based on a rule or compliance package.
+         * @summary Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.
          *
          * @description In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
          *
@@ -14651,7 +14759,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates the compliance of resources based on a rule or compliance package.
+         * @summary Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.
          *
          * @description In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
          *
@@ -14695,7 +14803,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates the compliance of resources based on a rule or compliance package.
+         * @summary Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.
          *
          * @description In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
          *
@@ -14709,7 +14817,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Re-evaluates the compliance of resources based on a rule or compliance package.
+         * @summary Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.
          *
          * @description In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
          *
@@ -14905,6 +15013,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Deactivates Cloud Config.
          *
+         * @description >  After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.
+         *
          * @param request StopConfigurationRecorderRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return StopConfigurationRecorderResponse
@@ -14929,6 +15039,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /**
          * @summary Deactivates Cloud Config.
+         *
+         * @description >  After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.
          *
          * @param request StopConfigurationRecorderRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14955,6 +15067,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Deactivates Cloud Config.
          *
+         * @description >  After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.
+         *
          * @return StopConfigurationRecorderResponse
          */
         public StopConfigurationRecorderResponse StopConfigurationRecorder()
@@ -14965,6 +15079,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /**
          * @summary Deactivates Cloud Config.
+         *
+         * @description >  After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.
          *
          * @return StopConfigurationRecorderResponse
          */
@@ -15229,7 +15345,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Modifies the configurations of a compliance package in an account group.
          *
-         * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
+         * @description This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter in the rule template of the compliance package `cp-fdc8626622af00f9****` in the account group `ca-f632626622af0079****` to `20`.
          *
          * @param tmpReq UpdateAggregateCompliancePackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15341,7 +15457,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Modifies the configurations of a compliance package in an account group.
          *
-         * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
+         * @description This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter in the rule template of the compliance package `cp-fdc8626622af00f9****` in the account group `ca-f632626622af0079****` to `20`.
          *
          * @param tmpReq UpdateAggregateCompliancePackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15453,7 +15569,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Modifies the configurations of a compliance package in an account group.
          *
-         * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
+         * @description This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter in the rule template of the compliance package `cp-fdc8626622af00f9****` in the account group `ca-f632626622af0079****` to `20`.
          *
          * @param request UpdateAggregateCompliancePackRequest
          * @return UpdateAggregateCompliancePackResponse
@@ -15467,7 +15583,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /**
          * @summary Modifies the configurations of a compliance package in an account group.
          *
-         * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
+         * @description This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter in the rule template of the compliance package `cp-fdc8626622af00f9****` in the account group `ca-f632626622af0079****` to `20`.
          *
          * @param request UpdateAggregateCompliancePackRequest
          * @return UpdateAggregateCompliancePackResponse
@@ -15498,6 +15614,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliantSnapshot))
+            {
+                query["CompliantSnapshot"] = request.CompliantSnapshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationItemChangeNotification))
             {
@@ -15582,6 +15702,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliantSnapshot))
+            {
+                query["CompliantSnapshot"] = request.CompliantSnapshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationItemChangeNotification))
             {
@@ -15675,9 +15799,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies a rule in an account group.
+         * @summary Modifies the description, input parameters, and risk level of a rule in a specific account group.
          *
-         * @description The sample request in this topic shows you how to change the risk level specified for the `cr-4e3d626622af0080****` managed rule to `3`, which indicates low risk level, in the `ca-a4e5626622af0079****` account group.
+         * @description This topic provides an example on how to change the risk level of the rule `cr-4e3d626622af0080****` in an account group `ca-a4e5626622af0079****` to `3`, which indicates low risk level.
          *
          * @param tmpReq UpdateAggregateConfigRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15823,9 +15947,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies a rule in an account group.
+         * @summary Modifies the description, input parameters, and risk level of a rule in a specific account group.
          *
-         * @description The sample request in this topic shows you how to change the risk level specified for the `cr-4e3d626622af0080****` managed rule to `3`, which indicates low risk level, in the `ca-a4e5626622af0079****` account group.
+         * @description This topic provides an example on how to change the risk level of the rule `cr-4e3d626622af0080****` in an account group `ca-a4e5626622af0079****` to `3`, which indicates low risk level.
          *
          * @param tmpReq UpdateAggregateConfigRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15971,9 +16095,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies a rule in an account group.
+         * @summary Modifies the description, input parameters, and risk level of a rule in a specific account group.
          *
-         * @description The sample request in this topic shows you how to change the risk level specified for the `cr-4e3d626622af0080****` managed rule to `3`, which indicates low risk level, in the `ca-a4e5626622af0079****` account group.
+         * @description This topic provides an example on how to change the risk level of the rule `cr-4e3d626622af0080****` in an account group `ca-a4e5626622af0079****` to `3`, which indicates low risk level.
          *
          * @param request UpdateAggregateConfigRuleRequest
          * @return UpdateAggregateConfigRuleResponse
@@ -15985,9 +16109,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies a rule in an account group.
+         * @summary Modifies the description, input parameters, and risk level of a rule in a specific account group.
          *
-         * @description The sample request in this topic shows you how to change the risk level specified for the `cr-4e3d626622af0080****` managed rule to `3`, which indicates low risk level, in the `ca-a4e5626622af0079****` account group.
+         * @description This topic provides an example on how to change the risk level of the rule `cr-4e3d626622af0080****` in an account group `ca-a4e5626622af0079****` to `3`, which indicates low risk level.
          *
          * @param request UpdateAggregateConfigRuleRequest
          * @return UpdateAggregateConfigRuleResponse
@@ -16147,9 +16271,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modify an account group
+         * @summary The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.
          *
-         * @description The sample request in this topic shows you how to add a member account to the account group whose ID is `ca-dacf86d8314e00eb****`. The member account ID is `173808452267****` and the member account name is `Tony`. The member account belongs to `ResourceDirectory`.
+         * @description This topic provides an example on how to add a member to the account group `ca-dacf86d8314e00eb****`. The member ID is `173808452267****`, the member name is `Tony`, and the member belongs to the resource directory `ResourceDirectory`.
          *
          * @param tmpReq UpdateAggregatorRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16205,9 +16329,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modify an account group
+         * @summary The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.
          *
-         * @description The sample request in this topic shows you how to add a member account to the account group whose ID is `ca-dacf86d8314e00eb****`. The member account ID is `173808452267****` and the member account name is `Tony`. The member account belongs to `ResourceDirectory`.
+         * @description This topic provides an example on how to add a member to the account group `ca-dacf86d8314e00eb****`. The member ID is `173808452267****`, the member name is `Tony`, and the member belongs to the resource directory `ResourceDirectory`.
          *
          * @param tmpReq UpdateAggregatorRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16263,9 +16387,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modify an account group
+         * @summary The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.
          *
-         * @description The sample request in this topic shows you how to add a member account to the account group whose ID is `ca-dacf86d8314e00eb****`. The member account ID is `173808452267****` and the member account name is `Tony`. The member account belongs to `ResourceDirectory`.
+         * @description This topic provides an example on how to add a member to the account group `ca-dacf86d8314e00eb****`. The member ID is `173808452267****`, the member name is `Tony`, and the member belongs to the resource directory `ResourceDirectory`.
          *
          * @param request UpdateAggregatorRequest
          * @return UpdateAggregatorResponse
@@ -16277,9 +16401,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modify an account group
+         * @summary The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.
          *
-         * @description The sample request in this topic shows you how to add a member account to the account group whose ID is `ca-dacf86d8314e00eb****`. The member account ID is `173808452267****` and the member account name is `Tony`. The member account belongs to `ResourceDirectory`.
+         * @description This topic provides an example on how to add a member to the account group `ca-dacf86d8314e00eb****`. The member ID is `173808452267****`, the member name is `Tony`, and the member belongs to the resource directory `ResourceDirectory`.
          *
          * @param request UpdateAggregatorRequest
          * @return UpdateAggregatorResponse
@@ -16291,9 +16415,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies the configurations of a compliance package within your account.
+         * @summary Modifies the configurations of a specific compliance package in the current account.
          *
-         * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-a8a8626622af0082****` compliance package.
+         * @description This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter of a rule in the compliance package `cp-a8a8626622af0082****` to `20`.
          *
          * @param tmpReq UpdateCompliancePackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16399,9 +16523,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies the configurations of a compliance package within your account.
+         * @summary Modifies the configurations of a specific compliance package in the current account.
          *
-         * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-a8a8626622af0082****` compliance package.
+         * @description This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter of a rule in the compliance package `cp-a8a8626622af0082****` to `20`.
          *
          * @param tmpReq UpdateCompliancePackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16507,9 +16631,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies the configurations of a compliance package within your account.
+         * @summary Modifies the configurations of a specific compliance package in the current account.
          *
-         * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-a8a8626622af0082****` compliance package.
+         * @description This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter of a rule in the compliance package `cp-a8a8626622af0082****` to `20`.
          *
          * @param request UpdateCompliancePackRequest
          * @return UpdateCompliancePackResponse
@@ -16521,9 +16645,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies the configurations of a compliance package within your account.
+         * @summary Modifies the configurations of a specific compliance package in the current account.
          *
-         * @description This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-a8a8626622af0082****` compliance package.
+         * @description This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter of a rule in the compliance package `cp-a8a8626622af0082****` to `20`.
          *
          * @param request UpdateCompliancePackRequest
          * @return UpdateCompliancePackResponse
@@ -16550,6 +16674,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliantSnapshot))
+            {
+                query["CompliantSnapshot"] = request.CompliantSnapshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationItemChangeNotification))
             {
@@ -16630,6 +16758,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliantSnapshot))
+            {
+                query["CompliantSnapshot"] = request.CompliantSnapshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationItemChangeNotification))
             {
@@ -16723,9 +16855,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies the rules of an account.
+         * @summary Modifies the description, input parameters, and risk level of a rule.
          *
-         * @description This topic provides an example on how to change the risk level of a managed rule whose ID is `cr-a260626622af0005****` to `3` (low risk level).
+         * @description This topic provides an example on how to change the risk level of the rule `cr-a260626622af0005****` to `3`, which indicates low risk level.
          *
          * @param tmpReq UpdateConfigRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16851,9 +16983,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies the rules of an account.
+         * @summary Modifies the description, input parameters, and risk level of a rule.
          *
-         * @description This topic provides an example on how to change the risk level of a managed rule whose ID is `cr-a260626622af0005****` to `3` (low risk level).
+         * @description This topic provides an example on how to change the risk level of the rule `cr-a260626622af0005****` to `3`, which indicates low risk level.
          *
          * @param tmpReq UpdateConfigRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16979,9 +17111,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies the rules of an account.
+         * @summary Modifies the description, input parameters, and risk level of a rule.
          *
-         * @description This topic provides an example on how to change the risk level of a managed rule whose ID is `cr-a260626622af0005****` to `3` (low risk level).
+         * @description This topic provides an example on how to change the risk level of the rule `cr-a260626622af0005****` to `3`, which indicates low risk level.
          *
          * @param request UpdateConfigRuleRequest
          * @return UpdateConfigRuleResponse
@@ -16993,9 +17125,9 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-         * @summary Modifies the rules of an account.
+         * @summary Modifies the description, input parameters, and risk level of a rule.
          *
-         * @description This topic provides an example on how to change the risk level of a managed rule whose ID is `cr-a260626622af0005****` to `3` (low risk level).
+         * @description This topic provides an example on how to change the risk level of the rule `cr-a260626622af0005****` to `3`, which indicates low risk level.
          *
          * @param request UpdateConfigRuleRequest
          * @return UpdateConfigRuleResponse

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListCompliancePackTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the compliance package templates.
+        /// The information about the compliance package templates returned.
         /// </summary>
         [NameInMap("CompliancePackTemplatesResult")]
         [Validation(Required=false)]
@@ -38,38 +38,38 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string CompliancePackTemplateName { get; set; }
 
                 /// <summary>
-                /// The information about managed rules in the compliance package.
+                /// The default rules in the compliance package.
                 /// </summary>
                 [NameInMap("ConfigRules")]
                 [Validation(Required=false)]
                 public List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules> ConfigRules { get; set; }
                 public class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules : TeaModel {
                     /// <summary>
-                    /// The input parameters of the managed rule.
+                    /// The input parameter of the managed rule.
                     /// </summary>
                     [NameInMap("ConfigRuleParameters")]
                     [Validation(Required=false)]
                     public List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters> ConfigRuleParameters { get; set; }
                     public class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters : TeaModel {
                         /// <summary>
-                        /// The name of the input parameter.
+                        /// The name of the input parameter of the managed rule.
                         /// </summary>
                         [NameInMap("ParameterName")]
                         [Validation(Required=false)]
                         public string ParameterName { get; set; }
 
                         /// <summary>
-                        /// The value of the input parameter.
+                        /// The value of the input parameter of the managed rule.
                         /// </summary>
                         [NameInMap("ParameterValue")]
                         [Validation(Required=false)]
                         public string ParameterValue { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the input parameter is required. Valid values:
+                        /// Indicates whether the parameter is required in the managed rule. Valid values:
                         /// 
-                        /// *   true: The parameter is required.
-                        /// *   false: The input parameter is optional.
+                        /// *   true: required
+                        /// *   false: optional
                         /// </summary>
                         [NameInMap("Required")]
                         [Validation(Required=false)]
@@ -85,16 +85,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ControlDescription { get; set; }
 
                     /// <summary>
-                    /// The ID of the regulation.
+                    /// The regulation ID.
                     /// 
-                    /// > This parameter is available only for regulation compliance packages.
+                    /// >  This parameter is available only for regulation compliance packages.
                     /// </summary>
                     [NameInMap("ControlId")]
                     [Validation(Required=false)]
                     public string ControlId { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the rule was enabled together with the compliance package. Default value: false. The value true indicates that the rule was enabled together with the compliance package. Valid values:
+                    /// Indicates whether the rules are enabled together with the compliance package. Valid values:
                     /// 
                     /// *   true
                     /// *   false
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public bool? DefaultEnable { get; set; }
 
                     /// <summary>
-                    /// The description of the managed rule.
+                    /// The description of the rule.
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -125,14 +125,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ManagedRuleName { get; set; }
 
                     /// <summary>
-                    /// The type of the resource evaluated based on the rule.
+                    /// The types of the resources evaluated based on the rule.
                     /// </summary>
                     [NameInMap("ResourceTypesScope")]
                     [Validation(Required=false)]
                     public string ResourceTypesScope { get; set; }
 
                     /// <summary>
-                    /// The risk level of the resources that are not compliant with the managed rule. Valid values:
+                    /// The risk level of the managed rule. Valid values:
                     /// 
                     /// *   1: high
                     /// *   2: medium
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public int? LastUpdate { get; set; }
 
                 /// <summary>
-                /// The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:
+                /// The risk level of the managed rule in the compliance package. Valid values:
                 /// 
                 /// *   1: high
                 /// *   2: medium

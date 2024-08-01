@@ -20,9 +20,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string IntegratedTypes { get; set; }
 
         /// <summary>
-        /// The product code of the cloud product. Valid values:
+        /// The identity of the cloud service that is integrated with Cloud Config. Valid values:
         /// 
-        /// *   cadt: Cloud Architecture Design Tool
+        /// *   eventbridge: EventBridge
+        /// *   cms: CloudMonitor
+        /// *   bpstudio: Cloud Architect Design Tools
         /// 
         /// This parameter is required.
         /// </summary>

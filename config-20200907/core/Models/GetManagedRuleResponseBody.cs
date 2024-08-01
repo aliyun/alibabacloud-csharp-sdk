@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public GetManagedRuleResponseBodyManagedRule ManagedRule { get; set; }
         public class GetManagedRuleResponseBodyManagedRule : TeaModel {
             /// <summary>
-            /// The settings of the required input parameters for the managed rule.
+            /// The details of the required input parameters for the managed rule.
             /// </summary>
             [NameInMap("CompulsoryInputParameterDetails")]
             [Validation(Required=false)]
@@ -59,18 +59,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<string> Labels { get; set; }
 
             /// <summary>
-            /// The settings of the optional input parameters for the managed rule.
+            /// The details of the optional input parameters for the managed rule.
             /// </summary>
             [NameInMap("OptionalInputParameterDetails")]
             [Validation(Required=false)]
             public Dictionary<string, object> OptionalInputParameterDetails { get; set; }
 
             /// <summary>
-            /// The risk level of the resources that are not compliant with the managed rule. Valid values:
+            /// The risk level of the managed rule. Valid values:
             /// 
-            /// *   1: high risk level
-            /// *   2: medium risk level
-            /// *   3: low risk level
+            /// *   1: high
+            /// *   2: medium
+            /// *   3: low
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public GetManagedRuleResponseBodyManagedRuleScope Scope { get; set; }
             public class GetManagedRuleResponseBodyManagedRuleScope : TeaModel {
                 /// <summary>
-                /// The type of resource to which the managed rule applies.
+                /// The types of resources to which the managed rule applies.
                 /// </summary>
                 [NameInMap("ComplianceResourceTypes")]
                 [Validation(Required=false)]
@@ -100,23 +100,23 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<GetManagedRuleResponseBodyManagedRuleSourceDetails> SourceDetails { get; set; }
             public class GetManagedRuleResponseBodyManagedRuleSourceDetails : TeaModel {
                 /// <summary>
-                /// The interval at which the managed rule is triggered. Valid values:
+                /// The interval at which the rule is triggered. Valid values: Valid values:
                 /// 
-                /// *   One_Hour: 1 hour.
-                /// *   Three_Hours: 3 hours.
-                /// *   Six_Hours: 6 hours.
-                /// *   Twelve_Hours: 12 hours
-                /// *   TwentyFour_Hours: 24 hours
+                /// *   One_Hour
+                /// *   Three_Hours
+                /// *   Six_Hours
+                /// *   Twelve_Hours
+                /// *   TwentyFour_Hours
                 /// </summary>
                 [NameInMap("MaximumExecutionFrequency")]
                 [Validation(Required=false)]
                 public string MaximumExecutionFrequency { get; set; }
 
                 /// <summary>
-                /// The trigger type of the managed rule. Valid values:
+                /// The trigger type of the rule. Valid values:
                 /// 
-                /// *   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.
-                /// *   ScheduledNotification: The managed rule is periodically triggered.
+                /// *   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.
+                /// *   ScheduledNotification: The rule is periodically triggered.
                 /// </summary>
                 [NameInMap("MessageType")]
                 [Validation(Required=false)]

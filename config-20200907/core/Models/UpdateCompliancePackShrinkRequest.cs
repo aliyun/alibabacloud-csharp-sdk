@@ -47,8 +47,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The description of the compliance package.
-        /// 
-        /// For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

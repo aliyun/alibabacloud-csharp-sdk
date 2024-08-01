@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeactiveConfigRulesResponseBody : TeaModel {
         /// <summary>
-        /// The results of the operations to disable the specified rules.
+        /// The results of the operations that are performed to disable the specified rules.
         /// </summary>
         [NameInMap("OperateRuleResult")]
         [Validation(Required=false)]
         public DeactiveConfigRulesResponseBodyOperateRuleResult OperateRuleResult { get; set; }
         public class DeactiveConfigRulesResponseBodyOperateRuleResult : TeaModel {
             /// <summary>
-            /// The result of the operation to disable the rule.
+            /// The operations that are performed to disable the rule.
             /// </summary>
             [NameInMap("OperateRuleItemList")]
             [Validation(Required=false)]
             public List<DeactiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> OperateRuleItemList { get; set; }
             public class DeactiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList : TeaModel {
                 /// <summary>
-                /// The ID of the rule.
+                /// The rule ID.
                 /// </summary>
                 [NameInMap("ConfigRuleId")]
                 [Validation(Required=false)]
@@ -34,20 +34,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// The error code.
                 /// 
                 /// *   If the rule is disabled, no error code is returned.
-                /// 
-                /// <!---->
-                /// 
-                /// *   If the rule fails to be disabled, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).
+                /// *   If the rule fails to be disabled, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the operation is successful. Valid values:
+                /// Indicates whether the request was successful. Valid values:
                 /// 
-                /// *   true: The operation is successful.
-                /// *   false: The operation fails.
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]

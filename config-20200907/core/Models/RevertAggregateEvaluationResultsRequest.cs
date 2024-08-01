@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<RevertAggregateEvaluationResultsRequestResources> Resources { get; set; }
         public class RevertAggregateEvaluationResultsRequestResources : TeaModel {
             /// <summary>
-            /// The ID of the region where the resource resides.
+            /// The ID of the region in which your resources reside.
             /// 
-            /// For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
+            /// For more information about how to obtain the ID of the region in which your resources reside, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
             /// 
             /// This parameter is required.
             /// </summary>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The ID of the Alibaba Cloud account to which the resource belongs.
             /// 
-            /// > You must specify the ID of the current management account or a member account in the account group of the management account.
+            /// >  You must specify the ID of the current management account or a member in the account group of the management account.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The resource ID.
             /// 
-            /// For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
+            /// For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
             /// 
             /// This parameter is required.
             /// </summary>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of resource.
+            /// The type of the resource.
             /// 
             /// For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
             /// 

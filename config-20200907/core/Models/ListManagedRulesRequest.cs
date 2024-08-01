@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListManagedRulesRequest : TeaModel {
         /// <summary>
-        /// The keyword that you want to use to filter managed rules.
+        /// The keyword of the managed rule.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The page number.
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// Page start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// The risk level that you want to use to filter managed rules. Valid values:
+        /// The risk level of the managed rule. Valid values:
         /// 
-        /// *   1: high risk level
-        /// *   2: medium risk level
-        /// *   3: low risk level
+        /// *   1: high
+        /// *   2: medium
+        /// *   3: low
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]

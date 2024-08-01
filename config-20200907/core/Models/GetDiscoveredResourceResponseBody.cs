@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// The time when the resource was created.
+            /// The timestamp when the resource was created.
             /// </summary>
             [NameInMap("ResourceCreationTime")]
             [Validation(Required=false)]
@@ -73,24 +73,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The resource name.
+            /// The name of the resource.
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// The status of the resource. The value of this parameter varies with the resource type and may be empty. Examples:
+            /// The status of the resource. The value of this parameter varies based on the resource type and may be empty.
             /// 
-            /// *   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.
-            /// *   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.
+            /// *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an ECS instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
+            /// *   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
             /// </summary>
             [NameInMap("ResourceStatus")]
             [Validation(Required=false)]
             public string ResourceStatus { get; set; }
 
             /// <summary>
-            /// The resource type.
+            /// The type of the resource.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]

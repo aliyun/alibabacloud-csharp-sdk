@@ -50,30 +50,30 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The rules in the compliance package.
         /// 
-        /// If you leave this parameter empty, the rules in the compliance package remain unchanged. If you configure this parameter, Cloud Config replaces the existing rules in the compliance package with the specified rules.
+        /// If you leave this parameter empty, the rules in the compliance package remain unchanged. If you set this parameter, Cloud Config replaces the existing rules in the compliance package with the specified rules.
         /// </summary>
         [NameInMap("ConfigRules")]
         [Validation(Required=false)]
         public List<UpdateAggregateCompliancePackRequestConfigRules> ConfigRules { get; set; }
         public class UpdateAggregateCompliancePackRequestConfigRules : TeaModel {
             /// <summary>
-            /// The ID of the rule. If you configure this parameter, Cloud Config adds the rule of the specified ID to the compliance package.
+            /// The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.
             /// 
-            /// You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).
+            /// You need to only configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).
             /// </summary>
             [NameInMap("ConfigRuleId")]
             [Validation(Required=false)]
             public string ConfigRuleId { get; set; }
 
             /// <summary>
-            /// The name of the rule.
+            /// The rule name.
             /// </summary>
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
             public string ConfigRuleName { get; set; }
 
             /// <summary>
-            /// The input parameter settings of the rule.
+            /// The input parameters of the rule.
             /// </summary>
             [NameInMap("ConfigRuleParameters")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The value of the input parameter.
                 /// 
-                /// You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).
+                /// You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).
                 /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
@@ -107,20 +107,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the managed rule. Cloud Config automatically creates a managed rule based on the specified ID and adds the rule to the compliance package.
+            /// The identifier of the managed rule. Cloud Config automatically creates a rule based on the identifier of the managed rule and adds the rule to the current compliance package.
             /// 
-            /// You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).
+            /// You need to only configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the identifier of the managed rule.
             /// </summary>
             [NameInMap("ManagedRuleIdentifier")]
             [Validation(Required=false)]
             public string ManagedRuleIdentifier { get; set; }
 
             /// <summary>
-            /// The risk level of the resources that are not compliant with the rule. Valid values:
+            /// The risk level of the resources that do not comply with the rule. Valid values:
             /// 
-            /// *   1: high risk level
-            /// *   2: medium risk level
-            /// *   3: low risk level
+            /// *   1: high
+            /// *   2: medium
+            /// *   3: low
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
@@ -130,8 +130,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The description of the compliance package.
-        /// 
-        /// For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/262059.html).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

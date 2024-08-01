@@ -10,40 +10,40 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateAggregatorRequest : TeaModel {
         /// <summary>
-        /// The information about the member accounts in the account group.
+        /// The members in the account group.
         /// 
-        /// >  When you modify the configurations of an account group, this parameter can be left empty. In this case, the member account list is not updated. If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
+        /// >  When you modify the configurations of an account group, this parameter can be left empty. In this case, the member list is not updated. If you want to update the member list, you must configure both the `AccountId` and `AccountType` parameters.
         /// </summary>
         [NameInMap("AggregatorAccounts")]
         [Validation(Required=false)]
         public List<UpdateAggregatorRequestAggregatorAccounts> AggregatorAccounts { get; set; }
         public class UpdateAggregatorRequestAggregatorAccounts : TeaModel {
             /// <summary>
-            /// The member account ID, which indicates the Alibaba Cloud account ID of the member account.
+            /// The ID of the member.
             /// 
-            /// For more information about how to obtain the ID of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).
+            /// For more information about how to obtain the ID of a member, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).
             /// 
-            /// >  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
+            /// >  If you want to update the member list, you must configure both the `AccountId` and `AccountType` parameters.
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// The member account name, which indicates the name of the Alibaba Cloud account that corresponds to the member account.
+            /// The display name of the member.
             /// 
-            /// For more information about how to obtain the name of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).
+            /// For more information about how to obtain the name of a member, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).
             /// 
-            /// >  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
+            /// >  If you want to update the member list, you must configure both the `AccountId` and `AccountType` parameters.
             /// </summary>
             [NameInMap("AccountName")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
 
             /// <summary>
-            /// The affiliation of the member account. You can set this parameter to only ResourceDirectory.
+            /// The resource directory to which the member belongs. Valid value: ResourceDirectory. ResourceDirectory indicates that the member belongs to a resource directory.
             /// 
-            /// >  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
+            /// >  If you want to update the member list, you must configure both the `AccountId` and `AccountType` parameters.
             /// </summary>
             [NameInMap("AccountType")]
             [Validation(Required=false)]

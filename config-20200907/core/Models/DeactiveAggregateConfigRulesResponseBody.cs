@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeactiveAggregateConfigRulesResponseBody : TeaModel {
         /// <summary>
-        /// The returned result.
+        /// The results of the operations that are performed to disable the specified rules.
         /// </summary>
         [NameInMap("OperateRuleResult")]
         [Validation(Required=false)]
         public DeactiveAggregateConfigRulesResponseBodyOperateRuleResult OperateRuleResult { get; set; }
         public class DeactiveAggregateConfigRulesResponseBodyOperateRuleResult : TeaModel {
             /// <summary>
-            /// The returned result.
+            /// The operations that are performed to disable the rule.
             /// </summary>
             [NameInMap("OperateRuleItemList")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The error code returned.
+                /// The error code.
                 /// 
                 /// *   If the rule is disabled, no error code is returned.
                 /// *   If the rule fails to be disabled, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// Indicates whether the request was successful. Valid values:
                 /// 
-                /// *   true: The request was successful.
-                /// *   false: The request failed.
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]

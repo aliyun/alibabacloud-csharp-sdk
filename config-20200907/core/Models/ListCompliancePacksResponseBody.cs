@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public ListCompliancePacksResponseBodyCompliancePacksResult CompliancePacksResult { get; set; }
         public class ListCompliancePacksResponseBodyCompliancePacksResult : TeaModel {
             /// <summary>
-            /// The details of the compliance package.
+            /// The compliance packages.
             /// </summary>
             [NameInMap("CompliancePacks")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// The ID of the compliance package.
+                /// The compliance package ID.
                 /// </summary>
                 [NameInMap("CompliancePackId")]
                 [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string CompliancePackName { get; set; }
 
                 /// <summary>
-                /// The ID of the compliance package template based on which the compliance package was created.
+                /// The ID of the compliance package template.
                 /// </summary>
                 [NameInMap("CompliancePackTemplateId")]
                 [Validation(Required=false)]
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:
+                /// The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
                 /// 
-                /// *   1: high risk level.
-                /// *   2: medium risk level.
-                /// *   3: low risk level.
+                /// *   1: high
+                /// *   2: medium
+                /// *   3: low
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The status of the compliance package. Valid values:
                 /// 
-                /// *   ACTIVE: The compliance package is active.
+                /// *   ACTIVE: The compliance package is normal.
                 /// *   CREATING: The compliance package is being created.
                 /// </summary>
                 [NameInMap("Status")]

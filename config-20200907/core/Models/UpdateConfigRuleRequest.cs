@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
+        /// The IDs of the resources excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
         /// 
-        /// >  This parameter applies only to managed rules.
+        /// >  This parameter applies only to a managed rule.
         /// </summary>
         [NameInMap("ExcludeResourceIdsScope")]
         [Validation(Required=false)]
@@ -109,18 +109,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string MaximumExecutionFrequency { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).
+        /// The IDs of the regions to which the rule applies. Separate multiple region IDs with commas (,).
         /// 
-        /// >  This parameter applies only to managed rules.
+        /// >  This parameter applies only to a managed rule.
         /// </summary>
         [NameInMap("RegionIdsScope")]
         [Validation(Required=false)]
         public string RegionIdsScope { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).
+        /// The IDs of the resource groups to which the rule applies. Separate multiple resource group IDs with commas (,).
         /// 
-        /// >  This parameter applies only to managed rules.
+        /// >  This parameter applies only to a managed rule.
         /// </summary>
         [NameInMap("ResourceGroupIdsScope")]
         [Validation(Required=false)]
@@ -149,10 +149,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? RiskLevel { get; set; }
 
         /// <summary>
-        /// The logical relationship among the tag keys if you specify multiple tag keys by using the `TagKeyScope` parameter. For example, if the `TagKeyScope` parameter is set to `ECS,OSS` and the TagKeyLogicScope parameter is set to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
+        /// The logical relationship among the tag keys if you specify multiple tag keys for the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
         /// 
-        /// *   AND: logical AND
-        /// *   OR: logical OR
+        /// *   AND
+        /// *   OR
         /// </summary>
         [NameInMap("TagKeyLogicScope")]
         [Validation(Required=false)]
@@ -161,16 +161,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
         /// 
-        /// >  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+        /// >  This parameter applies only to a managed rule. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
         /// </summary>
         [NameInMap("TagKeyScope")]
         [Validation(Required=false)]
         public string TagKeyScope { get; set; }
 
         /// <summary>
-        /// The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
+        /// The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.
         /// 
-        /// >  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+        /// >  This parameter applies only to a managed rule. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
         /// </summary>
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]

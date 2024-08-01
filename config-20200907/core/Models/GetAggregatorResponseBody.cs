@@ -24,42 +24,42 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// The number of member accounts in the account group.
+            /// The number of members in the account group.
             /// </summary>
             [NameInMap("AggregatorAccountCount")]
             [Validation(Required=false)]
             public long? AggregatorAccountCount { get; set; }
 
             /// <summary>
-            /// The information about the member accounts in the account group.
+            /// The information about the members in the account group.
             /// </summary>
             [NameInMap("AggregatorAccounts")]
             [Validation(Required=false)]
             public List<GetAggregatorResponseBodyAggregatorAggregatorAccounts> AggregatorAccounts { get; set; }
             public class GetAggregatorResponseBodyAggregatorAggregatorAccounts : TeaModel {
                 /// <summary>
-                /// The ID of the member account.
+                /// The ID of the member.
                 /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// The name of the member account.
+                /// The display name of the member.
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The type of the member account. Only ResourceDirectory is returned, which indicates that the account is a resource directory account.
+                /// The resource directory to which the member belongs. Valid value: ResourceDirectory. ResourceDirectory indicates that the member belongs to a resource directory.
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// The status of the configuration recorder for the member account. Valid values:
+                /// The status of the configuration recorder for the member. Valid values:
                 /// 
                 /// *   REGISTRABLE: The configuration recorder is not registered.
                 /// *   BUILDING: The configuration recorder is being deployed.
@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// The timestamp generated when the account group was created.
+            /// 
+            /// Unit: milliseconds.
             /// </summary>
             [NameInMap("AggregatorCreateTimestamp")]
             [Validation(Required=false)]

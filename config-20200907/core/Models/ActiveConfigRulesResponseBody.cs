@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ActiveConfigRulesResponseBody : TeaModel {
         /// <summary>
-        /// The result information about the operation.
+        /// The returned results.
         /// </summary>
         [NameInMap("OperateRuleResult")]
         [Validation(Required=false)]
         public ActiveConfigRulesResponseBodyOperateRuleResult OperateRuleResult { get; set; }
         public class ActiveConfigRulesResponseBodyOperateRuleResult : TeaModel {
             /// <summary>
-            /// The result information about the operation.
+            /// The returned results.
             /// </summary>
             [NameInMap("OperateRuleItemList")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The error code returned if the request failed.
+                /// The error code.
                 /// 
                 /// *   If the rule is enabled, no error code is returned.
                 /// *   If the rule fails to be enabled, an error code is returned. For more information about error codes, see [Error codes](https://next.api.aliyun.com/document/Config/2020-09-07/errorCode).

@@ -11,8 +11,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class ListCompliancePackTemplatesRequest : TeaModel {
         /// <summary>
         /// The ID of the compliance package template.
-        /// 
-        /// For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).
         /// </summary>
         [NameInMap("CompliancePackTemplateId")]
         [Validation(Required=false)]
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the resource evaluated by the rule.
+        /// The types of the resources evaluated based on the rule. If you configure this parameter, only the rules that include the resource types in the compliance package template are returned.
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
