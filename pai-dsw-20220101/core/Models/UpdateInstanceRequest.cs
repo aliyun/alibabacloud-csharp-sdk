@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         }
 
+        [NameInMap("CredentialConfig")]
+        [Validation(Required=false)]
+        public CredentialConfig CredentialConfig { get; set; }
+
         [NameInMap("Datasets")]
         [Validation(Required=false)]
         public List<UpdateInstanceRequestDatasets> Datasets { get; set; }
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             public string Uri { get; set; }
 
         }
+
+        [NameInMap("DisassociateCredential")]
+        [Validation(Required=false)]
+        public bool? DisassociateCredential { get; set; }
 
         [NameInMap("DisassociateDatasets")]
         [Validation(Required=false)]

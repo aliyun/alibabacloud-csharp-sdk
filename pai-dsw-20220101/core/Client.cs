@@ -167,6 +167,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["CloudDisks"] = request.CloudDisks;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfig))
+            {
+                body["CredentialConfig"] = request.CredentialConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasets))
             {
                 body["Datasets"] = request.Datasets;
@@ -274,6 +278,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudDisks))
             {
                 body["CloudDisks"] = request.CloudDisks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfig))
+            {
+                body["CredentialConfig"] = request.CredentialConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasets))
             {
@@ -2897,9 +2905,17 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["CloudDisks"] = request.CloudDisks;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfig))
+            {
+                body["CredentialConfig"] = request.CredentialConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasets))
             {
                 body["Datasets"] = request.Datasets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateCredential))
+            {
+                body["DisassociateCredential"] = request.DisassociateCredential;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateDatasets))
             {
@@ -3005,9 +3021,17 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["CloudDisks"] = request.CloudDisks;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfig))
+            {
+                body["CredentialConfig"] = request.CredentialConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasets))
             {
                 body["Datasets"] = request.Datasets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateCredential))
+            {
+                body["DisassociateCredential"] = request.DisassociateCredential;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateDatasets))
             {
