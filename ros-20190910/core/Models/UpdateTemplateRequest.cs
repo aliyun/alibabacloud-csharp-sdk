@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("IsDraft")]
+        [Validation(Required=false)]
+        public bool? IsDraft { get; set; }
+
+        [NameInMap("RotateStrategy")]
+        [Validation(Required=false)]
+        public string RotateStrategy { get; set; }
+
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]
         public string TemplateURL { get; set; }
+
+        [NameInMap("ValidationOptions")]
+        [Validation(Required=false)]
+        public List<string> ValidationOptions { get; set; }
 
     }
 

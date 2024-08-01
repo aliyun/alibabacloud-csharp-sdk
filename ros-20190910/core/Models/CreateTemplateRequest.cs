@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateURL { get; set; }
 
+        [NameInMap("ValidationOptions")]
+        [Validation(Required=false)]
+        public List<string> ValidationOptions { get; set; }
+
     }
 
 }

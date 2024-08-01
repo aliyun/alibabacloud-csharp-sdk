@@ -1842,6 +1842,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["TemplateURL"] = request.TemplateURL;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOptions))
+            {
+                query["ValidationOptions"] = request.ValidationOptions;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
             {
@@ -1899,6 +1903,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
             {
                 query["TemplateURL"] = request.TemplateURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOptions))
+            {
+                query["ValidationOptions"] = request.ValidationOptions;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
@@ -12205,6 +12213,14 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDraft))
+            {
+                query["IsDraft"] = request.IsDraft;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RotateStrategy))
+            {
+                query["RotateStrategy"] = request.RotateStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -12216,6 +12232,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
             {
                 query["TemplateURL"] = request.TemplateURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOptions))
+            {
+                query["ValidationOptions"] = request.ValidationOptions;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
@@ -12262,6 +12282,14 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDraft))
+            {
+                query["IsDraft"] = request.IsDraft;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RotateStrategy))
+            {
+                query["RotateStrategy"] = request.RotateStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -12273,6 +12301,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
             {
                 query["TemplateURL"] = request.TemplateURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOptions))
+            {
+                query["ValidationOptions"] = request.ValidationOptions;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
