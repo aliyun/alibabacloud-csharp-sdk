@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 
         /// <summary>
         /// Specifies whether customers replied to the OTP message. Valid values: true and false.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Delivered")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 
         /// <summary>
         /// The ID of the OTP message.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]

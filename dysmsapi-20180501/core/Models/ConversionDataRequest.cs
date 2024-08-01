@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         /// <summary>
         /// Conversion rate monitoring return value.
         /// 
-        /// >  The value of this parameter is of type double, and the value is between \[0,1].
+        /// >  The value of this parameter is of type double, and the value is between [0,1].
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConversionRate")]
         [Validation(Required=false)]

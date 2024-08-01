@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         public string Segments { get; set; }
 
         /// <summary>
-        /// The mobile phone number to which the message was sent. The dialing code was added to the beginning of the mobile phone number. Example: 861503871\*\*\*\*.
+        /// The mobile phone number to which the message was sent. The dialing code was added to the beginning of the mobile phone number. Example: 861503871\\*\\*\\*\\*.
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]

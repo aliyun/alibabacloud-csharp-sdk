@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Status code. Returning OK means the request was successful. For other error codes, please refer to the [Error codes](~~180674~~) list.
+        /// Status code. Returning OK means the request was successful. For other error codes, please refer to the [Error codes](https://help.aliyun.com/document_detail/180674.html) list.
         /// </summary>
         [NameInMap("ResponseCode")]
         [Validation(Required=false)]

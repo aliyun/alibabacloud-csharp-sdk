@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 
         /// <summary>
         /// The content of the message.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         /// The mobile phone numbers to which the message is sent. You must add the dialing code to the beginning of each mobile phone number.
         /// 
         /// For more information, see [Dialing codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/dialing-codes).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]
