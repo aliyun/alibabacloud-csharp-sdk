@@ -11466,6 +11466,170 @@ namespace AlibabaCloud.SDK.ICE20201109
         }
 
         /**
+         * @summary 获取云剪辑工程列表
+         *
+         * @param request ListEditingProjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEditingProjectsResponse
+         */
+        public ListEditingProjectsResponse ListEditingProjectsWithOptions(ListEditingProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSource))
+            {
+                query["CreateSource"] = request.CreateSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectType))
+            {
+                query["ProjectType"] = request.ProjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEditingProjects",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEditingProjectsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取云剪辑工程列表
+         *
+         * @param request ListEditingProjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEditingProjectsResponse
+         */
+        public async Task<ListEditingProjectsResponse> ListEditingProjectsWithOptionsAsync(ListEditingProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSource))
+            {
+                query["CreateSource"] = request.CreateSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectType))
+            {
+                query["ProjectType"] = request.ProjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEditingProjects",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEditingProjectsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取云剪辑工程列表
+         *
+         * @param request ListEditingProjectsRequest
+         * @return ListEditingProjectsResponse
+         */
+        public ListEditingProjectsResponse ListEditingProjects(ListEditingProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEditingProjectsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取云剪辑工程列表
+         *
+         * @param request ListEditingProjectsRequest
+         * @return ListEditingProjectsResponse
+         */
+        public async Task<ListEditingProjectsResponse> ListEditingProjectsAsync(ListEditingProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEditingProjectsWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 查询录制文件
          *
          * @param request ListLiveRecordFilesRequest
