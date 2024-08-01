@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The username of the account. The username must meet the following requirements:
         /// 
         /// *   The username starts with a lowercase letter.
-        /// *   The username can contain lowercase letters, digits, and underscores (\_).
+        /// *   The username can contain lowercase letters, digits, and underscores (_).
         /// *   The username must be 4 to 16 characters in length.
         /// 
         /// > 
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The password of the account. The password must meet the following requirements:
         /// 
         /// *   The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-        /// *   These special characters include ! @ # $ % ^ & \* ( ) \_ + - =
+        /// *   These special characters include ! @ # $ % ^ & \\* ( ) _ + - =
         /// *   The password is 8 to 32 characters in length.
         /// 
         /// >  ApsaraDB for MongoDB does not allow you to reset the password of an account.
@@ -75,13 +75,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The ID of the sharded cluster instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The instance type of the shard or mongos node. For more information, see [Instance types](~~57141~~).
+        /// The instance type of the shard or mongos node. For more information, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeClass")]
         [Validation(Required=false)]
@@ -103,6 +107,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   **shard**: shard node
         /// *   **mongos**: mongos node
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]

@@ -13,7 +13,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The description of the account.
         /// 
         /// *   The description must start with a letter and cannot start with http:// or https://.
-        /// *   The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).
+        /// *   The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The name of the account whose description is to be modified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

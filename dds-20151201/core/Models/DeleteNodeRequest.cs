@@ -18,13 +18,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the shard or mongos node that you want to delete. You can call the [DescribeDBInstanceAttribute](~~61923~~) operation to query node IDs.
+        /// The ID of the shard or mongos node that you want to delete. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/61923.html) operation to query node IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

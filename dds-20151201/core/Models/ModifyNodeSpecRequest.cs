@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -68,16 +70,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string FromApp { get; set; }
 
         /// <summary>
-        /// The specifications of the shard or mongos node. For more information, see [Instance types](~~57141~~).
+        /// The specifications of the shard or mongos node. For more information, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
         /// </summary>
         [NameInMap("NodeClass")]
         [Validation(Required=false)]
         public string NodeClass { get; set; }
 
         /// <summary>
-        /// The ID of the shard or mongos node in the sharded cluster instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the node ID.
+        /// The ID of the shard or mongos node in the sharded cluster instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to query the node ID.
         /// 
         /// > If you set this parameter to the ID of the shard node, you must also specify the **NodeStorage** parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

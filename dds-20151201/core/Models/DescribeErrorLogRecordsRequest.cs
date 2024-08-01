@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The ID of the instance.
         /// 
         /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The end of the time range to query. The end time must be later than the start time and within 24 hours from the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string QueryKeywords { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+        /// The ID of the resource group. For more information, see [View basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -109,6 +113,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

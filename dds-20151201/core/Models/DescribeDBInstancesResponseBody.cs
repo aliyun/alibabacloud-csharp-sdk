@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the instances.
+        /// The details of the instance.
         /// </summary>
         [NameInMap("DBInstances")]
         [Validation(Required=false)]
@@ -21,9 +21,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeDBInstancesResponseBodyDBInstancesDBInstance> DBInstance { get; set; }
             public class DescribeDBInstancesResponseBodyDBInstancesDBInstance : TeaModel {
                 /// <summary>
-                /// The read and write throughput consumed by the instance.
+                /// The backup retention policy configured for the instance. Valid values:
                 /// 
-                /// >  This parameter is returned when the instance is a serverless instance.
+                /// *   **0**: All backup sets of the instance are immediately deleted when the instance is released.
+                /// *   **1**: A backup set of the instance is automatically backed up and retained for a long period of time when the instance is released.
+                /// *   **2**: All backup sets of the instance are automatically backed up and retained for a long period of time when the instance is released.
+                /// </summary>
+                [NameInMap("BackupRetentionPolicy")]
+                [Validation(Required=false)]
+                public int? BackupRetentionPolicy { get; set; }
+
+                /// <summary>
+                /// The I/O throughput consumed by the instance.
+                /// 
+                /// >  This parameter is required only when the instance is a serverless instance.
                 /// </summary>
                 [NameInMap("CapacityUnit")]
                 [Validation(Required=false)]
@@ -32,8 +43,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The billing method of the instance. Valid values:
                 /// 
-                /// *   **PrePaid**: subscription.
-                /// *   **PostPaid**: pay-as-you-go.
+                /// *   **PrePaid**: subscription
+                /// *   **PostPaid:** pay-as-you-go
                 /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
@@ -61,14 +72,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The instance ID
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The status of the instance. For more information, see [Instance states](~~63870~~).
+                /// The status of the instance. For more information, see [Instance states](https://help.aliyun.com/document_detail/63870.html).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
@@ -82,35 +93,37 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public int? DBInstanceStorage { get; set; }
 
                 /// <summary>
-                /// The architecture of the instance. Valid values:
+                /// The architecture of the instance.
                 /// 
-                /// *   **sharding**: sharded cluster instance.
-                /// *   **replicate**: replica set or standalone instance.
+                /// *   **sharding**: sharded cluster instance
+                /// *   **replicate**: replica set or standalone instance
                 /// </summary>
                 [NameInMap("DBInstanceType")]
                 [Validation(Required=false)]
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// The time when the instance data was destroyed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the instance data is destroyed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// 
-                /// > *   Subscription instances are released 15 days after expiration. After the instances are released, the data of the instances is deleted and cannot be restored.
-                /// > *   Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
+                /// > *   For a subscription instance, the computing resources of the instance are released on the 16th day after expiration, and the data of the instance is retained for seven days. The data is deleted on the 23th day after expiration and cannot be restored.
+                /// > *   For a pay-as-you-go instance, the computing resources of the instance are released on the 16th day after the payment becomes overdue, and the data of the instance is retained for seven days. The data is deleted on the 23th day after the payment becomes overdue and cannot be restored.
                 /// </summary>
                 [NameInMap("DestroyTime")]
                 [Validation(Required=false)]
                 public string DestroyTime { get; set; }
 
                 /// <summary>
-                /// The database engine of the instance.
+                /// The engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine version of the instance.
+                /// The database engine version of the instance. Valid values:
                 /// 
+                /// *   **7.0**
+                /// *   **6.0**
                 /// *   **5.0**
                 /// *   **4.4**
                 /// *   **4.2**
@@ -129,28 +142,28 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// The ID of the secondary zone 2 of the instance. Valid values:
+                /// The secondary zone 2 of the instance in the multi-zone deployment. Valid values:
                 /// 
-                /// *   **cn-hangzhou-g**: Hangzhou Zone G.
-                /// *   **cn-hangzhou-h**: Hangzhou Zone H.
-                /// *   **cn-hangzhou-i**: Hangzhou Zone I.
-                /// *   **cn-hongkong-b**: Hong Kong Zone B.
-                /// *   **cn-hongkong-c**: Hong Kong Zone C.
-                /// *   **cn-hongkong-d**: Hong Kong Zone D.
-                /// *   **cn-wulanchabu-a**: Ulanqab Zone A.
-                /// *   **cn-wulanchabu-b**: Ulanqab Zone B.
-                /// *   **cn-wulanchabu-c**: Ulanqab Zone C.
-                /// *   **ap-southeast-1a**: Singapore Zone A.
-                /// *   **ap-southeast-1b**: Singapore Zone B.
-                /// *   **ap-southeast-1c**: Singapore Zone C.
-                /// *   **ap-southeast-5a**: Jakarta Zone A.
-                /// *   **ap-southeast-5b**: Jakarta Zone B.
-                /// *   **ap-southeast-5c**: Jakarta Zone C.
-                /// *   **eu-central-1a**: Frankfurt Zone A.
-                /// *   **eu-central-1b**: Frankfurt Zone B.
-                /// *   **eu-central-1c**: Frankfurt Zone C.
+                /// *   **cn-hangzhou-g**: Hangzhou Zone G
+                /// *   **cn-hangzhou-h**: Hangzhou Zone H
+                /// *   **cn-hangzhou-i**: Hangzhou Zone I
+                /// *   **cn-hongkong-b**: Hong Kong Zone B
+                /// *   **cn-hongkong-c**: Hong Kong Zone C
+                /// *   **cn-hongkong-d**: Hong Kong Zone D
+                /// *   **cn-wulanchabu-a**: Ulanqab Zone A
+                /// *   **cn-wulanchabu-b**: Ulanqab Zone B
+                /// *   **cn-wulanchabu-c**: Ulanqab Zone C
+                /// *   **ap-southeast-1a**: Singapore Zone A
+                /// *   **ap-southeast-1b**: Singapore Zone B
+                /// *   **ap-southeast-1c**: Singapore Zone C
+                /// *   **ap-southeast-5a**: Jakarta Zone A
+                /// *   **ap-southeast-5b**: Jakarta Zone B
+                /// *   **ap-southeast-5c**: Jakarta Zone C
+                /// *   **eu-central-1a**: Frankfurt Zone A
+                /// *   **eu-central-1b**: Frankfurt Zone B
+                /// *   **eu-central-1c**: Frankfurt Zone C
                 /// 
-                /// > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+                /// > *   This parameter is returned only when the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses the multi-zone deployment.
                 /// > *   This parameter is returned only if you use the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("HiddenZoneId")]
@@ -160,10 +173,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The kind code of the instance. Valid values:
                 /// 
-                /// *   **0**: physical machine.
-                /// *   **1**: Elastic Compute Service (ECS) instance.
-                /// *   **2**: Docker cluster.
-                /// *   **18**: Kubernetes cluster.
+                /// *   **0**: physical machine
+                /// *   **1**: Elastic Compute Service (ECS) instance
+                /// *   **2**: Docker cluster
+                /// *   **18**: Kubernetes cluster
                 /// </summary>
                 [NameInMap("KindCode")]
                 [Validation(Required=false)]
@@ -179,10 +192,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The lock status of the instance. Valid values:
                 /// 
-                /// *   **Unlock**: The instance is not locked.
+                /// *   **Unlock**: The cluster is unlocked.
                 /// *   **ManualLock**: The instance is manually locked.
                 /// *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-                /// *   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.
+                /// *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
                 /// *   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.
                 /// *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
                 /// </summary>
@@ -231,8 +244,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **Classic**: classic network.
-                /// *   **VPC**: VPC.
+                /// *   **Classic**: classic network
+                /// *   **VPC**: VPC
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -244,6 +257,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                /// <summary>
+                /// The time when the instance was released.
+                /// </summary>
+                [NameInMap("ReleaseTime")]
+                [Validation(Required=false)]
+                public string ReleaseTime { get; set; }
 
                 /// <summary>
                 /// The number of nodes in the instance.
@@ -262,28 +282,28 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The ID of the secondary zone 1 of the instance. Valid values:
+                /// The secondary zone 1 of the instance in the multi-zone deployment. Valid values:
                 /// 
-                /// *   **cn-hangzhou-g**: Hangzhou Zone G.
-                /// *   **cn-hangzhou-h**: Hangzhou Zone H.
-                /// *   **cn-hangzhou-i**: Hangzhou Zone I.
-                /// *   **cn-hongkong-b**: Hong Kong Zone B.
-                /// *   **cn-hongkong-c**: Hong Kong Zone C.
-                /// *   **cn-hongkong-d**: Hong Kong Zone D.
-                /// *   **cn-wulanchabu-a**: Ulanqab Zone A.
-                /// *   **cn-wulanchabu-b**: Ulanqab Zone B.
-                /// *   **cn-wulanchabu-c**: Ulanqab Zone C.
-                /// *   **ap-southeast-1a**: Singapore Zone A.
-                /// *   **ap-southeast-1b**: Singapore Zone B.
-                /// *   **ap-southeast-1c**: Singapore Zone C.
-                /// *   **ap-southeast-5a**: Jakarta Zone A.
-                /// *   **ap-southeast-5b**: Jakarta Zone B.
-                /// *   **ap-southeast-5c**: Jakarta Zone C.
-                /// *   **eu-central-1a**: Frankfurt Zone A.
-                /// *   **eu-central-1b**: Frankfurt Zone B.
-                /// *   **eu-central-1c**: Frankfurt Zone C.
+                /// *   **cn-hangzhou-g**: Hangzhou Zone G
+                /// *   **cn-hangzhou-h**: Hangzhou Zone H
+                /// *   **cn-hangzhou-i**: Hangzhou Zone I
+                /// *   **cn-hongkong-b**: Hong Kong Zone B
+                /// *   **cn-hongkong-c**: Hong Kong Zone C
+                /// *   **cn-hongkong-d**: Hong Kong Zone D
+                /// *   **cn-wulanchabu-a**: Ulanqab Zone A
+                /// *   **cn-wulanchabu-b**: Ulanqab Zone B
+                /// *   **cn-wulanchabu-c**: Ulanqab Zone C
+                /// *   **ap-southeast-1a**: Singapore Zone A
+                /// *   **ap-southeast-1b**: Singapore Zone B
+                /// *   **ap-southeast-1c**: Singapore Zone C
+                /// *   **ap-southeast-5a**: Jakarta Zone A
+                /// *   **ap-southeast-5b**: Jakarta Zone B
+                /// *   **ap-southeast-5c**: Jakarta Zone C
+                /// *   **eu-central-1a**: Frankfurt Zone A
+                /// *   **eu-central-1b**: Frankfurt Zone B
+                /// *   **eu-central-1c**: Frankfurt Zone C
                 /// 
-                /// > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+                /// > *   This parameter is returned only when the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses the multi-zone deployment.
                 /// > *   This parameter is returned only if you use the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("SecondaryZoneId")]
@@ -345,15 +365,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The storage type of the instance. Valid values:
                 /// 
-                /// *   **cloud_essd**: enhanced SSD (ESSD).
-                /// *   **local_ssd**: local SSD.
+                /// *   **cloud_essd**: Enterprise SSD (ESSD)
+                /// *   **local_ssd**: local SSD
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// The details of the resource tags.
+                /// The details of the tag.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -382,17 +402,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// Indicates whether password-free access within a virtual private cloud (VPC) is enabled. Valid values:
+                /// Indicates whether password-free access over virtual private cloud (VPC) is enabled. Valid values:
                 /// 
-                /// *   **Open**
-                /// *   **Close**
+                /// *   **Open**: Password-free access over VPC is enabled.
+                /// *   **Close**: Password-free access over VPC is disabled.
                 /// </summary>
                 [NameInMap("VpcAuthMode")]
                 [Validation(Required=false)]
                 public string VpcAuthMode { get; set; }
 
                 /// <summary>
-                /// The ID of the zone in which the instance resides.
+                /// The zone ID of the instance.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

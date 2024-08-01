@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:
             /// 
-            /// *   [Standalone instance types](~~311407~~)
-            /// *   [Replica set instance types](~~311410~~)
-            /// *   [Sharded cluster instance types](~~311414~~)
+            /// *   [Standalone instance types](https://help.aliyun.com/document_detail/311407.html)
+            /// *   [Replica set instance types](https://help.aliyun.com/document_detail/311410.html)
+            /// *   [Sharded cluster instance types](https://help.aliyun.com/document_detail/311414.html)
             /// </summary>
             [NameInMap("DBInstanceClass")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// The state of the instance. For more information about valid values, see [Instance states](~~63870~~).
+            /// The state of the instance. For more information about valid values, see [Instance states](https://help.aliyun.com/document_detail/63870.html).
             /// </summary>
             [NameInMap("DBInstanceStatus")]
             [Validation(Required=false)]

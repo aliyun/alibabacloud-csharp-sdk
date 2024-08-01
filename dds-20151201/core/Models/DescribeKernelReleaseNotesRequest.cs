@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeKernelReleaseNotesRequest : TeaModel {
         /// <summary>
-        /// The minor version number of the instance. Example: **mongodb\_20180522\_0.4.8**.
+        /// The minor version number of the instance. Example: **mongodb_20180522_0.4.8**.
         /// 
         /// *   This parameter is required. After you specify a version number for this parameter in a request, the release notes of the versions later than this version are returned.
         /// </summary>

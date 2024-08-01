@@ -18,7 +18,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to query the region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The details of the tags bound to the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The resource type. Set the value to **INSTANCE**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -55,6 +61,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The tags that are attached to the resources.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -67,6 +75,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// 
             /// - **Tag.1.Key** specifies the key of the first tag.
             /// - **Tag.2.Key** specifies the key of the second tag.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -79,6 +89,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// 
             /// - **Tag.1.Value** specifies the value of the first tag.
             /// - **Tag.2.Value** specifies the value of the second tag.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class DescribeDBInstanceTDEInfoRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

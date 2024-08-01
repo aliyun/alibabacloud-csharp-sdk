@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class DescribeParameterTemplatesRequest : TeaModel {
         /// <summary>
         /// The database engine of the instance. Set the value to **MongoDB**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **4.2**
         /// *   **4.0**
         /// *   **3.4**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

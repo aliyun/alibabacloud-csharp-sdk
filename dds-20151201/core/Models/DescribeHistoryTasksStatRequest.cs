@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// The start time of the O\&M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.
+        /// The start time of the O\\&M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FromStartTime")]
         [Validation(Required=false)]
@@ -31,7 +33,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the pending event. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the pending event. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -108,7 +112,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// The end time of the O\&M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.
+        /// The end time of the O\\&M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ToStartTime")]
         [Validation(Required=false)]

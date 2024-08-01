@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The network type to switch to. Valid value:
         /// 
         /// *   **VPC**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -85,7 +89,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// 可用区ID，您可以通过调用[DescribeRegions](~~61933~~)接口查询可用区ID。
+        /// 可用区ID，您可以通过调用[DescribeRegions](https://help.aliyun.com/document_detail/61933.html)接口查询可用区ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

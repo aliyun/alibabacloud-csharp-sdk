@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The O\&M tasks.
+        /// The O\\&M tasks.
         /// </summary>
         [NameInMap("TypeList")]
         [Validation(Required=false)]

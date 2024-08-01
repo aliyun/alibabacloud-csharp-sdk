@@ -52,7 +52,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.
+        /// The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the latest available regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -96,7 +98,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// The ID of the zone. You can call the [DescribeRegions](~~61933~~) operation to query the available zones.
+        /// The ID of the zone. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the available zones.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

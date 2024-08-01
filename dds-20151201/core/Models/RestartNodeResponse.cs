@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class RestoreDBInstanceResponse : TeaModel {
+    public class RestartNodeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public RestoreDBInstanceResponseBody Body { get; set; }
+        public RestartNodeResponseBody Body { get; set; }
 
     }
 

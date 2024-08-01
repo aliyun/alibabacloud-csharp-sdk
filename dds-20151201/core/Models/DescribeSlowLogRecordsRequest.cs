@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The instance ID.
         /// 
         /// > If you set this parameter to the ID of a sharded cluster instance, you must also specify the `NodeId` parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   The end time must be later than the start time.
         /// 
         /// *   The end time must be within 24 hours from the start time. Otherwise, the query fails.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -113,6 +117,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

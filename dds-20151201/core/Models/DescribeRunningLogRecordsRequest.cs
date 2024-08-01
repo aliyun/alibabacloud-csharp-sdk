@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The ID of the instance.
         /// 
         /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// 
         /// >  The end time must be later than the start time and within 24 hours from the start time. Otherwise, the query fails.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -108,7 +112,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The role ID of the node. You can call the [DescribeReplicaSetRole](~~62134~~) operation to query the role ID.
+        /// The role ID of the node. You can call the [DescribeReplicaSetRole](https://help.aliyun.com/document_detail/62134.html) operation to query the role ID.
         /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]
@@ -128,6 +132,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The IP addresses in the whitelist template.
         /// 
         /// > Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GIpList")]
         [Validation(Required=false)]
@@ -21,9 +23,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The name of the IP whitelist template. The name must meet the following requirements:
         /// 
-        /// *   It can contain lowercase letters, digits, and underscores (\_).
+        /// *   It can contain lowercase letters, digits, and underscores (_).
         /// *   It must start with a letter and end with a letter or digit.
         /// *   It must be 2 to 120 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GlobalIgName")]
         [Validation(Required=false)]
@@ -38,7 +42,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

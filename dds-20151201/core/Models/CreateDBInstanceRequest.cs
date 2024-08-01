@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The password of the root account. The password must meet the following requirements:
         /// 
         /// *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-        /// *   Special characters include ! # $ % ^ & \* ( ) \_ + - =
+        /// *   Special characters include ! # $ % ^ & \\* ( ) _ + - =
         /// *   The password of the account must be 8 to 32 characters in length.
         /// </summary>
         [NameInMap("AccountPassword")]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// The ID of the backup set. You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
+        /// The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/62172.html) operation to query the backup set ID.
         /// 
         /// > When you call this operation to clone an instance based on the backup set, this parameter is required. The **SrcDBInstanceId** parameter is also required.
         /// </summary>
@@ -84,7 +84,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// The instance type. You can also call the [DescribeAvailableResource](~~149719~~) operation to query the instance type.
+        /// The instance type. You can also call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/149719.html) operation to query the instance type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The name of the instance. The name of the instance must meet the following requirements:
         /// 
         /// *   The name must start with a letter.
-        /// *   The name can contain digits, letters, underscores (\_), and hyphens (-).
+        /// *   The name can contain digits, letters, underscores (_), and hyphens (-).
         /// *   The name must be 2 to 256 characters in length.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
@@ -104,7 +106,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The storage capacity of the instance. Unit: GB.
         /// 
-        /// The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](~~311410~~).
+        /// The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](https://help.aliyun.com/document_detail/311410.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
@@ -150,6 +154,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **4.0**
         /// 
         /// > When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the engine version of the source instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -234,7 +240,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ReadonlyReplicas { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -274,6 +282,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
+
+        [NameInMap("RestoreType")]
+        [Validation(Required=false)]
+        public string RestoreType { get; set; }
 
         /// <summary>
         /// The zone where the secondary node resides for multi-zone deployment. Valid values:
@@ -327,6 +339,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string SrcDBInstanceId { get; set; }
 
+        [NameInMap("SrcRegion")]
+        [Validation(Required=false)]
+        public string SrcRegion { get; set; }
+
         /// <summary>
         /// The storage engine of the instance. Default value: WiredTiger. Valid values:
         /// 
@@ -335,7 +351,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **TerarkDB**
         /// 
         /// >  *   When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the storage engine of the source instance.
-        /// >  *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+        /// >  *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](https://help.aliyun.com/document_detail/61906.html).
         /// </summary>
         [NameInMap("StorageEngine")]
         [Validation(Required=false)]
@@ -395,7 +411,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+        /// The zone ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

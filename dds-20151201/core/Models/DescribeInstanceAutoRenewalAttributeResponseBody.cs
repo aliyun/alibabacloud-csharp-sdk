@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// The auto-renewal period. Unit: months.
                 /// 
                 /// > * This parameter is ruturned only when the returned value of the **AutoRenew** parameter is **true**.
-                /// > * You can call the [ModifyInstanceAutoRenewalAttribute](~~145979~~) operation to modify the auto-renewal period.
+                /// > * You can call the [ModifyInstanceAutoRenewalAttribute](https://help.aliyun.com/document_detail/145979.html) operation to modify the auto-renewal period.
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]

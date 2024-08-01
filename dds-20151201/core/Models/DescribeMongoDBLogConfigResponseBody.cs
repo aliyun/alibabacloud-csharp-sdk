@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public bool? EnableAudit { get; set; }
 
         /// <summary>
-        /// Indicates whether a rule to distribute logs to Logtail is created. For more information, see [Logtail overview](~~28979~~). Valid values:
+        /// Indicates whether a rule to distribute logs to Logtail is created. For more information, see [Logtail overview](https://help.aliyun.com/document_detail/28979.html). Valid values:
         /// 
         /// *   **1**: A rule to distribute logs to Logtail is created.
         /// *   **0** or **null**: A rule to distribute logs to Logtail is not created.

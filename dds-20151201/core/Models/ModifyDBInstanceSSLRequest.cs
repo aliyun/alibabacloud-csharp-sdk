@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class ModifyDBInstanceSSLRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **Open**: enables SSL encryption.
         /// *   **Close**: disables SSL encryption.
         /// *   **Update**: updates the SSL certificate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SSLAction")]
         [Validation(Required=false)]

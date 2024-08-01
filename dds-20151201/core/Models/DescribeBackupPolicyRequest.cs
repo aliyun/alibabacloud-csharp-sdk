@@ -11,10 +11,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class DescribeBackupPolicyRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -35,6 +41,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("SrcRegion")]
+        [Validation(Required=false)]
+        public string SrcRegion { get; set; }
 
     }
 

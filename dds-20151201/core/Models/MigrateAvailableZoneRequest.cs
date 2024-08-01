@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The ID of the instance.
         /// 
         /// > If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -30,6 +32,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        [NameInMap("HiddenZoneId")]
+        [Validation(Required=false)]
+        public string HiddenZoneId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -45,6 +51,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SecondaryZoneId")]
+        [Validation(Required=false)]
+        public string SecondaryZoneId { get; set; }
 
         /// <summary>
         /// The ID of the vSwitch in the destination zone.
@@ -62,7 +72,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   The source zone and the destination zone belong to the same region.
         /// 
-        /// *   You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.
+        /// *   You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the zone ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

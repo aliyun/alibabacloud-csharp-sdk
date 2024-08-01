@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class DescribeShardingNetworkAddressRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the mongos, shard, or Configserver node in the sharded cluster instance.
         /// 
-        /// >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.
+        /// >  You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to view the ID of the mongos, shard, or Configserver node.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

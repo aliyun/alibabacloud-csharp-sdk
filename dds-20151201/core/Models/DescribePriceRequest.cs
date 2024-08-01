@@ -34,14 +34,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.
+        /// Specifies whether to use coupons. Default value: null. Valid values:
+        /// 
+        /// *   **default** or **null**: uses coupons.
+        /// *   **youhuiquan_promotion_option_id_for_blank**: does not use coupons.
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// A JSON string that contains the details of the ApsaraDB for MongoDB instance. For more information, see the [DBInstances](~~197291~~) parameter in the DescribePrice operation.
+        /// A JSON string that contains the details of the instance. For more information about the parameter and sample JSON formats, see [DescribePrice](https://help.aliyun.com/document_detail/197291.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstances")]
         [Validation(Required=false)]
@@ -63,6 +68,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **BUY**
         /// *   **UPGRADE**
         /// *   **RENEW**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -84,14 +91,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+        /// The ID of the resource group. For more information, see [View basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

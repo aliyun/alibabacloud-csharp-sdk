@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the backup sets.
+        /// The details of the backup set.
         /// </summary>
         [NameInMap("Backups")]
         [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupDBNames { get; set; }
 
                 /// <summary>
-                /// The Internet download URL of the backup set. If the download URL is unavailable, this parameter is an empty string.
+                /// The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.
                 /// </summary>
                 [NameInMap("BackupDownloadURL")]
                 [Validation(Required=false)]
                 public string BackupDownloadURL { get; set; }
 
                 /// <summary>
-                /// The end of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The end time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("BackupEndTime")]
                 [Validation(Required=false)]
@@ -51,12 +51,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The internal download URL of the backup set.
                 /// 
-                /// > You can use this URL to download the backup set from on the Elastic Compute Service (ECS) instance which is on the same network as the ApsaraDB for MongoDB instance.
+                /// >  You can use the URL to download the specified backup set on an Elastic Compute Service (ECS) instance that is in the same Virtual Private Cloud (VPC) as the ApsaraDB for MongoDB instance.
                 /// </summary>
                 [NameInMap("BackupIntranetDownloadURL")]
                 [Validation(Required=false)]
                 public string BackupIntranetDownloadURL { get; set; }
 
+                /// <summary>
+                /// The ID of the backup task.
+                /// </summary>
                 [NameInMap("BackupJobId")]
                 [Validation(Required=false)]
                 public string BackupJobId { get; set; }
@@ -82,6 +85,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string BackupMode { get; set; }
 
+                [NameInMap("BackupName")]
+                [Validation(Required=false)]
+                public string BackupName { get; set; }
+
+                [NameInMap("BackupScale")]
+                [Validation(Required=false)]
+                public string BackupScale { get; set; }
+
                 /// <summary>
                 /// The size of the backup set. Unit: bytes.
                 /// </summary>
@@ -90,7 +101,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public long? BackupSize { get; set; }
 
                 /// <summary>
-                /// The beginning of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The start time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("BackupStartTime")]
                 [Validation(Required=false)]
@@ -99,8 +110,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The status of the backup task. Valid values:
                 /// 
-                /// *   **Success**
-                /// *   **Failed**
+                /// *   **Success**: The backup task is successful.
+                /// *   **Failed**: The backup task failed.
                 /// </summary>
                 [NameInMap("BackupStatus")]
                 [Validation(Required=false)]
@@ -115,6 +126,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [NameInMap("BackupType")]
                 [Validation(Required=false)]
                 public string BackupType { get; set; }
+
+                [NameInMap("IsAvail")]
+                [Validation(Required=false)]
+                public bool? IsAvail { get; set; }
 
             }
 

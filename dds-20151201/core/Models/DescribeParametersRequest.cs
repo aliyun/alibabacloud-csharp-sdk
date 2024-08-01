@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The instance ID.
         /// 
         /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

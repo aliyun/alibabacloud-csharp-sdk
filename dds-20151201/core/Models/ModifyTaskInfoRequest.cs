@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyTaskInfoRequest : TeaModel {
         /// <summary>
-        /// The action-related parameters. Such parameters can be added based on your business requirements. The ActionParams parameter value varies based on the taskAction parameter value.
+        /// A action-related parameter. This parameter can be extended based on your business requirements. This parameter value varies with the value of the TaskAction parameter.
         /// </summary>
         [NameInMap("ActionParams")]
         [Validation(Required=false)]
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -33,13 +35,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The name of the step visible to the user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StepName")]
         [Validation(Required=false)]
         public string StepName { get; set; }
 
         /// <summary>
-        /// The name of the action to perform. Specify the value of this parameter as the action name corresponding to the current state of the task. The action name can be obtained from the actionInfo parameter returned by the [DescribeHistoryTasks](~~2639186~~) operation.
+        /// The action name that corresponds to the state described in the actionInfo parameter of the [DescribeHistoryTasks](https://help.aliyun.com/document_detail/2639186.html) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskAction")]
         [Validation(Required=false)]
@@ -47,6 +53,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The task ID. Separate multiple IDs with commas (,). You can specify up to 10 task IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

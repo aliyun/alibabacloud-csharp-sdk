@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// The name of the database account. The name must be 4 to 16 characters in length. It can contain lowercase letters, digits, and underscores (\_). It must start with a lowercase letter. The account is granted read-only permissions.
+        /// The name of the database account. The name must be 4 to 16 characters in length. It can contain lowercase letters, digits, and underscores (_). It must start with a lowercase letter. The account is granted read-only permissions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The password of the database account. The password must be 8 to 32 characters in length. It can contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. Special characters include ! # $ % ^ & \* ( ) \_ + - =
+        /// The password of the database account. The password must be 8 to 32 characters in length. It can contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. Special characters include ! # $ % ^ & \\* ( ) _ + - =
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

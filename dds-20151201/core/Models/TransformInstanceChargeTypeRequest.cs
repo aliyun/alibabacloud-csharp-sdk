@@ -45,6 +45,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   **PrePaid**: subscription
         /// *   **PostPaid**: pay-as-you-go
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -62,6 +64,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The ID of the instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

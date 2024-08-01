@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The password of the root account. The password must meet the following requirements:
         /// 
         /// *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-        /// *   The special characters include ! # $ % ^ & \* ( ) \_ + - =
+        /// *   The special characters include ! # $ % ^ & \\* ( ) _ + - =
         /// *   The password of the account must be 8 to 32 characters in length.
         /// </summary>
         [NameInMap("AccountPassword")]
@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
+
+        [NameInMap("BackupId")]
+        [Validation(Required=false)]
+        public string BackupId { get; set; }
 
         /// <summary>
         /// The billing method of the instance. Valid values:
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The ConfigServer nodes of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigServer")]
         [Validation(Required=false)]
@@ -63,6 +69,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// 
             /// *   **mdb.shard.2x.xlarge.d**: 4 cores, 8 GB (dedicated). Only instances that run MongoDB 4.4 and later support this instance type.
             /// *   **dds.cs.mid** :1 core, 2 GB (general-purpose). Only instances that run MongoDB 4.2 and earlier support this instance type.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Class")]
             [Validation(Required=false)]
@@ -71,7 +79,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The storage space of the ConfigServer node. Unit: GB.
             /// 
-            /// > The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).
+            /// > The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](https://help.aliyun.com/document_detail/311414.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Storage")]
             [Validation(Required=false)]
@@ -83,12 +93,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The name of the instance. The name of the instance must meet the following requirements:
         /// 
         /// *   The name must start with a letter.
-        /// *   It can contain digits, letters, underscores (\_), and hyphens (-).
+        /// *   It can contain digits, letters, underscores (_), and hyphens (-).
         /// *   It must be 2 to 256 characters in length.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
+
+        [NameInMap("DestRegion")]
+        [Validation(Required=false)]
+        public string DestRegion { get; set; }
 
         /// <summary>
         /// Specifies whether to enable disk encryption.
@@ -106,6 +120,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The database engine of the instance. Set the value to **MongoDB**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -121,8 +137,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **4.0**
         /// *   **3.4**
         /// 
-        /// > *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+        /// > *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](https://help.aliyun.com/document_detail/61906.html).
         /// > *   If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -159,7 +177,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// > *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
         /// > *   The value of this parameter cannot be the same as the value of **ZoneId** or **SecondaryZoneId**.
-        /// > *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
+        /// > *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](https://help.aliyun.com/document_detail/117865.html).
         /// </summary>
         [NameInMap("HiddenZoneId")]
         [Validation(Required=false)]
@@ -167,16 +185,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The mongos nodes of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Mongos")]
         [Validation(Required=false)]
         public List<CreateShardingDBInstanceRequestMongos> Mongos { get; set; }
         public class CreateShardingDBInstanceRequestMongos : TeaModel {
             /// <summary>
-            /// The instance type of the mongos node. For more information, see [Sharded cluster instance types](~~311414~~).
+            /// The instance type of the mongos node. For more information, see [Sharded cluster instance types](https://help.aliyun.com/document_detail/311414.html).
             /// 
             /// > *   **N** specifies the serial number of the mongos node for which the instance type is specified. For example, **Mongos.2.Class** specifies the instance type of the second mongos node.
             /// > *   Valid values for **N**: **2** to **32**.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Class")]
             [Validation(Required=false)]
@@ -228,7 +250,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ProvisionedIops { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -236,16 +260,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The information of the shard node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReplicaSet")]
         [Validation(Required=false)]
         public List<CreateShardingDBInstanceRequestReplicaSet> ReplicaSet { get; set; }
         public class CreateShardingDBInstanceRequestReplicaSet : TeaModel {
             /// <summary>
-            /// The instance type of the shard node. For more information, see [Sharded cluster instance types](~~311414~~).
+            /// The instance type of the shard node. For more information, see [Sharded cluster instance types](https://help.aliyun.com/document_detail/311414.html).
             /// 
             /// > *   **N** specifies the serial number of the shard node for which the instance type is specified. For example, **ReplicaSet.2.Class** specifies the instance type of the second shard node.
             /// > *   Valid values for **N**: **2** to **32**.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Class")]
             [Validation(Required=false)]
@@ -265,8 +293,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The storage space of the shard node. Unit: GB.
             /// 
-            /// > *   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).
+            /// > *   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](https://help.aliyun.com/document_detail/311414.html).
             /// > *   **N** specifies the serial number of the shard node for which the storage space is specified. For example, **ReplicaSet.2.Storage** specifies the storage space of the second shard node.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Storage")]
             [Validation(Required=false)]
@@ -275,7 +305,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The resource group ID. For more information, see [View the basic information of a resource group](~~151181~~).
+        /// The resource group ID. For more information, see [View the basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -297,6 +327,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
+
+        [NameInMap("RestoreType")]
+        [Validation(Required=false)]
+        public string RestoreType { get; set; }
 
         /// <summary>
         /// The ID of secondary zone 1 for multi-zone deployment. Valid values:
@@ -322,7 +356,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// > *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
         /// > *   The value of this parameter cannot be the same as the value of **ZoneId** or **HiddenZoneId**.
-        /// > *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
+        /// > *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](https://help.aliyun.com/document_detail/117865.html).
         /// </summary>
         [NameInMap("SecondaryZoneId")]
         [Validation(Required=false)]
@@ -351,11 +385,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string SrcDBInstanceId { get; set; }
 
+        [NameInMap("SrcRegion")]
+        [Validation(Required=false)]
+        public string SrcRegion { get; set; }
+
         /// <summary>
         /// The storage engine of the instance. Set the value to **WiredTiger**.
         /// 
         /// > *   If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.
-        /// > *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+        /// > *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](https://help.aliyun.com/document_detail/61906.html).
         /// </summary>
         [NameInMap("StorageEngine")]
         [Validation(Required=false)]
@@ -418,7 +456,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+        /// The zone ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

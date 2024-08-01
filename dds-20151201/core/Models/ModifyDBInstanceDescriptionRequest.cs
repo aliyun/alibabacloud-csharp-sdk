@@ -18,7 +18,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   It must start with a letter.
         /// 
-        /// *   It must be 2 to 256 characters in length, and can contain letters, underscores (\_), hyphens (-), and digits.
+        /// *   It must be 2 to 256 characters in length, and can contain letters, underscores (_), hyphens (-), and digits.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The instance ID.
         /// 
         /// >  To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

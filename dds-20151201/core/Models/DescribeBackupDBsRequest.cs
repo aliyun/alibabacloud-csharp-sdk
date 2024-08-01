@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// > 
         /// 
-        /// *   You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
+        /// *   You can call the [DescribeBackups](https://help.aliyun.com/document_detail/62172.html) operation to query the backup ID.
         /// 
         /// *   You must specify one of the **RestoreTime** and BackupId parameters.
         /// </summary>

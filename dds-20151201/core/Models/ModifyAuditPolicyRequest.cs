@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   **enable**
         /// *   **disabled**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AuditStatus")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

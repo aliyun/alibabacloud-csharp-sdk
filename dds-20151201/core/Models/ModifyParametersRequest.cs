@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The instance ID.
         /// 
         /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -49,14 +51,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {"ParameterName1":"ParameterValue1","ParameterName2":"ParameterValue2"}.
         /// 
-        /// >  You can call the [DescribeParameterTemplates](~~67618~~) operation to query a list of default parameter templates.
+        /// >  You can call the [DescribeParameterTemplates](https://help.aliyun.com/document_detail/67618.html) operation to query a list of default parameter templates.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

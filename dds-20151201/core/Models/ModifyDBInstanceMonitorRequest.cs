@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class ModifyDBInstanceMonitorRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The collection frequency of monitoring data. Valid values: **1** or **300**. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The type of the instance.
         /// 
-        /// > This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).
+        /// > This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -33,23 +33,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// The version of the database engine. Valid values:
+        /// The version of the database engine.
         /// 
-        /// *   **7.0**
-        /// *   **6.0**
-        /// *   **5.0**
-        /// *   **4.4**
-        /// *   **4.2**
-        /// *   **4.0**
-        /// 
-        /// <!---->
-        /// 
-        /// *   3.4
-        /// *   4.0
-        /// *   4.2
-        /// *   4.4
-        /// *   5.0
-        /// *   6.0
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -73,7 +59,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ReadonlyReplicas { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -119,7 +107,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   Mongos: the mongos node.
         /// *   Shards: the shard node.
         /// *   Storage: the storage space of the node.
-        /// *   DBInstanceClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).
+        /// *   DBInstanceClass: the instance type of the node. For more information, see [Sharded cluster instance types](https://help.aliyun.com/document_detail/311414.html).
         /// 
         /// To check whether resources are sufficient for upgrading a single node of a sharded cluster instance, specify only the information about the node to be upgraded. The value must be a JSON string. Example:
         /// 
@@ -130,7 +118,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// Parameters in the example:
         /// 
         /// *   NodeId: the ID of the node.
-        /// *   NodeClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).
+        /// *   NodeClass: the instance type of the node. For more information, see [Sharded cluster instance types](https://help.aliyun.com/document_detail/311414.html).
         /// </summary>
         [NameInMap("ShardsInfo")]
         [Validation(Required=false)]
@@ -146,7 +134,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Storage { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.
+        /// The zone ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the zone ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

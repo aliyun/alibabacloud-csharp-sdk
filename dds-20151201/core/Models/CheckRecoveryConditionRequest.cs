@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The backup ID.
         /// 
-        /// > *   You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
+        /// > *   You can call the [DescribeBackups](https://help.aliyun.com/document_detail/62172.html) operation to query the backup ID.
         /// > *   You must specify one of the **RestoreTime** and BackupId parameters.
         /// > *   This parameter is not applicable to sharded cluster instances.
         /// </summary>
@@ -28,6 +28,28 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("DatabaseNames")]
         [Validation(Required=false)]
         public string DatabaseNames { get; set; }
+
+        /// <summary>
+        /// The region of the backup set used for the cross-region backup and restoration.
+        /// 
+        /// >  This parameter is required when you set the RestoreType parameter to 3.
+        /// </summary>
+        [NameInMap("DestRegion")]
+        [Validation(Required=false)]
+        public string DestRegion { get; set; }
+
+        /// <summary>
+        /// The instance architecture. Valid values:
+        /// 
+        /// *   replicate
+        /// *   sharding
+        /// 
+        /// > * This parameter is required when you set the RestoreType parameter to 2.
+        /// > * This parameter is required when you set the RestoreType parameter to 3.
+        /// </summary>
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -63,11 +85,33 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
+        /// The restoration type.
+        /// 
+        /// > * 0: The data of the source instance is restored to a new instance in the same region.
+        /// > * 1: The data of the source instance is restored to an earlier point in time.
+        /// > * 2: The data of a deleted instance is restored to a new instance from the backup set.
+        /// > * 3: The data of a deleted instance is restored to a new instance in another region from the backup set.
+        /// </summary>
+        [NameInMap("RestoreType")]
+        [Validation(Required=false)]
+        public string RestoreType { get; set; }
+
+        /// <summary>
         /// The ID of the source instance.
         /// </summary>
         [NameInMap("SourceDBInstance")]
         [Validation(Required=false)]
         public string SourceDBInstance { get; set; }
+
+        /// <summary>
+        /// The region where the source instance resides.
+        /// 
+        /// > * This parameter is required when you set the RestoreType parameter to 2.
+        /// > * This parameter is required when you set the RestoreType parameter to 3.
+        /// </summary>
+        [NameInMap("SrcRegion")]
+        [Validation(Required=false)]
+        public string SrcRegion { get; set; }
 
     }
 

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class ModifyAuditLogFilterRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -19,13 +21,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:
         /// 
-        /// *   **admin**: O\&M and management operations
+        /// *   **admin**: O\\&M and management operations
         /// *   **slow**: slow query logs
         /// *   **query**: query operations
         /// *   **insert**: insert operations
         /// *   **update**: update operations
         /// *   **delete**: delete operations
         /// *   **command**: protocol commands such as the aggregate method
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]

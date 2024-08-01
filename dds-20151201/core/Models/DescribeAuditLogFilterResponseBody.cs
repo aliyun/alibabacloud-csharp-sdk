@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The type of the audit log entries. Valid values:
         /// 
-        /// *   **admin**: O\&M and management operations
+        /// *   **admin**: O\\&M and management operations
         /// *   **slow**: slow query logs
         /// *   **query**: query operations
         /// *   **insert**: insert operations

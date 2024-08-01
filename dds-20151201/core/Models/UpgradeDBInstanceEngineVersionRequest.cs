@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class UpgradeDBInstanceEngineVersionRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The database version to which you want to upgrade. Valid values: **3.4**, **4.0**, and **4.2**.
         /// 
         /// >  This database version must be later than the current database version of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]

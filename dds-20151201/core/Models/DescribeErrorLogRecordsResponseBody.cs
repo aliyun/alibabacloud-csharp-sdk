@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// 
                 /// *   NETWORK: network connection log
                 /// *   ACCESS: access control log
-                /// *   \-: general log
+                /// *   \\-: general log
                 /// *   COMMAND: slow query log
                 /// *   SHARDING: sharded cluster log
                 /// *   STORAGE: storage engine log

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// The O\&M tasks.
+        /// The O\\&M tasks.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string AllowChange { get; set; }
 
             /// <summary>
-            /// The change level of the O\&M task.
+            /// The change level of the O\\&M task.
             /// </summary>
             [NameInMap("ChangeLevel")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DbVersion { get; set; }
 
             /// <summary>
-            /// The end time of the O\&M task.
+            /// The end time of the O\\&M task.
             /// </summary>
             [NameInMap("Deadline")]
             [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class ModifySecurityIpsRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -66,6 +68,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   IP addresses, such as 127.0.0.1.
         /// *   CIDR blocks, such as 127.0.0.1/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityIps")]
         [Validation(Required=false)]

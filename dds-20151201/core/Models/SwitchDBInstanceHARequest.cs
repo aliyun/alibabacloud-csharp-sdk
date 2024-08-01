@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class SwitchDBInstanceHARequest : TeaModel {
         /// <summary>
         /// The ID of the instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of the roles who switch the primary and secondary nodes for the instance. You can call the [DescribeRoleZoneInfo](~~123802~~) operation to view the IDs and information of roles of nodes.
+        /// The IDs of the roles who switch the primary and secondary nodes for the instance. You can call the [DescribeRoleZoneInfo](https://help.aliyun.com/document_detail/123802.html) operation to view the IDs and information of roles of nodes.
         /// 
         /// > 
         /// 
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The time when the primary and secondary nodes are switched. Valid values:
         /// 
         /// *   0: The primary and secondary nodes are immediately switched.
-        /// *   1: The primary and secondary nodes are switched during the O\&M time period.
+        /// *   1: The primary and secondary nodes are switched during the O\\&M time period.
         /// </summary>
         [NameInMap("SwitchMode")]
         [Validation(Required=false)]

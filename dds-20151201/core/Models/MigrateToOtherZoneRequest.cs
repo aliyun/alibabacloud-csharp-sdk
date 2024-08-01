@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The ID of the instance.
         /// 
         /// >  If the network type of the instance is VPC, you must specify the **Vswitch** parameter .
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -59,7 +61,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.
         /// 
         /// > * The destination and source zones must be in one region.
-        /// > * You can call [DescribeRegions](~~61933~~) to query the zone IDs.
+        /// > * You can call [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) to query the zone IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

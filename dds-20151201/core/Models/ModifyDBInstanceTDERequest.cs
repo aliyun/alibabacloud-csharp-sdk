@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class ModifyDBInstanceTDERequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -63,6 +65,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The TDE status. When the value of this parameter is set to **Enabled**, TDE is enabled.
         /// 
         /// > You cannot disable TDE after it is enabled. Proceed with caution.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]

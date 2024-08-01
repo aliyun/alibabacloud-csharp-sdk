@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:
         /// 
-        /// *   [Standalone instance types](~~311407~~)
-        /// *   [Replica set instance types](~~311410~~)
-        /// *   [Sharded cluster instance types](~~311414~~)
+        /// *   [Standalone instance types](https://help.aliyun.com/document_detail/311407.html)
+        /// *   [Replica set instance types](https://help.aliyun.com/document_detail/311410.html)
+        /// *   [Sharded cluster instance types](https://help.aliyun.com/document_detail/311414.html)
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The state of the instance. For more information about valid values, see [Instance states](~~63870~~).
+        /// The state of the instance. For more information about valid values, see [Instance states](https://help.aliyun.com/document_detail/63870.html).
         /// </summary>
         [NameInMap("InstanceStatus")]
         [Validation(Required=false)]
@@ -92,14 +92,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs. For more information, see [View the basic information of a resource group](~~151181~~).
+        /// The ID of the resource group to which the instance belongs. For more information, see [View the basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

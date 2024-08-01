@@ -8,22 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class RestoreDBInstanceRequest : TeaModel {
+    public class RestartNodeRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set.
-        /// 
-        /// > You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
-        /// </summary>
-        [NameInMap("BackupId")]
-        [Validation(Required=false)]
-        public int? BackupId { get; set; }
-
-        /// <summary>
-        /// The instance ID.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
+
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public string NodeId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -40,6 +35,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("RoleId")]
+        [Validation(Required=false)]
+        public string RoleId { get; set; }
 
     }
 

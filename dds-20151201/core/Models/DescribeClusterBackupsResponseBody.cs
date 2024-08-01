@@ -17,6 +17,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<DescribeClusterBackupsResponseBodyClusterBackups> ClusterBackups { get; set; }
         public class DescribeClusterBackupsResponseBodyClusterBackups : TeaModel {
             /// <summary>
+            /// The backup status. Valid values:
+            /// 
+            /// *   **init**: The backup is being initialized.
+            /// *   **No_Need**: Log backup is not performed.
+            /// *   **Running**: Log backup is being performed.
+            /// *   **Ready**: Log backup is complete.
+            /// *   **Failed**: Log backup failed.
+            /// 
+            /// >  If the **ClusterBackupStatus** parameter is set to OK, full backup is successful. If you want to perform point-in-time-restoration on an instance for which log backup is enabled or to implement consistency restoration, make sure that log backup is complete.
+            /// </summary>
+            [NameInMap("AttachLogStatus")]
+            [Validation(Required=false)]
+            public string AttachLogStatus { get; set; }
+
+            /// <summary>
             /// The collection of the backup sets of each child node in a cluster backup set.
             /// </summary>
             [NameInMap("Backups")]
@@ -31,7 +46,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupDownloadURL { get; set; }
 
                 /// <summary>
-                /// The end of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The end time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("BackupEndTime")]
                 [Validation(Required=false)]
@@ -66,7 +81,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupSize { get; set; }
 
                 /// <summary>
-                /// The beginning of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The start time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("BackupStartTime")]
                 [Validation(Required=false)]
@@ -83,7 +98,44 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupStatus { get; set; }
 
                 /// <summary>
-                /// The name of the shard.
+                /// The information of the node associated with the backup.
+                /// </summary>
+                [NameInMap("ExtraInfo")]
+                [Validation(Required=false)]
+                public DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo ExtraInfo { get; set; }
+                public class DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo : TeaModel {
+                    /// <summary>
+                    /// The instance type of the node.
+                    /// </summary>
+                    [NameInMap("InstanceClass")]
+                    [Validation(Required=false)]
+                    public string InstanceClass { get; set; }
+
+                    /// <summary>
+                    /// The node ID.
+                    /// </summary>
+                    [NameInMap("NodeId")]
+                    [Validation(Required=false)]
+                    public string NodeId { get; set; }
+
+                    /// <summary>
+                    /// The node type.
+                    /// </summary>
+                    [NameInMap("NodeType")]
+                    [Validation(Required=false)]
+                    public string NodeType { get; set; }
+
+                    /// <summary>
+                    /// The storage capacity of the node. Unit: MB.
+                    /// </summary>
+                    [NameInMap("StorageSize")]
+                    [Validation(Required=false)]
+                    public string StorageSize { get; set; }
+
+                }
+
+                /// <summary>
+                /// The shard name.
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
@@ -109,7 +161,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ClusterBackupEndTime { get; set; }
 
             /// <summary>
-            /// The ID of the cluster backup set.
+            /// The backup set ID.
             /// </summary>
             [NameInMap("ClusterBackupId")]
             [Validation(Required=false)]
@@ -144,14 +196,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ClusterBackupStatus { get; set; }
 
             /// <summary>
-            /// The additional information in JSON format.
+            /// The additional information in the JSON format.
             /// </summary>
             [NameInMap("ExtraInfo")]
             [Validation(Required=false)]
             public DescribeClusterBackupsResponseBodyClusterBackupsExtraInfo ExtraInfo { get; set; }
             public class DescribeClusterBackupsResponseBodyClusterBackupsExtraInfo : TeaModel {
                 /// <summary>
-                /// Indicates whether the cluster backups are from the historical backup sets. If the value of this parameter is **1**, the cluster backups are migrated from the historical backup sets.
+                /// Indicates whether the cluster backups are migrated from the historical backup sets. If the value of this parameter is **1**, the cluster backups are migrated from the historical backup sets.
                 /// </summary>
                 [NameInMap("RegistryFromHistory")]
                 [Validation(Required=false)]

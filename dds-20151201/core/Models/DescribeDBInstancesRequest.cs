@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The endpoint of the node. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the endpoint of the node.
+        /// The endpoint of the node. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to query the endpoint of the node.
         /// </summary>
         [NameInMap("ConnectionDomain")]
         [Validation(Required=false)]
         public string ConnectionDomain { get; set; }
 
         /// <summary>
-        /// The instance type. For more information about valid values, see [Instance types](~~57141~~).
+        /// The instance type. For more information about valid values, see [Instance types](https://help.aliyun.com/document_detail/57141.html).
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The name of the instance. The name must meet the following requirements:
         /// 
         /// *   The name must start with a letter.
-        /// *   It can contain digits, letters, underscores (\_), and hyphens (-).
+        /// *   It can contain digits, letters, underscores (_), and hyphens (-).
         /// *   It must be 2 to 256 characters in length.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The state of the instance. For more information about valid values, see [Instance states](~~63870~~).
+        /// The state of the instance. For more information about valid values, see [Instance states](https://help.aliyun.com/document_detail/63870.html).
         /// </summary>
         [NameInMap("DBInstanceStatus")]
         [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+        /// The zone ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61933.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -69,6 +69,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The ID of the instance for which you want to add nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -84,9 +86,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string FromApp { get; set; }
 
         /// <summary>
-        /// The specifications of the mongos or shard node that you want to add. For more information, see [Instance types](~~57141~~). 
+        /// The specifications of the mongos or shard node that you want to add. For more information, see [Instance types](https://help.aliyun.com/document_detail/57141.html). 
         /// 
         /// > Up to 32 mongos or shard nodes are supported for each sharded cluster instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodesInfo")]
         [Validation(Required=false)]

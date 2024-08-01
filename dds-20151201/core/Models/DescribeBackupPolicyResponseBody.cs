@@ -34,6 +34,34 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string BackupRetentionPeriod { get; set; }
 
+        [NameInMap("BackupRetentionPolicyOnClusterDeletion")]
+        [Validation(Required=false)]
+        public int? BackupRetentionPolicyOnClusterDeletion { get; set; }
+
+        [NameInMap("CrossBackupPeriod")]
+        [Validation(Required=false)]
+        public string CrossBackupPeriod { get; set; }
+
+        [NameInMap("CrossLogRetentionType")]
+        [Validation(Required=false)]
+        public string CrossLogRetentionType { get; set; }
+
+        [NameInMap("CrossLogRetentionValue")]
+        [Validation(Required=false)]
+        public int? CrossLogRetentionValue { get; set; }
+
+        [NameInMap("CrossRetentionType")]
+        [Validation(Required=false)]
+        public string CrossRetentionType { get; set; }
+
+        [NameInMap("CrossRetentionValue")]
+        [Validation(Required=false)]
+        public int? CrossRetentionValue { get; set; }
+
+        [NameInMap("DestRegion")]
+        [Validation(Required=false)]
+        public string DestRegion { get; set; }
+
         /// <summary>
         /// Indicates whether the log backup feature is enabled. Valid values:
         /// 
@@ -44,6 +72,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public int? EnableBackupLog { get; set; }
 
+        [NameInMap("EnableCrossLogBackup")]
+        [Validation(Required=false)]
+        public int? EnableCrossLogBackup { get; set; }
+
+        /// <summary>
+        /// The retention period of high-frequency backups. Unit: day.
+        /// </summary>
         [NameInMap("HighFrequencyBackupRetention")]
         [Validation(Required=false)]
         public string HighFrequencyBackupRetention { get; set; }
@@ -77,6 +112,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string PreferredBackupTime { get; set; }
 
+        [NameInMap("PreferredNextBackupTime")]
+        [Validation(Required=false)]
+        public string PreferredNextBackupTime { get; set; }
+
         /// <summary>
         /// The request ID.
         /// </summary>
@@ -93,6 +132,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("SnapshotBackupType")]
         [Validation(Required=false)]
         public string SnapshotBackupType { get; set; }
+
+        [NameInMap("SrcRegion")]
+        [Validation(Required=false)]
+        public string SrcRegion { get; set; }
 
     }
 

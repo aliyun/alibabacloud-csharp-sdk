@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ReleasePublicNetworkAddressRequest : TeaModel {
+        /// <summary>
+        /// The public endpoint type. Valid values:
+        /// 
+        /// *   **SRV**
+        /// *   **Normal**
+        /// 
+        /// >  This parameter is valid only when you want to release an SRV endpoint.
+        /// </summary>
         [NameInMap("ConnectionType")]
         [Validation(Required=false)]
         public string ConnectionType { get; set; }
@@ -17,6 +25,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The instance ID.
         /// 
         /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -26,7 +36,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// The ID of the mongos, shard, or Configserver node in the sharded cluster instance.
         /// 
         /// > *   This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
-        /// > *   You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.
+        /// > *   You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/62010.html) operation to view the ID of the mongos, shard, or Configserver node.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
