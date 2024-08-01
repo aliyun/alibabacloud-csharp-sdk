@@ -38,6 +38,122 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         }
 
         /**
+         * @param request AddCustomLineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddCustomLineResponse
+         */
+        public AddCustomLineResponse AddCustomLineWithOptions(AddCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsCategory))
+            {
+                query["DnsCategory"] = request.DnsCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4s))
+            {
+                query["Ipv4s"] = request.Ipv4s;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareScope))
+            {
+                query["ShareScope"] = request.ShareScope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCustomLine",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCustomLineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request AddCustomLineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddCustomLineResponse
+         */
+        public async Task<AddCustomLineResponse> AddCustomLineWithOptionsAsync(AddCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsCategory))
+            {
+                query["DnsCategory"] = request.DnsCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4s))
+            {
+                query["Ipv4s"] = request.Ipv4s;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareScope))
+            {
+                query["ShareScope"] = request.ShareScope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCustomLine",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCustomLineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request AddCustomLineRequest
+         * @return AddCustomLineResponse
+         */
+        public AddCustomLineResponse AddCustomLine(AddCustomLineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddCustomLineWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request AddCustomLineRequest
+         * @return AddCustomLineResponse
+         */
+        public async Task<AddCustomLineResponse> AddCustomLineAsync(AddCustomLineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddCustomLineWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Creates an endpoint.
          *
          * @param request AddResolverEndpointRequest
@@ -978,6 +1094,106 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         }
 
         /**
+         * @param request ChangeZoneDnsGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ChangeZoneDnsGroupResponse
+         */
+        public ChangeZoneDnsGroupResponse ChangeZoneDnsGroupWithOptions(ChangeZoneDnsGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsGroup))
+            {
+                query["DnsGroup"] = request.DnsGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeZoneDnsGroup",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeZoneDnsGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request ChangeZoneDnsGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ChangeZoneDnsGroupResponse
+         */
+        public async Task<ChangeZoneDnsGroupResponse> ChangeZoneDnsGroupWithOptionsAsync(ChangeZoneDnsGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsGroup))
+            {
+                query["DnsGroup"] = request.DnsGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeZoneDnsGroup",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeZoneDnsGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request ChangeZoneDnsGroupRequest
+         * @return ChangeZoneDnsGroupResponse
+         */
+        public ChangeZoneDnsGroupResponse ChangeZoneDnsGroup(ChangeZoneDnsGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeZoneDnsGroupWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request ChangeZoneDnsGroupRequest
+         * @return ChangeZoneDnsGroupResponse
+         */
+        public async Task<ChangeZoneDnsGroupResponse> ChangeZoneDnsGroupAsync(ChangeZoneDnsGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeZoneDnsGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Checks whether the name of a zone is valid based on specific rules.
          *
          * @param request CheckZoneNameRequest
@@ -1083,6 +1299,98 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckZoneNameWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @param request DeleteCustomLineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCustomLineResponse
+         */
+        public DeleteCustomLineResponse DeleteCustomLineWithOptions(DeleteCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineId))
+            {
+                query["LineId"] = request.LineId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomLine",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomLineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request DeleteCustomLineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCustomLineResponse
+         */
+        public async Task<DeleteCustomLineResponse> DeleteCustomLineWithOptionsAsync(DeleteCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineId))
+            {
+                query["LineId"] = request.LineId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomLine",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomLineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request DeleteCustomLineRequest
+         * @return DeleteCustomLineResponse
+         */
+        public DeleteCustomLineResponse DeleteCustomLine(DeleteCustomLineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCustomLineWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request DeleteCustomLineRequest
+         * @return DeleteCustomLineResponse
+         */
+        public async Task<DeleteCustomLineResponse> DeleteCustomLineAsync(DeleteCustomLineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCustomLineWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -1771,6 +2079,198 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeChangeLogsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @param request DescribeCustomLineInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCustomLineInfoResponse
+         */
+        public DescribeCustomLineInfoResponse DescribeCustomLineInfoWithOptions(DescribeCustomLineInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineId))
+            {
+                query["LineId"] = request.LineId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCustomLineInfo",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCustomLineInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeCustomLineInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCustomLineInfoResponse
+         */
+        public async Task<DescribeCustomLineInfoResponse> DescribeCustomLineInfoWithOptionsAsync(DescribeCustomLineInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineId))
+            {
+                query["LineId"] = request.LineId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCustomLineInfo",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCustomLineInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeCustomLineInfoRequest
+         * @return DescribeCustomLineInfoResponse
+         */
+        public DescribeCustomLineInfoResponse DescribeCustomLineInfo(DescribeCustomLineInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCustomLineInfoWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request DescribeCustomLineInfoRequest
+         * @return DescribeCustomLineInfoResponse
+         */
+        public async Task<DescribeCustomLineInfoResponse> DescribeCustomLineInfoAsync(DescribeCustomLineInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCustomLineInfoWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @param request DescribeCustomLinesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCustomLinesResponse
+         */
+        public DescribeCustomLinesResponse DescribeCustomLinesWithOptions(DescribeCustomLinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCustomLines",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCustomLinesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeCustomLinesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCustomLinesResponse
+         */
+        public async Task<DescribeCustomLinesResponse> DescribeCustomLinesWithOptionsAsync(DescribeCustomLinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCustomLines",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCustomLinesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeCustomLinesRequest
+         * @return DescribeCustomLinesResponse
+         */
+        public DescribeCustomLinesResponse DescribeCustomLines(DescribeCustomLinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCustomLinesWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request DescribeCustomLinesRequest
+         * @return DescribeCustomLinesResponse
+         */
+        public async Task<DescribeCustomLinesResponse> DescribeCustomLinesAsync(DescribeCustomLinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCustomLinesWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -3158,6 +3658,90 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         }
 
         /**
+         * @param request DescribeZoneRecordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeZoneRecordResponse
+         */
+        public DescribeZoneRecordResponse DescribeZoneRecordWithOptions(DescribeZoneRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeZoneRecord",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeZoneRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeZoneRecordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeZoneRecordResponse
+         */
+        public async Task<DescribeZoneRecordResponse> DescribeZoneRecordWithOptionsAsync(DescribeZoneRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeZoneRecord",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeZoneRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeZoneRecordRequest
+         * @return DescribeZoneRecordResponse
+         */
+        public DescribeZoneRecordResponse DescribeZoneRecord(DescribeZoneRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeZoneRecordWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request DescribeZoneRecordRequest
+         * @return DescribeZoneRecordResponse
+         */
+        public async Task<DescribeZoneRecordResponse> DescribeZoneRecordAsync(DescribeZoneRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeZoneRecordWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries a list of Domain Name System (DNS) records for a zone.
          *
          * @param request DescribeZoneRecordsRequest
@@ -3834,6 +4418,162 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         }
 
         /**
+         * @param request SearchCustomLinesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SearchCustomLinesResponse
+         */
+        public SearchCustomLinesResponse SearchCustomLinesWithOptions(SearchCustomLinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimestampEnd))
+            {
+                query["CreateTimestampEnd"] = request.CreateTimestampEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimestampStart))
+            {
+                query["CreateTimestampStart"] = request.CreateTimestampStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
+            {
+                query["Creator"] = request.Creator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4))
+            {
+                query["Ipv4"] = request.Ipv4;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateTimestampEnd))
+            {
+                query["UpdateTimestampEnd"] = request.UpdateTimestampEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateTimestampStart))
+            {
+                query["UpdateTimestampStart"] = request.UpdateTimestampStart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchCustomLines",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchCustomLinesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request SearchCustomLinesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SearchCustomLinesResponse
+         */
+        public async Task<SearchCustomLinesResponse> SearchCustomLinesWithOptionsAsync(SearchCustomLinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimestampEnd))
+            {
+                query["CreateTimestampEnd"] = request.CreateTimestampEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimestampStart))
+            {
+                query["CreateTimestampStart"] = request.CreateTimestampStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
+            {
+                query["Creator"] = request.Creator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4))
+            {
+                query["Ipv4"] = request.Ipv4;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateTimestampEnd))
+            {
+                query["UpdateTimestampEnd"] = request.UpdateTimestampEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateTimestampStart))
+            {
+                query["UpdateTimestampStart"] = request.UpdateTimestampStart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchCustomLines",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchCustomLinesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request SearchCustomLinesRequest
+         * @return SearchCustomLinesResponse
+         */
+        public SearchCustomLinesResponse SearchCustomLines(SearchCustomLinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchCustomLinesWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request SearchCustomLinesRequest
+         * @return SearchCustomLinesResponse
+         */
+        public async Task<SearchCustomLinesResponse> SearchCustomLinesAsync(SearchCustomLinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchCustomLinesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Configures the recursive resolution proxy feature.
          *
          * @param request SetProxyPatternRequest
@@ -4327,6 +5067,114 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @param request UpdateCustomLineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCustomLineResponse
+         */
+        public UpdateCustomLineResponse UpdateCustomLineWithOptions(UpdateCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4s))
+            {
+                query["Ipv4s"] = request.Ipv4s;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineId))
+            {
+                query["LineId"] = request.LineId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomLine",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomLineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateCustomLineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCustomLineResponse
+         */
+        public async Task<UpdateCustomLineResponse> UpdateCustomLineWithOptionsAsync(UpdateCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4s))
+            {
+                query["Ipv4s"] = request.Ipv4s;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineId))
+            {
+                query["LineId"] = request.LineId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomLine",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomLineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateCustomLineRequest
+         * @return UpdateCustomLineResponse
+         */
+        public UpdateCustomLineResponse UpdateCustomLine(UpdateCustomLineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCustomLineWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request UpdateCustomLineRequest
+         * @return UpdateCustomLineResponse
+         */
+        public async Task<UpdateCustomLineResponse> UpdateCustomLineAsync(UpdateCustomLineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCustomLineWithOptionsAsync(request, runtime);
         }
 
         /**
