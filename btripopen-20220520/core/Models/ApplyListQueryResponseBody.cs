@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepartId { get; set; }
 
+                [NameInMap("external_user_id")]
+                [Validation(Required=false)]
+                public string ExternalUserId { get; set; }
+
                 [NameInMap("invoice_name")]
                 [Validation(Required=false)]
                 public string InvoiceName { get; set; }

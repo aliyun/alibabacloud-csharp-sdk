@@ -8210,6 +8210,104 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         }
 
         /**
+         * @summary 查询外部出行人
+         *
+         * @param headers ExternalUserQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExternalUserQueryResponse
+         */
+        public ExternalUserQueryResponse ExternalUserQueryWithOptions(string externalUserId, ExternalUserQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExternalUserQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/user/v1/externalUsers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalUserId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExternalUserQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询外部出行人
+         *
+         * @param headers ExternalUserQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExternalUserQueryResponse
+         */
+        public async Task<ExternalUserQueryResponse> ExternalUserQueryWithOptionsAsync(string externalUserId, ExternalUserQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExternalUserQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/user/v1/externalUsers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalUserId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExternalUserQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询外部出行人
+         *
+         * @return ExternalUserQueryResponse
+         */
+        public ExternalUserQueryResponse ExternalUserQuery(string externalUserId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExternalUserQueryHeaders headers = new ExternalUserQueryHeaders();
+            return ExternalUserQueryWithOptions(externalUserId, headers, runtime);
+        }
+
+        /**
+         * @summary 查询外部出行人
+         *
+         * @return ExternalUserQueryResponse
+         */
+        public async Task<ExternalUserQueryResponse> ExternalUserQueryAsync(string externalUserId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExternalUserQueryHeaders headers = new ExternalUserQueryHeaders();
+            return await ExternalUserQueryWithOptionsAsync(externalUserId, headers, runtime);
+        }
+
+        /**
          * @summary 修改外部出行人与证件信息
          *
          * @param tmpReq ExternalUserUpdateRequest

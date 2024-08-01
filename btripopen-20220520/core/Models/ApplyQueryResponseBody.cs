@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? EconomyDiscount { get; set; }
 
+                [NameInMap("external_user_id")]
+                [Validation(Required=false)]
+                public string ExternalUserId { get; set; }
+
                 [NameInMap("first_discount")]
                 [Validation(Required=false)]
                 public int? FirstDiscount { get; set; }
