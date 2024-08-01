@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AddrPoolId { get; set; }
 
         /// <summary>
-        /// The ID of the health check task.
+        /// The ID of the health check configuration.
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]

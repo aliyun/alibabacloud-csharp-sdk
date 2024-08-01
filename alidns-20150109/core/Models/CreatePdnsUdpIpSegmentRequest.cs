@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Ip { get; set; }
 
+        [NameInMap("IpToken")]
+        [Validation(Required=false)]
+        public string IpToken { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

@@ -3168,6 +3168,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["Ip"] = request.Ip;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpToken))
+            {
+                query["IpToken"] = request.IpToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -3209,6 +3213,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
             {
                 query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpToken))
+            {
+                query["IpToken"] = request.IpToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -25296,6 +25304,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["Ip"] = request.Ip;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpToken))
+            {
+                query["IpToken"] = request.IpToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -25333,6 +25345,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
             {
                 query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpToken))
+            {
+                query["IpToken"] = request.IpToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {

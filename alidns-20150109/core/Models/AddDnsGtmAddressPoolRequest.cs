@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// <summary>
             /// The information about the source region of the address. The value of this parameter is a JSON string. Valid values:
             /// 
-            /// *   LineCode: the line code of the source region for the address
+            /// *   lineCode: the line code of the source region for the address
             /// 
             /// *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
             /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AttributeInfo { get; set; }
 
             /// <summary>
-            /// The weight of the address pool.
+            /// The weight of the address.
             /// </summary>
             [NameInMap("LbaWeight")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// The remarks.
+            /// The description of the address pool.
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// The extended information. The required parameters vary based on the value of ProtocolType.
         /// 
-        /// *   When ProtocolType is set to HTTP or HTTPS:
+        /// *   HTTP or HTTPS
         /// 
         ///     *   port: the port that you want to check
         /// 
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         ///     *   path: the URL path
         /// 
-        ///     *   code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value.
+        ///     *   code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value. Values: 400, 500.
         /// 
         ///     *   failureRate: the failure rate
         /// 
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         ///         *   IPV4
         ///         *   IPV6
         /// 
-        /// *   When ProtocolType is set to PING:
+        /// *   PING
         /// 
         ///     *   failureRate: the failure rate
         /// 
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         ///         *   IPV4
         ///         *   IPV6
         /// 
-        /// *   When ProtocolType is set to TCP:
+        /// *   TCP
         /// 
         ///     *   port: the port that you want to check
         /// 
