@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ImportKeyPairRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-        /// <para>This parameter is required.</para>
+        /// The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// 
-        /// <b>Example:</b>
-        /// <para>testKeyPairName</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
@@ -25,32 +23,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The public key of the key pair.</para>
-        /// <para>This parameter is required.</para>
+        /// The public key of the key pair.
         /// 
-        /// <b>Example:</b>
-        /// <para>ABC1234567</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PublicKeyBody")]
         [Validation(Required=false)]
         public string PublicKeyBody { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enterprise resource group to which the SSH key pair belongs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-bp67acfmxazb4p****</para>
+        /// The ID of the enterprise resource group to which the SSH key pair belongs.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -65,27 +56,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the key pair.</para>
+        /// The tags to add to the key pair.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ImportKeyPairRequestTag> Tag { get; set; }
         public class ImportKeyPairRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// The key of tag N to add to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs:.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// The value of tag N to add to the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs:.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

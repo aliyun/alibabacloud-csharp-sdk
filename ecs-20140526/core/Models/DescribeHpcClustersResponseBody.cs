@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeHpcClustersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the HPC cluster.</para>
+        /// The name of the HPC cluster.
         /// </summary>
         [NameInMap("HpcClusters")]
         [Validation(Required=false)]
@@ -20,28 +20,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeHpcClustersResponseBodyHpcClustersHpcCluster> HpcCluster { get; set; }
             public class DescribeHpcClustersResponseBodyHpcClustersHpcCluster : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>testDescription</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The description of the HPC cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>hpc-bp1a5zr3u7nq9cx****</para>
+                /// The description of the HPC cluster.
                 /// </summary>
                 [NameInMap("HpcClusterId")]
                 [Validation(Required=false)]
                 public string HpcClusterId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>testName</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -51,40 +40,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The page number.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of HPC clusters.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The total number of HPC clusters.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the HPC cluster.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2</para>
+        /// The ID of the HPC cluster.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

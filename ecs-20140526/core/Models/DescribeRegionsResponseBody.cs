@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried regions.</para>
+        /// The queried regions.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,44 +21,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// <para>The name of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China (Qingdao)</para>
+                /// The name of the region.
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ecs.aliyuncs.com</para>
+                /// The endpoint of the region.
                 /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-qingdao-et2-bo1</para>
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether clusters are sold out. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>available</description></item>
-                /// <item><description>soldOut</description></item>
-                /// </list>
+                /// Indicates whether clusters are sold out. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>available</para>
+                /// *   available
+                /// *   soldOut
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -69,10 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

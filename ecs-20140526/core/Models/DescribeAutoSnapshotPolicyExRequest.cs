@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoSnapshotPolicyExRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the automatic snapshot policy.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>sp-bp67acfmxazb4ph****</para>
+        /// The ID of the automatic snapshot policy.
         /// </summary>
         [NameInMap("AutoSnapshotPolicyId")]
         [Validation(Required=false)]
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic snapshot policy.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>TestName</para>
+        /// The name of the automatic snapshot policy.
         /// </summary>
         [NameInMap("AutoSnapshotPolicyName")]
         [Validation(Required=false)]
@@ -38,48 +32,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1</para>
+        /// The page number.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10</para>
+        /// The number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Valid values: 1 to 100.
+        /// 
+        /// Default value: 10
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the automatic snapshot policy. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</para>
-        /// <remarks>
-        /// <para>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
-        /// </remarks>
+        /// The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
         /// 
-        /// <b>Example:</b>
-        /// <para>rg-aek2kkmhmhs****</para>
+        /// > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -94,27 +80,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the automatic snapshot policy.</para>
+        /// The tags of the automatic snapshot policy.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeAutoSnapshotPolicyExRequestTag> Tag { get; set; }
         public class DescribeAutoSnapshotPolicyExRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

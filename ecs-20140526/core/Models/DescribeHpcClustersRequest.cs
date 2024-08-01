@@ -10,24 +10,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeHpcClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// The page number.
         /// 
-        /// <b>Example:</b>
-        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// The number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>[&quot;hpc-xxxxxxxxx&quot;, &quot;hpc-yyyyyyyyy&quot;, … &quot;hpc-zzzzzzzzz&quot;]</para>
+        /// Maximum value: 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("HpcClusterIds")]
         [Validation(Required=false)]
@@ -42,31 +40,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IDs of HPC clusters. The value is a JSON array that consists of up to 100 HPC cluster IDs. Separate the HPC cluster IDs with commas (,).</para>
-        /// <para>This parameter is required.</para>
+        /// The IDs of HPC clusters. The value is a JSON array that consists of up to 100 HPC cluster IDs. Separate the HPC cluster IDs with commas (,).
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AllocateDedicatedHostsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the dedicated hosts.</para>
+        /// The IDs of the dedicated hosts.
         /// </summary>
         [NameInMap("DedicatedHostIdSets")]
         [Validation(Required=false)]
@@ -23,10 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>E2A664A6-2933-4C64-88AE-5033D003****</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

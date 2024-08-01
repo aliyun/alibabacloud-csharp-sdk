@@ -10,15 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
+        /// *   true
+        /// *   false
+        /// 
+        /// Default value: false.
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -33,22 +30,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. Valid values of N: 1 to 50.</para>
-        /// <para>This parameter is required.</para>
+        /// The resource IDs. Valid values of N: 1 to 50.
         /// 
-        /// <b>Example:</b>
-        /// <para>i-bp67acfmxazb4ph****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -63,40 +56,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>instance: ECS instance</description></item>
-        /// <item><description>disk: disk</description></item>
-        /// <item><description>snapshot: snapshot</description></item>
-        /// <item><description>image: image</description></item>
-        /// <item><description>securitygroup: security group</description></item>
-        /// <item><description>volume: storage volume</description></item>
-        /// <item><description>eni: elastic network interface (ENI)</description></item>
-        /// <item><description>ddh: dedicated host</description></item>
-        /// <item><description>ddhcluster: dedicated host cluster</description></item>
-        /// <item><description>keypair: SSH key pair</description></item>
-        /// <item><description>launchtemplate: launch template</description></item>
-        /// <item><description>reservedinstance: reserved instance</description></item>
-        /// <item><description>snapshotpolicy: automatic snapshot policy</description></item>
-        /// <item><description>elasticityassurance: elasticity assurance</description></item>
-        /// <item><description>capacityreservation: capacity reservation</description></item>
-        /// <item><description>command: Cloud Assistant command</description></item>
-        /// <item><description>invocation: Cloud Assistant command execution result</description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// The type of the resource. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>instance</para>
+        /// *   instance: ECS instance
+        /// *   disk: disk
+        /// *   snapshot: snapshot
+        /// *   image: image
+        /// *   securitygroup: security group
+        /// *   volume: storage volume
+        /// *   eni: elastic network interface (ENI)
+        /// *   ddh: dedicated host
+        /// *   ddhcluster: dedicated host cluster
+        /// *   keypair: SSH key pair
+        /// *   launchtemplate: launch template
+        /// *   reservedinstance: reserved instance
+        /// *   snapshotpolicy: automatic snapshot policy
+        /// *   elasticityassurance: elasticity assurance
+        /// *   capacityreservation: capacity reservation
+        /// *   command: Cloud Assistant command
+        /// *   invocation: Cloud Assistant command execution result
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys. Valid values of N: 1 to 20.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>TestKey</para>
+        /// The tag keys. Valid values of N: 1 to 20.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

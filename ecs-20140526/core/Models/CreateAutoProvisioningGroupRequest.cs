@@ -14,37 +14,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public CreateAutoProvisioningGroupRequestLaunchConfiguration LaunchConfiguration { get; set; }
         public class CreateAutoProvisioningGroupRequestLaunchConfiguration : TeaModel {
             /// <summary>
-            /// <para>This parameter is unavailable for public use.</para>
+            /// This parameter is unavailable for public use.
             /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> Arn { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationArn : TeaModel {
                 /// <summary>
-                /// <para>This parameter is not publicly available.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123456789012****</para>
+                /// This parameter is not publicly available.
                 /// </summary>
                 [NameInMap("AssumeRoleFor")]
                 [Validation(Required=false)]
                 public long? AssumeRoleFor { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is not publicly available.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>34458433936495****:alice</para>
+                /// This parameter is not publicly available.
                 /// </summary>
                 [NameInMap("RoleType")]
                 [Validation(Required=false)]
                 public string RoleType { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is not publicly available.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acs:ram::123456789012****:role/adminrole</para>
+                /// This parameter is not publicly available.
                 /// </summary>
                 [NameInMap("Rolearn")]
                 [Validation(Required=false)]
@@ -53,38 +44,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The automatic release time of the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in Coordinated Universal Time (UTC).</para>
-            /// <list type="bullet">
-            /// <item><description>If the value of <c>ss</c> is not <c>00</c>, the start time is automatically rounded down to the nearest minute based on the value of <c>mm</c>.</description></item>
-            /// <item><description>The specified time must be at least 30 minutes later than the current time.</description></item>
-            /// <item><description>The specified time can be at most three years later than the current time.</description></item>
-            /// </list>
+            /// The automatic release time of the pay-as-you-go instance. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in Coordinated Universal Time (UTC).
             /// 
-            /// <b>Example:</b>
-            /// <para>2018-01-01T12:05:00Z</para>
+            /// *   If the value of `ss` is not `00`, the start time is automatically rounded down to the nearest minute based on the value of `mm`.
+            /// *   The specified time must be at least 30 minutes later than the current time.
+            /// *   The specified time can be at most three years later than the current time.
             /// </summary>
             [NameInMap("AutoReleaseTime")]
             [Validation(Required=false)]
             public string AutoReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The performance mode of the burstable instance. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Standard: the standard mode. For more information, see the &quot;Standard mode&quot; section in the <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a> topic.</description></item>
-            /// <item><description>Unlimited: the unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in the <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a> topic.</description></item>
-            /// </list>
-            /// <para>This parameter is empty by default.</para>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The performance mode of the burstable instance. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>Standard</para>
+            /// *   Standard: the standard mode. For more information, see the "Standard mode" section in the [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.
+            /// *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in the [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.
+            /// 
+            /// This parameter is empty by default.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("CreditSpecification")]
             [Validation(Required=false)]
             public string CreditSpecification { get; set; }
 
             /// <summary>
-            /// <para>The cloud disks in the extended configurations of the launch template.</para>
+            /// The cloud disks in the extended configurations of the launch template.
             /// </summary>
             [NameInMap("DataDisk")]
             [Validation(Required=false)]
@@ -95,66 +80,55 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? BurstingEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The category of data disk N. Valid values of N: 1 to 16. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>cloud_efficiency: ultra disk</description></item>
-                /// <item><description>cloud_ssd: standard SSD</description></item>
-                /// <item><description>cloud_essd: ESSD</description></item>
-                /// <item><description>cloud: basic disk</description></item>
-                /// </list>
-                /// <para>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</para>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// The category of data disk N. Valid values of N: 1 to 16. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>cloud_ssd</para>
+                /// *   cloud_efficiency: ultra disk
+                /// *   cloud_ssd: standard SSD
+                /// *   cloud_essd: ESSD
+                /// *   cloud: basic disk
+                /// 
+                /// For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
+                /// 
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to release data disk N when the instance to which the data disk is attached is released. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
-                /// </list>
-                /// <para>Default value: true.</para>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// Specifies whether to release data disk N when the instance to which the data disk is attached is released. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
+                /// *   true
+                /// *   false
+                /// 
+                /// Default value: true.
+                /// 
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("DeleteWithInstance")]
                 [Validation(Required=false)]
                 public bool? DeleteWithInstance { get; set; }
 
                 /// <summary>
-                /// <para>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>DataDisk_Description</para>
+                /// The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The mount point of data disk N. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>/dev/vd1</para>
+                /// The mount point of data disk N. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("Device")]
                 [Validation(Required=false)]
                 public string Device { get; set; }
 
                 /// <summary>
-                /// <para>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
-                /// <para>By default, this parameter is left empty.</para>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).
                 /// 
-                /// <b>Example:</b>
-                /// <para>cloud_ssdData</para>
+                /// By default, this parameter is left empty.
+                /// 
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("DiskName")]
                 [Validation(Required=false)]
@@ -165,44 +139,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string EncryptAlgorithm { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to encrypt data disk N. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
-                /// </list>
-                /// <para>Default value: false.</para>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// Specifies whether to encrypt data disk N. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
+                /// *   true
+                /// *   false
+                /// 
+                /// Default value: false.
+                /// 
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("Encrypted")]
                 [Validation(Required=false)]
                 public bool? Encrypted { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Key Management Service (KMS) key to use for data disk N. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
+                /// The ID of the Key Management Service (KMS) key to use for data disk N. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("KmsKeyId")]
                 [Validation(Required=false)]
                 public string KmsKeyId { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of the ESSD to use as data disk N. The value of N in this parameter must be the same as the value of N in <c>LaunchConfiguration.DataDisk.N.Category</c>. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-                /// <item><description>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-                /// <item><description>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-                /// <item><description>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
-                /// </list>
-                /// <para>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// The performance level of the ESSD to use as data disk N. The value of N in this parameter must be the same as the value of N in `LaunchConfiguration.DataDisk.N.Category`. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>PL1</para>
+                /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+                /// *   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.
+                /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+                /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+                /// 
+                /// For information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).
+                /// 
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("PerformanceLevel")]
                 [Validation(Required=false)]
@@ -213,42 +180,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? ProvisionedIops { get; set; }
 
                 /// <summary>
-                /// <para>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_efficiency: 20 to 32768.</para>
-                /// </description></item>
-                /// <item><description><para>Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_ssd: 20 to 32768.</para>
-                /// </description></item>
-                /// <item><description><para>Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_essd: vary based on the <c>LaunchConfiguration.DataDisk.N.PerformanceLevel</c> value.</para>
-                /// <list type="bullet">
-                /// <item><description>Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL0: 40 to 32768.</description></item>
-                /// <item><description>Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL1: 20 to 32768.</description></item>
-                /// <item><description>Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL2: 461 to 32768.</description></item>
-                /// <item><description>Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.</description></item>
-                /// </list>
-                /// </description></item>
-                /// <item><description><para>Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud: 5 to 2000.</para>
-                /// </description></item>
-                /// </list>
-                /// <remarks>
-                /// <para> The value of this parameter must be greater than or equal to the size of the snapshot specified by <c>LaunchConfiguration.DataDisk.N.SnapshotId</c>.</para>
-                /// </remarks>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>20</para>
+                /// *   Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_efficiency: 20 to 32768.
+                /// 
+                /// *   Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_ssd: 20 to 32768.
+                /// 
+                /// *   Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_essd: vary based on the `LaunchConfiguration.DataDisk.N.PerformanceLevel` value.
+                /// 
+                ///     *   Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL0: 40 to 32768.
+                ///     *   Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL1: 20 to 32768.
+                ///     *   Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL2: 461 to 32768.
+                ///     *   Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.
+                /// 
+                /// *   Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud: 5 to 2000.
+                /// 
+                /// >  The value of this parameter must be greater than or equal to the size of the snapshot specified by `LaunchConfiguration.DataDisk.N.SnapshotId`.
+                /// 
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public int? Size { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</para>
-                /// <para>After this parameter is specified, <c>LaunchConfiguration.DataDisk.N.Size</c> is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</para>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
                 /// 
-                /// <b>Example:</b>
-                /// <para>s-bp17441ohwka0yuh****</para>
+                /// After this parameter is specified, `LaunchConfiguration.DataDisk.N.Size` is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+                /// 
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("SnapshotId")]
                 [Validation(Required=false)]
@@ -257,250 +217,200 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The ID of the deployment set.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>ds-bp1frxuzdg87zh4p****</para>
+            /// The ID of the deployment set.
             /// </summary>
             [NameInMap("DeploymentSetId")]
             [Validation(Required=false)]
             public string DeploymentSetId { get; set; }
 
             /// <summary>
-            /// <para>The instance hostname. Take note of the following items:</para>
-            /// <list type="bullet">
-            /// <item><description>The hostname cannot start or end with a period (.) or hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-).</description></item>
-            /// <item><description>For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).</description></item>
-            /// <item><description>For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</description></item>
-            /// <item><description>You cannot specify both <c>LaunchConfiguration.HostName</c> and <c>LaunchConfiguration.HostNames.N</c>. Otherwise, an error is returned.</description></item>
-            /// <item><description>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</description></item>
-            /// </list>
+            /// The instance hostname. Take note of the following items:
             /// 
-            /// <b>Example:</b>
-            /// <para>k8s-node-[1,4]-ecshost</para>
+            /// *   The hostname cannot start or end with a period (.) or hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-).
+            /// *   For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).
+            /// *   For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
+            /// *   You cannot specify both `LaunchConfiguration.HostName` and `LaunchConfiguration.HostNames.N`. Otherwise, an error is returned.
+            /// *   When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
 
             /// <summary>
-            /// <para>The hostname of instance N. You can use this parameter to specify different hostnames for multiple instances. Take note of the following items:</para>
-            /// <list type="bullet">
-            /// <item><description>This parameter takes effect only when <c>AutoProvisioningGroupType</c> is set to instant. </description></item>
-            /// <item><description>The value of N indicates the number of instances. Valid values of N: 1 to 1000. The value of N must be the same as the TotalTargetCapacity value. </description></item>
-            /// <item><description>The hostname cannot start or end with a period (.) or hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-). </description></item>
-            /// <item><description>For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. The hostname can contain letters, digits, and hyphens (-). </description></item>
-            /// <item><description>For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). </description></item>
-            /// <item><description>You cannot specify both <c>LaunchConfiguration.HostName</c> and <c>LaunchConfiguration.HostNames.N</c>. Otherwise, an error is returned. </description></item>
-            /// <item><description>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</description></item>
-            /// </list>
+            /// The hostname of instance N. You can use this parameter to specify different hostnames for multiple instances. Take note of the following items:
             /// 
-            /// <b>Example:</b>
-            /// <para>ecs-host-01</para>
+            /// - This parameter takes effect only when `AutoProvisioningGroupType` is set to instant. 
+            /// - The value of N indicates the number of instances. Valid values of N: 1 to 1000. The value of N must be the same as the TotalTargetCapacity value. 
+            /// - The hostname cannot start or end with a period (.) or hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-). 
+            /// - For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. The hostname can contain letters, digits, and hyphens (-). 
+            /// - For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). 
+            /// - You cannot specify both `LaunchConfiguration.HostName` and `LaunchConfiguration.HostNames.N`. Otherwise, an error is returned. 
+            /// - When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("HostNames")]
             [Validation(Required=false)]
             public List<string> HostNames { get; set; }
 
             /// <summary>
-            /// <para>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>aliyun</c> or <c>acs:</c>. The name cannot contain <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>hangzhou-daily-update</para>
+            /// The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `aliyun` or `acs:`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
             /// </summary>
             [NameInMap("ImageFamily")]
             [Validation(Required=false)]
             public string ImageFamily { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image to be used to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available image resources. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>m-bp1g7004ksh0oeuc****</para>
+            /// The ID of the image to be used to create the instance. You can call the [DescribeImages](https://help.aliyun.com/document_detail/25534.html) operation to query available image resources. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The instance description. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <c>http://</c> or <c>https://</c>. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>Instance_Description</para>
+            /// The instance description. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with `http://` or `https://`. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
             public string InstanceDescription { get; set; }
 
             /// <summary>
-            /// <para>The instance name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
-            /// <para>The default value of this parameter is the <c>InstanceId</c> value.</para>
-            /// <para>When you batch create instances, you can batch configure sequential names for the instances. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</para>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The instance name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
             /// 
-            /// <b>Example:</b>
-            /// <para>k8s-node-[1,4]-alibabacloud</para>
+            /// The default value of this parameter is the `InstanceId` value.
+            /// 
+            /// When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](https://help.aliyun.com/document_detail/196048.html).
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The billing method for network usage. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PayByBandwidth: pay-by-bandwidth</description></item>
-            /// <item><description>PayByTraffic: pay-by-traffic</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> When the pay-by-traffic billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as the upper limits of bandwidth instead of guaranteed performance specifications. When demands outstrip resource supplies, the maximum bandwidths may be limited. If you want guaranteed bandwidth for your instance, use the pay-by-bandwidth billing method.</para>
-            /// </remarks>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The billing method for network usage. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>PayByTraffic</para>
+            /// *   PayByBandwidth: pay-by-bandwidth
+            /// *   PayByTraffic: pay-by-traffic
+            /// 
+            /// >  When the pay-by-traffic billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as the upper limits of bandwidth instead of guaranteed performance specifications. When demands outstrip resource supplies, the maximum bandwidths may be limited. If you want guaranteed bandwidth for your instance, use the pay-by-bandwidth billing method.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("InternetChargeType")]
             [Validation(Required=false)]
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>When the maximum outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</description></item>
-            /// <item><description>When the maximum outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of <c>LaunchConfiguration.InternetMaxBandwidthOut</c>, and the default value is the value of <c>LaunchConfiguration.InternetMaxBandwidthOut</c>.</description></item>
-            /// </list>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>10</para>
+            /// *   When the maximum outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.
+            /// *   When the maximum outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of `LaunchConfiguration.InternetMaxBandwidthOut`, and the default value is the value of `LaunchConfiguration.InternetMaxBandwidthOut`.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("InternetMaxBandwidthIn")]
             [Validation(Required=false)]
             public int? InternetMaxBandwidthIn { get; set; }
 
             /// <summary>
-            /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</para>
-            /// <para>Default value: 0.</para>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
             /// 
-            /// <b>Example:</b>
-            /// <para>10</para>
+            /// Default value: 0.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("InternetMaxBandwidthOut")]
             [Validation(Required=false)]
             public int? InternetMaxBandwidthOut { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the instance is I/O optimized. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>none: The instance is not I/O optimized.</description></item>
-            /// <item><description>optimized: The instance is I/O optimized.</description></item>
-            /// </list>
-            /// <para>For instances of retired instance types, the default value is none. For instances of other instance types, the default value is optimized.</para>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// Specifies whether the instance is I/O optimized. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>optimized</para>
+            /// *   none: The instance is not I/O optimized.
+            /// *   optimized: The instance is I/O optimized.
+            /// 
+            /// For instances of retired instance types, the default value is none. For instances of other instance types, the default value is optimized.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("IoOptimized")]
             [Validation(Required=false)]
             public string IoOptimized { get; set; }
 
             /// <summary>
-            /// <para>The key pair name.</para>
-            /// <list type="bullet">
-            /// <item><description>For Windows instances, this parameter is ignored. This parameter is empty by default.</description></item>
-            /// <item><description>By default, password-based logon is disabled for Linux instances.</description></item>
-            /// </list>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The key pair name.
             /// 
-            /// <b>Example:</b>
-            /// <para>KeyPair_Name</para>
+            /// *   For Windows instances, this parameter is ignored. This parameter is empty by default.
+            /// *   By default, password-based logon is disabled for Linux instances.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("KeyPairName")]
             [Validation(Required=false)]
             public string KeyPairName { get; set; }
 
             /// <summary>
-            /// <para>The instance password. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:</para>
-            /// <para><c>( ) ` ~ ! @ # $ % ^ &amp; * - _ + = | { }  </c>: ; \&quot; &lt; &gt; , . ? /``  For Windows instances, the password cannot start with a forward slash (/). When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence. `</para>
+            /// The instance password. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:
             /// 
-            /// <b>Example:</b>
-            /// <para>EcsV587!</para>
+            /// ``( ) ` ~ ! @ # $ % ^ & * - _ + = | { }  ``: ; \\" < > , . ? /``  For Windows instances, the password cannot start with a forward slash (/). When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence. `
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the password preset in the image. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: uses the password preset in the image.</description></item>
-            /// <item><description>false: does not use the password preset in the image.</description></item>
-            /// </list>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// Specifies whether to use the password preset in the image. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>true</para>
+            /// *   true: uses the password preset in the image.
+            /// *   false: does not use the password preset in the image.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("PasswordInherit")]
             [Validation(Required=false)]
             public bool? PasswordInherit { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance Resource Access Management (RAM) role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>RAM_Name</para>
+            /// The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](https://help.aliyun.com/document_detail/28713.html) operation provided by RAM to query the instance RAM roles that you created. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("RamRoleName")]
             [Validation(Required=false)]
             public string RamRoleName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rg-bp67acfmxazb4p****</para>
+            /// The ID of the resource group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable security hardening. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Active: enables security hardening. This value is applicable only to public images.</description></item>
-            /// <item><description>Deactive: disables security hardening. This value is applicable to all image types.</description></item>
-            /// </list>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// Specifies whether to enable security hardening. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>Active</para>
+            /// *   Active: enables security hardening. This value is applicable only to public images.
+            /// *   Deactive: disables security hardening. This value is applicable to all image types.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("SecurityEnhancementStrategy")]
             [Validation(Required=false)]
             public string SecurityEnhancementStrategy { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>sg-bp15ed6xe1yxeycg****</para>
+            /// The ID of the security group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the security groups to which the new ECS instances belong.</para>
+            /// The IDs of the security groups to which the new ECS instances belong.
             /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The system disk information of instances. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The system disk information of instances. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("SystemDisk")]
             [Validation(Required=false)]
@@ -511,43 +421,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? BurstingEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The algorithm to use to encrypt system disk N. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>aes-256</description></item>
-                /// <item><description>sm4-128</description></item>
-                /// </list>
-                /// <para>Default value: aes-256.</para>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// The algorithm to use to encrypt system disk N. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>aes-256</para>
+                /// *   aes-256
+                /// *   sm4-128
+                /// 
+                /// Default value: aes-256.
+                /// 
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("EncryptAlgorithm")]
                 [Validation(Required=false)]
                 public string EncryptAlgorithm { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to encrypt system disk N. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
-                /// </list>
-                /// <para>Default value: false.</para>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// Specifies whether to encrypt system disk N. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
+                /// *   true
+                /// *   false
+                /// 
+                /// Default value: false.
+                /// 
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("Encrypted")]
                 [Validation(Required=false)]
                 public string Encrypted { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the KMS key to use for system disk N.</para>
-                /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+                /// The ID of the KMS key to use for system disk N.
                 /// 
-                /// <b>Example:</b>
-                /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
+                /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
                 [NameInMap("KMSKeyId")]
                 [Validation(Required=false)]
@@ -560,98 +464,84 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The category of the system disk. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_ssd: standard SSD</description></item>
-            /// <item><description>cloud_essd: enhanced SSD (ESSD)</description></item>
-            /// <item><description>cloud: basic disk</description></item>
-            /// </list>
-            /// <para>For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.</para>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The category of the system disk. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>cloud_ssd</para>
+            /// *   cloud_efficiency: ultra disk
+            /// *   cloud_ssd: standard SSD
+            /// *   cloud_essd: enhanced SSD (ESSD)
+            /// *   cloud: basic disk
+            /// 
+            /// For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <c>http://</c> or <c>https://</c>.</para>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with `http://` or `https://`.
             /// 
-            /// <b>Example:</b>
-            /// <para>SystemDisk_Description</para>
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("SystemDiskDescription")]
             [Validation(Required=false)]
             public string SystemDiskDescription { get; set; }
 
             /// <summary>
-            /// <para>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
-            /// <para>This parameter is empty by default.</para>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).
             /// 
-            /// <b>Example:</b>
-            /// <para>cloud_ssdSystem</para>
+            /// This parameter is empty by default.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("SystemDiskName")]
             [Validation(Required=false)]
             public string SystemDiskName { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the ESSD to be used as the system disk. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PL0 (default): A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
-            /// </list>
-            /// <para>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The performance level of the ESSD to be used as the system disk. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>PL0</para>
+            /// *   PL0 (default): A single ESSD can deliver up to 10,000 random read/write IOPS.
+            /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+            /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+            /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+            /// 
+            /// For more information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("SystemDiskPerformanceLevel")]
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The size of the system disk. Valid values: 20 to 500. Unit: GiB. The value must be at least 20 and greater than or equal to the size of the image specified by LaunchConfiguration.ImageId.</para>
-            /// <para>Default value: 40 or the size of the image specified by LaunchConfiguration.ImageId, whichever is greater.</para>
-            /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
+            /// The size of the system disk. Valid values: 20 to 500. Unit: GiB. The value must be at least 20 and greater than or equal to the size of the image specified by LaunchConfiguration.ImageId.
             /// 
-            /// <b>Example:</b>
-            /// <para>40</para>
+            /// Default value: 40 or the size of the image specified by LaunchConfiguration.ImageId, whichever is greater.
+            /// 
+            /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The tag in the extended configurations of the launch template.</para>
+            /// The tag in the extended configurations of the launch template.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> Tag { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationTag : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <c>http://</c> or <c>https://</c>. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestKey</para>
+                /// The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain <c>http://</c> or <c>https://</c>. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestValue</para>
+                /// The value of the tag. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -660,10 +550,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The instance user data. The user data must be encoded in Base64. The raw data can be up to 32 KB in size. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
+            /// The instance user data. The user data must be encoded in Base64. The raw data can be up to 32 KB in size. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
             /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]
@@ -672,59 +559,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The name of the auto provisioning group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>apg-test</para>
+        /// The name of the auto provisioning group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("AutoProvisioningGroupName")]
         [Validation(Required=false)]
         public string AutoProvisioningGroupName { get; set; }
 
         /// <summary>
-        /// <para>The delivery type of the auto provisioning group. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>request: one-time asynchronous delivery. When the auto provisioning group is started, it attempts to asynchronously deliver an instance cluster that meets the target capacity only once. The group does not retry the operation regardless of whether all the instances are delivered.</description></item>
-        /// <item><description>instant: one-time synchronous delivery. When the auto provisioning group is started, it attempts to synchronously deliver an instance cluster that meets the target capacity only once. The list of delivered instances and the causes of delivery failures are returned in the response.</description></item>
-        /// <item><description>maintain: continuous delivery. When the auto provisioning group is started, it attempts to deliver an instance cluster that meets the target capacity, and monitors the real-time capacity. If the target capacity of the auto provisioning group is not reached, the auto provisioning group continues to create instances until the target capacity is reached.</description></item>
-        /// </list>
-        /// <para>Default value: maintain.</para>
+        /// The delivery type of the auto provisioning group. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>maintain</para>
+        /// *   request: one-time asynchronous delivery. When the auto provisioning group is started, it attempts to asynchronously deliver an instance cluster that meets the target capacity only once. The group does not retry the operation regardless of whether all the instances are delivered.
+        /// *   instant: one-time synchronous delivery. When the auto provisioning group is started, it attempts to synchronously deliver an instance cluster that meets the target capacity only once. The list of delivered instances and the causes of delivery failures are returned in the response.
+        /// *   maintain: continuous delivery. When the auto provisioning group is started, it attempts to deliver an instance cluster that meets the target capacity, and monitors the real-time capacity. If the target capacity of the auto provisioning group is not reached, the auto provisioning group continues to create instances until the target capacity is reached.
+        /// 
+        /// Default value: maintain.
         /// </summary>
         [NameInMap("AutoProvisioningGroupType")]
         [Validation(Required=false)]
         public string AutoProvisioningGroupType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The information of data disks on the instance.</para>
+        /// The information of data disks on the instance.
         /// </summary>
         [NameInMap("DataDiskConfig")]
         [Validation(Required=false)]
         public List<CreateAutoProvisioningGroupRequestDataDiskConfig> DataDiskConfig { get; set; }
         public class CreateAutoProvisioningGroupRequestDataDiskConfig : TeaModel {
             /// <summary>
-            /// <para>The category of data disk N. You can use this parameter to specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_ssd: standard SSD</description></item>
-            /// <item><description>cloud_essd: ESSD</description></item>
-            /// <item><description>cloud: basic disk</description></item>
-            /// </list>
+            /// The category of data disk N. You can use this parameter to specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>cloud_efficiency</para>
+            /// - cloud_efficiency: ultra disk
+            /// - cloud_ssd: standard SSD
+            /// - cloud_essd: ESSD
+            /// - cloud: basic disk
             /// </summary>
             [NameInMap("DiskCategory")]
             [Validation(Required=false)]
@@ -733,192 +607,150 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The type of supplemental instances. When the sum of the <c>PayAsYouGoTargetCapacity</c> and <c>SpotTargetCapacity</c> values is smaller than the <c>TotalTargetCapacity</c> value, the auto provisioning group creates instances of the specified type to meet the total target capacity. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PayAsYouGo: pay-as-you-go instances</description></item>
-        /// <item><description>Spot: preemptible instances.</description></item>
-        /// </list>
-        /// <para>Default value: Spot.</para>
+        /// The type of supplemental instances. When the sum of the `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` values is smaller than the `TotalTargetCapacity` value, the auto provisioning group creates instances of the specified type to meet the total target capacity. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Spot</para>
+        /// *   PayAsYouGo: pay-as-you-go instances
+        /// *   Spot: preemptible instances.
+        /// 
+        /// Default value: Spot.
         /// </summary>
         [NameInMap("DefaultTargetCapacityType")]
         [Validation(Required=false)]
         public string DefaultTargetCapacityType { get; set; }
 
         /// <summary>
-        /// <para>The description of the auto provisioning group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>testDescription</para>
+        /// The description of the auto provisioning group.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>termination: releases the scaled-in instances in the auto provisioning group.</description></item>
-        /// <item><description>no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.</description></item>
-        /// </list>
-        /// <para>Default value: no-termination.</para>
+        /// Specifies whether to release scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>termination</para>
+        /// *   termination: releases the scaled-in instances in the auto provisioning group.
+        /// *   no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.
+        /// 
+        /// Default value: no-termination.
         /// </summary>
         [NameInMap("ExcessCapacityTerminationPolicy")]
         [Validation(Required=false)]
         public string ExcessCapacityTerminationPolicy { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
+        /// >This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("HibernationOptionsConfigured")]
         [Validation(Required=false)]
         public bool? HibernationOptionsConfigured { get; set; }
 
         /// <summary>
-        /// <para>The extended configurations of the launch template.</para>
+        /// The extended configurations of the launch template.
         /// </summary>
         [NameInMap("LaunchTemplateConfig")]
         [Validation(Required=false)]
         public List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> LaunchTemplateConfig { get; set; }
         public class CreateAutoProvisioningGroupRequestLaunchTemplateConfig : TeaModel {
             /// <summary>
-            /// <para>The architectures of the instance types.</para>
+            /// The architectures of the instance types.
             /// </summary>
             [NameInMap("Architectures")]
             [Validation(Required=false)]
             public List<string> Architectures { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to include burstable instance types. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Exclude: does not include burstable instance types.</description></item>
-            /// <item><description>Include: includes burstable instance types.</description></item>
-            /// <item><description>Required: includes only burstable instance types.</description></item>
-            /// </list>
-            /// <para>Default value: Include.</para>
+            /// Specifies whether to include burstable instance types. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>Include</para>
+            /// *   Exclude: does not include burstable instance types.
+            /// *   Include: includes burstable instance types.
+            /// *   Required: includes only burstable instance types.
+            /// 
+            /// Default value: Include.
             /// </summary>
             [NameInMap("BurstablePerformance")]
             [Validation(Required=false)]
             public string BurstablePerformance { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPU cores of the instance type.</para>
+            /// The number of vCPU cores of the instance type.
             /// </summary>
             [NameInMap("Cores")]
             [Validation(Required=false)]
             public List<int?> Cores { get; set; }
 
             /// <summary>
-            /// <para>The instance types that you want to exclude.</para>
+            /// The instance types that you want to exclude.
             /// </summary>
             [NameInMap("ExcludedInstanceTypes")]
             [Validation(Required=false)]
             public List<string> ExcludedInstanceTypes { get; set; }
 
             /// <summary>
-            /// <para>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
-            /// <item><description>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> topic.</description></item>
-            /// <item><description>CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
-            /// </list>
-            /// <para>Valid values of N: 1 to 10.</para>
+            /// The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>EnterpriseLevel</para>
+            /// *   EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).
+            /// *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the [Overview of instance families](https://help.aliyun.com/document_detail/25378.html) topic.
+            /// *   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).
+            /// 
+            /// Valid values of N: 1 to 10.
             /// </summary>
             [NameInMap("InstanceFamilyLevel")]
             [Validation(Required=false)]
             public string InstanceFamilyLevel { get; set; }
 
             /// <summary>
-            /// <para>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>ecs.g5.large</para>
+            /// The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The maximum price of preemptible instances in extended configuration N.</para>
-            /// <remarks>
-            /// <para> If you specify one or more other <c>LaunchTemplateConfig.N.*</c> parameters, you must also specify <c>LaunchTemplateConfig.N.MaxPrice</c>.</para>
-            /// </remarks>
+            /// The maximum price of preemptible instances in extended configuration N.
             /// 
-            /// <b>Example:</b>
-            /// <para>3</para>
+            /// >  If you specify one or more other `LaunchTemplateConfig.N.*` parameters, you must also specify `LaunchTemplateConfig.N.MaxPrice`.
             /// </summary>
             [NameInMap("MaxPrice")]
             [Validation(Required=false)]
             public double? MaxPrice { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>false</para>
+            /// >  This parameter is in invitational preview and is not publicly available.
             /// </summary>
             [NameInMap("MaxQuantity")]
             [Validation(Required=false)]
             public int? MaxQuantity { get; set; }
 
             /// <summary>
-            /// <para>The memory sizes of the instance type.</para>
+            /// The memory sizes of the instance type.
             /// </summary>
             [NameInMap("Memories")]
             [Validation(Required=false)]
             public List<float?> Memories { get; set; }
 
             /// <summary>
-            /// <para>The priority of extended configuration N. A value of 0 indicates the highest priority. Valid values: 0 to ∞.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
+            /// The priority of extended configuration N. A value of 0 indicates the highest priority. Valid values: 0 to ∞.
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.</para>
-            /// <remarks>
-            /// <para> If you specify one or more other <c>LaunchTemplateConfig.N.*</c> parameters, you must also specify <c>LaunchTemplateConfig.N.VSwitchId</c>.</para>
-            /// </remarks>
+            /// The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.
             /// 
-            /// <b>Example:</b>
-            /// <para>vsw-sn5bsitu4lfzgc5o7****</para>
+            /// >  If you specify one or more other `LaunchTemplateConfig.N.*` parameters, you must also specify `LaunchTemplateConfig.N.VSwitchId`.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The weight of the instance type in extended configuration N. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.</para>
-            /// <para>The weight is calculated based on the computing power of the specified instance type and the minimum computing power of a single instance in the cluster to be created by the auto provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.</para>
-            /// <list type="bullet">
-            /// <item><description>For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.</description></item>
-            /// <item><description>For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.</description></item>
-            /// </list>
+            /// The weight of the instance type in extended configuration N. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.
             /// 
-            /// <b>Example:</b>
-            /// <para>2</para>
+            /// The weight is calculated based on the computing power of the specified instance type and the minimum computing power of a single instance in the cluster to be created by the auto provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.
+            /// 
+            /// *   For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.
+            /// *   For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.
             /// </summary>
             [NameInMap("WeightedCapacity")]
             [Validation(Required=false)]
@@ -927,49 +759,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the launch template associated with the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation to query available launch templates. When both LaunchTemplateId and <c>LaunchConfiguration.*</c> parameters are specified, LaunchTemplateId takes precedence.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>lt-bp1fgzds4bdogu03****</para>
+        /// The ID of the launch template associated with the auto provisioning group. You can call the [DescribeLaunchTemplates](https://help.aliyun.com/document_detail/73759.html) operation to query available launch templates. When both LaunchTemplateId and `LaunchConfiguration.*` parameters are specified, LaunchTemplateId takes precedence.
         /// </summary>
         [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The version of the launch template associated with the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/73761.html">DescribeLaunchTemplateVersions</a> operation to query the versions of available launch templates.</para>
-        /// <para>Default value: the default version of the launch template.</para>
+        /// The version of the launch template associated with the auto provisioning group. You can call the [DescribeLaunchTemplateVersions](https://help.aliyun.com/document_detail/73761.html) operation to query the versions of available launch templates.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Default value: the default version of the launch template.
         /// </summary>
         [NameInMap("LaunchTemplateVersion")]
         [Validation(Required=false)]
         public string LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum price of preemptible instances in the auto provisioning group.</para>
-        /// <remarks>
-        /// <para> When both <c>MaxSpotPrice</c> and <c>LaunchTemplateConfig.N.MaxPrice</c> are specified, the smaller one of the two parameter values is used.</para>
-        /// </remarks>
+        /// The maximum price of preemptible instances in the auto provisioning group.
         /// 
-        /// <b>Example:</b>
-        /// <para>2</para>
+        /// >  When both `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` are specified, the smaller one of the two parameter values is used.
         /// </summary>
         [NameInMap("MaxSpotPrice")]
         [Validation(Required=false)]
         public float? MaxSpotPrice { get; set; }
 
         /// <summary>
-        /// <para>The minimum target capacity of the auto provisioning group. The value must be a positive integer. When you specify this parameter, take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>This parameter takes effect only when <c>AutoProvisioningGroupType</c> is set to instant. </description></item>
-        /// <item><description>If the number of instances that can be created in the current region is smaller than the value of this parameter, the operation cannot be called and no instances are created. </description></item>
-        /// <item><description>If the number of instances that can be created in the current region is greater than the value of this parameter, instances can be created based on the specified parameters.</description></item>
-        /// </list>
+        /// The minimum target capacity of the auto provisioning group. The value must be a positive integer. When you specify this parameter, take note of the following items:
         /// 
-        /// <b>Example:</b>
-        /// <para>20</para>
+        /// - This parameter takes effect only when `AutoProvisioningGroupType` is set to instant. 
+        /// - If the number of instances that can be created in the current region is smaller than the value of this parameter, the operation cannot be called and no instances are created. 
+        /// - If the number of instances that can be created in the current region is greater than the value of this parameter, instances can be created based on the specified parameters.
         /// </summary>
         [NameInMap("MinTargetCapacity")]
         [Validation(Required=false)]
@@ -984,46 +803,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The policy for creating pay-as-you-go instances. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>lowest-price: cost optimization policy. The auto provisioning group selects the lowest-priced instance type to create instances.</description></item>
-        /// <item><description>prioritized: priority-based policy. The auto provisioning group creates instances based on the priority specified by <c>LaunchTemplateConfig.N.Priority</c>.</description></item>
-        /// </list>
-        /// <para>Default value: lowest-price.</para>
+        /// The policy for creating pay-as-you-go instances. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>prioritized</para>
+        /// *   lowest-price: cost optimization policy. The auto provisioning group selects the lowest-priced instance type to create instances.
+        /// *   prioritized: priority-based policy. The auto provisioning group creates instances based on the priority specified by `LaunchTemplateConfig.N.Priority`.
+        /// 
+        /// Default value: lowest-price.
         /// </summary>
         [NameInMap("PayAsYouGoAllocationStrategy")]
         [Validation(Required=false)]
         public string PayAsYouGoAllocationStrategy { get; set; }
 
         /// <summary>
-        /// <para>The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be less than or equal to the <c>TotalTargetCapacity</c> value.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be less than or equal to the `TotalTargetCapacity` value.
         /// </summary>
         [NameInMap("PayAsYouGoTargetCapacity")]
         [Validation(Required=false)]
         public string PayAsYouGoTargetCapacity { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to create the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the region in which to create the auto provisioning group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the auto provisioning group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-bp67acfmxazb4p****</para>
+        /// The ID of the resource group to which to assign the auto provisioning group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -1038,75 +846,60 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The policy for creating preemptible instances. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>lowest-price: cost optimization policy. The auto provisioning group selects the lowest-priced instance type to create instances.</description></item>
-        /// <item><description>diversified: balanced distribution policy. The auto provisioning group creates instances in zones that are specified in extended configurations and then evenly distributes the instances across the zones.</description></item>
-        /// <item><description>capacity-optimized: capacity-optimized distribution policy. The auto provisioning group creates instances of the optimal instance types across the optimal zones based on resource availability.</description></item>
-        /// </list>
-        /// <para>Default value: lowest-price.</para>
+        /// The policy for creating preemptible instances. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>diversified</para>
+        /// *   lowest-price: cost optimization policy. The auto provisioning group selects the lowest-priced instance type to create instances.
+        /// *   diversified: balanced distribution policy. The auto provisioning group creates instances in zones that are specified in extended configurations and then evenly distributes the instances across the zones.
+        /// *   capacity-optimized: capacity-optimized distribution policy. The auto provisioning group creates instances of the optimal instance types across the optimal zones based on resource availability.
+        /// 
+        /// Default value: lowest-price.
         /// </summary>
         [NameInMap("SpotAllocationStrategy")]
         [Validation(Required=false)]
         public string SpotAllocationStrategy { get; set; }
 
         /// <summary>
-        /// <para>The operation to be performed on the preemptible instance when it is interrupted. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>stop: stops the preemptible instance.</description></item>
-        /// <item><description>terminate: releases the preemptible instance.</description></item>
-        /// </list>
-        /// <para>Default value: terminate.</para>
+        /// The operation to be performed on the preemptible instance when it is interrupted. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>terminate</para>
+        /// *   stop: stops the preemptible instance.
+        /// *   terminate: releases the preemptible instance.
+        /// 
+        /// Default value: terminate.
         /// </summary>
         [NameInMap("SpotInstanceInterruptionBehavior")]
         [Validation(Required=false)]
         public string SpotInstanceInterruptionBehavior { get; set; }
 
         /// <summary>
-        /// <para>The number of preemptible instances of the lowest-priced instance type to be created by the auto provisioning group. This parameter takes effect when <c>SpotAllocationStrategy</c> is set to <c>lowest-price</c>.</para>
-        /// <para>The value must be smaller than the N value specified in <c>LaunchTemplateConfig.N</c>.</para>
+        /// The number of preemptible instances of the lowest-priced instance type to be created by the auto provisioning group. This parameter takes effect when `SpotAllocationStrategy` is set to `lowest-price`.
         /// 
-        /// <b>Example:</b>
-        /// <para>2</para>
+        /// The value must be smaller than the N value specified in `LaunchTemplateConfig.N`.
         /// </summary>
         [NameInMap("SpotInstancePoolsToUseCount")]
         [Validation(Required=false)]
         public int? SpotInstancePoolsToUseCount { get; set; }
 
         /// <summary>
-        /// <para>The target capacity of preemptible instances in the auto provisioning group. The value must be less than or equal to the <c>TotalTargetCapacity</c> value.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>20</para>
+        /// The target capacity of preemptible instances in the auto provisioning group. The value must be less than or equal to the `TotalTargetCapacity` value.
         /// </summary>
         [NameInMap("SpotTargetCapacity")]
         [Validation(Required=false)]
         public string SpotTargetCapacity { get; set; }
 
         /// <summary>
-        /// <para>The information of system disks on the instance.</para>
+        /// The information of system disks on the instance.
         /// </summary>
         [NameInMap("SystemDiskConfig")]
         [Validation(Required=false)]
         public List<CreateAutoProvisioningGroupRequestSystemDiskConfig> SystemDiskConfig { get; set; }
         public class CreateAutoProvisioningGroupRequestSystemDiskConfig : TeaModel {
             /// <summary>
-            /// <para>The category of the system disk. You can specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>cloud_efficiency: ultra disk.</description></item>
-            /// <item><description>cloud_ssd: standard SSD.</description></item>
-            /// <item><description>cloud_essd: ESSD</description></item>
-            /// <item><description>cloud: basic disk.</description></item>
-            /// </list>
+            /// The category of the system disk. You can specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>cloud_ssd</para>
+            /// - cloud_efficiency: ultra disk.
+            /// - cloud_ssd: standard SSD.
+            /// - cloud_essd: ESSD
+            /// - cloud: basic disk.
             /// </summary>
             [NameInMap("DiskCategory")]
             [Validation(Required=false)]
@@ -1115,29 +908,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The tags to add to the auto provisioning group.</para>
+        /// The tags to add to the auto provisioning group.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateAutoProvisioningGroupRequestTag> Tag { get; set; }
         public class CreateAutoProvisioningGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the auto provisioning group.</para>
-            /// <para>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// The key of tag N to add to the auto provisioning group.
             /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the auto provisioning group.</para>
-            /// <para>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
+            /// The value of tag N to add to the auto provisioning group.
             /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -1146,66 +935,57 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: releases the instances.</description></item>
-        /// <item><description>false: retains the instances.</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// Specifies whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// *   true: releases the instances.
+        /// *   false: retains the instances.
+        /// 
+        /// Default value: false.
         /// </summary>
         [NameInMap("TerminateInstances")]
         [Validation(Required=false)]
         public bool? TerminateInstances { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release instances in the auto provisioning group when the group expires. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: releases the instances.</description></item>
-        /// <item><description>false: only removes the instances from the auto provisioning group but does not release them.</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// Specifies whether to release instances in the auto provisioning group when the group expires. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// *   true: releases the instances.
+        /// *   false: only removes the instances from the auto provisioning group but does not release them.
+        /// 
+        /// Default value: false.
         /// </summary>
         [NameInMap("TerminateInstancesWithExpiration")]
         [Validation(Required=false)]
         public bool? TerminateInstancesWithExpiration { get; set; }
 
         /// <summary>
-        /// <para>The total target capacity of the auto provisioning group. The value must be a positive integer.</para>
-        /// <para>The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by <c>PayAsYouGoTargetCapacity</c> and the target capacity of preemptible instances specified by <c>SpotTargetCapacity</c>.</para>
-        /// <para>This parameter is required.</para>
+        /// The total target capacity of the auto provisioning group. The value must be a positive integer.
         /// 
-        /// <b>Example:</b>
-        /// <para>60</para>
+        /// The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by `PayAsYouGoTargetCapacity` and the target capacity of preemptible instances specified by `SpotTargetCapacity`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TotalTargetCapacity")]
         [Validation(Required=false)]
         public string TotalTargetCapacity { get; set; }
 
         /// <summary>
-        /// <para>The time at which to start the auto provisioning group. The period of time between this point in time and the point in time specified by <c>ValidUntil</c> is the validity period of the auto provisioning group.</para>
-        /// <para>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
-        /// <para>By default, an auto provisioning group is started immediately after it is created.</para>
+        /// The time at which to start the auto provisioning group. The period of time between this point in time and the point in time specified by `ValidUntil` is the validity period of the auto provisioning group.
         /// 
-        /// <b>Example:</b>
-        /// <para>2019-04-01T15:10:20Z</para>
+        /// Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// By default, an auto provisioning group is started immediately after it is created.
         /// </summary>
         [NameInMap("ValidFrom")]
         [Validation(Required=false)]
         public string ValidFrom { get; set; }
 
         /// <summary>
-        /// <para>The time at which the auto provisioning group expires. The period of time between this point in time and the point in time specified by <c>ValidFrom</c> is the validity period of the auto provisioning group.</para>
-        /// <para>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
-        /// <para>Default value: 2099-12-31T23:59:59Z.</para>
+        /// The time at which the auto provisioning group expires. The period of time between this point in time and the point in time specified by `ValidFrom` is the validity period of the auto provisioning group.
         /// 
-        /// <b>Example:</b>
-        /// <para>2019-06-01T15:10:20Z</para>
+        /// Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// Default value: 2099-12-31T23:59:59Z.
         /// </summary>
         [NameInMap("ValidUntil")]
         [Validation(Required=false)]

@@ -10,50 +10,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ExportImageRequest : TeaModel {
         /// <summary>
-        /// <para>The format in which you want to export the custom image. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>raw</description></item>
-        /// <item><description>vhd</description></item>
-        /// <item><description>qcow2</description></item>
-        /// <item><description>vmdk</description></item>
-        /// <item><description>vdi</description></item>
-        /// </list>
-        /// <para>Default value: raw.</para>
+        /// The format in which you want to export the custom image. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>raw</para>
+        /// *   raw
+        /// *   vhd
+        /// *   qcow2
+        /// *   vmdk
+        /// *   vdi
+        /// 
+        /// Default value: raw.
         /// </summary>
         [NameInMap("ImageFormat")]
         [Validation(Required=false)]
         public string ImageFormat { get; set; }
 
         /// <summary>
-        /// <para>The custom image ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The custom image ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>m-bp67acfmxazb4p****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket in which you want to store the exported custom image.</para>
-        /// <para>This parameter is required.</para>
+        /// The OSS bucket in which you want to store the exported custom image.
         /// 
-        /// <b>Example:</b>
-        /// <para>testexportImage</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OSSBucket")]
         [Validation(Required=false)]
         public string OSSBucket { get; set; }
 
         /// <summary>
-        /// <para>The prefix for the name of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>EcsExport</para>
+        /// The prefix for the name of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.
         /// </summary>
         [NameInMap("OSSPrefix")]
         [Validation(Required=false)]
@@ -64,11 +54,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the custom image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -83,10 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role that you want to use to export the custom image.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>AliyunECSImageExportDefaultRole</para>
+        /// The name of the RAM role that you want to use to export the custom image.
         /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]

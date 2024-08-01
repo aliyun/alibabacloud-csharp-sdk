@@ -10,66 +10,49 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfacesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance to which the ENI is attached.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>i-bp1e2l6djkndyuli****</para>
+        /// The ID of the instance to which the ENI is attached.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the IPv6 address of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2408:4321:180:1701:94c7:bc38:3bfa:****</para>
+        /// An array that consists of the IPv6 address of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.
         /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. Valid values: 10 to 500.</para>
-        /// <para>Default values:</para>
-        /// <list type="bullet">
-        /// <item><description>If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</description></item>
-        /// <item><description>If this parameter is set to a value greater than 500, the default value is 500.</description></item>
-        /// </list>
+        /// The maximum number of entries to return on each page. Valid values: 10 to 500.
         /// 
-        /// <b>Example:</b>
-        /// <para>50</para>
+        /// Default values:
+        /// 
+        /// *   If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.
+        /// *   If this parameter is set to a value greater than 500, the default value is 500.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the IDs of the ENIs. You specify multiple ENI IDs. Valid values of N: 1 to 100.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>eni-bp125p95hhdhn3ot****</para>
+        /// An array that consists of the IDs of the ENIs. You specify multiple ENI IDs. Valid values of N: 1 to 100.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ENI.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test-eni-name</para>
+        /// The name of the ENI.
         /// </summary>
         [NameInMap("NetworkInterfaceName")]
         [Validation(Required=false)]
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the <c>NextToken</c> value returned in the last call to this operation.</para>
-        /// <para>For more information about how to check the responses returned by this operation, see the preceding &quot;Description&quot; section.</para>
+        /// The query token. Set the value to the `NextToken` value returned in the last call to this operation.
         /// 
-        /// <b>Example:</b>
-        /// <para>AAAAAdDWBF2****</para>
+        /// For more information about how to check the responses returned by this operation, see the preceding "Description" section.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -83,36 +66,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <term><b>Obsolete</b></term>
-        /// 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
-        /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
-        /// </remarks>
+        /// The page number.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
+        /// 
+        /// >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         [Obsolete]
         public int? PageNumber { get; set; }
 
-        /// <term><b>Obsolete</b></term>
-        /// 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 1000.</para>
-        /// <para>Default value: 10.</para>
-        /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
-        /// </remarks>
+        /// The number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>100</para>
+        /// Valid values: 1 to 1000.
+        /// 
+        /// Default value: 10.
+        /// 
+        /// >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -120,44 +95,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The primary private IPv4 address of the ENI.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>192.168.**.**</para>
+        /// The primary private IPv4 address of the ENI.
         /// </summary>
         [NameInMap("PrimaryIpAddress")]
         [Validation(Required=false)]
         public string PrimaryIpAddress { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>192.168.**.**</para>
+        /// An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public List<string> PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the ENI. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the ENI belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</para>
-        /// <remarks>
-        /// <para>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
-        /// </remarks>
+        /// The ID of the resource group to which the ENI belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
         /// 
-        /// <b>Example:</b>
-        /// <para>rg-bp67acfmxazb4p****</para>
+        /// > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -172,70 +135,55 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group to which the secondary ENI belongs.</para>
-        /// <list type="bullet">
-        /// <item><description>To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</description></item>
-        /// <item><description>To query the details of primary ENIs based on the ID of a security group, call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation and specify the <c>SecurityGroupId</c> parameter.</description></item>
-        /// </list>
+        /// The ID of the security group to which the secondary ENI belongs.
         /// 
-        /// <b>Example:</b>
-        /// <para>sg-bp144yr32sx6ndw****</para>
+        /// *   To query the details of secondary ENIs based on the ID of a security group, specify this parameter.
+        /// *   To query the details of primary ENIs based on the ID of a security group, call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation and specify the `SecurityGroupId` parameter.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the user of the ENI is an Alibaba Cloud service or a distributor.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// Specifies whether the user of the ENI is an Alibaba Cloud service or a distributor.
         /// </summary>
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// <para>The state of the ENI. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Available: The ENI is available.</description></item>
-        /// <item><description>Attaching: The ENI is being attached to an instance.</description></item>
-        /// <item><description>InUse: The ENI is attached to an instance.</description></item>
-        /// <item><description>Detaching: The ENI is being detached from an instance.</description></item>
-        /// <item><description>Deleting: The ENI is being deleted.</description></item>
-        /// </list>
-        /// <para>This parameter is empty by default, which indicates that ENIs in all states are queried.</para>
+        /// The state of the ENI. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Available</para>
+        /// *   Available: The ENI is available.
+        /// *   Attaching: The ENI is being attached to an instance.
+        /// *   InUse: The ENI is attached to an instance.
+        /// *   Detaching: The ENI is being detached from an instance.
+        /// *   Deleting: The ENI is being deleted.
+        /// 
+        /// This parameter is empty by default, which indicates that ENIs in all states are queried.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags to use for query.</para>
+        /// The tags to use for query.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeNetworkInterfacesRequestTag> Tag { get; set; }
         public class DescribeNetworkInterfacesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the ENI. Valid values of N: 1 to 20.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// The key of tag N of the ENI. Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the ENI. Valid values of N: 1 to 20.</para>
-            /// <para>If a single tag is specified to query ENIs, up to 1,000 ENIs that have this tag can be returned. If multiple tags are specified to query ENIs, up to 1,000 ENIs that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// The value of tag N of the ENI. Valid values of N: 1 to 20.
             /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// If a single tag is specified to query ENIs, up to 1,000 ENIs that have this tag can be returned. If multiple tags are specified to query ENIs, up to 1,000 ENIs that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -244,35 +192,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The type of the ENI. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Primary</description></item>
-        /// <item><description>Secondary</description></item>
-        /// </list>
-        /// <para>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</para>
+        /// The type of the ENI. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Secondary</para>
+        /// *   Primary
+        /// *   Secondary
+        /// 
+        /// This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch with which the ENI is associated.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vsw-bp16usj2p27htro3****</para>
+        /// The ID of the vSwitch with which the ENI is associated.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vsw-bp16usj2p27htro3****</para>
+        /// The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

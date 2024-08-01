@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the charges for the order.</para>
+        /// Details about the charges for the order.
         /// </summary>
         [NameInMap("FeeOfInstances")]
         [Validation(Required=false)]
@@ -21,32 +21,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> FeeOfInstance { get; set; }
             public class ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance : TeaModel {
                 /// <summary>
-                /// <para>The unit of currency for the bill.</para>
-                /// <para>Alibaba Cloud China site (aliyun.com): CNY.</para>
-                /// <para>Alibaba Cloud International site (alibabacloud.com): USD.</para>
+                /// The unit of currency for the bill.
                 /// 
-                /// <b>Example:</b>
-                /// <para>CNY</para>
+                /// Alibaba Cloud China site (aliyun.com): CNY.
+                /// 
+                /// Alibaba Cloud International site (alibabacloud.com): USD.
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The cost value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
+                /// The cost value.
                 /// </summary>
                 [NameInMap("Fee")]
                 [Validation(Required=false)]
                 public string Fee { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp67acfmxazb4p****</para>
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -57,20 +50,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The order ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>20413515388****</para>
+        /// The order ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>B61C08E5-403A-46A2-96C1-F7B1216DB10C</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

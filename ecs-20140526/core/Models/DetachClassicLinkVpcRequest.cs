@@ -10,57 +10,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachClassicLinkVpcRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the classic network-type instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the classic network-type instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>i-bp67acfmxazb4p****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>155780923770</para>
-        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the classic network-type instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the classic network-type instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ECSforCloud</para>
-        /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>155780923770</para>
-        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the instance is linked.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the VPC to which the instance is linked.
         /// 
-        /// <b>Example:</b>
-        /// <para>vpc-bp67acfmxazb4p****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

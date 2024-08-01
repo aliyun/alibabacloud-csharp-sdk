@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResetDisksResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the rollback operation.</para>
+        /// Details about the rollback operation.
         /// </summary>
         [NameInMap("OperationProgressSet")]
         [Validation(Required=false)]
@@ -21,39 +21,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<ResetDisksResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class ResetDisksResponseBodyOperationProgressSetOperationProgress : TeaModel {
                 /// <summary>
-                /// <para>The error code that is returned if the request failed. This parameter is empty if the request is successful.</para>
-                /// <para>For information about error codes and error messages, see <a href="https://error-center.alibabacloud.com/status/product/Ecs">Service error codes</a>.</para>
+                /// The error code that is returned if the request failed. This parameter is empty if the request is successful.
                 /// 
-                /// <b>Example:</b>
-                /// <para>400</para>
+                /// For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The error message that is returned if the request failed. This parameter is empty if the request is successful.</para>
-                /// <para>For information about error codes and error messages, see <a href="https://error-center.alibabacloud.com/status/product/Ecs">Service error codes</a>.</para>
+                /// The error message that is returned if the request failed. This parameter is empty if the request is successful.
                 /// 
-                /// <b>Example:</b>
-                /// <para>testErrorMsg</para>
+                /// For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).
                 /// </summary>
                 [NameInMap("ErrorMsg")]
                 [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the request is successful. If the request is successful, Success is returned. If the request failed, an error code and an error message are returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Success</para>
+                /// Indicates whether the request is successful. If the request is successful, Success is returned. If the request failed, an error code and an error message are returned.
                 /// </summary>
                 [NameInMap("OperationStatus")]
                 [Validation(Required=false)]
                 public string OperationStatus { get; set; }
 
                 /// <summary>
-                /// <para>Details about the resources.</para>
+                /// Details about the resources.
                 /// </summary>
                 [NameInMap("RelatedItemSet")]
                 [Validation(Required=false)]
@@ -64,20 +57,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem> RelatedItem { get; set; }
                     public class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem : TeaModel {
                         /// <summary>
-                        /// <para>The resource name.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>SnapshotId</para>
+                        /// The resource name.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The resource ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>s-j6cdofbycydvg7ey****</para>
+                        /// The resource ID.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -92,10 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>3D66C85C-AA97-4A00-B0ED-2D9A80FE782C</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

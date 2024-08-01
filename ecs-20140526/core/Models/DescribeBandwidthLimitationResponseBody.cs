@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeBandwidthLimitationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the maximum public bandwidth.</para>
+        /// Details about the maximum public bandwidth.
         /// </summary>
         [NameInMap("Bandwidths")]
         [Validation(Required=false)]
@@ -21,44 +21,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth> Bandwidth { get; set; }
             public class DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth : TeaModel {
                 /// <summary>
-                /// <para>The billing method for network usage. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>PayByBandwidth</description></item>
-                /// <item><description>PayByTraffic</description></item>
-                /// </list>
+                /// The billing method for network usage. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>PayByTraffic</para>
+                /// *   PayByBandwidth
+                /// *   PayByTraffic
                 /// </summary>
                 [NameInMap("InternetChargeType")]
                 [Validation(Required=false)]
                 public string InternetChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The maximum public bandwidth.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>100</para>
+                /// The maximum public bandwidth.
                 /// </summary>
                 [NameInMap("Max")]
                 [Validation(Required=false)]
                 public int? Max { get; set; }
 
                 /// <summary>
-                /// <para>The minimum public bandwidth.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
+                /// The minimum public bandwidth.
                 /// </summary>
                 [NameInMap("Min")]
                 [Validation(Required=false)]
                 public int? Min { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the public bandwidth.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Mbps</para>
+                /// The unit of the public bandwidth.
                 /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
@@ -69,10 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

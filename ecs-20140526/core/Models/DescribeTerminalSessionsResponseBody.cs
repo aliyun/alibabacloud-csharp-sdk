@@ -10,27 +10,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTerminalSessionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>AAAAAdDWBF2****</para>
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the sessions.</para>
+        /// The information of the sessions.
         /// </summary>
         [NameInMap("Sessions")]
         [Validation(Required=false)]
@@ -41,17 +35,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeTerminalSessionsResponseBodySessionsSession> Session { get; set; }
             public class DescribeTerminalSessionsResponseBodySessionsSession : TeaModel {
                 /// <summary>
-                /// <para>The IP address of the client used to establish connections.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.1.1</para>
+                /// The IP address of the client used to establish connections.
                 /// </summary>
                 [NameInMap("ClientIP")]
                 [Validation(Required=false)]
                 public string ClientIP { get; set; }
 
                 /// <summary>
-                /// <para>The information of the connections.</para>
+                /// The information of the connections.
                 /// </summary>
                 [NameInMap("Connections")]
                 [Validation(Required=false)]
@@ -62,68 +53,51 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeTerminalSessionsResponseBodySessionsSessionConnectionsConnection> Connection { get; set; }
                     public class DescribeTerminalSessionsResponseBodySessionsSessionConnectionsConnection : TeaModel {
                         /// <summary>
-                        /// <para>The reason why the connection was closed. This parameter is returned only when the <c>Status</c> value is <c>Disconnected</c>, <c>Terminated</c>, or <c>Failed</c>. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>InstanceNotExists: The specified instance did not exist or was released.</description></item>
-                        /// <item><description>InstanceNotRunning: The specified instance was not running.</description></item>
-                        /// <item><description>DeliveryTimeout: The connection timed out.</description></item>
-                        /// <item><description>AgentNeedUpgrade: Cloud Assistant Agent required an upgrade.</description></item>
-                        /// <item><description>AgentNotOnline: Cloud Assistant Agent was not connected to the Cloud Assistant server.</description></item>
-                        /// <item><description>MessageFormatInvalid: The message format was invalid.</description></item>
-                        /// <item><description>AgentSocketClosed: The connection was closed as expected.</description></item>
-                        /// <item><description>ClientClosed: Session Manager Client closed the connection.</description></item>
-                        /// </list>
+                        /// The reason why the connection was closed. This parameter is returned only when the `Status` value is `Disconnected`, `Terminated`, or `Failed`. Valid values:
                         /// 
-                        /// <b>Example:</b>
-                        /// <para>AgentNeedUpgrade</para>
+                        /// *   InstanceNotExists: The specified instance did not exist or was released.
+                        /// *   InstanceNotRunning: The specified instance was not running.
+                        /// *   DeliveryTimeout: The connection timed out.
+                        /// *   AgentNeedUpgrade: Cloud Assistant Agent required an upgrade.
+                        /// *   AgentNotOnline: Cloud Assistant Agent was not connected to the Cloud Assistant server.
+                        /// *   MessageFormatInvalid: The message format was invalid.
+                        /// *   AgentSocketClosed: The connection was closed as expected.
+                        /// *   ClientClosed: Session Manager Client closed the connection.
                         /// </summary>
                         [NameInMap("ClosedReason")]
                         [Validation(Required=false)]
                         public string ClosedReason { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the connection was closed.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2024-01-19T09:16:46Z</para>
+                        /// The time when the connection was closed.
                         /// </summary>
                         [NameInMap("EndTime")]
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
 
                         /// <summary>
-                        /// <para>The instance ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>i-bp1i7gg30r52z2em****</para>
+                        /// The instance ID.
                         /// </summary>
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
                         public string InstanceId { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the connection started to be established.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2024-01-19T09:16:40Z</para>
+                        /// The time when the connection started to be established.
                         /// </summary>
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
                         public string StartTime { get; set; }
 
                         /// <summary>
-                        /// <para>The state of the session. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>Connecting: The connection is being established.</description></item>
-                        /// <item><description>Connected: The connection is established.</description></item>
-                        /// <item><description>Disconnected: The connection is disconnected.</description></item>
-                        /// <item><description>Terminating: The session is being terminated.</description></item>
-                        /// <item><description>Terminated: The session is terminated.</description></item>
-                        /// <item><description>Failed: The connection failed.</description></item>
-                        /// </list>
+                        /// The state of the session. Valid values:
                         /// 
-                        /// <b>Example:</b>
-                        /// <para>Connecting</para>
+                        /// *   Connecting: The connection is being established.
+                        /// *   Connected: The connection is established.
+                        /// *   Disconnected: The connection is disconnected.
+                        /// *   Terminating: The session is being terminated.
+                        /// *   Terminated: The session is terminated.
+                        /// *   Failed: The connection failed.
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
@@ -134,80 +108,57 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the session was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2024-01-19T09:15:46Z</para>
+                /// The time when the session was created.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The principal type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Account: an Alibaba Cloud account</description></item>
-                /// <item><description>RAMUser: a RAM user</description></item>
-                /// <item><description>AssumedRoleUser: a RAM role</description></item>
-                /// </list>
+                /// The principal type. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>RAMUser</para>
+                /// *   Account: an Alibaba Cloud account
+                /// *   RAMUser: a RAM user
+                /// *   AssumedRoleUser: a RAM role
                 /// </summary>
                 [NameInMap("IdentityType")]
                 [Validation(Required=false)]
                 public string IdentityType { get; set; }
 
                 /// <summary>
-                /// <para>The port number of the instance, which is used for data forwarding. If no port number was specified for data forwarding when the session was created, this parameter is empty.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>22</para>
+                /// The port number of the instance, which is used for data forwarding. If no port number was specified for data forwarding when the session was created, this parameter is empty.
                 /// </summary>
                 [NameInMap("PortNumber")]
                 [Validation(Required=false)]
                 public int? PortNumber { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the principal. Valid values based on the <c>IdentityType</c> value:</para>
-                /// <list type="bullet">
-                /// <item><description>If the requester uses an Alibaba Cloud account to call the operation, the ID of the Alibaba Cloud account is returned.</description></item>
-                /// <item><description>If the requester uses a Resource Access Management (RAM) user to call the operation, the ID of the RAM user is returned.</description></item>
-                /// <item><description>If the requester uses a RAM role to call the operation, the ID of the principal that actually calls the operation is returned.</description></item>
-                /// </list>
+                /// The ID of the principal. Valid values based on the `IdentityType` value:
                 /// 
-                /// <b>Example:</b>
-                /// <para>123456xxxx</para>
+                /// *   If the requester uses an Alibaba Cloud account to call the operation, the ID of the Alibaba Cloud account is returned.
+                /// *   If the requester uses a Resource Access Management (RAM) user to call the operation, the ID of the RAM user is returned.
+                /// *   If the requester uses a RAM role to call the operation, the ID of the principal that actually calls the operation is returned.
                 /// </summary>
                 [NameInMap("PrincipalId")]
                 [Validation(Required=false)]
                 public string PrincipalId { get; set; }
 
                 /// <summary>
-                /// <para>The session ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>s-hz023od0x9****</para>
+                /// The session ID.
                 /// </summary>
                 [NameInMap("SessionId")]
                 [Validation(Required=false)]
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The address of the service that was accessed in a virtual private cloud (VPC) from the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.0.246</para>
+                /// The address of the service that was accessed in a virtual private cloud (VPC) from the instance.
                 /// </summary>
                 [NameInMap("TargetServer")]
                 [Validation(Required=false)]
                 public string TargetServer { get; set; }
 
                 /// <summary>
-                /// <para>The username used to establish connections.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>root</para>
+                /// The username used to establish connections.
                 /// </summary>
                 [NameInMap("Username")]
                 [Validation(Required=false)]

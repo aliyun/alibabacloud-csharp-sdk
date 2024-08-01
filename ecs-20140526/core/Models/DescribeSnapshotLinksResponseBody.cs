@@ -10,37 +10,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotLinksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>50</para>
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the snapshot chains.</para>
+        /// The details of the snapshot chains.
         /// </summary>
         [NameInMap("SnapshotLinks")]
         [Validation(Required=false)]
@@ -51,131 +42,92 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink> SnapshotLink { get; set; }
             public class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink : TeaModel {
                 /// <summary>
-                /// <para>The category of the snapshot.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>standard</para>
+                /// The category of the snapshot.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp1h6jmbefj2cyqs****</para>
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testInstanceName</para>
+                /// The name of the instance.
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the instant access feature is enabled. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</description></item>
-                /// <item><description>false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</description></item>
-                /// </list>
-                /// <remarks>
-                /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
-                /// </remarks>
+                /// Indicates whether the instant access feature is enabled. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
+                /// *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+                /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+                /// 
+                /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
                 /// </summary>
                 [NameInMap("InstantAccess")]
                 [Validation(Required=false)]
                 public bool? InstantAccess { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the source disk.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// The region ID of the source disk.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the snapshot chain.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>sl-2ze0y1jwzpb1geqx****</para>
+                /// The ID of the snapshot chain.
                 /// </summary>
                 [NameInMap("SnapshotLinkId")]
                 [Validation(Required=false)]
                 public string SnapshotLinkId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the source disk. This parameter is retained even if the source disk is deleted.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>d-bp1d6tsvznfghy7y****</para>
+                /// The ID of the source disk. This parameter is retained even if the source disk is deleted.
                 /// </summary>
                 [NameInMap("SourceDiskId")]
                 [Validation(Required=false)]
                 public string SourceDiskId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the source disk.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testSourceDiskName</para>
+                /// The name of the source disk.
                 /// </summary>
                 [NameInMap("SourceDiskName")]
                 [Validation(Required=false)]
                 public string SourceDiskName { get; set; }
 
                 /// <summary>
-                /// <para>The capacity of the source disk. Unit: GiB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>40</para>
+                /// The capacity of the source disk. Unit: GiB.
                 /// </summary>
                 [NameInMap("SourceDiskSize")]
                 [Validation(Required=false)]
                 public int? SourceDiskSize { get; set; }
 
                 /// <summary>
-                /// <para>The type of the source disk. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>system: system disk</description></item>
-                /// <item><description>data: data disk</description></item>
-                /// </list>
+                /// The type of the source disk. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>data</para>
+                /// *   system: system disk
+                /// *   data: data disk
                 /// </summary>
                 [NameInMap("SourceDiskType")]
                 [Validation(Required=false)]
                 public string SourceDiskType { get; set; }
 
                 /// <summary>
-                /// <para>The total number of snapshots.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
+                /// The total number of snapshots.
                 /// </summary>
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
                 public int? TotalCount { get; set; }
 
                 /// <summary>
-                /// <para>The total size of all snapshots in the snapshot chain. Unit: byte.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2097152</para>
+                /// The total size of all snapshots in the snapshot chain. Unit: byte.
                 /// </summary>
                 [NameInMap("TotalSize")]
                 [Validation(Required=false)]
@@ -186,10 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>9</para>
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

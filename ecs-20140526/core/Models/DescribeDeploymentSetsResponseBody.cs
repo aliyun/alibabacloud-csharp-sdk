@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDeploymentSetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the deployment sets.</para>
+        /// Details about the deployment sets.
         /// </summary>
         [NameInMap("DeploymentSets")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet> DeploymentSet { get; set; }
             public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet : TeaModel {
                 /// <summary>
-                /// <para>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains Elastic Compute Service (ECS) instances. The value contains the capacities of the deployment set in different zones.</para>
+                /// Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains Elastic Compute Service (ECS) instances. The value contains the capacities of the deployment set in different zones.
                 /// </summary>
                 [NameInMap("Capacities")]
                 [Validation(Required=false)]
@@ -32,30 +32,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacitiesCapacity> Capacity { get; set; }
                     public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacitiesCapacity : TeaModel {
                         /// <summary>
-                        /// <para>The number of ECS instances that can be added to the deployment set within the zone.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>18</para>
+                        /// The number of ECS instances that can be added to the deployment set within the zone.
                         /// </summary>
                         [NameInMap("AvailableAmount")]
                         [Validation(Required=false)]
                         public int? AvailableAmount { get; set; }
 
                         /// <summary>
-                        /// <para>The number of ECS instances that belong to the zone in the deployment set.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2</para>
+                        /// The number of ECS instances that belong to the zone in the deployment set.
                         /// </summary>
                         [NameInMap("UsedAmount")]
                         [Validation(Required=false)]
                         public int? UsedAmount { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>cn-hangzhou-i</para>
+                        /// The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -66,100 +57,72 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the deployment set was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2021-12-07T06:01:46Z</para>
+                /// The time when the deployment set was created.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the deployment set.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testDeploymentSetDescription</para>
+                /// The description of the deployment set.
                 /// </summary>
                 [NameInMap("DeploymentSetDescription")]
                 [Validation(Required=false)]
                 public string DeploymentSetDescription { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the deployment set.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ds-bp67acfmxazb4ph****</para>
+                /// The ID of the deployment set.
                 /// </summary>
                 [NameInMap("DeploymentSetId")]
                 [Validation(Required=false)]
                 public string DeploymentSetId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the deployment set.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testDeploymentSetName</para>
+                /// The name of the deployment set.
                 /// </summary>
                 [NameInMap("DeploymentSetName")]
                 [Validation(Required=false)]
                 public string DeploymentSetName { get; set; }
 
                 /// <summary>
-                /// <para>The deployment strategy. The value of this response parameter is that of the <c>Strategy</c> request parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Availability</para>
+                /// The deployment strategy. The value of this response parameter is that of the `Strategy` request parameter.
                 /// </summary>
                 [NameInMap("DeploymentStrategy")]
                 [Validation(Required=false)]
                 public string DeploymentStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The deployment domain.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>default</para>
+                /// The deployment domain.
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// <para>The deployment granularity.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>host</para>
+                /// The deployment granularity.
                 /// </summary>
                 [NameInMap("Granularity")]
                 [Validation(Required=false)]
                 public string Granularity { get; set; }
 
                 /// <summary>
-                /// <para>The number of deployment set groups in the deployment set.</para>
-                /// <remarks>
-                /// <para> This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.</para>
-                /// </remarks>
+                /// The number of deployment set groups in the deployment set.
                 /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
+                /// >  This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.
                 /// </summary>
                 [NameInMap("GroupCount")]
                 [Validation(Required=false)]
                 public int? GroupCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of instances in the deployment set.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
+                /// The number of instances in the deployment set.
                 /// </summary>
                 [NameInMap("InstanceAmount")]
                 [Validation(Required=false)]
                 public int? InstanceAmount { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the instances in the deployment set.</para>
+                /// The IDs of the instances in the deployment set.
                 /// </summary>
                 [NameInMap("InstanceIds")]
                 [Validation(Required=false)]
@@ -172,10 +135,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The deployment strategy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>LooseDispersion</para>
+                /// The deployment strategy.
                 /// </summary>
                 [NameInMap("Strategy")]
                 [Validation(Required=false)]
@@ -186,50 +146,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the deployment set.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// The region ID of the deployment set.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of deployment sets returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The total number of deployment sets returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

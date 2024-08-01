@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfacePermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of ENI N. You must specify <c>NetworkInterfaceId</c> or <c>NetworkInterfacePermissionId.N</c> to determine the query range.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>eni-bp17pdijfczax****</para>
+        /// The ID of ENI N. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the query range.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of ENI permissions. You can specify up to 100 ENI permission IDs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>eni-perm-bp1cs4lwn56lfb****</para>
+        /// The IDs of ENI permissions. You can specify up to 100 ENI permission IDs.
         /// </summary>
         [NameInMap("NetworkInterfacePermissionId")]
         [Validation(Required=false)]
@@ -38,35 +32,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// The page number.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// The number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Maximum value: 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ENI permission. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the ENI permission. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

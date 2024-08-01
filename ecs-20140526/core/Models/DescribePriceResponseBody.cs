@@ -10,36 +10,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the prices and promotion rules.</para>
+        /// The information about the prices and promotion rules.
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The price.</para>
+            /// The price.
             /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribePriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The currency unit.</para>
-                /// <para>Alibaba Cloud China site (aliyun.com): CNY.</para>
-                /// <para>Alibaba Cloud International site (alibabacloud.com): USD.</para>
+                /// The currency unit.
                 /// 
-                /// <b>Example:</b>
-                /// <para>CNY</para>
+                /// Alibaba Cloud China site (aliyun.com): CNY.
+                /// 
+                /// Alibaba Cloud International site (alibabacloud.com): USD.
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The information about the price.</para>
-                /// <remarks>
-                /// <para> This parameter is returned only when ResourceType is set to instance.</para>
-                /// </remarks>
+                /// The information about the price.
+                /// 
+                /// >  This parameter is returned only when ResourceType is set to instance.
                 /// </summary>
                 [NameInMap("DetailInfos")]
                 [Validation(Required=false)]
@@ -50,44 +48,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribePriceResponseBodyPriceInfoPriceDetailInfosDetailInfo> DetailInfo { get; set; }
                     public class DescribePriceResponseBodyPriceInfoPriceDetailInfosDetailInfo : TeaModel {
                         /// <summary>
-                        /// <para>The discount.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>655.2</para>
+                        /// The discount.
                         /// </summary>
                         [NameInMap("DiscountPrice")]
                         [Validation(Required=false)]
                         public float? DiscountPrice { get; set; }
 
                         /// <summary>
-                        /// <para>The original price.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>4368</para>
+                        /// The original price.
                         /// </summary>
                         [NameInMap("OriginalPrice")]
                         [Validation(Required=false)]
                         public float? OriginalPrice { get; set; }
 
                         /// <summary>
-                        /// <para>The resource name. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>InstanceType</description></item>
-                        /// <item><description>bandwidth</description></item>
-                        /// <item><description>image</description></item>
-                        /// <item><description>SystemDisk</description></item>
-                        /// <item><description>DataDisk</description></item>
-                        /// </list>
+                        /// The resource name. Valid values:
                         /// 
-                        /// <b>Example:</b>
-                        /// <para>instance</para>
+                        /// *   InstanceType
+                        /// *   bandwidth
+                        /// *   image
+                        /// *   SystemDisk
+                        /// *   DataDisk
                         /// </summary>
                         [NameInMap("Resource")]
                         [Validation(Required=false)]
                         public string Resource { get; set; }
 
                         /// <summary>
-                        /// <para>Details about the pricing rules.</para>
+                        /// Details about the pricing rules.
                         /// </summary>
                         [NameInMap("SubRules")]
                         [Validation(Required=false)]
@@ -98,20 +86,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribePriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule> Rule { get; set; }
                             public class DescribePriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule : TeaModel {
                                 /// <summary>
-                                /// <para>The description of the pricing rule.</para>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>Receive a 15% discount on a 1-year subscription</para>
+                                /// The description of the pricing rule.
                                 /// </summary>
                                 [NameInMap("Description")]
                                 [Validation(Required=false)]
                                 public string Description { get; set; }
 
                                 /// <summary>
-                                /// <para>The ID of the pricing rule.</para>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>587</para>
+                                /// The ID of the pricing rule.
                                 /// </summary>
                                 [NameInMap("RuleId")]
                                 [Validation(Required=false)]
@@ -122,10 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The transaction price.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>3712.8</para>
+                        /// The transaction price.
                         /// </summary>
                         [NameInMap("TradePrice")]
                         [Validation(Required=false)]
@@ -136,40 +115,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The discount.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>655.2</para>
+                /// The discount.
                 /// </summary>
                 [NameInMap("DiscountPrice")]
                 [Validation(Required=false)]
                 public float? DiscountPrice { get; set; }
 
                 /// <summary>
-                /// <para>The original price.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>4368</para>
+                /// The original price.
                 /// </summary>
                 [NameInMap("OriginalPrice")]
                 [Validation(Required=false)]
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The hourly price of the reserved instance for which the No Upfront or Partial Upfront payment option is used.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
+                /// The hourly price of the reserved instance for which the No Upfront or Partial Upfront payment option is used.
                 /// </summary>
                 [NameInMap("ReservedInstanceHourPrice")]
                 [Validation(Required=false)]
                 public float? ReservedInstanceHourPrice { get; set; }
 
                 /// <summary>
-                /// <para>The transaction price of the order. The transaction price is equal to the original price minus the discount.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3712.8</para>
+                /// The transaction price of the order. The transaction price is equal to the original price minus the discount.
                 /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
@@ -178,56 +145,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The related price.</para>
+            /// The related price.
             /// </summary>
             [NameInMap("RelatedPrice")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoRelatedPrice RelatedPrice { get; set; }
             public class DescribePriceResponseBodyPriceInfoRelatedPrice : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud Marketplace image price.</para>
+                /// The Alibaba Cloud Marketplace image price.
                 /// </summary>
                 [NameInMap("MarketplaceImagePrice")]
                 [Validation(Required=false)]
                 public DescribePriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice MarketplaceImagePrice { get; set; }
                 public class DescribePriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice : TeaModel {
                     /// <summary>
-                    /// <para>The currency unit.</para>
-                    /// <para>China site (aliyun.com): CNY</para>
-                    /// <para>International site (alibabacloud.com): USD</para>
+                    /// The currency unit.
                     /// 
-                    /// <b>Example:</b>
-                    /// <para>CNY</para>
+                    /// China site (aliyun.com): CNY
+                    /// 
+                    /// International site (alibabacloud.com): USD
                     /// </summary>
                     [NameInMap("Currency")]
                     [Validation(Required=false)]
                     public string Currency { get; set; }
 
                     /// <summary>
-                    /// <para>The discount.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
+                    /// The discount.
                     /// </summary>
                     [NameInMap("DiscountPrice")]
                     [Validation(Required=false)]
                     public float? DiscountPrice { get; set; }
 
                     /// <summary>
-                    /// <para>The original price.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>100</para>
+                    /// The original price.
                     /// </summary>
                     [NameInMap("OriginalPrice")]
                     [Validation(Required=false)]
                     public float? OriginalPrice { get; set; }
 
                     /// <summary>
-                    /// <para>The transaction price, which is equal to the original price minus the discount.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>100</para>
+                    /// The transaction price, which is equal to the original price minus the discount.
                     /// </summary>
                     [NameInMap("TradePrice")]
                     [Validation(Required=false)]
@@ -238,7 +195,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The information about the promotion rules.</para>
+            /// The information about the promotion rules.
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -249,20 +206,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<DescribePriceResponseBodyPriceInfoRulesRule> Rule { get; set; }
                 public class DescribePriceResponseBodyPriceInfoRulesRule : TeaModel {
                     /// <summary>
-                    /// <para>The description of the promotion rule.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Receive a 15% discount on a 1-year subscription</para>
+                    /// The description of the promotion rule.
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the pricing rule.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>587</para>
+                    /// The ID of the pricing rule.
                     /// </summary>
                     [NameInMap("RuleId")]
                     [Validation(Required=false)]
@@ -275,10 +226,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

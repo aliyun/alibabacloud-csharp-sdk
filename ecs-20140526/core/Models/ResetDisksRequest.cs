@@ -10,28 +10,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResetDisksRequest : TeaModel {
         /// <summary>
-        /// <para>The disks that you want to roll back.</para>
-        /// <para>This parameter is required.</para>
+        /// The disks that you want to roll back.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Disk")]
         [Validation(Required=false)]
         public List<ResetDisksRequestDisk> Disk { get; set; }
         public class ResetDisksRequestDisk : TeaModel {
             /// <summary>
-            /// <para>The ID of the disk that you want to roll back. You can specify up to 10 disk IDs.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>d-j6cf7l0ewidb78lq****</para>
+            /// The ID of the disk that you want to roll back. You can specify up to 10 disk IDs.
             /// </summary>
             [NameInMap("DiskId")]
             [Validation(Required=false)]
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the disk snapshot that is contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>s-j6cdofbycydvg7ey****</para>
+            /// The ID of the disk snapshot that is contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.
             /// </summary>
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
@@ -40,15 +35,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
+        /// *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.
+        /// 
+        /// Default value: false.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -63,11 +55,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

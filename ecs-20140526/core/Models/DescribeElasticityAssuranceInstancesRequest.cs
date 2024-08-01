@@ -14,11 +14,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The ID of the elasticity assurance.</para>
-            /// <para>This parameter is required.</para>
+            /// The ID of the elasticity assurance.
             /// 
-            /// <b>Example:</b>
-            /// <para>eap-bp67acfmxazb4****</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -27,22 +25,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// The number of entries to return on each page.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Maximum value: 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the query. Set the value to the NextToken value obtained from the response to the preceding request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
+        /// The token used to start the query. Set the value to the NextToken value obtained from the response to the preceding request.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -57,11 +51,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the elasticity assurance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,36 +10,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the instance.</para>
-        /// <para>Default value: false.</para>
+        /// Specifies whether to enable auto-renewal for the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// Default value: false.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period of the instance.</para>
-        /// <list type="bullet">
-        /// <item><description>Valid values of <c>Duration</c> when <c>PeriodUnit</c> is set to <c>Year</c>: 1, 2, 3, 4, and 5.</description></item>
-        /// <item><description>Valid values of <c>Duration</c> when <c>PeriodUnit</c> is set to <c>Month</c>: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</description></item>
-        /// </list>
+        /// The auto-renewal period of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// *   Valid values of `Duration` when `PeriodUnit` is set to `Year`: 1, 2, 3, 4, and 5.
+        /// *   Valid values of `Duration` when `PeriodUnit` is set to `Month`: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can specify up to 100 subscription instance IDs. Separate the instance IDs with commas (,).</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the instance. You can specify up to 100 subscription instance IDs. Separate the instance IDs with commas (,).
         /// 
-        /// <b>Example:</b>
-        /// <para>i-bp67acfmxazb4ph****,i-bp67acfmxazb4pi****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -54,43 +46,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal period (<c>Duration</c>). Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Month (default)</description></item>
-        /// <item><description>Year</description></item>
-        /// </list>
+        /// The unit of the renewal period (`Duration`). Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Month</para>
+        /// *   Month (default)
+        /// *   Year
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal status of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>AutoRenewal: Auto-renewal is enabled for the instance.</description></item>
-        /// <item><description>Normal: Auto-renewal is disabled for the instance.</description></item>
-        /// <item><description>NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to <c>Normal</c> for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para><c>RenewalStatus</c> takes precedence over <c>AutoRenew</c>. If you do not specify <c>RenewalStatus</c>, <c>AutoRenew</c> is used by default.</para>
-        /// </remarks>
+        /// The auto-renewal status of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>AutoRenewal</para>
+        /// *   AutoRenewal: Auto-renewal is enabled for the instance.
+        /// *   Normal: Auto-renewal is disabled for the instance.
+        /// *   NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to `Normal` for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.
+        /// 
+        /// > `RenewalStatus` takes precedence over `AutoRenew`. If you do not specify `RenewalStatus`, `AutoRenew` is used by default.
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]

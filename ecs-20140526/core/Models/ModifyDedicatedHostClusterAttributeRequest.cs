@@ -10,31 +10,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDedicatedHostClusterAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the dedicated host cluster.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the dedicated host cluster.
         /// 
-        /// <b>Example:</b>
-        /// <para>dc-bp12wlf6am0vz9v2****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DedicatedHostClusterId")]
         [Validation(Required=false)]
         public string DedicatedHostClusterId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the dedicated host cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter. The name cannot contain <c>http://</c> or <c>https://</c>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>newClusterName</para>
+        /// The new name of the dedicated host cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter. The name cannot contain `http://` or `https://`.
         /// </summary>
         [NameInMap("DedicatedHostClusterName")]
         [Validation(Required=false)]
         public string DedicatedHostClusterName { get; set; }
 
         /// <summary>
-        /// <para>The description of the dedicated host cluster. It must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>newClusterDescription</para>
+        /// The description of the dedicated host cluster. It must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -49,11 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the dedicated host cluster. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

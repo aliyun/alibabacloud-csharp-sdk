@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostClustersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the dedicated host clusters.</para>
+        /// Details about the dedicated host clusters.
         /// </summary>
         [NameInMap("DedicatedHostClusters")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster> DedicatedHostCluster { get; set; }
             public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster : TeaModel {
                 /// <summary>
-                /// <para>The capacity of the dedicated host cluster.</para>
+                /// The capacity of the dedicated host cluster.
                 /// </summary>
                 [NameInMap("DedicatedHostClusterCapacity")]
                 [Validation(Required=false)]
                 public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity DedicatedHostClusterCapacity { get; set; }
                 public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity : TeaModel {
                     /// <summary>
-                    /// <para>The available capacity of the Elastic Compute Service (ECS) instance types in the dedicated host cluster.</para>
+                    /// The available capacity of the Elastic Compute Service (ECS) instance types in the dedicated host cluster.
                     /// </summary>
                     [NameInMap("AvailableInstanceTypes")]
                     [Validation(Required=false)]
@@ -39,20 +39,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType> AvailableInstanceType { get; set; }
                         public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType : TeaModel {
                             /// <summary>
-                            /// <para>The available capacity of the ECS instance type.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>0</para>
+                            /// The available capacity of the ECS instance type.
                             /// </summary>
                             [NameInMap("AvailableInstanceCapacity")]
                             [Validation(Required=false)]
                             public int? AvailableInstanceCapacity { get; set; }
 
                             /// <summary>
-                            /// <para>The ECS instance type.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>ecs.c6.26xlarge</para>
+                            /// The ECS instance type.
                             /// </summary>
                             [NameInMap("InstanceType")]
                             [Validation(Required=false)]
@@ -63,27 +57,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// <para>The size of available memory. Unit: GiB</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>4</para>
+                    /// The size of available memory. Unit: GiB
                     /// </summary>
                     [NameInMap("AvailableMemory")]
                     [Validation(Required=false)]
                     public int? AvailableMemory { get; set; }
 
                     /// <summary>
-                    /// <para>The number of available vCPUs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2</para>
+                    /// The number of available vCPUs.
                     /// </summary>
                     [NameInMap("AvailableVcpus")]
                     [Validation(Required=false)]
                     public int? AvailableVcpus { get; set; }
 
                     /// <summary>
-                    /// <para>The local storage capacity.</para>
+                    /// The local storage capacity.
                     /// </summary>
                     [NameInMap("LocalStorageCapacities")]
                     [Validation(Required=false)]
@@ -94,37 +82,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity> LocalStorageCapacity { get; set; }
                         public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity : TeaModel {
                             /// <summary>
-                            /// <para>The available capacity of the local disk. Unit: GiB</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>20</para>
+                            /// The available capacity of the local disk. Unit: GiB
                             /// </summary>
                             [NameInMap("AvailableDisk")]
                             [Validation(Required=false)]
                             public int? AvailableDisk { get; set; }
 
                             /// <summary>
-                            /// <para>The category of data disks. Valid values:</para>
-                            /// <list type="bullet">
-                            /// <item><description>cloud: basic disk</description></item>
-                            /// <item><description>cloud_efficiency: ultra disk</description></item>
-                            /// <item><description>cloud_ssd: standard SSD</description></item>
-                            /// <item><description>ephemeral_ssd: local SSD</description></item>
-                            /// <item><description>cloud_essd: Enterprise SSD (ESSD)</description></item>
-                            /// </list>
+                            /// The category of data disks. Valid values:
                             /// 
-                            /// <b>Example:</b>
-                            /// <para>cloud</para>
+                            /// *   cloud: basic disk
+                            /// *   cloud_efficiency: ultra disk
+                            /// *   cloud_ssd: standard SSD
+                            /// *   ephemeral_ssd: local SSD
+                            /// *   cloud_essd: Enterprise SSD (ESSD)
                             /// </summary>
                             [NameInMap("DataDiskCategory")]
                             [Validation(Required=false)]
                             public string DataDiskCategory { get; set; }
 
                             /// <summary>
-                            /// <para>The total capacity of the local disk. Unit: GiB</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>40</para>
+                            /// The total capacity of the local disk. Unit: GiB
                             /// </summary>
                             [NameInMap("TotalDisk")]
                             [Validation(Required=false)]
@@ -135,20 +113,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// <para>The total memory size. Unit: GiB</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>8</para>
+                    /// The total memory size. Unit: GiB
                     /// </summary>
                     [NameInMap("TotalMemory")]
                     [Validation(Required=false)]
                     public int? TotalMemory { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of vCPUs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>4</para>
+                    /// The total number of vCPUs.
                     /// </summary>
                     [NameInMap("TotalVcpus")]
                     [Validation(Required=false)]
@@ -157,27 +129,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the dedicated host cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dc-bp12wlf6am0vz9v2****</para>
+                /// The ID of the dedicated host cluster.
                 /// </summary>
                 [NameInMap("DedicatedHostClusterId")]
                 [Validation(Required=false)]
                 public string DedicatedHostClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the dedicated host cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>myDDHCluster</para>
+                /// The name of the dedicated host cluster.
                 /// </summary>
                 [NameInMap("DedicatedHostClusterName")]
                 [Validation(Required=false)]
                 public string DedicatedHostClusterName { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of dedicated hosts in the dedicated host cluster.</para>
+                /// The IDs of dedicated hosts in the dedicated host cluster.
                 /// </summary>
                 [NameInMap("DedicatedHostIds")]
                 [Validation(Required=false)]
@@ -190,37 +156,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The description of the dedicated host cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>This-is-my-DDHCluster</para>
+                /// The description of the dedicated host cluster.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the dedicated host cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// The region ID of the dedicated host cluster.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group to which the dedicated host cluster belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rg-bp67acfmxazb4p****</para>
+                /// The ID of the resource group to which the dedicated host cluster belongs.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the dedicated host cluster.</para>
+                /// The tags of the dedicated host cluster.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -231,20 +188,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag> Tag { get; set; }
                     public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The tag key of the dedicated host cluster.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestKey</para>
+                        /// The tag key of the dedicated host cluster.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value of the dedicated host cluster.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestValue</para>
+                        /// The tag value of the dedicated host cluster.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -255,10 +206,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The zone ID of the dedicated host cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-f</para>
+                /// The zone ID of the dedicated host cluster.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -269,40 +217,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>5</para>
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>214A2187-B06F-4E49-A081-4D053466A8C7</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of dedicated host clusters.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2</para>
+        /// The total number of dedicated host clusters.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

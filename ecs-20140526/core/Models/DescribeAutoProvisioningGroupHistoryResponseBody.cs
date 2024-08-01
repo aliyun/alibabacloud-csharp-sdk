@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array consisting of AutoProvisioningGroupHistory data.</para>
+        /// An array consisting of AutoProvisioningGroupHistory data.
         /// </summary>
         [NameInMap("AutoProvisioningGroupHistories")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory> AutoProvisioningGroupHistory { get; set; }
             public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory : TeaModel {
                 /// <summary>
-                /// <para>An array consisting of ActivityDetail data.</para>
+                /// An array consisting of ActivityDetail data.
                 /// </summary>
                 [NameInMap("ActivityDetails")]
                 [Validation(Required=false)]
@@ -32,26 +32,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail> ActivityDetail { get; set; }
                     public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail : TeaModel {
                         /// <summary>
-                        /// <para>The execution details of instance creation performed by the single scheduling task.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>New ECS instances &quot;i-bp67acfmxazb4p****, i-bp67acfmxazb5p****&quot; created.</para>
+                        /// The execution details of instance creation performed by the single scheduling task.
                         /// </summary>
                         [NameInMap("Detail")]
                         [Validation(Required=false)]
                         public string Detail { get; set; }
 
                         /// <summary>
-                        /// <para>The execution status of instance creation performed by the single scheduling task. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>Successful: Instances are created.</description></item>
-                        /// <item><description>Failed: Instances failed to be created.</description></item>
-                        /// <item><description>InProgress: Instances are being created.</description></item>
-                        /// <item><description>Warning: Some instances are created.</description></item>
-                        /// </list>
+                        /// The execution status of instance creation performed by the single scheduling task. Valid values:
                         /// 
-                        /// <b>Example:</b>
-                        /// <para>Successful</para>
+                        /// *   Successful: Instances are created.
+                        /// *   Failed: Instances failed to be created.
+                        /// *   InProgress: Instances are being created.
+                        /// *   Warning: Some instances are created.
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
@@ -62,45 +55,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The execution time of the last instance creation performed by the single scheduling task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-04-01T15:10:20Z</para>
+                /// The execution time of the last instance creation performed by the single scheduling task.
                 /// </summary>
                 [NameInMap("LastEventTime")]
                 [Validation(Required=false)]
                 public string LastEventTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time of executing the single scheduling task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-04-01T15:10:20Z</para>
+                /// The start time of executing the single scheduling task.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The execution status of the single scheduling task. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>prepare: The scheduling task is being executed.</description></item>
-                /// <item><description>success: The scheduling task is executed.</description></item>
-                /// <item><description>failed: The scheduling task failed to be executed.</description></item>
-                /// </list>
+                /// The execution status of the single scheduling task. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>success</para>
+                /// *   prepare: The scheduling task is being executed.
+                /// *   success: The scheduling task is executed.
+                /// *   failed: The scheduling task failed to be executed.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the scheduling task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>apg-task-bp67acfmxazb4p****</para>
+                /// The ID of the scheduling task.
                 /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
@@ -111,40 +91,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>B48A12CD-1295-4A38-A8F0-0E92C937****</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of queried scheduling tasks in the auto provisioning group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The number of queried scheduling tasks in the auto provisioning group.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

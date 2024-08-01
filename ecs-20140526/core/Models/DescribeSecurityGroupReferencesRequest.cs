@@ -18,11 +18,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the security group.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the security group.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,11 +35,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of security group N. Valid values of N: 1 to 10.</para>
-        /// <para>This parameter is required.</para>
+        /// The IDs of N security groups that you want to query. Valid values of N: 1 to 10.
         /// 
-        /// <b>Example:</b>
-        /// <para>sg-bp14vtedjtobkvi****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

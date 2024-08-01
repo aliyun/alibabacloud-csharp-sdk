@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]

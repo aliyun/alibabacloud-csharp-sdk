@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateVSwitchRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

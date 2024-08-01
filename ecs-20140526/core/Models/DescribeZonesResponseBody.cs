@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details of the zones and their supported resources.</para>
+        /// Details of the zones and their supported resources.
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
@@ -31,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
                 /// <summary>
-                /// <para>The supported dedicated host types.</para>
+                /// The supported dedicated host types.
                 /// </summary>
                 [NameInMap("AvailableDedicatedHostTypes")]
                 [Validation(Required=false)]
@@ -44,13 +41,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The supported disk categories. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>cloud: basic disk</description></item>
-                /// <item><description>cloud_ssd: standard SSD</description></item>
-                /// <item><description>cloud_efficiency: ultra disk</description></item>
-                /// <item><description>cloud_essd: ESSD</description></item>
-                /// </list>
+                /// The supported disk categories. Valid values:
+                /// 
+                /// *   cloud: basic disk
+                /// *   cloud_ssd: standard SSD
+                /// *   cloud_efficiency: ultra disk
+                /// *   cloud_essd: ESSD
                 /// </summary>
                 [NameInMap("AvailableDiskCategories")]
                 [Validation(Required=false)]
@@ -63,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The supported instance types.</para>
+                /// The supported instance types.
                 /// </summary>
                 [NameInMap("AvailableInstanceTypes")]
                 [Validation(Required=false)]
@@ -76,14 +72,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The types of resources that can be created. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>VSwitch: vSwitch</description></item>
-                /// <item><description>IoOptimized: I/O optimized instance</description></item>
-                /// <item><description>Instance: instance</description></item>
-                /// <item><description>DedicatedHost: dedicated host</description></item>
-                /// <item><description>disk: disk</description></item>
-                /// </list>
+                /// The types of resources that can be created. Valid values:
+                /// 
+                /// *   VSwitch: vSwitch
+                /// *   IoOptimized: I/O optimized instance
+                /// *   Instance: instance
+                /// *   DedicatedHost: dedicated host
+                /// *   disk: disk
                 /// </summary>
                 [NameInMap("AvailableResourceCreation")]
                 [Validation(Required=false)]
@@ -96,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>Details about the resources that can be created in the zone.</para>
+                /// Details about the resources that can be created in the zone.
                 /// </summary>
                 [NameInMap("AvailableResources")]
                 [Validation(Required=false)]
@@ -107,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfo> ResourcesInfo { get; set; }
                     public class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfo : TeaModel {
                         /// <summary>
-                        /// <para>The categories of data disks that can be created.</para>
+                        /// The categories of data disks that can be created.
                         /// </summary>
                         [NameInMap("DataDiskCategories")]
                         [Validation(Required=false)]
@@ -120,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The supported generations of instance families.</para>
+                        /// The supported generations of instance families.
                         /// </summary>
                         [NameInMap("InstanceGenerations")]
                         [Validation(Required=false)]
@@ -133,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The supported instance families.</para>
+                        /// The supported instance families.
                         /// </summary>
                         [NameInMap("InstanceTypeFamilies")]
                         [Validation(Required=false)]
@@ -146,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The supported instance types.</para>
+                        /// The supported instance types.
                         /// </summary>
                         [NameInMap("InstanceTypes")]
                         [Validation(Required=false)]
@@ -159,17 +154,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>Indicates whether the instance is I/O optimized.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>true</para>
+                        /// Indicates whether the instance is I/O optimized.
                         /// </summary>
                         [NameInMap("IoOptimized")]
                         [Validation(Required=false)]
                         public bool? IoOptimized { get; set; }
 
                         /// <summary>
-                        /// <para>The supported network types</para>
+                        /// The supported network types
                         /// </summary>
                         [NameInMap("NetworkTypes")]
                         [Validation(Required=false)]
@@ -182,7 +174,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The supported categories of system disks that can be created.</para>
+                        /// The supported categories of system disks that can be created.
                         /// </summary>
                         [NameInMap("SystemDiskCategories")]
                         [Validation(Required=false)]
@@ -199,7 +191,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The supported Shared Block Storage device categories.</para>
+                /// The supported Shared Block Storage device categories.
                 /// </summary>
                 [NameInMap("AvailableVolumeCategories")]
                 [Validation(Required=false)]
@@ -212,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The supported generations of dedicated hosts.</para>
+                /// The supported generations of dedicated hosts.
                 /// </summary>
                 [NameInMap("DedicatedHostGenerations")]
                 [Validation(Required=false)]
@@ -225,34 +217,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the zone in the local language.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Hangzhou Zone G</para>
+                /// The name of the zone in the local language.
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-g</para>
+                /// The ID of the zone.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the zone. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>AvailabilityZone: zone for the Alibaba Cloud public cloud</description></item>
-                /// <item><description>CloudBoxZone: zone for CloudBox</description></item>
-                /// </list>
+                /// The type of the zone. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>AvailabilityZone</para>
+                /// *   AvailabilityZone: zone for the Alibaba Cloud public cloud
+                /// *   CloudBoxZone: zone for CloudBox
                 /// </summary>
                 [NameInMap("ZoneType")]
                 [Validation(Required=false)]

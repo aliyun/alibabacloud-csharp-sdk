@@ -10,28 +10,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnassignIpv6AddressesRequest : TeaModel {
         /// <summary>
-        /// <para>IPv6 address N to unassign. Valid values of N: 1 to 10.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2001:db8:1234:1a00::***</para>
+        /// IPv6 address N to unassign. Valid values of N: 1 to 10.
         /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>IPv6 prefix N to unassign. Valid values of N: 1 to 10.</para>
+        /// IPv6 prefix N to unassign. Valid values of N: 1 to 10.
         /// </summary>
         [NameInMap("Ipv6Prefix")]
         [Validation(Required=false)]
         public List<string> Ipv6Prefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the ENI.
         /// 
-        /// <b>Example:</b>
-        /// <para>eni-bp14v2sdd3v8ht****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -46,11 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the ENI. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

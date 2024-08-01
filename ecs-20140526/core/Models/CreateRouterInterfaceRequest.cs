@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OppositeInterfaceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OppositeRegionId")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -100,28 +100,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]
         public string RouterId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouterType")]
         [Validation(Required=false)]
         public string RouterType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ExportSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OssBucket")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RoleName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageSharePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom image.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the custom image.
         /// 
-        /// <b>Example:</b>
-        /// <para>m-bp1caf3yicx5jlfl****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -29,35 +27,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// The page number.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// The number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Valid values: 1 to 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the custom image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

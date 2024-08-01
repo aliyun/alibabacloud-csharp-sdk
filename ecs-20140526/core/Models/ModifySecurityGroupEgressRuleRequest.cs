@@ -10,133 +10,100 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifySecurityGroupEgressRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the security group rule. The description must be 1 to 512 characters in length.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>This is a new securitygroup rule.</para>
+        /// The description of the security group rule. The description must be 1 to 512 characters in length.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</para>
-        /// <para>By default, this parameter is left empty.</para>
+        /// The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.
         /// 
-        /// <b>Example:</b>
-        /// <para>10.0.0.0/8</para>
+        /// By default, this parameter is left empty.
         /// </summary>
         [NameInMap("DestCidrIp")]
         [Validation(Required=false)]
         public string DestCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination security group. You must specify at least one of <c>DestGroupId</c> and <c>DestCidrIp</c>.</para>
-        /// <list type="bullet">
-        /// <item><description>At least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId must be specified.</description></item>
-        /// <item><description>If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can be set only to intranet.</description></item>
-        /// <item><description>If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence.</description></item>
-        /// </list>
+        /// The ID of the destination security group. You must specify at least one of `DestGroupId` and `DestCidrIp`.
         /// 
-        /// <b>Example:</b>
-        /// <para>sg-bp67acfmxa123b****</para>
+        /// *   At least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId must be specified.
+        /// *   If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can be set only to intranet.
+        /// *   If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence.
         /// </summary>
         [NameInMap("DestGroupId")]
         [Validation(Required=false)]
         public string DestGroupId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account that manages the destination security group when you set security group rule N across accounts.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><a href="mailto:EcsforCloud@Alibaba.com">EcsforCloud@Alibaba.com</a></para>
+        /// The Alibaba Cloud account that manages the destination security group when you set security group rule N across accounts.
         /// </summary>
         [NameInMap("DestGroupOwnerAccount")]
         [Validation(Required=false)]
         public string DestGroupOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that manages the destination security group when you set security group rule N across accounts.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1234567890</para>
+        /// The ID of the Alibaba Cloud account that manages the destination security group when you set security group rule N across accounts.
         /// </summary>
         [NameInMap("DestGroupOwnerId")]
         [Validation(Required=false)]
         public long? DestGroupOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</para>
-        /// <para>If you specify <c>DestCidrIp</c>, <c>Ipv6DestCidrIp</c>, or <c>DestGroupId</c>, this parameter is ignored.</para>
+        /// The ID of the destination prefix list. You can call the [DescribePrefixLists](https://help.aliyun.com/document_detail/205046.html) operation to query the IDs of available prefix lists.
         /// 
-        /// <b>Example:</b>
-        /// <para>pl-x1j1k5ykzqlixdcy****</para>
+        /// If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, this parameter is ignored.
         /// </summary>
         [NameInMap("DestPrefixListId")]
         [Validation(Required=false)]
         public string DestPrefixListId { get; set; }
 
         /// <summary>
-        /// <para>The transport layer protocol of the security group rule. The value of this parameter is case-insensitive. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ICMP</description></item>
-        /// <item><description>GRE</description></item>
-        /// <item><description>TCP</description></item>
-        /// <item><description>UDP</description></item>
-        /// <item><description>ALL: All protocols are supported.</description></item>
-        /// </list>
+        /// The transport layer protocol of the security group rule. The value of this parameter is case-insensitive. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>tcp</para>
+        /// *   ICMP
+        /// *   GRE
+        /// *   TCP
+        /// *   UDP
+        /// *   ALL: All protocols are supported.
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
-        /// <remarks>
-        /// <para> Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6DestCidrIp and <c>DestCidrIp</c>.</para>
-        /// </remarks>
-        /// <para>By default, this parameter is left empty.</para>
+        /// The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.
         /// 
-        /// <b>Example:</b>
-        /// <para>2001:db8:1233:1a00::***</para>
+        /// >  Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.
+        /// 
+        /// By default, this parameter is left empty.
         /// </summary>
         [NameInMap("Ipv6DestCidrIp")]
         [Validation(Required=false)]
         public string Ipv6DestCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
-        /// <remarks>
-        /// <para> Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6SourceCidrIp and <c>SourceCidrIp</c>.</para>
-        /// </remarks>
-        /// <para>By default, this parameter is left empty.</para>
+        /// The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.
         /// 
-        /// <b>Example:</b>
-        /// <para>2001:db8:1234:1a00::***</para>
+        /// >  Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.
+        /// 
+        /// By default, this parameter is left empty.
         /// </summary>
         [NameInMap("Ipv6SourceCidrIp")]
         [Validation(Required=false)]
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>You cannot modify this parameter when you modify a security group rule by specifying its ID.\
-        /// You can add a new rule that meets your business requirements and delete the original rule.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>intranet</para>
+        /// You cannot modify this parameter when you modify a security group rule by specifying its ID.\\
+        /// You can add a new rule that meets your business requirements and delete the original rule.
         /// </summary>
         [NameInMap("NicType")]
         [Validation(Required=false)]
@@ -151,53 +118,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The action of the security group rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>accept: allows access.</description></item>
-        /// <item><description>drop: denies access and returns no responses.</description></item>
-        /// </list>
-        /// <para>Default value: accept.</para>
+        /// The action of the security group rule. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>accept</para>
+        /// *   accept: allows access.
+        /// *   drop: denies access and returns no responses.
+        /// 
+        /// Default value: accept.
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The range of destination ports that correspond to the transport layer protocol. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</description></item>
-        /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-        /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
-        /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
-        /// </list>
+        /// The range of destination ports that correspond to the transport layer protocol. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>80/80</para>
+        /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+        /// *   If you set IpProtocol to ICMP, the port number range is -1/-1.
+        /// *   If you set IpProtocol to GRE, the port number range is -1/-1.
+        /// *   If you set IpProtocol to ALL, the port number range is -1/-1.
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
         public string PortRange { get; set; }
 
         /// <summary>
-        /// <para>The priority of the security group rule. Valid values: 1 to 100.</para>
-        /// <para>Default value: 1.</para>
+        /// The priority of the security group rule. Valid values: 1 to 100.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Default value: 1.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -212,49 +168,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the security group.
         /// 
-        /// <b>Example:</b>
-        /// <para>sg-bp67acfmxazb4p****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group rule.\
-        /// This parameter is required when you modify a security group rule based on the security group rule ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>sgr-bp67acfmxazb4q****</para>
+        /// The ID of the security group rule.\\
+        /// This parameter is required when you modify a security group rule based on the security group rule ID.
         /// </summary>
         [NameInMap("SecurityGroupRuleId")]
         [Validation(Required=false)]
         public string SecurityGroupRuleId { get; set; }
 
         /// <summary>
-        /// <para>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</para>
-        /// <para>By default, this parameter is left empty.</para>
+        /// The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.
         /// 
-        /// <b>Example:</b>
-        /// <para>10.0.0.0/8</para>
+        /// By default, this parameter is left empty.
         /// </summary>
         [NameInMap("SourceCidrIp")]
         [Validation(Required=false)]
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The range of source ports that correspond to the transport layer protocol. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</description></item>
-        /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-        /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
-        /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
-        /// </list>
+        /// The range of source ports that correspond to the transport layer protocol. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>80/80</para>
+        /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+        /// *   If you set IpProtocol to ICMP, the port number range is -1/-1.
+        /// *   If you set IpProtocol to GRE, the port number range is -1/-1.
+        /// *   If you set IpProtocol to ALL, the port number range is -1/-1.
         /// </summary>
         [NameInMap("SourcePortRange")]
         [Validation(Required=false)]

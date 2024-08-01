@@ -18,22 +18,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The time when the prefix list was created.</para>
-        /// <para>This parameter is required.</para>
+        /// The time when the prefix list was created.
         /// 
-        /// <b>Example:</b>
-        /// <para>pl-x1j1k5ykzqlixdcy****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PrefixListId")]
         [Validation(Required=false)]
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the prefix list.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the prefix list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-chengdu</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

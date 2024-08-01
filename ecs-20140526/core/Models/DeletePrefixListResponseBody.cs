@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeletePrefixListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>38793DB8-A4B2-4AEC-BFD3-111234E9188D</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

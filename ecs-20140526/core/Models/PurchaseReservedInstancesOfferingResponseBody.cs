@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class PurchaseReservedInstancesOfferingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>8C314443-AF0D-4766-9562-C83B7F1A3C8B</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the reserved instances.</para>
+        /// The IDs of the reserved instances.
         /// </summary>
         [NameInMap("ReservedInstanceIdSets")]
         [Validation(Required=false)]

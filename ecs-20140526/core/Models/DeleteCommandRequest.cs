@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteCommandRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>c-4d34302d02424c5c8e10281e3a31****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommandId")]
         [Validation(Required=false)]
@@ -28,11 +25,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[1].schema.enumValueTitles</para>
-        /// <para>This parameter is required.</para>
+        /// $.parameters[1].schema.enumValueTitles
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

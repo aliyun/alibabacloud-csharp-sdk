@@ -10,15 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to force delete the snapshot that has been used to create disks. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: force deletes the snapshot. After the snapshot is force deleted, the disks created from the snapshot cannot be re-initialized.</description></item>
-        /// <item><description>false: does not force delete the snapshot.</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// Specifies whether to force delete the snapshot that has been used to create disks. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
+        /// *   true: force deletes the snapshot. After the snapshot is force deleted, the disks created from the snapshot cannot be re-initialized.
+        /// *   false: does not force delete the snapshot.
+        /// 
+        /// Default value: false.
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
@@ -41,11 +38,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The snapshot ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>s-bp1c0doj0taqyzzl****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

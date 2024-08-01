@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the dedicated hosts.</para>
+        /// Details about the dedicated hosts.
         /// </summary>
         [NameInMap("DedicatedHosts")]
         [Validation(Required=false)]
@@ -31,104 +31,80 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The policy used to migrate the ECS instances deployed on the dedicated host when the dedicated host fails. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Migrate: The instances are migrated to another physical machine. Instances that are not in the Stopped state when the dedicated host fails are restarted.</description></item>
-                /// <item><description>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</description></item>
-                /// </list>
-                /// <para>If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.</para>
+                /// The policy used to migrate the ECS instances deployed on the dedicated host when the dedicated host fails. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Migrate</para>
+                /// *   Migrate: The instances are migrated to another physical machine. Instances that are not in the Stopped state when the dedicated host fails are restarted.
+                /// *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.
+                /// 
+                /// If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.
                 /// </summary>
                 [NameInMap("ActionOnMaintenance")]
                 [Validation(Required=false)]
                 public string ActionOnMaintenance { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the dedicated host is added to the resource pool for automatic deployment. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: The dedicated host is added to the resource pool for automatic deployment.</description></item>
-                /// <item><description>off: The dedicated host is not added to the resource pool for automatic deployment.</description></item>
-                /// </list>
-                /// <para>For information about automatic deployment, see the &quot;Automatic deployment&quot; section in <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</para>
+                /// Indicates whether the dedicated host is added to the resource pool for automatic deployment. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>on</para>
+                /// *   on: The dedicated host is added to the resource pool for automatic deployment.
+                /// *   off: The dedicated host is not added to the resource pool for automatic deployment.
+                /// 
+                /// For information about automatic deployment, see the "Automatic deployment" section in [Functions and features](https://help.aliyun.com/document_detail/118938.html).
                 /// </summary>
                 [NameInMap("AutoPlacement")]
                 [Validation(Required=false)]
                 public string AutoPlacement { get; set; }
 
                 /// <summary>
-                /// <para>The automatic release time of the dedicated host. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-01-01T12:00Z</para>
+                /// The automatic release time of the dedicated host. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("AutoReleaseTime")]
                 [Validation(Required=false)]
                 public string AutoReleaseTime { get; set; }
 
                 /// <summary>
-                /// <para>The performance specifications of the dedicated host.</para>
+                /// The performance specifications of the dedicated host.
                 /// </summary>
                 [NameInMap("Capacity")]
                 [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity Capacity { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity : TeaModel {
                     /// <summary>
-                    /// <para>The amount of available space on the local disks. Unit: GiB</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>65</para>
+                    /// The amount of available space on the local disks. Unit: GiB
                     /// </summary>
                     [NameInMap("AvailableLocalStorage")]
                     [Validation(Required=false)]
                     public int? AvailableLocalStorage { get; set; }
 
                     /// <summary>
-                    /// <para>The amount of available memory. Unit: GiB.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>25</para>
+                    /// The amount of available memory. Unit: GiB.
                     /// </summary>
                     [NameInMap("AvailableMemory")]
                     [Validation(Required=false)]
                     public float? AvailableMemory { get; set; }
 
                     /// <summary>
-                    /// <para>The number of available vCPUs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>5</para>
+                    /// The number of available vCPUs.
                     /// </summary>
                     [NameInMap("AvailableVcpus")]
                     [Validation(Required=false)]
                     public int? AvailableVcpus { get; set; }
 
                     /// <summary>
-                    /// <para>The number of available vGPUs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2</para>
+                    /// The number of available vGPUs.
                     /// </summary>
                     [NameInMap("AvailableVgpus")]
                     [Validation(Required=false)]
                     public int? AvailableVgpus { get; set; }
 
                     /// <summary>
-                    /// <para>The category of local disks.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>i2</para>
+                    /// The category of local disks.
                     /// </summary>
                     [NameInMap("LocalStorageCategory")]
                     [Validation(Required=false)]
                     public string LocalStorageCategory { get; set; }
 
                     /// <summary>
-                    /// <para>The socket capacities.</para>
+                    /// The socket capacities.
                     /// </summary>
                     [NameInMap("SocketCapacities")]
                     [Validation(Required=false)]
@@ -139,50 +115,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity> SocketCapacity { get; set; }
                         public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity : TeaModel {
                             /// <summary>
-                            /// <para>The amount of available memory. Unit: GiB.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>65</para>
+                            /// The amount of available memory. Unit: GiB.
                             /// </summary>
                             [NameInMap("AvailableMemory")]
                             [Validation(Required=false)]
                             public float? AvailableMemory { get; set; }
 
                             /// <summary>
-                            /// <para>The number of available vCPUs.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>64</para>
+                            /// The number of available vCPUs.
                             /// </summary>
                             [NameInMap("AvailableVcpu")]
                             [Validation(Required=false)]
                             public int? AvailableVcpu { get; set; }
 
                             /// <summary>
-                            /// <para>The socket ID.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>1</para>
+                            /// The socket ID.
                             /// </summary>
                             [NameInMap("SocketId")]
                             [Validation(Required=false)]
                             public int? SocketId { get; set; }
 
                             /// <summary>
-                            /// <para>The total amount of memory. Unit: GiB.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>128</para>
+                            /// The total amount of memory. Unit: GiB.
                             /// </summary>
                             [NameInMap("TotalMemory")]
                             [Validation(Required=false)]
                             public float? TotalMemory { get; set; }
 
                             /// <summary>
-                            /// <para>The total number of vCPUs.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>128</para>
+                            /// The total number of vCPUs.
                             /// </summary>
                             [NameInMap("TotalVcpu")]
                             [Validation(Required=false)]
@@ -193,40 +154,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// <para>The total capacity of local disks. Unit: GiB.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>512</para>
+                    /// The total capacity of local disks. Unit: GiB.
                     /// </summary>
                     [NameInMap("TotalLocalStorage")]
                     [Validation(Required=false)]
                     public int? TotalLocalStorage { get; set; }
 
                     /// <summary>
-                    /// <para>The total amount of memory. Unit: GiB.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1024</para>
+                    /// The total amount of memory. Unit: GiB.
                     /// </summary>
                     [NameInMap("TotalMemory")]
                     [Validation(Required=false)]
                     public float? TotalMemory { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of vCPUs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>56</para>
+                    /// The total number of vCPUs.
                     /// </summary>
                     [NameInMap("TotalVcpus")]
                     [Validation(Required=false)]
                     public int? TotalVcpus { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of vGPUs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>10</para>
+                    /// The total number of vGPUs.
                     /// </summary>
                     [NameInMap("TotalVgpus")]
                     [Validation(Required=false)]
@@ -235,137 +184,98 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The billing method of the dedicated host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Prepaid</para>
+                /// The billing method of the dedicated host.
                 /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The number of physical cores per CPU.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
+                /// The number of physical cores per CPU.
                 /// </summary>
                 [NameInMap("Cores")]
                 [Validation(Required=false)]
                 public int? Cores { get; set; }
 
                 /// <summary>
-                /// <para>The CPU overcommit ratio.Valid values: 1 to 5.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
+                /// The CPU overcommit ratio.Valid values: 1 to 5.
                 /// </summary>
                 [NameInMap("CpuOverCommitRatio")]
                 [Validation(Required=false)]
                 public float? CpuOverCommitRatio { get; set; }
 
                 /// <summary>
-                /// <para>The time when the dedicated host was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-01-01T12:00Z</para>
+                /// The time when the dedicated host was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the dedicated host cluster to which the dedicated host belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dc-bp12wlf6am0vz9v2****</para>
+                /// The ID of the dedicated host cluster to which the dedicated host belongs.
                 /// </summary>
                 [NameInMap("DedicatedHostClusterId")]
                 [Validation(Required=false)]
                 public string DedicatedHostClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the dedicated host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dh-bp165p6xk2tlw61e****</para>
+                /// The ID of the dedicated host.
                 /// </summary>
                 [NameInMap("DedicatedHostId")]
                 [Validation(Required=false)]
                 public string DedicatedHostId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the dedicated host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>MyDDHTestName</para>
+                /// The name of the dedicated host.
                 /// </summary>
                 [NameInMap("DedicatedHostName")]
                 [Validation(Required=false)]
                 public string DedicatedHostName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the dedicated host owner.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>100************7</para>
+                /// The ID of the dedicated host owner.
                 /// </summary>
                 [NameInMap("DedicatedHostOwnerId")]
                 [Validation(Required=false)]
                 public long? DedicatedHostOwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the dedicated host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ddh.g5</para>
+                /// The type of the dedicated host.
                 /// </summary>
                 [NameInMap("DedicatedHostType")]
                 [Validation(Required=false)]
                 public string DedicatedHostType { get; set; }
 
                 /// <summary>
-                /// <para>The description of the dedicated host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>this-is-my-DDH</para>
+                /// The description of the dedicated host.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the subscription dedicated host. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-01-01T12:00Z</para>
+                /// The expiration time of the subscription dedicated host. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// <para>The GPU model.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>gpu</para>
+                /// The GPU model.
                 /// </summary>
                 [NameInMap("GPUSpec")]
                 [Validation(Required=false)]
                 public string GPUSpec { get; set; }
 
                 /// <summary>
-                /// <para>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</para>
+                /// This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
                 /// </summary>
                 [NameInMap("HostDetailInfo")]
                 [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo HostDetailInfo { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo : TeaModel {
                     /// <summary>
-                    /// <para>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>null</para>
+                    /// This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
                     /// </summary>
                     [NameInMap("SerialNumber")]
                     [Validation(Required=false)]
@@ -374,7 +284,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The ECS instances that were created on the dedicated host.</para>
+                /// The ECS instances that were created on the dedicated host.
                 /// </summary>
                 [NameInMap("Instances")]
                 [Validation(Required=false)]
@@ -385,40 +295,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance> Instance { get; set; }
                     public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the ECS instance.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>i-bp14ot0ykf8w13a1****</para>
+                        /// The ID of the ECS instance.
                         /// </summary>
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
                         public string InstanceId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the ECS instance owner.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>128************0</para>
+                        /// The ID of the ECS instance owner.
                         /// </summary>
                         [NameInMap("InstanceOwnerId")]
                         [Validation(Required=false)]
                         public long? InstanceOwnerId { get; set; }
 
                         /// <summary>
-                        /// <para>The instance type of the ECS instance that was created on the dedicated host.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>ecs.g5.large</para>
+                        /// The instance type of the ECS instance that was created on the dedicated host.
                         /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the socket to which the ECS instance belongs.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0,1</para>
+                        /// The ID of the socket to which the ECS instance belongs.
                         /// </summary>
                         [NameInMap("SocketId")]
                         [Validation(Required=false)]
@@ -429,37 +327,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The machine code of the dedicated host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>12aaa123456ff19dec12345d3026e****</para>
+                /// The machine code of the dedicated host.
                 /// </summary>
                 [NameInMap("MachineId")]
                 [Validation(Required=false)]
                 public string MachineId { get; set; }
 
                 /// <summary>
-                /// <para>The network attributes of the dedicated host.</para>
+                /// The network attributes of the dedicated host.
                 /// </summary>
                 [NameInMap("NetworkAttributes")]
                 [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes NetworkAttributes { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes : TeaModel {
                     /// <summary>
-                    /// <para>The timeout period of the UDP session that is established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Only 60 is returned.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>60</para>
+                    /// The timeout period of the UDP session that is established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Only 60 is returned.
                     /// </summary>
                     [NameInMap("SlbUdpTimeout")]
                     [Validation(Required=false)]
                     public int? SlbUdpTimeout { get; set; }
 
                     /// <summary>
-                    /// <para>The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Only 60 is returned.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>60</para>
+                    /// The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Only 60 is returned.
                     /// </summary>
                     [NameInMap("UdpTimeout")]
                     [Validation(Required=false)]
@@ -468,7 +357,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The reasons why the resources of the dedicated host were locked.</para>
+                /// The reasons why the resources of the dedicated host were locked.
                 /// </summary>
                 [NameInMap("OperationLocks")]
                 [Validation(Required=false)]
@@ -479,14 +368,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock> OperationLock { get; set; }
                     public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock : TeaModel {
                         /// <summary>
-                        /// <para>The reason why the dedicated host was locked. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>financial: The dedicated host was locked due to overdue payments.</description></item>
-                        /// <item><description>security: The dedicated host was locked due to security reasons.</description></item>
-                        /// </list>
+                        /// The reason why the dedicated host was locked. Valid values:
                         /// 
-                        /// <b>Example:</b>
-                        /// <para>financial</para>
+                        /// *   financial: The dedicated host was locked due to overdue payments.
+                        /// *   security: The dedicated host was locked due to security reasons.
                         /// </summary>
                         [NameInMap("LockReason")]
                         [Validation(Required=false)]
@@ -497,76 +382,56 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The number of physical GPUs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10</para>
+                /// The number of physical GPUs.
                 /// </summary>
                 [NameInMap("PhysicalGpus")]
                 [Validation(Required=false)]
                 public int? PhysicalGpus { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the dedicated host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// The region ID of the dedicated host.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group to which the dedicated host belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rg-aek3b6jzp66****</para>
+                /// The ID of the resource group to which the dedicated host belongs.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the subscription duration. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Month</description></item>
-                /// <item><description>Year</description></item>
-                /// </list>
+                /// The unit of the subscription duration. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Month</para>
+                /// *   Month
+                /// *   Year
                 /// </summary>
                 [NameInMap("SaleCycle")]
                 [Validation(Required=false)]
                 public string SaleCycle { get; set; }
 
                 /// <summary>
-                /// <para>The number of physical CPUs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5</para>
+                /// The number of physical CPUs.
                 /// </summary>
                 [NameInMap("Sockets")]
                 [Validation(Required=false)]
                 public int? Sockets { get; set; }
 
                 /// <summary>
-                /// <para>The status of the dedicated host. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Available: The dedicated host is running as expected.</description></item>
-                /// <item><description>UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.</description></item>
-                /// <item><description>PermanentFailure: The dedicated host has permanent failures and is unavailable.</description></item>
-                /// </list>
+                /// The status of the dedicated host. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Available</para>
+                /// *   Available: The dedicated host is running as expected.
+                /// *   UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.
+                /// *   PermanentFailure: The dedicated host has permanent failures and is unavailable.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The custom ECS instance families that are supported by the dedicated host.</para>
+                /// The custom ECS instance families that are supported by the dedicated host.
                 /// </summary>
                 [NameInMap("SupportedCustomInstanceTypeFamilies")]
                 [Validation(Required=false)]
@@ -579,7 +444,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The ECS instance families that are supported by the dedicated host.</para>
+                /// The ECS instance families that are supported by the dedicated host.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypeFamilies")]
                 [Validation(Required=false)]
@@ -592,7 +457,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The ECS instance types that are supported by the dedicated host.</para>
+                /// The ECS instance types that are supported by the dedicated host.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypesList")]
                 [Validation(Required=false)]
@@ -605,7 +470,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The tags of the dedicated host.</para>
+                /// The tags of the dedicated host.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -616,20 +481,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag> Tag { get; set; }
                     public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The tag key of the dedicated host.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestKey</para>
+                        /// The tag key of the dedicated host.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value of the dedicated host.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestValue</para>
+                        /// The tag value of the dedicated host.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -640,10 +499,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The zone ID of the dedicated host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-g</para>
+                /// The zone ID of the dedicated host.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -654,50 +510,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. If the return value of this parameter is empty when you specify MaxResults and NextToken for a paged query, no more results are to be returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>e71d8a535bd9cc11</para>
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. If the return value of this parameter is empty when you specify MaxResults and NextToken for a paged query, no more results are to be returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>5</para>
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>7654525A-9964-4ABB-8BCD-98F8835E809A</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of dedicated hosts.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>3</para>
+        /// The total number of dedicated hosts.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

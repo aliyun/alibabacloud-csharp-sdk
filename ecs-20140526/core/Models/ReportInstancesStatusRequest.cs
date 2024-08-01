@@ -10,80 +10,62 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReportInstancesStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the exception.</para>
-        /// <para>This parameter is required.</para>
+        /// The description of the exception.
         /// 
-        /// <b>Example:</b>
-        /// <para>The local disk is unavailable, the mount point is inaccessible, or files cannot be loaded.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The device names of disks on an instance that have the exception. You can specify to 100 device names in a single request.</para>
-        /// <para>If you are using an ECS bare metal instance, enter the slot numbers of disks on the instance.</para>
-        /// <remarks>
-        /// <para>For ECS bare metal instances, this parameter is required when the value of the <c>Reason</c> parameter is <c>abnormal-local-disk</c> or <c>abnormal-cloud-disk</c> or when the value of the <c>IssueCategory</c> parameter is <c>hardware-disk-error</c>.</para>
-        /// </remarks>
+        /// The device names of disks on an instance that have the exception. You can specify to 100 device names in a single request.
         /// 
-        /// <b>Example:</b>
-        /// <para>/dev/xvdb</para>
+        /// If you are using an ECS bare metal instance, enter the slot numbers of disks on the instance.
+        /// 
+        /// > For ECS bare metal instances, this parameter is required when the value of the `Reason` parameter is `abnormal-local-disk` or `abnormal-cloud-disk` or when the value of the `IssueCategory` parameter is `hardware-disk-error`.
         /// </summary>
         [NameInMap("Device")]
         [Validation(Required=false)]
         public List<string> Device { get; set; }
 
         /// <summary>
-        /// <para>The IDs of disks on an instance that have the exception. You can specify up to 100 disk IDs in a single request. If you are using an ECS bare metal instance, enter the serial numbers of disks on the instance.</para>
-        /// <remarks>
-        /// <para>This parameter is required when the value of the <c>Reason</c> parameter is <c>abnormal-local-disk</c> or <c>abnormal-cloud-disk</c> or when the value of the <c>IssueCategory</c> parameter is <c>hardware-disk-error</c>.</para>
-        /// </remarks>
+        /// The IDs of disks on an instance that have the exception. You can specify up to 100 disk IDs in a single request. If you are using an ECS bare metal instance, enter the serial numbers of disks on the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>d-bp1aeljlfad7x6u1****</para>
+        /// > This parameter is required when the value of the `Reason` parameter is `abnormal-local-disk` or `abnormal-cloud-disk` or when the value of the `IssueCategory` parameter is `hardware-disk-error`.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public List<string> DiskId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2017-11-31T06:32:31Z</para>
+        /// The end time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The IDs of instances. You can specify up to 100 instance IDs in a single request.</para>
-        /// <para>This parameter is required.</para>
+        /// The IDs of instances. You can specify up to 100 instance IDs in a single request.
         /// 
-        /// <b>Example:</b>
-        /// <para>i-bp165p6xk2tmdhj0****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The category of the exception. This parameter is applicable only to ECS bare metal instances. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>hardware-cpu-error: CPU failure</description></item>
-        /// <item><description>hardware-motherboard-error: motherboard failure</description></item>
-        /// <item><description>hardware-mem-error: memory failure</description></item>
-        /// <item><description>hardware-power-error: power failure</description></item>
-        /// <item><description>hardware-disk-error: disk failure</description></item>
-        /// <item><description>hardware-networkcard-error: network interface controller (NIC) failure</description></item>
-        /// <item><description>hardware-raidcard-error: SAS/RAID card failure</description></item>
-        /// <item><description>hardware-fan-error: fan failure</description></item>
-        /// <item><description>others: other failures</description></item>
-        /// </list>
+        /// The category of the exception. This parameter is applicable only to ECS bare metal instances. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>hardware-cpu-error</para>
+        /// *   hardware-cpu-error: CPU failure
+        /// *   hardware-motherboard-error: motherboard failure
+        /// *   hardware-mem-error: memory failure
+        /// *   hardware-power-error: power failure
+        /// *   hardware-disk-error: disk failure
+        /// *   hardware-networkcard-error: network interface controller (NIC) failure
+        /// *   hardware-raidcard-error: SAS/RAID card failure
+        /// *   hardware-fan-error: fan failure
+        /// *   others: other failures
         /// </summary>
         [NameInMap("IssueCategory")]
         [Validation(Required=false)]
@@ -98,29 +80,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The impact of the exception on the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>instance-hang: The instance is unavailable or cannot be connected.</description></item>
-        /// <item><description>instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.</description></item>
-        /// <item><description>abnormal-network: The instance has a network exception.</description></item>
-        /// <item><description>abnormal-local-disk: A local disk attached to the instance has an exception.</description></item>
-        /// <item><description>abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.</description></item>
-        /// <item><description>others: other exception types. If the impact is not of the preceding types, you can set <c>Reason</c> to others and specify the <c>Description</c> parameter.</description></item>
-        /// </list>
+        /// The impact of the exception on the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>abnormal-local-disk</para>
+        /// *   instance-hang: The instance is unavailable or cannot be connected.
+        /// *   instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.
+        /// *   abnormal-network: The instance has a network exception.
+        /// *   abnormal-local-disk: A local disk attached to the instance has an exception.
+        /// *   abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.
+        /// *   others: other exception types. If the impact is not of the preceding types, you can set `Reason` to others and specify the `Description` parameter.
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -135,10 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2017-11-30T06:32:31Z</para>
+        /// The start time of the instance exception. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

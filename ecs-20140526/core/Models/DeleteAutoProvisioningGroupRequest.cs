@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteAutoProvisioningGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the auto provisioning group.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the auto provisioning group.
         /// 
-        /// <b>Example:</b>
-        /// <para>apg-bpuf6jel2bbl62wh13****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AutoProvisioningGroupId")]
         [Validation(Required=false)]
@@ -29,11 +27,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the auto provisioning group.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the auto provisioning group.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -48,17 +44,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release instances in the auto provisioning group. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> By default, this parameter inherits the value of <c>TerminateInstances</c> that you specified when you call the <c>CreateAutoProvisioningGroup</c> operation to create an auto provisioning group. You can also change the value of <c>TerminateInstances</c> when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.</para>
-        /// </remarks>
+        /// Specifies whether to release instances in the auto provisioning group. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// *   true
+        /// *   false
+        /// 
+        /// >  By default, this parameter inherits the value of `TerminateInstances` that you specified when you call the `CreateAutoProvisioningGroup` operation to create an auto provisioning group. You can also change the value of `TerminateInstances` when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.
         /// </summary>
         [NameInMap("TerminateInstances")]
         [Validation(Required=false)]

@@ -10,13 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances. You can specify up to 100 subscription instance IDs in a single request. Separate multiple instance IDs with commas (,).</para>
-        /// <remarks>
-        /// <para><c>InstanceId</c> and <c>RenewalStatus</c> cannot be empty at the same time.</para>
-        /// </remarks>
+        /// The IDs of the instances. You can specify up to 100 subscription instance IDs in a single request. Separate multiple instance IDs with commas (,).
         /// 
-        /// <b>Example:</b>
-        /// <para>i-bp18x3z4hc7bixhx****,i-bp1g6zv0ce8oghu7****</para>
+        /// > `InstanceId` and `RenewalStatus` cannot be empty at the same time.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -31,50 +27,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// The page number.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// The number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Valid values: 1 to 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal state of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>AutoRenewal: Auto-renewal is enabled for the instance.</description></item>
-        /// <item><description>Normal: Auto-renewal is disabled for the instance.</description></item>
-        /// <item><description>NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the <a href="https://help.aliyun.com/document_detail/52843.html">ModifyInstanceAutoRenewAttribute</a> operation to change its auto-renewal status to <c>Normal</c>. Then, you can manually renew the instance or enable auto-renewal for the instance.</description></item>
-        /// </list>
+        /// The auto-renewal state of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>AutoRenewal</para>
+        /// *   AutoRenewal: Auto-renewal is enabled for the instance.
+        /// *   Normal: Auto-renewal is disabled for the instance.
+        /// *   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](https://help.aliyun.com/document_detail/52843.html) operation to change its auto-renewal status to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]

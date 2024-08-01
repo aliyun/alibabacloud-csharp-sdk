@@ -10,26 +10,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotMonitorDataRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the snapshot. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Standard: normal snapshot</description></item>
-        /// <item><description>Flash: local snapshot</description></item>
-        /// </list>
-        /// <para>Default value: Standard.</para>
+        /// The category of the snapshot. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Standard</para>
+        /// *   Standard: normal snapshot
+        /// *   Flash: local snapshot
+        /// 
+        /// Default value: Standard.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</para>
-        /// <para>This parameter is required.</para>
+        /// The end of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
         /// 
-        /// <b>Example:</b>
-        /// <para>2019-05-10T03:00:00Z</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -44,27 +39,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>60</description></item>
-        /// <item><description>600</description></item>
-        /// <item><description>3600</description></item>
-        /// </list>
-        /// <para>Default value: 60.</para>
+        /// The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>60</para>
+        /// *   60
+        /// *   600
+        /// *   3600
+        /// 
+        /// Default value: 60.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -79,11 +69,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</para>
-        /// <para>This parameter is required.</para>
+        /// The beginning of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
         /// 
-        /// <b>Example:</b>
-        /// <para>2019-05-10T00:00:00Z</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

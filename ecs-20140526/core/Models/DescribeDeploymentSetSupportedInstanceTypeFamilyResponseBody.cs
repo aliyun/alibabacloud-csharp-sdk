@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance families that support deployment sets.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ecs.i2g,ecs.i1,ecs.i2ne,ecs.i2gne</para>
+        /// The instance families that support deployment sets.
         /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
         public string InstanceTypeFamilies { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B7DB-A3DC7DE1****</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

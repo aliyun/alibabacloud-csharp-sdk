@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StopInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance-specific responses, which contain the status of each instance before and after the operation was called and the results of the operation.</para>
+        /// The instance-specific responses, which contain the status of each instance before and after the operation was called and the results of the operation.
         /// </summary>
         [NameInMap("InstanceResponses")]
         [Validation(Required=false)]
@@ -21,50 +21,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<StopInstancesResponseBodyInstanceResponsesInstanceResponse> InstanceResponse { get; set; }
             public class StopInstancesResponseBodyInstanceResponsesInstanceResponse : TeaModel {
                 /// <summary>
-                /// <para>The error code returned for the instance. A return value of 200 indicates that the operation was successful. For more information, see the &quot;Error codes&quot; section of this topic.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>200</para>
+                /// The error code returned for the instance. A return value of 200 indicates that the operation was successful. For more information, see the "Error codes" section of this topic.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The current status of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Stopping</para>
+                /// The current status of the instance.
                 /// </summary>
                 [NameInMap("CurrentStatus")]
                 [Validation(Required=false)]
                 public string CurrentStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp67acfmxazb4p****</para>
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned for the instance. A return value of success indicates that the operation was successful. For more information, see the &quot;Error codes&quot; section of this topic.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>success</para>
+                /// The error message returned for the instance. A return value of success indicates that the operation was successful. For more information, see the "Error codes" section of this topic.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance before the operation was called.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Running</para>
+                /// The status of the instance before the operation was called.
                 /// </summary>
                 [NameInMap("PreviousStatus")]
                 [Validation(Required=false)]
@@ -75,10 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1C488B66-B819-4D14-8711-C4EAAA13AC01</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

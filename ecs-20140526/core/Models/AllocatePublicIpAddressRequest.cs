@@ -10,21 +10,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AllocatePublicIpAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance to which you want to assign a public IP address.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the instance to which you want to assign a public IP address.
         /// 
-        /// <b>Example:</b>
-        /// <para>i-bp1gtjxuuvwj17zr****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>112.124.**.**</para>
+        /// The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.
         /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]
@@ -47,13 +42,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The virtual LAN (VLAN) ID of the instance.</para>
-        /// <remarks>
-        /// <para>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</para>
-        /// </remarks>
+        /// The virtual LAN (VLAN) ID of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>720</para>
+        /// > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
         /// </summary>
         [NameInMap("VlanId")]
         [Validation(Required=false)]

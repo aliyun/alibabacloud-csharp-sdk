@@ -10,76 +10,56 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLaunchTemplateVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to query the default version.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// Specifies whether to query the default version.
         /// </summary>
         [NameInMap("DefaultVersion")]
         [Validation(Required=false)]
         public bool? DefaultVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the configurations of the launch template. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</description></item>
-        /// <item><description>false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</description></item>
-        /// </list>
-        /// <para>Default value: true.</para>
+        /// Specifies whether to query the configurations of the launch template. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// *   true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.
+        /// *   false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.
+        /// 
+        /// Default value: true.
         /// </summary>
         [NameInMap("DetailFlag")]
         [Validation(Required=false)]
         public bool? DetailFlag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the launch template.</para>
-        /// <para>You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</para>
+        /// The ID of the launch template.
         /// 
-        /// <b>Example:</b>
-        /// <para>lt-bp168lnahrdwl39p****</para>
+        /// You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
         /// </summary>
         [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The name of the launch template.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>testLaunchTemplateName</para>
+        /// The name of the launch template.
         /// </summary>
         [NameInMap("LaunchTemplateName")]
         [Validation(Required=false)]
         public string LaunchTemplateName { get; set; }
 
         /// <summary>
-        /// <para>Version N of the launch template.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Version N of the launch template.
         /// </summary>
         [NameInMap("LaunchTemplateVersion")]
         [Validation(Required=false)]
         public List<long?> LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum version number in the version range to query.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The maximum version number in the version range to query.
         /// </summary>
         [NameInMap("MaxVersion")]
         [Validation(Required=false)]
         public long? MaxVersion { get; set; }
 
         /// <summary>
-        /// <para>The minimum version number in the version range to query.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The minimum version number in the version range to query.
         /// </summary>
         [NameInMap("MinVersion")]
         [Validation(Required=false)]
@@ -94,35 +74,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// The number of the page to return.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Default value: 10.</para>
+        /// The number of entries to return on each page.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the launch template.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the launch template.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

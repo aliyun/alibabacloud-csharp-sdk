@@ -10,68 +10,54 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticMetricSetsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. Maximum value: 100.</para>
-        /// <para>Default value:</para>
-        /// <list type="bullet">
-        /// <item><description>If this parameter is left empty, the default value is 10.</description></item>
-        /// <item><description>If this parameter is set to a value greater than 100, the default value is 100.</description></item>
-        /// </list>
+        /// The maximum number of entries to return on each page. Maximum value: 100.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Default value:
+        /// 
+        /// *   If this parameter is left empty, the default value is 10.
+        /// *   If this parameter is set to a value greater than 100, the default value is 100.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of diagnostic metric set N.</para>
+        /// The ID of diagnostic metric set N.
         /// </summary>
         [NameInMap("MetricSetIds")]
         [Validation(Required=false)]
         public List<string> MetricSetIds { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the <c>NextToken</c> value returned in the last call to the DescribeDiagnosticMetricSets operation. Leave this parameter empty the first time you call this operation.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
+        /// The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticMetricSets operation. Leave this parameter empty the first time you call this operation.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the diagnostic metric set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the diagnostic metric set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource type supported by the diagnostic metric set.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>instance</para>
+        /// The resource type supported by the diagnostic metric set.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The type of the diagnostic metric set. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>User: user-defined diagnostic metric set</description></item>
-        /// <item><description>Common: common diagnostic metric set</description></item>
-        /// </list>
-        /// <para>Default value: user.</para>
+        /// The type of the diagnostic metric set. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>User</para>
+        /// *   User: user-defined diagnostic metric set
+        /// *   Common: common diagnostic metric set
+        /// 
+        /// Default value: user.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

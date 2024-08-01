@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RenewInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1234567890</para>
+        /// The order ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

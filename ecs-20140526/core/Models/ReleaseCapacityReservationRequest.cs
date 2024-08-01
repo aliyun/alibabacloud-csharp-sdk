@@ -14,11 +14,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ReleaseCapacityReservationRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class ReleaseCapacityReservationRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The ID of the capacity reservation.</para>
-            /// <para>This parameter is required.</para>
+            /// The ID of the capacity reservation.
             /// 
-            /// <b>Example:</b>
-            /// <para>crp-bp67acfmxazb4****</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -27,10 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Set the value to false. This indicates that the system directly releases the capacity reservation.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
+        /// Specifies whether to perform only a dry run, without performing the actual request. Set the value to false. This indicates that the system directly releases the capacity reservation.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -45,11 +40,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the capacity reservation. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

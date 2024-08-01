@@ -10,81 +10,62 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the snapshot. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Standard: normal snapshot</description></item>
-        /// <item><description>Flash: local snapshot</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
-        /// </remarks>
+        /// The category of the snapshot. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Standard</para>
+        /// *   Standard: normal snapshot
+        /// *   Flash: local snapshot
+        /// 
+        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.</para>
-        /// <para>This parameter is empty by default, which indicates that the snapshot is not automatically released.</para>
+        /// The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.
         /// 
-        /// <b>Example:</b>
-        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// This parameter is empty by default, which indicates that the snapshot is not automatically released.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The cloud disk ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>testDescription</para>
+        /// The cloud disk ID.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Creates a snapshot for a disk.</para>
-        /// <para>This parameter is required.</para>
+        /// Creates a snapshot for a disk.
         /// 
-        /// <b>Example:</b>
-        /// <para>d-bp1s5fnvk4gn2tws0****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the instant access feature. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: enables the instant access feature. This feature can be enabled only for ESSDs.</description></item>
-        /// <item><description>false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
-        /// <remarks>
-        /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
-        /// </remarks>
+        /// Specifies whether to enable the instant access feature. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
+        /// *   true: enables the instant access feature. This feature can be enabled only for ESSDs.
+        /// *   false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.
+        /// 
+        /// Default value: false.
+        /// 
+        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
         /// </summary>
         [NameInMap("InstantAccess")]
         [Validation(Required=false)]
         public bool? InstantAccess { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only when <c>InstantAccess</c> is set to true. Unit: days. Valid values: 1 to 65535.</para>
-        /// <para>By default, the value of this parameter is the same as that of <c>RetentionDays</c>.</para>
-        /// <remarks>
-        /// <para> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
-        /// </remarks>
+        /// The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only when `InstantAccess` is set to true. Unit: days. Valid values: 1 to 65535.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// By default, the value of this parameter is the same as that of `RetentionDays`.
+        /// 
+        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
         /// </summary>
         [NameInMap("InstantAccessRetentionDays")]
         [Validation(Required=false)]
@@ -99,17 +80,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Standard: normal snapshot</description></item>
-        /// <item><description>Flash: local snapshot</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use the <c>InstantAccess</c> parameter to ensure future compatibility. This parameter and the <c>InstantAccess</c> parameter cannot be specified at the same time. For more information, see the &quot;Description&quot; section of this topic.</para>
-        /// </remarks>
+        /// The snapshot type. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>rg-bp67acfmxazb4p****</para>
+        /// *   Standard: normal snapshot
+        /// *   Flash: local snapshot
+        /// 
+        /// > This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility. This parameter and the `InstantAccess` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -124,59 +100,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-        /// <para>The name cannot start with <c>auto</c> because snapshots whose names start with auto are recognized as automatic snapshots.</para>
+        /// The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
         /// </summary>
         [NameInMap("RetentionDays")]
         [Validation(Required=false)]
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-        /// <para>It cannot start with <c>auto</c> because snapshots whose names start with auto are recognized as automatic snapshots.</para>
+        /// The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// 
-        /// <b>Example:</b>
-        /// <para>testSnapshotName</para>
+        /// It cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
         /// </summary>
         [NameInMap("SnapshotName")]
         [Validation(Required=false)]
         public string SnapshotName { get; set; }
 
         /// <summary>
-        /// <para>The value of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain <a href="http://https://%E3%80%82">http:// or https://.</a></para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>null</para>
+        /// The value of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)
         /// </summary>
         [NameInMap("StorageLocationArn")]
         [Validation(Required=false)]
         public string StorageLocationArn { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the snapshot.</para>
+        /// The tags to add to the snapshot.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateSnapshotRequestTag> Tag { get; set; }
         public class CreateSnapshotRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,35 +10,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachNetworkInterfaceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>i-bp16qstyvxj9gpqw****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The index of the network interface controller (NIC).</para>
-        /// <remarks>
-        /// <para>The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
-        /// </remarks>
+        /// The index of the network interface controller (NIC).
         /// 
-        /// <b>Example:</b>
-        /// <para>0</para>
+        /// > The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("NetworkCardIndex")]
         [Validation(Required=false)]
         public int? NetworkCardIndex { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the ENI.
         /// 
-        /// <b>Example:</b>
-        /// <para>eni-bp17pdijfczax1huji****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -53,11 +45,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -72,25 +62,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trunk ENI.</para>
-        /// <remarks>
-        /// <para>This parameter is unavailable.</para>
-        /// </remarks>
+        /// The ID of the trunk ENI.
         /// 
-        /// <b>Example:</b>
-        /// <para>eni-f8zapqwj1v1j4ia3****</para>
+        /// > This parameter is unavailable.
         /// </summary>
         [NameInMap("TrunkNetworkInstanceId")]
         [Validation(Required=false)]
         public string TrunkNetworkInstanceId { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para>This parameter is no longer supported.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>null</para>
+        /// > This parameter is no longer supported.
         /// </summary>
         [NameInMap("WaitForNetworkConfigurationReady")]
         [Validation(Required=false)]

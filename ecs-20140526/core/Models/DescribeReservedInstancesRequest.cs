@@ -10,64 +10,47 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The allocation type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Normal: queries all reserved instances that belong to the current account.</description></item>
-        /// <item><description>Shared: queries reserved instances that are shared between the main account and linked accounts.</description></item>
-        /// </list>
-        /// <para>Default value: Normal.</para>
+        /// The allocation type. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Normal</para>
+        /// *   Normal: queries all reserved instances that belong to the current account.
+        /// *   Shared: queries reserved instances that are shared between the main account and linked accounts.
+        /// 
+        /// Default value: Normal.
         /// </summary>
         [NameInMap("AllocationType")]
         [Validation(Required=false)]
         public string AllocationType { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ecs.g5.large</para>
+        /// The instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ecs.g5</para>
+        /// The instance family. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>The reason why the instance is locked. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>financial: You have an overdue payment in your account, or the reserved instance has expired.</description></item>
-        /// <item><description>security: The reserved instance is locked for security reasons.</description></item>
-        /// </list>
+        /// The reason why the instance is locked. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>security</para>
+        /// *   financial: You have an overdue payment in your account, or the reserved instance has expired.
+        /// *   security: The reserved instance is locked for security reasons.
         /// </summary>
         [NameInMap("LockReason")]
         [Validation(Required=false)]
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The payment option of the reserved instances. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>No Upfront</description></item>
-        /// <item><description>Partial Upfront</description></item>
-        /// <item><description>All Upfront</description></item>
-        /// </list>
+        /// The payment option of the reserved instances. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>All Upfront</para>
+        /// *   No Upfront
+        /// *   Partial Upfront
+        /// *   All Upfront
         /// </summary>
         [NameInMap("OfferingType")]
         [Validation(Required=false)]
@@ -82,53 +65,41 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// The page number. Pages start from page 1.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// The number of entries per page. Maximum value: 100.
         /// 
-        /// <b>Example:</b>
-        /// <para>50</para>
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instances. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of reserved instance N. Valid values of N: 1 to 100.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ri-bpzhex2ulpzf53****</para>
+        /// The ID of reserved instance N. Valid values of N: 1 to 100.
         /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]
         public List<string> ReservedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the reserved instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>testReservedInstanceName</para>
+        /// The name of the reserved instance.
         /// </summary>
         [NameInMap("ReservedInstanceName")]
         [Validation(Required=false)]
@@ -143,59 +114,47 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scope of the reserved instances. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Region</description></item>
-        /// <item><description>Zone</description></item>
-        /// </list>
-        /// <para>Default value: Region.</para>
+        /// The scope of the reserved instances. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Region</para>
+        /// *   Region
+        /// *   Zone
+        /// 
+        /// Default value: Region.
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The status of reserved instance N. Valid values of N: 1 to 100. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Creating</description></item>
-        /// <item><description>Active</description></item>
-        /// <item><description>Expired</description></item>
-        /// <item><description>Updating</description></item>
-        /// </list>
+        /// The status of reserved instance N. Valid values of N: 1 to 100. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Active</para>
+        /// *   Creating
+        /// *   Active
+        /// *   Expired
+        /// *   Updating
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the instances.</para>
+        /// The tags to add to the instances.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeReservedInstancesRequestTag> Tag { get; set; }
         public class DescribeReservedInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</para>
-            /// <para>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
             /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs:.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs:.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -204,10 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou-z</para>
+        /// The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

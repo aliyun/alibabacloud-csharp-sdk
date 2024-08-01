@@ -14,21 +14,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyElasticityAssuranceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class ModifyElasticityAssuranceRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The ID of the elasticity assurance.</para>
-            /// <para>This parameter is required.</para>
+            /// The ID of the elasticity assurance.
             /// 
-            /// <b>Example:</b>
-            /// <para>eap-bp67acfmxazb4****</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>eapTestName</para>
+            /// The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -37,10 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>This is description.</para>
+        /// The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -55,11 +47,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the elasticity assurance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

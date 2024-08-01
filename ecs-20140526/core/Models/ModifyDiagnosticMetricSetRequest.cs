@@ -10,59 +10,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiagnosticMetricSetRequest : TeaModel {
         /// <summary>
-        /// <para>The new description of the diagnostic metric set.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>connection diagnostics</para>
+        /// The new description of the diagnostic metric set.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of diagnostic metric N.</para>
+        /// The ID of diagnostic metric N.
         /// </summary>
         [NameInMap("MetricIds")]
         [Validation(Required=false)]
         public List<string> MetricIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the diagnostic metric set.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the diagnostic metric set.
         /// 
-        /// <b>Example:</b>
-        /// <para>dms-uf6i0tv2refv8wz*****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricSetId")]
         [Validation(Required=false)]
         public string MetricSetId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the diagnostic metric set.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>remoteConnectError</para>
+        /// The new name of the diagnostic metric set.
         /// </summary>
         [NameInMap("MetricSetName")]
         [Validation(Required=false)]
         public string MetricSetName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the diagnostic metric set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the diagnostic metric set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>instance</para>
+        /// The type of the resource.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

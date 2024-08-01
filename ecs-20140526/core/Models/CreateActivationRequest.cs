@@ -10,43 +10,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateActivationRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the activation code. It must be 1 to 100 characters in length.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>This is description.</para>
+        /// The description of the activation code. It must be 1 to 100 characters in length.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of times that you can use the activation code to register managed instances. Valid values: 1 to 1000.</para>
-        /// <para>Default value: 10.</para>
+        /// The maximum number of times that you can use the activation code to register managed instances. Valid values: 1 to 1000.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Default value: 10.
         /// </summary>
         [NameInMap("InstanceCount")]
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The default instance name prefix. The instance name prefix must be 2 to 50 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).</para>
-        /// <para>If you use the activation code that is created by calling this operation (CreateActivation) to register managed instances, the instances are assigned sequential names that are prefixed by the value of this parameter. You can also specify a new instance name to replace the assigned sequential name when you register a managed instance.</para>
-        /// <para>If you specify InstanceName when you register a managed instance, an instance name in the format of <c>&lt;InstanceName&gt;-&lt;Number&gt;</c> is generated. The number of digits in the \<Number> value is determined by that in the <c>InstanceCount</c> value. Example: <c>001</c>. If you do not specify InstanceName, the hostname (Hostname) is used as the instance name.</para>
+        /// The default instance name prefix. The instance name prefix must be 2 to 50 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).
         /// 
-        /// <b>Example:</b>
-        /// <para>test-InstanceName</para>
+        /// If you use the activation code that is created by calling this operation (CreateActivation) to register managed instances, the instances are assigned sequential names that are prefixed by the value of this parameter. You can also specify a new instance name to replace the assigned sequential name when you register a managed instance.
+        /// 
+        /// If you specify InstanceName when you register a managed instance, an instance name in the format of `<InstanceName>-<Number>` is generated. The number of digits in the \\<Number> value is determined by that in the `InstanceCount` value. Example: `001`. If you do not specify InstanceName, the hostname (Hostname) is used as the instance name.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses of hosts that can use the activation code. The value can be IPv4 addresses, IPv6 addresses, or CIDR blocks.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0.0.0.0/0</para>
+        /// The IP addresses of hosts that can use the activation code. The value can be IPv4 addresses, IPv6 addresses, or CIDR blocks.
         /// </summary>
         [NameInMap("IpAddressRange")]
         [Validation(Required=false)]
@@ -61,22 +52,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to create the activation code. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</para>
-        /// <para>You can all the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the region in which to create the activation code. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// You can all the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the activation code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-123******</para>
+        /// The ID of the resource group to which to assign the activation code.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -91,30 +78,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the activation code.</para>
+        /// The tags to add to the activation code.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateActivationRequestTag> Tag { get; set; }
         public class CreateActivationRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a>.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// The key of tag N to add to the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.
             /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call [ListTagResources](https://help.aliyun.com/document_detail/110425.html).
+            /// 
+            /// The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the activation code. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
-            /// <para>It can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// The value of tag N to add to the activation code. Valid values of N: 1 to 20. The tag value can be an empty string.
             /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// It can be up to 128 characters in length and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -123,11 +107,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The validity period of the activation code. The activation code can no longer be used to register instances after the period expires. Unit: hours. Valid values: 1 to 876576, which represents a range of time from 1 hour to 100 years.</para>
-        /// <para>Default value: 4.</para>
+        /// The validity period of the activation code. The activation code can no longer be used to register instances after the period expires. Unit: hours. Valid values: 1 to 876576, which represents a range of time from 1 hour to 100 years.
         /// 
-        /// <b>Example:</b>
-        /// <para>4</para>
+        /// Default value: 4.
         /// </summary>
         [NameInMap("TimeToLiveInHours")]
         [Validation(Required=false)]

@@ -14,33 +14,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// The page number. Pages start from page 1.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
-        /// <para>Default value: 50.</para>
+        /// The number of entries per page. Valid values: 1 to 100.
         /// 
-        /// <b>Example:</b>
-        /// <para>50</para>
+        /// Default value: 50.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -55,50 +49,41 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>instance: Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description>disk: disk</description></item>
-        /// <item><description>snapshot: snapshot</description></item>
-        /// <item><description>image: image</description></item>
-        /// <item><description>securitygroup: security group</description></item>
-        /// <item><description>volume: storage volume</description></item>
-        /// <item><description>eni: elastic network interface (ENI)</description></item>
-        /// <item><description>ddh: dedicated host</description></item>
-        /// <item><description>keypair: SSH key pair</description></item>
-        /// <item><description>launchtemplate: launch template</description></item>
-        /// </list>
-        /// <para>All the preceding values must be lowercase.</para>
+        /// The type of the resource. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>instance</para>
+        /// *   instance: Elastic Compute Service (ECS) instance
+        /// *   disk: disk
+        /// *   snapshot: snapshot
+        /// *   image: image
+        /// *   securitygroup: security group
+        /// *   volume: storage volume
+        /// *   eni: elastic network interface (ENI)
+        /// *   ddh: dedicated host
+        /// *   keypair: SSH key pair
+        /// *   launchtemplate: launch template
+        /// 
+        /// All the preceding values must be lowercase.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeResourceByTagsRequestTag> Tag { get; set; }
         public class DescribeResourceByTagsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

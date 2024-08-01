@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeResourcesModificationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the queried zones.</para>
+        /// The information about the queried zones.
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone : TeaModel {
                 /// <summary>
-                /// <para>The resources that are available in the zone.</para>
+                /// The resources that are available in the zone.
                 /// </summary>
                 [NameInMap("AvailableResources")]
                 [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource> AvailableResource { get; set; }
                     public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource : TeaModel {
                         /// <summary>
-                        /// <para>The resource types that resources can be changed to after the resources meet specified conditions. If the conditions are met, you can change the current resource to a resource in the list.</para>
+                        /// The resource types that resources can be changed to after the resources meet specified conditions. If the conditions are met, you can change the current resource to a resource in the list.
                         /// </summary>
                         [NameInMap("ConditionSupportedResources")]
                         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResource> ConditionSupportedResource { get; set; }
                             public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResource : TeaModel {
                                 /// <summary>
-                                /// <para>The conditions.</para>
+                                /// The conditions.
                                 /// </summary>
                                 [NameInMap("Conditions")]
                                 [Validation(Required=false)]
@@ -54,11 +54,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                     public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditionsCondition> Condition { get; set; }
                                     public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditionsCondition : TeaModel {
                                         /// <summary>
-                                        /// <para>The condition name. Valid value:</para>
-                                        /// <para>DiskCategory, which indicates a disk category change.</para>
+                                        /// The condition name. Valid value:
                                         /// 
-                                        /// <b>Example:</b>
-                                        /// <para>DiskCategory</para>
+                                        /// DiskCategory, which indicates a disk category change.
                                         /// </summary>
                                         [NameInMap("Key")]
                                         [Validation(Required=false)]
@@ -69,72 +67,55 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 }
 
                                 /// <summary>
-                                /// <para>The maximum disk capacity.</para>
-                                /// <para>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</para>
+                                /// The maximum disk capacity.
                                 /// 
-                                /// <b>Example:</b>
-                                /// <para>2</para>
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Max")]
                                 [Validation(Required=false)]
                                 public int? Max { get; set; }
 
                                 /// <summary>
-                                /// <para>The minimum disk capacity.</para>
-                                /// <para>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</para>
+                                /// The minimum disk capacity.
                                 /// 
-                                /// <b>Example:</b>
-                                /// <para>1</para>
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Min")]
                                 [Validation(Required=false)]
                                 public int? Min { get; set; }
 
                                 /// <summary>
-                                /// <para>The stock state of the resource. Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description>Available</description></item>
-                                /// <item><description>SoldOut</description></item>
-                                /// </list>
+                                /// The stock state of the resource. Valid values:
                                 /// 
-                                /// <b>Example:</b>
-                                /// <para>Available</para>
+                                /// *   Available
+                                /// *   SoldOut
                                 /// </summary>
                                 [NameInMap("Status")]
                                 [Validation(Required=false)]
                                 public string Status { get; set; }
 
                                 /// <summary>
-                                /// <para>The category of the resource based on stock status. Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description>WithStock: resources that are in sufficient stock</description></item>
-                                /// <item><description>ClosedWithStock: resources that are in insufficient stock</description></item>
-                                /// <item><description>WithoutStock: resources that are out of stock</description></item>
-                                /// </list>
+                                /// The category of the resource based on stock status. Valid values:
                                 /// 
-                                /// <b>Example:</b>
-                                /// <para>WithStock</para>
+                                /// *   WithStock: resources that are in sufficient stock
+                                /// *   ClosedWithStock: resources that are in insufficient stock
+                                /// *   WithoutStock: resources that are out of stock
                                 /// </summary>
                                 [NameInMap("StatusCategory")]
                                 [Validation(Required=false)]
                                 public string StatusCategory { get; set; }
 
                                 /// <summary>
-                                /// <para>The unit of the disk capacity.</para>
-                                /// <para>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</para>
+                                /// The unit of the disk capacity.
                                 /// 
-                                /// <b>Example:</b>
-                                /// <para>null</para>
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Unit")]
                                 [Validation(Required=false)]
                                 public string Unit { get; set; }
 
                                 /// <summary>
-                                /// <para>The resource type.</para>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>ecs.g5.large</para>
+                                /// The resource type.
                                 /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
@@ -145,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The information about the resources.</para>
+                        /// The information about the resources.
                         /// </summary>
                         [NameInMap("SupportedResources")]
                         [Validation(Required=false)]
@@ -156,71 +137,53 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource> SupportedResource { get; set; }
                             public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource : TeaModel {
                                 /// <summary>
-                                /// <para>The maximum disk capacity.</para>
-                                /// <para>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</para>
+                                /// The maximum disk capacity.
                                 /// 
-                                /// <b>Example:</b>
-                                /// <para>2</para>
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Max")]
                                 [Validation(Required=false)]
                                 public int? Max { get; set; }
 
                                 /// <summary>
-                                /// <para>The minimum disk capacity.</para>
-                                /// <para>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</para>
+                                /// The minimum disk capacity.
                                 /// 
-                                /// <b>Example:</b>
-                                /// <para>1</para>
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Min")]
                                 [Validation(Required=false)]
                                 public int? Min { get; set; }
 
                                 /// <summary>
-                                /// <para>The state of the resource. Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description>Available</description></item>
-                                /// <item><description>SoldOut</description></item>
-                                /// </list>
+                                /// The state of the resource. Valid values:
                                 /// 
-                                /// <b>Example:</b>
-                                /// <para>Available</para>
+                                /// *   Available
+                                /// *   SoldOut
                                 /// </summary>
                                 [NameInMap("Status")]
                                 [Validation(Required=false)]
                                 public string Status { get; set; }
 
                                 /// <summary>
-                                /// <para>The category of the resource based on stock status. Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description>WithStock: resources that are in sufficient stock</description></item>
-                                /// <item><description>ClosedWithStock: resources that are in insufficient stock</description></item>
-                                /// <item><description>WithoutStock: resources that are out of stock</description></item>
-                                /// </list>
+                                /// The category of the resource based on stock status. Valid values:
                                 /// 
-                                /// <b>Example:</b>
-                                /// <para>WithStock</para>
+                                /// *   WithStock: resources that are in sufficient stock
+                                /// *   ClosedWithStock: resources that are in insufficient stock
+                                /// *   WithoutStock: resources that are out of stock
                                 /// </summary>
                                 [NameInMap("StatusCategory")]
                                 [Validation(Required=false)]
                                 public string StatusCategory { get; set; }
 
                                 /// <summary>
-                                /// <para>The unit of the disk capacity. This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</para>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>null</para>
+                                /// The unit of the disk capacity. This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Unit")]
                                 [Validation(Required=false)]
                                 public string Unit { get; set; }
 
                                 /// <summary>
-                                /// <para>The resource type.</para>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>ecs.g5.large</para>
+                                /// The resource type.
                                 /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
@@ -231,18 +194,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The type of the resources. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>Zone</description></item>
-                        /// <item><description>IoOptimized</description></item>
-                        /// <item><description>InstanceType</description></item>
-                        /// <item><description>SystemDisk</description></item>
-                        /// <item><description>DataDisk</description></item>
-                        /// <item><description>Network</description></item>
-                        /// </list>
+                        /// The type of the resources. Valid values:
                         /// 
-                        /// <b>Example:</b>
-                        /// <para>InstanceType</para>
+                        /// *   Zone
+                        /// *   IoOptimized
+                        /// *   InstanceType
+                        /// *   SystemDisk
+                        /// *   DataDisk
+                        /// *   Network
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
@@ -253,49 +212,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The state of the resource. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Available</description></item>
-                /// <item><description>SoldOut</description></item>
-                /// </list>
+                /// The state of the resource. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Available</para>
+                /// *   Available
+                /// *   SoldOut
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The category of the resource based on stock status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>WithStock: resources that are in sufficient stock</description></item>
-                /// <item><description>ClosedWithStock: resources that are in insufficient stock</description></item>
-                /// <item><description>WithoutStock: resources that are out of stock</description></item>
-                /// </list>
+                /// The category of the resource based on stock status. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>WithStock</para>
+                /// *   WithStock: resources that are in sufficient stock
+                /// *   ClosedWithStock: resources that are in insufficient stock
+                /// *   WithoutStock: resources that are out of stock
                 /// </summary>
                 [NameInMap("StatusCategory")]
                 [Validation(Required=false)]
                 public string StatusCategory { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-e</para>
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -306,10 +251,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

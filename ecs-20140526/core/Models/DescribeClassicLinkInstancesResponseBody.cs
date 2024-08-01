@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeClassicLinkInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the ClassicLink connections between the instances reside in the classic network and VPCs.</para>
+        /// The details of the ClassicLink connections between the instances reside in the classic network and VPCs.
         /// </summary>
         [NameInMap("Links")]
         [Validation(Required=false)]
@@ -21,20 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeClassicLinkInstancesResponseBodyLinksLink> Link { get; set; }
             public class DescribeClassicLinkInstancesResponseBodyLinksLink : TeaModel {
                 /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-test</para>
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-test</para>
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -45,40 +39,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of ClassicLink connections.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2</para>
+        /// The total number of ClassicLink connections.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

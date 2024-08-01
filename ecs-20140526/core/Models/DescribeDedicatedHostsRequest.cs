@@ -10,76 +10,56 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the dedicated host cluster.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>dc-bp12wlf6am0vz9v2****</para>
+        /// The ID of the dedicated host cluster.
         /// </summary>
         [NameInMap("DedicatedHostClusterId")]
         [Validation(Required=false)]
         public string DedicatedHostClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate the IDs with commas (,).</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[&quot;dh-bp165p6xk2tlw61e****&quot;, &quot;dh-bp1f9vxmno7emy96****&quot;]</para>
+        /// The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate the IDs with commas (,).
         /// </summary>
         [NameInMap("DedicatedHostIds")]
         [Validation(Required=false)]
         public string DedicatedHostIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated host.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>MyDDHTestName</para>
+        /// The name of the dedicated host.
         /// </summary>
         [NameInMap("DedicatedHostName")]
         [Validation(Required=false)]
         public string DedicatedHostName { get; set; }
 
         /// <summary>
-        /// <para>The dedicated host type. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of dedicated host types.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ddh.g5</para>
+        /// The dedicated host type. You can call the [DescribeDedicatedHostTypes](https://help.aliyun.com/document_detail/134240.html) operation to query the most recent list of dedicated host types.
         /// </summary>
         [NameInMap("DedicatedHostType")]
         [Validation(Required=false)]
         public string DedicatedHostType { get; set; }
 
         /// <summary>
-        /// <para>The reason why the dedicated host is locked. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>financial: The dedicated host is locked due to overdue payments.</description></item>
-        /// <item><description>security: The dedicated host is locked due to security reasons.</description></item>
-        /// </list>
+        /// The reason why the dedicated host is locked. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>financial</para>
+        /// *   financial: The dedicated host is locked due to overdue payments.
+        /// *   security: The dedicated host is locked due to security reasons.
         /// </summary>
         [NameInMap("LockReason")]
         [Validation(Required=false)]
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. If you specify this parameter, both MaxResults and NextToken are used for a paged query.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// The maximum number of entries per page. If you specify this parameter, both MaxResults and NextToken are used for a paged query.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Valid values: 1 to 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>e71d8a535bd9cc11</para>
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -94,47 +74,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Default value: 1.</para>
+        /// The number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// The number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Valid values: 1 to 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the dedicated host. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</para>
-        /// <remarks>
-        /// <para>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
-        /// </remarks>
+        /// The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
         /// 
-        /// <b>Example:</b>
-        /// <para>rg-aek3b6jzp66****</para>
+        /// > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -149,59 +120,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display socket information. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// Specifies whether to display socket information. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("SocketDetails")]
         [Validation(Required=false)]
         public string SocketDetails { get; set; }
 
         /// <summary>
-        /// <para>The service state of the dedicated host. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Available: The dedicated host is running normally.</description></item>
-        /// <item><description>UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.</description></item>
-        /// <item><description>PermanentFailure: The dedicated host encounters permanent failures and is unavailable.</description></item>
-        /// <item><description>TempUnavailable: The dedicated host is temporarily unavailable.</description></item>
-        /// <item><description>Redeploying: The dedicated host is being restored.</description></item>
-        /// </list>
-        /// <para>Default value: Available.</para>
+        /// The service state of the dedicated host. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Available</para>
+        /// *   Available: The dedicated host is running normally.
+        /// *   UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.
+        /// *   PermanentFailure: The dedicated host encounters permanent failures and is unavailable.
+        /// *   TempUnavailable: The dedicated host is temporarily unavailable.
+        /// *   Redeploying: The dedicated host is being restored.
+        /// 
+        /// Default value: Available.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags of the dedicated host.</para>
+        /// The tags of the dedicated host.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDedicatedHostsRequestTag> Tag { get; set; }
         public class DescribeDedicatedHostsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -210,10 +168,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The zone ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou-g</para>
+        /// The zone ID of the dedicated host. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

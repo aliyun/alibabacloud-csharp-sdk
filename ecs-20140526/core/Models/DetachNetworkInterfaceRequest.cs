@@ -10,25 +10,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachNetworkInterfaceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the trunk ENI.</para>
-        /// <remarks>
-        /// <para> This parameter is unavailable for use.</para>
-        /// </remarks>
-        /// <para>This parameter is required.</para>
+        /// The ID of the trunk ENI.
         /// 
-        /// <b>Example:</b>
-        /// <para>i-bp67acfmxazb4p****</para>
+        /// >  This parameter is unavailable for use.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the instance
         /// 
-        /// <b>Example:</b>
-        /// <para>eni-bp67acfmxazb4p****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -43,11 +38,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the ENI.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -62,10 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>eni-f8zapqwj1v1j4ia3****</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("TrunkNetworkInstanceId")]
         [Validation(Required=false)]

@@ -10,22 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReleasePublicIpAddressResponseBody : TeaModel {
         /// <summary>
-        /// <remarks>
-        /// <para>This parameter is unavailable.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>hide</para>
+        /// > This parameter is unavailable.
         /// </summary>
         [NameInMap("RemainTimes")]
         [Validation(Required=false)]
         public string RemainTimes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

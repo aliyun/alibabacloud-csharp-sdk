@@ -10,32 +10,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTerminalSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>i-bp1i7gg30r52z2em****</para>
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// The maximum number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Valid values: 1 to 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>AAAAAdDWBF2****</para>
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -50,11 +43,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -69,10 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>s-hz023od0x9****</para>
+        /// The session ID.
         /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]

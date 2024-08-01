@@ -18,11 +18,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,16 +35,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The deployment strategy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Availability: high availability strategy</description></item>
-        /// <item><description>AvailabilityGroup: high availability group strategy</description></item>
-        /// <item><description>LowLatency: low latency strategy</description></item>
-        /// </list>
-        /// <para>Default value: Availability.</para>
+        /// The deployment strategy. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Availability</para>
+        /// *   Availability: high availability strategy
+        /// *   AvailabilityGroup: high availability group strategy
+        /// *   LowLatency: low latency strategy
+        /// 
+        /// Default value: Availability.
         /// </summary>
         [NameInMap("Strategy")]
         [Validation(Required=false)]

@@ -10,37 +10,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeStorageSetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.</para>
+        /// Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.
         /// </summary>
         [NameInMap("StorageSets")]
         [Validation(Required=false)]
@@ -51,70 +42,49 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeStorageSetsResponseBodyStorageSetsStorageSet> StorageSet { get; set; }
             public class DescribeStorageSetsResponseBodyStorageSetsStorageSet : TeaModel {
                 /// <summary>
-                /// <para>The time when the storage set was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-06-01T00:00:00Z</para>
+                /// The time when the storage set was created.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the storage set.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testDescription</para>
+                /// The description of the storage set.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region to which the storage set belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// The ID of the region to which the storage set belongs.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the storage set.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ss-bp1d6tsvznfghy7y****</para>
+                /// The ID of the storage set.
                 /// </summary>
                 [NameInMap("StorageSetId")]
                 [Validation(Required=false)]
                 public string StorageSetId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the storage set.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testStorageSetName</para>
+                /// The name of the storage set.
                 /// </summary>
                 [NameInMap("StorageSetName")]
                 [Validation(Required=false)]
                 public string StorageSetName { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of partitions supported by the storage set.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
+                /// The maximum number of partitions supported by the storage set.
                 /// </summary>
                 [NameInMap("StorageSetPartitionNumber")]
                 [Validation(Required=false)]
                 public int? StorageSetPartitionNumber { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone to which the storage set belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-g</para>
+                /// The ID of the zone to which the storage set belongs.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -125,10 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of storage sets.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>20</para>
+        /// The total number of storage sets.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

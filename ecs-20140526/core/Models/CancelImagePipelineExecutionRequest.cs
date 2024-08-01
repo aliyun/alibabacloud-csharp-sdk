@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CancelImagePipelineExecutionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the image build task.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the image build task.
         /// 
-        /// <b>Example:</b>
-        /// <para>exec-5fb8facb8ed7427c****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
@@ -29,11 +27,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the image build task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the image build task. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -48,33 +44,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para>This parameter is deprecated.</para>
-        /// </remarks>
+        /// > This parameter is deprecated.
         /// </summary>
         [NameInMap("TemplateTag")]
         [Validation(Required=false)]
         public List<CancelImagePipelineExecutionRequestTemplateTag> TemplateTag { get; set; }
         public class CancelImagePipelineExecutionRequestTemplateTag : TeaModel {
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is deprecated.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>null</para>
+            /// >  This parameter is deprecated.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is deprecated.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>null</para>
+            /// >  This parameter is deprecated.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceRamRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of instances. You can specify up to 100 instance IDs in a single request. You must specify at least one of the <c>InstanceIds</c> and <c>RamRoleName</c> parameters.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[&quot;i-bp67acfmxazb1p****&quot;, &quot;i-bp67acfmxazb2p****&quot;, &quot;bp67acfmxazb3p****&quot;…]</para>
+        /// The IDs of instances. You can specify up to 100 instance IDs in a single request. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -24,45 +21,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// The number of the page to return.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 50.</para>
-        /// <para>Default value: 10.</para>
+        /// The number of entries to return on each page.
         /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// Maximum value: 50.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance RAM role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created. You must specify at least one of the <c>InstanceIds</c> and <c>RamRoleName</c> parameters.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>EcsServiceRole-EcsDocGuideTest</para>
+        /// The name of the instance RAM role. You can call the [ListRoles](https://help.aliyun.com/document_detail/28713.html) operation provided by RAM to query the instance RAM roles that you created. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.
         /// </summary>
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
         public string RamRoleName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance RAM role. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instance RAM role. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the dedicated host types.</para>
+        /// Details about the dedicated host types.
         /// </summary>
         [NameInMap("DedicatedHostTypes")]
         [Validation(Required=false)]
@@ -21,117 +21,84 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType> DedicatedHostType { get; set; }
             public class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType : TeaModel {
                 /// <summary>
-                /// <para>The number of cores per physical CPU.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
+                /// The number of cores per physical CPU.
                 /// </summary>
                 [NameInMap("Cores")]
                 [Validation(Required=false)]
                 public int? Cores { get; set; }
 
                 /// <summary>
-                /// <para>The supported CPU overcommit ratio range.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1-5</para>
+                /// The supported CPU overcommit ratio range.
                 /// </summary>
                 [NameInMap("CpuOverCommitRatioRange")]
                 [Validation(Required=false)]
                 public string CpuOverCommitRatioRange { get; set; }
 
                 /// <summary>
-                /// <para>The dedicated host type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ddh.sn1ne</para>
+                /// The dedicated host type.
                 /// </summary>
                 [NameInMap("DedicatedHostType")]
                 [Validation(Required=false)]
                 public string DedicatedHostType { get; set; }
 
                 /// <summary>
-                /// <para>The GPU model.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>gpu</para>
+                /// The GPU model.
                 /// </summary>
                 [NameInMap("GPUSpec")]
                 [Validation(Required=false)]
                 public string GPUSpec { get; set; }
 
                 /// <summary>
-                /// <para>The number of local disks on a dedicated host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
+                /// The number of local disks on a dedicated host.
                 /// </summary>
                 [NameInMap("LocalStorageAmount")]
                 [Validation(Required=false)]
                 public int? LocalStorageAmount { get; set; }
 
                 /// <summary>
-                /// <para>The capacity of a local disk. Unit: GiB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
+                /// The capacity of a local disk. Unit: GiB.
                 /// </summary>
                 [NameInMap("LocalStorageCapacity")]
                 [Validation(Required=false)]
                 public long? LocalStorageCapacity { get; set; }
 
                 /// <summary>
-                /// <para>The category of local disks.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>local</para>
+                /// The category of local disks.
                 /// </summary>
                 [NameInMap("LocalStorageCategory")]
                 [Validation(Required=false)]
                 public string LocalStorageCategory { get; set; }
 
                 /// <summary>
-                /// <para>The memory size. Unit: GiB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>112.0</para>
+                /// The memory size. Unit: GiB.
                 /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
                 public float? MemorySize { get; set; }
 
                 /// <summary>
-                /// <para>The number of physical GPUs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
+                /// The number of physical GPUs.
                 /// </summary>
                 [NameInMap("PhysicalGpus")]
                 [Validation(Required=false)]
                 public int? PhysicalGpus { get; set; }
 
                 /// <summary>
-                /// <para>The number of physical CPUs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
+                /// The number of physical CPUs.
                 /// </summary>
                 [NameInMap("Sockets")]
                 [Validation(Required=false)]
                 public int? Sockets { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the CPU overcommit ratio settings are supported.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
+                /// Indicates whether the CPU overcommit ratio settings are supported.
                 /// </summary>
                 [NameInMap("SupportCpuOverCommitRatio")]
                 [Validation(Required=false)]
                 public bool? SupportCpuOverCommitRatio { get; set; }
 
                 /// <summary>
-                /// <para>The ECS instance families supported by the dedicated host type.</para>
+                /// The ECS instance families supported by the dedicated host type.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypeFamilies")]
                 [Validation(Required=false)]
@@ -144,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The ECS instance types supported by the dedicated host type.</para>
+                /// The ECS instance types supported by the dedicated host type.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypesList")]
                 [Validation(Required=false)]
@@ -157,20 +124,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The total number of vCPUs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>56</para>
+                /// The total number of vCPUs.
                 /// </summary>
                 [NameInMap("TotalVcpus")]
                 [Validation(Required=false)]
                 public int? TotalVcpus { get; set; }
 
                 /// <summary>
-                /// <para>The total number of vGPUs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10</para>
+                /// The total number of vGPUs.
                 /// </summary>
                 [NameInMap("TotalVgpus")]
                 [Validation(Required=false)]
@@ -181,10 +142,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>5FE5FF06-3A33-4658-8495-6445FC54E327</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

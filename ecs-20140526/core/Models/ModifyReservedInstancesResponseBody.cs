@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyReservedInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the reserved instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ED9E4A5F-FF4D-4C96-BE80-6B4227060DD7</para>
+        /// Details about the reserved instance.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the reserved instance.</para>
+        /// The IDs of the reserved instances.
         /// </summary>
         [NameInMap("ReservedInstanceIdSets")]
         [Validation(Required=false)]

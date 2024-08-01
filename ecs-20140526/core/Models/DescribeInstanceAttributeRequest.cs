@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>i-uf6f5trc95ug8t33****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

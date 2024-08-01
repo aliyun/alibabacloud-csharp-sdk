@@ -10,37 +10,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>E572643C-6A29-49D6-9D4E-6CFA4E063A3E</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details about the reserved instances.</para>
+        /// Details about the reserved instances.
         /// </summary>
         [NameInMap("ReservedInstances")]
         [Validation(Required=false)]
@@ -51,81 +42,59 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance> ReservedInstance { get; set; }
             public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance : TeaModel {
                 /// <summary>
-                /// <para>Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>allocated: The reserved instance is allocated to another account.</description></item>
-                /// <item><description>beAllocated: The reserved instance is allocated by another account.</description></item>
-                /// </list>
+                /// Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>allocated</para>
+                /// *   allocated: The reserved instance is allocated to another account.
+                /// *   beAllocated: The reserved instance is allocated by another account.
                 /// </summary>
                 [NameInMap("AllocationStatus")]
                 [Validation(Required=false)]
                 public string AllocationStatus { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-12-10T12:07Z</para>
+                /// The creation time.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testDescription</para>
+                /// The description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-12-10T12:07Z</para>
+                /// The expiration time.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of pay-as-you-go instances that are of the same instance type as the reserved instance and can be matched to the reserved instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10</para>
+                /// The number of pay-as-you-go instances that are of the same instance type as the reserved instance and can be matched to the reserved instance.
                 /// </summary>
                 [NameInMap("InstanceAmount")]
                 [Validation(Required=false)]
                 public int? InstanceAmount { get; set; }
 
                 /// <summary>
-                /// <para>The instance type of the pay-as-you-go instances that can be matched to the reserved instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ecs.g5.large</para>
+                /// The instance type of the pay-as-you-go instances that can be matched to the reserved instance.
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The payment option.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>All Upfront</para>
+                /// The payment option.
                 /// </summary>
                 [NameInMap("OfferingType")]
                 [Validation(Required=false)]
                 public string OfferingType { get; set; }
 
                 /// <summary>
-                /// <para>Details about the lock status of the reserved instance.</para>
+                /// Details about the lock status of the reserved instance.
                 /// </summary>
                 [NameInMap("OperationLocks")]
                 [Validation(Required=false)]
@@ -136,10 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock> OperationLock { get; set; }
                     public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock : TeaModel {
                         /// <summary>
-                        /// <para>The reason why the instance is locked.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>security</para>
+                        /// The reason why the instance is locked.
                         /// </summary>
                         [NameInMap("LockReason")]
                         [Validation(Required=false)]
@@ -150,91 +116,66 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The operating system of the image used by the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Windows</description></item>
-                /// <item><description>Linux</description></item>
-                /// </list>
+                /// The operating system of the image used by the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Linux</para>
+                /// *   Windows
+                /// *   Linux
                 /// </summary>
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
                 /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The reserved instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ri-bpzhex2ulpzf53****</para>
+                /// The reserved instance ID.
                 /// </summary>
                 [NameInMap("ReservedInstanceId")]
                 [Validation(Required=false)]
                 public string ReservedInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>riZbpzhex2ulpzf53****</para>
+                /// The name.
                 /// </summary>
                 [NameInMap("ReservedInstanceName")]
                 [Validation(Required=false)]
                 public string ReservedInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The resource group ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>EcsDocTest</para>
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The scope.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>region</para>
+                /// The scope.
                 /// </summary>
                 [NameInMap("Scope")]
                 [Validation(Required=false)]
                 public string Scope { get; set; }
 
                 /// <summary>
-                /// <para>The effective time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-12-10T12:00Z</para>
+                /// The effective time.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The status.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Active</para>
+                /// The status.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Details about the tags of the reserved instance.</para>
+                /// Details about the tags of the reserved instance.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -245,20 +186,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag> Tag { get; set; }
                     public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The tag key.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestKey</para>
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestValue</para>
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -269,10 +204,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The zone ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-z</para>
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -283,10 +215,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of reserved instances.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The total number of reserved instances.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

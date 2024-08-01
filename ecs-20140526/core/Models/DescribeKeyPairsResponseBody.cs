@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeKeyPairsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the key pairs.</para>
+        /// The information of the key pairs.
         /// </summary>
         [NameInMap("KeyPairs")]
         [Validation(Required=false)]
@@ -21,57 +21,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeKeyPairsResponseBodyKeyPairsKeyPair> KeyPair { get; set; }
             public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
                 /// <summary>
-                /// <para>The time when the key pair was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-09-04T08:33Z</para>
+                /// The time when the key pair was created.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The fingerprint of the key pair.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ABC1234567</para>
+                /// The fingerprint of the key pair.
                 /// </summary>
                 [NameInMap("KeyPairFingerPrint")]
                 [Validation(Required=false)]
                 public string KeyPairFingerPrint { get; set; }
 
                 /// <summary>
-                /// <para>The name of the key pair.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testKeyPairName</para>
+                /// The name of the key pair.
                 /// </summary>
                 [NameInMap("KeyPairName")]
                 [Validation(Required=false)]
                 public string KeyPairName { get; set; }
 
                 /// <summary>
-                /// <para>The content of the public key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ssh-rsa****</para>
+                /// The content of the public key.
                 /// </summary>
                 [NameInMap("PublicKey")]
                 [Validation(Required=false)]
                 public string PublicKey { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rg-amnhr7u7c7hj****</para>
+                /// The ID of the resource group.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the key pair.</para>
+                /// The tags of the key pair.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -82,20 +67,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag> Tag { get; set; }
                     public class DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The tag key of the key pair.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestKey</para>
+                        /// The tag key of the key pair.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value of the key pair.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestValue</para>
+                        /// The tag value of the key pair.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -110,40 +89,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of key pairs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The total number of key pairs.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

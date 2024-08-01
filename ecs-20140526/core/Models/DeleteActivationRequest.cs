@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteActivationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the request.
         /// 
-        /// <b>Example:</b>
-        /// <para>4ECEEE12-56F1-4FBC-9AB1-890F1234****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActivationId")]
         [Validation(Required=false)]
@@ -29,11 +27,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the activation code.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the activation code.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
