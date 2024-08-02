@@ -1338,6 +1338,134 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+         * @summary 创建下载任务
+         *
+         * @param request CreateDownloadJobRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDownloadJobResponse
+         */
+        public CreateDownloadJobResponse CreateDownloadJobWithOptions(string project, CreateDownloadJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configuration))
+            {
+                body["configuration"] = request.Configuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDownloadJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/downloadjobs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateDownloadJobResponse>(Execute(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建下载任务
+         *
+         * @param request CreateDownloadJobRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDownloadJobResponse
+         */
+        public async Task<CreateDownloadJobResponse> CreateDownloadJobWithOptionsAsync(string project, CreateDownloadJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configuration))
+            {
+                body["configuration"] = request.Configuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDownloadJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/downloadjobs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateDownloadJobResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建下载任务
+         *
+         * @param request CreateDownloadJobRequest
+         * @return CreateDownloadJobResponse
+         */
+        public CreateDownloadJobResponse CreateDownloadJob(string project, CreateDownloadJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDownloadJobWithOptions(project, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建下载任务
+         *
+         * @param request CreateDownloadJobRequest
+         * @return CreateDownloadJobResponse
+         */
+        public async Task<CreateDownloadJobResponse> CreateDownloadJobAsync(string project, CreateDownloadJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDownloadJobWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        /**
          * @summary 创建数据加工任务
          *
          * @param request CreateETLRequest
@@ -4526,6 +4654,92 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+         * @summary 删除下载任务
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDownloadJobResponse
+         */
+        public DeleteDownloadJobResponse DeleteDownloadJobWithOptions(string project, string downloadJobName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDownloadJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/downloadjobs/" + downloadJobName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteDownloadJobResponse>(Execute(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除下载任务
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDownloadJobResponse
+         */
+        public async Task<DeleteDownloadJobResponse> DeleteDownloadJobWithOptionsAsync(string project, string downloadJobName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDownloadJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/downloadjobs/" + downloadJobName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteDownloadJobResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除下载任务
+         *
+         * @return DeleteDownloadJobResponse
+         */
+        public DeleteDownloadJobResponse DeleteDownloadJob(string project, string downloadJobName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDownloadJobWithOptions(project, downloadJobName, headers, runtime);
+        }
+
+        /**
+         * @summary 删除下载任务
+         *
+         * @return DeleteDownloadJobResponse
+         */
+        public async Task<DeleteDownloadJobResponse> DeleteDownloadJobAsync(string project, string downloadJobName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDownloadJobWithOptionsAsync(project, downloadJobName, headers, runtime);
+        }
+
+        /**
          * @summary 删除数据加工任务
          *
          * @param headers map
@@ -7573,6 +7787,92 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetDashboardWithOptionsAsync(project, dashboardName, headers, runtime);
+        }
+
+        /**
+         * @summary 获取下载任务信息
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDownloadJobResponse
+         */
+        public GetDownloadJobResponse GetDownloadJobWithOptions(string project, string downloadJobName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDownloadJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/downloadjobs/" + downloadJobName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDownloadJobResponse>(Execute(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取下载任务信息
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDownloadJobResponse
+         */
+        public async Task<GetDownloadJobResponse> GetDownloadJobWithOptionsAsync(string project, string downloadJobName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDownloadJob",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/downloadjobs/" + downloadJobName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDownloadJobResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取下载任务信息
+         *
+         * @return GetDownloadJobResponse
+         */
+        public GetDownloadJobResponse GetDownloadJob(string project, string downloadJobName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDownloadJobWithOptions(project, downloadJobName, headers, runtime);
+        }
+
+        /**
+         * @summary 获取下载任务信息
+         *
+         * @return GetDownloadJobResponse
+         */
+        public async Task<GetDownloadJobResponse> GetDownloadJobAsync(string project, string downloadJobName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDownloadJobWithOptionsAsync(project, downloadJobName, headers, runtime);
         }
 
         /**
@@ -11347,6 +11647,126 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListDomainsWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        /**
+         * @summary 列举下载任务
+         *
+         * @param request ListDownloadJobsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDownloadJobsResponse
+         */
+        public ListDownloadJobsResponse ListDownloadJobsWithOptions(string project, ListDownloadJobsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            {
+                query["logstore"] = request.Logstore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDownloadJobs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/downloadjobs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDownloadJobsResponse>(Execute(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列举下载任务
+         *
+         * @param request ListDownloadJobsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDownloadJobsResponse
+         */
+        public async Task<ListDownloadJobsResponse> ListDownloadJobsWithOptionsAsync(string project, ListDownloadJobsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            {
+                query["logstore"] = request.Logstore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDownloadJobs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/downloadjobs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDownloadJobsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列举下载任务
+         *
+         * @param request ListDownloadJobsRequest
+         * @return ListDownloadJobsResponse
+         */
+        public ListDownloadJobsResponse ListDownloadJobs(string project, ListDownloadJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDownloadJobsWithOptions(project, request, headers, runtime);
+        }
+
+        /**
+         * @summary 列举下载任务
+         *
+         * @param request ListDownloadJobsRequest
+         * @return ListDownloadJobsResponse
+         */
+        public async Task<ListDownloadJobsResponse> ListDownloadJobsAsync(string project, ListDownloadJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDownloadJobsWithOptionsAsync(project, request, headers, runtime);
         }
 
         /**
