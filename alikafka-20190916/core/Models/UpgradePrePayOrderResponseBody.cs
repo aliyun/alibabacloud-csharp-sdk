@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
         /// <summary>
         /// The ID of the request.
         /// </summary>
