@@ -3227,6 +3227,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataIds))
+            {
+                query["DataIds"] = request.DataIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
             {
                 query["Ids"] = request.Ids;
@@ -3282,6 +3286,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataIds))
+            {
+                query["DataIds"] = request.DataIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
             {
@@ -10587,6 +10595,150 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
+         * @summary 黑白名单列表
+         *
+         * @param tmpReq GatewayBlackWhiteListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GatewayBlackWhiteListResponse
+         */
+        public GatewayBlackWhiteListResponse GatewayBlackWhiteListWithOptions(GatewayBlackWhiteListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GatewayBlackWhiteListShrinkRequest request = new GatewayBlackWhiteListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParams))
+            {
+                request.FilterParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParams, "FilterParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescSort))
+            {
+                query["DescSort"] = request.DescSort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamsShrink))
+            {
+                query["FilterParams"] = request.FilterParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderItem))
+            {
+                query["OrderItem"] = request.OrderItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GatewayBlackWhiteList",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GatewayBlackWhiteListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 黑白名单列表
+         *
+         * @param tmpReq GatewayBlackWhiteListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GatewayBlackWhiteListResponse
+         */
+        public async Task<GatewayBlackWhiteListResponse> GatewayBlackWhiteListWithOptionsAsync(GatewayBlackWhiteListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GatewayBlackWhiteListShrinkRequest request = new GatewayBlackWhiteListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParams))
+            {
+                request.FilterParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParams, "FilterParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescSort))
+            {
+                query["DescSort"] = request.DescSort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamsShrink))
+            {
+                query["FilterParams"] = request.FilterParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderItem))
+            {
+                query["OrderItem"] = request.OrderItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GatewayBlackWhiteList",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GatewayBlackWhiteListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 黑白名单列表
+         *
+         * @param request GatewayBlackWhiteListRequest
+         * @return GatewayBlackWhiteListResponse
+         */
+        public GatewayBlackWhiteListResponse GatewayBlackWhiteList(GatewayBlackWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GatewayBlackWhiteListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 黑白名单列表
+         *
+         * @param request GatewayBlackWhiteListRequest
+         * @return GatewayBlackWhiteListResponse
+         */
+        public async Task<GatewayBlackWhiteListResponse> GatewayBlackWhiteListAsync(GatewayBlackWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GatewayBlackWhiteListWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries information about canary release for messaging of an application.
          *
          * @param request GetAppMessageQueueRouteRequest
@@ -11031,12 +11183,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
+         * @deprecated OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.
+         *
          * @summary Queries the blacklist or whitelist of a gateway.
          *
          * @param request GetBlackWhiteListRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetBlackWhiteListResponse
          */
+        // Deprecated
         public GetBlackWhiteListResponse GetBlackWhiteListWithOptions(GetBlackWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11081,12 +11236,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
+         * @deprecated OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.
+         *
          * @summary Queries the blacklist or whitelist of a gateway.
          *
          * @param request GetBlackWhiteListRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetBlackWhiteListResponse
          */
+        // Deprecated
         public async Task<GetBlackWhiteListResponse> GetBlackWhiteListWithOptionsAsync(GetBlackWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11131,11 +11289,14 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
+         * @deprecated OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.
+         *
          * @summary Queries the blacklist or whitelist of a gateway.
          *
          * @param request GetBlackWhiteListRequest
          * @return GetBlackWhiteListResponse
          */
+        // Deprecated
         public GetBlackWhiteListResponse GetBlackWhiteList(GetBlackWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11143,11 +11304,14 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
+         * @deprecated OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.
+         *
          * @summary Queries the blacklist or whitelist of a gateway.
          *
          * @param request GetBlackWhiteListRequest
          * @return GetBlackWhiteListResponse
          */
+        // Deprecated
         public async Task<GetBlackWhiteListResponse> GetBlackWhiteListAsync(GetBlackWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

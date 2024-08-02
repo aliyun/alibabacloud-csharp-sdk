@@ -19,13 +19,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("DataIds")]
+        [Validation(Required=false)]
+        public string DataIds { get; set; }
+
         /// <summary>
         /// The data structure.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Ids { get; set; }
 
         /// <summary>

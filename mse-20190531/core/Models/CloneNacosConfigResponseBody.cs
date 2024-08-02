@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Group { get; set; }
 
+                [NameInMap("Reason")]
+                [Validation(Required=false)]
+                public string Reason { get; set; }
+
             }
 
             /// <summary>
