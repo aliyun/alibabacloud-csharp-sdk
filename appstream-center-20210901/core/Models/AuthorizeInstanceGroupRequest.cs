@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AuthorizeInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>aig-9ciijz60n4xsv****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
@@ -24,10 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AuthorizeUserIds { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>CloudApp</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]

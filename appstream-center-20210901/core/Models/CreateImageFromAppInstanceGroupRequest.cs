@@ -10,30 +10,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateImageFromAppInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test_name</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppCenterImageName")]
         [Validation(Required=false)]
         public string AppCenterImageName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>aig-9ciijz60n4xsv****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>CloudApp</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]

@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyAppPolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pg-ee2znjktwgxu2****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppPolicyId")]
         [Validation(Required=false)]
         public string AppPolicyId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>CloudApp</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]

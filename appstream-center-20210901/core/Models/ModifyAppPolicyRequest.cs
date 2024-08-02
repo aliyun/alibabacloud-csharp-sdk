@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyAppPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pg-ee2znjktwgxu2****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppPolicyId")]
         [Validation(Required=false)]
         public string AppPolicyId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>CloudApp</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
@@ -33,42 +27,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public ModifyAppPolicyRequestVideoPolicy VideoPolicy { get; set; }
         public class ModifyAppPolicyRequestVideoPolicy : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>60</para>
-            /// </summary>
             [NameInMap("FrameRate")]
             [Validation(Required=false)]
             public int? FrameRate { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1080</para>
-            /// </summary>
             [NameInMap("SessionResolutionHeight")]
             [Validation(Required=false)]
             public int? SessionResolutionHeight { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1920</para>
-            /// </summary>
             [NameInMap("SessionResolutionWidth")]
             [Validation(Required=false)]
             public int? SessionResolutionWidth { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>video</para>
-            /// </summary>
             [NameInMap("StreamingMode")]
             [Validation(Required=false)]
             public string StreamingMode { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
             [NameInMap("TerminalResolutionAdaptive")]
             [Validation(Required=false)]
             public bool? TerminalResolutionAdaptive { get; set; }
@@ -77,10 +51,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string VisualQualityStrategy { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("Webrtc")]
             [Validation(Required=false)]
             public bool? Webrtc { get; set; }

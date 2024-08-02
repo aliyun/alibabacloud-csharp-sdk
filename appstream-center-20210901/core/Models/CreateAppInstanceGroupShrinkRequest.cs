@@ -10,63 +10,43 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateAppInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>img-8z4nztpaqvay4****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppCenterImageId")]
         [Validation(Required=false)]
         public string AppCenterImageId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BizRegionId")]
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Node</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChargeResourceMode")]
         [Validation(Required=false)]
         public string ChargeResourceMode { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>PrePaid</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -81,44 +61,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NodePoolShrink { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>cag-b2ron*******</para>
-        /// </summary>
         [NameInMap("PreOpenAppId")]
         [Validation(Required=false)]
         public string PreOpenAppId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>CloudApp</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>17440009****</para>
-        /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
@@ -132,10 +98,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SecurityPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>15</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SessionTimeout")]
         [Validation(Required=false)]

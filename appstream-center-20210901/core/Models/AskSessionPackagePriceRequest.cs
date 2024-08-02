@@ -26,38 +26,25 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
         [NameInMap("SessionPackageType")]
         [Validation(Required=false)]
         public string SessionPackageType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>appstreaming.general.entry</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SessionSpec")]
         [Validation(Required=false)]
         public string SessionSpec { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Windows</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SessionType")]
         [Validation(Required=false)]
