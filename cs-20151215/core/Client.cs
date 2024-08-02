@@ -3096,6 +3096,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 删除ACK报警联系人
+         *
          * @param tmpReq DeleteAlertContactRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -3136,6 +3138,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 删除ACK报警联系人
+         *
          * @param tmpReq DeleteAlertContactRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -3176,6 +3180,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 删除ACK报警联系人
+         *
          * @param request DeleteAlertContactRequest
          * @return DeleteAlertContactResponse
          */
@@ -3187,6 +3193,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 删除ACK报警联系人
+         *
          * @param request DeleteAlertContactRequest
          * @return DeleteAlertContactResponse
          */
@@ -3198,6 +3206,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 删除ACK报警联系人分组
+         *
          * @param tmpReq DeleteAlertContactGroupRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -3238,6 +3248,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 删除ACK报警联系人分组
+         *
          * @param tmpReq DeleteAlertContactGroupRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -3278,6 +3290,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 删除ACK报警联系人分组
+         *
          * @param request DeleteAlertContactGroupRequest
          * @return DeleteAlertContactGroupResponse
          */
@@ -3289,6 +3303,8 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 删除ACK报警联系人分组
+         *
          * @param request DeleteAlertContactGroupRequest
          * @return DeleteAlertContactGroupResponse
          */
@@ -14822,15 +14838,37 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 为集群中报警规则集设置订阅的通知对象联系人组
+         *
+         * @param request UpdateContactGroupForAlertRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateContactGroupForAlertResponse
          */
-        public UpdateContactGroupForAlertResponse UpdateContactGroupForAlertWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateContactGroupForAlertResponse UpdateContactGroupForAlertWithOptions(string ClusterId, UpdateContactGroupForAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertRuleGroupName))
+            {
+                body["alert_rule_group_name"] = request.AlertRuleGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactGroupIds))
+            {
+                body["contact_group_ids"] = request.ContactGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrName))
+            {
+                body["cr_name"] = request.CrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["namespace"] = request.Namespace;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14842,21 +14880,43 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateContactGroupForAlertResponse>(CallApi(params_, req, runtime));
         }
 
         /**
+         * @summary 为集群中报警规则集设置订阅的通知对象联系人组
+         *
+         * @param request UpdateContactGroupForAlertRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateContactGroupForAlertResponse
          */
-        public async Task<UpdateContactGroupForAlertResponse> UpdateContactGroupForAlertWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateContactGroupForAlertResponse> UpdateContactGroupForAlertWithOptionsAsync(string ClusterId, UpdateContactGroupForAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertRuleGroupName))
+            {
+                body["alert_rule_group_name"] = request.AlertRuleGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactGroupIds))
+            {
+                body["contact_group_ids"] = request.ContactGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrName))
+            {
+                body["cr_name"] = request.CrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["namespace"] = request.Namespace;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14868,29 +14928,35 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateContactGroupForAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /**
+         * @summary 为集群中报警规则集设置订阅的通知对象联系人组
+         *
+         * @param request UpdateContactGroupForAlertRequest
          * @return UpdateContactGroupForAlertResponse
          */
-        public UpdateContactGroupForAlertResponse UpdateContactGroupForAlert(string ClusterId)
+        public UpdateContactGroupForAlertResponse UpdateContactGroupForAlert(string ClusterId, UpdateContactGroupForAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateContactGroupForAlertWithOptions(ClusterId, headers, runtime);
+            return UpdateContactGroupForAlertWithOptions(ClusterId, request, headers, runtime);
         }
 
         /**
+         * @summary 为集群中报警规则集设置订阅的通知对象联系人组
+         *
+         * @param request UpdateContactGroupForAlertRequest
          * @return UpdateContactGroupForAlertResponse
          */
-        public async Task<UpdateContactGroupForAlertResponse> UpdateContactGroupForAlertAsync(string ClusterId)
+        public async Task<UpdateContactGroupForAlertResponse> UpdateContactGroupForAlertAsync(string ClusterId, UpdateContactGroupForAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateContactGroupForAlertWithOptionsAsync(ClusterId, headers, runtime);
+            return await UpdateContactGroupForAlertWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
         /**

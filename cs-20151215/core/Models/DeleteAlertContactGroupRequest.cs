@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteAlertContactGroupRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("contact_group_ids")]
         [Validation(Required=false)]
         public List<long?> ContactGroupIds { get; set; }
