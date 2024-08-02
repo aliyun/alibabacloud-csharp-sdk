@@ -17,28 +17,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public GetDataArchiveCountResponseBodyData Data { get; set; }
         public class GetDataArchiveCountResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of failed archiving tickets.
+            /// The number of tickets that data archiving failed.
             /// </summary>
             [NameInMap("FailCount")]
             [Validation(Required=false)]
             public long? FailCount { get; set; }
 
             /// <summary>
-            /// The number of in-progress archiving tickets.
+            /// The number of tickets that data archiving is in progress.
             /// </summary>
             [NameInMap("ProcessingCount")]
             [Validation(Required=false)]
             public long? ProcessingCount { get; set; }
 
             /// <summary>
-            /// The number of successful archiving tickets.
+            /// The number of tickets that data archiving is successful.
             /// </summary>
             [NameInMap("SuccessCount")]
             [Validation(Required=false)]
             public long? SuccessCount { get; set; }
 
             /// <summary>
-            /// The total number of archiving tickets.
+            /// The total number of data archiving tickets.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]

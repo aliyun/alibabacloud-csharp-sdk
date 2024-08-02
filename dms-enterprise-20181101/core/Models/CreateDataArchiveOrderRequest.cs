@@ -28,12 +28,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public CreateDataArchiveOrderRequestParam Param { get; set; }
         public class CreateDataArchiveOrderRequestParam : TeaModel {
             /// <summary>
-            /// The type of the destination database for archiving data. Valid values:
+            /// The archiving destination to which you want to archive data. Valid values:
             /// 
-            /// >  If you set ArchiveMethod to a value other than inner_oss, you must connect the destination database for archiving data to Data Management (DMS) before you create the data archiving ticket. After the database is connected to DMS, the database is displayed in the Instances Connected section of the DMS console.
+            /// >  If you set ArchiveMethod to a value other than inner_oss, you must register the corresponding destination database with Data Management (DMS) before you create the data archiving ticket. After the database is registered with DMS, the database is displayed in the Instances Connected section of the DMS console.
             /// 
-            /// *   **inner_oss**: dedicated storage space, which is a built-in space.
-            /// *   **oss_userself**: Object Storage Service (OSS) bucket of the user.
+            /// *   **inner_oss**: dedicated storage, which is a built-in Object Storage Service (OSS) bucket.
+            /// *   **oss_userself**: OSS bucket of the user.
             /// *   **mysql**: ApsaraDB RDS for MySQL instance.
             /// *   **polardb**: PolarDB for MySQL cluster.
             /// *   **adb_mysql**: AnalyticDB for MySQL V3.0 cluster.
@@ -46,12 +46,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string ArchiveMethod { get; set; }
 
             /// <summary>
-            /// A crontab expression that specifies the scheduling cycle to run the task. For more information, see the [Crontab expressions](https://help.aliyun.com/document_detail/206581.html) section of the "Create shadow tables for synchronization" topic. This parameter is required if RunMethod is set to schedule.
+            /// A crontab expression that specifies the scheduling cycle of the data archiving task. For more information, see the [Crontab expressions](https://help.aliyun.com/document_detail/206581.html) section of the "Create shadow tables for synchronization" topic. You must specify this parameter if you set RunMethod to schedule.
             /// </summary>
             [NameInMap("CronStr")]
             [Validation(Required=false)]
             public string CronStr { get; set; }
 
+            /// <summary>
+            /// The database ID. If the database is a self-managed database or a third-party cloud database, you can call the [GetDatabase](https://help.aliyun.com/document_detail/465856.html) operation to query the database ID. If the database is an Alibaba Cloud database, ignore this parameter.
+            /// </summary>
             [NameInMap("DatabaseId")]
             [Validation(Required=false)]
             public string DatabaseId { get; set; }
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string SourceCatalogName { get; set; }
 
             /// <summary>
-            /// The name of the source instance.
+            /// The name of the source instance. If the database instance is a self-managed database or a third-party cloud database, you can call the [GetInstance](https://help.aliyun.com/document_detail/465826.html) operation to query the instance ID.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<CreateDataArchiveOrderRequestParamTableIncludes> TableIncludes { get; set; }
             public class CreateDataArchiveOrderRequestParamTableIncludes : TeaModel {
                 /// <summary>
-                /// The name of the table.
+                /// The table name.
                 /// 
                 /// This parameter is required.
                 /// </summary>
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The filter condition specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name <=\\"${variable name}\\". The variable name in the filter condition must be the same as the Name value of Variables.
+                /// The filter condition that is specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name <=\\"${variable name}\\". The variable name in the filter condition must be the same as the time variable name that is specified in the Variables parameter.
                 /// </summary>
                 [NameInMap("TableWhere")]
                 [Validation(Required=false)]

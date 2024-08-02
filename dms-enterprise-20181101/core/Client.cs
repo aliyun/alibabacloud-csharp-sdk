@@ -8582,7 +8582,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Queries the statistics of data archiving orders, including the number of successful archiving tickets, the number of failed archiving tickets, the number of in-progress archiving tickets, and the total number of archiving tickets.
+         * @summary Queries the statistics on the number of data archiving tickets, including the number of tickets of successful data archiving, failed data archiving,and in-progress data archiving, and the total number of data archiving tickets.
          *
          * @param request GetDataArchiveCountRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8628,7 +8628,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Queries the statistics of data archiving orders, including the number of successful archiving tickets, the number of failed archiving tickets, the number of in-progress archiving tickets, and the total number of archiving tickets.
+         * @summary Queries the statistics on the number of data archiving tickets, including the number of tickets of successful data archiving, failed data archiving,and in-progress data archiving, and the total number of data archiving tickets.
          *
          * @param request GetDataArchiveCountRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8674,7 +8674,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Queries the statistics of data archiving orders, including the number of successful archiving tickets, the number of failed archiving tickets, the number of in-progress archiving tickets, and the total number of archiving tickets.
+         * @summary Queries the statistics on the number of data archiving tickets, including the number of tickets of successful data archiving, failed data archiving,and in-progress data archiving, and the total number of data archiving tickets.
          *
          * @param request GetDataArchiveCountRequest
          * @return GetDataArchiveCountResponse
@@ -8686,7 +8686,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Queries the statistics of data archiving orders, including the number of successful archiving tickets, the number of failed archiving tickets, the number of in-progress archiving tickets, and the total number of archiving tickets.
+         * @summary Queries the statistics on the number of data archiving tickets, including the number of tickets of successful data archiving, failed data archiving,and in-progress data archiving, and the total number of data archiving tickets.
          *
          * @param request GetDataArchiveCountRequest
          * @return GetDataArchiveCountResponse
@@ -8698,7 +8698,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Queries the details of a data archiving ticket.
+         * @summary Queries the details of a data archiving ticket, including the time when the ticket was created, the scheduling information of the data archiving task, the logs of the data archiving task, and the database to which data is archived.
          *
          * @param request GetDataArchiveOrderDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8736,7 +8736,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Queries the details of a data archiving ticket.
+         * @summary Queries the details of a data archiving ticket, including the time when the ticket was created, the scheduling information of the data archiving task, the logs of the data archiving task, and the database to which data is archived.
          *
          * @param request GetDataArchiveOrderDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8774,7 +8774,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Queries the details of a data archiving ticket.
+         * @summary Queries the details of a data archiving ticket, including the time when the ticket was created, the scheduling information of the data archiving task, the logs of the data archiving task, and the database to which data is archived.
          *
          * @param request GetDataArchiveOrderDetailRequest
          * @return GetDataArchiveOrderDetailResponse
@@ -8786,7 +8786,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-         * @summary Queries the details of a data archiving ticket.
+         * @summary Queries the details of a data archiving ticket, including the time when the ticket was created, the scheduling information of the data archiving task, the logs of the data archiving task, and the database to which data is archived.
          *
          * @param request GetDataArchiveOrderDetailRequest
          * @return GetDataArchiveOrderDetailResponse

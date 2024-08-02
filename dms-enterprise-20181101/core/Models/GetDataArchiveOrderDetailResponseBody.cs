@@ -563,21 +563,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public List<GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataInstances> Instances { get; set; }
                 public class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataInstances : TeaModel {
                     /// <summary>
-                    /// The business time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.
+                    /// The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
                     /// </summary>
                     [NameInMap("BusinessTime")]
                     [Validation(Required=false)]
                     public string BusinessTime { get; set; }
 
                     /// <summary>
-                    /// The ID of the task. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.
+                    /// The task flow ID. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to obtain the value of this parameter.
                     /// </summary>
                     [NameInMap("DagId")]
                     [Validation(Required=false)]
                     public long? DagId { get; set; }
 
                     /// <summary>
-                    /// The end time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.
+                    /// The time when the task flow ended. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
                     /// </summary>
                     [NameInMap("EndTime")]
                     [Validation(Required=false)]
@@ -605,21 +605,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public long? HistoryDagId { get; set; }
 
                     /// <summary>
-                    /// The instance ID of the running task flow.
+                    /// The ID of the instance in the task flow that is executed.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// The running scenario of the last task flow.
+                    /// The context of the previous execution of the task flow.
                     /// </summary>
                     [NameInMap("LastRunningContext")]
                     [Validation(Required=false)]
                     public string LastRunningContext { get; set; }
 
                     /// <summary>
-                    /// The running details of the task.
+                    /// The context of the current execution of the task flow.
                     /// </summary>
                     [NameInMap("Msg")]
                     [Validation(Required=false)]
@@ -628,12 +628,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     /// <summary>
                     /// The status of the task. Valid values:
                     /// 
-                    /// *   **0**: waiting for execution.
-                    /// *   **1**: running.
-                    /// *   **2**: suspended.
-                    /// *   **3**: failed.
-                    /// *   **4**: successful.
-                    /// *   **5**: complete.
+                    /// *   **0**: The task is waiting for execution.
+                    /// *   **1**: The task is in progress.
+                    /// *   **2**: The task is suspended.
+                    /// *   **3**: The task failed.
+                    /// *   **4**: The task is successful.
+                    /// *   **5**: The task is complete.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -764,14 +764,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public List<GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginParamTableIncludes> TableIncludes { get; set; }
                 public class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginParamTableIncludes : TeaModel {
                     /// <summary>
-                    /// The name of the table.
+                    /// The table name.
                     /// </summary>
                     [NameInMap("TableName")]
                     [Validation(Required=false)]
                     public string TableName { get; set; }
 
                     /// <summary>
-                    /// The filter conditions.
+                    /// The filter condition.
                     /// </summary>
                     [NameInMap("TableWhere")]
                     [Validation(Required=false)]
@@ -883,10 +883,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
