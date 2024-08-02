@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string ProjectId { get; set; }
 
+            [NameInMap("serialNumber")]
+            [Validation(Required=false)]
+            public int? SerialNumber { get; set; }
+
             [NameInMap("source")]
             [Validation(Required=false)]
             public string Source { get; set; }
