@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class UpdatePublicNetworkStatusRequest : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("Cidr")]
         [Validation(Required=false)]
         public string Cidr { get; set; }
