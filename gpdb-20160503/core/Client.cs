@@ -519,6 +519,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
             {
@@ -581,6 +585,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
@@ -1304,6 +1312,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1393,6 +1405,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2968,6 +2984,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3025,6 +3045,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3182,7 +3206,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建实例的用户凭证
+         * @summary Creates an access credential for an AnalyticDB for PostgreSQL instance by using the name and password of a database account.
          *
          * @param request CreateSecretRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3244,7 +3268,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建实例的用户凭证
+         * @summary Creates an access credential for an AnalyticDB for PostgreSQL instance by using the name and password of a database account.
          *
          * @param request CreateSecretRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3306,7 +3330,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建实例的用户凭证
+         * @summary Creates an access credential for an AnalyticDB for PostgreSQL instance by using the name and password of a database account.
          *
          * @param request CreateSecretRequest
          * @return CreateSecretResponse
@@ -3318,7 +3342,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建实例的用户凭证
+         * @summary Creates an access credential for an AnalyticDB for PostgreSQL instance by using the name and password of a database account.
          *
          * @param request CreateSecretRequest
          * @return CreateSecretResponse
@@ -4204,6 +4228,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4257,6 +4285,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4344,6 +4376,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4405,6 +4441,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5564,6 +5604,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5618,6 +5662,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5662,7 +5710,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除实例的用户凭证
+         * @summary Deletes the access credentials of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DeleteSecretRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5712,7 +5760,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除实例的用户凭证
+         * @summary Deletes the access credentials of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DeleteSecretRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5762,7 +5810,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除实例的用户凭证
+         * @summary Deletes the access credentials of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DeleteSecretRequest
          * @return DeleteSecretResponse
@@ -5774,7 +5822,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除实例的用户凭证
+         * @summary Deletes the access credentials of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DeleteSecretRequest
          * @return DeleteSecretResponse
@@ -6780,6 +6828,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6833,6 +6885,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11700,6 +11756,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -11753,6 +11813,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13626,7 +13690,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有的schema
+         * @summary Queries the information about a table.
          *
          * @param request DescribeTableRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13684,7 +13748,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有的schema
+         * @summary Queries the information about a table.
          *
          * @param request DescribeTableRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13742,7 +13806,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有的schema
+         * @summary Queries the information about a table.
          *
          * @param request DescribeTableRequest
          * @return DescribeTableResponse
@@ -13754,7 +13818,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有的schema
+         * @summary Queries the information about a table.
          *
          * @param request DescribeTableRequest
          * @return DescribeTableResponse
@@ -14930,7 +14994,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 运行SQL语句
+         * @summary Executes SQL statements.
          *
          * @param tmpReq ExecuteStatementRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15012,7 +15076,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 运行SQL语句
+         * @summary Executes SQL statements.
          *
          * @param tmpReq ExecuteStatementRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15094,7 +15158,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 运行SQL语句
+         * @summary Executes SQL statements.
          *
          * @param request ExecuteStatementRequest
          * @return ExecuteStatementResponse
@@ -15106,7 +15170,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 运行SQL语句
+         * @summary Executes SQL statements.
          *
          * @param request ExecuteStatementRequest
          * @return ExecuteStatementResponse
@@ -15118,7 +15182,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看实例的用户凭证里数据
+         * @summary Queries the information about an access credential.
          *
          * @param request GetSecretValueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15168,7 +15232,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看实例的用户凭证里数据
+         * @summary Queries the information about an access credential.
          *
          * @param request GetSecretValueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15218,7 +15282,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看实例的用户凭证里数据
+         * @summary Queries the information about an access credential.
          *
          * @param request GetSecretValueRequest
          * @return GetSecretValueResponse
@@ -15230,7 +15294,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看实例的用户凭证里数据
+         * @summary Queries the information about an access credential.
          *
          * @param request GetSecretValueRequest
          * @return GetSecretValueResponse
@@ -15427,6 +15491,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
             {
@@ -15489,6 +15557,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
@@ -15852,6 +15924,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15901,6 +15977,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15976,6 +16056,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -16026,6 +16110,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -16070,7 +16158,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有库
+         * @summary Queries a list of databases.
          *
          * @param request ListDatabasesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16128,7 +16216,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有库
+         * @summary Queries a list of databases.
          *
          * @param request ListDatabasesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16186,7 +16274,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有库
+         * @summary Queries a list of databases.
          *
          * @param request ListDatabasesRequest
          * @return ListDatabasesResponse
@@ -16198,7 +16286,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有库
+         * @summary Queries a list of databases.
          *
          * @param request ListDatabasesRequest
          * @return ListDatabasesResponse
@@ -16876,6 +16964,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -16926,6 +17018,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -16970,7 +17066,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有的schema
+         * @summary Queries a list of schemas.
          *
          * @param request ListSchemasRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17032,7 +17128,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有的schema
+         * @summary Queries a list of schemas.
          *
          * @param request ListSchemasRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17094,7 +17190,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有的schema
+         * @summary Queries a list of schemas.
          *
          * @param request ListSchemasRequest
          * @return ListSchemasResponse
@@ -17106,7 +17202,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有的schema
+         * @summary Queries a list of schemas.
          *
          * @param request ListSchemasRequest
          * @return ListSchemasResponse
@@ -17118,7 +17214,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实例的用户凭证列表
+         * @summary Queries a list of access credentials.
          *
          * @param request ListSecretsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17160,7 +17256,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实例的用户凭证列表
+         * @summary Queries a list of access credentials.
          *
          * @param request ListSecretsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17202,7 +17298,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实例的用户凭证列表
+         * @summary Queries a list of access credentials.
          *
          * @param request ListSecretsRequest
          * @return ListSecretsResponse
@@ -17214,7 +17310,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实例的用户凭证列表
+         * @summary Queries a list of access credentials.
          *
          * @param request ListSecretsRequest
          * @return ListSecretsResponse
@@ -17574,7 +17670,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有表
+         * @summary Queries a list of tables in a database.
          *
          * @param request ListTablesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17640,7 +17736,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有表
+         * @summary Queries a list of tables in a database.
          *
          * @param request ListTablesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17706,7 +17802,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有表
+         * @summary Queries a list of tables in a database.
          *
          * @param request ListTablesRequest
          * @return ListTablesResponse
@@ -17718,7 +17814,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查看所有表
+         * @summary Queries a list of tables in a database.
          *
          * @param request ListTablesRequest
          * @return ListTablesResponse
@@ -20906,6 +21002,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Vector"] = request.VectorShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -21013,6 +21113,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectorShrink))
             {
                 query["Vector"] = request.VectorShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -23238,6 +23342,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -23313,6 +23421,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -24618,6 +24730,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RowsShrink))
             {
@@ -24683,6 +24799,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RowsShrink))
@@ -24762,6 +24882,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
             {
@@ -24827,6 +24951,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))

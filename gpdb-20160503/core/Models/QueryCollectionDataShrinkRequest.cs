@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -180,6 +177,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("Vector")]
         [Validation(Required=false)]
         public string VectorShrink { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

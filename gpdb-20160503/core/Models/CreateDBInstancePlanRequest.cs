@@ -43,8 +43,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. The end time must be later than the start time.
         /// 
-        /// > - This parameter must be specified only when **PlanScheduleType** is set to **Regular.
-        ///  > - If you do not specify this parameter, the plan stops until the plan is deleted.
+        /// > 
+        /// 
+        /// *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
+        /// 
+        /// *   If you do not specify this parameter, the plan stops until the plan is deleted.
         /// </summary>
         [NameInMap("PlanEndDate")]
         [Validation(Required=false)]
@@ -74,8 +77,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// 
-        /// > -  This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
-        /// > -  If you do not specify this parameter, the current time is used.
+        /// > 
+        /// 
+        /// *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
+        /// 
+        /// *   If you do not specify this parameter, the current time is used.
         /// </summary>
         [NameInMap("PlanStartDate")]
         [Validation(Required=false)]

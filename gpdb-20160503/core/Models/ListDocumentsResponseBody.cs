@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListDocumentsResponseBody : TeaModel {
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
+        /// <summary>
+        /// The queried documents.
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public ListDocumentsResponseBodyItems Items { get; set; }
@@ -43,6 +49,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
