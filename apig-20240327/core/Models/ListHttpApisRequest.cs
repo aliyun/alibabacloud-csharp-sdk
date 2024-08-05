@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }

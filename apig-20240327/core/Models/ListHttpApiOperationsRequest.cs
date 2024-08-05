@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Method { get; set; }
 
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("nameLike")]
         [Validation(Required=false)]
         public string NameLike { get; set; }
