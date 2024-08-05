@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? Code { get; set; }
 
         /// <summary>
         /// The returned struct.
@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<Dictionary<string, object>> Items { get; set; }
 
         }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// The error message returned if the request failed.

@@ -86,6 +86,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// *   `dingding`: DingTalk chatbot
         /// *   `wechat`: WeCom chatbot
         /// *   `feishu`: Lark chatbot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

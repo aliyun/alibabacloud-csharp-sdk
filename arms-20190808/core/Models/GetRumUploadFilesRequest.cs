@@ -32,6 +32,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The version ID. When this field is not provided, the default response includes all versions.
+        /// </summary>
+        [NameInMap("VersionId")]
+        [Validation(Required=false)]
+        public string VersionId { get; set; }
+
     }
 
 }

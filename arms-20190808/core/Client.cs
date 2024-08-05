@@ -883,118 +883,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Adds a remote write configuration item to a Prometheus instance.
-         *
-         * @param request AddPrometheusRemoteWriteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddPrometheusRemoteWriteResponse
-         */
-        public AddPrometheusRemoteWriteResponse AddPrometheusRemoteWriteWithOptions(AddPrometheusRemoteWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteYaml))
-            {
-                body["RemoteWriteYaml"] = request.RemoteWriteYaml;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "AddPrometheusRemoteWrite",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<AddPrometheusRemoteWriteResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary Adds a remote write configuration item to a Prometheus instance.
-         *
-         * @param request AddPrometheusRemoteWriteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddPrometheusRemoteWriteResponse
-         */
-        public async Task<AddPrometheusRemoteWriteResponse> AddPrometheusRemoteWriteWithOptionsAsync(AddPrometheusRemoteWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteYaml))
-            {
-                body["RemoteWriteYaml"] = request.RemoteWriteYaml;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "AddPrometheusRemoteWrite",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<AddPrometheusRemoteWriteResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary Adds a remote write configuration item to a Prometheus instance.
-         *
-         * @param request AddPrometheusRemoteWriteRequest
-         * @return AddPrometheusRemoteWriteResponse
-         */
-        public AddPrometheusRemoteWriteResponse AddPrometheusRemoteWrite(AddPrometheusRemoteWriteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return AddPrometheusRemoteWriteWithOptions(request, runtime);
-        }
-
-        /**
-         * @summary Adds a remote write configuration item to a Prometheus instance.
-         *
-         * @param request AddPrometheusRemoteWriteRequest
-         * @return AddPrometheusRemoteWriteResponse
-         */
-        public async Task<AddPrometheusRemoteWriteResponse> AddPrometheusRemoteWriteAsync(AddPrometheusRemoteWriteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await AddPrometheusRemoteWriteWithOptionsAsync(request, runtime);
-        }
-
-        /**
          * @summary Creates or updates a recording rule of Managed Service for Prometheus.
          *
          * @param request AddRecordingRuleRequest
@@ -9547,114 +9435,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Deletes remote write configuration items from a Prometheus instance.
-         *
-         * @param request DeletePrometheusRemoteWriteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeletePrometheusRemoteWriteResponse
-         */
-        public DeletePrometheusRemoteWriteResponse DeletePrometheusRemoteWriteWithOptions(DeletePrometheusRemoteWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteNames))
-            {
-                query["RemoteWriteNames"] = request.RemoteWriteNames;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeletePrometheusRemoteWrite",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeletePrometheusRemoteWriteResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary Deletes remote write configuration items from a Prometheus instance.
-         *
-         * @param request DeletePrometheusRemoteWriteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeletePrometheusRemoteWriteResponse
-         */
-        public async Task<DeletePrometheusRemoteWriteResponse> DeletePrometheusRemoteWriteWithOptionsAsync(DeletePrometheusRemoteWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteNames))
-            {
-                query["RemoteWriteNames"] = request.RemoteWriteNames;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeletePrometheusRemoteWrite",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeletePrometheusRemoteWriteResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary Deletes remote write configuration items from a Prometheus instance.
-         *
-         * @param request DeletePrometheusRemoteWriteRequest
-         * @return DeletePrometheusRemoteWriteResponse
-         */
-        public DeletePrometheusRemoteWriteResponse DeletePrometheusRemoteWrite(DeletePrometheusRemoteWriteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeletePrometheusRemoteWriteWithOptions(request, runtime);
-        }
-
-        /**
-         * @summary Deletes remote write configuration items from a Prometheus instance.
-         *
-         * @param request DeletePrometheusRemoteWriteRequest
-         * @return DeletePrometheusRemoteWriteResponse
-         */
-        public async Task<DeletePrometheusRemoteWriteResponse> DeletePrometheusRemoteWriteAsync(DeletePrometheusRemoteWriteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeletePrometheusRemoteWriteWithOptionsAsync(request, runtime);
-        }
-
-        /**
          * @summary Deletes a Browser Monitoring task.
          *
          * @param request DeleteRetcodeAppRequest
@@ -13639,12 +13419,15 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI GetManagedPrometheusStatus is deprecated
+         *
          * @summary Queries the installation status of a Prometheus agent in a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) cluster.
          *
          * @param request GetManagedPrometheusStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetManagedPrometheusStatusResponse
          */
+        // Deprecated
         public GetManagedPrometheusStatusResponse GetManagedPrometheusStatusWithOptions(GetManagedPrometheusStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13689,12 +13472,15 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI GetManagedPrometheusStatus is deprecated
+         *
          * @summary Queries the installation status of a Prometheus agent in a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) cluster.
          *
          * @param request GetManagedPrometheusStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetManagedPrometheusStatusResponse
          */
+        // Deprecated
         public async Task<GetManagedPrometheusStatusResponse> GetManagedPrometheusStatusWithOptionsAsync(GetManagedPrometheusStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13739,11 +13525,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI GetManagedPrometheusStatus is deprecated
+         *
          * @summary Queries the installation status of a Prometheus agent in a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) cluster.
          *
          * @param request GetManagedPrometheusStatusRequest
          * @return GetManagedPrometheusStatusResponse
          */
+        // Deprecated
         public GetManagedPrometheusStatusResponse GetManagedPrometheusStatus(GetManagedPrometheusStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13751,11 +13540,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI GetManagedPrometheusStatus is deprecated
+         *
          * @summary Queries the installation status of a Prometheus agent in a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) cluster.
          *
          * @param request GetManagedPrometheusStatusRequest
          * @return GetManagedPrometheusStatusResponse
          */
+        // Deprecated
         public async Task<GetManagedPrometheusStatusResponse> GetManagedPrometheusStatusAsync(GetManagedPrometheusStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14492,114 +14284,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPrometheusMonitoringWithOptionsAsync(request, runtime);
-        }
-
-        /**
-         * @summary Queries a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.
-         *
-         * @param request GetPrometheusRemoteWriteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPrometheusRemoteWriteResponse
-         */
-        public GetPrometheusRemoteWriteResponse GetPrometheusRemoteWriteWithOptions(GetPrometheusRemoteWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteName))
-            {
-                query["RemoteWriteName"] = request.RemoteWriteName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetPrometheusRemoteWrite",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetPrometheusRemoteWriteResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.
-         *
-         * @param request GetPrometheusRemoteWriteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPrometheusRemoteWriteResponse
-         */
-        public async Task<GetPrometheusRemoteWriteResponse> GetPrometheusRemoteWriteWithOptionsAsync(GetPrometheusRemoteWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteName))
-            {
-                query["RemoteWriteName"] = request.RemoteWriteName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetPrometheusRemoteWrite",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetPrometheusRemoteWriteResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.
-         *
-         * @param request GetPrometheusRemoteWriteRequest
-         * @return GetPrometheusRemoteWriteResponse
-         */
-        public GetPrometheusRemoteWriteResponse GetPrometheusRemoteWrite(GetPrometheusRemoteWriteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetPrometheusRemoteWriteWithOptions(request, runtime);
-        }
-
-        /**
-         * @summary Queries a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.
-         *
-         * @param request GetPrometheusRemoteWriteRequest
-         * @return GetPrometheusRemoteWriteResponse
-         */
-        public async Task<GetPrometheusRemoteWriteResponse> GetPrometheusRemoteWriteAsync(GetPrometheusRemoteWriteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetPrometheusRemoteWriteWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -15779,6 +15463,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15822,6 +15510,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17683,6 +17375,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI InstallManagedPrometheus is deprecated
+         *
          * @summary Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.
          *
          * @description You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
@@ -17691,6 +17385,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
          * @param runtime runtime options for this request RuntimeOptions
          * @return InstallManagedPrometheusResponse
          */
+        // Deprecated
         public InstallManagedPrometheusResponse InstallManagedPrometheusWithOptions(InstallManagedPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17755,6 +17450,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI InstallManagedPrometheus is deprecated
+         *
          * @summary Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.
          *
          * @description You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
@@ -17763,6 +17460,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
          * @param runtime runtime options for this request RuntimeOptions
          * @return InstallManagedPrometheusResponse
          */
+        // Deprecated
         public async Task<InstallManagedPrometheusResponse> InstallManagedPrometheusWithOptionsAsync(InstallManagedPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17827,6 +17525,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI InstallManagedPrometheus is deprecated
+         *
          * @summary Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.
          *
          * @description You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
@@ -17834,6 +17534,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
          * @param request InstallManagedPrometheusRequest
          * @return InstallManagedPrometheusResponse
          */
+        // Deprecated
         public InstallManagedPrometheusResponse InstallManagedPrometheus(InstallManagedPrometheusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17841,6 +17542,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI InstallManagedPrometheus is deprecated
+         *
          * @summary Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.
          *
          * @description You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
@@ -17848,6 +17551,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
          * @param request InstallManagedPrometheusRequest
          * @return InstallManagedPrometheusResponse
          */
+        // Deprecated
         public async Task<InstallManagedPrometheusResponse> InstallManagedPrometheusAsync(InstallManagedPrometheusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18377,6 +18081,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["IntegrationType"] = request.IntegrationType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["Page"] = request.Page;
@@ -18454,6 +18162,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntegrationType))
             {
                 query["IntegrationType"] = request.IntegrationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -19719,6 +19431,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["FeePackage"] = request.FeePackage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterRegionIds))
+            {
+                query["FilterRegionIds"] = request.FilterRegionIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -19782,6 +19498,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeePackage))
             {
                 query["FeePackage"] = request.FeePackage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterRegionIds))
+            {
+                query["FilterRegionIds"] = request.FilterRegionIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -21328,106 +21048,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPrometheusMonitoringWithOptionsAsync(request, runtime);
-        }
-
-        /**
-         * @summary Queries the remote write configuration items of a Prometheus instance.
-         *
-         * @param request ListPrometheusRemoteWritesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPrometheusRemoteWritesResponse
-         */
-        public ListPrometheusRemoteWritesResponse ListPrometheusRemoteWritesWithOptions(ListPrometheusRemoteWritesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListPrometheusRemoteWrites",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListPrometheusRemoteWritesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries the remote write configuration items of a Prometheus instance.
-         *
-         * @param request ListPrometheusRemoteWritesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPrometheusRemoteWritesResponse
-         */
-        public async Task<ListPrometheusRemoteWritesResponse> ListPrometheusRemoteWritesWithOptionsAsync(ListPrometheusRemoteWritesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListPrometheusRemoteWrites",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListPrometheusRemoteWritesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries the remote write configuration items of a Prometheus instance.
-         *
-         * @param request ListPrometheusRemoteWritesRequest
-         * @return ListPrometheusRemoteWritesResponse
-         */
-        public ListPrometheusRemoteWritesResponse ListPrometheusRemoteWrites(ListPrometheusRemoteWritesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListPrometheusRemoteWritesWithOptions(request, runtime);
-        }
-
-        /**
-         * @summary Queries the remote write configuration items of a Prometheus instance.
-         *
-         * @param request ListPrometheusRemoteWritesRequest
-         * @return ListPrometheusRemoteWritesResponse
-         */
-        public async Task<ListPrometheusRemoteWritesResponse> ListPrometheusRemoteWritesAsync(ListPrometheusRemoteWritesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListPrometheusRemoteWritesWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -26567,6 +26187,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
+         *
          * @summary Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.
          *
          * @description Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
@@ -26575,6 +26197,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
          * @param runtime runtime options for this request RuntimeOptions
          * @return UninstallManagedPrometheusResponse
          */
+        // Deprecated
         public UninstallManagedPrometheusResponse UninstallManagedPrometheusWithOptions(UninstallManagedPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26619,6 +26242,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
+         *
          * @summary Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.
          *
          * @description Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
@@ -26627,6 +26252,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
          * @param runtime runtime options for this request RuntimeOptions
          * @return UninstallManagedPrometheusResponse
          */
+        // Deprecated
         public async Task<UninstallManagedPrometheusResponse> UninstallManagedPrometheusWithOptionsAsync(UninstallManagedPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26671,6 +26297,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
+         *
          * @summary Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.
          *
          * @description Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
@@ -26678,6 +26306,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
          * @param request UninstallManagedPrometheusRequest
          * @return UninstallManagedPrometheusResponse
          */
+        // Deprecated
         public UninstallManagedPrometheusResponse UninstallManagedPrometheus(UninstallManagedPrometheusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -26685,6 +26314,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
+         *
          * @summary Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.
          *
          * @description Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
@@ -26692,6 +26323,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
          * @param request UninstallManagedPrometheusRequest
          * @return UninstallManagedPrometheusResponse
          */
+        // Deprecated
         public async Task<UninstallManagedPrometheusResponse> UninstallManagedPrometheusAsync(UninstallManagedPrometheusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -29336,126 +28968,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdatePrometheusMonitoringStatusWithOptionsAsync(request, runtime);
-        }
-
-        /**
-         * @summary Modifies a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.
-         *
-         * @param request UpdatePrometheusRemoteWriteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePrometheusRemoteWriteResponse
-         */
-        public UpdatePrometheusRemoteWriteResponse UpdatePrometheusRemoteWriteWithOptions(UpdatePrometheusRemoteWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteName))
-            {
-                query["RemoteWriteName"] = request.RemoteWriteName;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteYaml))
-            {
-                body["RemoteWriteYaml"] = request.RemoteWriteYaml;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdatePrometheusRemoteWrite",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdatePrometheusRemoteWriteResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary Modifies a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.
-         *
-         * @param request UpdatePrometheusRemoteWriteRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePrometheusRemoteWriteResponse
-         */
-        public async Task<UpdatePrometheusRemoteWriteResponse> UpdatePrometheusRemoteWriteWithOptionsAsync(UpdatePrometheusRemoteWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteName))
-            {
-                query["RemoteWriteName"] = request.RemoteWriteName;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoteWriteYaml))
-            {
-                body["RemoteWriteYaml"] = request.RemoteWriteYaml;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdatePrometheusRemoteWrite",
-                Version = "2019-08-08",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdatePrometheusRemoteWriteResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary Modifies a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.
-         *
-         * @param request UpdatePrometheusRemoteWriteRequest
-         * @return UpdatePrometheusRemoteWriteResponse
-         */
-        public UpdatePrometheusRemoteWriteResponse UpdatePrometheusRemoteWrite(UpdatePrometheusRemoteWriteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdatePrometheusRemoteWriteWithOptions(request, runtime);
-        }
-
-        /**
-         * @summary Modifies a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.
-         *
-         * @param request UpdatePrometheusRemoteWriteRequest
-         * @return UpdatePrometheusRemoteWriteResponse
-         */
-        public async Task<UpdatePrometheusRemoteWriteResponse> UpdatePrometheusRemoteWriteAsync(UpdatePrometheusRemoteWriteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdatePrometheusRemoteWriteWithOptionsAsync(request, runtime);
         }
 
         /**

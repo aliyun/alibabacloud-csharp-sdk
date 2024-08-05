@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string FeePackage { get; set; }
 
+        [NameInMap("FilterRegionIds")]
+        [Validation(Required=false)]
+        public string FilterRegionIds { get; set; }
+
         /// <summary>
         /// The region ID.
         /// </summary>

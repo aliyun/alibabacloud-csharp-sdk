@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string IntegrationType { get; set; }
 
+        [NameInMap("Owner")]
+        [Validation(Required=false)]
+        public string Owner { get; set; }
+
         /// <summary>
         /// The number of the page to return.
         /// 

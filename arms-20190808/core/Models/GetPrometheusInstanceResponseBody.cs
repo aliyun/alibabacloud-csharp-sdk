@@ -70,6 +70,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
+            [NameInMap("DbInstanceStatus")]
+            [Validation(Required=false)]
+            public string DbInstanceStatus { get; set; }
+
+            [NameInMap("EnableAuthToken")]
+            [Validation(Required=false)]
+            public string EnableAuthToken { get; set; }
+
             /// <summary>
             /// The ID of the Grafana workspace.
             /// </summary>
@@ -100,6 +108,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("PaymentType")]
             [Validation(Required=false)]
             public string PaymentType { get; set; }
+
+            [NameInMap("Product")]
+            [Validation(Required=false)]
+            public string Product { get; set; }
 
             /// <summary>
             /// The public URL for Pushgateway.
@@ -184,6 +196,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("SubClustersJson")]
             [Validation(Required=false)]
             public string SubClustersJson { get; set; }
+
+            [NameInMap("SurpportAuthTypes")]
+            [Validation(Required=false)]
+            public List<string> SurpportAuthTypes { get; set; }
 
             /// <summary>
             /// The tags of the instance.
