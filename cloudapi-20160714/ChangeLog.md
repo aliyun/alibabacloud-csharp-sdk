@@ -1,3 +1,6 @@
+2024-08-05 Version: 4.4.2
+- Generated csharp 2016-07-14 for CloudAPI.
+
 2024-08-05 Version: 4.4.1
 - Generated csharp 2016-07-14 for CloudAPI.
 
