@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
             [NameInMap("LowerCaseTableNames")]
             [Validation(Required=false)]
-            public byte[] LowerCaseTableNames { get; set; }
+            public int? LowerCaseTableNames { get; set; }
 
             /// <summary>
             /// ```
