@@ -25,9 +25,153 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            [NameInMap("ClusterState")]
+            [Validation(Required=false)]
+            public DescribeInstancesResponseBodyInstancesClusterState ClusterState { get; set; }
+            public class DescribeInstancesResponseBodyInstancesClusterState : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
+                public string ClusterId { get; set; }
+
+                [NameInMap("ClusterStage")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesClusterStateClusterStage ClusterStage { get; set; }
+                public class DescribeInstancesResponseBodyInstancesClusterStateClusterStage : TeaModel {
+                    [NameInMap("ClusterId")]
+                    [Validation(Required=false)]
+                    public string ClusterId { get; set; }
+
+                    [NameInMap("CurrentStage")]
+                    [Validation(Required=false)]
+                    public int? CurrentStage { get; set; }
+
+                    [NameInMap("Message")]
+                    [Validation(Required=false)]
+                    public string Message { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("TotalStageWithWeight")]
+                    [Validation(Required=false)]
+                    public List<DescribeInstancesResponseBodyInstancesClusterStateClusterStageTotalStageWithWeight> TotalStageWithWeight { get; set; }
+                    public class DescribeInstancesResponseBodyInstancesClusterStateClusterStageTotalStageWithWeight : TeaModel {
+                        [NameInMap("StepIndex")]
+                        [Validation(Required=false)]
+                        public int? StepIndex { get; set; }
+
+                        [NameInMap("StepName")]
+                        [Validation(Required=false)]
+                        public string StepName { get; set; }
+
+                        [NameInMap("Weight")]
+                        [Validation(Required=false)]
+                        public int? Weight { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("CreateTimeout")]
+                [Validation(Required=false)]
+                public bool? CreateTimeout { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("SubStatus")]
+                [Validation(Required=false)]
+                public string SubStatus { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+                [NameInMap("UserSlbDto")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesClusterStateUserSlbDto UserSlbDto { get; set; }
+                public class DescribeInstancesResponseBodyInstancesClusterStateUserSlbDto : TeaModel {
+                    [NameInMap("ExistSlb")]
+                    [Validation(Required=false)]
+                    public bool? ExistSlb { get; set; }
+
+                    [NameInMap("SlbId")]
+                    [Validation(Required=false)]
+                    public string SlbId { get; set; }
+
+                    [NameInMap("SlbIp")]
+                    [Validation(Required=false)]
+                    public string SlbIp { get; set; }
+
+                    [NameInMap("SlbStatus")]
+                    [Validation(Required=false)]
+                    public string SlbStatus { get; set; }
+
+                    [NameInMap("UserSlbListeners")]
+                    [Validation(Required=false)]
+                    public List<DescribeInstancesResponseBodyInstancesClusterStateUserSlbDtoUserSlbListeners> UserSlbListeners { get; set; }
+                    public class DescribeInstancesResponseBodyInstancesClusterStateUserSlbDtoUserSlbListeners : TeaModel {
+                        [NameInMap("ListenersStatus")]
+                        [Validation(Required=false)]
+                        public string ListenersStatus { get; set; }
+
+                        [NameInMap("Port")]
+                        [Validation(Required=false)]
+                        public string Port { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("VpcCidr")]
+                [Validation(Required=false)]
+                public string VpcCidr { get; set; }
+
+            }
+
             [NameInMap("ClusterStatus")]
             [Validation(Required=false)]
             public string ClusterStatus { get; set; }
+
+            [NameInMap("ClusterUsedResources")]
+            [Validation(Required=false)]
+            public List<DescribeInstancesResponseBodyInstancesClusterUsedResources> ClusterUsedResources { get; set; }
+            public class DescribeInstancesResponseBodyInstancesClusterUsedResources : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
+                public string ClusterId { get; set; }
+
+                [NameInMap("Ha")]
+                [Validation(Required=false)]
+                public bool? Ha { get; set; }
+
+                [NameInMap("HaUsedCpu")]
+                [Validation(Required=false)]
+                public float? HaUsedCpu { get; set; }
+
+                [NameInMap("HaUsedMemory")]
+                [Validation(Required=false)]
+                public float? HaUsedMemory { get; set; }
+
+                [NameInMap("HaUsedResource")]
+                [Validation(Required=false)]
+                public float? HaUsedResource { get; set; }
+
+                [NameInMap("UsedCpu")]
+                [Validation(Required=false)]
+                public float? UsedCpu { get; set; }
+
+                [NameInMap("UsedMemory")]
+                [Validation(Required=false)]
+                public float? UsedMemory { get; set; }
+
+                [NameInMap("UsedResource")]
+                [Validation(Required=false)]
+                public float? UsedResource { get; set; }
+
+            }
 
             [NameInMap("ClusterUsedStorage")]
             [Validation(Required=false)]
@@ -64,6 +208,44 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [NameInMap("HaVSwitchIds")]
             [Validation(Required=false)]
             public List<string> HaVSwitchIds { get; set; }
+
+            [NameInMap("HaVSwitchInfo")]
+            [Validation(Required=false)]
+            public List<DescribeInstancesResponseBodyInstancesHaVSwitchInfo> HaVSwitchInfo { get; set; }
+            public class DescribeInstancesResponseBodyInstancesHaVSwitchInfo : TeaModel {
+                [NameInMap("AvailableIpAddressCount")]
+                [Validation(Required=false)]
+                public long? AvailableIpAddressCount { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                [NameInMap("VSwitchCidr")]
+                [Validation(Required=false)]
+                public string VSwitchCidr { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                [NameInMap("VSwitchName")]
+                [Validation(Required=false)]
+                public string VSwitchName { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
 
             [NameInMap("HaZoneId")]
             [Validation(Required=false)]
@@ -107,6 +289,32 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [NameInMap("OrderState")]
             [Validation(Required=false)]
             public string OrderState { get; set; }
+
+            [NameInMap("OssInfo")]
+            [Validation(Required=false)]
+            public DescribeInstancesResponseBodyInstancesOssInfo OssInfo { get; set; }
+            public class DescribeInstancesResponseBodyInstancesOssInfo : TeaModel {
+                [NameInMap("AccessId")]
+                [Validation(Required=false)]
+                public string AccessId { get; set; }
+
+                [NameInMap("AccessKey")]
+                [Validation(Required=false)]
+                public string AccessKey { get; set; }
+
+                [NameInMap("Bucket")]
+                [Validation(Required=false)]
+                public string Bucket { get; set; }
+
+                [NameInMap("BucketVersioningStatus")]
+                [Validation(Required=false)]
+                public string BucketVersioningStatus { get; set; }
+
+                [NameInMap("Endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+            }
 
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -188,9 +396,77 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
+            [NameInMap("VSwitchInfo")]
+            [Validation(Required=false)]
+            public List<DescribeInstancesResponseBodyInstancesVSwitchInfo> VSwitchInfo { get; set; }
+            public class DescribeInstancesResponseBodyInstancesVSwitchInfo : TeaModel {
+                [NameInMap("AvailableIpAddressCount")]
+                [Validation(Required=false)]
+                public string AvailableIpAddressCount { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                [NameInMap("VSwitchCidr")]
+                [Validation(Required=false)]
+                public string VSwitchCidr { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                [NameInMap("VSwitchName")]
+                [Validation(Required=false)]
+                public string VSwitchName { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
+
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+
+            [NameInMap("VpcInfo")]
+            [Validation(Required=false)]
+            public DescribeInstancesResponseBodyInstancesVpcInfo VpcInfo { get; set; }
+            public class DescribeInstancesResponseBodyInstancesVpcInfo : TeaModel {
+                [NameInMap("CidrBlock")]
+                [Validation(Required=false)]
+                public string CidrBlock { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("VpcName")]
+                [Validation(Required=false)]
+                public string VpcName { get; set; }
+
+            }
 
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public List<DescribeSupportedRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeSupportedRegionsResponseBodyRegions : TeaModel {
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("Extra")]
+            [Validation(Required=false)]
+            public string Extra { get; set; }
+
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
