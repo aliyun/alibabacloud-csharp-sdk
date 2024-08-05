@@ -10,19 +10,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListExperimentGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pairec-cn-abcdefg1234</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>3</para>
-        /// </summary>
         [NameInMap("LayerId")]
         [Validation(Required=false)]
         public string LayerId { get; set; }
@@ -31,10 +24,6 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>Online</para>
-        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

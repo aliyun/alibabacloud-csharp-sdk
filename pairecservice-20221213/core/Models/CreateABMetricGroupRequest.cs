@@ -10,57 +10,42 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateABMetricGroupRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1,2</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ABMetricIds")]
         [Validation(Required=false)]
         public string ABMetricIds { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pairec-cn-test1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>visits</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Realtime")]
         [Validation(Required=false)]
         public bool? Realtime { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]

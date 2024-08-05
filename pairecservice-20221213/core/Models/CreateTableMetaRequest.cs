@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateTableMetaRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>this is a test table</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
@@ -31,47 +28,35 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>false</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("IsDimensionField")]
             [Validation(Required=false)]
             public bool? IsDimensionField { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("IsPartitionField")]
             [Validation(Required=false)]
             public string IsPartitionField { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>this is gender of people</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Meaning")]
             [Validation(Required=false)]
             public string Meaning { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>gender</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>BIGINT</para>
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -80,50 +65,35 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pairec-cn-test123</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ABTest</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public string Module { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>table_test</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>reso-2s416t146ffjc3yefx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>table_mysql</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

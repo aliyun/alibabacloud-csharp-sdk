@@ -9,38 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListLaboratoriesRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>Daily</para>
-        /// </summary>
         [NameInMap("Environment")]
         [Validation(Required=false)]
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pairec-test1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>3</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>Offline</para>
-        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListLayersRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pairec-cn-abcdefg1234</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>3</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LaboratoryId")]
         [Validation(Required=false)]

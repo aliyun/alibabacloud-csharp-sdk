@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public List<string> ExcludeRequestIds { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>pairec-cn-********</para>
-        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

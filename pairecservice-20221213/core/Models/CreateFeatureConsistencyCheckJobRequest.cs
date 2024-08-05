@@ -10,40 +10,28 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateFeatureConsistencyCheckJobRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Pre</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Environment")]
         [Validation(Required=false)]
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>3</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FeatureConsistencyCheckJobConfigId")]
         [Validation(Required=false)]
         public string FeatureConsistencyCheckJobConfigId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pairec-cn-********</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SamplingDuration")]
         [Validation(Required=false)]

@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class OnlineExperimentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>6CF1E160-3F36-5E73-A170-C75504F05BBC</para>
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

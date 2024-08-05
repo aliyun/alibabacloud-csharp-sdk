@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class DeleteSceneResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>D75C43DC-3D3A-5CC8-9AAC-8C77306C433B</para>
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

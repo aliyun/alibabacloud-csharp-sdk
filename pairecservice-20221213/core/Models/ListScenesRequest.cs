@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListScenesRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>pairec-cn-abcdefg1234</para>
-        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>scene1</para>
-        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

@@ -10,30 +10,21 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CloneLaboratoryRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CloneExperimentGroup")]
         [Validation(Required=false)]
         public bool? CloneExperimentGroup { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Daily</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Environment")]
         [Validation(Required=false)]
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pairec-cn-abcdefg1234</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

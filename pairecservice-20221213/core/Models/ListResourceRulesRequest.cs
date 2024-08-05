@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

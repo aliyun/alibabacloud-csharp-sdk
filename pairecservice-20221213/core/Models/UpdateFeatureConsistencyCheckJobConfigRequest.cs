@@ -10,63 +10,38 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateFeatureConsistencyCheckJobConfigRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CompareFeature")]
         [Validation(Required=false)]
         public bool? CompareFeature { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>service_123</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EasServiceName")]
         [Validation(Required=false)]
         public string EasServiceName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>oss://********</para>
-        /// </summary>
         [NameInMap("EasyRecPackagePath")]
         [Validation(Required=false)]
         public string EasyRecPackagePath { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1.3.60</para>
-        /// </summary>
         [NameInMap("EasyRecVersion")]
         [Validation(Required=false)]
         public string EasyRecVersion { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>feature1,feature2</para>
-        /// </summary>
         [NameInMap("FeatureDisplayExclude")]
         [Validation(Required=false)]
         public string FeatureDisplayExclude { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>reso-********</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FeatureLandingResourceId")]
         [Validation(Required=false)]
         public string FeatureLandingResourceId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>feature1,feature2,feature3</para>
-        /// </summary>
         [NameInMap("FeaturePriority")]
         [Validation(Required=false)]
         public string FeaturePriority { get; set; }
@@ -95,39 +70,26 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string FeatureStoreUserId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1.0.0</para>
-        /// </summary>
         [NameInMap("FgJarVersion")]
         [Validation(Required=false)]
         public string FgJarVersion { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>file.json</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FgJsonFileName")]
         [Validation(Required=false)]
         public string FgJsonFileName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GenerateZip")]
         [Validation(Required=false)]
         public bool? GenerateZip { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pairec-cn-********</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -138,135 +100,90 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? IsUseFeatureStore { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>item_id</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ItemIdField")]
         [Validation(Required=false)]
         public string ItemIdField { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>item_table</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ItemTable")]
         [Validation(Required=false)]
         public string ItemTable { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ds</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ItemTablePartitionField")]
         [Validation(Required=false)]
         public string ItemTablePartitionField { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>yyyymmdd</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ItemTablePartitionFieldFormat")]
         [Validation(Required=false)]
         public string ItemTablePartitionFieldFormat { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>feature_consistency_check1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>reso-********</para>
-        /// </summary>
         [NameInMap("OssResourceId")]
         [Validation(Required=false)]
         public string OssResourceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0.89</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SampleRate")]
         [Validation(Required=false)]
         public double? SampleRate { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>3</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>4</para>
-        /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>user_id</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserIdField")]
         [Validation(Required=false)]
         public string UserIdField { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>user_table</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserTable")]
         [Validation(Required=false)]
         public string UserTable { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ds</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserTablePartitionField")]
         [Validation(Required=false)]
         public string UserTablePartitionField { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>yyyymmdd</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserTablePartitionFieldFormat")]
         [Validation(Required=false)]
         public string UserTablePartitionFieldFormat { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>work_flow_1</para>
-        /// </summary>
         [NameInMap("WorkflowName")]
         [Validation(Required=false)]
         public string WorkflowName { get; set; }
