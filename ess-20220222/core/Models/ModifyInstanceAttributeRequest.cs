@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to use the scaling group to manage the lifecycles of the manually added ECS instances. Valid values:
+        /// Specifies whether to allow the scaling group to manage the lifecycles of the manually added ECS instances. Valid values:
         /// 
-        /// *   true: The scaling group manages the lifecycles of instances that are manually added and instances that are automatically created in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.
-        /// *   false: The scaling group does not manage the lifecycles of instances that are manually added. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.
+        /// *   true: allows the scaling group to manage the lifecycles of the manually added ECS instances. The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.
+        /// *   false: does not allow the scaling group to manage the lifecycles of the manually added ECS instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.
         /// 
-        /// >  You can specify this parameter for only ECS instances that are manually added to scaling groups.
+        /// >  You can specify this parameter only for ECS instances that are manually added to the scaling group.
         /// </summary>
         [NameInMap("Entrusted")]
         [Validation(Required=false)]

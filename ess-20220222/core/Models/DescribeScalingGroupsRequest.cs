@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingGroupsRequest : TeaModel {
+        /// <summary>
+        /// The type of instances that are managed by the scaling group. Valid values:
+        /// 
+        /// *   ECS: ECS instances
+        /// *   ECI: elastic container instances
+        /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }

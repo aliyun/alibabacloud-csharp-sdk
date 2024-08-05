@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ContainerGroupName { get; set; }
 
         /// <summary>
-        /// The containers in the elastic container instance.
+        /// The containers per elastic container instance.
         /// </summary>
         [NameInMap("Containers")]
         [Validation(Required=false)]
@@ -246,14 +246,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> Args { get; set; }
 
             /// <summary>
-            /// The commands that you can run in the container when you use the CLI to perform liveness probes.
+            /// The commands that you want to run by using the CLI for liveness probing within the container.
             /// </summary>
             [NameInMap("Commands")]
             [Validation(Required=false)]
             public List<string> Commands { get; set; }
 
             /// <summary>
-            /// The number of vCPUs that you want to allocate to the container.
+            /// The number of vCPUs per container.
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string FieldRefFieldPath { get; set; }
 
                 /// <summary>
-                /// The name of the environment variable. The name can be 1 to 128 characters in length and can contain underscores (_) and digits. The name cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.
+                /// The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -290,14 +290,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// The number of GPUs that you want to allocate to the container.
+            /// The number of GPUs per container.
             /// </summary>
             [NameInMap("Gpu")]
             [Validation(Required=false)]
             public int? Gpu { get; set; }
 
             /// <summary>
-            /// The image of the container.
+            /// The container image.
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
@@ -314,64 +314,112 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ImagePullPolicy { get; set; }
 
+            /// <summary>
+            /// The commands that you want to run by using the CLI to configure the postStart callback function within the container.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerExecs")]
             [Validation(Required=false)]
             public List<string> LifecyclePostStartHandlerExecs { get; set; }
 
+            /// <summary>
+            /// The IP address of the host to which you want to send HTTP GET requests to configure the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetHost")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetHost { get; set; }
 
+            /// <summary>
+            /// The path to which you want to send HTTP GET requests to configure the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetPath { get; set; }
 
+            /// <summary>
+            /// The port over which you want to send HTTP GET requests to configure the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPort")]
             [Validation(Required=false)]
             public int? LifecyclePostStartHandlerHttpGetPort { get; set; }
 
+            /// <summary>
+            /// The protocol type of HTTP GET requests that you want to send to configure the postStart callback function. Valid values:
+            /// 
+            /// *   HTTP
+            /// *   HTTPS
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetScheme")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetScheme { get; set; }
 
+            /// <summary>
+            /// The IP address of the host detected by the TCP sockets that you want to use to configure the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerTcpSocketHost { get; set; }
 
+            /// <summary>
+            /// The port detected by the TCP sockets that you want to use to configure the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePostStartHandlerTcpSocketPort { get; set; }
 
+            /// <summary>
+            /// The commands that you want to run by using the CLI to configure the preStop callback function within the container.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerExecs")]
             [Validation(Required=false)]
             public List<string> LifecyclePreStopHandlerExecs { get; set; }
 
+            /// <summary>
+            /// The IP address of the host to which you want to send HTTP GET requests to configure the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetHost")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetHost { get; set; }
 
+            /// <summary>
+            /// The path to which you want to send HTTP GET requests to configure the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetPath { get; set; }
 
+            /// <summary>
+            /// The port over which you want to send HTTP GET requests to configure the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerHttpGetPort { get; set; }
 
+            /// <summary>
+            /// The protocol type of the HTTP GET requests that you want to send to configure the preStop callback function. Valid values:
+            /// 
+            /// *   HTTP
+            /// *   HTTPS
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetScheme")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetScheme { get; set; }
 
+            /// <summary>
+            /// The IP address of the host detected by the TCP sockets that you want to use to configure the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerTcpSocketHost { get; set; }
 
+            /// <summary>
+            /// The port detected by the TCP sockets that you want to use to configure the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// The memory size that you want to allocate to the container. Unit: GiB.
+            /// The memory size per container. Unit: GiB.
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
@@ -411,7 +459,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read.
+            /// Specifies whether the container allocates buffer resources to standard input streams during its active runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input streams in the container are read.
             /// 
             /// Default value: false.
             /// </summary>
@@ -420,16 +468,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Stdin { get; set; }
 
             /// <summary>
-            /// Specifies whether to remain standard input streams connected during multiple sessions if StdinOnce is set to true.
+            /// Specifies whether standard input streams remain connected during multiple sessions when StdinOnce is set to true.
             /// 
-            /// If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is restarted.
+            /// If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain disconnected until the container is restarted.
             /// </summary>
             [NameInMap("StdinOnce")]
             [Validation(Required=false)]
             public bool? StdinOnce { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable interaction. Valid values:
+            /// Specifies whether to enable the Interaction feature. Valid values:
             /// 
             /// *   true
             /// *   false
@@ -450,7 +498,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<CreateEciScalingConfigurationRequestContainersVolumeMounts> VolumeMounts { get; set; }
             public class CreateEciScalingConfigurationRequestContainersVolumeMounts : TeaModel {
                 /// <summary>
-                /// The directory to which the container mounts the volume.
+                /// The directory in which the container mounts the volume.
                 /// 
                 /// >  Data under this directory is overwritten by data on the volume. Specify this parameter with caution.
                 /// </summary>
@@ -459,11 +507,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+                /// The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
                 /// 
-                /// *   None: The volume mount does not receive subsequent mounts that are performed on the volume or the subdirectories of the volume.
-                /// *   HostToContainer: The volume mount receives all subsequent mounts that are performed on the volume or the subdirectories of the volume.
-                /// *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
+                /// *   None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the volume.
+                /// *   HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the volume.
+                /// *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the volume. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.
                 /// 
                 /// Default value: None.
                 /// </summary>
@@ -491,7 +539,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// The subdirectory of the volume.
+                /// The volume subdirectory.
                 /// </summary>
                 [NameInMap("SubPath")]
                 [Validation(Required=false)]
@@ -698,14 +746,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// Information about the image repository.
+        /// The image repositories.
         /// </summary>
         [NameInMap("ImageRegistryCredentials")]
         [Validation(Required=false)]
         public List<CreateEciScalingConfigurationRequestImageRegistryCredentials> ImageRegistryCredentials { get; set; }
         public class CreateEciScalingConfigurationRequestImageRegistryCredentials : TeaModel {
             /// <summary>
-            /// The password that is used to access the image repository.
+            /// The password of the image repository.
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
@@ -719,7 +767,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Server { get; set; }
 
             /// <summary>
-            /// The username that is used to access the image repository.
+            /// The username of the image repository.
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -1083,11 +1131,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? SpotPriceLimit { get; set; }
 
         /// <summary>
-        /// The bidding policy for the elastic container instance. Valid values:
+        /// The instance bidding policy. Valid values:
         /// 
-        /// *   NoSpot: The instance is a pay-as-you-go instance.
-        /// *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-        /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.
+        /// *   NoSpot: The instances are created as pay-as-you-go instances.
+        /// *   SpotWithPriceLimit: The instances are preemptible instances for which you can specify the maximum hourly price.
+        /// *   SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.
         /// 
         /// Default value: NoSpot.
         /// </summary>

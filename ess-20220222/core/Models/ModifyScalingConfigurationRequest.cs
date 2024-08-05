@@ -454,20 +454,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The intelligent configuration settings, which determines the range of instance types that meet the specified criteria.
+        /// The intelligent configuration settings, which determine the available instance types.
         /// </summary>
         [NameInMap("InstancePatternInfos")]
         [Validation(Required=false)]
         public List<ModifyScalingConfigurationRequestInstancePatternInfos> InstancePatternInfos { get; set; }
         public class ModifyScalingConfigurationRequestInstancePatternInfos : TeaModel {
             /// <summary>
-            /// The architectures of the instance types.
+            /// The architectures of the instance types. Valid values:
             /// 
-            /// *   X86: x86 architecture.
-            /// *   Heterogeneous: heterogeneous architecture, such as GPUs and FPGAs.
-            /// *   BareMetal: ECS Bare Metal Instance architecture.
-            /// *   Arm: ARM architecture.
-            /// *   SuperComputeCluster: Super Computing Cluster architecture.
+            /// *   X86: x86
+            /// *   Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated
+            /// *   BareMetal: ECS Bare Metal Instance
+            /// *   Arm: Arm
+            /// *   SuperComputeCluster: Super Computing Cluster
             /// 
             /// By default, all values are included.
             /// </summary>
@@ -482,20 +482,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// *   Include: includes burstable instance types.
             /// *   Required: includes only burstable instance types.
             /// 
-            /// Default value: Include
+            /// Default value: Include.
             /// </summary>
             [NameInMap("BurstablePerformance")]
             [Validation(Required=false)]
             public string BurstablePerformance { get; set; }
 
             /// <summary>
-            /// The number of vCPUs that you want to allocate to an instance type in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+            /// The number of vCPUs per instance type in intelligent configuration mode. You can specify this parameter to filter the available instance types. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
             /// 
-            /// When you specify this parameter, take note of the following items:
+            /// Before you specify this parameter, take note of the following items:
             /// 
-            /// *   InstancePatternInfo is available only for scaling groups that reside in VPCs.
-            /// *   If you specify InstancePatternInfo, you must also specify Cores and Memory.
-            /// *   If you specify an instance type by using InstanceType or InstanceTypes, Auto Scaling preferentially creates instances by using the instance type that is specified by InstanceType or InstanceTypes for scale-outs. If the specified instance type does not have sufficient inventory, Auto Scaling creates instances by using the lowest-priced instance type that is specified by InstancePatternInfo.
+            /// *   You can specify InstancePatternInfo only if your scaling group resides in a virtual private cloud (VPC).
+            /// *   If you specify InstancePatternInfo, you must also specify InstancePatternInfo.Cores and InstancePatternInfo.Memory.
+            /// *   Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances. If the specified instance type does not have sufficient inventory, Auto Scaling selects the lowest-priced instance type specified by InstancePatternInfo to create instances.
             /// </summary>
             [NameInMap("Cores")]
             [Validation(Required=false)]
@@ -506,7 +506,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> CpuArchitectures { get; set; }
 
             /// <summary>
-            /// The instance types that you want to exclude. You can use wildcard characters such as an asterisk (\\*) to exclude an instance type or an instance family. Examples:
+            /// The instance types that you want to exclude. You can use wildcard characters, such as an asterisk (\\*), to exclude an instance type or an instance family. Examples:
             /// 
             /// *   ecs.c6.large: excludes the ecs.c6.large instance type.
             /// *   ecs.c6.\\*: excludes the c6 instance family.
@@ -524,11 +524,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> InstanceCategories { get; set; }
 
             /// <summary>
-            /// The level of the instance family. You can use this parameter to filter instance types that meet the specified criteria. This parameter takes effect only if you set `CostOptimization` to true. Valid values:
+            /// The level of the instance family. You can specify this parameter to filter the available instance types. This parameter takes effect only if you set `CostOptimization` to true. Valid values:
             /// 
-            /// *   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).
-            /// *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see the [Overview of instance families](https://help.aliyun.com/document_detail/25378.html) topic.
-            /// *   CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for business scenarios in which CPU utilization is low but may fluctuate in specific scenarios. For more information, see [Overview](https://help.aliyun.com/document_detail/59977.html) of burstable instances.
+            /// *   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).
+            /// *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+            /// *   CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview](https://help.aliyun.com/document_detail/59977.html) of burstable instances.
             /// </summary>
             [NameInMap("InstanceFamilyLevel")]
             [Validation(Required=false)]
@@ -539,9 +539,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> InstanceTypeFamilies { get; set; }
 
             /// <summary>
-            /// The maximum hourly price for a pay-as-you-go instance or a preemptible instance in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria.
+            /// The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to filter the available instance types.
             /// 
-            /// > If you set SpotStrategy to SpotWithPriceLimit, specify MaxPrice. In other scenarios, MaxPrice is optional.
+            /// >  If you set SpotStrategy to SpotWithPriceLimit, you must specify this parameter. In other cases, this parameter is optional.
             /// </summary>
             [NameInMap("MaxPrice")]
             [Validation(Required=false)]
@@ -560,7 +560,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? MaximumMemorySize { get; set; }
 
             /// <summary>
-            /// The memory size that you want to allocate to an instance type in intelligent configuration mode. Unit: GiB. You can use this parameter to filter the available instance types that meet the specified criteria.
+            /// The memory size per instance type in intelligent configuration mode. Unit: GiB. You can specify this parameter to filter the available instance types.
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]

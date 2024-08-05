@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? DecreaseDesiredCapacity { get; set; }
 
+        /// <summary>
+        /// Specifies whether to ignore invalid instances when you remove a batch of instances from the scaling group. Valid values:
+        /// 
+        /// *   true: ignores invalid instances. If invalid instances exist and valid instances are deleted, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.
+        /// *   false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to remove from the scaling group, an error is reported.
+        /// 
+        /// Default value: false.
+        /// </summary>
         [NameInMap("IgnoreInvalidInstance")]
         [Validation(Required=false)]
         public bool? IgnoreInvalidInstance { get; set; }

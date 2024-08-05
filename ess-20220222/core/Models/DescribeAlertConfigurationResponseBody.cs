@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the scaling activities that prompt text message or email notifications.
+        /// The status of the scaling activities that trigger text message, internal message, or email-based notifications.
         /// </summary>
         [NameInMap("ScaleStatuses")]
         [Validation(Required=false)]

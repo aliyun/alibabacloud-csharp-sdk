@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to remove existing Elastic Compute Service (ECS) instances from the ALB server group that you want to disassociate from the scaling group. Valid values:
+        /// Specifies whether to remove the existing ECS instances from the ALB server group. Valid values:
         /// 
-        /// *   true: removes existing ECS instances and returns the value of the `ScalingActivityId` parameter. You can use the scaling activity ID to check whether the ECS instances are removed.
-        /// *   false: does not remove existing ECS instances.
+        /// *   true: removes the existing ECS instances from the ALB server group and returns the value of `ScalingActivityId`. You can query the value of ScalingActivityId to check whether the existing ECS instances are removed from the ALB server group.
+        /// *   false: does not remove the existing ECS instances from the ALB server group.
         /// 
         /// Default value: false.
         /// </summary>

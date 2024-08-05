@@ -1154,7 +1154,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? TerminationGracePeriodSeconds { get; set; }
 
         /// <summary>
-        /// Information about the volumes.
+        /// The volumes.
         /// </summary>
         [NameInMap("Volumes")]
         [Validation(Required=false)]
@@ -1243,21 +1243,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// The paths to the configuration files.
+            /// The paths to configuration files.
             /// </summary>
             [NameInMap("ConfigFileVolumeConfigFileToPath")]
             [Validation(Required=false)]
             public List<ModifyEciScalingConfigurationRequestVolumesConfigFileVolumeConfigFileToPath> ConfigFileVolumeConfigFileToPath { get; set; }
             public class ModifyEciScalingConfigurationRequestVolumesConfigFileVolumeConfigFileToPath : TeaModel {
                 /// <summary>
-                /// The content of the configuration file, which can be up to 32 KB in size.
+                /// The content of the configuration file (32 KB).
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
-                /// The permissions on ConfigFileVolume.
+                /// The permissions on the ConfigFile volume.
                 /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
@@ -1273,21 +1273,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// The default permissions on ConfigFileVolume.
+            /// The default permissions on the ConfigFile volume.
             /// </summary>
             [NameInMap("ConfigFileVolumeDefaultMode")]
             [Validation(Required=false)]
             public int? ConfigFileVolumeDefaultMode { get; set; }
 
             /// <summary>
-            /// The name of the volume.
+            /// The volume name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of HostPathVolume. Examples: File, Directory, and Socket.
+            /// The type of the Host directory. Examples: File, Directory, and Socket.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
