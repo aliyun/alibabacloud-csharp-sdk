@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlansResponseBody : TeaModel {
         /// <summary>
-        /// The scaling plans.
+        /// The queried scaling plans.
         /// </summary>
         [NameInMap("ElasticPlans")]
         [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The cluster ID.
         /// 
-        /// > You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/129857.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ElasticPlanName { get; set; }
 
         /// <summary>
-        /// Indicates whether the scaling plan was immediately enabled after the plan is created. Valid values:
+        /// Specifies whether to query the scaling plans that are immediately enabled after the plans are created. Valid values:
         /// 
         /// *   true
         /// *   false
@@ -70,8 +70,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The type of the scaling plan. Valid values:
         /// 
-        /// *   EXECUTOR: interactive resource groups, which fall into the computing resource category.
-        /// *   WORKER: EIUs.
+        /// EXECUTOR: the interactive resource group type, which specifies the computing resource type. WORKER: the EIU type.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

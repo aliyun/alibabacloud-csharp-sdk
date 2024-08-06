@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public GetSparkAppLogResponseBodyData Data { get; set; }
         public class GetSparkAppLogResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the Data Lakehouse Edition (V3.0) cluster.
+            /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
             /// </summary>
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]

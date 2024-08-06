@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyPerformanceViewShrinkRequest : TeaModel {
         /// <summary>
+        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// The region ID.
+        /// 
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent region list.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// The new information about the monitoring view.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ViewDetail")]
@@ -47,6 +57,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ViewDetailShrink { get; set; }
 
         /// <summary>
+        /// The name of the monitoring view.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ViewName")]

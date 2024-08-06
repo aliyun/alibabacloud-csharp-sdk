@@ -14,12 +14,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CreateFromViewType { get; set; }
 
         /// <summary>
+        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+        /// 
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// </summary>
         [NameInMap("FillOriginViewKeys")]
         [Validation(Required=false)]
         public bool? FillOriginViewKeys { get; set; }
@@ -33,6 +43,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// The region ID.
+        /// 
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent region list.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -48,6 +62,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// The information about the monitoring view.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ViewDetail")]

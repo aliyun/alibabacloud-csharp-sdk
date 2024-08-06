@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
         /// 
-        /// > You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/454250.html) operation to query cluster IDs.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/454250.html) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the job resource group.
         /// 
-        /// >  You can call the [DescribeDBResourceGroup](https://help.aliyun.com/document_detail/612410.html) operation to query the resource group ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// >  You can call the [DescribeDBResourceGroup](https://help.aliyun.com/document_detail/612410.html) operation to query the name of a resource group within a cluster.
         /// 
         /// This parameter is required.
         /// </summary>

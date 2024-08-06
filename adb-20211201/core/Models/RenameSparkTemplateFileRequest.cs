@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class RenameSparkTemplateFileRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
         /// 
         /// This parameter is required.
         /// </summary>

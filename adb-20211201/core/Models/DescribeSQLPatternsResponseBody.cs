@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public double? AverageExecutionTime { get; set; }
 
+            [NameInMap("AverageOperatorCost")]
+            [Validation(Required=false)]
+            public double? AverageOperatorCost { get; set; }
+
             /// <summary>
             /// The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.
             /// </summary>
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [NameInMap("AverageQueryTime")]
             [Validation(Required=false)]
             public double? AverageQueryTime { get; set; }
+
+            [NameInMap("AverageScanCost")]
+            [Validation(Required=false)]
+            public double? AverageScanCost { get; set; }
 
             /// <summary>
             /// The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.
@@ -95,6 +103,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? MaxExecutionTime { get; set; }
 
+            [NameInMap("MaxOperatorCost")]
+            [Validation(Required=false)]
+            public double? MaxOperatorCost { get; set; }
+
             /// <summary>
             /// The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.
             /// </summary>
@@ -109,12 +121,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? MaxQueryTime { get; set; }
 
+            [NameInMap("MaxScanCost")]
+            [Validation(Required=false)]
+            public double? MaxScanCost { get; set; }
+
             /// <summary>
             /// The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.
             /// </summary>
             [NameInMap("MaxScanSize")]
             [Validation(Required=false)]
             public long? MaxScanSize { get; set; }
+
+            [NameInMap("OperatorCostPercentage")]
+            [Validation(Required=false)]
+            public double? OperatorCostPercentage { get; set; }
+
+            [NameInMap("OperatorCostSum")]
+            [Validation(Required=false)]
+            public double? OperatorCostSum { get; set; }
 
             /// <summary>
             /// The earliest commit time of the SQL pattern within the query time range.
@@ -130,6 +154,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string PatternId { get; set; }
 
+            [NameInMap("PeakMemoryPercentage")]
+            [Validation(Required=false)]
+            public double? PeakMemoryPercentage { get; set; }
+
+            [NameInMap("PeakMemorySum")]
+            [Validation(Required=false)]
+            public double? PeakMemorySum { get; set; }
+
             /// <summary>
             /// The number of queries executed in association with the SQL pattern within the query time range.
             /// </summary>
@@ -137,12 +169,36 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? QueryCount { get; set; }
 
+            [NameInMap("QueryTimePercentage")]
+            [Validation(Required=false)]
+            public double? QueryTimePercentage { get; set; }
+
+            [NameInMap("QueryTimeSum")]
+            [Validation(Required=false)]
+            public double? QueryTimeSum { get; set; }
+
             /// <summary>
             /// The statement of the SQL pattern.
             /// </summary>
             [NameInMap("SQLPattern")]
             [Validation(Required=false)]
             public string SQLPattern { get; set; }
+
+            [NameInMap("ScanCostPercentage")]
+            [Validation(Required=false)]
+            public double? ScanCostPercentage { get; set; }
+
+            [NameInMap("ScanCostSum")]
+            [Validation(Required=false)]
+            public double? ScanCostSum { get; set; }
+
+            [NameInMap("ScanSizePercentage")]
+            [Validation(Required=false)]
+            public double? ScanSizePercentage { get; set; }
+
+            [NameInMap("ScanSizeSum")]
+            [Validation(Required=false)]
+            public double? ScanSizeSum { get; set; }
 
             /// <summary>
             /// The tables scanned based on the SQL pattern.

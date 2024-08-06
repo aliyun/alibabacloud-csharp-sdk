@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DeletePerformanceViewResponseBody : TeaModel {
+        /// <summary>
+        /// The details about the access denial.
+        /// 
+        /// >  This parameter is returned only if Resource Access Management (RAM) permission verification failed.
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }

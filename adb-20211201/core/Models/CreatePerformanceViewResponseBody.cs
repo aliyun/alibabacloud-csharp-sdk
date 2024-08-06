@@ -13,6 +13,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// The creation result. Valid values:
+        /// 
+        /// *   **SUCCESS**
+        /// *   **FAILED**
+        /// </summary>
         [NameInMap("CreateStatus")]
         [Validation(Required=false)]
         public string CreateStatus { get; set; }

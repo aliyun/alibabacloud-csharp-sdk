@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string QueryTime { get; set; }
 
             /// <summary>
-            /// The name of the destination resource group.
+            /// The name of the resource group to which you want to resubmit the query job.
             /// </summary>
             [NameInMap("TargetGroupName")]
             [Validation(Required=false)]
