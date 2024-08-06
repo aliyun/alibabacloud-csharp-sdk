@@ -101,6 +101,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string Replicas { get; set; }
 
+                [NameInMap("securityGroup")]
+                [Validation(Required=false)]
+                public ListGatewaysResponseBodyDataItemsSecurityGroup SecurityGroup { get; set; }
+                public class ListGatewaysResponseBodyDataItemsSecurityGroup : TeaModel {
+                    [NameInMap("securityGroupId")]
+                    [Validation(Required=false)]
+                    public string SecurityGroupId { get; set; }
+
+                }
+
                 [NameInMap("spec")]
                 [Validation(Required=false)]
                 public string Spec { get; set; }
@@ -117,9 +127,49 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public long? UpdateTimestamp { get; set; }
 
+                [NameInMap("vSwitch")]
+                [Validation(Required=false)]
+                public ListGatewaysResponseBodyDataItemsVSwitch VSwitch { get; set; }
+                public class ListGatewaysResponseBodyDataItemsVSwitch : TeaModel {
+                    [NameInMap("vSwitchId")]
+                    [Validation(Required=false)]
+                    public string VSwitchId { get; set; }
+
+                }
+
                 [NameInMap("version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }
+
+                [NameInMap("vpc")]
+                [Validation(Required=false)]
+                public ListGatewaysResponseBodyDataItemsVpc Vpc { get; set; }
+                public class ListGatewaysResponseBodyDataItemsVpc : TeaModel {
+                    [NameInMap("vpcId")]
+                    [Validation(Required=false)]
+                    public string VpcId { get; set; }
+
+                }
+
+                [NameInMap("zones")]
+                [Validation(Required=false)]
+                public List<ListGatewaysResponseBodyDataItemsZones> Zones { get; set; }
+                public class ListGatewaysResponseBodyDataItemsZones : TeaModel {
+                    [NameInMap("vSwitch")]
+                    [Validation(Required=false)]
+                    public ListGatewaysResponseBodyDataItemsZonesVSwitch VSwitch { get; set; }
+                    public class ListGatewaysResponseBodyDataItemsZonesVSwitch : TeaModel {
+                        [NameInMap("vSwitchId")]
+                        [Validation(Required=false)]
+                        public string VSwitchId { get; set; }
+
+                    }
+
+                    [NameInMap("zoneId")]
+                    [Validation(Required=false)]
+                    public string ZoneId { get; set; }
+
+                }
 
             }
 
