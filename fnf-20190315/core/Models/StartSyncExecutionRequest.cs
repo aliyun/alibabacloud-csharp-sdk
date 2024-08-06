@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         /// <summary>
         /// The name of the execution that you want to start. The name must meet the following conventions:
         /// 
-        /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must start with a letter or an underscore (\_).
+        /// *   The name can contain letters, digits, underscores (_), and hyphens (-).
+        /// *   The name must start with a letter or an underscore (_).
         /// *   The name is case-sensitive.
         /// *   The name must be 1 to 128 characters in length.
         /// 
@@ -24,12 +24,9 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string ExecutionName { get; set; }
 
         /// <summary>
-        /// The name of the flow in which you want to start the execution. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:
+        /// The name of the workflow to be executed.
         /// 
-        /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must start with a letter or an underscore (\_).
-        /// *   The name is case-sensitive.
-        /// *   The name must be 1 to 128 characters in length.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]

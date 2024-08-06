@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class ListFlowsRequest : TeaModel {
         /// <summary>
-        /// The number of flows to be queried. Valid values: 1 to 1000.
+        /// The number of workflows that you want to query. Valid values: 1 - 999. Default value: 60.
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]

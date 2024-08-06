@@ -13,7 +13,11 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class CreateFlowRequest : TeaModel {
         /// <summary>
-        /// The definition of the flow. The definition must comply with the flow definition language (FDL) syntax. Considering compatibility, the system supports two flow definition specifications.
+        /// The definition of the workflow. The definition must comply with the flow definition language (FDL) syntax. Considering compatibility, the system supports two flow definition specifications.
+        /// 
+        /// >  In the preceding flow definition example, Name:my_flow_name is the workflow name, which must be consistent with the input parameter Name
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Definition")]
         [Validation(Required=false)]
@@ -21,6 +25,8 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 
         /// <summary>
         /// The description of the flow.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -43,10 +49,12 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         /// <summary>
         /// The name of the flow. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:
         /// 
-        /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must start with a letter or an underscore (\_).
+        /// *   The name can contain letters, digits, underscores (_), and hyphens (-).
+        /// *   The name must start with a letter or an underscore (_).
         /// *   The name is case-sensitive.
         /// *   The name must be 1 to 128 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -61,6 +69,8 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 
         /// <summary>
         /// The type of the flow. Set this parameter to **FDL**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

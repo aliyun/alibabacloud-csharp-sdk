@@ -10,31 +10,25 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class GetExecutionHistoryRequest : TeaModel {
         /// <summary>
-        /// The name of the execution, which is unique within a flow. The name must meet the following conventions:
+        /// The name of the execution.
         /// 
-        /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must start with a letter or an underscore (\_).
-        /// *   The name is case-sensitive.
-        /// *   The name must be 1 to 128 characters in length.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExecutionName")]
         [Validation(Required=false)]
         public string ExecutionName { get; set; }
 
         /// <summary>
-        /// The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
+        /// The name of the workflow.
         /// 
-        /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must start with a letter or an underscore (\_).
-        /// *   The name is case-sensitive.
-        /// *   The name must be 1 to 128 characters in length.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
         /// <summary>
-        /// The maximum number of steps to be queried. Valid values: 1 to 1000.
+        /// The number of workflows that you want to query. Valid values: 1-999. Default value: 60.
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]

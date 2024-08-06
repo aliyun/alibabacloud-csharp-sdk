@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// The type of the flow. Valid value: **FDL**.
+        /// The type of the workflow.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

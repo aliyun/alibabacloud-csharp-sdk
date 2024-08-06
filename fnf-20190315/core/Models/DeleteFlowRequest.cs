@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class DeleteFlowRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

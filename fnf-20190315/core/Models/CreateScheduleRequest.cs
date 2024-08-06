@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
     public class CreateScheduleRequest : TeaModel {
         /// <summary>
         /// The CRON expression.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CronExpression")]
         [Validation(Required=false)]
@@ -34,7 +36,9 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// The name of the flow that is bound to the time-based schedule.
+        /// The name of the workflow that is associated with the time-based schedule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
@@ -48,12 +52,14 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string Payload { get; set; }
 
         /// <summary>
-        /// The name of the time-based schedule. Configure this parameter based on the following rules:
+        /// The name of the time-based schedule. The name must meet the following conventions:
         /// 
-        /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must start with a letter or an underscore (\_).
-        /// *   The name is case-sensitive.
+        /// *   The name can contain letters, digits, underscores (_), and hyphens (-).
+        /// *   The name must start with a letter or an underscore (_).
+        /// *   It is case-sensitive.
         /// *   The name must be 1 to 128 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScheduleName")]
         [Validation(Required=false)]

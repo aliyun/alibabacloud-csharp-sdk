@@ -46,13 +46,15 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](~~122093~~). If you want to create more flows, submit a ticket.
-          * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
-          *
-          * @param request CreateFlowRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateFlowResponse
+         * @summary Creates a flow.
+         *
+         * @description ## [](#)Usage notes
+         * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](https://help.aliyun.com/document_detail/122093.html). If you want to create more flows, submit a ticket.
+         * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
+         *
+         * @param request CreateFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateFlowResponse
          */
         public CreateFlowResponse CreateFlowWithOptions(CreateFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -106,13 +108,15 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](~~122093~~). If you want to create more flows, submit a ticket.
-          * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
-          *
-          * @param request CreateFlowRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateFlowResponse
+         * @summary Creates a flow.
+         *
+         * @description ## [](#)Usage notes
+         * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](https://help.aliyun.com/document_detail/122093.html). If you want to create more flows, submit a ticket.
+         * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
+         *
+         * @param request CreateFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateFlowResponse
          */
         public async Task<CreateFlowResponse> CreateFlowWithOptionsAsync(CreateFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -166,12 +170,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](~~122093~~). If you want to create more flows, submit a ticket.
-          * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
-          *
-          * @param request CreateFlowRequest
-          * @return CreateFlowResponse
+         * @summary Creates a flow.
+         *
+         * @description ## [](#)Usage notes
+         * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](https://help.aliyun.com/document_detail/122093.html). If you want to create more flows, submit a ticket.
+         * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
+         *
+         * @param request CreateFlowRequest
+         * @return CreateFlowResponse
          */
         public CreateFlowResponse CreateFlow(CreateFlowRequest request)
         {
@@ -180,12 +186,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](~~122093~~). If you want to create more flows, submit a ticket.
-          * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
-          *
-          * @param request CreateFlowRequest
-          * @return CreateFlowResponse
+         * @summary Creates a flow.
+         *
+         * @description ## [](#)Usage notes
+         * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](https://help.aliyun.com/document_detail/122093.html). If you want to create more flows, submit a ticket.
+         * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
+         *
+         * @param request CreateFlowRequest
+         * @return CreateFlowResponse
          */
         public async Task<CreateFlowResponse> CreateFlowAsync(CreateFlowRequest request)
         {
@@ -193,6 +201,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return await CreateFlowWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a time-based schedule.
+         *
+         * @param request CreateScheduleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateScheduleResponse
+         */
         public CreateScheduleResponse CreateScheduleWithOptions(CreateScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -246,6 +261,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<CreateScheduleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a time-based schedule.
+         *
+         * @param request CreateScheduleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateScheduleResponse
+         */
         public async Task<CreateScheduleResponse> CreateScheduleWithOptionsAsync(CreateScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -299,12 +321,24 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<CreateScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a time-based schedule.
+         *
+         * @param request CreateScheduleRequest
+         * @return CreateScheduleResponse
+         */
         public CreateScheduleResponse CreateSchedule(CreateScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateScheduleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a time-based schedule.
+         *
+         * @param request CreateScheduleRequest
+         * @return CreateScheduleResponse
+         */
         public async Task<CreateScheduleResponse> CreateScheduleAsync(CreateScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -312,12 +346,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
-          *
-          * @param request DeleteFlowRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteFlowResponse
+         * @summary Deletes an existing flow.
+         *
+         * @description ## [](#)Usage notes
+         * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
+         *
+         * @param request DeleteFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteFlowResponse
          */
         public DeleteFlowResponse DeleteFlowWithOptions(DeleteFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -347,12 +383,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
-          *
-          * @param request DeleteFlowRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteFlowResponse
+         * @summary Deletes an existing flow.
+         *
+         * @description ## [](#)Usage notes
+         * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
+         *
+         * @param request DeleteFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteFlowResponse
          */
         public async Task<DeleteFlowResponse> DeleteFlowWithOptionsAsync(DeleteFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -382,11 +420,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
-          *
-          * @param request DeleteFlowRequest
-          * @return DeleteFlowResponse
+         * @summary Deletes an existing flow.
+         *
+         * @description ## [](#)Usage notes
+         * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
+         *
+         * @param request DeleteFlowRequest
+         * @return DeleteFlowResponse
          */
         public DeleteFlowResponse DeleteFlow(DeleteFlowRequest request)
         {
@@ -395,11 +435,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
-          *
-          * @param request DeleteFlowRequest
-          * @return DeleteFlowResponse
+         * @summary Deletes an existing flow.
+         *
+         * @description ## [](#)Usage notes
+         * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
+         *
+         * @param request DeleteFlowRequest
+         * @return DeleteFlowResponse
          */
         public async Task<DeleteFlowResponse> DeleteFlowAsync(DeleteFlowRequest request)
         {
@@ -407,6 +449,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return await DeleteFlowWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a time-based scheduling task.
+         *
+         * @param request DeleteScheduleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteScheduleResponse
+         */
         public DeleteScheduleResponse DeleteScheduleWithOptions(DeleteScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -438,6 +487,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<DeleteScheduleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a time-based scheduling task.
+         *
+         * @param request DeleteScheduleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteScheduleResponse
+         */
         public async Task<DeleteScheduleResponse> DeleteScheduleWithOptionsAsync(DeleteScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -469,18 +525,37 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<DeleteScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a time-based scheduling task.
+         *
+         * @param request DeleteScheduleRequest
+         * @return DeleteScheduleResponse
+         */
         public DeleteScheduleResponse DeleteSchedule(DeleteScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteScheduleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a time-based scheduling task.
+         *
+         * @param request DeleteScheduleRequest
+         * @return DeleteScheduleResponse
+         */
         public async Task<DeleteScheduleResponse> DeleteScheduleAsync(DeleteScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteScheduleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries an execution in a flow. The long polling mode is supported. The maximum waiting period for long polling depends on the value of the WaitTimeSeconds parameter.
+         *
+         * @param request DescribeExecutionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeExecutionResponse
+         */
         public DescribeExecutionResponse DescribeExecutionWithOptions(DescribeExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -504,6 +579,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<DescribeExecutionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries an execution in a flow. The long polling mode is supported. The maximum waiting period for long polling depends on the value of the WaitTimeSeconds parameter.
+         *
+         * @param request DescribeExecutionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeExecutionResponse
+         */
         public async Task<DescribeExecutionResponse> DescribeExecutionWithOptionsAsync(DescribeExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -527,18 +609,37 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<DescribeExecutionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries an execution in a flow. The long polling mode is supported. The maximum waiting period for long polling depends on the value of the WaitTimeSeconds parameter.
+         *
+         * @param request DescribeExecutionRequest
+         * @return DescribeExecutionResponse
+         */
         public DescribeExecutionResponse DescribeExecution(DescribeExecutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeExecutionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries an execution in a flow. The long polling mode is supported. The maximum waiting period for long polling depends on the value of the WaitTimeSeconds parameter.
+         *
+         * @param request DescribeExecutionRequest
+         * @return DescribeExecutionResponse
+         */
         public async Task<DescribeExecutionResponse> DescribeExecutionAsync(DescribeExecutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeExecutionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about a flow.
+         *
+         * @param request DescribeFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFlowResponse
+         */
         public DescribeFlowResponse DescribeFlowWithOptions(DescribeFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -562,6 +663,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<DescribeFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a flow.
+         *
+         * @param request DescribeFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFlowResponse
+         */
         public async Task<DescribeFlowResponse> DescribeFlowWithOptionsAsync(DescribeFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -585,18 +693,37 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<DescribeFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a flow.
+         *
+         * @param request DescribeFlowRequest
+         * @return DescribeFlowResponse
+         */
         public DescribeFlowResponse DescribeFlow(DescribeFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFlowWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about a flow.
+         *
+         * @param request DescribeFlowRequest
+         * @return DescribeFlowResponse
+         */
         public async Task<DescribeFlowResponse> DescribeFlowAsync(DescribeFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFlowWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the detailed information about a time-based schedule.
+         *
+         * @param request DescribeScheduleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeScheduleResponse
+         */
         public DescribeScheduleResponse DescribeScheduleWithOptions(DescribeScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -620,6 +747,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<DescribeScheduleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the detailed information about a time-based schedule.
+         *
+         * @param request DescribeScheduleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeScheduleResponse
+         */
         public async Task<DescribeScheduleResponse> DescribeScheduleWithOptionsAsync(DescribeScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -643,18 +777,37 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<DescribeScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the detailed information about a time-based schedule.
+         *
+         * @param request DescribeScheduleRequest
+         * @return DescribeScheduleResponse
+         */
         public DescribeScheduleResponse DescribeSchedule(DescribeScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeScheduleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the detailed information about a time-based schedule.
+         *
+         * @param request DescribeScheduleRequest
+         * @return DescribeScheduleResponse
+         */
         public async Task<DescribeScheduleResponse> DescribeScheduleAsync(DescribeScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeScheduleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details about each step in an execution process.
+         *
+         * @param request GetExecutionHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetExecutionHistoryResponse
+         */
         public GetExecutionHistoryResponse GetExecutionHistoryWithOptions(GetExecutionHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -678,6 +831,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<GetExecutionHistoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details about each step in an execution process.
+         *
+         * @param request GetExecutionHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetExecutionHistoryResponse
+         */
         public async Task<GetExecutionHistoryResponse> GetExecutionHistoryWithOptionsAsync(GetExecutionHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -701,12 +861,24 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<GetExecutionHistoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details about each step in an execution process.
+         *
+         * @param request GetExecutionHistoryRequest
+         * @return GetExecutionHistoryResponse
+         */
         public GetExecutionHistoryResponse GetExecutionHistory(GetExecutionHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetExecutionHistoryWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details about each step in an execution process.
+         *
+         * @param request GetExecutionHistoryRequest
+         * @return GetExecutionHistoryResponse
+         */
         public async Task<GetExecutionHistoryResponse> GetExecutionHistoryAsync(GetExecutionHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -714,12 +886,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
-          *
-          * @param request ListExecutionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListExecutionsResponse
+         * @summary Queries all historical executions of a flow.
+         *
+         * @description ## [](#)Usage notes
+         * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
+         *
+         * @param request ListExecutionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListExecutionsResponse
          */
         public ListExecutionsResponse ListExecutionsWithOptions(ListExecutionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -745,12 +919,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
-          *
-          * @param request ListExecutionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListExecutionsResponse
+         * @summary Queries all historical executions of a flow.
+         *
+         * @description ## [](#)Usage notes
+         * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
+         *
+         * @param request ListExecutionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListExecutionsResponse
          */
         public async Task<ListExecutionsResponse> ListExecutionsWithOptionsAsync(ListExecutionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -776,11 +952,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
-          *
-          * @param request ListExecutionsRequest
-          * @return ListExecutionsResponse
+         * @summary Queries all historical executions of a flow.
+         *
+         * @description ## [](#)Usage notes
+         * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
+         *
+         * @param request ListExecutionsRequest
+         * @return ListExecutionsResponse
          */
         public ListExecutionsResponse ListExecutions(ListExecutionsRequest request)
         {
@@ -789,11 +967,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
-          *
-          * @param request ListExecutionsRequest
-          * @return ListExecutionsResponse
+         * @summary Queries all historical executions of a flow.
+         *
+         * @description ## [](#)Usage notes
+         * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
+         *
+         * @param request ListExecutionsRequest
+         * @return ListExecutionsResponse
          */
         public async Task<ListExecutionsResponse> ListExecutionsAsync(ListExecutionsRequest request)
         {
@@ -801,6 +981,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return await ListExecutionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of flows.
+         *
+         * @param request ListFlowsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFlowsResponse
+         */
         public ListFlowsResponse ListFlowsWithOptions(ListFlowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -824,6 +1011,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<ListFlowsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of flows.
+         *
+         * @param request ListFlowsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFlowsResponse
+         */
         public async Task<ListFlowsResponse> ListFlowsWithOptionsAsync(ListFlowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -847,18 +1041,37 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<ListFlowsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of flows.
+         *
+         * @param request ListFlowsRequest
+         * @return ListFlowsResponse
+         */
         public ListFlowsResponse ListFlows(ListFlowsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListFlowsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of flows.
+         *
+         * @param request ListFlowsRequest
+         * @return ListFlowsResponse
+         */
         public async Task<ListFlowsResponse> ListFlowsAsync(ListFlowsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFlowsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries time-based schedules in a flow.
+         *
+         * @param request ListSchedulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSchedulesResponse
+         */
         public ListSchedulesResponse ListSchedulesWithOptions(ListSchedulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -882,6 +1095,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<ListSchedulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries time-based schedules in a flow.
+         *
+         * @param request ListSchedulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSchedulesResponse
+         */
         public async Task<ListSchedulesResponse> ListSchedulesWithOptionsAsync(ListSchedulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -905,12 +1125,24 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<ListSchedulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries time-based schedules in a flow.
+         *
+         * @param request ListSchedulesRequest
+         * @return ListSchedulesResponse
+         */
         public ListSchedulesResponse ListSchedules(ListSchedulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSchedulesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries time-based schedules in a flow.
+         *
+         * @param request ListSchedulesRequest
+         * @return ListSchedulesResponse
+         */
         public async Task<ListSchedulesResponse> ListSchedulesAsync(ListSchedulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -918,13 +1150,15 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
-          * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
-          *
-          * @param request ReportTaskFailedRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReportTaskFailedResponse
+         * @summary Reports a failed task.
+         *
+         * @description ## [](#)Usage notes
+         * In the previous service (Serverless Workflow), the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+         * In the new service (CloudFlow), the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
+         *
+         * @param request ReportTaskFailedRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReportTaskFailedResponse
          */
         public ReportTaskFailedResponse ReportTaskFailedWithOptions(ReportTaskFailedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -964,13 +1198,15 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
-          * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
-          *
-          * @param request ReportTaskFailedRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReportTaskFailedResponse
+         * @summary Reports a failed task.
+         *
+         * @description ## [](#)Usage notes
+         * In the previous service (Serverless Workflow), the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+         * In the new service (CloudFlow), the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
+         *
+         * @param request ReportTaskFailedRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReportTaskFailedResponse
          */
         public async Task<ReportTaskFailedResponse> ReportTaskFailedWithOptionsAsync(ReportTaskFailedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1010,12 +1246,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
-          * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
-          *
-          * @param request ReportTaskFailedRequest
-          * @return ReportTaskFailedResponse
+         * @summary Reports a failed task.
+         *
+         * @description ## [](#)Usage notes
+         * In the previous service (Serverless Workflow), the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+         * In the new service (CloudFlow), the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
+         *
+         * @param request ReportTaskFailedRequest
+         * @return ReportTaskFailedResponse
          */
         public ReportTaskFailedResponse ReportTaskFailed(ReportTaskFailedRequest request)
         {
@@ -1024,12 +1262,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
-          * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
-          *
-          * @param request ReportTaskFailedRequest
-          * @return ReportTaskFailedResponse
+         * @summary Reports a failed task.
+         *
+         * @description ## [](#)Usage notes
+         * In the previous service (Serverless Workflow), the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+         * In the new service (CloudFlow), the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
+         *
+         * @param request ReportTaskFailedRequest
+         * @return ReportTaskFailedResponse
          */
         public async Task<ReportTaskFailedResponse> ReportTaskFailedAsync(ReportTaskFailedRequest request)
         {
@@ -1038,13 +1278,15 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
-          * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
-          *
-          * @param request ReportTaskSucceededRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReportTaskSucceededResponse
+         * @summary Reports a successful task.
+         *
+         * @description ## [](#)Usage notes
+         * In the previous service (Serverless Workflow), the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+         * In the new service (CloudFlow), the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
+         *
+         * @param request ReportTaskSucceededRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReportTaskSucceededResponse
          */
         public ReportTaskSucceededResponse ReportTaskSucceededWithOptions(ReportTaskSucceededRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1080,13 +1322,15 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
-          * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
-          *
-          * @param request ReportTaskSucceededRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReportTaskSucceededResponse
+         * @summary Reports a successful task.
+         *
+         * @description ## [](#)Usage notes
+         * In the previous service (Serverless Workflow), the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+         * In the new service (CloudFlow), the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
+         *
+         * @param request ReportTaskSucceededRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReportTaskSucceededResponse
          */
         public async Task<ReportTaskSucceededResponse> ReportTaskSucceededWithOptionsAsync(ReportTaskSucceededRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1122,12 +1366,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
-          * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
-          *
-          * @param request ReportTaskSucceededRequest
-          * @return ReportTaskSucceededResponse
+         * @summary Reports a successful task.
+         *
+         * @description ## [](#)Usage notes
+         * In the previous service (Serverless Workflow), the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+         * In the new service (CloudFlow), the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
+         *
+         * @param request ReportTaskSucceededRequest
+         * @return ReportTaskSucceededResponse
          */
         public ReportTaskSucceededResponse ReportTaskSucceeded(ReportTaskSucceededRequest request)
         {
@@ -1136,12 +1382,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
-          * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
-          *
-          * @param request ReportTaskSucceededRequest
-          * @return ReportTaskSucceededResponse
+         * @summary Reports a successful task.
+         *
+         * @description ## [](#)Usage notes
+         * In the previous service (Serverless Workflow), the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+         * In the new service (CloudFlow), the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
+         *
+         * @param request ReportTaskSucceededRequest
+         * @return ReportTaskSucceededResponse
          */
         public async Task<ReportTaskSucceededResponse> ReportTaskSucceededAsync(ReportTaskSucceededRequest request)
         {
@@ -1150,16 +1398,18 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * *   The flow is created. A flow only in standard mode is supported.
-          * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
-          * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-          * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
-          * *   If no execution with the same name exists, the system starts a new execution.
-          *
-          * @param request StartExecutionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartExecutionResponse
+         * @summary Starts the execution of a workflow.
+         *
+         * @description ## [](#)Usage notes
+         * *   The flow is created. A flow only in standard mode is supported.
+         * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
+         * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
+         * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
+         * *   If no execution with the same name exists, the system starts a new execution.
+         *
+         * @param request StartExecutionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartExecutionResponse
          */
         public StartExecutionResponse StartExecutionWithOptions(StartExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1201,16 +1451,18 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * *   The flow is created. A flow only in standard mode is supported.
-          * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
-          * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-          * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
-          * *   If no execution with the same name exists, the system starts a new execution.
-          *
-          * @param request StartExecutionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartExecutionResponse
+         * @summary Starts the execution of a workflow.
+         *
+         * @description ## [](#)Usage notes
+         * *   The flow is created. A flow only in standard mode is supported.
+         * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
+         * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
+         * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
+         * *   If no execution with the same name exists, the system starts a new execution.
+         *
+         * @param request StartExecutionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartExecutionResponse
          */
         public async Task<StartExecutionResponse> StartExecutionWithOptionsAsync(StartExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1252,15 +1504,17 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * *   The flow is created. A flow only in standard mode is supported.
-          * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
-          * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-          * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
-          * *   If no execution with the same name exists, the system starts a new execution.
-          *
-          * @param request StartExecutionRequest
-          * @return StartExecutionResponse
+         * @summary Starts the execution of a workflow.
+         *
+         * @description ## [](#)Usage notes
+         * *   The flow is created. A flow only in standard mode is supported.
+         * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
+         * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
+         * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
+         * *   If no execution with the same name exists, the system starts a new execution.
+         *
+         * @param request StartExecutionRequest
+         * @return StartExecutionResponse
          */
         public StartExecutionResponse StartExecution(StartExecutionRequest request)
         {
@@ -1269,15 +1523,17 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * *   The flow is created. A flow only in standard mode is supported.
-          * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
-          * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-          * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
-          * *   If no execution with the same name exists, the system starts a new execution.
-          *
-          * @param request StartExecutionRequest
-          * @return StartExecutionResponse
+         * @summary Starts the execution of a workflow.
+         *
+         * @description ## [](#)Usage notes
+         * *   The flow is created. A flow only in standard mode is supported.
+         * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
+         * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
+         * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
+         * *   If no execution with the same name exists, the system starts a new execution.
+         *
+         * @param request StartExecutionRequest
+         * @return StartExecutionResponse
          */
         public async Task<StartExecutionResponse> StartExecutionAsync(StartExecutionRequest request)
         {
@@ -1286,11 +1542,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * *   Only flows of the express execution mode are supported.
-          *
-          * @param request StartSyncExecutionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartSyncExecutionResponse
+         * @summary Synchronously starts an execution in a flow.
+         *
+         * @description *   Only flows of the express execution mode are supported.
+         *
+         * @param request StartSyncExecutionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartSyncExecutionResponse
          */
         public StartSyncExecutionResponse StartSyncExecutionWithOptions(StartSyncExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1328,11 +1586,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * *   Only flows of the express execution mode are supported.
-          *
-          * @param request StartSyncExecutionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartSyncExecutionResponse
+         * @summary Synchronously starts an execution in a flow.
+         *
+         * @description *   Only flows of the express execution mode are supported.
+         *
+         * @param request StartSyncExecutionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartSyncExecutionResponse
          */
         public async Task<StartSyncExecutionResponse> StartSyncExecutionWithOptionsAsync(StartSyncExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1370,10 +1630,12 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * *   Only flows of the express execution mode are supported.
-          *
-          * @param request StartSyncExecutionRequest
-          * @return StartSyncExecutionResponse
+         * @summary Synchronously starts an execution in a flow.
+         *
+         * @description *   Only flows of the express execution mode are supported.
+         *
+         * @param request StartSyncExecutionRequest
+         * @return StartSyncExecutionResponse
          */
         public StartSyncExecutionResponse StartSyncExecution(StartSyncExecutionRequest request)
         {
@@ -1382,10 +1644,12 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * *   Only flows of the express execution mode are supported.
-          *
-          * @param request StartSyncExecutionRequest
-          * @return StartSyncExecutionResponse
+         * @summary Synchronously starts an execution in a flow.
+         *
+         * @description *   Only flows of the express execution mode are supported.
+         *
+         * @param request StartSyncExecutionRequest
+         * @return StartSyncExecutionResponse
          */
         public async Task<StartSyncExecutionResponse> StartSyncExecutionAsync(StartSyncExecutionRequest request)
         {
@@ -1394,12 +1658,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * The flow must be in progress.
-          *
-          * @param request StopExecutionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopExecutionResponse
+         * @summary Stops an execution that is in progress in a flow.
+         *
+         * @description ## [](#)Usage notes
+         * The flow must be in progress.
+         *
+         * @param request StopExecutionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopExecutionResponse
          */
         public StopExecutionResponse StopExecutionWithOptions(StopExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1441,12 +1707,14 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * The flow must be in progress.
-          *
-          * @param request StopExecutionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopExecutionResponse
+         * @summary Stops an execution that is in progress in a flow.
+         *
+         * @description ## [](#)Usage notes
+         * The flow must be in progress.
+         *
+         * @param request StopExecutionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopExecutionResponse
          */
         public async Task<StopExecutionResponse> StopExecutionWithOptionsAsync(StopExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1488,11 +1756,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * The flow must be in progress.
-          *
-          * @param request StopExecutionRequest
-          * @return StopExecutionResponse
+         * @summary Stops an execution that is in progress in a flow.
+         *
+         * @description ## [](#)Usage notes
+         * The flow must be in progress.
+         *
+         * @param request StopExecutionRequest
+         * @return StopExecutionResponse
          */
         public StopExecutionResponse StopExecution(StopExecutionRequest request)
         {
@@ -1501,11 +1771,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
         }
 
         /**
-          * ## [](#)Usage notes
-          * The flow must be in progress.
-          *
-          * @param request StopExecutionRequest
-          * @return StopExecutionResponse
+         * @summary Stops an execution that is in progress in a flow.
+         *
+         * @description ## [](#)Usage notes
+         * The flow must be in progress.
+         *
+         * @param request StopExecutionRequest
+         * @return StopExecutionResponse
          */
         public async Task<StopExecutionResponse> StopExecutionAsync(StopExecutionRequest request)
         {
@@ -1513,6 +1785,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return await StopExecutionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Updates a flow.
+         *
+         * @param request UpdateFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateFlowResponse
+         */
         public UpdateFlowResponse UpdateFlowWithOptions(UpdateFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1556,6 +1835,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<UpdateFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a flow.
+         *
+         * @param request UpdateFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateFlowResponse
+         */
         public async Task<UpdateFlowResponse> UpdateFlowWithOptionsAsync(UpdateFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1599,18 +1885,37 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<UpdateFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a flow.
+         *
+         * @param request UpdateFlowRequest
+         * @return UpdateFlowResponse
+         */
         public UpdateFlowResponse UpdateFlow(UpdateFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateFlowWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Updates a flow.
+         *
+         * @param request UpdateFlowRequest
+         * @return UpdateFlowResponse
+         */
         public async Task<UpdateFlowResponse> UpdateFlowAsync(UpdateFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateFlowWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Updates a time-based schedule.
+         *
+         * @param request UpdateScheduleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateScheduleResponse
+         */
         public UpdateScheduleResponse UpdateScheduleWithOptions(UpdateScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1658,6 +1963,13 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<UpdateScheduleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a time-based schedule.
+         *
+         * @param request UpdateScheduleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateScheduleResponse
+         */
         public async Task<UpdateScheduleResponse> UpdateScheduleWithOptionsAsync(UpdateScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1705,12 +2017,24 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<UpdateScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a time-based schedule.
+         *
+         * @param request UpdateScheduleRequest
+         * @return UpdateScheduleResponse
+         */
         public UpdateScheduleResponse UpdateSchedule(UpdateScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateScheduleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Updates a time-based schedule.
+         *
+         * @param request UpdateScheduleRequest
+         * @return UpdateScheduleResponse
+         */
         public async Task<UpdateScheduleResponse> UpdateScheduleAsync(UpdateScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

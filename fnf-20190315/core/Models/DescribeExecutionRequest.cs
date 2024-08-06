@@ -10,24 +10,18 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class DescribeExecutionRequest : TeaModel {
         /// <summary>
-        /// The name of the execution, which is unique within a flow. Set this parameter based on the following rules:
+        /// The name of the execution.
         /// 
-        /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must start with a letter or an underscore (\_).
-        /// *   The name is case-sensitive.
-        /// *   The name must be 1 to 128 characters in length.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExecutionName")]
         [Validation(Required=false)]
         public string ExecutionName { get; set; }
 
         /// <summary>
-        /// The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Set this parameter based on the following rules:
+        /// The name of the workflow.
         /// 
-        /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must start with a letter or an underscore (\_).
-        /// *   The name is case-sensitive.
-        /// *   The name must be 1 to 128 characters in length.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]

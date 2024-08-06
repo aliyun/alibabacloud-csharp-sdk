@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
     public class DescribeFlowRequest : TeaModel {
         /// <summary>
         /// The name of the flow.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

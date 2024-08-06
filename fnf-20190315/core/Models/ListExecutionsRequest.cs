@@ -19,17 +19,19 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         /// <summary>
         /// The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
         /// 
-        /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-        /// *   The name must start with a letter or an underscore (\_).
+        /// *   The name can contain letters, digits, underscores (_), and hyphens (-).
+        /// *   The name must start with a letter or an underscore (_).
         /// *   The name is case-sensitive.
         /// *   The name must be 1 to 128 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
         /// <summary>
-        /// The maximum number of executions to be queried. Valid values: 1 to 100.
+        /// The number of executions that you want to query. Valid values: 1-99. Default value: 60.
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
