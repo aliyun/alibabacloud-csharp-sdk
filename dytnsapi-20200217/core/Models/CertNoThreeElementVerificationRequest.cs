@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,7 +11,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class CertNoTwoElementVerificationRequest : TeaModel {
+    public class CertNoThreeElementVerificationRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -29,6 +32,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [NameInMap("CertNo")]
         [Validation(Required=false)]
         public string CertNo { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("CertPicture")]
+        [Validation(Required=false)]
+        public string CertPicture { get; set; }
+
+        [NameInMap("Mask")]
+        [Validation(Required=false)]
+        public string Mask { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

@@ -38,6 +38,154 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         }
 
         /**
+         * @summary 身份证三要素
+         *
+         * @param request CertNoThreeElementVerificationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CertNoThreeElementVerificationResponse
+         */
+        public CertNoThreeElementVerificationResponse CertNoThreeElementVerificationWithOptions(CertNoThreeElementVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertNo))
+            {
+                query["CertNo"] = request.CertNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertPicture))
+            {
+                query["CertPicture"] = request.CertPicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CertNoThreeElementVerification",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CertNoThreeElementVerificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 身份证三要素
+         *
+         * @param request CertNoThreeElementVerificationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CertNoThreeElementVerificationResponse
+         */
+        public async Task<CertNoThreeElementVerificationResponse> CertNoThreeElementVerificationWithOptionsAsync(CertNoThreeElementVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertNo))
+            {
+                query["CertNo"] = request.CertNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertPicture))
+            {
+                query["CertPicture"] = request.CertPicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CertNoThreeElementVerification",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CertNoThreeElementVerificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 身份证三要素
+         *
+         * @param request CertNoThreeElementVerificationRequest
+         * @return CertNoThreeElementVerificationResponse
+         */
+        public CertNoThreeElementVerificationResponse CertNoThreeElementVerification(CertNoThreeElementVerificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CertNoThreeElementVerificationWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 身份证三要素
+         *
+         * @param request CertNoThreeElementVerificationRequest
+         * @return CertNoThreeElementVerificationResponse
+         */
+        public async Task<CertNoThreeElementVerificationResponse> CertNoThreeElementVerificationAsync(CertNoThreeElementVerificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CertNoThreeElementVerificationWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 身份证二要素认证
          *
          * @param request CertNoTwoElementVerificationRequest
