@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20160607.Models
 {
-    public class GetNamespaceListRequest : TeaModel {
+    public class GetNamespaceListRequest : BaseModel {
         [NameInMap("Authorize")]
         [Validation(Required=false)]
         public string Authorize { get; set; }
