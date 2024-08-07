@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public List<GetArmsTopNMetricResponseBodyData> Data { get; set; }
         public class GetArmsTopNMetricResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the application.
+            /// The application ID.
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? Error { get; set; }
 
             /// <summary>
-            /// The name of the application.
+            /// The application name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the namespace.
+            /// The namespace ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

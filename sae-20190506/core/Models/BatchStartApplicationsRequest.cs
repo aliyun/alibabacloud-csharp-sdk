@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
+        /// <summary>
+        /// The application version.
+        /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]
         public string Version { get; set; }

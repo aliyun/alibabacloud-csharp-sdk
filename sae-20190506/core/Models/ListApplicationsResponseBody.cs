@@ -24,42 +24,45 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The queried applications.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListApplicationsResponseBodyData Data { get; set; }
         public class ListApplicationsResponseBodyData : TeaModel {
             /// <summary>
-            /// The description of the application.
+            /// The applications.
             /// </summary>
             [NameInMap("Applications")]
             [Validation(Required=false)]
             public List<ListApplicationsResponseBodyDataApplications> Applications { get; set; }
             public class ListApplicationsResponseBodyDataApplications : TeaModel {
                 /// <summary>
-                /// demo-app
+                /// Indicates whether the application is being deleted. Valid values:
+                /// 
+                /// *   **true**: The application is being deleted.
+                /// *   **false**: The application is not being deleted.
                 /// </summary>
                 [NameInMap("AppDeletingStatus")]
                 [Validation(Required=false)]
                 public bool? AppDeletingStatus { get; set; }
 
                 /// <summary>
-                /// [{"key":"key","value":"value"}]
+                /// The description of the application.
                 /// </summary>
                 [NameInMap("AppDescription")]
                 [Validation(Required=false)]
                 public string AppDescription { get; set; }
 
                 /// <summary>
-                /// The total number of applications.
+                /// The application ID.
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The ID of the application.
+                /// The application name.
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
@@ -149,17 +152,42 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
                 }
 
+                /// <summary>
+                /// The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:
+                /// 
+                /// *   **500**
+                /// *   **1000**
+                /// *   **2000**
+                /// *   **4000**
+                /// *   **8000**
+                /// *   **16000**
+                /// *   **32000**
+                /// </summary>
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
 
                 /// <summary>
-                /// The total number of applications.
+                /// The number of application instances.
                 /// </summary>
                 [NameInMap("Instances")]
                 [Validation(Required=false)]
                 public int? Instances { get; set; }
 
+                /// <summary>
+                /// The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:
+                /// 
+                /// *   This parameter is set to **1024** if the Cpu parameter is set to 500 or 1000.
+                /// *   This parameter is set to **2048** if the Cpu parameter is set to 500, 1000, or 2000.
+                /// *   This parameter is set to **4096** if the Cpu parameter is set to 1000, 2000, or 4000.
+                /// *   This parameter is set to **8192** if the Cpu parameter is set to 2000, 4000, or 8000.
+                /// *   This parameter is set to **12288** if the Cpu parameter is set to 12000.
+                /// *   This parameter is set to **16384** if the Cpu parameter is set to 4000, 8000, or 16000.
+                /// *   This parameter is set to **24576** if the Cpu parameter is set to 12000.
+                /// *   This parameter is set to **32768** if the Cpu parameter is set to 16000.
+                /// *   This parameter is set to **65536** if the Cpu parameter is set to 8000, 16000, or 32000.
+                /// *   This parameter is set to **131072** if the Cpu parameter is set to 32000.
+                /// </summary>
                 [NameInMap("Mem")]
                 [Validation(Required=false)]
                 public int? Mem { get; set; }
@@ -173,7 +201,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string MseNamespaceId { get; set; }
 
                 /// <summary>
-                /// demo-app
+                /// The namespace ID.
                 /// </summary>
                 [NameInMap("NamespaceId")]
                 [Validation(Required=false)]
@@ -184,35 +212,35 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ProgrammingLanguage { get; set; }
 
                 /// <summary>
-                /// The number of running instances.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The number of running instances.
                 /// </summary>
                 [NameInMap("RunningInstances")]
                 [Validation(Required=false)]
                 public int? RunningInstances { get; set; }
 
                 /// <summary>
-                /// cn-beijing:demo
+                /// The tags of the application.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListApplicationsResponseBodyDataApplicationsTags> Tags { get; set; }
                 public class ListApplicationsResponseBodyDataApplicationsTags : TeaModel {
                     /// <summary>
-                    /// appName
+                    /// The key of the tag.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// The key of the tag.
+                    /// The value of the tag.
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]

@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            [NameInMap("InternetSlbChargeType")]
+            [Validation(Required=false)]
+            public string InternetSlbChargeType { get; set; }
+
             [NameInMap("InternetSlbExpired")]
             [Validation(Required=false)]
             public bool? InternetSlbExpired { get; set; }
@@ -167,6 +171,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
+
+            [NameInMap("IntranetSlbChargeType")]
+            [Validation(Required=false)]
+            public string IntranetSlbChargeType { get; set; }
 
             [NameInMap("IntranetSlbExpired")]
             [Validation(Required=false)]

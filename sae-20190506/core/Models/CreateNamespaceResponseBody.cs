@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the trace. It can be used to query the details of a request.
+        /// bucketPath
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -28,35 +28,46 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? EnableMicroRegistration { get; set; }
 
             /// <summary>
-            /// desc
+            /// Indicates whether the namespace was created. Valid values:
+            /// 
+            /// *   **true**: The instance was created.
+            /// *   **false**: The call failed to be created.
             /// </summary>
             [NameInMap("NameSpaceShortId")]
             [Validation(Required=false)]
             public string NameSpaceShortId { get; set; }
 
             /// <summary>
-            /// The information of the namespace.
+            /// The short ID of the namespace.
             /// </summary>
             [NameInMap("NamespaceDescription")]
             [Validation(Required=false)]
             public string NamespaceDescription { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The error code returned. Take note of the following rules:
+            /// 
+            /// *   The **ErrorCode** parameter is not returned if the request succeeds.
+            /// *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
             /// </summary>
             [NameInMap("NamespaceId")]
             [Validation(Required=false)]
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// cn-beijing:test
+            /// Null
             /// </summary>
             [NameInMap("NamespaceName")]
             [Validation(Required=false)]
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// name
+            /// The HTTP status code. Valid values:
+            /// 
+            /// *   **2xx**: The call was successful.
+            /// *   **3xx**: The call was redirected.
+            /// *   **4xx**: The call failed.
+            /// *   **5xx**: A server error occurred.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -65,35 +76,35 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// http://sae_pop_pre/#vpc
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// name
+        /// The ID of the namespace.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The description of the namespace.
+        /// The description of the custom namespace.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the namespace.
+        /// mountDir
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the trace. It can be used to query the details of a request.
+        /// The name of the namespace.
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

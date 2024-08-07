@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// The HTTP status code. Valid values:
         /// 
-        /// - **2xx**: The call was successful.
-        /// - **3xx**: The call was redirected.
-        /// - **4xx**: The call failed.
-        /// - **5xx**: A server error occurred.
+        /// *   **2xx**: The call was successful.
+        /// *   **3xx**: The call was redirected.
+        /// *   **4xx**: The call failed.
+        /// *   **5xx**: A server error occurred.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -32,10 +32,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public List<DescribeGreyTagRouteResponseBodyDataAlbRules> AlbRules { get; set; }
             public class DescribeGreyTagRouteResponseBodyDataAlbRules : TeaModel {
+                /// <summary>
+                /// The condition mode of the canary release rule. Valid value: AND. This value indicates that that all conditions must be met.
+                /// </summary>
                 [NameInMap("condition")]
                 [Validation(Required=false)]
                 public string Condition { get; set; }
 
+                /// <summary>
+                /// The ID of the gateway routing rule.
+                /// </summary>
                 [NameInMap("ingressId")]
                 [Validation(Required=false)]
                 public string IngressId { get; set; }
@@ -44,36 +50,64 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public List<DescribeGreyTagRouteResponseBodyDataAlbRulesItems> Items { get; set; }
                 public class DescribeGreyTagRouteResponseBodyDataAlbRulesItems : TeaModel {
+                    /// <summary>
+                    /// Valid value: ==.
+                    /// </summary>
                     [NameInMap("cond")]
                     [Validation(Required=false)]
                     public string Cond { get; set; }
 
+                    /// <summary>
+                    /// This parameter is not returned for applications that are associated with ALB instances.
+                    /// </summary>
                     [NameInMap("expr")]
                     [Validation(Required=false)]
                     public string Expr { get; set; }
 
+                    /// <summary>
+                    /// This parameter is not returned for applications that are associated with Application Load Balancer (ALB) instances.
+                    /// </summary>
                     [NameInMap("index")]
                     [Validation(Required=false)]
                     public int? Index { get; set; }
 
+                    /// <summary>
+                    /// The name of the parameter.
+                    /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The operator. Valid value: **rawvalue**. This value indicates direct comparison.
+                    /// </summary>
                     [NameInMap("operator")]
                     [Validation(Required=false)]
                     public string Operator { get; set; }
 
+                    /// <summary>
+                    /// The type of the comparison. Valid values:
+                    /// 
+                    /// *   **sourceIp**: SourceIp
+                    /// *   **cookie**: cookie
+                    /// *   **header**: header
+                    /// </summary>
                     [NameInMap("type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
+                    /// <summary>
+                    /// The value of the parameter. This value is compared with the value that is obtained based on the type and name parameters.
+                    /// </summary>
                     [NameInMap("value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The service ID.
+                /// </summary>
                 [NameInMap("serviceId")]
                 [Validation(Required=false)]
                 public string ServiceId { get; set; }
@@ -111,8 +145,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 /// <summary>
                 /// The relationship between the conditions in the canary release rule. Valid values:
                 /// 
-                /// - **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.
-                /// - **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.
+                /// *   **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.
+                /// *   **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.
                 /// </summary>
                 [NameInMap("condition")]
                 [Validation(Required=false)]
@@ -142,12 +176,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     /// <summary>
                     /// The expression that is used to obtain the value of the parameter. Valid values:
                     /// 
-                    /// - **Empty**: obtains the value of the parameter.
-                    /// - **.name**: obtains the name property of the parameter. This expression works the same way as args0.getName().
-                    /// - **.isEnabled()**: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().
-                    /// - **[0]**: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0[0]. This expression does not start with a period (.).
-                    /// - **.get(0)**: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).
-                    /// - **.get("key")**: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get("key").
+                    /// *   **Empty**: obtains the value of the parameter.
+                    /// *   **.name**: obtains the name property of the parameter. This expression works the same way as args0.getName().
+                    /// *   **.isEnabled()**: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().
+                    /// *   **[0]**: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0[0]. This expression does not start with a period (.).
+                    /// *   **.get(0)**: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).
+                    /// *   **.get("key")**: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get("key").
                     /// </summary>
                     [NameInMap("expr")]
                     [Validation(Required=false)]
@@ -170,10 +204,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     /// <summary>
                     /// The operator. Valid values:
                     /// 
-                    /// - **rawvalue**: direct comparison.
-                    /// - **list**: whitelist.
-                    /// - **mod**: mods 100.
-                    /// - **deterministic_proportional_steaming_division**: percentage.
+                    /// *   **rawvalue**: direct comparison.
+                    /// *   **list**: whitelist.
+                    /// *   **mod**: mods 100.
+                    /// *   **deterministic_proportional_steaming_division**: percentage.
                     /// </summary>
                     [NameInMap("operator")]
                     [Validation(Required=false)]
@@ -335,24 +369,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The returned error code. Valid values:
+        /// The error code. Valid values:
         /// 
-        /// - If the call is successful, the **ErrorCode** parameter is not returned.
-        /// - If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+        /// *   If the call is successful, the **ErrorCode** parameter is not returned.
+        /// *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the **Error codes** section in this topic.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The returned information.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -361,8 +395,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// Indicates whether the information of the change order was queried. Valid values:
         /// 
-        /// - **true**: The information was queried.
-        /// - **false**: The information failed to be queried.
+        /// *   **true**: The information was queried.
+        /// *   **false**: The information failed to be queried.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

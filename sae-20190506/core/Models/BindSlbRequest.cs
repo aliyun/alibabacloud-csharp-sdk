@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Internet { get; set; }
 
+        [NameInMap("InternetSlbChargeType")]
+        [Validation(Required=false)]
+        public string InternetSlbChargeType { get; set; }
+
         /// <summary>
         /// lb-bp1tg0k6d9nqaw7l1\\*\\*\\*\\*
         /// </summary>
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("Intranet")]
         [Validation(Required=false)]
         public string Intranet { get; set; }
+
+        [NameInMap("IntranetSlbChargeType")]
+        [Validation(Required=false)]
+        public string IntranetSlbChargeType { get; set; }
 
         /// <summary>
         /// lb-bp1tg0k6d9nqaw7l1\\*\\*\\*\\*

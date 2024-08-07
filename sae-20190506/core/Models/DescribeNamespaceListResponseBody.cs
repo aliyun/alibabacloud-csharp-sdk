@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The list of namespaces.
+        /// The namespaces.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? Custom { get; set; }
 
             /// <summary>
-            /// Specifies whether hybrid cloud namespaces are excluded. Valid values:
+            /// Indicates whether hybrid cloud namespaces are excluded. Valid values:
             /// 
             /// *   **true**: Hybrid cloud namespaces are excluded.
             /// *   **false**: Hybrid cloud namespaces are included.
@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public bool? HybridCloudEnable { get; set; }
 
+            /// <summary>
+            /// The short ID of the namespace.
+            /// </summary>
             [NameInMap("NameSpaceShortId")]
             [Validation(Required=false)]
             public string NameSpaceShortId { get; set; }
@@ -111,17 +114,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The returned error code. Valid values:
+        /// The error code. Valid values:
         /// 
         /// *   If the call is successful, the **ErrorCode** parameter is not returned.
-        /// *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+        /// *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the **Error codes** section in this topic.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The returned information. Valid values:
+        /// The returned message. Valid values:
         /// 
         /// *   success: If the call is successful, **success** is returned.
         /// *   An error code: If the call fails, an error code is returned.
@@ -131,17 +134,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the namespaces were obtained. Valid values:
+        /// Indicates whether the list of namespaces was queried. Valid values:
         /// 
-        /// *   **true**: The namespaces were obtained.
-        /// *   **false**: The namespaces failed to be obtained.
+        /// *   **true**: The list was queried.
+        /// *   **false**: The list failed to be queried.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

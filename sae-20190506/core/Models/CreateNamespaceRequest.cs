@@ -14,33 +14,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableMicroRegistration { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The trace ID that is used to query the details of the request.
         /// </summary>
         [NameInMap("NameSpaceShortId")]
         [Validation(Required=false)]
         public string NameSpaceShortId { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// The message returned for the operation.
         /// </summary>
         [NameInMap("NamespaceDescription")]
         [Validation(Required=false)]
         public string NamespaceDescription { get; set; }
 
         /// <summary>
-        /// The HTTP status code. Valid values:
-        /// 
-        /// *   **2xx**: indicates that the request was successful.
-        /// *   **3xx**: indicates that the request was redirected.
-        /// *   **4xx**: indicates that the request was invalid.
-        /// *   **5xx**: indicates that a server error occurred.
+        /// The data returned.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// cn-beijing:test
+        /// The ID of the request.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -21,6 +21,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// The SAE application type. Valid values:
+        /// 
+        /// - **micro_service**
+        /// - **web**
+        /// - **job**
+        /// </summary>
         [NameInMap("AppSource")]
         [Validation(Required=false)]
         public string AppSource { get; set; }

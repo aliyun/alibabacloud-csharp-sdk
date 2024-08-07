@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public CustomHealthCheckConfig CustomHealthCheckConfig { get; set; }
 
+        [NameInMap("customHostAlias")]
+        [Validation(Required=false)]
+        public CustomHostAlias CustomHostAlias { get; set; }
+
         [NameInMap("customRuntimeConfig")]
         [Validation(Required=false)]
         public CustomRuntimeConfig CustomRuntimeConfig { get; set; }

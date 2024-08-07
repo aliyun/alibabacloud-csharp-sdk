@@ -340,6 +340,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Stops multiple applications at a time.
+         *
          * @param request BatchStopApplicationsRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -382,6 +384,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Stops multiple applications at a time.
+         *
          * @param request BatchStopApplicationsRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -424,6 +428,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Stops multiple applications at a time.
+         *
          * @param request BatchStopApplicationsRequest
          * @return BatchStopApplicationsResponse
          */
@@ -435,6 +441,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Stops multiple applications at a time.
+         *
          * @param request BatchStopApplicationsRequest
          * @return BatchStopApplicationsResponse
          */
@@ -463,6 +471,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Internet"] = request.Internet;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetSlbChargeType))
+            {
+                query["InternetSlbChargeType"] = request.InternetSlbChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetSlbId))
             {
                 query["InternetSlbId"] = request.InternetSlbId;
@@ -470,6 +482,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Intranet))
             {
                 query["Intranet"] = request.Intranet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntranetSlbChargeType))
+            {
+                query["IntranetSlbChargeType"] = request.IntranetSlbChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntranetSlbId))
             {
@@ -513,6 +529,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Internet"] = request.Internet;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetSlbChargeType))
+            {
+                query["InternetSlbChargeType"] = request.InternetSlbChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetSlbId))
             {
                 query["InternetSlbId"] = request.InternetSlbId;
@@ -520,6 +540,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Intranet))
             {
                 query["Intranet"] = request.Intranet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntranetSlbChargeType))
+            {
+                query["IntranetSlbChargeType"] = request.IntranetSlbChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntranetSlbId))
             {
@@ -2390,7 +2414,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
-         * @summary desc
+         * @summary Creates a namespace.
          *
          * @param request CreateNamespaceRequest
          * @param headers map
@@ -2442,7 +2466,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
-         * @summary desc
+         * @summary Creates a namespace.
          *
          * @param request CreateNamespaceRequest
          * @param headers map
@@ -2494,7 +2518,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
-         * @summary desc
+         * @summary Creates a namespace.
          *
          * @param request CreateNamespaceRequest
          * @return CreateNamespaceResponse
@@ -2507,7 +2531,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
-         * @summary desc
+         * @summary Creates a namespace.
          *
          * @param request CreateNamespaceRequest
          * @return CreateNamespaceResponse
@@ -4750,6 +4774,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries the configurations of an application.
+         *
          * @param request DescribeApplicationConfigRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4788,6 +4814,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries the configurations of an application.
+         *
          * @param request DescribeApplicationConfigRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4826,6 +4854,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries the configurations of an application.
+         *
          * @param request DescribeApplicationConfigRequest
          * @return DescribeApplicationConfigResponse
          */
@@ -4837,6 +4867,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries the configurations of an application.
+         *
          * @param request DescribeApplicationConfigRequest
          * @return DescribeApplicationConfigResponse
          */
@@ -4954,6 +4986,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries the information about the image of an application.
+         *
          * @param request DescribeApplicationImageRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4992,6 +5026,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries the information about the image of an application.
+         *
          * @param request DescribeApplicationImageRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -5030,6 +5066,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries the information about the image of an application.
+         *
          * @param request DescribeApplicationImageRequest
          * @return DescribeApplicationImageResponse
          */
@@ -5041,6 +5079,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries the information about the image of an application.
+         *
          * @param request DescribeApplicationImageRequest
          * @return DescribeApplicationImageResponse
          */
@@ -6820,6 +6860,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries a list of namespaces.
+         *
          * @param request DescribeNamespaceListRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -6858,6 +6900,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries a list of namespaces.
+         *
          * @param request DescribeNamespaceListRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -6896,6 +6940,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries a list of namespaces.
+         *
          * @param request DescribeNamespaceListRequest
          * @return DescribeNamespaceListResponse
          */
@@ -6907,6 +6953,8 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
+         * @summary Queries a list of namespaces.
+         *
          * @param request DescribeNamespaceListRequest
          * @return DescribeNamespaceListResponse
          */

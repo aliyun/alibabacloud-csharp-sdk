@@ -12,17 +12,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// The HTTP status code. Valid values:
         /// 
-        /// *   **2xx**: indicates that the request was successful.
-        /// *   **3xx**: indicates that the request was redirected.
-        /// *   **4xx**: indicates that the request was invalid.
-        /// *   **5xx**: indicates that a server error occurred.
+        /// *   **2xx**: The call was successful.
+        /// *   **3xx**: The call was redirected.
+        /// *   **4xx**: The call failed.
+        /// *   **5xx**: A server error occurred.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The information about the image of an application.
+        /// The information about the image of the application.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Logo { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// The name of the namespace to which the repository belongs.
+            /// The name of the namespace to which the image repository belongs.
             /// </summary>
             [NameInMap("RepoNamespace")]
             [Validation(Required=false)]
@@ -87,44 +87,44 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// The error code. Valid values:
         /// 
-        /// *   The **ErrorCode** parameter is not returned when the request succeeds.
-        /// *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+        /// *   If the call is successful, the **ErrorCode** parameter is not returned.
+        /// *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the **Error codes** section in this topic.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The returned message. Valid values:
         /// 
-        /// *   **success** is returned when the request succeeds.
-        /// *   An error code is returned when the request fails.
+        /// *   success: If the call is successful, **success** is returned.
+        /// *   An error code: If the call fails, an error code is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the image information was obtained. Valid values:
+        /// Indicates whether the information about the image was obtained. Valid values:
         /// 
-        /// *   **true**: indicates that the information was obtained.
-        /// *   **false**: indicates that the information could not be obtained.
+        /// *   **true**: The information was obtained.
+        /// *   **false**: The information failed to be obtained.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the trace. It is used to query the details of a request.
+        /// The trace ID that is used to query the details of the request.
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

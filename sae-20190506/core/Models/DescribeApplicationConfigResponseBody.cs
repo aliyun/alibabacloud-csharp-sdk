@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The details of the application.
+        /// The information about the application.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -63,6 +63,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            /// <summary>
+            /// The SAE application type.
+            /// </summary>
             [NameInMap("AppSource")]
             [Validation(Required=false)]
             public string AppSource { get; set; }
@@ -431,31 +434,31 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public List<DescribeApplicationConfigResponseBodyDataOssMountDescs> OssMountDescs { get; set; }
             public class DescribeApplicationConfigResponseBodyDataOssMountDescs : TeaModel {
                 /// <summary>
-                /// The name of the bucket.
+                /// The name of the OSS bucket.
                 /// </summary>
                 [NameInMap("bucketName")]
                 [Validation(Required=false)]
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// The directory or object that you created in the OSS bucket. If the specified object or directory is invalid, an exception occurs.
+                /// The directory or object in OSS. If the specified directory or object does not exist, an error is returned.
                 /// </summary>
                 [NameInMap("bucketPath")]
                 [Validation(Required=false)]
                 public string BucketPath { get; set; }
 
                 /// <summary>
-                /// The directory of your container in SAE. The parameter value that you specified overwrites the original value. If the specified directory does not exist, SAE automatically creates the directory.
+                /// The path of the container in SAE. The parameter value that you specified overwrites the original value. If the specified path does not exist, SAE automatically creates the path.
                 /// </summary>
                 [NameInMap("mountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// Indicates whether the application can use the container directory to read data from or write data to resources in the directory of the OSS bucket. Valid values:
+                /// Indicates whether the application can use the container path to read data from or write data to resources in the directory of the OSS bucket. Valid values:
                 /// 
-                /// *   **true**: The application has read-only permissions.
-                /// *   **false**: The application has read and write permissions.
+                /// *   **true**: The application has the read-only permissions.
+                /// *   **false**: The application has the read and write permissions.
                 /// </summary>
                 [NameInMap("readOnly")]
                 [Validation(Required=false)]

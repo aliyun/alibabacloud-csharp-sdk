@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class BatchStopApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the specified applications are stopped. Valid values:
+        /// The HTTP status code. Take note of the following rules:
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// - **2xx**: The call was successful.
+        /// - **3xx**: The call was redirected.
+        /// - **4xx**: The call failed.
+        /// - **5xx**: A server error occurred.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -39,12 +41,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// The HTTP status code. Valid values:
+        /// The error code returned if the request failed. Take note of the following rules:
         /// 
-        /// *   **2xx**: indicates that the request was successful.
-        /// *   **3xx**: indicates that the request was redirected.
-        /// *   **4xx**: indicates that the request was invalid.
-        /// *   **5xx**: indicates that a server error occurred.
+        /// - The ErrorCode parameter is not returned if the request succeeds.
+        /// - If the call fails, the ErrorCode parameter is returned. For more information, see the "Error codes" section of this topic.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -67,6 +67,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the application is created. Valid values
+        /// 
+        /// - **true**
+        /// - **false**
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
