@@ -8,7 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
-    public class ListTextsRequest : TeaModel {
+    public class CountTextRequest : TeaModel {
+        /// <summary>
+        /// API
+        /// </summary>
         [NameInMap("generationSource")]
         [Validation(Required=false)]
         public string GenerationSource { get; set; }
@@ -17,29 +20,13 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string Industry { get; set; }
 
-        [NameInMap("keyword")]
-        [Validation(Required=false)]
-        public string Keyword { get; set; }
-
-        [NameInMap("pageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("pageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("publishStatus")]
         [Validation(Required=false)]
         public string PublishStatus { get; set; }
 
-        [NameInMap("textStyleType")]
+        [NameInMap("style")]
         [Validation(Required=false)]
-        public string TextStyleType { get; set; }
-
-        [NameInMap("textTheme")]
-        [Validation(Required=false)]
-        public string TextTheme { get; set; }
+        public string Style { get; set; }
 
     }
 

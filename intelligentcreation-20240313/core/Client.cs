@@ -258,6 +258,128 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         }
 
         /**
+         * @summary 文本数量统计
+         *
+         * @param request CountTextRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CountTextResponse
+         */
+        public CountTextResponse CountTextWithOptions(CountTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerationSource))
+            {
+                query["generationSource"] = request.GenerationSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishStatus))
+            {
+                query["publishStatus"] = request.PublishStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Style))
+            {
+                query["style"] = request.Style;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CountText",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/countText",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CountTextResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 文本数量统计
+         *
+         * @param request CountTextRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CountTextResponse
+         */
+        public async Task<CountTextResponse> CountTextWithOptionsAsync(CountTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerationSource))
+            {
+                query["generationSource"] = request.GenerationSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishStatus))
+            {
+                query["publishStatus"] = request.PublishStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Style))
+            {
+                query["style"] = request.Style;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CountText",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/countText",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CountTextResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 文本数量统计
+         *
+         * @param request CountTextRequest
+         * @return CountTextResponse
+         */
+        public CountTextResponse CountText(CountTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CountTextWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 文本数量统计
+         *
+         * @param request CountTextRequest
+         * @return CountTextResponse
+         */
+        public async Task<CountTextResponse> CountTextAsync(CountTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CountTextWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 创建配图生成任务
          *
          * @param request CreateIllustrationTaskRequest
@@ -1319,6 +1441,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             {
                 query["industry"] = request.Industry;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -1378,6 +1504,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
             {
                 query["industry"] = request.Industry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -2325,6 +2455,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             {
                 body["subtitleTag"] = request.SubtitleTag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransparentBackground))
+            {
+                body["transparentBackground"] = request.TransparentBackground;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2368,6 +2502,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubtitleTag))
             {
                 body["subtitleTag"] = request.SubtitleTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransparentBackground))
+            {
+                body["transparentBackground"] = request.TransparentBackground;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

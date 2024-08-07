@@ -154,6 +154,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public int? SubtitleTag { get; set; }
 
+        [NameInMap("transparentBackground")]
+        [Validation(Required=false)]
+        public int? TransparentBackground { get; set; }
+
     }
 
 }
