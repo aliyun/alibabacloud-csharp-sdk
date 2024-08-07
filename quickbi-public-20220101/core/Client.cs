@@ -5234,6 +5234,122 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
+         * @summary 修改智能问数嵌入配置
+         *
+         * @param request ModifyCopilotEmbedConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCopilotEmbedConfigResponse
+         */
+        public ModifyCopilotEmbedConfigResponse ModifyCopilotEmbedConfigWithOptions(ModifyCopilotEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopilotId))
+            {
+                query["CopilotId"] = request.CopilotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRange))
+            {
+                query["DataRange"] = request.DataRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCopilotEmbedConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCopilotEmbedConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改智能问数嵌入配置
+         *
+         * @param request ModifyCopilotEmbedConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCopilotEmbedConfigResponse
+         */
+        public async Task<ModifyCopilotEmbedConfigResponse> ModifyCopilotEmbedConfigWithOptionsAsync(ModifyCopilotEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopilotId))
+            {
+                query["CopilotId"] = request.CopilotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRange))
+            {
+                query["DataRange"] = request.DataRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCopilotEmbedConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCopilotEmbedConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改智能问数嵌入配置
+         *
+         * @param request ModifyCopilotEmbedConfigRequest
+         * @return ModifyCopilotEmbedConfigResponse
+         */
+        public ModifyCopilotEmbedConfigResponse ModifyCopilotEmbedConfig(ModifyCopilotEmbedConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyCopilotEmbedConfigWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改智能问数嵌入配置
+         *
+         * @param request ModifyCopilotEmbedConfigRequest
+         * @return ModifyCopilotEmbedConfigResponse
+         */
+        public async Task<ModifyCopilotEmbedConfigResponse> ModifyCopilotEmbedConfigAsync(ModifyCopilotEmbedConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyCopilotEmbedConfigWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 根据审批人获取相应的审批流信息
          *
          * @param request QueryApprovalInfoRequest
@@ -5630,6 +5746,98 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
+         * @summary 获取开通小Q嵌入的配置列表
+         *
+         * @param request QueryCopilotEmbedConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryCopilotEmbedConfigResponse
+         */
+        public QueryCopilotEmbedConfigResponse QueryCopilotEmbedConfigWithOptions(QueryCopilotEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopilotEmbedConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopilotEmbedConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取开通小Q嵌入的配置列表
+         *
+         * @param request QueryCopilotEmbedConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryCopilotEmbedConfigResponse
+         */
+        public async Task<QueryCopilotEmbedConfigResponse> QueryCopilotEmbedConfigWithOptionsAsync(QueryCopilotEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopilotEmbedConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopilotEmbedConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取开通小Q嵌入的配置列表
+         *
+         * @param request QueryCopilotEmbedConfigRequest
+         * @return QueryCopilotEmbedConfigResponse
+         */
+        public QueryCopilotEmbedConfigResponse QueryCopilotEmbedConfig(QueryCopilotEmbedConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCopilotEmbedConfigWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取开通小Q嵌入的配置列表
+         *
+         * @param request QueryCopilotEmbedConfigRequest
+         * @return QueryCopilotEmbedConfigResponse
+         */
+        public async Task<QueryCopilotEmbedConfigResponse> QueryCopilotEmbedConfigAsync(QueryCopilotEmbedConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCopilotEmbedConfigWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 查询数据集优化建议
          *
          * @param request QueryCubeOptimizationRequest
@@ -5851,6 +6059,222 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryCubePerformanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 调用开放数据服务API
+         *
+         * @param request QueryDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryDataResponse
+         */
+        public QueryDataResponse QueryDataWithOptions(QueryDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Conditions))
+            {
+                query["Conditions"] = request.Conditions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnFields))
+            {
+                query["ReturnFields"] = request.ReturnFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryData",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 调用开放数据服务API
+         *
+         * @param request QueryDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryDataResponse
+         */
+        public async Task<QueryDataResponse> QueryDataWithOptionsAsync(QueryDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Conditions))
+            {
+                query["Conditions"] = request.Conditions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnFields))
+            {
+                query["ReturnFields"] = request.ReturnFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryData",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 调用开放数据服务API
+         *
+         * @param request QueryDataRequest
+         * @return QueryDataResponse
+         */
+        public QueryDataResponse QueryData(QueryDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDataWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 调用开放数据服务API
+         *
+         * @param request QueryDataRequest
+         * @return QueryDataResponse
+         */
+        public async Task<QueryDataResponse> QueryDataAsync(QueryDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDataWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 获取数据范围目录列表
+         *
+         * @param request QueryDataRangeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryDataRangeResponse
+         */
+        public QueryDataRangeResponse QueryDataRangeWithOptions(QueryDataRangeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDataRange",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDataRangeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取数据范围目录列表
+         *
+         * @param request QueryDataRangeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryDataRangeResponse
+         */
+        public async Task<QueryDataRangeResponse> QueryDataRangeWithOptionsAsync(QueryDataRangeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDataRange",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDataRangeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取数据范围目录列表
+         *
+         * @param request QueryDataRangeRequest
+         * @return QueryDataRangeResponse
+         */
+        public QueryDataRangeResponse QueryDataRange(QueryDataRangeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDataRangeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取数据范围目录列表
+         *
+         * @param request QueryDataRangeRequest
+         * @return QueryDataRangeResponse
+         */
+        public async Task<QueryDataRangeResponse> QueryDataRangeAsync(QueryDataRangeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDataRangeWithOptionsAsync(request, runtime);
         }
 
         /**
