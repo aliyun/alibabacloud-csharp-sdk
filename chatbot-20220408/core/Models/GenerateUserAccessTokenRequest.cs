@@ -25,10 +25,16 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string ExtraInfo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ForeignId")]
         [Validation(Required=false)]
         public string ForeignId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Nick")]
         [Validation(Required=false)]
         public string Nick { get; set; }
