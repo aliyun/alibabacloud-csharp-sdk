@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class BindAccountRequest : TeaModel {
         /// <summary>
         /// The AccessKey ID of the cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The ID of the cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
@@ -25,18 +29,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The username of the cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The code of the cloud service provider.
+        /// The code of the cloud service provider. Valid values:
         /// 
-        /// Valid values:
+        /// *   aliyun: Alibaba Cloud
+        /// *   hcloud: Huawei Cloud
+        /// *   qcloud: Tencent Cloud
         /// 
-        /// *   qcloud
-        /// *   hcloud
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CloudCode")]
         [Validation(Required=false)]
@@ -51,6 +58,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        [NameInMap("RoleType")]
+        [Validation(Required=false)]
+        public int? RoleType { get; set; }
 
     }
 

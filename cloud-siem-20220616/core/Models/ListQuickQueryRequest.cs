@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The number of entries per page. Valid values: 1 to 500.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

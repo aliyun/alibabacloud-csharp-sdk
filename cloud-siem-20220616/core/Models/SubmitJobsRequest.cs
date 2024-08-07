@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class SubmitJobsRequest : TeaModel {
         /// <summary>
-        /// The parameters of the logs that you want to add. The value is a JSON array, which contains the following parameters:\
+        /// The parameters of the logs that you want to add. The value is a JSON array, which contains the following parameters:\\
         /// 
         /// 
         /// *   SourceProdCode: the code of the cloud service.
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// 
         ///     *   0: yes
         ///     *   1: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JsonParam")]
         [Validation(Required=false)]

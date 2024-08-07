@@ -67,10 +67,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string AlertType { get; set; }
 
+                /// <summary>
+                /// The alert additional field for ATT\\&CK.
+                /// </summary>
                 [NameInMap("AttCk")]
                 [Validation(Required=false)]
                 public string AttCk { get; set; }
 
+                /// <summary>
+                /// The method that is used to generate an event. Valid values:
+                /// 
+                /// *   default: built-in method.
+                /// *   singleToSingle: The system generates an event for each alert.
+                /// *   allToSingle: The system generates an event for alerts within a period of time.
+                /// </summary>
                 [NameInMap("EventTransferType")]
                 [Validation(Required=false)]
                 public string EventTransferType { get; set; }
@@ -110,10 +120,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
 
+                /// <summary>
+                /// The rule name in Chinese.
+                /// </summary>
                 [NameInMap("RuleNameCn")]
                 [Validation(Required=false)]
                 public string RuleNameCn { get; set; }
 
+                /// <summary>
+                /// The rule name in English.
+                /// </summary>
                 [NameInMap("RuleNameEn")]
                 [Validation(Required=false)]
                 public string RuleNameEn { get; set; }
@@ -143,11 +159,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// The threat level. Valid values:
+                /// The risk level. Valid values:
                 /// 
-                /// *   serious: high
-                /// *   suspicious: medium
-                /// *   remind: low
+                /// *   serious: high.
+                /// *   suspicious: medium.
+                /// *   remind: low.
                 /// </summary>
                 [NameInMap("ThreatLevel")]
                 [Validation(Required=false)]

@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// *   qcloud
         /// *   hcloud
         /// *   aliyun
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CloudCode")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// *   **ckafka**: Tencent Cloud TDMQ for CKafka
         /// *   **obs**: Huawei Cloud Object Storage Service (OBS)
         /// *   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]

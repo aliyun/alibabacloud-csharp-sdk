@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class DoQuickFieldRequest : TeaModel {
         /// <summary>
         /// The time when the quick analysis starts. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The index field.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Index")]
         [Validation(Required=false)]
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The time when the quick analysis ends. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]

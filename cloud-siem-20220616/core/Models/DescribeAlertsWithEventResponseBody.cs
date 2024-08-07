@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The risk level. Valid values:
                 /// 
-                /// *   serious: high
-                /// *   suspicious: medium
-                /// *   remind: low
+                /// *   serious: high.
+                /// *   suspicious: medium.
+                /// *   remind: low.
                 /// </summary>
                 [NameInMap("AlertLevel")]
                 [Validation(Required=false)]
@@ -214,18 +214,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AssetList { get; set; }
 
                 /// <summary>
-                /// The tag of the ATT\&CK attack.
+                /// The tag of the ATT\\&CK technique.
                 /// </summary>
                 [NameInMap("AttCk")]
                 [Validation(Required=false)]
                 public string AttCk { get; set; }
 
                 /// <summary>
-                /// The cloud code. Valid values:
+                /// The code of the cloud service provider. Valid values:
                 /// 
-                /// *   aliyun: Alibaba Cloud
-                /// *   qcloud: Tencent Cloud
-                /// *   hcloud: Huawei Cloud
+                /// *   aliyun: Alibaba Cloud.
+                /// *   qcloud: Tencent Cloud.
+                /// *   hcloud: Huawei Cloud.
                 /// </summary>
                 [NameInMap("CloudCode")]
                 [Validation(Required=false)]
@@ -238,6 +238,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
+                /// <summary>
+                /// The details of the entity.
+                /// </summary>
                 [NameInMap("EntityList")]
                 [Validation(Required=false)]
                 public string EntityList { get; set; }
@@ -271,10 +274,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string IncidentUuid { get; set; }
 
                 /// <summary>
-                /// Indicates whether an attack is defended. Valid values:
+                /// Indicates whether an attack is defended against. Valid values:
                 /// 
-                /// *   0: detected
-                /// *   1: blocked
+                /// *   0: detected.
+                /// *   1: blocked.
                 /// </summary>
                 [NameInMap("IsDefend")]
                 [Validation(Required=false)]

@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? AssetNum { get; set; }
 
                 /// <summary>
-                /// The tags of the ATT\&CK attack.
+                /// The tags of the ATT\\&CK techniques.
                 /// </summary>
                 [NameInMap("AttCkLabels")]
                 [Validation(Required=false)]
@@ -151,6 +151,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string IncidentUuid { get; set; }
 
+                /// <summary>
+                /// the refer account info.
+                /// </summary>
                 [NameInMap("ReferAccount")]
                 [Validation(Required=false)]
                 public string ReferAccount { get; set; }
@@ -165,10 +168,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The status of the event. Valid values:
                 /// 
-                /// *   0: unhandled
-                /// *   1: handling
-                /// *   5: handling failed
-                /// *   10: handled
+                /// *   0: unhandled.
+                /// *   1: handling.
+                /// *   5: handling failed.
+                /// *   10: handled.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -177,9 +180,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The risk level. Valid values:
                 /// 
-                /// *   serious: high
-                /// *   suspicious: medium
-                /// *   remind: low
+                /// *   serious: high.
+                /// *   suspicious: medium.
+                /// *   remind: low.
                 /// </summary>
                 [NameInMap("ThreatLevel")]
                 [Validation(Required=false)]

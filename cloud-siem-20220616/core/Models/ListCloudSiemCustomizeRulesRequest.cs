@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The page number. Pages start from page 1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -37,16 +39,30 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// The sort method. Valid values:
+        /// 
+        /// *   desc: descending order.
+        /// *   asc: ascending order.
+        /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
+        /// <summary>
+        /// The field that is used to sort the rules. Valid values:
+        /// 
+        /// *   GmtModified: The rules are sorted based on the modification time.
+        /// *   Id (default): The rules are sorted based on the rule ID.
+        /// </summary>
         [NameInMap("OrderField")]
         [Validation(Required=false)]
         public string OrderField { get; set; }
 
         /// <summary>
         /// The number of entries per page. The value can be up to 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -62,16 +78,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the destination account to which you switch the view from the management account.
+        /// </summary>
         [NameInMap("RoleFor")]
         [Validation(Required=false)]
         public long? RoleFor { get; set; }
 
+        /// <summary>
+        /// The type of the view. Valid values:
+        /// 
+        /// *   0: view of the current Alibaba Cloud account.
+        /// *   1: view of all accounts for the enterprise.
+        /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// The name of the rule. The name can contain letters, digits, underscores (\_), and periods (.).
+        /// The name of the rule. The name can contain letters, digits, underscores (_), and periods (.).
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

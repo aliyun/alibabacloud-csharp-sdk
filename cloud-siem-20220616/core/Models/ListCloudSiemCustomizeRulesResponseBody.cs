@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<ListCloudSiemCustomizeRulesResponseBodyDataResponseData> ResponseData { get; set; }
             public class ListCloudSiemCustomizeRulesResponseBodyDataResponseData : TeaModel {
                 /// <summary>
-                /// The threat type.
+                /// The type of the risk.
                 /// </summary>
                 [NameInMap("AlertType")]
                 [Validation(Required=false)]
                 public string AlertType { get; set; }
 
                 /// <summary>
-                /// The internal code of the threat type.
+                /// The internal code of the risk type.
                 /// </summary>
                 [NameInMap("AlertTypeMds")]
                 [Validation(Required=false)]
@@ -81,10 +81,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public long? Aliuid { get; set; }
 
+                /// <summary>
+                /// The alert additional field for ATT\\&CK.
+                /// </summary>
                 [NameInMap("AttCk")]
                 [Validation(Required=false)]
                 public string AttCk { get; set; }
 
+                /// <summary>
+                /// The type of the view. Valid values:
+                /// 
+                /// 0: view of the current Alibaba Cloud account. 1: view of all accounts for the enterprise.
+                /// </summary>
                 [NameInMap("DataType")]
                 [Validation(Required=false)]
                 public int? DataType { get; set; }
@@ -109,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The method that is used to generate an event. Valid values:
                 /// 
-                /// *   **default**: The default method is used.
+                /// *   **default**: built-in method.
                 /// *   **singleToSingle**: The system generates an event for each alert.
                 /// *   **allToSingle**: The system generates an event for alerts within a period of time.
                 /// </summary>
@@ -232,7 +240,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// The threat level. Valid values:
+                /// The risk level. Valid values:
                 /// 
                 /// *   **serious**: high-risk.
                 /// *   **suspicious**: medium-risk.

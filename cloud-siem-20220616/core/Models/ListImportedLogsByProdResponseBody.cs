@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// Indicates whether the log is automatically added to the threat analysis feature within newly added accounts. Valid values:
             /// 
-            /// *   1: yes
-            /// *   0: no
+            /// *   1: yes.
+            /// *   0: no.
             /// </summary>
             [NameInMap("AutoImported")]
             [Validation(Required=false)]
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// The code of the cloud service provider. Valid values:
             /// 
-            /// *   qcloud: Tencent Cloud
-            /// *   aliyun: Alibaba Cloud
-            /// *   hcloud: Huawei Cloud
+            /// *   qcloud: Tencent Cloud.
+            /// *   aliyun: Alibaba Cloud.
+            /// *   hcloud: Huawei Cloud.
             /// </summary>
             [NameInMap("CloudCode")]
             [Validation(Required=false)]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// Indicates whether the log is added to the threat analysis feature. Valid values:
             /// 
-            /// *   1: yes
-            /// *   0: no
+            /// *   1: yes.
+            /// *   0: no.
             /// </summary>
             [NameInMap("Imported")]
             [Validation(Required=false)]
@@ -55,19 +55,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? ImportedUserCount { get; set; }
 
             /// <summary>
-            /// The log code.
+            /// The code of the log.
             /// </summary>
             [NameInMap("LogCode")]
             [Validation(Required=false)]
             public string LogCode { get; set; }
 
             /// <summary>
-            /// The display log code.
+            /// The display code of the log.
             /// </summary>
             [NameInMap("LogMdsCode")]
             [Validation(Required=false)]
             public string LogMdsCode { get; set; }
 
+            /// <summary>
+            /// The type of log. Valid values:
+            ///  - 1: the log produced by other product
+            ///  - 2: the predefined log
+            ///  - 3: the custom log
+            /// </summary>
             [NameInMap("LogType")]
             [Validation(Required=false)]
             public int? LogType { get; set; }

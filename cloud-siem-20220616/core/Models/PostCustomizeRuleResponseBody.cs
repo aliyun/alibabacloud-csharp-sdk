@@ -44,10 +44,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public long? Aliuid { get; set; }
 
+            /// <summary>
+            /// 告警附加字段attck
+            /// </summary>
             [NameInMap("AttCk")]
             [Validation(Required=false)]
             public string AttCk { get; set; }
 
+            /// <summary>
+            /// 自动化响应规则条件字段数据类型。
+            /// </summary>
             [NameInMap("DataType")]
             [Validation(Required=false)]
             public int? DataType { get; set; }

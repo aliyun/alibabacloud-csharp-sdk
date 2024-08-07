@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class DescribeDataSourceInstanceRequest : TeaModel {
         /// <summary>
         /// The ID of the cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
@@ -22,13 +24,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// *   qcloud: Tencent Cloud
         /// *   aliyun: Alibaba Cloud
         /// *   hcloud: Huawei Cloud
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CloudCode")]
         [Validation(Required=false)]
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters. You can call the [ListDataSourceLogs](https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854\&activeTabKey=api%7CListDataSourceLogs) operation to query the IDs of data sources.
+        /// The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters. You can call the [ListDataSourceLogs](https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854\\&activeTabKey=api%7CListDataSourceLogs) operation to query the IDs of data sources.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataSourceInstanceId")]
         [Validation(Required=false)]

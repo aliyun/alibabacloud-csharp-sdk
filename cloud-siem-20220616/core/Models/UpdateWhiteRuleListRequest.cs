@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class UpdateWhiteRuleListRequest : TeaModel {
         /// <summary>
         /// The alert whitelist rule. The value is a JSON object.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Expression")]
         [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The unique ID of the whitelist rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WhiteRuleId")]
         [Validation(Required=false)]

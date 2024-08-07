@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// 
         /// *   qcloud
         /// *   hcloud
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CloudCode")]
         [Validation(Required=false)]

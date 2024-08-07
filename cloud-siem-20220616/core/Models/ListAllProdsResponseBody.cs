@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The code of the cloud service provider. Valid values:
                 /// 
-                /// *   qcloud: Tencent Cloud
-                /// *   aliyun: Alibaba Cloud
-                /// *   hcloud: Huawei Cloud
+                /// *   qcloud: Tencent Cloud.
+                /// *   aliyun: Alibaba Cloud.
+                /// *   hcloud: Huawei Cloud.
                 /// </summary>
                 [NameInMap("CloudCode")]
                 [Validation(Required=false)]

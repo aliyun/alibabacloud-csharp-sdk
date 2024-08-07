@@ -143,15 +143,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                             /// <summary>
                             /// Indicates whether the left operand is a variable. Valid values:
                             /// 
-                            /// *   true: variable
-                            /// *   false: constant
+                            /// *   true: variable.
+                            /// *   false: constant.
                             /// </summary>
                             [NameInMap("IsVar")]
                             [Validation(Required=false)]
                             public bool? IsVar { get; set; }
 
                             /// <summary>
-                            /// The remarks on the left operand.
+                            /// The remarks on the right operand.
                             /// </summary>
                             [NameInMap("Modifier")]
                             [Validation(Required=false)]
@@ -186,12 +186,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                         /// <summary>
                         /// The logical operator of the rule condition. Valid values:
                         /// 
-                        /// *   `=`: equals to
-                        /// *   `<>`: does not equal to
-                        /// *   `in`: contains
-                        /// *   `not in`: does not contain
-                        /// *   `REGEXP`: matches a regular expression
-                        /// *   `NOT REGEXP`: does not match a regular expression
+                        /// *   `=`: equals to.
+                        /// *   `<>`: does not equal to.
+                        /// *   `in`: contains.
+                        /// *   `not in`: does not contain.
+                        /// *   `REGEXP`: matches a regular expression.
+                        /// *   `NOT REGEXP`: does not match a regular expression.
                         /// </summary>
                         [NameInMap("Operator")]
                         [Validation(Required=false)]
@@ -207,8 +207,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                             /// <summary>
                             /// Indicates whether the right operand is a constant or a runtime variable that is obtained from the runtime context. Valid values:
                             /// 
-                            /// *   true: runtime variable
-                            /// *   false: constant
+                            /// *   true: runtime variable.
+                            /// *   false: constant.
                             /// </summary>
                             [NameInMap("IsVar")]
                             [Validation(Required=false)]
@@ -286,8 +286,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The status of the whitelist rule. Valid values:
                 /// 
-                /// *   1: enabled
-                /// *   0: disabled
+                /// *   1: enabled.
+                /// *   0: disabled.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

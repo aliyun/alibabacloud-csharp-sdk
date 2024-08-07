@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class ListDataSourceLogsRequest : TeaModel {
         /// <summary>
         /// The ID of the cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// *   qcloud: Tencent Cloud
         /// *   aliyun: Alibaba Cloud
         /// *   hcloud: Huawei Cloud
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CloudCode")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataSourceInstanceId")]
         [Validation(Required=false)]

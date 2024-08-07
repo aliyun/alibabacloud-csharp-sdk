@@ -11,13 +11,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class GetHistogramsRequest : TeaModel {
         /// <summary>
         /// The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public int? From { get; set; }
 
         /// <summary>
-        /// The SQL statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax and limits of search statements, see [Log search overview](~~29060~~).
+        /// The SQL statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax and limits of search statements, see [Log search overview](https://help.aliyun.com/document_detail/29060.html).
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]

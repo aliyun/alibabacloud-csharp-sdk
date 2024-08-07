@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class SaveQuickQueryRequest : TeaModel {
         /// <summary>
         /// The name of the saved search.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The query statement.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

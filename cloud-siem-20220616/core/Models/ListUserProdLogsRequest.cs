@@ -19,16 +19,27 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// 管理员切换成其他成员视角的用户ID。
+        /// </summary>
         [NameInMap("RoleFor")]
         [Validation(Required=false)]
         public long? RoleFor { get; set; }
 
+        /// <summary>
+        /// 视图类型。
+        /// 
+        /// - 0：当前阿里云账号视图。
+        /// - 1：企业下所有账号的视图。
+        /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
         public int? RoleType { get; set; }
 
         /// <summary>
         /// The log code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceLogCode")]
         [Validation(Required=false)]
@@ -36,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The code of the cloud service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceProdCode")]
         [Validation(Required=false)]

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The name of the saved search.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SearchName")]
         [Validation(Required=false)]

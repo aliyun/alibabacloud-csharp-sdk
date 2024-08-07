@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// *   qcloud: Tencent Cloud
         /// *   aliyun: Alibaba Cloud
         /// *   hcloud: Huawei Cloud
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CloudCode")]
         [Validation(Required=false)]
@@ -29,6 +31,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        [NameInMap("RoleType")]
+        [Validation(Required=false)]
+        public int? RoleType { get; set; }
 
     }
 

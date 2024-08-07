@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The code of the cloud service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceProdCode")]
         [Validation(Required=false)]

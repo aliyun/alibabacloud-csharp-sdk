@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class GetLogsRequest : TeaModel {
         /// <summary>
         /// The time when the query starts. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The page number. Pages start from page 1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
@@ -25,13 +29,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The number of entries per page. Valid values: 0 to 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The search statement or the analytic statement. For more information, see [Log search overview](~~43772~~) and [Log analysis overview](~~53608~~).
+        /// The search statement or the analytic statement. For more information, see [Log search overview](https://help.aliyun.com/document_detail/43772.html) and [Log analysis overview](https://help.aliyun.com/document_detail/53608.html).
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The time when the query ends. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]

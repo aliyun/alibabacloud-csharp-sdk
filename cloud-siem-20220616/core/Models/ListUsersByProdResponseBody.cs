@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// The code of the cloud service provider. Valid values:
             /// 
-            /// *   qcloud: Tencent Cloud
-            /// *   aliyun: Alibaba Cloud
-            /// *   hcloud: Huawei Cloud
+            /// *   qcloud: Tencent Cloud.
+            /// *   aliyun: Alibaba Cloud.
+            /// *   hcloud: Huawei Cloud.
             /// </summary>
             [NameInMap("CloudCode")]
             [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? Imported { get; set; }
 
             /// <summary>
-            /// The display log code. The value is based on your console settings.
+            /// The display log code. The value varies based on your console settings.
             /// </summary>
             [NameInMap("LogMdsCode")]
             [Validation(Required=false)]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string SourceProdCode { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
+            /// The ID of the Alibaba Cloud account for threat analysis.
             /// </summary>
             [NameInMap("SubUserId")]
             [Validation(Required=false)]
             public long? SubUserId { get; set; }
 
             /// <summary>
-            /// The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
+            /// The display name of the Alibaba Cloud account for threat analysis.
             /// </summary>
             [NameInMap("SubUserName")]
             [Validation(Required=false)]

@@ -10,17 +10,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeJobStatusRequest : TeaModel {
         /// <summary>
-        /// The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-        /// 
-        /// *   cn-hangzhou: Your assets reside in regions in China.
-        /// *   ap-southeast-1: Your assets reside in regions outside China.
+        /// The region where the service resides. Default value: cn-shanghai.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The id of collection task.
+        /// The ID of the collection task. The ID is the value of the submitId parameter in the response of the [BatchJobSubmit](https://next.api.aliyun.com/api/cloud-siem/2022-06-16/BatchSubmitJob?lang=JAVA\\&useCommon=true) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubmitId")]
         [Validation(Required=false)]

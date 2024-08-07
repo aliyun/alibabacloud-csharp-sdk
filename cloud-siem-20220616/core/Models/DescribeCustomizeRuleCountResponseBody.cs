@@ -23,18 +23,30 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public DescribeCustomizeRuleCountResponseBodyData Data { get; set; }
         public class DescribeCustomizeRuleCountResponseBodyData : TeaModel {
+            /// <summary>
+            /// 同类聚合规则数。
+            /// </summary>
             [NameInMap("AggregationRuleNum")]
             [Validation(Required=false)]
             public int? AggregationRuleNum { get; set; }
 
+            /// <summary>
+            /// 自定义规则数。
+            /// </summary>
             [NameInMap("CustomizeRuleNum")]
             [Validation(Required=false)]
             public int? CustomizeRuleNum { get; set; }
 
+            /// <summary>
+            /// 专家规则数。
+            /// </summary>
             [NameInMap("ExpertRuleNum")]
             [Validation(Required=false)]
             public int? ExpertRuleNum { get; set; }
 
+            /// <summary>
+            /// 图计算规则数。
+            /// </summary>
             [NameInMap("GraphComputingRuleNum")]
             [Validation(Required=false)]
             public int? GraphComputingRuleNum { get; set; }
@@ -67,18 +79,30 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public int? MediumRuleNum { get; set; }
 
+            /// <summary>
+            /// 预定义规则数。
+            /// </summary>
             [NameInMap("PredefinedRuleNum")]
             [Validation(Required=false)]
             public int? PredefinedRuleNum { get; set; }
 
+            /// <summary>
+            /// 告警透传规则数。
+            /// </summary>
             [NameInMap("SingleAlertRuleNum")]
             [Validation(Required=false)]
             public int? SingleAlertRuleNum { get; set; }
 
+            /// <summary>
+            /// 总规则数。
+            /// </summary>
             [NameInMap("TotalRuleNum")]
             [Validation(Required=false)]
             public int? TotalRuleNum { get; set; }
 
+            /// <summary>
+            /// 不产生事件规则数。
+            /// </summary>
             [NameInMap("UnEventRuleNum")]
             [Validation(Required=false)]
             public int? UnEventRuleNum { get; set; }

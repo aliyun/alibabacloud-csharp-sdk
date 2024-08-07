@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// Specifies whether to add logs or delete added logs. Valid values:
         /// 
-        /// *   \-1: deletes added logs.
+        /// *   \\-1: deletes added logs.
         /// *   0: adds logs.
         /// </summary>
         [NameInMap("Deleted")]
@@ -45,6 +45,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The details of the Logstore that you want to use in the JSON string format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceLogInfo")]
         [Validation(Required=false)]
@@ -59,6 +61,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The ID of the Alibaba Cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubUserId")]
         [Validation(Required=false)]

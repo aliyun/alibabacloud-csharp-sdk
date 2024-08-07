@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeJobStatusResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code. If the request is successful, 200 is returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,63 +31,63 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ConfigId { get; set; }
 
             /// <summary>
-            /// The list of failed task.
+            /// The list of failed tasks. The value contains the Alibaba Cloud account and service code of each failed task.
             /// </summary>
             [NameInMap("ErrTaskList")]
             [Validation(Required=false)]
             public List<DescribeJobStatusResponseBodyDataErrTaskList> ErrTaskList { get; set; }
             public class DescribeJobStatusResponseBodyDataErrTaskList : TeaModel {
                 /// <summary>
-                /// The list of product.
+                /// The list of services in failed tasks.
                 /// </summary>
                 [NameInMap("ProductList")]
                 [Validation(Required=false)]
                 public List<DescribeJobStatusResponseBodyDataErrTaskListProductList> ProductList { get; set; }
                 public class DescribeJobStatusResponseBodyDataErrTaskListProductList : TeaModel {
                     /// <summary>
-                    /// The list of log.
+                    /// The list of logs that fail to be collected.
                     /// </summary>
                     [NameInMap("LogList")]
                     [Validation(Required=false)]
                     public List<DescribeJobStatusResponseBodyDataErrTaskListProductListLogList> LogList { get; set; }
                     public class DescribeJobStatusResponseBodyDataErrTaskListProductListLogList : TeaModel {
                         /// <summary>
-                        /// The error code.
+                        /// The reason for the failure.
                         /// </summary>
                         [NameInMap("ErrorCode")]
                         [Validation(Required=false)]
                         public string ErrorCode { get; set; }
 
                         /// <summary>
-                        /// The log code.
+                        /// The code of the logs.
                         /// </summary>
                         [NameInMap("LogCode")]
                         [Validation(Required=false)]
                         public string LogCode { get; set; }
 
                         /// <summary>
-                        /// The pattern of SLS logstore name.
+                        /// The pattern for the name of the Simple Log Service Logstore from which logs are collected.
                         /// </summary>
                         [NameInMap("LogStoreNamePattern")]
                         [Validation(Required=false)]
                         public string LogStoreNamePattern { get; set; }
 
                         /// <summary>
-                        /// The code of product.
+                        /// The code of the service.
                         /// </summary>
                         [NameInMap("ProductCode")]
                         [Validation(Required=false)]
                         public string ProductCode { get; set; }
 
                         /// <summary>
-                        /// The pattern of SLS project name.
+                        /// The pattern for the name of the Simple Log Service project from which logs are collected.
                         /// </summary>
                         [NameInMap("ProjectNamePattern")]
                         [Validation(Required=false)]
                         public string ProjectNamePattern { get; set; }
 
                         /// <summary>
-                        /// The ID of the region in which the instance resides.
+                        /// The ID of the region.
                         /// </summary>
                         [NameInMap("RegionCode")]
                         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     }
 
                     /// <summary>
-                    /// The code of product.
+                    /// The code of the service.
                     /// </summary>
                     [NameInMap("ProductCode")]
                     [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 }
 
                 /// <summary>
-                /// The account id of aliyun.
+                /// The ID of the Alibaba Cloud account.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
@@ -114,35 +114,53 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// The number of failed tasks.
+            /// The total number of tasks that fail.
             /// </summary>
             [NameInMap("FailedCount")]
             [Validation(Required=false)]
             public int? FailedCount { get; set; }
 
             /// <summary>
-            /// The number of scan tasks that are complete.
+            /// The total number of tasks that are complete.
             /// </summary>
             [NameInMap("FinishCount")]
             [Validation(Required=false)]
             public int? FinishCount { get; set; }
 
             /// <summary>
-            /// The ID of the folder.
+            /// The ID of the resource directory folder.
             /// </summary>
             [NameInMap("FolderId")]
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
             /// <summary>
-            /// The number of existing tasks that are created to add logs within the data source.
+            /// The total number of collection tasks that are created.
             /// </summary>
             [NameInMap("TaskCount")]
             [Validation(Required=false)]
             public int? TaskCount { get; set; }
 
             /// <summary>
-            /// The status of submitted task.
+            /// The status of the submitted task.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   submit
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   finish
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
@@ -151,14 +169,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// The error code. If the request is successful, the parameter is empty. If the request fails, an error code is returned.
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The error message. If the request is successful, the parameter is empty. If the request fails, the reason for the failure is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -174,8 +192,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The log code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceLogCode")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The code of the cloud service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceProdCode")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The ID of the Alibaba Cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubUserId")]
         [Validation(Required=false)]

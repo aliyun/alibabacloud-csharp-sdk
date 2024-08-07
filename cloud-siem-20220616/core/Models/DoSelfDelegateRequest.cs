@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class DoSelfDelegateRequest : TeaModel {
         /// <summary>
         /// The Alibaba Cloud account of an ordinary member of the threat analysis feature.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AliUid")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// 
         /// *   1: use a delegated administrator account.
         /// *   0: do not use a delegated administrator account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DelegateOrNot")]
         [Validation(Required=false)]

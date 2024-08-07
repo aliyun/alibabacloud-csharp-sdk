@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertSrcProdModule { get; set; }
 
                 /// <summary>
-                /// The tag of the ATT\&CK attack.
+                /// The tag of the ATT\\&CK attack.
                 /// </summary>
                 [NameInMap("AttCk")]
                 [Validation(Required=false)]

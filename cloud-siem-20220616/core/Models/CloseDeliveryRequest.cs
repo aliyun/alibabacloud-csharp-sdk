@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// *   bastionhost
         /// *   oss
         /// *   polardb
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -50,17 +52,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:
         /// 
-        /// *   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.
-        /// *   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.
+        /// *   cn-hangzhou: Your assets reside in regions in China.
+        /// *   ap-southeast-1: Your assets reside in regions outside China.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the account that you switch from the management account.
+        /// </summary>
         [NameInMap("RoleFor")]
         [Validation(Required=false)]
         public long? RoleFor { get; set; }
 
+        /// <summary>
+        /// The type of the view. Valid values:
+        /// - 0: the current Alibaba Cloud account
+        /// - 1: the global account
+        /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
         public int? RoleType { get; set; }

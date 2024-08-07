@@ -30,6 +30,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
+            /// <summary>
+            /// 云code。  取值：
+            /// - qcloud：腾讯云
+            /// - hcloud：华为云
+            /// </summary>
             [NameInMap("CloudCode")]
             [Validation(Required=false)]
             public string CloudCode { get; set; }
@@ -48,6 +53,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// 多云用户ID。
+            /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }

@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<ListAutomateResponseConfigsResponseBodyDataResponseData> ResponseData { get; set; }
             public class ListAutomateResponseConfigsResponseBodyDataResponseData : TeaModel {
                 /// <summary>
-                /// The configuration of the action that is performed after the rule is hit. The value is in JSON format.
+                /// The configuration of the action that is performed after the automated response rule is hit. The value is in the JSON format.
                 /// </summary>
                 [NameInMap("ActionConfig")]
                 [Validation(Required=false)]
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The type of the handling action. Multiple types are separated by commas (,). Valid values:
                 /// 
-                /// *   doPlaybook: runs a playbook.
-                /// *   changeEventStatus: changes the status of an event.
-                /// *   changeThreatLevel: changes the risk level of an event.
+                /// *   **doPlaybook**: runs the playbook.
+                /// *   **changeEventStatus**: changes the event status.
+                /// *   **changeThreatLevel**: changes the risk level of the event.
                 /// </summary>
                 [NameInMap("ActionType")]
                 [Validation(Required=false)]
@@ -88,19 +88,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The type of the automated response rule. Valid values:
                 /// 
-                /// *   event
-                /// *   alert
+                /// *   **event**
+                /// *   **alert**
                 /// </summary>
                 [NameInMap("AutoResponseType")]
                 [Validation(Required=false)]
                 public string AutoResponseType { get; set; }
 
+                /// <summary>
+                /// The type of the view. Valid values:
+                /// 
+                /// 0: the current Alibaba Cloud account
+                /// 1: the global account
+                /// </summary>
                 [NameInMap("DataType")]
                 [Validation(Required=false)]
                 public int? DataType { get; set; }
 
                 /// <summary>
-                /// The trigger condition of the rule. The value is in the JSON format.
+                /// The trigger condition of the automated response rule. The value is in the JSON format.
                 /// </summary>
                 [NameInMap("ExecutionCondition")]
                 [Validation(Required=false)]
@@ -137,8 +143,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The status of the rule. Valid values:
                 /// 
-                /// *   0: disabled
-                /// *   100: enabled
+                /// *   **0**: disabled.
+                /// *   **100**: enabled.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? AssetNum { get; set; }
 
             /// <summary>
-            /// The tags of the ATT\&CK attacks.
+            /// The tags of the ATT\\&CK attacks.
             /// </summary>
             [NameInMap("AttCkLabels")]
             [Validation(Required=false)]
@@ -114,6 +114,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public string IncidentUuid { get; set; }
 
+            /// <summary>
+            /// Users associated with the event.
+            /// </summary>
             [NameInMap("ReferAccount")]
             [Validation(Required=false)]
             public string ReferAccount { get; set; }

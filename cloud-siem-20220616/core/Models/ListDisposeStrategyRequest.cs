@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
     public class ListDisposeStrategyRequest : TeaModel {
         /// <summary>
         /// The page number. Pages start from page 1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The end of the time range to query. Unit: milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -74,6 +78,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The number of entries per page. Maximum value: 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -116,10 +122,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the account that you switch from the management account.
+        /// </summary>
         [NameInMap("RoleFor")]
         [Validation(Required=false)]
         public long? RoleFor { get; set; }
 
+        /// <summary>
+        /// The type of the view. Valid values:
+        /// - 0: the current Alibaba Cloud account
+        /// - 1: the global account
+        /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
         public int? RoleType { get; set; }
@@ -133,6 +147,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// The beginning of the time range to query. Unit: milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
