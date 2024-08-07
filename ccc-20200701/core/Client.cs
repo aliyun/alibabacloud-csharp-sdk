@@ -7083,6 +7083,106 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @param request GetChatMediaUrlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetChatMediaUrlResponse
+         */
+        public GetChatMediaUrlResponse GetChatMediaUrlWithOptions(GetChatMediaUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                body["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["RequestId"] = request.RequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatMediaUrl",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatMediaUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request GetChatMediaUrlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetChatMediaUrlResponse
+         */
+        public async Task<GetChatMediaUrlResponse> GetChatMediaUrlWithOptionsAsync(GetChatMediaUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                body["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["RequestId"] = request.RequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatMediaUrl",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatMediaUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request GetChatMediaUrlRequest
+         * @return GetChatMediaUrlResponse
+         */
+        public GetChatMediaUrlResponse GetChatMediaUrl(GetChatMediaUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetChatMediaUrlWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request GetChatMediaUrlRequest
+         * @return GetChatMediaUrlResponse
+         */
+        public async Task<GetChatMediaUrlResponse> GetChatMediaUrlAsync(GetChatMediaUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetChatMediaUrlWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @param request GetContactFlowRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetContactFlowResponse
