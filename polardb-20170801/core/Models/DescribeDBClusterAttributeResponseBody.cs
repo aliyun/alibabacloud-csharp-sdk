@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterStatus { get; set; }
 
         /// <summary>
-        /// The details of the nodes.
+        /// The information about the nodes.
         /// </summary>
         [NameInMap("DBNodes")]
         [Validation(Required=false)]

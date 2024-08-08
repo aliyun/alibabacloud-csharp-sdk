@@ -9877,7 +9877,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary 查看实例的 DAS 配置
+         * @summary Queries the configurations of a cluster in Database Autonomy Service (DAS).
          *
          * @param request DescribeDasConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9927,7 +9927,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary 查看实例的 DAS 配置
+         * @summary Queries the configurations of a cluster in Database Autonomy Service (DAS).
          *
          * @param request DescribeDasConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9977,7 +9977,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary 查看实例的 DAS 配置
+         * @summary Queries the configurations of a cluster in Database Autonomy Service (DAS).
          *
          * @param request DescribeDasConfigRequest
          * @return DescribeDasConfigResponse
@@ -9989,7 +9989,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary 查看实例的 DAS 配置
+         * @summary Queries the configurations of a cluster in Database Autonomy Service (DAS).
          *
          * @param request DescribeDasConfigRequest
          * @return DescribeDasConfigResponse
@@ -14107,6 +14107,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["TargetDBNodeId"] = request.TargetDBNodeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneType))
+            {
+                query["TargetZoneType"] = request.TargetZoneType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14168,6 +14172,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBNodeId))
             {
                 query["TargetDBNodeId"] = request.TargetDBNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneType))
+            {
+                query["TargetZoneType"] = request.TargetZoneType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

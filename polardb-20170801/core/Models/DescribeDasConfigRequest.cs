@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDasConfigRequest : TeaModel {
         /// <summary>
+        /// The cluster ID.
+        /// 
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]

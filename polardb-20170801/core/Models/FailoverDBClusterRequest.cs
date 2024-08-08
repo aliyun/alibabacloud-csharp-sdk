@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string TargetDBNodeId { get; set; }
 
+        [NameInMap("TargetZoneType")]
+        [Validation(Required=false)]
+        public string TargetZoneType { get; set; }
+
     }
 
 }
