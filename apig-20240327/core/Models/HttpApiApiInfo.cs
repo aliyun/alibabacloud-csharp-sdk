@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<HttpApiApiInfoEnvironments> Environments { get; set; }
         public class HttpApiApiInfoEnvironments : TeaModel {
+            [NameInMap("alias")]
+            [Validation(Required=false)]
+            public string Alias { get; set; }
+
             [NameInMap("backendScene")]
             [Validation(Required=false)]
             public string BackendScene { get; set; }
@@ -129,6 +133,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             }
 
+            [NameInMap("customDomains")]
+            [Validation(Required=false)]
+            public List<HttpApiDomainInfo> CustomDomains { get; set; }
+
             [NameInMap("dnsConfigs")]
             [Validation(Required=false)]
             public List<HttpApiApiInfoEnvironmentsDnsConfigs> DnsConfigs { get; set; }
@@ -150,6 +158,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [NameInMap("environmentId")]
             [Validation(Required=false)]
             public string EnvironmentId { get; set; }
+
+            [NameInMap("gatewayInfo")]
+            [Validation(Required=false)]
+            public HttpApiApiInfoEnvironmentsGatewayInfo GatewayInfo { get; set; }
+            public class HttpApiApiInfoEnvironmentsGatewayInfo : TeaModel {
+                [NameInMap("gatewayId")]
+                [Validation(Required=false)]
+                public string GatewayId { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("publishStatus")]
+            [Validation(Required=false)]
+            public string PublishStatus { get; set; }
 
             [NameInMap("serviceConfigs")]
             [Validation(Required=false)]
