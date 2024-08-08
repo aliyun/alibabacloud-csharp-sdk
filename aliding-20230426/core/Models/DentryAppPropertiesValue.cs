@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,7 +11,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class DentriesAppPropertiesValue : TeaModel {
+    public class DentryAppPropertiesValue : TeaModel {
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

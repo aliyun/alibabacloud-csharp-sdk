@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<InviteUsersRequestPhoneInviteeList> PhoneInviteeList { get; set; }
         public class InviteUsersRequestPhoneInviteeList : TeaModel {
+            [NameInMap("InviteClient")]
+            [Validation(Required=false)]
+            public bool? InviteClient { get; set; }
+
             [NameInMap("Nick")]
             [Validation(Required=false)]
             public string Nick { get; set; }
@@ -54,6 +58,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
+
+            [NameInMap("StatusCode")]
+            [Validation(Required=false)]
+            public string StatusCode { get; set; }
 
         }
 

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string DentryUuid { get; set; }
 
+        [NameInMap("GenerateCp")]
+        [Validation(Required=false)]
+        public bool? GenerateCp { get; set; }
+
         [NameInMap("TargetFormat")]
         [Validation(Required=false)]
         public string TargetFormat { get; set; }

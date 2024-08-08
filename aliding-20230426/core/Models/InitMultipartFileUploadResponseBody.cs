@@ -8,17 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class InviteUsersResponseBody : TeaModel {
-        /// <summary>
-        /// requestId
-        /// </summary>
+    public class InitMultipartFileUploadResponseBody : TeaModel {
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("success")]
+        [NameInMap("storageDriver")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string StorageDriver { get; set; }
+
+        [NameInMap("uploadKey")]
+        [Validation(Required=false)]
+        public string UploadKey { get; set; }
 
         [NameInMap("vendorRequestId")]
         [Validation(Required=false)]

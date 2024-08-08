@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class DentriesAppPropertiesValue : TeaModel {
-        [NameInMap("Name")]
+    public class CommitFileResponse : TeaModel {
+        [NameInMap("headers")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Value")]
+        [NameInMap("statusCode")]
         [Validation(Required=false)]
-        public string Value { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("Visibility")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public string Visibility { get; set; }
+        public CommitFileResponseBody Body { get; set; }
 
     }
 

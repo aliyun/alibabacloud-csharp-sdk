@@ -8,21 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class GetDocContentTakIdShrinkRequest : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("DentryUuid")]
+    public class GetFileUploadInfoShrinkRequest : TeaModel {
+        [NameInMap("Option")]
         [Validation(Required=false)]
-        public string DentryUuid { get; set; }
+        public string OptionShrink { get; set; }
 
-        [NameInMap("GenerateCp")]
+        [NameInMap("ParentDentryUuid")]
         [Validation(Required=false)]
-        public bool? GenerateCp { get; set; }
+        public string ParentDentryUuid { get; set; }
 
-        [NameInMap("TargetFormat")]
+        [NameInMap("Protocol")]
         [Validation(Required=false)]
-        public string TargetFormat { get; set; }
+        public string Protocol { get; set; }
 
         [NameInMap("TenantContext")]
         [Validation(Required=false)]
