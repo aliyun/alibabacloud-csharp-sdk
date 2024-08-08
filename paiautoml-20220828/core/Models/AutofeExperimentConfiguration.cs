@@ -12,6 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
 {
     public class AutofeExperimentConfiguration : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("odps_config")]
         [Validation(Required=false)]
         public AutofeExperimentConfigurationOdpsConfig OdpsConfig { get; set; }
@@ -24,14 +27,23 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
             [Validation(Required=false)]
             public string OdpsAccessKey { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("odps_endpoint")]
             [Validation(Required=false)]
             public string OdpsEndpoint { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("odps_project_name")]
             [Validation(Required=false)]
             public string OdpsProjectName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("odps_region_id")]
             [Validation(Required=false)]
             public string OdpsRegionId { get; set; }
@@ -42,6 +54,9 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("oss_config")]
         [Validation(Required=false)]
         public AutofeExperimentConfigurationOssConfig OssConfig { get; set; }
@@ -54,10 +69,16 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
             [Validation(Required=false)]
             public string OssAccessKey { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("oss_bucket")]
             [Validation(Required=false)]
             public string OssBucket { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("oss_endpoint")]
             [Validation(Required=false)]
             public string OssEndpoint { get; set; }
@@ -68,6 +89,9 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("yml_config")]
         [Validation(Required=false)]
         public AutofeExperimentConfigurationYmlConfig YmlConfig { get; set; }
@@ -92,6 +116,9 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
             [Validation(Required=false)]
             public string DataPartition { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("data_source")]
             [Validation(Required=false)]
             public string DataSource { get; set; }
@@ -120,6 +147,9 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
             [Validation(Required=false)]
             public string IvThresh { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("label")]
             [Validation(Required=false)]
             public string Label { get; set; }
@@ -128,6 +158,9 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
             [Validation(Required=false)]
             public string Memory { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("output_config_oss_dir")]
             [Validation(Required=false)]
             public string OutputConfigOssDir { get; set; }
@@ -160,6 +193,9 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
             [Validation(Required=false)]
             public string Workers { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("workspace_name")]
             [Validation(Required=false)]
             public string WorkspaceName { get; set; }

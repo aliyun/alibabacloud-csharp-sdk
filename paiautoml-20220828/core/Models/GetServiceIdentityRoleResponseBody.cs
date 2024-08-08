@@ -8,34 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
 {
-    public class UpdateHpoExperimentResponseBody : TeaModel {
-        /// <summary>
-        /// Error code.
-        /// </summary>
+    public class GetServiceIdentityRoleResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// Extra error information.
-        /// </summary>
-        [NameInMap("Detail")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Detail { get; set; }
-
-        /// <summary>
-        /// Error message.
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("RoleName")]
+        [Validation(Required=false)]
+        public string RoleName { get; set; }
 
     }
 

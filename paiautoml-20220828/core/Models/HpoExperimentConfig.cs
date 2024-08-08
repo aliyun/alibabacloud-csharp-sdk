@@ -57,22 +57,37 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("metric_config")]
         [Validation(Required=false)]
         public HpoExperimentConfigMetricConfig MetricConfig { get; set; }
         public class HpoExperimentConfigMetricConfig : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("final_mode")]
             [Validation(Required=false)]
             public string FinalMode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("metric_dict")]
             [Validation(Required=false)]
             public Dictionary<string, object> MetricDict { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("metric_source")]
             [Validation(Required=false)]
             public List<string> MetricSource { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("metric_type")]
             [Validation(Required=false)]
             public string MetricType { get; set; }
@@ -211,14 +226,23 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("platform_config")]
         [Validation(Required=false)]
         public HpoExperimentConfigPlatformConfig PlatformConfig { get; set; }
         public class HpoExperimentConfigPlatformConfig : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("cmd")]
             [Validation(Required=false)]
             public List<string> Cmd { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
