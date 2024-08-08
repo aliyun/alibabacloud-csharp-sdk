@@ -52169,6 +52169,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["Password"] = request.Password;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateDnsNameOptions))
+            {
+                query["PrivateDnsNameOptions"] = request.PrivateDnsNameOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recyclable))
             {
                 query["Recyclable"] = request.Recyclable;
@@ -52293,6 +52297,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateDnsNameOptions))
+            {
+                query["PrivateDnsNameOptions"] = request.PrivateDnsNameOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recyclable))
             {
@@ -64823,6 +64831,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["PeriodUnit"] = request.PeriodUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateDnsNameOptions))
+            {
+                query["PrivateDnsNameOptions"] = request.PrivateDnsNameOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
@@ -65273,6 +65285,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
             {
                 query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateDnsNameOptions))
+            {
+                query["PrivateDnsNameOptions"] = request.PrivateDnsNameOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {

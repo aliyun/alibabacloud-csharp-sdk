@@ -1279,6 +1279,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        [NameInMap("PrivateDnsNameOptions")]
+        [Validation(Required=false)]
+        public RunInstancesRequestPrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
+        public class RunInstancesRequestPrivateDnsNameOptions : TeaModel {
+            [NameInMap("EnableInstanceIdDnsAAAARecord")]
+            [Validation(Required=false)]
+            public bool? EnableInstanceIdDnsAAAARecord { get; set; }
+
+            [NameInMap("EnableInstanceIdDnsARecord")]
+            [Validation(Required=false)]
+            public bool? EnableInstanceIdDnsARecord { get; set; }
+
+            [NameInMap("EnableIpDnsARecord")]
+            [Validation(Required=false)]
+            public bool? EnableIpDnsARecord { get; set; }
+
+            [NameInMap("EnableIpDnsPtrRecord")]
+            [Validation(Required=false)]
+            public bool? EnableIpDnsPtrRecord { get; set; }
+
+            [NameInMap("HostnameType")]
+            [Validation(Required=false)]
+            public string HostnameType { get; set; }
+
+        }
+
         /// <summary>
         /// The private IP address to assign to the instance. To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by `VSwitchId`.
         /// 

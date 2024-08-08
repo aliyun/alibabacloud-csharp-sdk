@@ -634,6 +634,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 [Validation(Required=false)]
                                 public bool? Primary { get; set; }
 
+                                [NameInMap("PrivateDnsName")]
+                                [Validation(Required=false)]
+                                public string PrivateDnsName { get; set; }
+
                                 /// <summary>
                                 /// The private IP address of the ENI.
                                 /// </summary>
@@ -715,6 +719,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string LockReason { get; set; }
 
                     }
+
+                }
+
+                [NameInMap("PrivateDnsNameOptions")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
+                public class DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions : TeaModel {
+                    [NameInMap("EnableInstanceIdDnsAAAARecord")]
+                    [Validation(Required=false)]
+                    public bool? EnableInstanceIdDnsAAAARecord { get; set; }
+
+                    [NameInMap("EnableInstanceIdDnsARecord")]
+                    [Validation(Required=false)]
+                    public bool? EnableInstanceIdDnsARecord { get; set; }
+
+                    [NameInMap("EnableIpDnsARecord")]
+                    [Validation(Required=false)]
+                    public bool? EnableIpDnsARecord { get; set; }
+
+                    [NameInMap("EnableIpDnsPtrRecord")]
+                    [Validation(Required=false)]
+                    public bool? EnableIpDnsPtrRecord { get; set; }
+
+                    [NameInMap("HostnameType")]
+                    [Validation(Required=false)]
+                    public string HostnameType { get; set; }
 
                 }
 

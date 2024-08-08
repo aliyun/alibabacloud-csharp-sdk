@@ -133,6 +133,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        [NameInMap("PrivateDnsNameOptions")]
+        [Validation(Required=false)]
+        public ModifyInstanceAttributeRequestPrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
+        public class ModifyInstanceAttributeRequestPrivateDnsNameOptions : TeaModel {
+            [NameInMap("EnableInstanceIdDnsAAAARecord")]
+            [Validation(Required=false)]
+            public bool? EnableInstanceIdDnsAAAARecord { get; set; }
+
+            [NameInMap("EnableInstanceIdDnsARecord")]
+            [Validation(Required=false)]
+            public bool? EnableInstanceIdDnsARecord { get; set; }
+
+            [NameInMap("EnableIpDnsARecord")]
+            [Validation(Required=false)]
+            public bool? EnableIpDnsARecord { get; set; }
+
+            [NameInMap("EnableIpDnsPtrRecord")]
+            [Validation(Required=false)]
+            public bool? EnableIpDnsPtrRecord { get; set; }
+
+            [NameInMap("HostnameType")]
+            [Validation(Required=false)]
+            public string HostnameType { get; set; }
+
+        }
+
         /// <summary>
         /// >  This parameter is in invitational preview and is not publicly available.
         /// </summary>

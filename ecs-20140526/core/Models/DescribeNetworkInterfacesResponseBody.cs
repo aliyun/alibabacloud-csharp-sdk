@@ -273,6 +273,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public bool? Primary { get; set; }
 
+                        [NameInMap("PrivateDnsName")]
+                        [Validation(Required=false)]
+                        public string PrivateDnsName { get; set; }
+
                         /// <summary>
                         /// The private IP address of the ENI.
                         /// </summary>
