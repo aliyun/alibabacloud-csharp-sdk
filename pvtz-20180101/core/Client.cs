@@ -3442,6 +3442,90 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         }
 
         /**
+         * @param request DescribeUserServiceStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserServiceStatusResponse
+         */
+        public DescribeUserServiceStatusResponse DescribeUserServiceStatusWithOptions(DescribeUserServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserServiceStatus",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserServiceStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeUserServiceStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserServiceStatusResponse
+         */
+        public async Task<DescribeUserServiceStatusResponse> DescribeUserServiceStatusWithOptionsAsync(DescribeUserServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserServiceStatus",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeUserServiceStatusRequest
+         * @return DescribeUserServiceStatusResponse
+         */
+        public DescribeUserServiceStatusResponse DescribeUserServiceStatus(DescribeUserServiceStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserServiceStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request DescribeUserServiceStatusRequest
+         * @return DescribeUserServiceStatusResponse
+         */
+        public async Task<DescribeUserServiceStatusResponse> DescribeUserServiceStatusAsync(DescribeUserServiceStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserServiceStatusWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries a list of accounts whose virtual private clouds (VPCs) are associated with a private zone.
          *
          * @param request DescribeUserVpcAuthorizationsRequest
