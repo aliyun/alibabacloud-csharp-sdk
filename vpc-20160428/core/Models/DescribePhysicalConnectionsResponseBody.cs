@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType> PhysicalConnectionType { get; set; }
             public class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType : TeaModel {
                 /// <summary>
-                /// The ID of the access point.
+                /// The ID of the Express Connect circuit.
                 /// </summary>
                 [NameInMap("AccessPointId")]
                 [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The maximum bandwidth of the Express Connect circuit.
                 /// 
-                /// Unit: Gbit/s.
+                /// Unit: Mbit/s.
                 /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the Express Connect circuit. Valid values:
                 /// 
-                /// *   **Normal**
-                /// *   **FinancialLocked**
-                /// *   **SecurityLocked**
+                /// *   **Normal**: enabled
+                /// *   **FinancialLocked**: locked due to overdue payments
+                /// *   **SecurityLocked**: locked for security reasons
                 /// </summary>
                 [NameInMap("BusinessStatus")]
                 [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The time when the Express Connect circuit is enabled.
+                /// The time when the Express Connect circuit was enabled.
                 /// </summary>
                 [NameInMap("EnabledTime")]
                 [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The estimated maximum bandwidth of the shared Express Connect circuit. The estimated bandwidth takes effect after you complete the payment.
                 /// 
-                /// **M** indicates Mbit/s and **G** indicates Gbit/s.
+                /// Unit: **M** (Mbit/s) and **G** (Gbit/s).
                 /// </summary>
                 [NameInMap("ExpectSpec")]
                 [Validation(Required=false)]
@@ -162,13 +162,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the letter of authorization (LOA). Valid values:
                 /// 
-                /// *   **Applying**
-                /// *   **Accept**
-                /// *   **Available**
-                /// *   **Rejected**
-                /// *   **Completing**
-                /// *   **Complete**
-                /// *   **Deleted**
+                /// *   **Applying**: The LOA is pending for approval.
+                /// *   **Accept**: The LOA is approved.
+                /// *   **Available**: The LOA is available.
+                /// *   **Rejected**: The LOA is rejected.
+                /// *   **Completing**: The Express Connect circuit is under construction.
+                /// *   **Complete**: The Express Connect circuit is installed.
+                /// *   **Deleted**: The LOA is deleted.
                 /// </summary>
                 [NameInMap("LoaStatus")]
                 [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The payer for the shared Express Connect circuit. Valid values:
+                /// The payer for the hosted connection. Valid values:
                 /// 
                 /// *   **PayByPhysicalConnectionOwner**: The partner pays for the shared Express Connect circuit.
                 /// *   **PayByVirtualPhysicalConnectionOwner**: The tenant pays for the shared Express Connect circuit.
@@ -192,14 +192,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string OrderMode { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the shared Express Connect circuit belongs.
+                /// The ID of the Alibaba Cloud account to which the parent Express Connect circuit belongs.
                 /// </summary>
                 [NameInMap("ParentPhysicalConnectionAliUid")]
                 [Validation(Required=false)]
                 public long? ParentPhysicalConnectionAliUid { get; set; }
 
                 /// <summary>
-                /// The ID of the Express Connect circuit that is used to create the hosted connection.
+                /// The ID of the parent Express Connect circuit.
                 /// </summary>
                 [NameInMap("ParentPhysicalConnectionId")]
                 [Validation(Required=false)]
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string PortNumber { get; set; }
 
                 /// <summary>
-                /// The port type. Valid values:
+                /// The port type of the Express Connect circuit. Valid values:
                 /// 
                 /// *   **100Base-T**: 100 Mbit/s copper Ethernet port
                 /// *   **1000Base-T**: 1,000 Mbit/s copper Ethernet port
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
                 /// *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
                 /// 
-                /// >  To create ports of 40GBase-LR and 100GBase-LR, you must first contact your account manager.
+                /// > Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.
                 /// </summary>
                 [NameInMap("PortType")]
                 [Validation(Required=false)]
@@ -253,12 +253,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ProductType { get; set; }
 
+                /// <summary>
+                /// The ID of the QoS policy.
+                /// </summary>
                 [NameInMap("QosId")]
                 [Validation(Required=false)]
                 public string QosId { get; set; }
 
                 /// <summary>
-                /// The ID of the redundant Express Connect circuit.
+                /// The ID of the standby Express Connect circuit.
                 /// </summary>
                 [NameInMap("RedundantPhysicalConnectionId")]
                 [Validation(Required=false)]
@@ -283,14 +286,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The type of the pending order.
                 /// 
-                /// If the value is set to **RENEW**, it indicates that the order is placed for service renewal.
+                /// If the value is **RENEW**, it indicates that the order is placed for service renewal.
                 /// </summary>
                 [NameInMap("ReservationOrderType")]
                 [Validation(Required=false)]
                 public string ReservationOrderType { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the ACL belongs.
+                /// The resource group ID to which the instance belongs.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -308,24 +311,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the Express Connect circuit. Valid values:
                 /// 
-                /// *   **Initial**: The application is under review.
-                /// *   **Approved**: The application is approved.
-                /// *   **Allocating**: The system is allocating resources.
-                /// *   **Allocated**: The Express Connect circuit is under construction.
-                /// *   **Confirmed**: The Express Connect circuit is pending for user confirmation.
-                /// *   **Enabled**: The Express Connect circuit is enabled.
-                /// *   **Rejected**: The application is rejected.
-                /// *   **Canceled**: The application is canceled.
-                /// *   **Allocation Failed**: The system failed to allocate resources.
-                /// *   **Terminating**: The Express Connect circuit is being disabled.
-                /// *   **Terminated**: The Express Connect circuit is disabled.
+                /// *   **Initial**
+                /// *   **Approved**
+                /// *   **Allocating**
+                /// *   **Allocated**
+                /// *   **Confirmed**
+                /// *   **Enabled**
+                /// *   **Rejected**
+                /// *   **Canceled**
+                /// *   **Allocation Failed**
+                /// *   **Terminating**
+                /// *   **Terminated**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tag list.
+                /// The tags that are added to the cluster.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -336,18 +339,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags> Tags { get; set; }
                     public class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags : TeaModel {
                         /// <summary>
-                        /// The key of tag N added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+                        /// The key of tag N added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
                         /// 
-                        /// It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                        /// The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+                        /// The value of tag N added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
                         /// 
-                        /// It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                        /// The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -365,7 +368,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The number of hosted connections that are established over the Express Connect circuit.
+                /// The number of Express Connect circuits that are established.
                 /// </summary>
                 [NameInMap("VirtualPhysicalConnectionCount")]
                 [Validation(Required=false)]
@@ -379,7 +382,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string VlanId { get; set; }
 
                 /// <summary>
-                /// The status of the hosted connection. Valid values:
+                /// The status of the shared Express Connect circuit. Valid values:
                 /// 
                 /// *   **Confirmed**
                 /// *   **UnConfirmed**

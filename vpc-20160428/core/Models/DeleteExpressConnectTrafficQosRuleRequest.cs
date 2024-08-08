@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteExpressConnectTrafficQosRuleRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// The ID of the QoS policy.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("QosId")]
@@ -29,6 +36,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string QosId { get; set; }
 
         /// <summary>
+        /// The ID of the QoS queue.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("QueueId")]
@@ -36,6 +45,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string QueueId { get; set; }
 
         /// <summary>
+        /// The region ID of the QoS policy.
+        /// 
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -47,6 +60,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
+        /// The ID of the QoS rule.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]

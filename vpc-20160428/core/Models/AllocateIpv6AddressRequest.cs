@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateIpv6AddressRequest : TeaModel {
+        /// <summary>
+        /// The type of the IPv6 address. Valid values:
+        /// 
+        /// *   IPv6Address (default): an IPv6 address.
+        /// *   IPv6Prefix: an IPv6 CIDR block.
+        /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
         public string AddressType { get; set; }

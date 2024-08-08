@@ -6021,7 +6021,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 增加LOA运维信息
+         * @summary Generates a report for an installed Express Connect circuit.
          *
          * @param request CompletePhysicalConnectionLOARequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6103,7 +6103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 增加LOA运维信息
+         * @summary Generates a report for an installed Express Connect circuit.
          *
          * @param request CompletePhysicalConnectionLOARequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6185,7 +6185,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 增加LOA运维信息
+         * @summary Generates a report for an installed Express Connect circuit.
          *
          * @param request CompletePhysicalConnectionLOARequest
          * @return CompletePhysicalConnectionLOAResponse
@@ -6197,7 +6197,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 增加LOA运维信息
+         * @summary Generates a report for an installed Express Connect circuit.
          *
          * @param request CompletePhysicalConnectionLOARequest
          * @return CompletePhysicalConnectionLOAResponse
@@ -8477,7 +8477,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos
+         * @summary Creates a quality of service (QoS) policy.
          *
          * @param request CreateExpressConnectTrafficQosRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8539,7 +8539,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos
+         * @summary Creates a quality of service (QoS) policy.
          *
          * @param request CreateExpressConnectTrafficQosRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8601,7 +8601,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos
+         * @summary Creates a quality of service (QoS) policy.
          *
          * @param request CreateExpressConnectTrafficQosRequest
          * @return CreateExpressConnectTrafficQosResponse
@@ -8613,7 +8613,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos
+         * @summary Creates a quality of service (QoS) policy.
          *
          * @param request CreateExpressConnectTrafficQosRequest
          * @return CreateExpressConnectTrafficQosResponse
@@ -8625,7 +8625,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos队列
+         * @summary Creates a quality of service (QoS) queue.
          *
          * @param request CreateExpressConnectTrafficQosQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8699,7 +8699,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos队列
+         * @summary Creates a quality of service (QoS) queue.
          *
          * @param request CreateExpressConnectTrafficQosQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8773,7 +8773,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos队列
+         * @summary Creates a quality of service (QoS) queue.
          *
          * @param request CreateExpressConnectTrafficQosQueueRequest
          * @return CreateExpressConnectTrafficQosQueueResponse
@@ -8785,7 +8785,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos队列
+         * @summary Creates a quality of service (QoS) queue.
          *
          * @param request CreateExpressConnectTrafficQosQueueRequest
          * @return CreateExpressConnectTrafficQosQueueResponse
@@ -8797,7 +8797,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos规则
+         * @summary Creates a quality of service (QoS) rule.
          *
          * @param request CreateExpressConnectTrafficQosRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8907,7 +8907,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos规则
+         * @summary Creates a quality of service (QoS) rule.
          *
          * @param request CreateExpressConnectTrafficQosRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9017,7 +9017,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos规则
+         * @summary Creates a quality of service (QoS) rule.
          *
          * @param request CreateExpressConnectTrafficQosRuleRequest
          * @return CreateExpressConnectTrafficQosRuleResponse
@@ -9029,7 +9029,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建高速通道Qos规则
+         * @summary Creates a quality of service (QoS) rule.
          *
          * @param request CreateExpressConnectTrafficQosRuleRequest
          * @return CreateExpressConnectTrafficQosRuleResponse
@@ -13245,7 +13245,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建端口初装费订单
+         * @summary Creates an order for initial installation of an Express Connect circuit.
          *
          * @param request CreatePhysicalConnectionSetupOrderRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13323,7 +13323,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建端口初装费订单
+         * @summary Creates an order for initial installation of an Express Connect circuit.
          *
          * @param request CreatePhysicalConnectionSetupOrderRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13401,7 +13401,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建端口初装费订单
+         * @summary Creates an order for initial installation of an Express Connect circuit.
          *
          * @param request CreatePhysicalConnectionSetupOrderRequest
          * @return CreatePhysicalConnectionSetupOrderResponse
@@ -13413,7 +13413,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建端口初装费订单
+         * @summary Creates an order for initial installation of an Express Connect circuit.
          *
          * @param request CreatePhysicalConnectionSetupOrderRequest
          * @return CreatePhysicalConnectionSetupOrderResponse
@@ -20593,7 +20593,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除高速通道Qos
+         * @summary Deletes a quality of service (QoS) policy.
          *
          * @param request DeleteExpressConnectTrafficQosRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20651,7 +20651,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除高速通道Qos
+         * @summary Deletes a quality of service (QoS) policy.
          *
          * @param request DeleteExpressConnectTrafficQosRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20709,7 +20709,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除高速通道Qos
+         * @summary Deletes a quality of service (QoS) policy.
          *
          * @param request DeleteExpressConnectTrafficQosRequest
          * @return DeleteExpressConnectTrafficQosResponse
@@ -20721,7 +20721,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除高速通道Qos
+         * @summary Deletes a quality of service (QoS) policy.
          *
          * @param request DeleteExpressConnectTrafficQosRequest
          * @return DeleteExpressConnectTrafficQosResponse
@@ -20881,7 +20881,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除高速通道Qos规则
+         * @summary Deletes a quality of service (QoS) rule.
          *
          * @param request DeleteExpressConnectTrafficQosRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20947,7 +20947,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除高速通道Qos规则
+         * @summary Deletes a quality of service (QoS) rule.
          *
          * @param request DeleteExpressConnectTrafficQosRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21013,7 +21013,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除高速通道Qos规则
+         * @summary Deletes a quality of service (QoS) rule.
          *
          * @param request DeleteExpressConnectTrafficQosRuleRequest
          * @return DeleteExpressConnectTrafficQosRuleResponse
@@ -21025,7 +21025,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除高速通道Qos规则
+         * @summary Deletes a quality of service (QoS) rule.
          *
          * @param request DeleteExpressConnectTrafficQosRuleRequest
          * @return DeleteExpressConnectTrafficQosRuleResponse
@@ -21037,7 +21037,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除故障演练任务
+         * @summary Deletes a failover test.
+         *
+         * @description You can delete only failover tests that are in the **Pending** or **Complete** state.
          *
          * @param request DeleteFailoverTestJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21095,7 +21097,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除故障演练任务
+         * @summary Deletes a failover test.
+         *
+         * @description You can delete only failover tests that are in the **Pending** or **Complete** state.
          *
          * @param request DeleteFailoverTestJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21153,7 +21157,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除故障演练任务
+         * @summary Deletes a failover test.
+         *
+         * @description You can delete only failover tests that are in the **Pending** or **Complete** state.
          *
          * @param request DeleteFailoverTestJobRequest
          * @return DeleteFailoverTestJobResponse
@@ -21165,7 +21171,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 删除故障演练任务
+         * @summary Deletes a failover test.
+         *
+         * @description You can delete only failover tests that are in the **Pending** or **Complete** state.
          *
          * @param request DeleteFailoverTestJobRequest
          * @return DeleteFailoverTestJobResponse
@@ -31009,7 +31017,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询高速通道Qos规则
+         * @summary Queries quality of service (QoS) rules. Paging parameters are not supported.
          *
          * @param request DescribeExpressConnectTrafficQosRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -31079,7 +31087,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询高速通道Qos规则
+         * @summary Queries quality of service (QoS) rules. Paging parameters are not supported.
          *
          * @param request DescribeExpressConnectTrafficQosRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -31149,7 +31157,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询高速通道Qos规则
+         * @summary Queries quality of service (QoS) rules. Paging parameters are not supported.
          *
          * @param request DescribeExpressConnectTrafficQosRuleRequest
          * @return DescribeExpressConnectTrafficQosRuleResponse
@@ -31161,7 +31169,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询高速通道Qos规则
+         * @summary Queries quality of service (QoS) rules. Paging parameters are not supported.
          *
          * @param request DescribeExpressConnectTrafficQosRuleRequest
          * @return DescribeExpressConnectTrafficQosRuleResponse
@@ -31173,7 +31181,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询故障演练任务详情
+         * @summary Queries failover tests.
          *
          * @param request DescribeFailoverTestJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -31231,7 +31239,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询故障演练任务详情
+         * @summary Queries failover tests.
          *
          * @param request DescribeFailoverTestJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -31289,7 +31297,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询故障演练任务详情
+         * @summary Queries failover tests.
          *
          * @param request DescribeFailoverTestJobRequest
          * @return DescribeFailoverTestJobResponse
@@ -31301,7 +31309,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 查询故障演练任务详情
+         * @summary Queries failover tests.
          *
          * @param request DescribeFailoverTestJobRequest
          * @return DescribeFailoverTestJobResponse
@@ -31313,7 +31321,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 批量查询故障演练任务
+         * @summary Queries failover tests for Express Connect.
          *
          * @param request DescribeFailoverTestJobsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -31379,7 +31387,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 批量查询故障演练任务
+         * @summary Queries failover tests for Express Connect.
          *
          * @param request DescribeFailoverTestJobsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -31445,7 +31453,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 批量查询故障演练任务
+         * @summary Queries failover tests for Express Connect.
          *
          * @param request DescribeFailoverTestJobsRequest
          * @return DescribeFailoverTestJobsResponse
@@ -31457,7 +31465,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 批量查询故障演练任务
+         * @summary Queries failover tests for Express Connect.
          *
          * @param request DescribeFailoverTestJobsRequest
          * @return DescribeFailoverTestJobsResponse
@@ -50665,7 +50673,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos
+         * @summary Modifies a quality of service (QoS) policy or associates a QoS policy with a dedicated Express Connect circuit.
          *
          * @param request ModifyExpressConnectTrafficQosRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -50739,7 +50747,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos
+         * @summary Modifies a quality of service (QoS) policy or associates a QoS policy with a dedicated Express Connect circuit.
          *
          * @param request ModifyExpressConnectTrafficQosRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -50813,7 +50821,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos
+         * @summary Modifies a quality of service (QoS) policy or associates a QoS policy with a dedicated Express Connect circuit.
          *
          * @param request ModifyExpressConnectTrafficQosRequest
          * @return ModifyExpressConnectTrafficQosResponse
@@ -50825,7 +50833,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos
+         * @summary Modifies a quality of service (QoS) policy or associates a QoS policy with a dedicated Express Connect circuit.
          *
          * @param request ModifyExpressConnectTrafficQosRequest
          * @return ModifyExpressConnectTrafficQosResponse
@@ -50837,7 +50845,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos队列
+         * @summary Modifies a quality of service (QoS) queue.
          *
          * @param request ModifyExpressConnectTrafficQosQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -50911,7 +50919,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos队列
+         * @summary Modifies a quality of service (QoS) queue.
          *
          * @param request ModifyExpressConnectTrafficQosQueueRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -50985,7 +50993,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos队列
+         * @summary Modifies a quality of service (QoS) queue.
          *
          * @param request ModifyExpressConnectTrafficQosQueueRequest
          * @return ModifyExpressConnectTrafficQosQueueResponse
@@ -50997,7 +51005,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos队列
+         * @summary Modifies a quality of service (QoS) queue.
          *
          * @param request ModifyExpressConnectTrafficQosQueueRequest
          * @return ModifyExpressConnectTrafficQosQueueResponse
@@ -51009,7 +51017,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos规则
+         * @summary Modifies a quality of service (QoS) rule.
          *
          * @param request ModifyExpressConnectTrafficQosRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -51123,7 +51131,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos规则
+         * @summary Modifies a quality of service (QoS) rule.
          *
          * @param request ModifyExpressConnectTrafficQosRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -51237,7 +51245,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos规则
+         * @summary Modifies a quality of service (QoS) rule.
          *
          * @param request ModifyExpressConnectTrafficQosRuleRequest
          * @return ModifyExpressConnectTrafficQosRuleResponse
@@ -51249,7 +51257,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 修改高速通道Qos规则
+         * @summary Modifies a quality of service (QoS) rule.
          *
          * @param request ModifyExpressConnectTrafficQosRuleRequest
          * @return ModifyExpressConnectTrafficQosRuleResponse
@@ -59877,7 +59885,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 开通出云流量服务
+         * @summary Enables billing for outbound data transfer.
          *
          * @param request OpenPhysicalConnectionServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -59927,7 +59935,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 开通出云流量服务
+         * @summary Enables billing for outbound data transfer.
          *
          * @param request OpenPhysicalConnectionServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -59977,7 +59985,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 开通出云流量服务
+         * @summary Enables billing for outbound data transfer.
          *
          * @param request OpenPhysicalConnectionServiceRequest
          * @return OpenPhysicalConnectionServiceResponse
@@ -59989,7 +59997,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 开通出云流量服务
+         * @summary Enables billing for outbound data transfer.
          *
          * @param request OpenPhysicalConnectionServiceRequest
          * @return OpenPhysicalConnectionServiceResponse
@@ -62905,7 +62913,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 开始故障演练任务
+         * @summary Performs a failover test.
+         *
+         * @description You can perform only failover tests that are in the **Pending** state.
          *
          * @param request StartFailoverTestJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -62963,7 +62973,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 开始故障演练任务
+         * @summary Performs a failover test.
+         *
+         * @description You can perform only failover tests that are in the **Pending** state.
          *
          * @param request StartFailoverTestJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -63021,7 +63033,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 开始故障演练任务
+         * @summary Performs a failover test.
+         *
+         * @description You can perform only failover tests that are in the **Pending** state.
          *
          * @param request StartFailoverTestJobRequest
          * @return StartFailoverTestJobResponse
@@ -63033,7 +63047,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 开始故障演练任务
+         * @summary Performs a failover test.
+         *
+         * @description You can perform only failover tests that are in the **Pending** state.
          *
          * @param request StartFailoverTestJobRequest
          * @return StartFailoverTestJobResponse

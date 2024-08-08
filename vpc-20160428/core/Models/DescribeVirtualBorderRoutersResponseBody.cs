@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the queried VBR.
+        /// The information about the VBR.
         /// </summary>
         [NameInMap("VirtualBorderRouterSet")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string AccessPointId { get; set; }
 
                 /// <summary>
-                /// The time when the VBR was first activated.
+                /// The time when the VBR was activated for the first time.
                 /// </summary>
                 [NameInMap("ActivationTime")]
                 [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeAssociatedCensAssociatedCen> AssociatedCen { get; set; }
                     public class DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeAssociatedCensAssociatedCen : TeaModel {
                         /// <summary>
-                        /// The ID of the CEN instance.
+                        /// The CEN instance ID.
                         /// </summary>
                         [NameInMap("CenId")]
                         [Validation(Required=false)]
                         public string CenId { get; set; }
 
                         /// <summary>
-                        /// The ID of the Alibaba Cloud account to which the CEN instance belongs.
+                        /// The ID of the account to which the CEN instance belongs.
                         /// </summary>
                         [NameInMap("CenOwnerId")]
                         [Validation(Required=false)]
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// <summary>
                         /// The status of the CEN instance. Valid values:
                         /// 
-                        /// *   **Attached**: The VBR is attached to the CEN instance.
-                        /// *   **Attaching**: The VBR is being attached to the CEN instance.
-                        /// *   **Detached**: The VBR is detached from the CEN instance.
-                        /// *   **Detaching**: The VBR is being detached from the CEN instance.
+                        /// *   **Attached**
+                        /// *   **Attaching**
+                        /// *   **Detached**
+                        /// *   **Detaching**
                         /// *   If no value is returned, the VBR is not attached to a CEN instance.
                         /// </summary>
                         [NameInMap("CenStatus")]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeAssociatedPhysicalConnectionsAssociatedPhysicalConnection> AssociatedPhysicalConnection { get; set; }
                     public class DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeAssociatedPhysicalConnectionsAssociatedPhysicalConnection : TeaModel {
                         /// <summary>
-                        /// The circuit code of the Express Connect circuit. The circuit code is provided by the ISP.
+                        /// The circuit code of the Express Connect circuit, which is provided by the connectivity provider.
                         /// </summary>
                         [NameInMap("CircuitCode")]
                         [Validation(Required=false)]
@@ -133,53 +133,53 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public bool? EnableIpv6 { get; set; }
 
                         /// <summary>
-                        /// The IPv4 address of the gateway device on the Alibaba Cloud side.
+                        /// The IPv4 address of the VBR on the Alibaba Cloud side.
                         /// </summary>
                         [NameInMap("LocalGatewayIp")]
                         [Validation(Required=false)]
                         public string LocalGatewayIp { get; set; }
 
                         /// <summary>
-                        /// The IPv6 address of the gateway device on the Alibaba Cloud side.
+                        /// The IPv6 address of the VBR on the Alibaba Cloud side.
                         /// </summary>
                         [NameInMap("LocalIpv6GatewayIp")]
                         [Validation(Required=false)]
                         public string LocalIpv6GatewayIp { get; set; }
 
                         /// <summary>
-                        /// The IPv4 address of the gateway device on the user side.
+                        /// The IPv4 address of the VBR on the user side.
                         /// </summary>
                         [NameInMap("PeerGatewayIp")]
                         [Validation(Required=false)]
                         public string PeerGatewayIp { get; set; }
 
                         /// <summary>
-                        /// The IPv6 address of the gateway device on the user side.
+                        /// The IPv6 address of the VBR on the user side.
                         /// </summary>
                         [NameInMap("PeerIpv6GatewayIp")]
                         [Validation(Required=false)]
                         public string PeerIpv6GatewayIp { get; set; }
 
                         /// <summary>
-                        /// The subnet mask for the IPv6 addresses of the gateway devices on the Alibaba Cloud side and on the user side.
+                        /// The subnet mask for the IPv6 addresses on the user side and on the Alibaba Cloud side.
                         /// 
-                        /// The two IPv6 addresses must fall within the same subnet.
+                        /// Both IPv6 addresses must belong to the same subnet.
                         /// </summary>
                         [NameInMap("PeeringIpv6SubnetMask")]
                         [Validation(Required=false)]
                         public string PeeringIpv6SubnetMask { get; set; }
 
                         /// <summary>
-                        /// The subnet mask for the IPv4 addresses of the gateway devices on the Alibaba Cloud side and on the user side.
+                        /// The subnet mask for the IPv4 addresses of the VBR on the user side and on the Alibaba Cloud side.
                         /// 
-                        /// The two IPv4 addresses must fall within the same subnet.
+                        /// Both IPv4 addresses must belong to the same subnet.
                         /// </summary>
                         [NameInMap("PeeringSubnetMask")]
                         [Validation(Required=false)]
                         public string PeeringSubnetMask { get; set; }
 
                         /// <summary>
-                        /// The business status of the Express Connect circuit.
+                        /// The business status of the Express Connect circuit. Valid values:
                         /// 
                         /// *   **Normal:** The Express Connect circuit is running as normal.
                         /// *   **FinancialLocked:** The Express Connect circuit is locked due to overdue payments.
@@ -196,14 +196,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string PhysicalConnectionId { get; set; }
 
                         /// <summary>
-                        /// The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.
+                        /// The ID of the account to which the Express Connect circuit belongs.
                         /// </summary>
                         [NameInMap("PhysicalConnectionOwnerUid")]
                         [Validation(Required=false)]
                         public string PhysicalConnectionOwnerUid { get; set; }
 
                         /// <summary>
-                        /// The status of the Express Connect circuit.
+                        /// The status of the Express Connect circuit. Valid values:
                         /// 
                         /// *   **Initial:** The application is under review.
                         /// *   **Approved**: The application is approved.
@@ -224,11 +224,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// The status of the VBR. Valid values:
                         /// 
                         /// *   **unconfirmed**
-                        /// *   **active**
+                        /// *   **active:**
                         /// *   **terminating**
                         /// *   **terminated**
                         /// *   **recovering**
-                        /// *   **deleting**
+                        /// *   **deleting:**
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string VlanId { get; set; }
 
                         /// <summary>
-                        /// The ID of the VBR interface, which can be used as the next hop of a VBR route.
+                        /// The ID of the VBR interface, which can be used as a next hop of a VBR route.
                         /// </summary>
                         [NameInMap("VlanInterfaceId")]
                         [Validation(Required=false)]
@@ -253,14 +253,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The bandwidth of the VBR. Unit: Mbit/s.
+                /// The bandwidth value of the VBR. Unit: Mbit/s.
                 /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public int? Bandwidth { get; set; }
 
                 /// <summary>
-                /// The circuit code of the Express Connect circuit. The circuit code is provided by the Internet service provider (ISP).
+                /// The circuit code of the Express Connect circuit, which is provided by the connectivity provider.
                 /// </summary>
                 [NameInMap("CircuitCode")]
                 [Validation(Required=false)]
@@ -299,16 +299,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? DetectMultiplier { get; set; }
 
                 /// <summary>
-                /// The ID of the ECC instance.
+                /// The ID of the Express Cloud Connect (ECC) instance.
                 /// </summary>
                 [NameInMap("EccId")]
                 [Validation(Required=false)]
                 public string EccId { get; set; }
 
+                /// <summary>
+                /// The status of the ECR. Valid values:
+                /// 
+                /// *   **Attached**
+                /// *   **Attaching**
+                /// *   **Detached**
+                /// *   **Detaching**
+                /// *   If no value is returned, the VBR is not attached to a CEN instance.
+                /// </summary>
                 [NameInMap("EcrAttatchStatus")]
                 [Validation(Required=false)]
                 public string EcrAttatchStatus { get; set; }
 
+                /// <summary>
+                /// The ID of the Express Connect Router (ECR).
+                /// </summary>
                 [NameInMap("EcrId")]
                 [Validation(Required=false)]
                 public string EcrId { get; set; }
@@ -328,14 +340,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public bool? EnableIpv6 { get; set; }
 
                 /// <summary>
-                /// The IPv4 address of the gateway device on the Alibaba Cloud side.
+                /// The IPv4 address of the VBR on the Alibaba Cloud side.
                 /// </summary>
                 [NameInMap("LocalGatewayIp")]
                 [Validation(Required=false)]
                 public string LocalGatewayIp { get; set; }
 
                 /// <summary>
-                /// The IPv6 address of the gateway device on the Alibaba Cloud side.
+                /// The IPv6 address of the VBR on the Alibaba Cloud side.
                 /// </summary>
                 [NameInMap("LocalIpv6GatewayIp")]
                 [Validation(Required=false)]
@@ -356,7 +368,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? MinTxInterval { get; set; }
 
                 /// <summary>
-                /// The name of the VBR.
+                /// The VBR name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -365,8 +377,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The billing method of the VBR. Valid values:
                 /// 
-                /// *   **PrePaid**: subscription. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
-                /// *   **PostPaid**: pay-as-you-go
+                /// *   **PrePaid:** subscription. If you choose this billing method, make sure that your account supports balance payments or credit payments.
+                /// *   **PostPaid:** pay-as-you-go.
                 /// </summary>
                 [NameInMap("PConnVbrChargeType")]
                 [Validation(Required=false)]
@@ -380,37 +392,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string PConnVbrExpireTime { get; set; }
 
                 /// <summary>
-                /// The IPv4 address of the gateway device on the user side.
+                /// The IPv4 address of the VBR on the user side.
                 /// </summary>
                 [NameInMap("PeerGatewayIp")]
                 [Validation(Required=false)]
                 public string PeerGatewayIp { get; set; }
 
                 /// <summary>
-                /// The IPv6 address of the gateway device on the user side.
+                /// The IPv6 address of the VBR on the user side.
                 /// </summary>
                 [NameInMap("PeerIpv6GatewayIp")]
                 [Validation(Required=false)]
                 public string PeerIpv6GatewayIp { get; set; }
 
                 /// <summary>
-                /// The subnet mask of the IPv6 addresses configured on the user side and Alibaba Cloud side.
+                /// The subnet mask for the IPv6 addresses on the user side and on the Alibaba Cloud side.
                 /// </summary>
                 [NameInMap("PeeringIpv6SubnetMask")]
                 [Validation(Required=false)]
                 public string PeeringIpv6SubnetMask { get; set; }
 
                 /// <summary>
-                /// The subnet mask of the IPv4 addresses configured on the user side and Alibaba Cloud side.
+                /// The subnet mask for the IPv4 addresses on the Alibaba Cloud side and on the user side.
                 /// </summary>
                 [NameInMap("PeeringSubnetMask")]
                 [Validation(Required=false)]
                 public string PeeringSubnetMask { get; set; }
 
                 /// <summary>
-                /// The business status of the Express Connect circuit.
+                /// The business status of the Express Connect circuit. Valid values:
                 /// 
-                /// *   **Normal:** The Express Connect circuit is running asnormal.
+                /// *   **Normal:** The Express Connect circuit is running as normal.
                 /// *   **FinancialLocked:** The Express Connect circuit is locked due to overdue payments.
                 /// </summary>
                 [NameInMap("PhysicalConnectionBusinessStatus")]
@@ -425,14 +437,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string PhysicalConnectionId { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.
+                /// The ID of the account to which the Express Connect circuit belongs.
                 /// </summary>
                 [NameInMap("PhysicalConnectionOwnerUid")]
                 [Validation(Required=false)]
                 public string PhysicalConnectionOwnerUid { get; set; }
 
                 /// <summary>
-                /// The status of the Express Connect circuit.
+                /// The status of the Express Connect circuit. Valid values:
                 /// 
                 /// *   **Initial:** The application is under review.
                 /// *   **Approved**: The application is approved.
@@ -450,26 +462,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string PhysicalConnectionStatus { get; set; }
 
                 /// <summary>
-                /// The time when the status of the VBR last changed from **terminated** to **active**.
+                /// The last time when the status of the VBR changed from **terminated** to **active**.
                 /// </summary>
                 [NameInMap("RecoveryTime")]
                 [Validation(Required=false)]
                 public string RecoveryTime { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
+                /// 
+                /// For more information about resource groups, see [Resource groups](https://help.aliyun.com/document_detail/94475.html).
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The ID of the VBR route table.
+                /// The ID of the route table of the VBR.
                 /// </summary>
                 [NameInMap("RouteTableId")]
                 [Validation(Required=false)]
                 public string RouteTableId { get; set; }
 
+                /// <summary>
+                /// Indicates whether to allow service access between data centers. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// 
+                /// >  If no value is returned, service access between data centers is not allowed.
+                /// </summary>
                 [NameInMap("SitelinkEnable")]
                 [Validation(Required=false)]
                 public bool? SitelinkEnable { get; set; }
@@ -482,14 +504,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// *   **terminating**
                 /// *   **terminated**
                 /// *   **recovering**
-                /// *   **deleting**
+                /// *   **deleting:**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags.
+                /// The tag of the resource.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -500,14 +522,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeTagsTags> Tags { get; set; }
                     public class DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeTagsTags : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The tag key of the resource.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The tag value of the resource.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -518,14 +540,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The time when the VBR was last disabled.
+                /// The last time when the VBR was terminated.
                 /// </summary>
                 [NameInMap("TerminationTime")]
                 [Validation(Required=false)]
                 public string TerminationTime { get; set; }
 
                 /// <summary>
-                /// The type of the VBR.
+                /// The VBR type.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

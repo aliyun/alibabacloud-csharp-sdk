@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AccessPointId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values:
+        /// Specifies whether to enable automatic payments. Valid values:
         /// 
         /// *   **false** (default): disables automatic payment.
-        /// *   **true**: enables automatic payment.
+        /// *   **true**
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The port type. Valid values:
+        /// The port type of the Express Connect circuit. Valid values:
         /// 
         /// *   **100Base-T**: 100 Mbit/s copper Ethernet port
         /// *   **1000Base-T** (default): 1,000 Mbit/s copper Ethernet port
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
         /// *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
         /// 
-        /// >  Whether 40GBase-LR and 100GBase-LR ports can be created is based on resource supplies. For more information, contact your business manager.
+        /// >  Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.
         /// </summary>
         [NameInMap("PortType")]
         [Validation(Required=false)]
         public string PortType { get; set; }
 
         /// <summary>
-        /// The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.
+        /// The ID of the redundant physical connection. The redundant physical connection must be in the **Allocated**, **Confirmed**, or **Enabled** state.
         /// </summary>
         [NameInMap("RedundantPhysicalConnectionId")]
         [Validation(Required=false)]

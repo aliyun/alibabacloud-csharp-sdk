@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </summary>
             [NameInMap("UserType")]
             [Validation(Required=false)]
-            public bool? UserType { get; set; }
+            public string UserType { get; set; }
 
             /// <summary>
             /// The zone of the IP address pool. This parameter is returned only when the service type of the IP address pool is CloudBox.
