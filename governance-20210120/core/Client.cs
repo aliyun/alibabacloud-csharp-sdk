@@ -1086,6 +1086,546 @@ namespace AlibabaCloud.SDK.Governance20210120
         }
 
         /**
+         * @summary 查看治理检测定义
+         *
+         * @param request ListEvaluationMetadataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEvaluationMetadataResponse
+         */
+        public ListEvaluationMetadataResponse ListEvaluationMetadataWithOptions(ListEvaluationMetadataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvaluationMetadata",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvaluationMetadataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查看治理检测定义
+         *
+         * @param request ListEvaluationMetadataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEvaluationMetadataResponse
+         */
+        public async Task<ListEvaluationMetadataResponse> ListEvaluationMetadataWithOptionsAsync(ListEvaluationMetadataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvaluationMetadata",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvaluationMetadataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查看治理检测定义
+         *
+         * @param request ListEvaluationMetadataRequest
+         * @return ListEvaluationMetadataResponse
+         */
+        public ListEvaluationMetadataResponse ListEvaluationMetadata(ListEvaluationMetadataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEvaluationMetadataWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查看治理检测定义
+         *
+         * @param request ListEvaluationMetadataRequest
+         * @return ListEvaluationMetadataResponse
+         */
+        public async Task<ListEvaluationMetadataResponse> ListEvaluationMetadataAsync(ListEvaluationMetadataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEvaluationMetadataWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 获取云治理中心治理检测项结果详情
+         *
+         * @param request ListEvaluationMetricDetailsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEvaluationMetricDetailsResponse
+         */
+        public ListEvaluationMetricDetailsResponse ListEvaluationMetricDetailsWithOptions(ListEvaluationMetricDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvaluationMetricDetails",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvaluationMetricDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取云治理中心治理检测项结果详情
+         *
+         * @param request ListEvaluationMetricDetailsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEvaluationMetricDetailsResponse
+         */
+        public async Task<ListEvaluationMetricDetailsResponse> ListEvaluationMetricDetailsWithOptionsAsync(ListEvaluationMetricDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvaluationMetricDetails",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvaluationMetricDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取云治理中心治理检测项结果详情
+         *
+         * @param request ListEvaluationMetricDetailsRequest
+         * @return ListEvaluationMetricDetailsResponse
+         */
+        public ListEvaluationMetricDetailsResponse ListEvaluationMetricDetails(ListEvaluationMetricDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEvaluationMetricDetailsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取云治理中心治理检测项结果详情
+         *
+         * @param request ListEvaluationMetricDetailsRequest
+         * @return ListEvaluationMetricDetailsResponse
+         */
+        public async Task<ListEvaluationMetricDetailsResponse> ListEvaluationMetricDetailsAsync(ListEvaluationMetricDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEvaluationMetricDetailsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查看检测结果
+         *
+         * @param request ListEvaluationResultsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEvaluationResultsResponse
+         */
+        public ListEvaluationResultsResponse ListEvaluationResultsWithOptions(ListEvaluationResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvaluationResults",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvaluationResultsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查看检测结果
+         *
+         * @param request ListEvaluationResultsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEvaluationResultsResponse
+         */
+        public async Task<ListEvaluationResultsResponse> ListEvaluationResultsWithOptionsAsync(ListEvaluationResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvaluationResults",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvaluationResultsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查看检测结果
+         *
+         * @param request ListEvaluationResultsRequest
+         * @return ListEvaluationResultsResponse
+         */
+        public ListEvaluationResultsResponse ListEvaluationResults(ListEvaluationResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEvaluationResultsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查看检测结果
+         *
+         * @param request ListEvaluationResultsRequest
+         * @return ListEvaluationResultsResponse
+         */
+        public async Task<ListEvaluationResultsResponse> ListEvaluationResultsAsync(ListEvaluationResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEvaluationResultsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查看治理检测定义
+         *
+         * @param request ListEvaluationScoreHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEvaluationScoreHistoryResponse
+         */
+        public ListEvaluationScoreHistoryResponse ListEvaluationScoreHistoryWithOptions(ListEvaluationScoreHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvaluationScoreHistory",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvaluationScoreHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查看治理检测定义
+         *
+         * @param request ListEvaluationScoreHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEvaluationScoreHistoryResponse
+         */
+        public async Task<ListEvaluationScoreHistoryResponse> ListEvaluationScoreHistoryWithOptionsAsync(ListEvaluationScoreHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvaluationScoreHistory",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvaluationScoreHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查看治理检测定义
+         *
+         * @param request ListEvaluationScoreHistoryRequest
+         * @return ListEvaluationScoreHistoryResponse
+         */
+        public ListEvaluationScoreHistoryResponse ListEvaluationScoreHistory(ListEvaluationScoreHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEvaluationScoreHistoryWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查看治理检测定义
+         *
+         * @param request ListEvaluationScoreHistoryRequest
+         * @return ListEvaluationScoreHistoryResponse
+         */
+        public async Task<ListEvaluationScoreHistoryResponse> ListEvaluationScoreHistoryAsync(ListEvaluationScoreHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEvaluationScoreHistoryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 运行云治理中心治理检测
+         *
+         * @param request RunEvaluationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunEvaluationResponse
+         */
+        public RunEvaluationResponse RunEvaluationWithOptions(RunEvaluationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["Scope"] = request.Scope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunEvaluation",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunEvaluationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 运行云治理中心治理检测
+         *
+         * @param request RunEvaluationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunEvaluationResponse
+         */
+        public async Task<RunEvaluationResponse> RunEvaluationWithOptionsAsync(RunEvaluationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["Scope"] = request.Scope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunEvaluation",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunEvaluationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 运行云治理中心治理检测
+         *
+         * @param request RunEvaluationRequest
+         * @return RunEvaluationResponse
+         */
+        public RunEvaluationResponse RunEvaluation(RunEvaluationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunEvaluationWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 运行云治理中心治理检测
+         *
+         * @param request RunEvaluationRequest
+         * @return RunEvaluationResponse
+         */
+        public async Task<RunEvaluationResponse> RunEvaluationAsync(RunEvaluationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunEvaluationWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 更新账号工厂基线
          *
          * @param request UpdateAccountFactoryBaselineRequest
