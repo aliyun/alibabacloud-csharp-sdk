@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class UpdateApplicationGroupRequest : TeaModel {
+    public class UpdateApplicationGroupShrinkRequest : TeaModel {
         /// <summary>
         /// The application name.
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Parameters { get; set; }
+        public string ParametersShrink { get; set; }
 
         /// <summary>
         /// The region ID. Set the value to cn-hangzhou.

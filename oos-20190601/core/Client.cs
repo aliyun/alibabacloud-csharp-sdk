@@ -9892,13 +9892,19 @@ namespace AlibabaCloud.SDK.Oos20190601
         /**
          * @summary Updates the information of an application group. You can call this operation only for the application groups that reside in the China (Hangzhou) region. Use an endpoint of the China (Hangzhou) region.
          *
-         * @param request UpdateApplicationGroupRequest
+         * @param tmpReq UpdateApplicationGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateApplicationGroupResponse
          */
-        public UpdateApplicationGroupResponse UpdateApplicationGroupWithOptions(UpdateApplicationGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateApplicationGroupResponse UpdateApplicationGroupWithOptions(UpdateApplicationGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateApplicationGroupShrinkRequest request = new UpdateApplicationGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
             {
@@ -9911,6 +9917,14 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewName))
             {
                 query["NewName"] = request.NewName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationName))
+            {
+                query["OperationName"] = request.OperationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParametersShrink))
+            {
+                query["Parameters"] = request.ParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9938,13 +9952,19 @@ namespace AlibabaCloud.SDK.Oos20190601
         /**
          * @summary Updates the information of an application group. You can call this operation only for the application groups that reside in the China (Hangzhou) region. Use an endpoint of the China (Hangzhou) region.
          *
-         * @param request UpdateApplicationGroupRequest
+         * @param tmpReq UpdateApplicationGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateApplicationGroupResponse
          */
-        public async Task<UpdateApplicationGroupResponse> UpdateApplicationGroupWithOptionsAsync(UpdateApplicationGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateApplicationGroupResponse> UpdateApplicationGroupWithOptionsAsync(UpdateApplicationGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateApplicationGroupShrinkRequest request = new UpdateApplicationGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
             {
@@ -9957,6 +9977,14 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewName))
             {
                 query["NewName"] = request.NewName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationName))
+            {
+                query["OperationName"] = request.OperationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParametersShrink))
+            {
+                query["Parameters"] = request.ParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

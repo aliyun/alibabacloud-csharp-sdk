@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("OperationMetadata")]
+            [Validation(Required=false)]
+            public string OperationMetadata { get; set; }
+
             /// <summary>
             /// The creation progress of the application instance.
             /// </summary>
