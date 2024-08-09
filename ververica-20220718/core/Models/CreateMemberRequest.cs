@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class CreateMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The mappings between the ID and permissions of the member.</para>
+        /// The mappings between the ID and permissions of the member.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

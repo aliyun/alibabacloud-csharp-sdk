@@ -10,8 +10,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class CreateDeploymentRequest : TeaModel {
         /// <summary>
-        /// <para>The content of the deployment.</para>
-        /// <para>This parameter is required.</para>
+        /// The content of the deployment.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

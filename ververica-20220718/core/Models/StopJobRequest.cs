@@ -10,8 +10,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class StopJobRequest : TeaModel {
         /// <summary>
-        /// <para>The parameter that is used to stop the job.</para>
-        /// <para>This parameter is required.</para>
+        /// The parameter that is used to stop the job.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

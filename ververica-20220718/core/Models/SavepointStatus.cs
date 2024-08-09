@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public SavepointFailure Failure { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>COMPLETED</para>
-        /// </summary>
         [NameInMap("state")]
         [Validation(Required=false)]
         public string State { get; set; }

@@ -10,8 +10,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class CreateVariableRequest : TeaModel {
         /// <summary>
-        /// <para>The parameter that is used to create the variable.</para>
-        /// <para>This parameter is required.</para>
+        /// The parameter that is used to create the variable.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

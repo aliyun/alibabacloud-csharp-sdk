@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,10 +16,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public JarArtifact JarArtifact { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>SQLSCRIPT</para>
-        /// </summary>
         [NameInMap("kind")]
         [Validation(Required=false)]
         public string Kind { get; set; }

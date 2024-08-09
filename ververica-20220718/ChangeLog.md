@@ -1,3 +1,6 @@
+2024-08-09 Version: 1.3.1
+- Generated csharp 2022-07-18 for ververica.
+
 2024-07-23 Version: 1.3.0
 - Support API GetLatestJobStartLog.
 - Support API ListEditableNamespace.

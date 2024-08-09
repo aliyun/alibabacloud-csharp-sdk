@@ -10,32 +10,26 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class CreateSavepointRequest : TeaModel {
         /// <summary>
-        /// <para>The deployment ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The deployment ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>58718c99-3b29-4c5e-93bb-c9fc4ec6****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("deploymentId")]
         [Validation(Required=false)]
         public string DeploymentId { get; set; }
 
         /// <summary>
-        /// <para>The description of the savepoint.</para>
+        /// The description of the savepoint.
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the native format mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The native format mode is used.</description></item>
-        /// <item><description>false: The native format mode is not used.</description></item>
-        /// </list>
+        /// Specifies whether to use the native format mode. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// *   true: The native format mode is used.
+        /// *   false: The native format mode is not used.
         /// </summary>
         [NameInMap("nativeFormat")]
         [Validation(Required=false)]

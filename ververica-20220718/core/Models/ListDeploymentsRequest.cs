@@ -10,103 +10,76 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ListDeploymentsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the user who creates the deployment.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>183899668*******</para>
+        /// The ID of the user who creates the deployment.
         /// </summary>
         [NameInMap("creator")]
         [Validation(Required=false)]
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The execution mode of the deployment.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>BATCH</description></item>
-        /// <item><description>STREAMING</description></item>
-        /// </list>
+        /// The execution mode of the deployment.
         /// 
-        /// <b>Example:</b>
-        /// <para>STREAMING</para>
+        /// Valid values:
+        /// 
+        /// *   BATCH
+        /// *   STREAMING
         /// </summary>
         [NameInMap("executionMode")]
         [Validation(Required=false)]
         public string ExecutionMode { get; set; }
 
         /// <summary>
-        /// <para>The tag key.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>key</para>
+        /// The tag key.
         /// </summary>
         [NameInMap("labelKey")]
         [Validation(Required=false)]
         public string LabelKey { get; set; }
 
         /// <summary>
-        /// <para>The tag value. Separate multiple values with semicolon (;).</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>value1,value2</para>
+        /// The tag value. Separate multiple values with semicolon (;).
         /// </summary>
         [NameInMap("labelValueArray")]
         [Validation(Required=false)]
         public string LabelValueArray { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who modifies the deployment.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>183899668*******</para>
+        /// The ID of the user who modifies the deployment.
         /// </summary>
         [NameInMap("modifier")]
         [Validation(Required=false)]
         public string Modifier { get; set; }
 
         /// <summary>
-        /// <para>The name of the deployment.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vvp_ds_0522</para>
+        /// The name of the deployment.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number. Minimum value: 1. Default value: 1.
         /// </summary>
         [NameInMap("pageIndex")]
         [Validation(Required=false)]
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The number of entries per page. Valid values: 1 to 100. Default value: 10.
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The latest status of the deployment.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CANCELLED</description></item>
-        /// <item><description>FAILED</description></item>
-        /// <item><description>RUNNING</description></item>
-        /// <item><description>TRANSITIONING</description></item>
-        /// <item><description>FINISHED</description></item>
-        /// </list>
+        /// The latest status of the deployment.
         /// 
-        /// <b>Example:</b>
-        /// <para>RUNNING</para>
+        /// Valid values:
+        /// 
+        /// *   CANCELLED
+        /// *   FAILED
+        /// *   RUNNING
+        /// *   TRANSITIONING
+        /// *   FINISHED
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

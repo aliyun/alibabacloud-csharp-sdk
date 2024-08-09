@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UpdateMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The permission information about the member.</para>
+        /// The permission information about the member.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

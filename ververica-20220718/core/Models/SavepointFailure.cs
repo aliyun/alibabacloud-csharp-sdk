@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class SavepointFailure : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1655006835</para>
-        /// </summary>
         [NameInMap("failedAt")]
         [Validation(Required=false)]
         public long? FailedAt { get; set; }

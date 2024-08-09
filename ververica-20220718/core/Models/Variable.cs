@@ -9,39 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class Variable : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>This is a variable description</para>
-        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Plain</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("kind")]
         [Validation(Required=false)]
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>variableName</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>variableValue</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

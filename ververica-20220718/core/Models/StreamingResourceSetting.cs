@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public ExpertResourceSetting ExpertResourceSetting { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>EXPERT</para>
-        /// </summary>
         [NameInMap("resourceSettingMode")]
         [Validation(Required=false)]
         public string ResourceSettingMode { get; set; }

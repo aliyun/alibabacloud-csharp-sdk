@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class JobStatus : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>RUNNING</para>
-        /// </summary>
         [NameInMap("currentJobStatus")]
         [Validation(Required=false)]
         public string CurrentJobStatus { get; set; }

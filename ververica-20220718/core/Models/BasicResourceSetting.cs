@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public BasicResourceSettingSpec JobmanagerResourceSettingSpec { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>4</para>
-        /// </summary>
         [NameInMap("parallelism")]
         [Validation(Required=false)]
         public long? Parallelism { get; set; }

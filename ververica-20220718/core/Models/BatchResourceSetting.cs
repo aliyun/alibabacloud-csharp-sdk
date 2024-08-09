@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public BasicResourceSetting BasicResourceSetting { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
         [NameInMap("maxSlot")]
         [Validation(Required=false)]
         public long? MaxSlot { get; set; }
