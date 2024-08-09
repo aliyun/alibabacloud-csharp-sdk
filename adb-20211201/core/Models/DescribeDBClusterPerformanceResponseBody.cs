@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// 
                 ///         *   AnalyticDB_Avg_QueryRT: the average amount of time consumed by queries.
                 ///         *   AnalyticDB_Max_QueryRT: the maximum amount of time consumed by a single query.
-                ///         *   etl_avg_rt: the average amount of time consumed by extract-transform-load (ETL) operations.
+                ///         *   etl_avg_rt: the average amount of time consumed by extract, transform, load (ETL) operations.
                 ///         *   etl_max_rt: the maximum amount of time consumed by a single ETL operation.
                 /// 
                 ///     *   **AnalyticDB_QueryWaitTime**: the query wait time.
@@ -206,36 +206,30 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// 
                 ///         *   AnalyticDB_WLM_TotalQueries_Count: the total number of WLM queries.
                 /// 
-                /// *   APS
+                /// *   AnalyticDB Pipeline Service (APS)
                 /// 
-                ///     *   AnalyticDB_APS_BPS: the bytes per second (BPS) of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+                ///     *   AnalyticDB_APS_BPS: the bytes per second (BPS) of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.
                 /// 
                 ///         *   APS_Read_BPS: the read BPS of APS.
                 /// 
-                ///     *   AnalyticDB_APS_CPU: the CPU utilization of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+                ///     *   AnalyticDB_APS_CPU: the CPU utilization of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.
                 /// 
                 ///         *   APS_CPU_Avg_Usage_Percentage: the average CPU utilization of APS.
                 ///         *   APS_CPU_Max_Usage_Percentage: the maximum CPU utilization of APS.
                 /// 
-                ///     *   AnalyticDB_APS_Memory: the memory usage of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+                ///     *   AnalyticDB_APS_Memory: the memory usage of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.
                 /// 
                 ///         *   APS_Memory_Avg_Usage_Percentage: the average memory usage of APS.
                 ///         *   APS_Memory_Max_Usage_Percentage: the maximum memory usage of APS.
                 /// 
-                ///     *   AnalyticDB_APS_RPS: the number of records per second of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+                ///     *   AnalyticDB_APS_RPS: the number of records per second of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.
                 /// 
                 ///         *   APS_Read_RPS: the number of read records per second of APS.
                 /// 
-                ///     *   AnalyticDB_APS_RT: the response time of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+                ///     *   AnalyticDB_APS_RT: the response time of APS provided by the AnalyticDB for MySQL Data Lakehouse Edition cluster.
                 /// 
                 ///         *   APS_Read_Avg_RT: the average response time of APS.
                 ///         *   APS_Read_Max_RT: the maximum response time of APS.
-                /// 
-                /// *   *   *
-                ///     *   *
-                ///     *   *
-                ///     *   *
-                ///     *   *
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
