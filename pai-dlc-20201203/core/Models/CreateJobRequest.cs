@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string MountPath { get; set; }
 
+            [NameInMap("Options")]
+            [Validation(Required=false)]
+            public string Options { get; set; }
+
             [NameInMap("Uri")]
             [Validation(Required=false)]
             public string Uri { get; set; }
