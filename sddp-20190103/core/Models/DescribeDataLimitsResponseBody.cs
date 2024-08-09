@@ -159,6 +159,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? LastFinishedTime { get; set; }
 
+            [NameInMap("LastStartTime")]
+            [Validation(Required=false)]
+            public long? LastStartTime { get; set; }
+
             /// <summary>
             /// The region in which the data asset resides.
             /// </summary>
