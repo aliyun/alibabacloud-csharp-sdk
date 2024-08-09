@@ -14713,6 +14713,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["EipAffinity"] = request.EipAffinity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceId))
+            {
+                query["NetworkInterfaceId"] = request.NetworkInterfaceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -14800,6 +14804,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAffinity))
             {
                 query["EipAffinity"] = request.EipAffinity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceId))
+            {
+                query["NetworkInterfaceId"] = request.NetworkInterfaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -36479,6 +36487,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["NatGatewayId"] = request.NatGatewayId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIds))
+            {
+                query["NetworkInterfaceIds"] = request.NetworkInterfaceIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -36564,6 +36576,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
             {
                 query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIds))
+            {
+                query["NetworkInterfaceIds"] = request.NetworkInterfaceIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -55654,6 +55670,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["EipAffinity"] = request.EipAffinity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceId))
+            {
+                query["NetworkInterfaceId"] = request.NetworkInterfaceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -55734,6 +55754,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAffinity))
             {
                 query["EipAffinity"] = request.EipAffinity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceId))
+            {
+                query["NetworkInterfaceId"] = request.NetworkInterfaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

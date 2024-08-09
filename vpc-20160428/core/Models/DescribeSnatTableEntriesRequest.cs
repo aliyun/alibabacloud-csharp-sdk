@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
+        [NameInMap("NetworkInterfaceIds")]
+        [Validation(Required=false)]
+        public List<string> NetworkInterfaceIds { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
