@@ -13987,6 +13987,222 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @param request ListFlashSmsApplicationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFlashSmsApplicationsResponse
+         */
+        public ListFlashSmsApplicationsResponse ListFlashSmsApplicationsWithOptions(ListFlashSmsApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProviderId))
+            {
+                query["ProviderId"] = request.ProviderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlashSmsApplications",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request ListFlashSmsApplicationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFlashSmsApplicationsResponse
+         */
+        public async Task<ListFlashSmsApplicationsResponse> ListFlashSmsApplicationsWithOptionsAsync(ListFlashSmsApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProviderId))
+            {
+                query["ProviderId"] = request.ProviderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlashSmsApplications",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request ListFlashSmsApplicationsRequest
+         * @return ListFlashSmsApplicationsResponse
+         */
+        public ListFlashSmsApplicationsResponse ListFlashSmsApplications(ListFlashSmsApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFlashSmsApplicationsWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request ListFlashSmsApplicationsRequest
+         * @return ListFlashSmsApplicationsResponse
+         */
+        public async Task<ListFlashSmsApplicationsResponse> ListFlashSmsApplicationsAsync(ListFlashSmsApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFlashSmsApplicationsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @param request ListFlashSmsTemplatesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFlashSmsTemplatesResponse
+         */
+        public ListFlashSmsTemplatesResponse ListFlashSmsTemplatesWithOptions(ListFlashSmsTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProviderId))
+            {
+                query["ProviderId"] = request.ProviderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlashSmsTemplates",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request ListFlashSmsTemplatesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFlashSmsTemplatesResponse
+         */
+        public async Task<ListFlashSmsTemplatesResponse> ListFlashSmsTemplatesWithOptionsAsync(ListFlashSmsTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProviderId))
+            {
+                query["ProviderId"] = request.ProviderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlashSmsTemplates",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request ListFlashSmsTemplatesRequest
+         * @return ListFlashSmsTemplatesResponse
+         */
+        public ListFlashSmsTemplatesResponse ListFlashSmsTemplates(ListFlashSmsTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFlashSmsTemplatesWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request ListFlashSmsTemplatesRequest
+         * @return ListFlashSmsTemplatesResponse
+         */
+        public async Task<ListFlashSmsTemplatesResponse> ListFlashSmsTemplatesAsync(ListFlashSmsTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFlashSmsTemplatesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary ListGroupChatMessages
          *
          * @param request ListGroupChatMessagesRequest
