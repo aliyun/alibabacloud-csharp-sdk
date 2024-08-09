@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public string AndroidActivity { get; set; }
 
+        [NameInMap("AndroidBadgeAddNum")]
+        [Validation(Required=false)]
+        public int? AndroidBadgeAddNum { get; set; }
+
+        [NameInMap("AndroidBadgeClass")]
+        [Validation(Required=false)]
+        public string AndroidBadgeClass { get; set; }
+
+        [NameInMap("AndroidBadgeSetNum")]
+        [Validation(Required=false)]
+        public int? AndroidBadgeSetNum { get; set; }
+
         [NameInMap("AndroidBigBody")]
         [Validation(Required=false)]
         public string AndroidBigBody { get; set; }

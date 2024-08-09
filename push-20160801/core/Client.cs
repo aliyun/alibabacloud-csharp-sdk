@@ -1243,6 +1243,18 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidActivity"] = request.AndroidActivity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidBadgeAddNum))
+            {
+                query["AndroidBadgeAddNum"] = request.AndroidBadgeAddNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidBadgeClass))
+            {
+                query["AndroidBadgeClass"] = request.AndroidBadgeClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidBadgeSetNum))
+            {
+                query["AndroidBadgeSetNum"] = request.AndroidBadgeSetNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidBigBody))
             {
                 query["AndroidBigBody"] = request.AndroidBigBody;
@@ -1622,6 +1634,18 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidActivity))
             {
                 query["AndroidActivity"] = request.AndroidActivity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidBadgeAddNum))
+            {
+                query["AndroidBadgeAddNum"] = request.AndroidBadgeAddNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidBadgeClass))
+            {
+                query["AndroidBadgeClass"] = request.AndroidBadgeClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidBadgeSetNum))
+            {
+                query["AndroidBadgeSetNum"] = request.AndroidBadgeSetNum;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidBigBody))
             {
