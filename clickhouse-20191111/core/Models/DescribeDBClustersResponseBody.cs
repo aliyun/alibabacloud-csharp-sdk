@@ -147,6 +147,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public long? DBNodeStorage { get; set; }
 
+                [NameInMap("DbVersion")]
+                [Validation(Required=false)]
+                public string DbVersion { get; set; }
+
                 /// <summary>
                 /// The time when the cluster expired. The time is in the yyyy-MM-ddTHH:mm:ssZ format.
                 /// 

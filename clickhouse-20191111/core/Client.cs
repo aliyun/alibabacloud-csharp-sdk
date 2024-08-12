@@ -9016,6 +9016,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableWriteWindows))
+            {
+                query["DisableWriteWindows"] = request.DisableWriteWindows;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -9102,6 +9106,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableWriteWindows))
+            {
+                query["DisableWriteWindows"] = request.DisableWriteWindows;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

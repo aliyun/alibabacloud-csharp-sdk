@@ -20,12 +20,20 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public List<DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail> HistoryDetail { get; set; }
             public class DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail : TeaModel {
+                [NameInMap("DisableWriteWindows")]
+                [Validation(Required=false)]
+                public string DisableWriteWindows { get; set; }
+
                 /// <summary>
                 /// The progress of the data migration.
                 /// </summary>
                 [NameInMap("Progress")]
                 [Validation(Required=false)]
                 public string Progress { get; set; }
+
+                [NameInMap("SourceControlVersion")]
+                [Validation(Required=false)]
+                public string SourceControlVersion { get; set; }
 
                 /// <summary>
                 /// The ID of the source cluster.
@@ -43,6 +51,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("TargetControlVersion")]
+                [Validation(Required=false)]
+                public string TargetControlVersion { get; set; }
 
                 /// <summary>
                 /// The ID of the destination cluster.

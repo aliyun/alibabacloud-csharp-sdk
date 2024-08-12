@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("DisableWriteWindows")]
+        [Validation(Required=false)]
+        public string DisableWriteWindows { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
