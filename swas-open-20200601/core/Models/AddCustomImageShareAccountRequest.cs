@@ -13,17 +13,24 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class AddCustomImageShareAccountRequest : TeaModel {
         /// <summary>
+        /// The IDs of the Alibaba Cloud accounts with which you want to share the custom image.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]
         public List<long?> Account { get; set; }
 
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// The ID of the custom image.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
@@ -31,6 +38,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// The region ID of the simple application server. You can call the [ListRegions](https://help.aliyun.com/document_detail/189315.html) operation to query the most recent region list.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

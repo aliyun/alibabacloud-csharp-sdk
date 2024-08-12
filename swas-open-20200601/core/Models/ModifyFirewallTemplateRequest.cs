@@ -86,13 +86,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// The ID of the simple application server to which the firewall template is applied.
-        /// </summary>
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        /// <summary>
         /// The name of the firewall template.
         /// </summary>
         [NameInMap("Name")]

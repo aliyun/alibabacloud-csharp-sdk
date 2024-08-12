@@ -57,12 +57,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// The ID of the resource group.
-        /// </summary>
-        [NameInMap("ResoureGroupId")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string ResoureGroupId { get; set; }
+        public string ResourceGroupId { get; set; }
 
         /// <summary>
         /// The ID of the system disk snapshot.

@@ -35,13 +35,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public List<string> FirewallTemplateRuleId { get; set; }
 
         /// <summary>
-        /// The ID of the simple application server to which the firewall template is applied.
-        /// </summary>
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        /// <summary>
         /// The region ID of the simple application server. You can call the [ListRegions](https://help.aliyun.com/document_detail/189315.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.

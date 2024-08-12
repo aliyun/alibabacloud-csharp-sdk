@@ -24,13 +24,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string FirewallTemplateId { get; set; }
 
         /// <summary>
-        /// The ID of the simple application server to which the template belongs.
-        /// </summary>
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        /// <summary>
         /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]

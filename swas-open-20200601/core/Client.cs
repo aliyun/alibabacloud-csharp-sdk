@@ -38,7 +38,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 共享镜像给用户
+         * @summary Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.
+         *
+         * @description *   Before you share a custom image, make sure that all sensitive data and files are removed from the image.
+         * *   The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.
          *
          * @param request AddCustomImageShareAccountRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -84,7 +87,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 共享镜像给用户
+         * @summary Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.
+         *
+         * @description *   Before you share a custom image, make sure that all sensitive data and files are removed from the image.
+         * *   The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.
          *
          * @param request AddCustomImageShareAccountRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -130,7 +136,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 共享镜像给用户
+         * @summary Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.
+         *
+         * @description *   Before you share a custom image, make sure that all sensitive data and files are removed from the image.
+         * *   The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.
          *
          * @param request AddCustomImageShareAccountRequest
          * @return AddCustomImageShareAccountResponse
@@ -142,7 +151,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 共享镜像给用户
+         * @summary Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.
+         *
+         * @description *   Before you share a custom image, make sure that all sensitive data and files are removed from the image.
+         * *   The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.
          *
          * @param request AddCustomImageShareAccountRequest
          * @return AddCustomImageShareAccountResponse
@@ -298,10 +310,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             {
                 query["FirewallTemplateId"] = request.FirewallTemplateId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
@@ -349,10 +357,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallTemplateId))
             {
                 query["FirewallTemplateId"] = request.FirewallTemplateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -744,9 +748,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResoureGroupId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
-                query["ResoureGroupId"] = request.ResoureGroupId;
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemSnapshotId))
             {
@@ -822,9 +826,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResoureGroupId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
-                query["ResoureGroupId"] = request.ResoureGroupId;
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemSnapshotId))
             {
@@ -2682,10 +2686,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             {
                 query["FirewallTemplateRuleId"] = request.FirewallTemplateRuleId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2733,10 +2733,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallTemplateRuleId))
             {
                 query["FirewallTemplateRuleId"] = request.FirewallTemplateRuleId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -2810,10 +2806,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             {
                 query["FirewallTemplateId"] = request.FirewallTemplateId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2857,10 +2849,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallTemplateId))
             {
                 query["FirewallTemplateId"] = request.FirewallTemplateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4752,10 +4740,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             {
                 query["FirewallTemplateId"] = request.FirewallTemplateId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -4809,10 +4793,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallTemplateId))
             {
                 query["FirewallTemplateId"] = request.FirewallTemplateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -6874,7 +6854,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 查询镜像共享给的用户
+         * @summary Queries information about custom images that are shared across Alibaba Cloud accounts in a region.
          *
          * @param request ListCustomImageShareAccountsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6924,7 +6904,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 查询镜像共享给的用户
+         * @summary Queries information about custom images that are shared across Alibaba Cloud accounts in a region.
          *
          * @param request ListCustomImageShareAccountsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6974,7 +6954,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 查询镜像共享给的用户
+         * @summary Queries information about custom images that are shared across Alibaba Cloud accounts in a region.
          *
          * @param request ListCustomImageShareAccountsRequest
          * @return ListCustomImageShareAccountsResponse
@@ -6986,7 +6966,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 查询镜像共享给的用户
+         * @summary Queries information about custom images that are shared across Alibaba Cloud accounts in a region.
          *
          * @param request ListCustomImageShareAccountsRequest
          * @return ListCustomImageShareAccountsResponse
@@ -9354,10 +9334,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             {
                 query["FirewallTemplateRule"] = request.FirewallTemplateRule;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -9413,10 +9389,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallTemplateRule))
             {
                 query["FirewallTemplateRule"] = request.FirewallTemplateRule;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -10106,7 +10078,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 取消共享镜像到用户
+         * @summary Unshares a custom image that is shared across Alibaba Cloud accounts.
          *
          * @param request RemoveCustomImageShareAccountRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10152,7 +10124,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 取消共享镜像到用户
+         * @summary Unshares a custom image that is shared across Alibaba Cloud accounts.
          *
          * @param request RemoveCustomImageShareAccountRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10198,7 +10170,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 取消共享镜像到用户
+         * @summary Unshares a custom image that is shared across Alibaba Cloud accounts.
          *
          * @param request RemoveCustomImageShareAccountRequest
          * @return RemoveCustomImageShareAccountResponse
@@ -10210,7 +10182,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         }
 
         /**
-         * @summary 取消共享镜像到用户
+         * @summary Unshares a custom image that is shared across Alibaba Cloud accounts.
          *
          * @param request RemoveCustomImageShareAccountRequest
          * @return RemoveCustomImageShareAccountResponse
