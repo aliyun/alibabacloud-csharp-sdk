@@ -11759,6 +11759,106 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
+         * @summary 获取网关全局配置
+         *
+         * @param request GetGatewayConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetGatewayConfigResponse
+         */
+        public GetGatewayConfigResponse GetGatewayConfigWithOptions(GetGatewayConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayConfig",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取网关全局配置
+         *
+         * @param request GetGatewayConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetGatewayConfigResponse
+         */
+        public async Task<GetGatewayConfigResponse> GetGatewayConfigWithOptionsAsync(GetGatewayConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayConfig",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取网关全局配置
+         *
+         * @param request GetGatewayConfigRequest
+         * @return GetGatewayConfigResponse
+         */
+        public GetGatewayConfigResponse GetGatewayConfig(GetGatewayConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetGatewayConfigWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取网关全局配置
+         *
+         * @param request GetGatewayConfigRequest
+         * @return GetGatewayConfigResponse
+         */
+        public async Task<GetGatewayConfigResponse> GetGatewayConfigAsync(GetGatewayConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetGatewayConfigWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the details of a domain name associated with a gateway.
          *
          * @param request GetGatewayDomainDetailRequest
