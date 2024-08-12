@@ -3,6 +3,11 @@
 - Update API RecoveryFile: update param BackupFilePath.
 
 
+2024-08-12 Version: 1.3.3
+- Update API RecoveryFile: update param BackupFileId.
+- Update API RecoveryFile: update param BackupFilePath.
+
+
 2024-07-29 Version: 1.3.2
 - Update API CheckResourceStock: add param GpuAcceleration.
 
