@@ -205,6 +205,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public bool? EnableGreyTagRoute { get; set; }
 
+            [NameInMap("EnableIdle")]
+            [Validation(Required=false)]
+            public bool? EnableIdle { get; set; }
+
             /// <summary>
             /// The environment variables. Variable description:
             /// 
@@ -328,6 +332,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("MicroRegistration")]
             [Validation(Required=false)]
             public string MicroRegistration { get; set; }
+
+            [NameInMap("MicroRegistrationConfig")]
+            [Validation(Required=false)]
+            public string MicroRegistrationConfig { get; set; }
 
             /// <summary>
             /// The percentage of the minimum number of available instances. Valid values:
