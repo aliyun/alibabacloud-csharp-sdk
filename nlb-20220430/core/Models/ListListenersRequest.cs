@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SecSensorEnabled")]
+        [Validation(Required=false)]
+        public string SecSensorEnabled { get; set; }
+
         /// <summary>
         /// The tags.
         /// </summary>

@@ -3376,6 +3376,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecSensorEnabled))
+            {
+                query["SecSensorEnabled"] = request.SecSensorEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -3433,6 +3437,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecSensorEnabled))
+            {
+                query["SecSensorEnabled"] = request.SecSensorEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
