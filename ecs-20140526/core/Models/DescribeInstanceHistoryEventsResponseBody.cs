@@ -289,6 +289,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Reason { get; set; }
 
+                [NameInMap("ReasonCode")]
+                [Validation(Required=false)]
+                public string ReasonCode { get; set; }
+
                 /// <summary>
                 /// The type of the resource. Valid values:
                 /// 
