@@ -4423,6 +4423,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         }
 
         /**
+         * @summary 文件恢复
+         *
          * @param request RecoveryFileRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return RecoveryFileResponse
@@ -4471,6 +4473,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         }
 
         /**
+         * @summary 文件恢复
+         *
          * @param request RecoveryFileRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return RecoveryFileResponse
@@ -4519,6 +4523,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         }
 
         /**
+         * @summary 文件恢复
+         *
          * @param request RecoveryFileRequest
          * @return RecoveryFileResponse
          */
@@ -4529,6 +4535,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         }
 
         /**
+         * @summary 文件恢复
+         *
          * @param request RecoveryFileRequest
          * @return RecoveryFileResponse
          */

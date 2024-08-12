@@ -16,16 +16,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> AndroidInstanceIdList { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("BackupFileId")]
         [Validation(Required=false)]
         public string BackupFileId { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("BackupFilePath")]
         [Validation(Required=false)]
         public string BackupFilePath { get; set; }
