@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UpdateCsrRequest : TeaModel {
         /// <summary>
-        /// CSR ID。
+        /// The ID of the CSR.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CsrId { get; set; }
 
         /// <summary>
+        /// The private key content of the certificate in the PEM format.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Key")]

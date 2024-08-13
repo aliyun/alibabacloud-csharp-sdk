@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public bool? BuyInAliyun { get; set; }
 
         /// <summary>
-        /// The content of the certificate.
+        /// The content of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
         /// </summary>
         [NameInMap("Cert")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string City { get; set; }
 
         /// <summary>
-        /// The parent domain name that is bound to the certificate.
+        /// The primary domain name that is bound to the certificate.
         /// </summary>
         [NameInMap("Common")]
         [Validation(Required=false)]
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Country { get; set; }
 
         /// <summary>
-        /// The content of the encryption certificate in PEM format.
+        /// The content of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
         /// </summary>
         [NameInMap("EncryptCert")]
         [Validation(Required=false)]
         public string EncryptCert { get; set; }
 
         /// <summary>
-        /// The private key of the encryption certificate in the PEM format.
+        /// The private key of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
         /// </summary>
         [NameInMap("EncryptPrivateKey")]
         [Validation(Required=false)]
@@ -100,6 +100,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// The instance ID.
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
         /// The certificate authority (CA) that issued the certificate.
         /// </summary>
         [NameInMap("Issuer")]
@@ -107,7 +114,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// The private key.
+        /// The private key of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
@@ -121,7 +128,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the certificate application order.
+        /// The order ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -149,7 +156,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the certificate belongs.
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -163,14 +170,28 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Sans { get; set; }
 
         /// <summary>
-        /// The content of the signing certificate in the PEM format.
+        /// The certificate serial No.
+        /// </summary>
+        [NameInMap("SerialNo")]
+        [Validation(Required=false)]
+        public string SerialNo { get; set; }
+
+        /// <summary>
+        /// The certificate sha2 value.
+        /// </summary>
+        [NameInMap("Sha2")]
+        [Validation(Required=false)]
+        public string Sha2 { get; set; }
+
+        /// <summary>
+        /// The content of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
         /// </summary>
         [NameInMap("SignCert")]
         [Validation(Required=false)]
         public string SignCert { get; set; }
 
         /// <summary>
-        /// The private key of the signing certificate in the PEM format.
+        /// The private key of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
         /// </summary>
         [NameInMap("SignPrivateKey")]
         [Validation(Required=false)]

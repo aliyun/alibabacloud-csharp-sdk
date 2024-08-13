@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CreateDeploymentJobResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the deployment task.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public long? JobId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

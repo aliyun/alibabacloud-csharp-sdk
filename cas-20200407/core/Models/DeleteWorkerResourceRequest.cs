@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DeleteWorkerResourceRequest : TeaModel {
         /// <summary>
+        /// The ID of the deployment task.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("JobId")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? JobId { get; set; }
 
         /// <summary>
+        /// The ID of the worker for the deployment task.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("WorkerId")]

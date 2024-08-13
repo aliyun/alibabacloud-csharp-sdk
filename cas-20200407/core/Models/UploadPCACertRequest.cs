@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// {
-        ///     "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"
-        /// }
+        /// The ID of the repository.
+        /// 
+        /// >  You can call the [ListCertWarehouse](https://help.aliyun.com/document_detail/455805.html) operation to query the ID.
         /// 
         /// This parameter is required.
         /// </summary>

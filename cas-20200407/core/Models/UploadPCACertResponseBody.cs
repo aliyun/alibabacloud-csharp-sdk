@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UploadPCACertResponseBody : TeaModel {
+        /// <summary>
+        /// The unique identifier of the certificate.
+        /// </summary>
         [NameInMap("Identifier")]
         [Validation(Required=false)]
         public string Identifier { get; set; }

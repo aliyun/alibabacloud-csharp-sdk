@@ -1,3 +1,8 @@
+2024-08-13 Version: 1.3.1
+- Update API GetUserCertificateDetail: update response param.
+- Update API ListCloudResources: add param CertIds.
+
+
 2024-06-13 Version: 1.3.0
 - Support API MoveResourceGroup.
 

@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// The ID of the certificate.
         /// 
+        /// >  You can call the [ListUserCertificateOrder](https://help.aliyun.com/document_detail/455804.html) operation to obtain the ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("CertId")]

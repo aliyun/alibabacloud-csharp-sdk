@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CancelOrderRequestRequest : TeaModel {
         /// <summary>
-        /// The ID of the certificate application order that you want to cancel.
+        /// The order ID.
         /// 
-        /// >  After you call the [CreateCertificateForPackageRequest](~~CreateCertificateForPackageRequest~~), [CreateCertificateRequest](~~CreateCertificateRequest~~), or [CreateCertificateWithCsrRequest](~~CreateCertificateWithCsrRequest~~) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter.
+        /// >  You can call the [ListUserCertificateOrder](https://help.aliyun.com/document_detail/455804.html) operation to obtain the ID.
         /// 
         /// This parameter is required.
         /// </summary>

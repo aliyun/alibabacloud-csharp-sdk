@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListDeploymentJobResourceRequest : TeaModel {
         /// <summary>
+        /// The ID of the deployment task.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("JobId")]

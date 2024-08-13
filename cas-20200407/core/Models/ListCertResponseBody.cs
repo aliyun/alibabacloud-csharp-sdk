@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCertResponseBody : TeaModel {
         /// <summary>
-        /// The certificates.
+        /// An array that consists of the certificates.
         /// </summary>
         [NameInMap("CertList")]
         [Validation(Required=false)]
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? BeforeDate { get; set; }
 
             /// <summary>
-            /// The type of the certificate.
+            /// 证书的类型 。取值：
             /// 
-            /// *   **CA**: the CA certificate.
-            /// *   **CERT**: a issued certificate.
+            /// - **CA**：表示CA证书。
+            /// - **CERT**：表示签发的证书。
             /// </summary>
             [NameInMap("CertType")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Issuer { get; set; }
 
             /// <summary>
-            /// All domain names that are bound to the certificate. Multiple domain names are separated by commas (,).
+            /// The domain names that are bound to the certificate. Multiple domain names are separated by commas.
             /// </summary>
             [NameInMap("Sans")]
             [Validation(Required=false)]
@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the certificate application repository.
+            /// The ID of the certificate repository.
             /// </summary>
             [NameInMap("WhId")]
             [Validation(Required=false)]
             public long? WhId { get; set; }
 
             /// <summary>
-            /// The instance ID of the certificate application repository.
+            /// The instance ID of the certificate repository.
             /// </summary>
             [NameInMap("WhInstanceId")]
             [Validation(Required=false)]

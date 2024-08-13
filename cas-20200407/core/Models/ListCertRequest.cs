@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCertRequest : TeaModel {
         /// <summary>
-        /// The type of the certificate.
+        /// 证书的类型 。取值：
         /// 
-        /// *   **CA**: the CA certificate.
-        /// *   **CERT**: a issued certificate.
+        /// - **CA**：表示CA证书。
+        /// - **CERT**：表示签发的证书。
         /// </summary>
         [NameInMap("CertType")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// The keyword that is used for queries. The value can be a name, domain name, or subject alternative name (SAN) attribute. Fuzzy match is supported.
+        /// The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.
         /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]

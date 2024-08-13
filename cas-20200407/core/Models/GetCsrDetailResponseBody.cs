@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetCsrDetailResponseBody : TeaModel {
+        /// <summary>
+        /// The content of the CSR.
+        /// </summary>
         [NameInMap("Csr")]
         [Validation(Required=false)]
         public string Csr { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

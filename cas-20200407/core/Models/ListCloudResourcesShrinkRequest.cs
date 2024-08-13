@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class ListCloudResourcesRequest : TeaModel {
+    public class ListCloudResourcesShrinkRequest : TeaModel {
         [NameInMap("CertIds")]
         [Validation(Required=false)]
-        public List<long?> CertIds { get; set; }
+        public string CertIdsShrink { get; set; }
 
         /// <summary>
         /// The cloud service provider.

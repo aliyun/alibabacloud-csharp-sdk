@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UpdateDeploymentJobStatusRequest : TeaModel {
         /// <summary>
+        /// The ID of the deployment task.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("JobId")]
@@ -17,6 +19,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? JobId { get; set; }
 
         /// <summary>
+        /// The desired status.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   pending
+        /// *   scheduling
+        /// *   editing
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]

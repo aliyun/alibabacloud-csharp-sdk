@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// 
         /// A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.
         /// 
-        /// > The **CN** field in the CSR file specifies the domain name that is bound to the certificate.
+        /// >  The **CN** field in the CSR file specifies the domain name that is bound to the certificate.
         /// </summary>
         [NameInMap("Csr")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// The ID of the certificate application order that you want to renew.
         /// 
-        /// > After you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html), [CreateCertificateRequest](https://help.aliyun.com/document_detail/455292.html), or [CreateCertificateWithCsrRequest](https://help.aliyun.com/document_detail/455801.html) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter.
+        /// >  After you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html), [CreateCertificateRequest](https://help.aliyun.com/document_detail/455292.html), or [CreateCertificateWithCsrRequest](https://help.aliyun.com/document_detail/455801.html) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter. You can also call the [ListUserCertificateOrder](https://help.aliyun.com/document_detail/455804.html) operation to obtain the order ID.
         /// 
         /// This parameter is required.
         /// </summary>

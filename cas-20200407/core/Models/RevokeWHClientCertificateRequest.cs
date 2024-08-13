@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class RevokeWHClientCertificateRequest : TeaModel {
         /// <summary>
+        /// The unique identifier of the client certificate or server certificate that you want to revoke.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Identifier")]

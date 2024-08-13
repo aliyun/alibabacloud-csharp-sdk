@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListUserCertificateOrderResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the certificates and orders.
+        /// The certificates and orders.
         /// </summary>
         [NameInMap("CertificateOrderList")]
         [Validation(Required=false)]
@@ -56,8 +56,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// 
             /// *   **DV**: domain validated (DV) certificate
             /// *   **EV**: extended validation (EV) certificate
-            /// *   **OV**: organization validated (OV) certificate
-            /// *   **FREE**: free certificate
+            /// *   **OV**: organization validated (OV) certificate **FREE**: free certificate, available only on the China site (aliyun.com)
             /// </summary>
             [NameInMap("CertType")]
             [Validation(Required=false)]
@@ -175,7 +174,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string OrgName { get; set; }
 
             /// <summary>
-            /// The ID of the certificate authority (CA) order. This parameter is returned only if OrderType is set to CPACK or BUY.
+            /// The ID of the third-party certificate authority (CA) order. This parameter is returned only if OrderType is set to CPACK or BUY.
             /// </summary>
             [NameInMap("PartnerOrderId")]
             [Validation(Required=false)]
@@ -196,7 +195,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string ProductName { get; set; }
 
             /// <summary>
-            /// The name of the province or autonomous region in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.
+            /// The province or autonomous region in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.
             /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
@@ -238,7 +237,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Sha2 { get; set; }
 
             /// <summary>
-            /// The type of the order. This parameter is returned only if OrderType is set to CPACK or BUY.
+            /// The type of the order. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:
             /// 
             /// *   **cpack**: virtual resource order
             /// *   **buy**: purchase order
@@ -255,7 +254,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string StartDate { get; set; }
 
             /// <summary>
-            /// The certificate status of the order. This parameter is returned only if OrderType is set to CPACK or BUY.
+            /// The certificate status of the order. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:
             /// 
             /// *   **PAYED**: pending application
             /// *   **CHECKING**: reviewing
@@ -271,7 +270,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The hosting status of the certificate. This parameter is returned only if OrderType is set to CPACK or BUY.
+            /// The hosting status of the certificate. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:
             /// 
             /// *   **unTrustee**: not hosted
             /// *   **trustee**: hosted

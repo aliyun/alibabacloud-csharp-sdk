@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CreateCertificateWithCsrRequestRequest : TeaModel {
         /// <summary>
-        /// The content of the existing CSR file.\\
-        /// The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [How do I create a CSR file?](https://help.aliyun.com/document_detail/42218.html) You can also create a CSR in the [Certificate Management Service console](https://yundunnext.console.aliyun.com/?\\&p=cas). For more information, see [Create a CSR](https://help.aliyun.com/document_detail/313297.html).\\
+        /// The content of the CSR file.\\
+        /// The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [How do I create a CSR file?](https://help.aliyun.com/document_detail/42218.html)\\
         /// A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.
         /// 
         /// >  The **CN** field in the CSR file specifies the domain name that is bound to the certificate.
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Phone { get; set; }
 
         /// <summary>
-        /// The specifications of the certificate. Valid values:
+        /// The specifications of the certificate that you want to apply for. Valid values:
         /// 
-        /// *   **digicert-free-1-free**: DigiCert single-domain DV certificate in 3 months free trial. This is the default value.
-        /// *   **symantec-free-1-free**: DigiCert single-domain DV certificate in 1 year free trial.
+        /// *   **digicert-free-1-free** (default): DigiCert single-domain DV certificate in a three-month free trial, available only on the China site (aliyun.com).
+        /// *   **symantec-free-1-free**: DigiCert single-domain DV certificate in a one-year free trial, available only on the China site (aliyun.com).
         /// *   **symantec-dv-1-starter**: DigiCert wildcard DV certificate.
         /// *   **geotrust-dv-1-starter**: GeoTrust single-domain DV certificate.
         /// *   **geotrust-dv-w-starter**: GeoTrust wildcard DV certificate.

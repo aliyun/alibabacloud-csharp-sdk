@@ -92,11 +92,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary You can call the CancelCertificateForPackageRequest operation to cancel a certificate application order and revoke the issued certificate in the order. You can call this operation only when the certificate application order is in the **issued** state.
-         * >  You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
-         * If a certificate is revoked within 30 calendar days after the issuance date, the consumed certificate quota is returned to you. Otherwise, the consumed certificate quota is not returned.
+         * @summary Revokes an issued certificate and cancels the application order of the certificate.
          *
-         * @description Revokes an issued certificate and cancels the application order of the certificate.
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request CancelCertificateForPackageRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -130,11 +128,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary You can call the CancelCertificateForPackageRequest operation to cancel a certificate application order and revoke the issued certificate in the order. You can call this operation only when the certificate application order is in the **issued** state.
-         * >  You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
-         * If a certificate is revoked within 30 calendar days after the issuance date, the consumed certificate quota is returned to you. Otherwise, the consumed certificate quota is not returned.
+         * @summary Revokes an issued certificate and cancels the application order of the certificate.
          *
-         * @description Revokes an issued certificate and cancels the application order of the certificate.
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request CancelCertificateForPackageRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -168,11 +164,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary You can call the CancelCertificateForPackageRequest operation to cancel a certificate application order and revoke the issued certificate in the order. You can call this operation only when the certificate application order is in the **issued** state.
-         * >  You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
-         * If a certificate is revoked within 30 calendar days after the issuance date, the consumed certificate quota is returned to you. Otherwise, the consumed certificate quota is not returned.
+         * @summary Revokes an issued certificate and cancels the application order of the certificate.
          *
-         * @description Revokes an issued certificate and cancels the application order of the certificate.
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request CancelCertificateForPackageRequestRequest
          * @return CancelCertificateForPackageRequestResponse
@@ -184,11 +178,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary You can call the CancelCertificateForPackageRequest operation to cancel a certificate application order and revoke the issued certificate in the order. You can call this operation only when the certificate application order is in the **issued** state.
-         * >  You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
-         * If a certificate is revoked within 30 calendar days after the issuance date, the consumed certificate quota is returned to you. Otherwise, the consumed certificate quota is not returned.
+         * @summary Revokes an issued certificate and cancels the application order of the certificate.
          *
-         * @description Revokes an issued certificate and cancels the application order of the certificate.
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request CancelCertificateForPackageRequestRequest
          * @return CancelCertificateForPackageRequestResponse
@@ -202,10 +194,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Cancels a certificate application order that is in the pending validation or being reviewed state.
          *
-         * @description You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
-         * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
-         * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
-         * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](https://help.aliyun.com/document_detail/164109.html) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+         * @description You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request CancelOrderRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -241,10 +230,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Cancels a certificate application order that is in the pending validation or being reviewed state.
          *
-         * @description You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
-         * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
-         * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
-         * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](https://help.aliyun.com/document_detail/164109.html) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+         * @description You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request CancelOrderRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -280,10 +266,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Cancels a certificate application order that is in the pending validation or being reviewed state.
          *
-         * @description You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
-         * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
-         * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
-         * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](https://help.aliyun.com/document_detail/164109.html) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+         * @description You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request CancelOrderRequestRequest
          * @return CancelOrderRequestResponse
@@ -297,10 +280,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Cancels a certificate application order that is in the pending validation or being reviewed state.
          *
-         * @description You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
-         * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
-         * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
-         * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](https://help.aliyun.com/document_detail/164109.html) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+         * @description You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request CancelOrderRequestRequest
          * @return CancelOrderRequestResponse
@@ -314,9 +294,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Submits a certificate application.
          *
-         * @description *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455800.html) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+         * @description *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455800.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
          * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
-         * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+         * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.
          *
          * @param request CreateCertificateForPackageRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -380,9 +360,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Submits a certificate application.
          *
-         * @description *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455800.html) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+         * @description *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455800.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
          * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
-         * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+         * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.
          *
          * @param request CreateCertificateForPackageRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -446,9 +426,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Submits a certificate application.
          *
-         * @description *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455800.html) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+         * @description *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455800.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
          * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
-         * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+         * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.
          *
          * @param request CreateCertificateForPackageRequestRequest
          * @return CreateCertificateForPackageRequestResponse
@@ -462,9 +442,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Submits a certificate application.
          *
-         * @description *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455800.html) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+         * @description *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455800.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
          * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
-         * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+         * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.
          *
          * @param request CreateCertificateForPackageRequestRequest
          * @return CreateCertificateForPackageRequestResponse
@@ -479,7 +459,7 @@ namespace AlibabaCloud.SDK.Cas20200407
          * @summary Purchases, applies for, and issues a domain validated (DV) certificate by using extended certificate services.
          *
          * @description *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
-         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
          * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
          *
@@ -538,7 +518,7 @@ namespace AlibabaCloud.SDK.Cas20200407
          * @summary Purchases, applies for, and issues a domain validated (DV) certificate by using extended certificate services.
          *
          * @description *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
-         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
          * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
          *
@@ -597,7 +577,7 @@ namespace AlibabaCloud.SDK.Cas20200407
          * @summary Purchases, applies for, and issues a domain validated (DV) certificate by using extended certificate services.
          *
          * @description *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
-         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
          * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
          *
@@ -614,7 +594,7 @@ namespace AlibabaCloud.SDK.Cas20200407
          * @summary Purchases, applies for, and issues a domain validated (DV) certificate by using extended certificate services.
          *
          * @description *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
-         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
          * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
          *
@@ -630,10 +610,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Purchases, applies for, and issues a domain validated (DV) certificate by using a custom certificate signing request (CSR) file. You can use extended certificate services to purchase and apply for a DV certificate with a few clicks.
          *
-         * @description *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
-         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/164110.html) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
-         * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
-         * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+         * @description *   You can use this operation to apply for only a domain validated (DV) certificate. You cannot use this operation to apply for an organization validated (OV) certificate. We recommend that you use the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation to apply for a certificate. You can use the CreateCertificateForPackageRequest operation to apply for certificates of all types and specify the CSR generation method.
+         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
+         * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+         * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you must call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.
          *
          * @param request CreateCertificateWithCsrRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -689,10 +669,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Purchases, applies for, and issues a domain validated (DV) certificate by using a custom certificate signing request (CSR) file. You can use extended certificate services to purchase and apply for a DV certificate with a few clicks.
          *
-         * @description *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
-         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/164110.html) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
-         * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
-         * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+         * @description *   You can use this operation to apply for only a domain validated (DV) certificate. You cannot use this operation to apply for an organization validated (OV) certificate. We recommend that you use the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation to apply for a certificate. You can use the CreateCertificateForPackageRequest operation to apply for certificates of all types and specify the CSR generation method.
+         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
+         * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+         * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you must call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.
          *
          * @param request CreateCertificateWithCsrRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -748,10 +728,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Purchases, applies for, and issues a domain validated (DV) certificate by using a custom certificate signing request (CSR) file. You can use extended certificate services to purchase and apply for a DV certificate with a few clicks.
          *
-         * @description *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
-         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/164110.html) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
-         * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
-         * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+         * @description *   You can use this operation to apply for only a domain validated (DV) certificate. You cannot use this operation to apply for an organization validated (OV) certificate. We recommend that you use the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation to apply for a certificate. You can use the CreateCertificateForPackageRequest operation to apply for certificates of all types and specify the CSR generation method.
+         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
+         * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+         * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you must call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.
          *
          * @param request CreateCertificateWithCsrRequestRequest
          * @return CreateCertificateWithCsrRequestResponse
@@ -765,10 +745,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary Purchases, applies for, and issues a domain validated (DV) certificate by using a custom certificate signing request (CSR) file. You can use extended certificate services to purchase and apply for a DV certificate with a few clicks.
          *
-         * @description *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
-         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/164110.html) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
-         * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
-         * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+         * @description *   You can use this operation to apply for only a domain validated (DV) certificate. You cannot use this operation to apply for an organization validated (OV) certificate. We recommend that you use the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html) operation to apply for a certificate. You can use the CreateCertificateForPackageRequest operation to apply for certificates of all types and specify the CSR generation method.
+         * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](https://help.aliyun.com/document_detail/28542.html). You can call the [DescribePackageState](https://help.aliyun.com/document_detail/455803.html) operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.
+         * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+         * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you must call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.
          *
          * @param request CreateCertificateWithCsrRequestRequest
          * @return CreateCertificateWithCsrRequestResponse
@@ -780,6 +760,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Creates a certificate signing request (CSR). A CSR file contains the information about an SSL certificate that you want to apply for. The information includes the domain names that you want to bind to the certificate and the name and the geographical location of the certificate holder. When you submit a certificate application to a certificate authority (CA), you must provide a CSR. After the CA approves your certificate application, the CA uses the private key of the root CA to sign your CSR and generates a public key file. The public key file is the SSL certificate that the CA issues to you. The private key of the SSL certificate is generated when you create the CSR.
+         *
          * @param request CreateCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateCsrResponse
@@ -848,6 +830,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Creates a certificate signing request (CSR). A CSR file contains the information about an SSL certificate that you want to apply for. The information includes the domain names that you want to bind to the certificate and the name and the geographical location of the certificate holder. When you submit a certificate application to a certificate authority (CA), you must provide a CSR. After the CA approves your certificate application, the CA uses the private key of the root CA to sign your CSR and generates a public key file. The public key file is the SSL certificate that the CA issues to you. The private key of the SSL certificate is generated when you create the CSR.
+         *
          * @param request CreateCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateCsrResponse
@@ -916,6 +900,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Creates a certificate signing request (CSR). A CSR file contains the information about an SSL certificate that you want to apply for. The information includes the domain names that you want to bind to the certificate and the name and the geographical location of the certificate holder. When you submit a certificate application to a certificate authority (CA), you must provide a CSR. After the CA approves your certificate application, the CA uses the private key of the root CA to sign your CSR and generates a public key file. The public key file is the SSL certificate that the CA issues to you. The private key of the SSL certificate is generated when you create the CSR.
+         *
          * @param request CreateCsrRequest
          * @return CreateCsrResponse
          */
@@ -926,6 +912,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Creates a certificate signing request (CSR). A CSR file contains the information about an SSL certificate that you want to apply for. The information includes the domain names that you want to bind to the certificate and the name and the geographical location of the certificate holder. When you submit a certificate application to a certificate authority (CA), you must provide a CSR. After the CA approves your certificate application, the CA uses the private key of the root CA to sign your CSR and generates a public key file. The public key file is the SSL certificate that the CA issues to you. The private key of the SSL certificate is generated when you create the CSR.
+         *
          * @param request CreateCsrRequest
          * @return CreateCsrResponse
          */
@@ -936,7 +924,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 创建部署任务
+         * @summary Creates a deployment task.
          *
          * @param request CreateDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -990,7 +978,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 创建部署任务
+         * @summary Creates a deployment task.
          *
          * @param request CreateDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1044,7 +1032,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 创建部署任务
+         * @summary Creates a deployment task.
          *
          * @param request CreateDeploymentJobRequest
          * @return CreateDeploymentJobResponse
@@ -1056,7 +1044,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 创建部署任务
+         * @summary Creates a deployment task.
          *
          * @param request CreateDeploymentJobRequest
          * @return CreateDeploymentJobResponse
@@ -1280,6 +1268,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Decrypts a certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request DecryptRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DecryptResponse
@@ -1324,6 +1316,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Decrypts a certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request DecryptRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DecryptResponse
@@ -1368,6 +1364,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Decrypts a certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request DecryptRequest
          * @return DecryptResponse
          */
@@ -1378,6 +1378,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Decrypts a certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request DecryptRequest
          * @return DecryptResponse
          */
@@ -1391,7 +1395,7 @@ namespace AlibabaCloud.SDK.Cas20200407
          * @summary Deletes an order in which the application for a domain validated (DV) certificate failed.
          *
          * @description You can call this operation to delete a certificate application order only in the following scenarios:
-         * *   The status of the order is review failed. You have called the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+         * *   The status of the order is **review failed**. You have called the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
          * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](https://help.aliyun.com/document_detail/455299.html) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
          *
          * @param request DeleteCertificateRequestRequest
@@ -1429,7 +1433,7 @@ namespace AlibabaCloud.SDK.Cas20200407
          * @summary Deletes an order in which the application for a domain validated (DV) certificate failed.
          *
          * @description You can call this operation to delete a certificate application order only in the following scenarios:
-         * *   The status of the order is review failed. You have called the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+         * *   The status of the order is **review failed**. You have called the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
          * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](https://help.aliyun.com/document_detail/455299.html) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
          *
          * @param request DeleteCertificateRequestRequest
@@ -1467,7 +1471,7 @@ namespace AlibabaCloud.SDK.Cas20200407
          * @summary Deletes an order in which the application for a domain validated (DV) certificate failed.
          *
          * @description You can call this operation to delete a certificate application order only in the following scenarios:
-         * *   The status of the order is review failed. You have called the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+         * *   The status of the order is **review failed**. You have called the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
          * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](https://help.aliyun.com/document_detail/455299.html) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
          *
          * @param request DeleteCertificateRequestRequest
@@ -1483,7 +1487,7 @@ namespace AlibabaCloud.SDK.Cas20200407
          * @summary Deletes an order in which the application for a domain validated (DV) certificate failed.
          *
          * @description You can call this operation to delete a certificate application order only in the following scenarios:
-         * *   The status of the order is review failed. You have called the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+         * *   The status of the order is **review failed**. You have called the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
          * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](https://help.aliyun.com/document_detail/455299.html) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
          *
          * @param request DeleteCertificateRequestRequest
@@ -1496,6 +1500,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Deletes a certificate signing request (CSR) file.
+         *
          * @param request DeleteCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteCsrResponse
@@ -1528,6 +1534,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Deletes a certificate signing request (CSR) file.
+         *
          * @param request DeleteCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteCsrResponse
@@ -1560,6 +1568,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Deletes a certificate signing request (CSR) file.
+         *
          * @param request DeleteCsrRequest
          * @return DeleteCsrResponse
          */
@@ -1570,6 +1580,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Deletes a certificate signing request (CSR) file.
+         *
          * @param request DeleteCsrRequest
          * @return DeleteCsrResponse
          */
@@ -1580,7 +1592,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 删除部署任务
+         * @summary Deletes a deployment task.
          *
          * @param request DeleteDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1614,7 +1626,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 删除部署任务
+         * @summary Deletes a deployment task.
          *
          * @param request DeleteDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1648,7 +1660,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 删除部署任务
+         * @summary Deletes a deployment task.
          *
          * @param request DeleteDeploymentJobRequest
          * @return DeleteDeploymentJobResponse
@@ -1660,7 +1672,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 删除部署任务
+         * @summary Deletes a deployment task.
          *
          * @param request DeleteDeploymentJobRequest
          * @return DeleteDeploymentJobResponse
@@ -1856,7 +1868,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 删除部署任务worker
+         * @summary Deletes the worker of a deployment task.
          *
          * @param request DeleteWorkerResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1894,7 +1906,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 删除部署任务worker
+         * @summary Deletes the worker of a deployment task.
          *
          * @param request DeleteWorkerResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1932,7 +1944,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 删除部署任务worker
+         * @summary Deletes the worker of a deployment task.
          *
          * @param request DeleteWorkerResourceRequest
          * @return DeleteWorkerResourceResponse
@@ -1944,7 +1956,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 删除部署任务worker
+         * @summary Deletes the worker of a deployment task.
          *
          * @param request DeleteWorkerResourceRequest
          * @return DeleteWorkerResourceResponse
@@ -2060,7 +2072,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 云产品分组-获取用户资源计数 
+         * @summary Queries the number of third-party cloud resources on which you deployed certificates by using a multi-cloud deployment task.
          *
          * @param request DescribeCloudResourceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2094,7 +2106,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 云产品分组-获取用户资源计数 
+         * @summary Queries the number of third-party cloud resources on which you deployed certificates by using a multi-cloud deployment task.
          *
          * @param request DescribeCloudResourceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2128,7 +2140,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 云产品分组-获取用户资源计数 
+         * @summary Queries the number of third-party cloud resources on which you deployed certificates by using a multi-cloud deployment task.
          *
          * @param request DescribeCloudResourceStatusRequest
          * @return DescribeCloudResourceStatusResponse
@@ -2140,7 +2152,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 云产品分组-获取用户资源计数 
+         * @summary Queries the number of third-party cloud resources on which you deployed certificates by using a multi-cloud deployment task.
          *
          * @param request DescribeCloudResourceStatusRequest
          * @return DescribeCloudResourceStatusResponse
@@ -2152,7 +2164,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务详情
+         * @summary Queries the details of a deployment task. You can call the CreateDeploymentJob operation to create a deployment task and obtain the ID of the task.
          *
          * @param request DescribeDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2186,7 +2198,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务详情
+         * @summary Queries the details of a deployment task. You can call the CreateDeploymentJob operation to create a deployment task and obtain the ID of the task.
          *
          * @param request DescribeDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2220,7 +2232,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务详情
+         * @summary Queries the details of a deployment task. You can call the CreateDeploymentJob operation to create a deployment task and obtain the ID of the task.
          *
          * @param request DescribeDeploymentJobRequest
          * @return DescribeDeploymentJobResponse
@@ -2232,7 +2244,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务详情
+         * @summary Queries the details of a deployment task. You can call the CreateDeploymentJob operation to create a deployment task and obtain the ID of the task.
          *
          * @param request DescribeDeploymentJobRequest
          * @return DescribeDeploymentJobResponse
@@ -2244,7 +2256,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 查询任务状态
+         * @summary Queries the number of worker tasks in a deployment task.
          *
          * @param request DescribeDeploymentJobStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2278,7 +2290,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 查询任务状态
+         * @summary Queries the number of worker tasks in a deployment task.
          *
          * @param request DescribeDeploymentJobStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2312,7 +2324,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 查询任务状态
+         * @summary Queries the number of worker tasks in a deployment task.
          *
          * @param request DescribeDeploymentJobStatusRequest
          * @return DescribeDeploymentJobStatusResponse
@@ -2324,7 +2336,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 查询任务状态
+         * @summary Queries the number of worker tasks in a deployment task.
          *
          * @param request DescribeDeploymentJobStatusRequest
          * @return DescribeDeploymentJobStatusResponse
@@ -2336,7 +2348,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Queries the number and usage of purchased domain validated (DV) certificates.
+         * @summary Queries the quota for domain validated (DV) certificates that you purchase and the quota usage.
          *
          * @param request DescribePackageStateRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2370,7 +2382,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Queries the number and usage of purchased domain validated (DV) certificates.
+         * @summary Queries the quota for domain validated (DV) certificates that you purchase and the quota usage.
          *
          * @param request DescribePackageStateRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2404,7 +2416,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Queries the number and usage of purchased domain validated (DV) certificates.
+         * @summary Queries the quota for domain validated (DV) certificates that you purchase and the quota usage.
          *
          * @param request DescribePackageStateRequest
          * @return DescribePackageStateResponse
@@ -2416,7 +2428,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Queries the number and usage of purchased domain validated (DV) certificates.
+         * @summary Queries the quota for domain validated (DV) certificates that you purchase and the quota usage.
          *
          * @param request DescribePackageStateRequest
          * @return DescribePackageStateResponse
@@ -2428,6 +2440,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Encrypts a certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request EncryptRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return EncryptResponse
@@ -2472,6 +2488,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Encrypts a certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request EncryptRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return EncryptResponse
@@ -2516,6 +2536,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Encrypts a certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request EncryptRequest
          * @return EncryptResponse
          */
@@ -2526,6 +2550,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Encrypts a certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request EncryptRequest
          * @return EncryptResponse
          */
@@ -2536,6 +2564,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries the quota for certificate repositories.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request GetCertWarehouseQuotaRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetCertWarehouseQuotaResponse
@@ -2559,6 +2591,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries the quota for certificate repositories.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request GetCertWarehouseQuotaRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetCertWarehouseQuotaResponse
@@ -2582,6 +2618,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries the quota for certificate repositories.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @return GetCertWarehouseQuotaResponse
          */
         public GetCertWarehouseQuotaResponse GetCertWarehouseQuota()
@@ -2591,6 +2631,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries the quota for certificate repositories.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @return GetCertWarehouseQuotaResponse
          */
         public async Task<GetCertWarehouseQuotaResponse> GetCertWarehouseQuotaAsync()
@@ -2600,6 +2644,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Obtains the content of a certificate signing request (CSR) file.
+         *
          * @param request GetCsrDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetCsrDetailResponse
@@ -2632,6 +2678,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Obtains the content of a certificate signing request (CSR) file.
+         *
          * @param request GetCsrDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetCsrDetailResponse
@@ -2664,6 +2712,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Obtains the content of a certificate signing request (CSR) file.
+         *
          * @param request GetCsrDetailRequest
          * @return GetCsrDetailResponse
          */
@@ -2674,6 +2724,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Obtains the content of a certificate signing request (CSR) file.
+         *
          * @param request GetCsrDetailRequest
          * @return GetCsrDetailResponse
          */
@@ -2940,6 +2992,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries certificate repositories.
+         *
+         * @description You can call the ListCertWarehouse operation to query certificate repositories.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request ListCertWarehouseRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCertWarehouseResponse
@@ -2988,6 +3046,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries certificate repositories.
+         *
+         * @description You can call the ListCertWarehouse operation to query certificate repositories.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request ListCertWarehouseRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCertWarehouseResponse
@@ -3036,6 +3100,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries certificate repositories.
+         *
+         * @description You can call the ListCertWarehouse operation to query certificate repositories.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request ListCertWarehouseRequest
          * @return ListCertWarehouseResponse
          */
@@ -3046,6 +3116,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries certificate repositories.
+         *
+         * @description You can call the ListCertWarehouse operation to query certificate repositories.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request ListCertWarehouseRequest
          * @return ListCertWarehouseResponse
          */
@@ -3056,7 +3132,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 云授权ak查询
+         * @summary Queries a list of AccessKey pairs for multi-cloud deployment.
          *
          * @param request ListCloudAccessRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3102,7 +3178,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 云授权ak查询
+         * @summary Queries a list of AccessKey pairs for multi-cloud deployment.
          *
          * @param request ListCloudAccessRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3148,7 +3224,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 云授权ak查询
+         * @summary Queries a list of AccessKey pairs for multi-cloud deployment.
          *
          * @param request ListCloudAccessRequest
          * @return ListCloudAccessResponse
@@ -3160,7 +3236,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 云授权ak查询
+         * @summary Queries a list of AccessKey pairs for multi-cloud deployment.
          *
          * @param request ListCloudAccessRequest
          * @return ListCloudAccessResponse
@@ -3172,16 +3248,26 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 可选择的资源-查询云资源列表
+         * @summary Queries the certificate resources of a cloud service provider and cloud services.
          *
-         * @param request ListCloudResourcesRequest
+         * @param tmpReq ListCloudResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCloudResourcesResponse
          */
-        public ListCloudResourcesResponse ListCloudResourcesWithOptions(ListCloudResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListCloudResourcesResponse ListCloudResourcesWithOptions(ListCloudResourcesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListCloudResourcesShrinkRequest request = new ListCloudResourcesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertIds))
+            {
+                request.CertIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertIds, "CertIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdsShrink))
+            {
+                query["CertIds"] = request.CertIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudName))
             {
                 query["CloudName"] = request.CloudName;
@@ -3226,16 +3312,26 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 可选择的资源-查询云资源列表
+         * @summary Queries the certificate resources of a cloud service provider and cloud services.
          *
-         * @param request ListCloudResourcesRequest
+         * @param tmpReq ListCloudResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCloudResourcesResponse
          */
-        public async Task<ListCloudResourcesResponse> ListCloudResourcesWithOptionsAsync(ListCloudResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListCloudResourcesResponse> ListCloudResourcesWithOptionsAsync(ListCloudResourcesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListCloudResourcesShrinkRequest request = new ListCloudResourcesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertIds))
+            {
+                request.CertIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertIds, "CertIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdsShrink))
+            {
+                query["CertIds"] = request.CertIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudName))
             {
                 query["CloudName"] = request.CloudName;
@@ -3280,7 +3376,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 可选择的资源-查询云资源列表
+         * @summary Queries the certificate resources of a cloud service provider and cloud services.
          *
          * @param request ListCloudResourcesRequest
          * @return ListCloudResourcesResponse
@@ -3292,7 +3388,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 可选择的资源-查询云资源列表
+         * @summary Queries the certificate resources of a cloud service provider and cloud services.
          *
          * @param request ListCloudResourcesRequest
          * @return ListCloudResourcesResponse
@@ -3304,7 +3400,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取联系人列表
+         * @summary Queries a list of contacts.
          *
          * @param request ListContactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3346,7 +3442,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取联系人列表
+         * @summary Queries a list of contacts.
          *
          * @param request ListContactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3388,7 +3484,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取联系人列表
+         * @summary Queries a list of contacts.
          *
          * @param request ListContactRequest
          * @return ListContactResponse
@@ -3400,7 +3496,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取联系人列表
+         * @summary Queries a list of contacts.
          *
          * @param request ListContactRequest
          * @return ListContactResponse
@@ -3412,6 +3508,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries certificate signing requests (CSRs).
+         *
          * @param request ListCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCsrResponse
@@ -3456,6 +3554,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries certificate signing requests (CSRs).
+         *
          * @param request ListCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCsrResponse
@@ -3500,6 +3600,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries certificate signing requests (CSRs).
+         *
          * @param request ListCsrRequest
          * @return ListCsrResponse
          */
@@ -3510,6 +3612,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Queries certificate signing requests (CSRs).
+         *
          * @param request ListCsrRequest
          * @return ListCsrResponse
          */
@@ -3520,7 +3624,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务列表
+         * @summary Queries a list of deployment tasks that are created.
          *
          * @param request ListDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3566,7 +3670,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务列表
+         * @summary Queries a list of deployment tasks that are created.
          *
          * @param request ListDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3612,7 +3716,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务列表
+         * @summary Queries a list of deployment tasks that are created.
          *
          * @param request ListDeploymentJobRequest
          * @return ListDeploymentJobResponse
@@ -3624,7 +3728,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务列表
+         * @summary Queries a list of deployment tasks that are created.
          *
          * @param request ListDeploymentJobRequest
          * @return ListDeploymentJobResponse
@@ -3636,7 +3740,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务的证书列表
+         * @summary Queries the basic information about a deployment task. After you create a deployment task, you can call this operation to obtain the basic information about the deployment task, including the instance ID, type, and name of the certificate.
          *
          * @param request ListDeploymentJobCertRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3670,7 +3774,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务的证书列表
+         * @summary Queries the basic information about a deployment task. After you create a deployment task, you can call this operation to obtain the basic information about the deployment task, including the instance ID, type, and name of the certificate.
          *
          * @param request ListDeploymentJobCertRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3704,7 +3808,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务的证书列表
+         * @summary Queries the basic information about a deployment task. After you create a deployment task, you can call this operation to obtain the basic information about the deployment task, including the instance ID, type, and name of the certificate.
          *
          * @param request ListDeploymentJobCertRequest
          * @return ListDeploymentJobCertResponse
@@ -3716,7 +3820,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 获取部署任务的证书列表
+         * @summary Queries the basic information about a deployment task. After you create a deployment task, you can call this operation to obtain the basic information about the deployment task, including the instance ID, type, and name of the certificate.
          *
          * @param request ListDeploymentJobCertRequest
          * @return ListDeploymentJobCertResponse
@@ -3728,7 +3832,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 部署任务的资源列表
+         * @summary Queries the cloud resources of cloud services in a deployment task.
          *
          * @param request ListDeploymentJobResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3762,7 +3866,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 部署任务的资源列表
+         * @summary Queries the cloud resources of cloud services in a deployment task.
          *
          * @param request ListDeploymentJobResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3796,7 +3900,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 部署任务的资源列表
+         * @summary Queries the cloud resources of cloud services in a deployment task.
          *
          * @param request ListDeploymentJobResourceRequest
          * @return ListDeploymentJobResourceResponse
@@ -3808,7 +3912,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 部署任务的资源列表
+         * @summary Queries the cloud resources of cloud services in a deployment task.
          *
          * @param request ListDeploymentJobResourceRequest
          * @return ListDeploymentJobResourceResponse
@@ -3968,7 +4072,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 查询部署任务worker
+         * @summary Queries the details about the worker tasks of a deployment task. Alibaba Cloud allows you to deploy multiple certificates at a time. Therefore, a deployment task may include multiple worker tasks in multiple cloud services. A worker task refers to a task that deploys a certificate to a cloud resource in a cloud service.
          *
          * @param request ListWorkerResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4018,7 +4122,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 查询部署任务worker
+         * @summary Queries the details about the worker tasks of a deployment task. Alibaba Cloud allows you to deploy multiple certificates at a time. Therefore, a deployment task may include multiple worker tasks in multiple cloud services. A worker task refers to a task that deploys a certificate to a cloud resource in a cloud service.
          *
          * @param request ListWorkerResourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4068,7 +4172,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 查询部署任务worker
+         * @summary Queries the details about the worker tasks of a deployment task. Alibaba Cloud allows you to deploy multiple certificates at a time. Therefore, a deployment task may include multiple worker tasks in multiple cloud services. A worker task refers to a task that deploys a certificate to a cloud resource in a cloud service.
          *
          * @param request ListWorkerResourceRequest
          * @return ListWorkerResourceResponse
@@ -4080,7 +4184,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 查询部署任务worker
+         * @summary Queries the details about the worker tasks of a deployment task. Alibaba Cloud allows you to deploy multiple certificates at a time. Therefore, a deployment task may include multiple worker tasks in multiple cloud services. A worker task refers to a task that deploys a certificate to a cloud resource in a cloud service.
          *
          * @param request ListWorkerResourceRequest
          * @return ListWorkerResourceResponse
@@ -4092,7 +4196,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Move Resource Group
+         * @summary Changes the resource group to which a certificate or certificate order belongs.
          *
          * @param request MoveResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4138,7 +4242,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Move Resource Group
+         * @summary Changes the resource group to which a certificate or certificate order belongs.
          *
          * @param request MoveResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4184,7 +4288,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Move Resource Group
+         * @summary Changes the resource group to which a certificate or certificate order belongs.
          *
          * @param request MoveResourceGroupRequest
          * @return MoveResourceGroupResponse
@@ -4196,7 +4300,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Move Resource Group
+         * @summary Changes the resource group to which a certificate or certificate order belongs.
          *
          * @param request MoveResourceGroupRequest
          * @return MoveResourceGroupResponse
@@ -4208,10 +4312,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Submits a renewal application for the certificate order of an issued certificate.
+         * @summary Submits a renewal application for an issued certificate.
          *
-         * @description You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
-         * > You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+         * @description You can call the RenewCertificateOrderForPackageRequest operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+         * >  You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
          *
          * @param request RenewCertificateOrderForPackageRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4249,10 +4353,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Submits a renewal application for the certificate order of an issued certificate.
+         * @summary Submits a renewal application for an issued certificate.
          *
-         * @description You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
-         * > You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+         * @description You can call the RenewCertificateOrderForPackageRequest operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+         * >  You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
          *
          * @param request RenewCertificateOrderForPackageRequestRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4290,10 +4394,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Submits a renewal application for the certificate order of an issued certificate.
+         * @summary Submits a renewal application for an issued certificate.
          *
-         * @description You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
-         * > You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+         * @description You can call the RenewCertificateOrderForPackageRequest operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+         * >  You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
          *
          * @param request RenewCertificateOrderForPackageRequestRequest
          * @return RenewCertificateOrderForPackageRequestResponse
@@ -4305,10 +4409,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary Submits a renewal application for the certificate order of an issued certificate.
+         * @summary Submits a renewal application for an issued certificate.
          *
-         * @description You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
-         * > You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+         * @description You can call the RenewCertificateOrderForPackageRequest operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+         * >  You can call the [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
          *
          * @param request RenewCertificateOrderForPackageRequestRequest
          * @return RenewCertificateOrderForPackageRequestResponse
@@ -4320,6 +4424,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Revokes a client certificate or a server certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request RevokeWHClientCertificateRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return RevokeWHClientCertificateResponse
@@ -4352,6 +4460,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Revokes a client certificate or a server certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request RevokeWHClientCertificateRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return RevokeWHClientCertificateResponse
@@ -4384,6 +4496,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Revokes a client certificate or a server certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request RevokeWHClientCertificateRequest
          * @return RevokeWHClientCertificateResponse
          */
@@ -4394,6 +4510,10 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Revokes a client certificate or a server certificate in a certificate repository.
+         *
+         * @description You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request RevokeWHClientCertificateRequest
          * @return RevokeWHClientCertificateResponse
          */
@@ -4404,6 +4524,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Signs a private certificate in a certificate application repository.
+         *
+         * @description You can call the Sign operation to sign a private certificate in a certificate application repository.
+         * ### Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request SignRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return SignResponse
@@ -4448,6 +4574,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Signs a private certificate in a certificate application repository.
+         *
+         * @description You can call the Sign operation to sign a private certificate in a certificate application repository.
+         * ### Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request SignRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return SignResponse
@@ -4492,6 +4624,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Signs a private certificate in a certificate application repository.
+         *
+         * @description You can call the Sign operation to sign a private certificate in a certificate application repository.
+         * ### Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request SignRequest
          * @return SignResponse
          */
@@ -4502,6 +4640,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Signs a private certificate in a certificate application repository.
+         *
+         * @description You can call the Sign operation to sign a private certificate in a certificate application repository.
+         * ### Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request SignRequest
          * @return SignResponse
          */
@@ -4512,6 +4656,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Updates the private key of a certificate signing request (CSR).
+         *
          * @param request UpdateCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateCsrResponse
@@ -4548,6 +4694,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Updates the private key of a certificate signing request (CSR).
+         *
          * @param request UpdateCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateCsrResponse
@@ -4584,6 +4732,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Updates the private key of a certificate signing request (CSR).
+         *
          * @param request UpdateCsrRequest
          * @return UpdateCsrResponse
          */
@@ -4594,6 +4744,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Updates the private key of a certificate signing request (CSR).
+         *
          * @param request UpdateCsrRequest
          * @return UpdateCsrResponse
          */
@@ -4604,7 +4756,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新部署任务
+         * @summary Updates a deployment task.
          *
          * @param request UpdateDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4658,7 +4810,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新部署任务
+         * @summary Updates a deployment task.
          *
          * @param request UpdateDeploymentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4712,7 +4864,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新部署任务
+         * @summary Updates a deployment task.
          *
          * @param request UpdateDeploymentJobRequest
          * @return UpdateDeploymentJobResponse
@@ -4724,7 +4876,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新部署任务
+         * @summary Updates a deployment task.
          *
          * @param request UpdateDeploymentJobRequest
          * @return UpdateDeploymentJobResponse
@@ -4736,7 +4888,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新任务部署任务状态
+         * @summary Updates the status of a deployment task.
          *
          * @param request UpdateDeploymentJobStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4774,7 +4926,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新任务部署任务状态
+         * @summary Updates the status of a deployment task.
          *
          * @param request UpdateDeploymentJobStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4812,7 +4964,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新任务部署任务状态
+         * @summary Updates the status of a deployment task.
          *
          * @param request UpdateDeploymentJobStatusRequest
          * @return UpdateDeploymentJobStatusResponse
@@ -4824,7 +4976,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新任务部署任务状态
+         * @summary Updates the status of a deployment task.
          *
          * @param request UpdateDeploymentJobStatusRequest
          * @return UpdateDeploymentJobStatusResponse
@@ -4836,7 +4988,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新部署任务worker状态
+         * @summary Rolls back or executes a worker task in a deployment task.
          *
          * @param request UpdateWorkerResourceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4878,7 +5030,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新部署任务worker状态
+         * @summary Rolls back or executes a worker task in a deployment task.
          *
          * @param request UpdateWorkerResourceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4920,7 +5072,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新部署任务worker状态
+         * @summary Rolls back or executes a worker task in a deployment task.
          *
          * @param request UpdateWorkerResourceStatusRequest
          * @return UpdateWorkerResourceStatusResponse
@@ -4932,7 +5084,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
-         * @summary 更新部署任务worker状态
+         * @summary Rolls back or executes a worker task in a deployment task.
          *
          * @param request UpdateWorkerResourceStatusRequest
          * @return UpdateWorkerResourceStatusResponse
@@ -4944,6 +5096,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Uploads a certificate signing request (CSR) file
+         *
          * @param request UploadCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UploadCsrResponse
@@ -4984,6 +5138,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Uploads a certificate signing request (CSR) file
+         *
          * @param request UploadCsrRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UploadCsrResponse
@@ -5024,6 +5180,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Uploads a certificate signing request (CSR) file
+         *
          * @param request UploadCsrRequest
          * @return UploadCsrResponse
          */
@@ -5034,6 +5192,8 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Uploads a certificate signing request (CSR) file
+         *
          * @param request UploadCsrRequest
          * @return UploadCsrResponse
          */
@@ -5046,7 +5206,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary The private key of the certificate.
          *
-         * @description The unique identifier of the certificate.
+         * @description You can call this operation to upload a private certificate to a certificate repository.
+         * ## [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request UploadPCACertRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5094,7 +5256,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary The private key of the certificate.
          *
-         * @description The unique identifier of the certificate.
+         * @description You can call this operation to upload a private certificate to a certificate repository.
+         * ## [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request UploadPCACertRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5142,7 +5306,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary The private key of the certificate.
          *
-         * @description The unique identifier of the certificate.
+         * @description You can call this operation to upload a private certificate to a certificate repository.
+         * ## [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request UploadPCACertRequest
          * @return UploadPCACertResponse
@@ -5156,7 +5322,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /**
          * @summary The private key of the certificate.
          *
-         * @description The unique identifier of the certificate.
+         * @description You can call this operation to upload a private certificate to a certificate repository.
+         * ## [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request UploadPCACertRequest
          * @return UploadPCACertResponse
@@ -5324,6 +5492,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Verifies the signature of a private certificate in a certificate application repository.
+         *
+         * @description You can call the Verify operation to verify the signature of a private certificate in a certificate application repository.
+         * ### Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request VerifyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return VerifyResponse
@@ -5372,6 +5546,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Verifies the signature of a private certificate in a certificate application repository.
+         *
+         * @description You can call the Verify operation to verify the signature of a private certificate in a certificate application repository.
+         * ### Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request VerifyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return VerifyResponse
@@ -5420,6 +5600,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Verifies the signature of a private certificate in a certificate application repository.
+         *
+         * @description You can call the Verify operation to verify the signature of a private certificate in a certificate application repository.
+         * ### Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request VerifyRequest
          * @return VerifyResponse
          */
@@ -5430,6 +5616,12 @@ namespace AlibabaCloud.SDK.Cas20200407
         }
 
         /**
+         * @summary Verifies the signature of a private certificate in a certificate application repository.
+         *
+         * @description You can call the Verify operation to verify the signature of a private certificate in a certificate application repository.
+         * ### Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
          * @param request VerifyRequest
          * @return VerifyResponse
          */
