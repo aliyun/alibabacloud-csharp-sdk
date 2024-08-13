@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public DescribeProdCountResponseBodyData Data { get; set; }
         public class DescribeProdCountResponseBodyData : TeaModel {
+            [NameInMap("AliyunImportedCount")]
+            [Validation(Required=false)]
+            public int? AliyunImportedCount { get; set; }
+
             /// <summary>
             /// The number of Alibaba Cloud services.
             /// </summary>
@@ -23,12 +27,28 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public int? AliyunProdCount { get; set; }
 
+            [NameInMap("HcloudImportedCount")]
+            [Validation(Required=false)]
+            public int? HcloudImportedCount { get; set; }
+
             /// <summary>
             /// The number of Huawei Cloud services.
             /// </summary>
             [NameInMap("HcloudProdCount")]
             [Validation(Required=false)]
             public int? HcloudProdCount { get; set; }
+
+            [NameInMap("IdcImportedCount")]
+            [Validation(Required=false)]
+            public int? IdcImportedCount { get; set; }
+
+            [NameInMap("IdcProdCount")]
+            [Validation(Required=false)]
+            public int? IdcProdCount { get; set; }
+
+            [NameInMap("QcloudImportedCount")]
+            [Validation(Required=false)]
+            public int? QcloudImportedCount { get; set; }
 
             /// <summary>
             /// The number of Tencent Cloud services.
