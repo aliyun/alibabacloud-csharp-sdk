@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitPreprocessJobsResponseBody : TeaModel {
         /// <summary>
-        /// The job information.
+        /// The information about the job.
         /// </summary>
         [NameInMap("PreprocessJobs")]
         [Validation(Required=false)]

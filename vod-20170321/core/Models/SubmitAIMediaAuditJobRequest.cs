@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// The configuration information about the review job.
         /// 
         /// *   Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.
-        /// *   If you want to modify the review standard and rules based on ResourceType, [submit a request on Yida](https://yida.alibaba-inc.com/o/ticketapply) to reach technical support.
+        /// *   If you want to modify the review standard and rules based on ResourceType, submit a ticket. For more information, see [Contact us](https://help.aliyun.com/document_detail/464625.html).
         /// *   The value of ResourceType can contain only letters, digits, and underscores (_).
         /// </summary>
         [NameInMap("MediaAuditConfiguration")]
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:
         /// 
-        /// *   Obtain the ID of the AI template from the response to the [AddAITemplate](https://help.aliyun.com/document_detail/102930.html) operation. The value of TemplateId is the ID of the AI template.
-        /// *   Obtain the ID of the AI template from the response to the [ListAITemplate](https://help.aliyun.com/document_detail/102936.html) operation. The value of TemplateId is the ID of the AI template.
+        /// *   Obtain the value of TemplateId from the response to the [AddAITemplate](https://help.aliyun.com/document_detail/102930.html) operation that you call to create an AI template.
+        /// *   Obtain the value of TemplateId from the response to the [ListAITemplate](https://help.aliyun.com/document_detail/102936.html) operation that you call to create an AI template.
         /// 
         /// >  If you do not specify an ID, the ID of the default AI template is used.
         /// </summary>

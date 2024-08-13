@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail> VideoPlayStatisDetail { get; set; }
             public class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail : TeaModel {
                 /// <summary>
-                /// The date. The date is displayed in the *yyyy-MM-dd* format.
+                /// The date. The time follows the ISO 8601 standard in the *YYYY-MM-DD*T*hh:mm:ss* format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]
                 public string Date { get; set; }
 
                 /// <summary>
-                /// The playback duration. Unit: millisecond.
+                /// The total playback duration. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("PlayDuration")]
                 [Validation(Required=false)]

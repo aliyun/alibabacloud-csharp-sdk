@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// The domain name for CDN.
+        /// The accelerated domain name.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,13 +28,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The environment of configuration. 
+        /// The environment from which the domain name configurations are deleted. Valid values:
         /// 
-        /// Value:
-        /// 
-        /// online: production environment
-        /// 
-        /// gray: simulation environment
+        /// *   online: production environment
+        /// *   gray: simulation environment
         /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]

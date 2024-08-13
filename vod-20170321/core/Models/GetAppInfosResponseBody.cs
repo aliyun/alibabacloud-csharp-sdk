@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string ModificationTime { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             /// <summary>
             /// The status of the application. Valid values:
             /// 

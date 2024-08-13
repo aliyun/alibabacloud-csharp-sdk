@@ -74,7 +74,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The playback time. You can specify this parameter to query all playback data generated only on the specified date. You can query data only by day. Specify the value in the yyyyMMdd format.
+        /// The playback time. Specify the value in the yyyyMMdd format.
+        /// 
+        /// > *   You can query data only by day.
+        /// > *   You can query only data within the last 30 days.
         /// </summary>
         [NameInMap("PlayDate")]
         [Validation(Required=false)]
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// *   **ap-southeast-1**: Singapore
         /// *   **ap-southeast-5**: Indonesia (Jakarta)
         /// *   **eu-central-1**: Germany (Frankfurt)
-        /// *   **ap-south-1**: India (Mumbai)
+        /// *   **ap-south-1**: India (Mumbai) (disabled)
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]

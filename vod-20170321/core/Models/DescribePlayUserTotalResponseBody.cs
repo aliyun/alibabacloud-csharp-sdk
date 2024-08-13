@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal> UserPlayStatisTotal { get; set; }
             public class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal : TeaModel {
                 /// <summary>
-                /// The date. The date is displayed in the *yyyy-MM-dd* format.
+                /// The date. The date is displayed in the yyyy-MM-dd format.
                 /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]

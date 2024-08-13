@@ -26,22 +26,31 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The category of the review result. Valid values:
                 /// 
-                /// *   **normal**: normal content
-                /// *   **ad**: ad or text violation
+                /// *   **normal**: normal content.
+                /// *   **ad**: other ads.
+                /// *   **politics**: political content in text.
+                /// *   **porn**: pornographic content in text.
+                /// *   **abuse**: abuse in text.
+                /// *   **terrorism**: terrorist content in text.
+                /// *   **contraband**: prohibited content in text.
+                /// *   **spam**: spam content.
+                /// *   **npx**: illegal ad.
+                /// *   **qrcode**: QR code.
+                /// *   **programCode**: mini program code.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+                /// The score of the video snapshot in the ad review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
                 /// <summary>
-                /// The position in the video. Unit: milliseconds.
+                /// The timestamp of the snapshot in the video. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
@@ -50,31 +59,34 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The collection of undesirable scene timelines.
+            /// The collection of undesirable content timelines.
             /// </summary>
             [NameInMap("Live")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive> Live { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive : TeaModel {
                 /// <summary>
-                /// The category of the review result. Valid values:
+                /// The categories of undesired content review results. Valid values:
                 /// 
-                /// *   **normal**
-                /// *   **terrorism**
+                /// *   **normal**: normal content.
+                /// *   **meaningless**: meaningless content, such as a black or white screen.
+                /// *   **PIP**: picture-in-picture.
+                /// *   **smoking**: smoking.
+                /// *   **drivelive**: live broadcasting in a running vehicle.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+                /// The score of the video snapshot in the undesirable content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
                 /// <summary>
-                /// The position in the video. Unit: milliseconds.
+                /// The timestamp of the snapshot in the video. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
@@ -92,22 +104,23 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The category of the review result. Valid values:
                 /// 
-                /// *   **normal**
-                /// *   **logo**
+                /// *   **normal**: normal content.
+                /// *   **TV**: controlled TV station logo.
+                /// *   **trademark**: trademark.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+                /// The score of the video snapshot in the logo review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
                 /// <summary>
-                /// The position in the video. Unit: milliseconds.
+                /// The timestamp of the snapshot in the video. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
@@ -134,14 +147,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+                /// The score of the video snapshot in the pornographic content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
                 /// <summary>
-                /// The position in the video. Unit: milliseconds.
+                /// The timestamp of the snapshot in the video. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
@@ -159,27 +172,34 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The category of the review result. Valid values:
                 /// 
-                /// *   **terrorism**: terrorist content
-                /// *   **outfit**: special costume
-                /// *   **logo**: special logo
-                /// *   **weapon**: weapon
-                /// *   **politics**: politically sensitive content
-                /// *   **others**: other terrorist and politically sensitive content
-                /// *   **normal**: normal content
+                /// *   **normal**
+                /// *   **bloody**
+                /// *   **explosion**
+                /// *   **outfit**
+                /// *   **logo**
+                /// *   **weapon**
+                /// *   **politics**
+                /// *   **violence**
+                /// *   **crowd**
+                /// *   **parade**
+                /// *   **carcrash**
+                /// *   **flag**
+                /// *   **location**
+                /// *   **others**
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The score of the review result category.
+                /// The score of the video snapshot in the terrorist content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
                 /// <summary>
-                /// The position in the video. Unit: milliseconds.
+                /// The timestamp of the snapshot in the video. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]

@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// 
+        /// >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 180 days.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
@@ -32,7 +34,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The video ID.
+        /// The ID of the video. You can specify only one ID. You can use one of the following methods to obtain the ID:
+        /// 
+        /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the page that appears, view the video ID.
+        /// *   Obtain the video ID from the response to the [CreateUploadVideo](~~CreateUploadVideo~~) operation that you call to obtain the upload URL and credential.
+        /// *   Obtain the video ID from the response to the [SearchMedia](~~SearchMedia~~) operation that you call to query the audio or video file.
         /// 
         /// This parameter is required.
         /// </summary>

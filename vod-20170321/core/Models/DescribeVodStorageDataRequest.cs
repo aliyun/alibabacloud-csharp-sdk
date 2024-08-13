@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).
+        /// The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple transcoding specifications with commas (,).
         /// </summary>
         [NameInMap("Storage")]
         [Validation(Required=false)]
         public string Storage { get; set; }
 
         /// <summary>
-        /// The storage type. Set the value to **OSS**.
+        /// The storage class. Set the value to **OSS**.
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

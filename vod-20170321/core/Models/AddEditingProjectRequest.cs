@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddEditingProjectRequest : TeaModel {
         /// <summary>
-        /// The thumbnail URL of the online editing project. If you do not specify this parameter and the video track in the timeline has mezzanine files, the thumbnail of the first mezzanine file in the timeline is used.
+        /// The thumbnail URL of the online editing project. If you leave this parameter empty and materials exist on the video track in the timeline, the thumbnail of the first material is used by default.
         /// </summary>
         [NameInMap("CoverURL")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The region where you want to create the online editing project.
+        /// The region in which ApsaraVideo VOD is activated.
         /// </summary>
         [NameInMap("Division")]
         [Validation(Required=false)]
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](https://help.aliyun.com/document_detail/52839.html).
+        /// The timeline of the online editing project in JSON format. For more information about the structure, see [Timeline](https://help.aliyun.com/document_detail/52839.html).
         /// 
-        /// If you do not specify this parameter, an empty timeline is created and the duration of the online editing project is zero.
+        /// If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.
         /// </summary>
         [NameInMap("Timeline")]
         [Validation(Required=false)]

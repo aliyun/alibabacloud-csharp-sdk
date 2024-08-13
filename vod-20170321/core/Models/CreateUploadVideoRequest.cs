@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// The category ID of the media file. You can use one of the following methods to obtain the category ID:
+        /// The ID of the category. You can use one of the following methods to obtain the ID:
         /// 
         /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID of the media file.
-        /// *   Obtain the value of CateId from the response to the [AddCategory](https://help.aliyun.com/document_detail/56401.html) operation.
-        /// *   Obtain the value of CateId from the response to the [GetCategories](https://help.aliyun.com/document_detail/56406.html) operation.
+        /// *   Obtain the value of CateId from the response to the [AddCategory](~~AddCategory~~) operation.
+        /// *   Obtain the value of CateId from the response to the [GetCategories](~~GetCategories~~) operation.
         /// </summary>
         [NameInMap("CateId")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the audio or video file.
+        /// The name of the source file.
         /// 
         /// *   The name must contain a file name extension, which is not case-sensitive.
         /// *   For more information about file name extensions supported by ApsaraVideo VOD, see [Overview](https://help.aliyun.com/document_detail/55396.html).
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? FileSize { get; set; }
 
         /// <summary>
-        /// The storage address. To obtain the storage address, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**.
+        /// The storage address. Perform the following operations to obtain the storage address: Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, view the storage address.
         /// 
-        /// > If you specify a storage address, media files are uploaded to the specified address.
+        /// >  If you leave this parameter empty, audio and video files are uploaded to the default storage address. If you specify a storage address, audio and video files are uploaded to the specified address.
         /// </summary>
         [NameInMap("StorageLocation")]
         [Validation(Required=false)]
@@ -85,13 +85,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// The ID of the transcoding template group. You can use one of the following methods to obtain the ID of the transcoding template group:
+        /// The ID of the transcoding template group. You can use one of the following methods to obtain the ID:
         /// 
-        /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Transcoding Template Groups** to view the ID of the transcoding template group.
-        /// *   Obtain the value of TranscodeTemplateGroupId in the response to the [AddTranscodeTemplateGroup](https://help.aliyun.com/document_detail/102665.html) operation.
-        /// *   Obtain the value of TranscodeTemplateGroupId in the response to the [ListTranscodeTemplateGroup](https://help.aliyun.com/document_detail/102669.html) operation.
+        /// *   Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose Configuration Management > Media Processing > Transcoding Template Groups. On the Transcoding Template Groups page, you can view the ID of the transcoding template group.[](https://vod.console.aliyun.com)************
+        /// *   Obtain the value of the TranscodeTemplateGroupId parameter from the response to the [AddTranscodeTemplateGroup](https://help.aliyun.com/document_detail/102665.html) operation that you called to create a transcoding template group.
+        /// *   Obtain the value of the TranscodeTemplateGroupId parameter from the response to the [ListTranscodeTemplateGroup](https://help.aliyun.com/document_detail/102669.html) operation that you called to query transcoding template groups.
         /// 
-        /// > If you leave this parameter empty, the default transcoding template group is used. If you specify this parameter, the specified transcoding template group is used for transcoding.
+        /// > *   If you specify both WorkflowId and TemplateGroupId, the value of the WorkflowId parameter takes effect.
+        /// > *   If this parameter is not specified, transcoding is performed based on the default transcoding template group. If the transcoding template group ID is specified, transcoding is performed based on the specified template group.
+        /// > *   If the **No Transcoding** template group is used, only the [FileUploadComplete](https://help.aliyun.com/document_detail/55630.html) event notification is returned after a video is uploaded. The [StreamTranscodeComplete](https://help.aliyun.com/document_detail/55636.html) event notification is not returned.
+        /// > *   If you use the **No Transcoding** template group to upload videos, only videos in the format of MP4, FLV, MP3, M3U8, or WebM can be played. Videos in other formats can only be stored in ApsaraVideo VOD. You can view the file name extension to obtain the video format. If you want to use ApsaraVideo Player, make sure that the version of the player is V3.1.0 or later.
         /// </summary>
         [NameInMap("TemplateGroupId")]
         [Validation(Required=false)]

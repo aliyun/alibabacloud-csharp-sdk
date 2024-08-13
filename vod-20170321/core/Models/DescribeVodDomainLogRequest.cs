@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainLogRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// The domain name for CDN.
         /// 
         /// >  You can specify only one domain name in each query.
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// The snapshot data of the media.
+        /// The information about the snapshot.
         /// </summary>
         [NameInMap("MediaSnapshot")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// The rule for generating snapshot URLs.
+            /// The rule used to generate snapshot URLs.
             /// </summary>
             [NameInMap("Regular")]
             [Validation(Required=false)]
             public string Regular { get; set; }
 
             /// <summary>
-            /// The snapshot data.
+            /// The details of the snapshot.
             /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]

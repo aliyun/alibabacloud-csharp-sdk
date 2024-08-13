@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribePlayTopVideosRequest : TeaModel {
         /// <summary>
-        /// The time to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// The time to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **100**. Maximum value: **1000**.
+        /// The number of entries to return on each page. The default value is **100**. The maximum value is **1000**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

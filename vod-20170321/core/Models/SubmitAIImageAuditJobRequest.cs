@@ -50,16 +50,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the review template.
+        /// The ID of the AI template. You can use one of the following methods to obtain the ID:
         /// 
-        /// If you want to use an AI template, you can call the following operations:
-        /// 
-        /// *   [ListAITemplate](https://help.aliyun.com/document_detail/102936.html)
-        /// *   [AddAITemplate](https://help.aliyun.com/document_detail/102930.html)
-        /// *   [GetAITemplate](https://help.aliyun.com/document_detail/102933.html)
-        /// *   [SetDefaultAITemplate](https://help.aliyun.com/document_detail/102937.html)
-        /// 
-        /// If you do not specify this parameter, the ID of the default AI template for automated review is used.
+        /// *   Obtain the value of TemplateId from the response to the [AddAITemplate](https://help.aliyun.com/document_detail/102930.html) operation that you call to create an AI template.
+        /// *   Obtain the value of TemplateId from the response to the [ListAITemplate](https://help.aliyun.com/document_detail/102936.html) operation that you call to create an AI template.
         /// 
         /// This parameter is required.
         /// </summary>

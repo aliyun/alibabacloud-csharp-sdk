@@ -201,6 +201,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string OutputType { get; set; }
 
+            [NameInMap("PreprocessStatus")]
+            [Validation(Required=false)]
+            public string PreprocessStatus { get; set; }
+
             /// <summary>
             /// The period of time in which the object remains in the restored state.
             /// </summary>

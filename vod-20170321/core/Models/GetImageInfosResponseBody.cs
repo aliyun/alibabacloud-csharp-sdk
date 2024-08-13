@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// The ID of the category to which the image belongs.
+            /// The ID of the category.
             /// </summary>
             [NameInMap("CateId")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the image file.
+            /// The ID of the image.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
@@ -61,11 +61,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// The type of the image. Valid values:
             /// 
-            /// *   **CoverSnapshot**: thumbnail snapshot
-            /// *   **NormalSnapshot**: normal snapshot
-            /// *   **SpriteSnapshot**: sprite snapshot
-            /// *   **SpriteOriginSnapshot**: sprite source snapshot
-            /// *   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).
+            /// *   **default**: regular images
+            /// *   **cover**: video thumbnail
             /// </summary>
             [NameInMap("ImageType")]
             [Validation(Required=false)]
@@ -79,7 +76,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public GetImageInfosResponseBodyImageInfoMezzanine Mezzanine { get; set; }
             public class GetImageInfosResponseBodyImageInfoMezzanine : TeaModel {
                 /// <summary>
-                /// The size of the image file. Unit: bytes.
+                /// The size of the file to be uploaded. Unit: bytes.
                 /// </summary>
                 [NameInMap("FileSize")]
                 [Validation(Required=false)]
@@ -100,7 +97,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public int? Height { get; set; }
 
                 /// <summary>
-                /// The name of the source file.
+                /// The URL of the source file.
                 /// </summary>
                 [NameInMap("OriginalFileName")]
                 [Validation(Required=false)]
@@ -134,7 +131,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string StorageLocation { get; set; }
 
             /// <summary>
-            /// The tags of the image. Separate multiple tags with commas (,).
+            /// The tags of the image. Multiple tags are separated by commas (,).
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

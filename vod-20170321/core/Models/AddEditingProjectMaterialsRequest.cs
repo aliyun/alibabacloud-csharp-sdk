@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddEditingProjectMaterialsRequest : TeaModel {
         /// <summary>
+        /// The ID of the material. Separate multiple material IDs with commas (,). You can specify up to 10 IDs.
+        /// 
+        /// >  If you specify multiple materials, make sure that the materials are of the same type as specified in MaterialType.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("MaterialIds")]
@@ -17,6 +21,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MaterialIds { get; set; }
 
         /// <summary>
+        /// The type of the material. Valid values:
+        /// 
+        /// *   **video**
+        /// *   **audio**
+        /// *   **image**
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("MaterialType")]
@@ -32,6 +42,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
+        /// The ID of the online editing project.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]

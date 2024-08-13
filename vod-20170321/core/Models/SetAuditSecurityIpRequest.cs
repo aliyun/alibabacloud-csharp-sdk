@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// *   **Append** (default): adds the IP addresses to the original whitelist.
         /// *   **Cover**: overwrites the original whitelist.
         /// *   **Delete**: removes the IP addresses from the original whitelist.
+        /// 
+        /// >  If the value that you specify is invalid, the default value is used.
         /// </summary>
         [NameInMap("OperateMode")]
         [Validation(Required=false)]
