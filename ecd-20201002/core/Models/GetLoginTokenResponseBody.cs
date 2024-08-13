@@ -55,22 +55,31 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginToken { get; set; }
 
         /// <summary>
-        /// The next stage that is expected to enter. For example, if the administrator enables MFA authentication in the EDS console, `MFAVerify` is returned after the username and password pass the authentication (after you set CurrentStage to `ADPassword` stage). This indicates that the MFA authentication is required.
+        /// The next stage that is expected to enter. For example, an administrator enables MFA in the EDS console. When an end user enters the password, that is, the end user completes the `ADPassword` stage, this parameter returns `MFAVerify`. This indicates that MFA is required.
         /// 
-        /// > For more information about each authentication stage, see the parameter description of the request parameter `CurrentStage`.
+        /// >  For more information about the authentication stages, see the `CurrentStage` parameter.
         /// </summary>
         [NameInMap("NextStage")]
         [Validation(Required=false)]
         public string NextStage { get; set; }
 
+        /// <summary>
+        /// > This is a parameter only for internal use.
+        /// </summary>
         [NameInMap("PasswordStrategy")]
         [Validation(Required=false)]
         public GetLoginTokenResponseBodyPasswordStrategy PasswordStrategy { get; set; }
         public class GetLoginTokenResponseBodyPasswordStrategy : TeaModel {
+            /// <summary>
+            /// > This is a parameter only for internal use.
+            /// </summary>
             [NameInMap("TenantAlternativeChars")]
             [Validation(Required=false)]
             public List<string> TenantAlternativeChars { get; set; }
 
+            /// <summary>
+            /// > This is a parameter only for internal use.
+            /// </summary>
             [NameInMap("TenantPasswordLength")]
             [Validation(Required=false)]
             public string TenantPasswordLength { get; set; }
@@ -100,6 +109,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string QrCodePng { get; set; }
 
+        /// <summary>
+        /// > This is a parameter only for internal use.
+        /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
@@ -111,22 +123,37 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Risk identification information regarding the signin process.
+        /// </summary>
         [NameInMap("RiskVerifyInfo")]
         [Validation(Required=false)]
         public GetLoginTokenResponseBodyRiskVerifyInfo RiskVerifyInfo { get; set; }
         public class GetLoginTokenResponseBodyRiskVerifyInfo : TeaModel {
+            /// <summary>
+            /// The email used for authentication.
+            /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// The duration of the lock.
+            /// </summary>
             [NameInMap("LastLockDuration")]
             [Validation(Required=false)]
             public long? LastLockDuration { get; set; }
 
+            /// <summary>
+            /// Whether the account is locked or not.
+            /// </summary>
             [NameInMap("Locked")]
             [Validation(Required=false)]
             public string Locked { get; set; }
 
+            /// <summary>
+            /// The mobile number used for authentication.
+            /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }

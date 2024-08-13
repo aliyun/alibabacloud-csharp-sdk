@@ -264,6 +264,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("RegionLocation")]
+            [Validation(Required=false)]
+            public string RegionLocation { get; set; }
+
             [NameInMap("SessionType")]
             [Validation(Required=false)]
             public string SessionType { get; set; }
