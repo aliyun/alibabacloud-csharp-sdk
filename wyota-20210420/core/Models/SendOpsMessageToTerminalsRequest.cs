@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class SendOpsMessageToTerminalsRequest : TeaModel {
+        [NameInMap("Delay")]
+        [Validation(Required=false)]
+        public bool? Delay { get; set; }
+
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
