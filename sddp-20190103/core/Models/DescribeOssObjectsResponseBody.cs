@@ -179,6 +179,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         }
 
+        [NameInMap("Marker")]
+        [Validation(Required=false)]
+        public string Marker { get; set; }
+
+        [NameInMap("NextMarker")]
+        [Validation(Required=false)]
+        public string NextMarker { get; set; }
+
         /// <summary>
         /// The number of entries returned per page.
         /// </summary>
@@ -199,6 +207,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
+
+        [NameInMap("Truncated")]
+        [Validation(Required=false)]
+        public bool? Truncated { get; set; }
 
     }
 

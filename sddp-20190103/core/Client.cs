@@ -4612,6 +4612,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["LastScanTimeStart"] = request.LastScanTimeStart;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                query["Marker"] = request.Marker;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -4689,6 +4693,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastScanTimeStart))
             {
                 query["LastScanTimeStart"] = request.LastScanTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                query["Marker"] = request.Marker;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {

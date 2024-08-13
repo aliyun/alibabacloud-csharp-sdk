@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public long? LastScanTimeStart { get; set; }
 
+        [NameInMap("Marker")]
+        [Validation(Required=false)]
+        public long? Marker { get; set; }
+
         /// <summary>
         /// The search keyword. Fuzzy match is supported.
         /// </summary>
