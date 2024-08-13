@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class LaunchSurveyRequest : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("ContactFlowId")]
         [Validation(Required=false)]
         public string ContactFlowId { get; set; }
