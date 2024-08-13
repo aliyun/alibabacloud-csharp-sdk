@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeInstanceListResponseBody : TeaModel {
         /// <summary>
-        /// The details about the Anti-DDoS Origin instance.
+        /// The details about the Anti-DDoS Origin instances.
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public List<DescribeInstanceListResponseBodyInstanceList> InstanceList { get; set; }
         public class DescribeInstanceListResponseBodyInstanceList : TeaModel {
+            /// <summary>
+            /// The condition that triggers automatic association of the instance with an object.
+            /// </summary>
             [NameInMap("AutoProtectCondition")]
             [Validation(Required=false)]
             public DescribeInstanceListResponseBodyInstanceListAutoProtectCondition AutoProtectCondition { get; set; }
@@ -29,8 +32,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// Indicates whether auto-renewal is enabled for the instance. Valid values:
             /// 
-            /// *   **true**: enabled
-            /// *   **false**: disabled
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("AutoRenewal")]
             [Validation(Required=false)]
@@ -45,23 +48,37 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public string BlackholdingCount { get; set; }
 
+            /// <summary>
+            /// The type of the instance.
+            /// 
+            /// *   **ddos_ddosorigin_public_cn**: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com)
+            /// *   **ddos_ddosorigin_public_intl**: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com)
+            /// </summary>
             [NameInMap("CommodityType")]
             [Validation(Required=false)]
             public string CommodityType { get; set; }
 
+            /// <summary>
+            /// The application scope of the instance.
+            /// 
+            /// *   **1**: The instance supports public IP addresses in all regions.
+            /// *   **2**: The instance supports public IP addresses in regions in the Chinese mainland.
+            /// *   **3**: The instance supports public IP addresses in regions outside the Chinese mainland.
+            /// *   **4**: The instance supports public IP addresses in a region in or outside the Chinese mainland.
+            /// </summary>
             [NameInMap("CoverageType")]
             [Validation(Required=false)]
             public int? CoverageType { get; set; }
 
             /// <summary>
-            /// The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.
+            /// The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// The time when the instance was purchased. This value is a UNIX timestamp. Unit: milliseconds.
+            /// The time when the instance was purchased. The value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -87,15 +104,15 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// The protocol type of the IP address asset that is protected by the instance. Valid values:
             /// 
-            /// *   **Ipv4**: IPv4
-            /// *   **Ipv6**: IPv6
+            /// *   **Ipv4**
+            /// *   **Ipv6**
             /// </summary>
             [NameInMap("IpType")]
             [Validation(Required=false)]
             public string IpType { get; set; }
 
             /// <summary>
-            /// The type of the cloud service that is associated with the Anti-DDoS Origin instance. By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.
+            /// The type of the cloud service that is associated with the Anti-DDoS Origin instance By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.
             /// 
             /// Valid values:
             /// 
@@ -107,7 +124,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// The remarks of the instance.
+            /// The description of the instance.
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]

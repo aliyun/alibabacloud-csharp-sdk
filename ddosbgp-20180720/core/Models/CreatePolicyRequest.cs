@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class CreatePolicyRequest : TeaModel {
         /// <summary>
+        /// The name of the policy.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
@@ -17,6 +19,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// The type of the policy. Valid values:
+        /// 
+        /// *   **l3**: IP-specific mitigation policies.
+        /// *   **l4**: port-specific mitigation policies.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]

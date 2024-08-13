@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The query token. Set the value to the **NextToken** value that is returned in the last call to the ListTagResources operation. Leave this parameter empty the first time you call this operation.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of **NextToken**.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -37,16 +37,16 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of Anti-DDoS Origin Instances to query.
+        /// The IDs of the Anti-DDoS Origin instances to query.
         /// 
-        /// >  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances.
+        /// >  The **ResourceId** parameter and the **key-value pair for the Tag parameter** cannot be left empty at the same time.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource to query. Set the value to **INSTANCE**, which indicates instances.
+        /// The type of the resource to query. Set the value to **INSTANCE**.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags to query.
+        /// The key-value pair of the tag to query.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// The key of the tag to query.
             /// 
-            /// >  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.
+            /// >  The **ResourceId** parameter and the **key-value pair for the Tag parameter** cannot be left empty at the same time.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// The value of the tag to query.
             /// 
-            /// >  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.
+            /// >  The **ResourceId** parameter and the **key-value pair for the Tag parameter** cannot be left empty at the same time.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

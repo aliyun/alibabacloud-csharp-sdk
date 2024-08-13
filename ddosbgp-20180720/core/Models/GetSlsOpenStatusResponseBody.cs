@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class GetSlsOpenStatusResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether Log Service was activated. Valid values:
+        /// Indicates whether Simple Log Service was activated. Valid values:
         /// 
-        /// *   **true**: Log Service was activated.
-        /// *   **false**: Log Service was not activated.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("SlsOpenStatus")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeOpEntitiesRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeOpEntities**.
+        /// The page number.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The details of the operation log.
+        /// The end time. Operation logs that were generated before this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,33 +28,35 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The ID of the instance to query.
+        /// 
+        /// > You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all instances.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The sort order of operation logs. Valid values:
-        /// 
-        /// *   **ASC**: the ascending order.
-        /// *   **DESC**: the descending order.
+        /// The sorting method of operation logs. Set the value to **opdate**, which indicates sorting based on the operation time.
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Anti-DDoS Origin instance resides.
+        /// The sort order of operation logs. Valid values:
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
+        /// *   **ASC**: the ascending order.
+        /// *   **DESC**: the descending order.
+        /// 
+        /// Default value: **DESC**.
         /// </summary>
         [NameInMap("OrderDir")]
         [Validation(Required=false)]
         public string OrderDir { get; set; }
 
         /// <summary>
-        /// The type of the operation object. The value is fixed as **1**, which indicates Anti-DDoS Origin instances.
+        /// The number of entries per page. Maximum value: 50.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -63,50 +65,25 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account that performs the operation.
+        /// The ID of the region where the instance resides.
         /// 
-        /// >  If the value is **system**, the operation is performed by Anti-DDoS Origin.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The details about the operation. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
+        /// The ID of the resource group to which the instance belongs in Resource Management.
         /// 
-        /// *   **entity**: the operation object. Data type: object. The fields that are included in the value of the **entity** parameter vary based on the value of the **OpAction** parameter. Take note of the following items:
-        /// 
-        ///     *   If the value of the **OpAction** parameter is **3**, the value of the **entity** parameter consists of the following field:
-        /// 
-        ///         *   **ips**: the public IP addresses that are protected by the Anti-DDoS Origin instance. Data type: array
-        /// 
-        ///     *   If the value of the **OpAction** parameter is **4**, the value of the **entity** parameter consists of the following field:
-        /// 
-        ///         *   **ips**: the public IP addresses that are no longer protected by the Anti-DDoS Origin instance. Data type: array.
-        /// 
-        ///     *   If the value of the **OpAction** parameter is **5**, the value of the **entity** parameter consists of the following fields:
-        /// 
-        ///         *   **baseBandwidth**: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.
-        ///         *   **elasticBandwidth**: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.
-        ///         *   **opSource**: the source of the operation. The value is fixed as **1**, indicating that the operation is performed by Anti-DDoS Origin. Data type: integer.
-        /// 
-        ///     *   If the value of the **OpAction** parameter is **6**, the value of the **entity** parameter consists of the following field:
-        /// 
-        ///         *   **ips**: the public IP addresses for which to deactivate blackhole filtering. Data type: array.
-        /// 
-        ///     *   If the value of the **OpAction** parameter is **7**, the **entity** parameter is not returned.
-        /// 
-        ///     *   If the value of the **OpAction** parameter is **8**, the value of the **entity** parameter consists of the following fields:
-        /// 
-        ///         *   **baseBandwidth**: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.
-        ///         *   **elasticBandwidth**: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.
+        /// If you do not specify this parameter, the instance belongs to the default resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The sorting method of operation logs. Set the value to **opdate**, which indicates sorting based on the operation time.
+        /// The start time. Operation logs that were generated after this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -177,7 +177,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 添加资源目录成员账号列表
+         * @summary Adds members to a resource directory.
+         *
+         * @description Only a delegated administrator account or the management account of a resource directory can be used to add members to the resource directory.
          *
          * @param tmpReq AddRdMemberListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -217,7 +219,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 添加资源目录成员账号列表
+         * @summary Adds members to a resource directory.
+         *
+         * @description Only a delegated administrator account or the management account of a resource directory can be used to add members to the resource directory.
          *
          * @param tmpReq AddRdMemberListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -257,7 +261,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 添加资源目录成员账号列表
+         * @summary Adds members to a resource directory.
+         *
+         * @description Only a delegated administrator account or the management account of a resource directory can be used to add members to the resource directory.
          *
          * @param request AddRdMemberListRequest
          * @return AddRdMemberListResponse
@@ -269,7 +275,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 添加资源目录成员账号列表
+         * @summary Adds members to a resource directory.
+         *
+         * @description Only a delegated administrator account or the management account of a resource directory can be used to add members to the resource directory.
          *
          * @param request AddRdMemberListRequest
          * @return AddRdMemberListResponse
@@ -401,7 +409,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 策略绑定
+         * @summary Associates a mitigation policy to a protected object.
          *
          * @param tmpReq AttachToPolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -445,7 +453,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 策略绑定
+         * @summary Associates a mitigation policy to a protected object.
          *
          * @param tmpReq AttachToPolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -489,7 +497,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 策略绑定
+         * @summary Associates a mitigation policy to a protected object.
          *
          * @param request AttachToPolicyRequest
          * @return AttachToPolicyResponse
@@ -501,7 +509,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 策略绑定
+         * @summary Associates a mitigation policy to a protected object.
          *
          * @param request AttachToPolicyRequest
          * @return AttachToPolicyResponse
@@ -513,7 +521,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Checks whether Anti-DDoS Origin is authorized to access Log Service.
+         * @summary Queries whether Anti-DDoS Origin is authorized to access Simple Log Service.
          *
          * @param request CheckAccessLogAuthRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -551,7 +559,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Checks whether Anti-DDoS Origin is authorized to access Log Service.
+         * @summary Queries whether Anti-DDoS Origin is authorized to access Simple Log Service.
          *
          * @param request CheckAccessLogAuthRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -589,7 +597,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Checks whether Anti-DDoS Origin is authorized to access Log Service.
+         * @summary Queries whether Anti-DDoS Origin is authorized to access Simple Log Service.
          *
          * @param request CheckAccessLogAuthRequest
          * @return CheckAccessLogAuthResponse
@@ -601,7 +609,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Checks whether Anti-DDoS Origin is authorized to access Log Service.
+         * @summary Queries whether Anti-DDoS Origin is authorized to access Simple Log Service.
          *
          * @param request CheckAccessLogAuthRequest
          * @return CheckAccessLogAuthResponse
@@ -713,6 +721,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Modifies a scheduling rule of an on-demand instance.
+         *
          * @param request ConfigSchedruleOnDemandRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ConfigSchedruleOnDemandResponse
@@ -789,6 +799,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Modifies a scheduling rule of an on-demand instance.
+         *
          * @param request ConfigSchedruleOnDemandRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ConfigSchedruleOnDemandResponse
@@ -865,6 +877,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Modifies a scheduling rule of an on-demand instance.
+         *
          * @param request ConfigSchedruleOnDemandRequest
          * @return ConfigSchedruleOnDemandResponse
          */
@@ -875,6 +889,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Modifies a scheduling rule of an on-demand instance.
+         *
          * @param request ConfigSchedruleOnDemandRequest
          * @return ConfigSchedruleOnDemandResponse
          */
@@ -885,7 +901,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 创建策略
+         * @summary Creates a mitigation policy.
          *
          * @param request CreatePolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -923,7 +939,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 创建策略
+         * @summary Creates a mitigation policy.
          *
          * @param request CreatePolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -961,7 +977,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 创建策略
+         * @summary Creates a mitigation policy.
          *
          * @param request CreatePolicyRequest
          * @return CreatePolicyResponse
@@ -973,7 +989,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 创建策略
+         * @summary Creates a mitigation policy.
          *
          * @param request CreatePolicyRequest
          * @return CreatePolicyResponse
@@ -1169,8 +1185,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
          *
          * @description You can call the DeleteBlackhole operation to deactivate blackhole filtering for a protected IP address.
          * Before you call this operation, you can call the [DescribePackIpList](https://help.aliyun.com/document_detail/118701.html) operation to query the protection status of the IP addresses that are protected by your Anti-DDoS Origin instance. For example, you can query whether blackhole filtering is triggered for an IP address.
-         * ### Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * ### [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteBlackholeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1220,8 +1236,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
          *
          * @description You can call the DeleteBlackhole operation to deactivate blackhole filtering for a protected IP address.
          * Before you call this operation, you can call the [DescribePackIpList](https://help.aliyun.com/document_detail/118701.html) operation to query the protection status of the IP addresses that are protected by your Anti-DDoS Origin instance. For example, you can query whether blackhole filtering is triggered for an IP address.
-         * ### Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * ### [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteBlackholeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1271,8 +1287,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
          *
          * @description You can call the DeleteBlackhole operation to deactivate blackhole filtering for a protected IP address.
          * Before you call this operation, you can call the [DescribePackIpList](https://help.aliyun.com/document_detail/118701.html) operation to query the protection status of the IP addresses that are protected by your Anti-DDoS Origin instance. For example, you can query whether blackhole filtering is triggered for an IP address.
-         * ### Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * ### [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteBlackholeRequest
          * @return DeleteBlackholeResponse
@@ -1288,8 +1304,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
          *
          * @description You can call the DeleteBlackhole operation to deactivate blackhole filtering for a protected IP address.
          * Before you call this operation, you can call the [DescribePackIpList](https://help.aliyun.com/document_detail/118701.html) operation to query the protection status of the IP addresses that are protected by your Anti-DDoS Origin instance. For example, you can query whether blackhole filtering is triggered for an IP address.
-         * ### Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * ### [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteBlackholeRequest
          * @return DeleteBlackholeResponse
@@ -1425,7 +1441,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 删除策略
+         * @summary Deletes a mitigation policy.
+         *
+         * @description You cannot delete a mitigation policy to which a protected object is added.
          *
          * @param request DeletePolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1459,7 +1477,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 删除策略
+         * @summary Deletes a mitigation policy.
+         *
+         * @description You cannot delete a mitigation policy to which a protected object is added.
          *
          * @param request DeletePolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1493,7 +1513,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 删除策略
+         * @summary Deletes a mitigation policy.
+         *
+         * @description You cannot delete a mitigation policy to which a protected object is added.
          *
          * @param request DeletePolicyRequest
          * @return DeletePolicyResponse
@@ -1505,7 +1527,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 删除策略
+         * @summary Deletes a mitigation policy.
+         *
+         * @description You cannot delete a mitigation policy to which a protected object is added.
          *
          * @param request DeletePolicyRequest
          * @return DeletePolicyResponse
@@ -1517,7 +1541,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 删除资源目录成员账号列表
+         * @summary Deletes members.
+         *
+         * @description Only a delegated administrator account or the management account of a resource directory can be used to delete members.
          *
          * @param tmpReq DeleteRdMemberListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1557,7 +1583,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 删除资源目录成员账号列表
+         * @summary Deletes members.
+         *
+         * @description Only a delegated administrator account or the management account of a resource directory can be used to delete members.
          *
          * @param tmpReq DeleteRdMemberListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1597,7 +1625,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 删除资源目录成员账号列表
+         * @summary Deletes members.
+         *
+         * @description Only a delegated administrator account or the management account of a resource directory can be used to delete members.
          *
          * @param request DeleteRdMemberListRequest
          * @return DeleteRdMemberListResponse
@@ -1609,7 +1639,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 删除资源目录成员账号列表
+         * @summary Deletes members.
+         *
+         * @description Only a delegated administrator account or the management account of a resource directory can be used to delete members.
          *
          * @param request DeleteRdMemberListRequest
          * @return DeleteRdMemberListResponse
@@ -1621,6 +1653,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Deletes a scheduling rule of an anti-DDoS diversion instance.
+         *
          * @param request DeleteSchedruleOnDemandRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteSchedruleOnDemandResponse
@@ -1661,6 +1695,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Deletes a scheduling rule of an anti-DDoS diversion instance.
+         *
          * @param request DeleteSchedruleOnDemandRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteSchedruleOnDemandResponse
@@ -1701,6 +1737,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Deletes a scheduling rule of an anti-DDoS diversion instance.
+         *
          * @param request DeleteSchedruleOnDemandRequest
          * @return DeleteSchedruleOnDemandResponse
          */
@@ -1711,6 +1749,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Deletes a scheduling rule of an anti-DDoS diversion instance.
+         *
          * @param request DeleteSchedruleOnDemandRequest
          * @return DeleteSchedruleOnDemandResponse
          */
@@ -1969,10 +2009,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Queries the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance.
+         * @summary Queries the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance.
          *
-         * @description You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
-         * ## Limits
+         * @description You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.
+         * ### [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeDdosEventRequest
@@ -2035,10 +2075,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Queries the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance.
+         * @summary Queries the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance.
          *
-         * @description You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
-         * ## Limits
+         * @description You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.
+         * ### [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeDdosEventRequest
@@ -2101,10 +2141,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Queries the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance.
+         * @summary Queries the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance.
          *
-         * @description You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
-         * ## Limits
+         * @description You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.
+         * ### [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeDdosEventRequest
@@ -2117,10 +2157,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Queries the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance.
+         * @summary Queries the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance.
          *
-         * @description You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
-         * ## Limits
+         * @description You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.
+         * ### [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeDdosEventRequest
@@ -2133,7 +2173,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询账单
+         * @summary Queries the bill of an Anti-DDoS Origin (Pay-as-you-go) instance.
          *
          * @param request DescribeDdosOriginInstanceBillRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2179,7 +2219,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询账单
+         * @summary Queries the bill of an Anti-DDoS Origin (Pay-as-you-go) instance.
          *
          * @param request DescribeDdosOriginInstanceBillRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2225,7 +2265,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询账单
+         * @summary Queries the bill of an Anti-DDoS Origin (Pay-as-you-go) instance.
          *
          * @param request DescribeDdosOriginInstanceBillRequest
          * @return DescribeDdosOriginInstanceBillResponse
@@ -2237,7 +2277,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询账单
+         * @summary Queries the bill of an Anti-DDoS Origin (Pay-as-you-go) instance.
          *
          * @param request DescribeDdosOriginInstanceBillRequest
          * @return DescribeDdosOriginInstanceBillResponse
@@ -2249,10 +2289,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Queries the number of assets that are in an abnormal state and the number of Anti-DDoS
-         *                   Origin instances that are about to expire in a specific region. The assets can be
-         *                   elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS)
-         *                   instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.
+         * @summary Queries the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.
          *
          * @description ## Usage notes
          * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
@@ -2293,10 +2330,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Queries the number of assets that are in an abnormal state and the number of Anti-DDoS
-         *                   Origin instances that are about to expire in a specific region. The assets can be
-         *                   elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS)
-         *                   instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.
+         * @summary Queries the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.
          *
          * @description ## Usage notes
          * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
@@ -2337,10 +2371,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Queries the number of assets that are in an abnormal state and the number of Anti-DDoS
-         *                   Origin instances that are about to expire in a specific region. The assets can be
-         *                   elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS)
-         *                   instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.
+         * @summary Queries the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.
          *
          * @description ## Usage notes
          * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
@@ -2355,10 +2386,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Queries the number of assets that are in an abnormal state and the number of Anti-DDoS
-         *                   Origin instances that are about to expire in a specific region. The assets can be
-         *                   elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS)
-         *                   instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.
+         * @summary Queries the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire. The assets can be elastic IP addresses (EIPs). The assets can also be Elastic Compute Service (ECS) instances or Server Load Balancer (SLB) instances that are assigned public IP addresses.
          *
          * @description ## Usage notes
          * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
@@ -2677,9 +2705,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Call the DescribeOnDemandDdosEvent operation to query the DDoS events recorded for the IP address of the Anti-DDoS on-demand instance.
+         * @summary Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.
          *
-         * @description >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
+         * @description You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.
+         * ### [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeOnDemandDdosEventRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2741,9 +2771,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Call the DescribeOnDemandDdosEvent operation to query the DDoS events recorded for the IP address of the Anti-DDoS on-demand instance.
+         * @summary Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.
          *
-         * @description >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
+         * @description You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.
+         * ### [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeOnDemandDdosEventRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2805,9 +2837,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Call the DescribeOnDemandDdosEvent operation to query the DDoS events recorded for the IP address of the Anti-DDoS on-demand instance.
+         * @summary Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.
          *
-         * @description >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
+         * @description You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.
+         * ### [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeOnDemandDdosEventRequest
          * @return DescribeOnDemandDdosEventResponse
@@ -2819,9 +2853,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Call the DescribeOnDemandDdosEvent operation to query the DDoS events recorded for the IP address of the Anti-DDoS on-demand instance.
+         * @summary Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.
          *
-         * @description >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
+         * @description You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.
+         * ### [](#qps-)Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeOnDemandDdosEventRequest
          * @return DescribeOnDemandDdosEventResponse
@@ -2833,6 +2869,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Queries the details of anti-DDoS diversion instances.
+         *
          * @param request DescribeOnDemandInstanceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeOnDemandInstanceStatusResponse
@@ -2869,6 +2907,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Queries the details of anti-DDoS diversion instances.
+         *
          * @param request DescribeOnDemandInstanceStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeOnDemandInstanceStatusResponse
@@ -2905,6 +2945,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Queries the details of anti-DDoS diversion instances.
+         *
          * @param request DescribeOnDemandInstanceStatusRequest
          * @return DescribeOnDemandInstanceStatusResponse
          */
@@ -2915,6 +2957,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Queries the details of anti-DDoS diversion instances.
+         *
          * @param request DescribeOnDemandInstanceStatusRequest
          * @return DescribeOnDemandInstanceStatusResponse
          */
@@ -2925,9 +2969,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary The number of entries to return on each page.
+         * @summary Queries the operation logs of an Anti-DDoS Origin instance.
          *
-         * @description The start time. Operation logs that were generated after this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.
+         * @description You can call the DescribeOpEntities operation to query the operation logs of an instance by page.
+         * ### Limit
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeOpEntitiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2993,9 +3039,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary The number of entries to return on each page.
+         * @summary Queries the operation logs of an Anti-DDoS Origin instance.
          *
-         * @description The start time. Operation logs that were generated after this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.
+         * @description You can call the DescribeOpEntities operation to query the operation logs of an instance by page.
+         * ### Limit
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeOpEntitiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3061,9 +3109,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary The number of entries to return on each page.
+         * @summary Queries the operation logs of an Anti-DDoS Origin instance.
          *
-         * @description The start time. Operation logs that were generated after this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.
+         * @description You can call the DescribeOpEntities operation to query the operation logs of an instance by page.
+         * ### Limit
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeOpEntitiesRequest
          * @return DescribeOpEntitiesResponse
@@ -3075,9 +3125,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary The number of entries to return on each page.
+         * @summary Queries the operation logs of an Anti-DDoS Origin instance.
          *
-         * @description The start time. Operation logs that were generated after this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.
+         * @description You can call the DescribeOpEntities operation to query the operation logs of an instance by page.
+         * ### Limit
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeOpEntitiesRequest
          * @return DescribeOpEntitiesResponse
@@ -3253,7 +3305,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询资源目录成员账号列表
+         * @summary Queries members that are managed by using the multi-account management feature.
          *
          * @param request DescribeRdMemberListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3295,7 +3347,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询资源目录成员账号列表
+         * @summary Queries members that are managed by using the multi-account management feature.
          *
          * @param request DescribeRdMemberListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3337,7 +3389,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询资源目录成员账号列表
+         * @summary Queries members that are managed by using the multi-account management feature.
          *
          * @param request DescribeRdMemberListRequest
          * @return DescribeRdMemberListResponse
@@ -3349,7 +3401,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询资源目录成员账号列表
+         * @summary Queries members that are managed by using the multi-account management feature.
          *
          * @param request DescribeRdMemberListRequest
          * @return DescribeRdMemberListResponse
@@ -3361,7 +3413,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询RD状态
+         * @summary Queries the status of the multi-account management feature.
          *
          * @param request DescribeRdStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3386,7 +3438,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询RD状态
+         * @summary Queries the status of the multi-account management feature.
          *
          * @param request DescribeRdStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3411,7 +3463,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询RD状态
+         * @summary Queries the status of the multi-account management feature.
          *
          * @return DescribeRdStatusResponse
          */
@@ -3422,7 +3474,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询RD状态
+         * @summary Queries the status of the multi-account management feature.
          *
          * @return DescribeRdStatusResponse
          */
@@ -3709,7 +3761,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 策略解绑
+         * @summary Removes protected objects from a mitigation policy.
          *
          * @param tmpReq DetachFromPolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3753,7 +3805,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 策略解绑
+         * @summary Removes protected objects from a mitigation policy.
          *
          * @param tmpReq DetachFromPolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3797,7 +3849,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 策略解绑
+         * @summary Removes protected objects from a mitigation policy.
          *
          * @param request DetachFromPolicyRequest
          * @return DetachFromPolicyResponse
@@ -3809,7 +3861,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 策略解绑
+         * @summary Removes protected objects from a mitigation policy.
          *
          * @param request DetachFromPolicyRequest
          * @return DetachFromPolicyResponse
@@ -3941,7 +3993,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Checks whether Log Service is activated.
+         * @summary Queries whether Simple Log Service is activated.
          *
          * @param request GetSlsOpenStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3979,7 +4031,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Checks whether Log Service is activated.
+         * @summary Queries whether Simple Log Service is activated.
          *
          * @param request GetSlsOpenStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4017,7 +4069,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Checks whether Log Service is activated.
+         * @summary Queries whether Simple Log Service is activated.
          *
          * @param request GetSlsOpenStatusRequest
          * @return GetSlsOpenStatusResponse
@@ -4029,7 +4081,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Checks whether Log Service is activated.
+         * @summary Queries whether Simple Log Service is activated.
          *
          * @param request GetSlsOpenStatusRequest
          * @return GetSlsOpenStatusResponse
@@ -4149,7 +4201,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询策略
+         * @summary Queries mitigation policies.
          *
          * @param request ListPolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4170,6 +4222,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -4195,7 +4251,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询策略
+         * @summary Queries mitigation policies.
          *
          * @param request ListPolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4216,6 +4272,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -4241,7 +4301,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询策略
+         * @summary Queries mitigation policies.
          *
          * @param request ListPolicyRequest
          * @return ListPolicyResponse
@@ -4253,7 +4313,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询策略
+         * @summary Queries mitigation policies.
          *
          * @param request ListPolicyRequest
          * @return ListPolicyResponse
@@ -4265,7 +4325,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询策略绑定
+         * @summary Queries attachments to mitigation policies.
          *
          * @param tmpReq ListPolicyAttachmentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4321,7 +4381,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询策略绑定
+         * @summary Queries attachments to mitigation policies.
          *
          * @param tmpReq ListPolicyAttachmentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4377,7 +4437,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询策略绑定
+         * @summary Queries attachments to mitigation policies.
          *
          * @param request ListPolicyAttachmentRequest
          * @return ListPolicyAttachmentResponse
@@ -4389,7 +4449,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 查询策略绑定
+         * @summary Queries attachments to mitigation policies.
          *
          * @param request ListPolicyAttachmentRequest
          * @return ListPolicyAttachmentResponse
@@ -4525,7 +4585,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Queries the relationship between Anti-DDoS Origin instances and tags.
+         *
          * @description You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
+         * ### [](#qps-)Limits
+         * You can call this API operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ListTagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4579,7 +4643,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Queries the relationship between Anti-DDoS Origin instances and tags.
+         *
          * @description You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
+         * ### [](#qps-)Limits
+         * You can call this API operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ListTagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4633,7 +4701,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Queries the relationship between Anti-DDoS Origin instances and tags.
+         *
          * @description You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
+         * ### [](#qps-)Limits
+         * You can call this API operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ListTagResourcesRequest
          * @return ListTagResourcesResponse
@@ -4645,7 +4717,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Queries the relationship between Anti-DDoS Origin instances and tags.
+         *
          * @description You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
+         * ### [](#qps-)Limits
+         * You can call this API operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ListTagResourcesRequest
          * @return ListTagResourcesResponse
@@ -4657,7 +4733,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 修改策略
+         * @summary Modifies a mitigation policy.
          *
          * @param tmpReq ModifyPolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4709,7 +4785,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 修改策略
+         * @summary Modifies a mitigation policy.
          *
          * @param tmpReq ModifyPolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4761,7 +4837,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 修改策略
+         * @summary Modifies a mitigation policy.
          *
          * @param request ModifyPolicyRequest
          * @return ModifyPolicyResponse
@@ -4773,7 +4849,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 修改策略
+         * @summary Modifies a mitigation policy.
          *
          * @param request ModifyPolicyRequest
          * @return ModifyPolicyResponse
@@ -4785,7 +4861,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 修改策略
+         * @summary Modifies the content of the mitigation policy.
+         *
+         * @description Make sure that all request parameters are configured when you call this operation. If any parameter is left empty, the configuration is deleted.
          *
          * @param tmpReq ModifyPolicyContentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4833,7 +4911,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 修改策略
+         * @summary Modifies the content of the mitigation policy.
+         *
+         * @description Make sure that all request parameters are configured when you call this operation. If any parameter is left empty, the configuration is deleted.
          *
          * @param tmpReq ModifyPolicyContentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4881,7 +4961,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 修改策略
+         * @summary Modifies the content of the mitigation policy.
+         *
+         * @description Make sure that all request parameters are configured when you call this operation. If any parameter is left empty, the configuration is deleted.
          *
          * @param request ModifyPolicyContentRequest
          * @return ModifyPolicyContentResponse
@@ -4893,7 +4975,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 修改策略
+         * @summary Modifies the content of the mitigation policy.
+         *
+         * @description Make sure that all request parameters are configured when you call this operation. If any parameter is left empty, the configuration is deleted.
          *
          * @param request ModifyPolicyContentRequest
          * @return ModifyPolicyContentResponse
@@ -4905,10 +4989,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Adds remarks for a specific Anti-DDoS Origin instance.
+         * @summary Adds remarks for a single Anti-DDoS Origin instance.
          *
-         * @description You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
-         * ## Limits
+         * @description You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.
+         * ### [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ModifyRemarkRequest
@@ -4955,10 +5039,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Adds remarks for a specific Anti-DDoS Origin instance.
+         * @summary Adds remarks for a single Anti-DDoS Origin instance.
          *
-         * @description You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
-         * ## Limits
+         * @description You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.
+         * ### [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ModifyRemarkRequest
@@ -5005,10 +5089,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Adds remarks for a specific Anti-DDoS Origin instance.
+         * @summary Adds remarks for a single Anti-DDoS Origin instance.
          *
-         * @description You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
-         * ## Limits
+         * @description You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.
+         * ### [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ModifyRemarkRequest
@@ -5021,10 +5105,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Adds remarks for a specific Anti-DDoS Origin instance.
+         * @summary Adds remarks for a single Anti-DDoS Origin instance.
          *
-         * @description You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
-         * ## Limits
+         * @description You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.
+         * ### [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request ModifyRemarkRequest
@@ -5137,7 +5221,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 释放原生防护全局实例
+         * @summary Releases a pay-as-you-go Anti-DDoS Origin instance.
          *
          * @param request ReleaseDdosOriginInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5171,7 +5255,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 释放原生防护全局实例
+         * @summary Releases a pay-as-you-go Anti-DDoS Origin instance.
          *
          * @param request ReleaseDdosOriginInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5205,7 +5289,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 释放原生防护全局实例
+         * @summary Releases a pay-as-you-go Anti-DDoS Origin instance.
          *
          * @param request ReleaseDdosOriginInstanceRequest
          * @return ReleaseDdosOriginInstanceResponse
@@ -5217,7 +5301,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary 释放原生防护全局实例
+         * @summary Releases a pay-as-you-go Anti-DDoS Origin instance.
          *
          * @param request ReleaseDdosOriginInstanceRequest
          * @return ReleaseDdosOriginInstanceResponse
@@ -5229,6 +5313,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Specifies the scheduling mode for on-demand instances.
+         *
          * @param request SetInstanceModeOnDemandRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return SetInstanceModeOnDemandResponse
@@ -5269,6 +5355,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Specifies the scheduling mode for on-demand instances.
+         *
          * @param request SetInstanceModeOnDemandRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return SetInstanceModeOnDemandResponse
@@ -5309,6 +5397,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Specifies the scheduling mode for on-demand instances.
+         *
          * @param request SetInstanceModeOnDemandRequest
          * @return SetInstanceModeOnDemandResponse
          */
@@ -5319,6 +5409,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary Specifies the scheduling mode for on-demand instances.
+         *
          * @param request SetInstanceModeOnDemandRequest
          * @return SetInstanceModeOnDemandResponse
          */
@@ -5329,11 +5421,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Adds tags to Anti-DDoS Origin instances.
+         * @summary Add tags to Anti-DDoS Origin instances.
          *
-         * @description You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description You can call the TagResources operation to add tags to instances.
+         * ### Limit
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request TagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5383,11 +5475,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Adds tags to Anti-DDoS Origin instances.
+         * @summary Add tags to Anti-DDoS Origin instances.
          *
-         * @description You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description You can call the TagResources operation to add tags to instances.
+         * ### Limit
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request TagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5437,11 +5529,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Adds tags to Anti-DDoS Origin instances.
+         * @summary Add tags to Anti-DDoS Origin instances.
          *
-         * @description You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description You can call the TagResources operation to add tags to instances.
+         * ### Limit
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request TagResourcesRequest
          * @return TagResourcesResponse
@@ -5453,11 +5545,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Adds tags to Anti-DDoS Origin instances.
+         * @summary Add tags to Anti-DDoS Origin instances.
          *
-         * @description You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
-         * ## Limits
-         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description You can call the TagResources operation to add tags to instances.
+         * ### Limit
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request TagResourcesRequest
          * @return TagResourcesResponse
@@ -5469,7 +5561,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Removes tags from Anti-DDoS Origin Enterprise instances.
+         * @summary Removes tags from Anti-DDoS Origin instances.
          *
          * @param request UntagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5523,7 +5615,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Removes tags from Anti-DDoS Origin Enterprise instances.
+         * @summary Removes tags from Anti-DDoS Origin instances.
          *
          * @param request UntagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5577,7 +5669,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Removes tags from Anti-DDoS Origin Enterprise instances.
+         * @summary Removes tags from Anti-DDoS Origin instances.
          *
          * @param request UntagResourcesRequest
          * @return UntagResourcesResponse
@@ -5589,7 +5681,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-         * @summary Removes tags from Anti-DDoS Origin Enterprise instances.
+         * @summary Removes tags from Anti-DDoS Origin instances.
          *
          * @param request UntagResourcesRequest
          * @return UntagResourcesResponse

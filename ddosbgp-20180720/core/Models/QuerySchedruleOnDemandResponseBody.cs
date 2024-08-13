@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public List<QuerySchedruleOnDemandResponseBodyRuleConfig> RuleConfig { get; set; }
         public class QuerySchedruleOnDemandResponseBodyRuleConfig : TeaModel {
             /// <summary>
-            /// The scheduling action. Set the value to **declare**, which indicates that the route is advertised.
+            /// The scheduling action. The value is set to **declare**, which indicates that the route is advertised.
             /// </summary>
             [NameInMap("RuleAction")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string RuleConditionCnt { get; set; }
 
             /// <summary>
-            /// The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.
+            /// The threshold of inbound packets. Unit: kilo packets per second (Kpps). Minimum value: **10**.
             /// </summary>
             [NameInMap("RuleConditionKpps")]
             [Validation(Required=false)]
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// Indicates whether the scheduling rule is enabled. Valid values:
             /// 
-            /// *   **on**: enabled
-            /// *   **off**: disabled
+            /// *   **on**: enabled.
+            /// *   **off**: disabled.
             /// </summary>
             [NameInMap("RuleSwitch")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// 
             /// If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.
             /// 
-            /// >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+            /// >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
             /// </summary>
             [NameInMap("RuleUndoBeginTime")]
             [Validation(Required=false)]
@@ -98,8 +98,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// The stop method of the scheduling rule. Valid values:
             /// 
-            /// *   **auto**: The scheduling rule automatically stops.
-            /// *   **manual**: The scheduling rule is manually stopped.
+            /// *   **auto**
+            /// *   **manual**
             /// </summary>
             [NameInMap("RuleUndoMode")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// 
             /// For example, the value `GMT-08:00` indicates that the time zone is UTC+8.
             /// 
-            /// >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+            /// >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
             /// </summary>
             [NameInMap("TimeZone")]
             [Validation(Required=false)]

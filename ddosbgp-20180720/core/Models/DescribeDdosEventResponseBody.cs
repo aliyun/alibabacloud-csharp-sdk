@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of DDoS attack events.
+        /// The total number of DDoS attack events that are returned.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

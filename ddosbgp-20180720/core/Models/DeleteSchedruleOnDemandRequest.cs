@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DeleteSchedruleOnDemandRequest : TeaModel {
         /// <summary>
-        /// The ID of the on-demand instance.
+        /// The ID of the anti-DDoS diversion instance.
         /// 
-        /// >  You can call the [DescribeOnDemandInstance](https://help.aliyun.com/document_detail/152120.html) operation to query the IDs of all on-demand instances.
+        /// >  You can call the [DescribeOnDemandInstance](https://help.aliyun.com/document_detail/152120.html) operation to query the IDs of all anti-DDoS diversion instances.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the on-demand instance.
+        /// The region ID of the anti-DDoS diversion instance.
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

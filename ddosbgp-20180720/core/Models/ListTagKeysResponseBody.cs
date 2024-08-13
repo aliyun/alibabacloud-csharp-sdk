@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of tags and the details of each tag.
+        /// The information about the tags.
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? TagCount { get; set; }
 
             /// <summary>
-            /// The key of each tag.
+            /// The tag key.
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The total number of tags.
+        /// The total number of tags returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

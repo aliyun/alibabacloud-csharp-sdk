@@ -39,14 +39,26 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public string MemberUid { get; set; }
 
+            /// <summary>
+            /// The time when the near-origin traffic diversion feature was disabled.
+            /// </summary>
             [NameInMap("NsmExpireAt")]
             [Validation(Required=false)]
             public long? NsmExpireAt { get; set; }
 
+            /// <summary>
+            /// The time when the near-origin traffic diversion feature was enabled.
+            /// </summary>
             [NameInMap("NsmStartAt")]
             [Validation(Required=false)]
             public long? NsmStartAt { get; set; }
 
+            /// <summary>
+            /// The status of the near-origin traffic diversion feature. Valid values:
+            /// 
+            /// *   **1**: The near-origin traffic diversion feature is enabled.
+            /// *   **0**: The near-origin traffic diversion feature is disabled.
+            /// </summary>
             [NameInMap("NsmStatus")]
             [Validation(Required=false)]
             public int? NsmStatus { get; set; }
@@ -55,7 +67,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// The type of the cloud asset to which the IP address belongs. Valid values:
             /// 
             /// *   **ECS**: an ECS instance.
-            /// *   **SLB**: a CLB instance, originally called an SLB instance.
+            /// *   **SLB**: a CLB (formerly SLB) instance.
             /// *   **EIP**: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.
             /// *   **WAF**: a WAF instance.
             /// </summary>
@@ -84,7 +96,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// The status of the IP address. Valid values:
             /// 
-            /// *   **normal**: The IP address is in the normal state, which indicates that the IP address is not under attack.
+            /// *   **normal**: The IP address is not under attack.
             /// *   **hole_begin**: Blackhole filtering is triggered for the IP address.
             /// </summary>
             [NameInMap("Status")]

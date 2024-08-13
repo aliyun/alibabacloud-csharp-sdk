@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The region ID of the on-demand instance.
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RuleConditionCnt { get; set; }
 
         /// <summary>
-        /// The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.
+        /// The threshold of inbound packets. Unit: kilo packets per second (Kpps). Minimum value: **10**.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// Specifies whether the scheduling rule is enabled. Valid values:
         /// 
-        /// *   **on**: enabled
-        /// *   **off**: disabled
+        /// *   **on**
+        /// *   **off**
         /// 
         /// This parameter is required.
         /// </summary>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// 
         /// If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.
         /// 
-        /// >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+        /// >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -113,8 +113,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The stop method of the scheduling rule. Valid values:
         /// 
-        /// *   **auto**: The scheduling rule automatically stops.
-        /// *   **manual**: The scheduling rule is manually stopped.
+        /// *   **auto**
+        /// *   **manual**
         /// 
         /// This parameter is required.
         /// </summary>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// 
         /// For example, the value `GMT-08:00` indicates that the time zone is UTC+8.
         /// 
-        /// >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+        /// >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
         /// 
         /// This parameter is required.
         /// </summary>

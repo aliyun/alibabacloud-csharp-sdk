@@ -28,7 +28,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// 
         /// *   **ip**: required. The IP address that you want to add. Data type: string.
         /// 
-        ///     > The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.
+        ///     **
+        /// 
+        ///     **Note** The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The region ID of the Anti-DDoS Origin Enterprise instance.
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

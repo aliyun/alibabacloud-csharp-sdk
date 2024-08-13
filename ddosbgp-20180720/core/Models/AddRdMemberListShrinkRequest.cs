@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class AddRdMemberListShrinkRequest : TeaModel {
         /// <summary>
+        /// The list of the members.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("MemberList")]

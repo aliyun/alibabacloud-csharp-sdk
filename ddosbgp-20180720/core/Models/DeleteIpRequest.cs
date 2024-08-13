@@ -21,11 +21,13 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The list of IP addresses that you want to remove from the Anti-DDoS Origin Enterprise instance. This parameter is a string consisting of JSON arrays. Each element in a JSON array is a JSON struct that includes the following field:
+        /// The list of IP addresses that you want to remove from the Anti-DDoS Origin Enterprise instance. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
         /// 
         /// *   **ip**: required. The IP address that you want to remove. Data type: string.
         /// 
-        ///     > The IP addresses that you want to remove must be protected by the Anti-DDoS Origin Enterprise instance.
+        ///     **
+        /// 
+        ///     **Note** The IP addresses that you want to remove must be protected by the Anti-DDoS Origin Enterprise instance.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The region ID of the Anti-DDoS Origin Enterprise instance.
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

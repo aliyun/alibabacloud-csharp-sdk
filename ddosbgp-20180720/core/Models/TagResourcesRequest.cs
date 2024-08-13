@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The ID of the region where the Anti-DDoS Origin instance resides.
+        /// The ID of the region in which the instance resides.
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+        /// The ID of the resource group to which the instance belongs in Resource Management.
         /// 
         /// If you do not specify this parameter, the instance belongs to the default resource group.
         /// </summary>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// The IDs of the instances to which you want to add tags. You can specify up to 51 IDs.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
@@ -45,6 +47,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The tags to add. You can specify up to 21 tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// The key of the tag to add.
             /// 
-            /// >  If the specified key does not exist, a key is created.
+            /// > If the specified key does not exist, a key is created.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -61,7 +66,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// The value of the tag to add.
             /// 
-            /// >  If the specified value does not exist, a value is created.
+            /// > If the specified tag value does not exist, the tag value is created.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

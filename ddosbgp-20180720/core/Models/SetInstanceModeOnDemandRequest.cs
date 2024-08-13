@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The IDs of on-demand instances.
         /// 
-        /// >  You can call the [DescribeOnDemandInstance](https://help.aliyun.com/document_detail/152120.html) operation to query the IDs of all on-demand instances.
+        /// > You can call the [DescribeOnDemandInstance](https://help.aliyun.com/document_detail/152120.html) operation to query the IDs of all on-demand instances.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
-        /// The scheduling mode of the on-demand instance. Valid values:
+        /// Specifies the scheduling mode for on-demand instances. Valid values:
         /// 
         /// *   **manual**: manual scheduling
         /// *   **netflow-auto**: automatic scheduling
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The region ID of the on-demand instance.
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions that are supported by Anti-DDoS Origin.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeDdosEventRequest : TeaModel {
         /// <summary>
-        /// The end time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.
+        /// The end time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The start time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.
+        /// The start time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListOpenedAccessLogInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:
             /// 
-            /// *   **true**: Log analysis was enabled.
-            /// *   **false**: Log analysis was disabled.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]

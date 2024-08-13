@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class AttachToPolicyShrinkRequest : TeaModel {
         /// <summary>
+        /// The protected objects.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("IpPortProtocolList")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string IpPortProtocolListShrink { get; set; }
 
         /// <summary>
+        /// The policy ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The query token that is returned in this call.
+        /// A pagination token.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of tags that are added to the Anti-DDoS Origin instance.
+        /// The tags that are added to the Anti-DDoS Origin instance.
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource. The value is fixed as **INSTANCE**, which indicates instances.
+                /// The type of the resource. The value is set to **INSTANCE**.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
