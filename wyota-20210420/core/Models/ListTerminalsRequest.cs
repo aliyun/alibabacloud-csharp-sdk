@@ -21,9 +21,17 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string SearchKeyword { get; set; }
 
+        [NameInMap("SerialNumbers")]
+        [Validation(Required=false)]
+        public List<string> SerialNumbers { get; set; }
+
         [NameInMap("TerminalGroupId")]
         [Validation(Required=false)]
         public string TerminalGroupId { get; set; }
+
+        [NameInMap("Uuids")]
+        [Validation(Required=false)]
+        public List<string> Uuids { get; set; }
 
     }
 

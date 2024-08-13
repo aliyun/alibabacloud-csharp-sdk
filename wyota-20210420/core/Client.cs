@@ -5488,6 +5488,15 @@ namespace AlibabaCloud.SDK.Wyota20210420
         public ListTerminalsResponse ListTerminalsWithOptions(ListTerminalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumbers))
+            {
+                query["SerialNumbers"] = request.SerialNumbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -5507,6 +5516,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -5534,6 +5544,15 @@ namespace AlibabaCloud.SDK.Wyota20210420
         public async Task<ListTerminalsResponse> ListTerminalsWithOptionsAsync(ListTerminalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumbers))
+            {
+                query["SerialNumbers"] = request.SerialNumbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -5553,6 +5572,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
