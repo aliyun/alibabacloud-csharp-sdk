@@ -15587,6 +15587,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["next_version"] = request.NextVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy))
+            {
+                body["rolling_policy"] = request.RollingPolicy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
                 body["version"] = request.Version;
@@ -15634,6 +15638,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextVersion))
             {
                 body["next_version"] = request.NextVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy))
+            {
+                body["rolling_policy"] = request.RollingPolicy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {

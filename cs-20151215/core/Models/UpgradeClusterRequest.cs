@@ -34,6 +34,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string NextVersion { get; set; }
 
+        [NameInMap("rolling_policy")]
+        [Validation(Required=false)]
+        public UpgradeClusterRequestRollingPolicy RollingPolicy { get; set; }
+        public class UpgradeClusterRequestRollingPolicy : TeaModel {
+            [NameInMap("max_parallelism")]
+            [Validation(Required=false)]
+            public int? MaxParallelism { get; set; }
+
+        }
+
         /// <summary>
         /// This parameter is discontinued. Specify the Kubernetes version by using the next_version parameter.
         /// </summary>
