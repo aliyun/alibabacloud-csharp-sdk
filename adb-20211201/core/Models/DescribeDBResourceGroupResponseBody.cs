@@ -56,6 +56,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string EnableSpot { get; set; }
 
+            [NameInMap("Engine")]
+            [Validation(Required=false)]
+            public string Engine { get; set; }
+
+            [NameInMap("EngineParams")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> EngineParams { get; set; }
+
             /// <summary>
             /// The name of the resource group.
             /// </summary>
@@ -95,6 +103,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [NameInMap("MaxComputeResource")]
             [Validation(Required=false)]
             public string MaxComputeResource { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
 
             /// <summary>
             /// A reserved parameter.

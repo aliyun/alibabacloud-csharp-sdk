@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public bool? EnableSpot { get; set; }
 
+        [NameInMap("EngineParams")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> EngineParams { get; set; }
+
         /// <summary>
         /// The name of the resource group.
         /// 

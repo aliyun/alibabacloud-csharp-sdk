@@ -1,3 +1,10 @@
+2024-08-14 Version: 2.0.4
+- Update API CreateDBResourceGroup: add param Engine.
+- Update API CreateDBResourceGroup: add param EngineParams.
+- Update API DescribeDBResourceGroup: update response param.
+- Update API ModifyDBResourceGroup: add param EngineParams.
+
+
 2024-08-09 Version: 2.0.3
 - Generated csharp 2021-12-01 for adb.
 

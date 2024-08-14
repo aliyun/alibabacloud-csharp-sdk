@@ -1170,6 +1170,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDBResourceGroupShrinkRequest request = new CreateDBResourceGroupShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EngineParams))
+            {
+                request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
             {
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
@@ -1190,6 +1194,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSpot))
             {
                 query["EnableSpot"] = request.EnableSpot;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineParamsShrink))
+            {
+                query["EngineParams"] = request.EngineParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -1256,6 +1268,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDBResourceGroupShrinkRequest request = new CreateDBResourceGroupShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EngineParams))
+            {
+                request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
             {
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
@@ -1276,6 +1292,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSpot))
             {
                 query["EnableSpot"] = request.EnableSpot;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineParamsShrink))
+            {
+                query["EngineParams"] = request.EngineParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -15010,6 +15034,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyDBResourceGroupShrinkRequest request = new ModifyDBResourceGroupShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EngineParams))
+            {
+                request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
             {
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
@@ -15030,6 +15058,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSpot))
             {
                 query["EnableSpot"] = request.EnableSpot;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineParamsShrink))
+            {
+                query["EngineParams"] = request.EngineParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -15096,6 +15128,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyDBResourceGroupShrinkRequest request = new ModifyDBResourceGroupShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EngineParams))
+            {
+                request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
             {
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
@@ -15116,6 +15152,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSpot))
             {
                 query["EnableSpot"] = request.EnableSpot;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineParamsShrink))
+            {
+                query["EngineParams"] = request.EngineParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
