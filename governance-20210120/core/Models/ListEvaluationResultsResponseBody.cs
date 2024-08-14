@@ -29,6 +29,20 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             [Validation(Required=false)]
             public List<ListEvaluationResultsResponseBodyResultsMetricResults> MetricResults { get; set; }
             public class ListEvaluationResultsResponseBodyResultsMetricResults : TeaModel {
+                [NameInMap("ErrorInfo")]
+                [Validation(Required=false)]
+                public ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo ErrorInfo { get; set; }
+                public class ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo : TeaModel {
+                    [NameInMap("Code")]
+                    [Validation(Required=false)]
+                    public string Code { get; set; }
+
+                    [NameInMap("Message")]
+                    [Validation(Required=false)]
+                    public string Message { get; set; }
+
+                }
+
                 [NameInMap("EvaluationTime")]
                 [Validation(Required=false)]
                 public string EvaluationTime { get; set; }
