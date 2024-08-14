@@ -12852,6 +12852,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
@@ -12917,6 +12921,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {

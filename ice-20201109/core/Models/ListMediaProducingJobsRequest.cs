@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
