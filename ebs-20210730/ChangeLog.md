@@ -4,6 +4,12 @@
 - Update API DescribeDiskReplicaPairs: update response param.
 
 
+2024-08-14 Version: 2.8.1
+- Update API DescribeDiskReplicaGroups: add param Name.
+- Update API DescribeDiskReplicaPairs: add param Name.
+- Update API DescribeDiskReplicaPairs: update response param.
+
+
 2024-04-25 Version: 2.8.0
 - Support API DescribeLensMonitorDisks.
 
