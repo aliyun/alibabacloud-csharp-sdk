@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string PubTime { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ShareAttr")]
         [Validation(Required=false)]
         public int? ShareAttr { get; set; }

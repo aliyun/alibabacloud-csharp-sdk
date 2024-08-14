@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
+
         [NameInMap("Size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
@@ -35,6 +39,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
         [NameInMap("Title")]
         [Validation(Required=false)]
