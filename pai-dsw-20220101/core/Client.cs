@@ -2525,6 +2525,14 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 query["CreateUserId"] = request.CreateUserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuType))
+            {
+                query["GpuType"] = request.GpuType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -2536,6 +2544,38 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
             {
                 query["Labels"] = request.LabelsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpu))
+            {
+                query["MaxCpu"] = request.MaxCpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxGpu))
+            {
+                query["MaxGpu"] = request.MaxGpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxGpuMemory))
+            {
+                query["MaxGpuMemory"] = request.MaxGpuMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxMemory))
+            {
+                query["MaxMemory"] = request.MaxMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinCpu))
+            {
+                query["MinCpu"] = request.MinCpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinGpu))
+            {
+                query["MinGpu"] = request.MinGpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinGpuMemory))
+            {
+                query["MinGpuMemory"] = request.MinGpuMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinMemory))
+            {
+                query["MinMemory"] = request.MinMemory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
@@ -2617,6 +2657,14 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 query["CreateUserId"] = request.CreateUserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuType))
+            {
+                query["GpuType"] = request.GpuType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -2628,6 +2676,38 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
             {
                 query["Labels"] = request.LabelsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpu))
+            {
+                query["MaxCpu"] = request.MaxCpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxGpu))
+            {
+                query["MaxGpu"] = request.MaxGpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxGpuMemory))
+            {
+                query["MaxGpuMemory"] = request.MaxGpuMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxMemory))
+            {
+                query["MaxMemory"] = request.MaxMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinCpu))
+            {
+                query["MinCpu"] = request.MinCpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinGpu))
+            {
+                query["MinGpu"] = request.MinGpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinGpuMemory))
+            {
+                query["MinGpuMemory"] = request.MinGpuMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinMemory))
+            {
+                query["MinMemory"] = request.MinMemory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {

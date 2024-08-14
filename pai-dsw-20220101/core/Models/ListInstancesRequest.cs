@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string CreateUserId { get; set; }
 
+        [NameInMap("GpuType")]
+        [Validation(Required=false)]
+        public string GpuType { get; set; }
+
+        [NameInMap("ImageName")]
+        [Validation(Required=false)]
+        public string ImageName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -32,6 +40,38 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public Dictionary<string, object> Labels { get; set; }
+
+        [NameInMap("MaxCpu")]
+        [Validation(Required=false)]
+        public string MaxCpu { get; set; }
+
+        [NameInMap("MaxGpu")]
+        [Validation(Required=false)]
+        public string MaxGpu { get; set; }
+
+        [NameInMap("MaxGpuMemory")]
+        [Validation(Required=false)]
+        public string MaxGpuMemory { get; set; }
+
+        [NameInMap("MaxMemory")]
+        [Validation(Required=false)]
+        public string MaxMemory { get; set; }
+
+        [NameInMap("MinCpu")]
+        [Validation(Required=false)]
+        public string MinCpu { get; set; }
+
+        [NameInMap("MinGpu")]
+        [Validation(Required=false)]
+        public string MinGpu { get; set; }
+
+        [NameInMap("MinGpuMemory")]
+        [Validation(Required=false)]
+        public string MinGpuMemory { get; set; }
+
+        [NameInMap("MinMemory")]
+        [Validation(Required=false)]
+        public string MinMemory { get; set; }
 
         [NameInMap("Order")]
         [Validation(Required=false)]
