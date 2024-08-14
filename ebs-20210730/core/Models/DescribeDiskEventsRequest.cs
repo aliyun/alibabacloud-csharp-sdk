@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// The end of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID of the disk. You can call the [DescribeRegions](~~354276~~) operation to query the list of regions that support CloudLens for EBS.
+        /// The region ID of the disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/354276.html) operation to query the list of regions that support CloudLens for EBS.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// The beginning of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

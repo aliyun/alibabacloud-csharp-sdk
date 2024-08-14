@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
         /// 
-        /// The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](~~25693~~).
+        /// The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The ID of the dedicated block storage cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbscId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The new name of the dedicated block storage cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbscName")]
         [Validation(Required=false)]
@@ -40,7 +44,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

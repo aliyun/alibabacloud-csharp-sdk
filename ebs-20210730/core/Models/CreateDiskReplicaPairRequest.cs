@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -53,13 +53,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The ID of the secondary disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationDiskId")]
         [Validation(Required=false)]
         public string DestinationDiskId { get; set; }
 
         /// <summary>
-        /// The region ID of the secondary disk. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
+        /// The region ID of the secondary disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/354276.html) operation to query the most recent list of regions in which async replication is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationRegionId")]
         [Validation(Required=false)]
@@ -67,6 +71,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The zone ID of the secondary disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationZoneId")]
         [Validation(Required=false)]
@@ -74,13 +80,15 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The ID of the primary disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+        /// The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
         /// </summary>
         [NameInMap("PairName")]
         [Validation(Required=false)]
@@ -117,6 +125,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The ID of the region in which to create the replication pair.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -131,6 +141,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The zone ID of the primary disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceZoneId")]
         [Validation(Required=false)]

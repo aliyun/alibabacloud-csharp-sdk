@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateEnterpriseSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public List<CreateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfoRegions> Regions { get; set; }
             public class CreateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfoRegions : TeaModel {
                 /// <summary>
-                /// The region ID of the destination. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+                /// The region ID of the destination. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -68,13 +68,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The name of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The region ID . You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which snapshot policy is supported.
+        /// The region ID . You can call the [DescribeRegions](https://help.aliyun.com/document_detail/354276.html) operation to query the most recent list of regions in which snapshot policy is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -89,6 +93,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The snapshot retention rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RetainRule")]
         [Validation(Required=false)]
@@ -123,6 +129,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The rule for scheduling.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Schedule")]
         [Validation(Required=false)]
@@ -132,6 +140,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             /// The time when the policy will to be scheduled. Valid values: Set the parameter in a cron expression.
             /// 
             /// For example, you can use 0 0 4 1/1 * ? to specify 04:00:00 (UTC+8) on the first day of each month.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("CronExpression")]
             [Validation(Required=false)]
@@ -235,6 +245,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public class CreateEnterpriseSnapshotPolicyRequestTag : TeaModel {
             /// <summary>
             /// The key of the tag.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -246,6 +258,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// 
             /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -257,6 +271,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         /// Binding target type, valid value:
         /// 
         /// - DISK
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

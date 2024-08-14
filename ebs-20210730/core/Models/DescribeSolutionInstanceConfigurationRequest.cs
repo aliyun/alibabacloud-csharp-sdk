@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeSolutionInstanceConfigurationRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public class DescribeSolutionInstanceConfigurationRequestParameters : TeaModel {
             /// <summary>
             /// The key of the parameter.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             /// The value of the parameter.
             /// 
             /// > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The ID of the solution.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SolutionId")]
         [Validation(Required=false)]

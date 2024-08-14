@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeDedicatedBlockStorageClustersRequest : TeaModel {
         /// <summary>
-        /// The zone ID of the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+        /// The zone ID of the dedicated block storage cluster. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("AzoneId")]
         [Validation(Required=false)]
@@ -56,7 +56,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

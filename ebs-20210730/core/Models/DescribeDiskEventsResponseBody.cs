@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The time when the event occurred. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The time when the event occurred. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]

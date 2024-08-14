@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The returned enterprise-level snapshot policies.
+        /// The returned snapshot policies.
         /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Desc { get; set; }
 
             /// <summary>
-            /// The list of disks.
+            /// The disks that are associated with the snapshot policy.
             /// </summary>
             [NameInMap("DiskIds")]
             [Validation(Required=false)]

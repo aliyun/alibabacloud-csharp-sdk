@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class StartDiskReplicaGroupRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -30,13 +30,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The ID of the replication pair-consistent group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](~~426614~~) operation to query the IDs of replication pair-consistent groups.
+        /// The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](https://help.aliyun.com/document_detail/426614.html) operation to query the IDs of replication pair-consistent groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReplicaGroupId")]
         [Validation(Required=false)]

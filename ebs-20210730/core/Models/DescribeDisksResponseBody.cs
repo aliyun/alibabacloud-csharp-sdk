@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             /// 
             /// Default value: PL1.
             /// 
-            /// For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+            /// For more information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).
             /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             /// 
             /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
             /// 
-            /// >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+            /// >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).
             /// </summary>
             [NameInMap("ProvisionedIops")]
             [Validation(Required=false)]

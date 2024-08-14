@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             /// *   true
             /// *   false
             /// 
-            /// This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
+            /// This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
             /// </summary>
             [NameInMap("BurstingEnabled")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public int? Iops { get; set; }
 
             /// <summary>
-            /// Lens tags of the disk.
+            /// Event tags of the disk.
             /// </summary>
             [NameInMap("LensTags")]
             [Validation(Required=false)]

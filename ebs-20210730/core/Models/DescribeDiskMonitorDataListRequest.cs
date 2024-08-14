@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string DiskIds { get; set; }
 
         /// <summary>
-        /// The end of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// The end of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -42,14 +44,18 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~354276~~) operation to query the list of regions that support CloudLens for EBS.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/354276.html) operation to query the list of regions that support CloudLens for EBS.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// The beginning of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         /// The type of the monitoring data. Set the value to pro.
         /// 
         /// pro: burst performance data, such as burst I/O operations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

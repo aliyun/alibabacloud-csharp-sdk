@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
     public class GetDiskRequest : TeaModel {
         /// <summary>
         /// The ID of the disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The region ID of the disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

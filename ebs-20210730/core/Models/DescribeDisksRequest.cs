@@ -65,6 +65,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -100,6 +102,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public class DescribeDisksRequestTag : TeaModel {
             /// <summary>
             /// The key of the tag.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -107,6 +111,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
             /// <summary>
             /// The value of the tag.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

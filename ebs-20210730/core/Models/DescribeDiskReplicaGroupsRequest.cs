@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         /// <summary>
         /// The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaGroups operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
         /// </summary>
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The region ID of the replication pair-consistent group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

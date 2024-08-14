@@ -11,13 +11,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
     public class DescribeDiskMonitorDataRequest : TeaModel {
         /// <summary>
         /// The ID of the disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The end of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// The end of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -37,13 +41,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         /// <summary>
         /// The region ID of the disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// The beginning of the time range during which you want to query the near real-time monitoring data of the disk. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

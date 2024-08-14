@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
     public class DescribeDedicatedBlockStorageClusterDisksRequest : TeaModel {
         /// <summary>
         /// The ID of the dedicated block storage cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbscId")]
         [Validation(Required=false)]
@@ -33,7 +35,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region where the dedicated block storage cluster resides. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the region where the dedicated block storage cluster resides. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

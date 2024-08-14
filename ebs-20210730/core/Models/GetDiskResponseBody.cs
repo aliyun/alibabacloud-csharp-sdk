@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// The time when the disk was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+            /// The time when the disk was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -231,14 +231,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             /// 
             /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
             /// 
-            /// >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+            /// >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).
             /// </summary>
             [NameInMap("ProvisionedIops")]
             [Validation(Required=false)]
             public long? ProvisionedIops { get; set; }
 
             /// <summary>
-            /// The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+            /// The region ID of the disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

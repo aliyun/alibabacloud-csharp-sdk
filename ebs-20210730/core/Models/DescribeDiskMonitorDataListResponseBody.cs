@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// The beginning of the time range during which the performance of the disk bursts. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+            /// The beginning of the time range during which the performance of the disk bursts. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]

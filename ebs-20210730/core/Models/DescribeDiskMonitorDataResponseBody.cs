@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public long? ReadLatency { get; set; }
 
             /// <summary>
-            /// The timestamp that is used to query the near real-time monitoring data of the disk. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+            /// The timestamp that is used to query the near real-time monitoring data of the disk. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]

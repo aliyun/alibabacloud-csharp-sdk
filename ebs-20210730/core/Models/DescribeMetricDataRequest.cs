@@ -24,7 +24,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The name of the metric.
+        /// The name of the metric. Valid values:
+        /// 
+        /// *   disk_bps_percent
+        /// *   disk_iops_percent
+        /// *   disk_read_block_size
+        /// *   disk_read_bps
+        /// *   disk_read_iops
+        /// *   disk_read_latency
+        /// *   disk_write_block_size
+        /// *   disk_write_bps
+        /// *   disk_write_iops
+        /// *   disk_write_latency
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]

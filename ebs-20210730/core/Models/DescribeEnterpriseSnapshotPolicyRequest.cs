@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The list of disks.
+        /// The IDs of disks.
         /// </summary>
         [NameInMap("DiskIds")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -59,14 +59,16 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public List<string> PolicyIds { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the enterprise-level snapshot policy belongs.
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -81,6 +83,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public class DescribeEnterpriseSnapshotPolicyRequestTag : TeaModel {
             /// <summary>
             /// The key of tag N of the enterprise-level snapshot policy.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -88,6 +92,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
             /// <summary>
             /// The value of tag N of the enterprise-level snapshot policy.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

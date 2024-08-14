@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string DrillId { get; set; }
 
         /// <summary>
-        /// The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](~~426614~~) operation to query a list of async replication pair-consistent groups, including group IDs.
+        /// The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](https://help.aliyun.com/document_detail/426614.html) operation to query a list of async replication pair-consistent groups, including group IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -56,7 +58,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the primary or secondary disk in the async replication pair-consistent group. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
+        /// The region ID of the primary or secondary disk in the async replication pair-consistent group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/354276.html) operation to query the most recent list of regions in which async replication is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
