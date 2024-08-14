@@ -954,6 +954,138 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         }
 
         /**
+         * @summary 号码归属地查询v2
+         *
+         * @param request DescribeMobileOperatorAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeMobileOperatorAttributeResponse
+         */
+        public DescribeMobileOperatorAttributeResponse DescribeMobileOperatorAttributeWithOptions(DescribeMobileOperatorAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
+            {
+                query["InputNumber"] = request.InputNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMobileOperatorAttribute",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMobileOperatorAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 号码归属地查询v2
+         *
+         * @param request DescribeMobileOperatorAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeMobileOperatorAttributeResponse
+         */
+        public async Task<DescribeMobileOperatorAttributeResponse> DescribeMobileOperatorAttributeWithOptionsAsync(DescribeMobileOperatorAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
+            {
+                query["InputNumber"] = request.InputNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMobileOperatorAttribute",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMobileOperatorAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 号码归属地查询v2
+         *
+         * @param request DescribeMobileOperatorAttributeRequest
+         * @return DescribeMobileOperatorAttributeResponse
+         */
+        public DescribeMobileOperatorAttributeResponse DescribeMobileOperatorAttribute(DescribeMobileOperatorAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeMobileOperatorAttributeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 号码归属地查询v2
+         *
+         * @param request DescribeMobileOperatorAttributeRequest
+         * @return DescribeMobileOperatorAttributeResponse
+         */
+        public async Task<DescribeMobileOperatorAttributeResponse> DescribeMobileOperatorAttributeAsync(DescribeMobileOperatorAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeMobileOperatorAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 号码分析实时查询蚂蚁
          *
          * @param request DescribePhoneNumberAnalysisRequest
