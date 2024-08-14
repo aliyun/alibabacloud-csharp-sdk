@@ -8345,6 +8345,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 query["RelationshipGuid"] = request.RelationshipGuid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationshipType))
+            {
+                query["RelationshipType"] = request.RelationshipType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcEntityQualifiedName))
             {
                 query["SrcEntityQualifiedName"] = request.SrcEntityQualifiedName;
@@ -8388,6 +8392,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationshipGuid))
             {
                 query["RelationshipGuid"] = request.RelationshipGuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationshipType))
+            {
+                query["RelationshipType"] = request.RelationshipType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcEntityQualifiedName))
             {

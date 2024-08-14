@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The details about the data source. You are not allowed to change the type of the data source. For example, you are not allowed to change the data source type from MaxCompute to MySQL. Examples of details of some common data sources:
         /// 
-        /// *   MaxCompute
+        /// *   odps
         /// 
         ///         {
         ///           "accessId": "xssssss",
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "tag": "public"
         ///         }
         /// 
-        /// *   MySQL
+        /// *   mysql
         /// 
         ///         {
         ///           "database": "xsaxsa",
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "username": "xsaxsa"
         ///         }
         /// 
-        /// *   RDS
+        /// *   rds
         /// 
         ///         {
         ///           "configType": 1,
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "rdsOwnerId": "11111111"
         ///         }
         /// 
-        /// *   OSS
+        /// *   oss
         /// 
         ///         {
         ///           "accessId": "sssssxx",
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "tag": "public"
         ///         }
         /// 
-        /// *   SQL Server
+        /// *   sqlserver
         /// 
         ///         {
         ///           "jdbcUrl": "jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs",
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "username": "sxaxacdacdd"
         ///         }
         /// 
-        /// *   PolarDB
+        /// *   polardb
         /// 
         ///         {
         ///           "clusterId": "pc-sdadsadsa",
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "username": "asdadsads"
         ///         }
         /// 
-        /// *   Oracle
+        /// *   oracle
         /// 
         ///         {
         ///           "jdbcUrl": "jdbc:oracle:saaa:@xxxxx:1521:PROD",
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "username": "sasfadfa"
         ///         }
         /// 
-        /// *   MongoDB
+        /// *   mongodb
         /// 
         ///         {
         ///           "address": "[\\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\\"]",
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "username": "dsadsadas"
         ///         }
         /// 
-        /// *   EMR
+        /// *   emr
         /// 
         ///         {
         ///           "accessId": "xsaxsa",
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "emrProjectId": "FP-sdadsad"
         ///         }
         /// 
-        /// *   PostgreSQL
+        /// *   postgresql
         /// 
         ///         {
         ///           "jdbcUrl": "jdbc:postgresql://xxxx:1921/ssss",
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "username": "sdsasda"
         ///         }
         /// 
-        /// *   AnalyticDB for MySQL
+        /// *   analyticdb_for_mysql
         /// 
         ///         {
         ///           "instanceId": "am-sadsada",
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "connectionString": "am-xssxsxs.ads.aliyuncs.com:3306"
         ///         }
         /// 
-        /// *   HybridDB for PostgreSQL
+        /// *   hybriddb_for_postgresql
         /// 
         ///         {
         ///           "connectionString": "gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com",
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "username": "sadsad"
         ///         }
         /// 
-        /// *   Hologres
+        /// *   holo
         /// 
         ///         {
         ///           "accessId": "xsaxsaxs",
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///           "tag": "aliyun"
         ///         }
         /// 
-        /// *   Kafka
+        /// *   kafka
         /// 
         ///         {
         ///           "instanceId": "xsax-cn-xsaxsa",

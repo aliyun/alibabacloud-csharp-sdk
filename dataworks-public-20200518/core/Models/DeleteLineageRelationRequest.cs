@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string RelationshipGuid { get; set; }
 
+        [NameInMap("RelationshipType")]
+        [Validation(Required=false)]
+        public string RelationshipType { get; set; }
+
         /// <summary>
         /// The unique identifier of the source entity.
         /// 

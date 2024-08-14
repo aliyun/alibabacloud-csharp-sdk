@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RelationshipVO : TeaModel {
-        [NameInMap("Type")]
+        [NameInMap("Attributes")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public Dictionary<string, string> Attributes { get; set; }
+
+        [NameInMap("RelationshipGuid")]
+        [Validation(Required=false)]
+        public string RelationshipGuid { get; set; }
+
+        [NameInMap("RelationshipType")]
+        [Validation(Required=false)]
+        public string RelationshipType { get; set; }
 
     }
 
