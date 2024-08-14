@@ -4,6 +4,12 @@
 - Update API ListJobExecutors: update response param.
 
 
+2024-08-14 Version: 4.0.1
+- Update API CreateJob: update response param.
+- Update API ListExecutors: update response param.
+- Update API ListJobExecutors: update response param.
+
+
 2024-05-15 Version: 4.0.0
 - Update API AddImage: add param ImageVersion.
 - Update API AddImage: delete param Version.
