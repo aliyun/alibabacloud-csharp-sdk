@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public List<string> HostName { get; set; }
 
+            [NameInMap("Image")]
+            [Validation(Required=false)]
+            public string Image { get; set; }
+
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
             public List<string> IpAddress { get; set; }
