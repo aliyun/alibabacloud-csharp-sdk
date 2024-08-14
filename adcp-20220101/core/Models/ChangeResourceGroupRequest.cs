@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the new resource group.
+        /// The ID of the new resource group. You can view the available resource groups in the Resource Management console.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// The resource ID. If ResourceType=cluster, the resource ID is ClusterId.
+        /// The ID of the resource. The value of this parameter varies with the resource type. For example, if you set ResourceType to cluster, this parameter specifies a cluster ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Only cluster are supported. Set the value to cluster.
+        /// The resource type. Set the value to cluster.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

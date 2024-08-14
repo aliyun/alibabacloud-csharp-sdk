@@ -10,35 +10,39 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribeHubClusterLogsResponseBody : TeaModel {
         /// <summary>
-        /// Brief information about operation logs.
+        /// The details of operations logs.
         /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
         public List<DescribeHubClusterLogsResponseBodyLogs> Logs { get; set; }
         public class DescribeHubClusterLogsResponseBodyLogs : TeaModel {
             /// <summary>
-            /// The ID of the master instance.
+            /// The ID of the Fleet instance.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// A log of the master instance.
+            /// The log of the Fleet instance.
             /// </summary>
             [NameInMap("ClusterLog")]
             [Validation(Required=false)]
             public string ClusterLog { get; set; }
 
             /// <summary>
-            /// The time when the log was created. Format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC time).
+            /// The time when the log was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The severity level of the log. Valid values: - error: errors. - warn: warnings. - info: information.
+            /// The log level. Valid values:
+            /// 
+            /// *   error
+            /// *   warn
+            /// *   info
             /// </summary>
             [NameInMap("LogLevel")]
             [Validation(Required=false)]
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

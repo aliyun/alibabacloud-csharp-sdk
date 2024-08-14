@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string ApiServerEipId { get; set; }
 
                 /// <summary>
-                /// Indicates whether public endpoint is enabled for the API server. Valid values:
+                /// Indicates whether the public endpoint is enabled for the API server. Valid values:
                 /// 
                 /// *   true
                 /// *   false
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// The specification of the cluster.
+                /// The specifications of the cluster.
                 /// 
-                /// *   Only ack.pro.small is returned.
+                /// *   Only ack.pro.small may be returned.
                 /// </summary>
                 [NameInMap("ClusterSpec")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// The name of the cluster.
+                /// The cluster name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -108,19 +108,19 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of Resource Group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupID")]
                 [Validation(Required=false)]
                 public string ResourceGroupID { get; set; }
 
                 /// <summary>
-                /// The status of the cluster. Valid values:
+                /// The state of the cluster. Valid values:
                 /// 
                 /// *   initial: The cluster is being initialized.
                 /// *   failed: The cluster failed to be created.
                 /// *   running: The cluster is running
-                /// *   inactive: The cluster is pending.
+                /// *   inactive: The cluster is not activated.
                 /// *   deleting: The cluster is being deleted.
                 /// *   delete_failed: The cluster failed to be deleted.
                 /// *   deleted: The cluster is deleted.
@@ -129,14 +129,23 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 [Validation(Required=false)]
                 public string State { get; set; }
 
+                /// <summary>
+                /// The tags.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<DescribeHubClustersResponseBodyClustersClusterInfoTags> Tags { get; set; }
                 public class DescribeHubClustersResponseBodyClustersClusterInfoTags : TeaModel {
+                    /// <summary>
+                    /// The tag key.
+                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
+                    /// <summary>
+                    /// The tag value.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -144,14 +153,14 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 }
 
                 /// <summary>
-                /// The time when the cluster was last updated.
+                /// The time when the cluster was last modified.
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
                 /// <summary>
-                /// The Kubernetes version of the cluster.
+                /// The version of the cluster.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -167,7 +176,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             public List<DescribeHubClustersResponseBodyClustersConditions> Conditions { get; set; }
             public class DescribeHubClustersResponseBodyClustersConditions : TeaModel {
                 /// <summary>
-                /// The error message that is returned.
+                /// The error message returned.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -181,7 +190,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// The status of the cluster that the deletion condition indicates. Valid values:
+                /// The state of the cluster that the deletion condition indicates. Valid values:
                 /// 
                 /// *   True: The cluster cannot be deleted.
                 /// *   False: The cluster can be deleted.
@@ -201,7 +210,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             }
 
             /// <summary>
-            /// The endpoint of the cluster.
+            /// The endpoints of the cluster.
             /// </summary>
             [NameInMap("Endpoints")]
             [Validation(Required=false)]

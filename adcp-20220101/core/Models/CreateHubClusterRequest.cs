@@ -88,6 +88,11 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// 
+        /// You can specify at most 20 tags in each call.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<Tag> Tag { get; set; }

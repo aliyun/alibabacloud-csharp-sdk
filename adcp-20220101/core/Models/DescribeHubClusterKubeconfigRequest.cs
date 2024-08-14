@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribeHubClusterKubeconfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the master instance.
+        /// The cluster ID.
         /// 
         /// This parameter is required.
         /// </summary>

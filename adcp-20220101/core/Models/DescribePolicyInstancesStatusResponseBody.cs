@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public List<DescribePolicyInstancesStatusResponseBodyPoliciesPolicyInstancesPolicyClusters> PolicyClusters { get; set; }
                 public class DescribePolicyInstancesStatusResponseBodyPoliciesPolicyInstancesPolicyClusters : TeaModel {
                     /// <summary>
-                    /// The ID of the associated cluster.
+                    /// The cluster ID.
                     /// </summary>
                     [NameInMap("ClusterId")]
                     [Validation(Required=false)]
                     public string ClusterId { get; set; }
 
                     /// <summary>
-                    /// The status of the deployment.
+                    /// The status of the policy deployment.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string PolicyDescription { get; set; }
 
                 /// <summary>
-                /// The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.
+                /// The number of policy instances that are deployed. If this parameter is left empty, no policy instance is deployed.
                 /// </summary>
                 [NameInMap("PolicyInstancesCount")]
                 [Validation(Required=false)]
                 public long? PolicyInstancesCount { get; set; }
 
                 /// <summary>
-                /// The name of the policy.
+                /// The policy name.
                 /// </summary>
                 [NameInMap("PolicyName")]
                 [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string SeverityCount { get; set; }
 
                 /// <summary>
-                /// The severity level.
+                /// The severity level of the policy.
                 /// </summary>
                 [NameInMap("SeverityType")]
                 [Validation(Required=false)]
