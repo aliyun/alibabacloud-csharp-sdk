@@ -9,6 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20230701.Models
 {
     public class ListJobExecutorsResponseBody : TeaModel {
+        [NameInMap("ExecutorStatus")]
+        [Validation(Required=false)]
+        public ListJobExecutorsResponseBodyExecutorStatus ExecutorStatus { get; set; }
+        public class ListJobExecutorsResponseBodyExecutorStatus : TeaModel {
+            [NameInMap("Deleted")]
+            [Validation(Required=false)]
+            public int? Deleted { get; set; }
+
+            [NameInMap("Exception")]
+            [Validation(Required=false)]
+            public int? Exception { get; set; }
+
+            [NameInMap("Failed")]
+            [Validation(Required=false)]
+            public int? Failed { get; set; }
+
+            [NameInMap("Initing")]
+            [Validation(Required=false)]
+            public int? Initing { get; set; }
+
+            [NameInMap("Pending")]
+            [Validation(Required=false)]
+            public int? Pending { get; set; }
+
+            [NameInMap("Running")]
+            [Validation(Required=false)]
+            public int? Running { get; set; }
+
+            [NameInMap("Succeeded")]
+            [Validation(Required=false)]
+            public int? Succeeded { get; set; }
+
+        }
+
         [NameInMap("Executors")]
         [Validation(Required=false)]
         public List<ListJobExecutorsResponseBodyExecutors> Executors { get; set; }
@@ -24,6 +58,10 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
+
+            [NameInMap("ExecutorId")]
+            [Validation(Required=false)]
+            public string ExecutorId { get; set; }
 
             [NameInMap("HostName")]
             [Validation(Required=false)]
