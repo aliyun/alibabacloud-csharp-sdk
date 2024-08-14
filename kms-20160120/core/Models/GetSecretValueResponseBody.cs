@@ -133,13 +133,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// </summary>
         [NameInMap("VersionStages")]
         [Validation(Required=false)]
-        public GetSecretValueResponseBodyVersionStages VersionStages { get; set; }
-        public class GetSecretValueResponseBodyVersionStages : TeaModel {
-            [NameInMap("VersionStage")]
-            [Validation(Required=false)]
-            public List<string> VersionStage { get; set; }
-
-        }
+        public List<string> VersionStages { get; set; }
 
     }
 

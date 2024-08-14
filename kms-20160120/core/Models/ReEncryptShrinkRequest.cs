@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string DestinationKeyId { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public string DryRun { get; set; }
+
         /// <summary>
         /// The encryption algorithm based on which the public key is used to encrypt the ciphertext specified by CiphertextBlob. For more information about encryption algorithms, see [AsymmetricDecrypt](https://help.aliyun.com/document_detail/148130.html).
         /// 

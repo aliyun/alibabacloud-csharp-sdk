@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public string DryRun { get; set; }
+
         /// <summary>
         /// The JSON string that consists of key-value pairs.
         /// 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetSecretValueRequest : TeaModel {
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public string DryRun { get; set; }
+
         /// <summary>
         /// Specifies whether to obtain the extended configuration of the secret. Valid values:
         /// 

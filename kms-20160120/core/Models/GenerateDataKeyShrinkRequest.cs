@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GenerateDataKeyShrinkRequest : TeaModel {
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public string DryRun { get; set; }
+
         /// <summary>
         /// The JSON string that consists of key-value pairs.
         /// 

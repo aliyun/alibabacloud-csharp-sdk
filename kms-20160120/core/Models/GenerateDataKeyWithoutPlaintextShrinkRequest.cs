@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GenerateDataKeyWithoutPlaintextShrinkRequest : TeaModel {
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public string DryRun { get; set; }
+
         /// <summary>
         /// A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).
         /// </summary>

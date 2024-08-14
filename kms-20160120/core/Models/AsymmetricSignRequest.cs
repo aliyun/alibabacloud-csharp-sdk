@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string Digest { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public string DryRun { get; set; }
+
         /// <summary>
         /// The operation that you want to perform. Set the value to **AsymmetricSign**.
         /// 

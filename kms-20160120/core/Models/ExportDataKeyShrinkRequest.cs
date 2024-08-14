@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public string DryRun { get; set; }
+
         /// <summary>
         /// A JSON string that consists of key-value pairs. If you specify this parameter when you use a CMK to encrypt the data key, an equivalent value is required here. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).
         /// </summary>

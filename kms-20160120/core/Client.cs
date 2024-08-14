@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["CiphertextBlob"] = request.CiphertextBlob;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
                 query["KeyId"] = request.KeyId;
@@ -131,6 +135,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CiphertextBlob))
             {
                 query["CiphertextBlob"] = request.CiphertextBlob;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
@@ -235,6 +243,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["Algorithm"] = request.Algorithm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
                 query["KeyId"] = request.KeyId;
@@ -297,6 +309,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
                 query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
@@ -401,6 +417,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["Digest"] = request.Digest;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
                 query["KeyId"] = request.KeyId;
@@ -455,6 +475,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Digest))
             {
                 query["Digest"] = request.Digest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
@@ -549,6 +573,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["Digest"] = request.Digest;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
                 query["KeyId"] = request.KeyId;
@@ -617,6 +645,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Digest))
             {
                 query["Digest"] = request.Digest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
@@ -3099,6 +3131,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["CiphertextBlob"] = request.CiphertextBlob;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -3149,6 +3185,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CiphertextBlob))
             {
                 query["CiphertextBlob"] = request.CiphertextBlob;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
@@ -5273,6 +5313,10 @@ namespace AlibabaCloud.SDK.Kms20160120
                 request.EncryptionContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncryptionContext, "EncryptionContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -5330,6 +5374,10 @@ namespace AlibabaCloud.SDK.Kms20160120
                 request.EncryptionContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncryptionContext, "EncryptionContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -5418,6 +5466,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["CiphertextBlob"] = request.CiphertextBlob;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -5481,6 +5533,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CiphertextBlob))
             {
                 query["CiphertextBlob"] = request.CiphertextBlob;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
@@ -5571,6 +5627,10 @@ namespace AlibabaCloud.SDK.Kms20160120
                 request.EncryptionContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncryptionContext, "EncryptionContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -5646,6 +5706,10 @@ namespace AlibabaCloud.SDK.Kms20160120
                 request.EncryptionContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncryptionContext, "EncryptionContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -5760,6 +5824,10 @@ namespace AlibabaCloud.SDK.Kms20160120
                 request.EncryptionContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncryptionContext, "EncryptionContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -5830,6 +5898,10 @@ namespace AlibabaCloud.SDK.Kms20160120
                 request.EncryptionContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncryptionContext, "EncryptionContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -5940,6 +6012,10 @@ namespace AlibabaCloud.SDK.Kms20160120
                 request.EncryptionContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncryptionContext, "EncryptionContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -6004,6 +6080,10 @@ namespace AlibabaCloud.SDK.Kms20160120
                 request.EncryptionContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncryptionContext, "EncryptionContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionContextShrink))
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
@@ -6691,6 +6771,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
                 query["KeyId"] = request.KeyId;
@@ -6734,6 +6818,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
                 query["KeyId"] = request.KeyId;
@@ -7063,6 +7151,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchExtendedConfig))
             {
                 query["FetchExtendedConfig"] = request.FetchExtendedConfig;
@@ -7120,6 +7212,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchExtendedConfig))
             {
                 query["FetchExtendedConfig"] = request.FetchExtendedConfig;
@@ -9202,6 +9298,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["DestinationKeyId"] = request.DestinationKeyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEncryptionAlgorithm))
             {
                 query["SourceEncryptionAlgorithm"] = request.SourceEncryptionAlgorithm;
@@ -9283,6 +9383,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationKeyId))
             {
                 query["DestinationKeyId"] = request.DestinationKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEncryptionAlgorithm))
             {
