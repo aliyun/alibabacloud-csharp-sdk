@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the database. Format: &quot;db1,db2&quot;.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>db1,db2</para>
+        /// The name of the database. Format: "db1,db2".
         /// </summary>
         [NameInMap("DatabaseNames")]
         [Validation(Required=false)]
         public string DatabaseNames { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePGHbaConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-bp1*****</para>
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The default configuration items of the pg_hba.conf file.</para>
+        /// The default configuration items of the pg_hba.conf file.
         /// </summary>
         [NameInMap("DefaultHbaItems")]
         [Validation(Required=false)]
@@ -31,80 +28,56 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribePGHbaConfigResponseBodyDefaultHbaItemsHbaItem> HbaItem { get; set; }
             public class DescribePGHbaConfigResponseBodyDefaultHbaItemsHbaItem : TeaModel {
                 /// <summary>
-                /// <para>The IP addresses from which the specified users can access the specified databases. The value is fixed as 0.0.0.0/0.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.0.0.0/0</para>
+                /// The IP addresses from which the specified users can access the specified databases. The value is fixed as 0.0.0.0/0.
                 /// </summary>
                 [NameInMap("Address")]
                 [Validation(Required=false)]
                 public string Address { get; set; }
 
                 /// <summary>
-                /// <para>The names of the databases that the specified users are allowed to access. The value is fixed as all or replication.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>all</para>
+                /// The names of the databases that the specified users are allowed to access. The value is fixed as all or replication.
                 /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
                 /// <summary>
-                /// <para>The mask of the instance. The value is fixed as null.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>null</para>
+                /// The mask of the instance. The value is fixed as null.
                 /// </summary>
                 [NameInMap("Mask")]
                 [Validation(Required=false)]
                 public string Mask { get; set; }
 
                 /// <summary>
-                /// <para>The authentication method. The value is fixed as md5.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>md5</para>
+                /// The authentication method. The value is fixed as md5.
                 /// </summary>
                 [NameInMap("Method")]
                 [Validation(Required=false)]
                 public string Method { get; set; }
 
                 /// <summary>
-                /// <para>The value of this parameter is based on the value of the Method parameter. The value is fixed as null.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>null</para>
+                /// The value of this parameter is based on the value of the Method parameter. The value is fixed as null.
                 /// </summary>
                 [NameInMap("Option")]
                 [Validation(Required=false)]
                 public string Option { get; set; }
 
                 /// <summary>
-                /// <para>The priority of the configuration items in the pg_hba.conf file. This value is automatically generated.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
+                /// The priority of the configuration items in the pg_hba.conf file. This value is automatically generated.
                 /// </summary>
                 [NameInMap("PriorityId")]
                 [Validation(Required=false)]
                 public int? PriorityId { get; set; }
 
                 /// <summary>
-                /// <para>The type of connection to the instance. The value is fixed as host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>host</para>
+                /// The type of connection to the instance. The value is fixed as host.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The user that is allowed to access the instance. The value is fixed as all.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>all</para>
+                /// The user that is allowed to access the instance. The value is fixed as all.
                 /// </summary>
                 [NameInMap("User")]
                 [Validation(Required=false)]
@@ -115,52 +88,39 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The time when the previous modification was made to the pg_hba.conf file.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2021-11-25T06:00:40Z</para>
+        /// The time when the previous modification was made to the pg_hba.conf file.
         /// </summary>
         [NameInMap("HbaModifyTime")]
         [Validation(Required=false)]
         public string HbaModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the previous modification to the pg_hba.conf file. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>setting</b></description></item>
-        /// <item><description><b>failed</b></description></item>
-        /// </list>
+        /// The status of the previous modification to the pg_hba.conf file. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>success</para>
+        /// *   **success**
+        /// *   **setting**
+        /// *   **failed**
         /// </summary>
         [NameInMap("LastModifyStatus")]
         [Validation(Required=false)]
         public string LastModifyStatus { get; set; }
 
         /// <summary>
-        /// <para>The reason why the previous modification was made to the pg_hba.conf file.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>The specified users (testuser) is not exist.</para>
+        /// The reason why the previous modification was made to the pg_hba.conf file.
         /// </summary>
         [NameInMap("ModifyStatusReason")]
         [Validation(Required=false)]
         public string ModifyStatusReason { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>A147A124-A147-5CCF-9609-B73C028848DF</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The current configuration items of the pg_hba.conf file.</para>
+        /// The current configuration items of the pg_hba.conf file.
         /// </summary>
         [NameInMap("RunningHbaItems")]
         [Validation(Required=false)]
@@ -171,85 +131,60 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribePGHbaConfigResponseBodyRunningHbaItemsHbaItem> HbaItem { get; set; }
             public class DescribePGHbaConfigResponseBodyRunningHbaItemsHbaItem : TeaModel {
                 /// <summary>
-                /// <para>The IP address of the client.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.0.0.0/0</para>
+                /// The IP address of the client.
                 /// </summary>
                 [NameInMap("Address")]
                 [Validation(Required=false)]
                 public string Address { get; set; }
 
                 /// <summary>
-                /// <para>The name of the database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>all</para>
+                /// The name of the database.
                 /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
                 /// <summary>
-                /// <para>The mask of the IP address.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>null</para>
+                /// The mask of the IP address.
                 /// </summary>
                 [NameInMap("Mask")]
                 [Validation(Required=false)]
                 public string Mask { get; set; }
 
                 /// <summary>
-                /// <para>The authentication method.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>md5</para>
+                /// The authentication method.
                 /// </summary>
                 [NameInMap("Method")]
                 [Validation(Required=false)]
                 public string Method { get; set; }
 
                 /// <summary>
-                /// <para>The value of this parameter varies based on the value of the Method parameter. The value is fixed as null.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>null</para>
+                /// The value of this parameter varies based on the value of the Method parameter. The value is fixed as null.
                 /// </summary>
                 [NameInMap("Option")]
                 [Validation(Required=false)]
                 public string Option { get; set; }
 
                 /// <summary>
-                /// <para>The priority.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
+                /// The priority.
                 /// </summary>
                 [NameInMap("PriorityId")]
                 [Validation(Required=false)]
                 public int? PriorityId { get; set; }
 
                 /// <summary>
-                /// <para>The connection type. Valor:</para>
-                /// <list type="bullet">
-                /// <item><description><b>host</b>: The record matches TCP/IP connections, including SSL connections and non-SSL connections.</description></item>
-                /// <item><description><b>hostssl</b>: The record matches only TCP/IP connections that are established over SSL.</description></item>
-                /// <item><description><b>hostnossl</b>: The record matches only TCP/IP connections that are not established over SSL connections.</description></item>
-                /// </list>
+                /// The connection type. Valor:
                 /// 
-                /// <b>Example:</b>
-                /// <para>host</para>
+                /// *   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.
+                /// *   **hostssl**: The record matches only TCP/IP connections that are established over SSL.
+                /// *   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL connections.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The username of the account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>all</para>
+                /// The username of the account.
                 /// </summary>
                 [NameInMap("User")]
                 [Validation(Required=false)]

@@ -10,129 +10,96 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAllWhitelistTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>200</b>: success</description></item>
-        /// <item><description><b>400</b>: client error</description></item>
-        /// <item><description><b>401</b>: identity authentication failed</description></item>
-        /// <item><description><b>404</b>: request page not found</description></item>
-        /// <item><description><b>500</b>: server error</description></item>
-        /// </list>
+        /// The response code returned. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>200</para>
+        /// *   **200**: success
+        /// *   **400**: client error
+        /// *   **401**: identity authentication failed
+        /// *   **404**: request page not found
+        /// *   **500**: server error
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeAllWhitelistTemplateResponseBodyData Data { get; set; }
         public class DescribeAllWhitelistTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
+            /// The page number.
             /// </summary>
             [NameInMap("CurrPageNumbers")]
             [Validation(Required=false)]
             public int? CurrPageNumbers { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the data that meets the conditions is displayed on the next page. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
-            /// </list>
+            /// Indicates whether the data that meets the conditions is displayed on the next page. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>true</para>
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("HasNext")]
             [Validation(Required=false)]
             public bool? HasNext { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the data that meets the conditions is displayed on the previous page. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
-            /// </list>
+            /// Indicates whether the data that meets the conditions is displayed on the previous page. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>false</para>
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("HasPrev")]
             [Validation(Required=false)]
             public bool? HasPrev { get; set; }
 
             /// <summary>
-            /// <para>The number of entries to return on each page.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>10</para>
+            /// The number of entries to return on each page.
             /// </summary>
             [NameInMap("MaxRecordsPerPage")]
             [Validation(Required=false)]
             public int? MaxRecordsPerPage { get; set; }
 
             /// <summary>
-            /// <para>The information about whitelist templates that are returned by page.</para>
+            /// The information about whitelist templates that are returned by page.
             /// </summary>
             [NameInMap("Templates")]
             [Validation(Required=false)]
             public List<DescribeAllWhitelistTemplateResponseBodyDataTemplates> Templates { get; set; }
             public class DescribeAllWhitelistTemplateResponseBodyDataTemplates : TeaModel {
                 /// <summary>
-                /// <para>The primary key of the data table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123</para>
+                /// The primary key of the data table.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>12.2.X.X,10.0.X.X</para>
+                /// The IP addresses.
                 /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
                 public string Ips { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the whitelist template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>412</para>
+                /// The ID of the whitelist template.
                 /// </summary>
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
                 public int? TemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the whitelist template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>template_123</para>
+                /// The name of the whitelist template.
                 /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]
                 public string TemplateName { get; set; }
 
                 /// <summary>
-                /// <para>The user ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>168****</para>
+                /// The user ID.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
@@ -141,20 +108,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The total number of pages returned.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>3</para>
+            /// The total number of pages returned.
             /// </summary>
             [NameInMap("TotalPageNumbers")]
             [Validation(Required=false)]
             public int? TotalPageNumbers { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>402</para>
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalRecords")]
             [Validation(Required=false)]
@@ -163,49 +124,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>200</b>: success</description></item>
-        /// <item><description><b>400</b>: client error</description></item>
-        /// <item><description><b>500</b>: server error</description></item>
-        /// </list>
+        /// The HTTP status code returned. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>200</para>
+        /// *   **200**: success
+        /// *   **400**: client error
+        /// *   **500**: server error
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>success</para>
+        /// The response parameters.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>16C62438-491B-5C02-9B49-BA924A1372A2</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
-        /// </list>
+        /// Indicates whether the request is successful. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

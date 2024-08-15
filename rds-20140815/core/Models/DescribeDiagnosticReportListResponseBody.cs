@@ -10,67 +10,49 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDiagnosticReportListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*****</para>
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The details of a diagnostic report.</para>
+        /// The details of a diagnostic report.
         /// </summary>
         [NameInMap("ReportList")]
         [Validation(Required=false)]
         public List<DescribeDiagnosticReportListResponseBodyReportList> ReportList { get; set; }
         public class DescribeDiagnosticReportListResponseBodyReportList : TeaModel {
             /// <summary>
-            /// <para>The time when the diagnosis was performed.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2018-01-17T12:46:09Z</para>
+            /// The time when the diagnosis was performed.
             /// </summary>
             [NameInMap("DiagnosticTime")]
             [Validation(Required=false)]
             public string DiagnosticTime { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para><a href="http://rdsreport-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsreport-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></para>
+            /// The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.
             /// </summary>
             [NameInMap("DownloadURL")]
             [Validation(Required=false)]
             public string DownloadURL { get; set; }
 
             /// <summary>
-            /// <para>The end time of the monitoring data.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2018-01-10T15:31:00Z</para>
+            /// The end time of the monitoring data.
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic score.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>100</para>
+            /// The diagnostic score.
             /// </summary>
             [NameInMap("Score")]
             [Validation(Required=false)]
             public int? Score { get; set; }
 
             /// <summary>
-            /// <para>The start time of the monitoring data.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2018-01-10T15:30:00Z</para>
+            /// The start time of the monitoring data.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -79,10 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>B7E9A79C-DE1B-4398-845F-D654FC0958BD</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

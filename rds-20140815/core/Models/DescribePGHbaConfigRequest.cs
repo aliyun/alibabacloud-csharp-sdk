@@ -10,21 +10,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePGHbaConfigRequest : TeaModel {
         /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>pgm-bp1lymyn1v3i****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -39,10 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

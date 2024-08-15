@@ -10,42 +10,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DetachGadInstanceMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the global active database cluster.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the global active database cluster.
         /// 
-        /// <b>Example:</b>
-        /// <para>gad-rm-bp1npi2j8********</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GadInstanceName")]
         [Validation(Required=false)]
         public string GadInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance that serves as the unit node you want to remove. You can call the DescribeGadInstances query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the instance that serves as the unit node you want to remove. You can call the DescribeGadInstances query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-bp1npi2j8********</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MemberInstanceName")]
         [Validation(Required=false)]
         public string MemberInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the central node. You can call the DescribeGadInstances operation to query the region ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// The region ID of the central node. You can call the DescribeGadInstances operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

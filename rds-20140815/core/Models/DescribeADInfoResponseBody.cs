@@ -10,65 +10,46 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeADInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The DNS information about the AD domain.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>100.100.XX.XX</para>
+        /// The DNS information about the AD domain.
         /// </summary>
         [NameInMap("ADDNS")]
         [Validation(Required=false)]
         public string ADDNS { get; set; }
 
         /// <summary>
-        /// <para>The service IP address of the AD domain.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>192.168.XX.XX</para>
+        /// The service IP address of the AD domain.
         /// </summary>
         [NameInMap("ADServerIpAddress")]
         [Validation(Required=false)]
         public string ADServerIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The status of the AD domain. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>-1</b>: The instance is being added to the AD domain.</description></item>
-        /// <item><description><b>0</b>: The instance fails to be added to the AD domain.</description></item>
-        /// <item><description><b>1</b>: The instance is added to the AD domain.</description></item>
-        /// </list>
+        /// The status of the AD domain. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// *   **-1**: The instance is being added to the AD domain.
+        /// *   **0**: The instance fails to be added to the AD domain.
+        /// *   **1**: The instance is added to the AD domain.
         /// </summary>
         [NameInMap("ADStatus")]
         [Validation(Required=false)]
         public string ADStatus { get; set; }
 
         /// <summary>
-        /// <para>The cause of the error.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>XXXX</para>
+        /// The cause of the error.
         /// </summary>
         [NameInMap("AbnormalReason")]
         [Validation(Required=false)]
         public string AbnormalReason { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The username of the AD domain.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test_01</para>
+        /// The username of the AD domain.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

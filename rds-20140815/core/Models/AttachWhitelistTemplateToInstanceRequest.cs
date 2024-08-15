@@ -10,31 +10,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AttachWhitelistTemplateToInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The name of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-bp191w771kd3****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InsName")]
         [Validation(Required=false)]
         public string InsName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For more information about resource groups, see Resource groups.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// The ID of the resource group. For more information about resource groups, see Resource groups.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -49,11 +41,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.
         /// 
-        /// <b>Example:</b>
-        /// <para>412</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

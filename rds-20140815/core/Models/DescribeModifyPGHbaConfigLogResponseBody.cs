@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeModifyPGHbaConfigLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pgm-bp1lymyn1v3i****</para>
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the modifications to the pg_hba.conf file.</para>
+        /// An array that consists of the modifications to the pg_hba.conf file.
         /// </summary>
         [NameInMap("HbaLogItems")]
         [Validation(Required=false)]
@@ -31,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItem> HbaLogItem { get; set; }
             public class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItem : TeaModel {
                 /// <summary>
-                /// <para>The configurations of the pg_hba.conf file after modification.</para>
+                /// The configurations of the pg_hba.conf file after modification.
                 /// </summary>
                 [NameInMap("AfterHbaItems")]
                 [Validation(Required=false)]
@@ -42,80 +39,56 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemAfterHbaItemsHbaItem> HbaItem { get; set; }
                     public class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemAfterHbaItemsHbaItem : TeaModel {
                         /// <summary>
-                        /// <para>The IP address.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0.0.0.0/0</para>
+                        /// The IP address.
                         /// </summary>
                         [NameInMap("Address")]
                         [Validation(Required=false)]
                         public string Address { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the database.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>all</para>
+                        /// The name of the database.
                         /// </summary>
                         [NameInMap("Database")]
                         [Validation(Required=false)]
                         public string Database { get; set; }
 
                         /// <summary>
-                        /// <para>The mask of the IP address.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>null</para>
+                        /// The mask of the IP address.
                         /// </summary>
                         [NameInMap("Mask")]
                         [Validation(Required=false)]
                         public string Mask { get; set; }
 
                         /// <summary>
-                        /// <para>The authentication method.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>ldap</para>
+                        /// The authentication method.
                         /// </summary>
                         [NameInMap("Method")]
                         [Validation(Required=false)]
                         public string Method { get; set; }
 
                         /// <summary>
-                        /// <para>The value of this parameter was set based on the value of the Method parameter.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>null</para>
+                        /// The value of this parameter was set based on the value of the Method parameter.
                         /// </summary>
                         [NameInMap("Option")]
                         [Validation(Required=false)]
                         public string Option { get; set; }
 
                         /// <summary>
-                        /// <para>The priority.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
+                        /// The priority.
                         /// </summary>
                         [NameInMap("PriorityId")]
                         [Validation(Required=false)]
                         public int? PriorityId { get; set; }
 
                         /// <summary>
-                        /// <para>The connection type.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>host</para>
+                        /// The connection type.
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The username of the account.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>ldapuser</para>
+                        /// The username of the account.
                         /// </summary>
                         [NameInMap("User")]
                         [Validation(Required=false)]
@@ -126,7 +99,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>The configurations of the pg_hba.conf file before modification.</para>
+                /// The configurations of the pg_hba.conf file before modification.
                 /// </summary>
                 [NameInMap("BeforeHbaItems")]
                 [Validation(Required=false)]
@@ -137,80 +110,56 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemBeforeHbaItemsHbaItem> HbaItem { get; set; }
                     public class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemBeforeHbaItemsHbaItem : TeaModel {
                         /// <summary>
-                        /// <para>The IP address.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0.0.0.0/0</para>
+                        /// The IP address.
                         /// </summary>
                         [NameInMap("Address")]
                         [Validation(Required=false)]
                         public string Address { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the database.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>all</para>
+                        /// The name of the database.
                         /// </summary>
                         [NameInMap("Database")]
                         [Validation(Required=false)]
                         public string Database { get; set; }
 
                         /// <summary>
-                        /// <para>The mask of the IP address.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>null</para>
+                        /// The mask of the IP address.
                         /// </summary>
                         [NameInMap("Mask")]
                         [Validation(Required=false)]
                         public string Mask { get; set; }
 
                         /// <summary>
-                        /// <para>The authentication method.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>md5</para>
+                        /// The authentication method.
                         /// </summary>
                         [NameInMap("Method")]
                         [Validation(Required=false)]
                         public string Method { get; set; }
 
                         /// <summary>
-                        /// <para>The value of this parameter varies based on the value of the Method parameter.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>null</para>
+                        /// The value of this parameter varies based on the value of the Method parameter.
                         /// </summary>
                         [NameInMap("Option")]
                         [Validation(Required=false)]
                         public string Option { get; set; }
 
                         /// <summary>
-                        /// <para>The priority.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
+                        /// The priority.
                         /// </summary>
                         [NameInMap("PriorityId")]
                         [Validation(Required=false)]
                         public int? PriorityId { get; set; }
 
                         /// <summary>
-                        /// <para>The connection type.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>host</para>
+                        /// The connection type.
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The username of the account.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>all</para>
+                        /// The username of the account.
                         /// </summary>
                         [NameInMap("User")]
                         [Validation(Required=false)]
@@ -221,35 +170,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>The status of the modification.</para>
-                /// <list type="bullet">
-                /// <item><description><b>success</b>: The modification is successful.</description></item>
-                /// <item><description><b>failed</b>: The modification failed.</description></item>
-                /// <item><description><b>setting</b>: The modification is being applied.</description></item>
-                /// </list>
+                /// The status of the modification.
                 /// 
-                /// <b>Example:</b>
-                /// <para>success</para>
+                /// *   **success**: The modification is successful.
+                /// *   **failed**: The modification failed.
+                /// *   **setting**: The modification is being applied.
                 /// </summary>
                 [NameInMap("ModifyStatus")]
                 [Validation(Required=false)]
                 public string ModifyStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the pg_hba.conf file was modified. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2021-11-25T06:00:40Z</para>
+                /// The time when the pg_hba.conf file was modified. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModifyTime")]
                 [Validation(Required=false)]
                 public string ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the modification failed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>null</para>
+                /// The reason why the modification failed.
                 /// </summary>
                 [NameInMap("StatusReason")]
                 [Validation(Required=false)]
@@ -260,20 +199,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The number of modification records.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The number of modification records.
         /// </summary>
         [NameInMap("LogItemCount")]
         [Validation(Required=false)]
         public int? LogItemCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>6D797E6B-E157-510C-A27F-6F9E6DA40633</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

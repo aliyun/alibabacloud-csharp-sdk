@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceIpHostnameRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/2628785.html) operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,11 +27,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>You can call the DescribeDBInstanceAttribute operation to query the region ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/2628783.html) operation to query the region ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

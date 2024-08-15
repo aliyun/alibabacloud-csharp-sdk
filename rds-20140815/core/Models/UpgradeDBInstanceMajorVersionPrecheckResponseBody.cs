@@ -10,40 +10,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBInstanceMajorVersionPrecheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pgm-bp1c808s731l****</para>
+        /// The instance name.
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>99C1FEEE-FB44-5342-8EBA-DC1E1A1557A4</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The new major engine version of the instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12.0</para>
+        /// The new major engine version of the instance.
         /// </summary>
         [NameInMap("TargetMajorVersion")]
         [Validation(Required=false)]
         public string TargetMajorVersion { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>41698****</para>
+        /// The task ID.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

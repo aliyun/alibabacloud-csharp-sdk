@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyReadonlyInstanceDelayReplicationTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the read-only instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the read-only instance. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rr-bpxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,21 +23,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The replication latency of the data replication. Unit: seconds.</para>
-        /// <para>This parameter is required.</para>
+        /// The replication latency of the data replication. Unit: seconds.
         /// 
-        /// <b>Example:</b>
-        /// <para>100</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReadSQLReplicationTime")]
         [Validation(Required=false)]
         public string ReadSQLReplicationTime { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy****</para>
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

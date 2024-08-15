@@ -10,21 +10,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the audit log file.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>custinsxxxxx.csv</para>
+        /// The name of the audit log file.
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -39,20 +34,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: <b>1 to 100000</b>. Default value: <b>1</b>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The number of the page to return. Valid values: **1 to 100000**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid value: <b>30 to 200</b>. Default value: <b>30</b>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// The number of entries to return on each page. Valid value: **30 to 200**. Default value: **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

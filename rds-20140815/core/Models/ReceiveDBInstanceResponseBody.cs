@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ReceiveDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the disaster recovery instance after the switchover.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-tr2whku*****</para>
+        /// The ID of the disaster recovery instance after the switchover.
         /// </summary>
         [NameInMap("GuardDBInstanceId")]
         [Validation(Required=false)]
         public string GuardDBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>EFB6083A-7699-489B-8278-C0CB4793A96E</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

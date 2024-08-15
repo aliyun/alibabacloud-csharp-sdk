@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesByExpireTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the instances.</para>
+        /// The details of the instances.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,75 +21,54 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime> DBInstanceExpireTime { get; set; }
             public class DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime : TeaModel {
                 /// <summary>
-                /// <para>The description of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Test database</para>
+                /// The description of the instance.
                 /// </summary>
                 [NameInMap("DBInstanceDescription")]
                 [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf6wjk5xxxxxxx</para>
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Running</para>
+                /// The status of the instance. For more information, see [Instance state table](https://help.aliyun.com/document_detail/26315.html).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
                 public string DBInstanceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// <remarks>
-                /// <para>: Pay-as-you-go instances never expire.</para>
-                /// </remarks>
+                /// The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// 
-                /// <b>Example:</b>
-                /// <para>2019-03-27T16:00:00Z</para>
+                /// > : Pay-as-you-go instances never expire.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The lock mode of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Unlock</b>: The instance is not locked.</description></item>
-                /// <item><description><b>ManualLock</b>: The instance is manually locked.</description></item>
-                /// <item><description><b>LockByExpiration</b>: The instance is automatically locked after it expires.</description></item>
-                /// <item><description><b>LockByRestoration</b>: The instance is automatically locked before it is rolled back.</description></item>
-                /// <item><description><b>LockByDiskQuota</b>: The instance is automatically locked after its storage capacity is exhausted.</description></item>
-                /// <item><description><b>LockReadInstanceByDiskQuota</b>: The instance is a read-only instance and is automatically locked after its storage capacity is exhausted.</description></item>
-                /// </list>
+                /// The lock mode of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Unlock</para>
+                /// *   **Unlock**: The instance is not locked.
+                /// *   **ManualLock**: The instance is manually locked.
+                /// *   **LockByExpiration**: The instance is automatically locked after it expires.
+                /// *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
+                /// *   **LockByDiskQuota**: The instance is automatically locked after its storage capacity is exhausted.
+                /// *   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked after its storage capacity is exhausted.
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
                 public string LockMode { get; set; }
 
                 /// <summary>
-                /// <para>The billing method of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-                /// <item><description><b>Prepaid</b>: subscription.</description></item>
-                /// </list>
+                /// The billing method of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Prepaid</para>
+                /// *   **Postpaid**: pay-as-you-go.
+                /// *   **Prepaid**: subscription.
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
@@ -100,41 +79,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page. Valid values: any <b>non-zero</b> positive integer.</para>
-        /// <para>Default value: <b>1</b>.</para>
+        /// The page number of the returned page. Valid values: any **non-zero** positive integer.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of instances returned on the current page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2</para>
+        /// The number of instances returned on the current page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>200</para>
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

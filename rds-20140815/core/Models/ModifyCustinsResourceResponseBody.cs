@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyCustinsResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>6B5A6839-31A7-58D4-9F96-772BFAFD1CB5</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>507******</para>
+        /// The task ID.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -10,30 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesAsCsvRequest : TeaModel {
         /// <summary>
-        /// <para>A deprecated parameter. You do not need to configure this parameter.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>API</para>
+        /// A deprecated parameter. You do not need to configure this parameter.
         /// </summary>
         [NameInMap("CachedAsync")]
         [Validation(Required=false)]
         public bool? CachedAsync { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A deprecated parameter. You do not need to configure this parameter.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>API</para>
+        /// A deprecated parameter. You do not need to configure this parameter.
         /// </summary>
         [NameInMap("ExportKey")]
         [Validation(Required=false)]
@@ -44,21 +35,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

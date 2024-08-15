@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CopyDatabaseBetweenInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>803D11AF-C370-465B-AB46-CB3A642DC303</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

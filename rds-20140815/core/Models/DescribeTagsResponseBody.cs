@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The tags that are added to the instance.</para>
+        /// The tags that are added to the instance.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeTagsResponseBodyItemsTagInfos> TagInfos { get; set; }
             public class DescribeTagsResponseBodyItemsTagInfos : TeaModel {
                 /// <summary>
-                /// <para>The IDs of the instances to which the tag is added.</para>
+                /// The IDs of the instances to which the tag is added.
                 /// </summary>
                 [NameInMap("DBInstanceIds")]
                 [Validation(Required=false)]
@@ -34,20 +34,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>key1</para>
+                /// The tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>value1</para>
+                /// The tag value.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -58,10 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

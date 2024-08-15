@@ -10,77 +10,58 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-t4n3a****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the proxy endpoint. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Public</b>: Internet</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>Classic</b>: classic network</description></item>
-        /// </list>
-        /// <para>If the instance runs MySQL, the default value of this parameter is <b>Classic</b>.</para>
-        /// <remarks>
-        /// <para>If the instance runs PostgreSQL, you must set this parameter to <b>Public</b> or <b>VPC</b>.</para>
-        /// </remarks>
+        /// The network type of the proxy endpoint. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Public</para>
+        /// *   **Public**: Internet
+        /// *   **VPC**: virtual private cloud (VPC)
+        /// *   **Classic**: classic network
+        /// 
+        /// If the instance runs MySQL, the default value of this parameter is **Classic**.
+        /// 
+        /// > If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.
         /// </summary>
         [NameInMap("DBProxyConnectStringNetType")]
         [Validation(Required=false)]
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the dedicated proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.
         /// 
-        /// <b>Example:</b>
-        /// <para>ta9um4****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>normal</para>
+        /// A reserved parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("DBProxyEngineType")]
         [Validation(Required=false)]
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// <para>The new prefix of the proxy endpoint. Enter a prefix.</para>
-        /// <remarks>
-        /// <para>You must specify at least one of the <b>DBProxyNewConnectString</b> and <b>DBProxyNewConnectStringPort</b> parameters.</para>
-        /// </remarks>
+        /// The new prefix of the proxy endpoint. Enter a prefix.
         /// 
-        /// <b>Example:</b>
-        /// <para>test123456</para>
+        /// > You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.
         /// </summary>
         [NameInMap("DBProxyNewConnectString")]
         [Validation(Required=false)]
         public string DBProxyNewConnectString { get; set; }
 
         /// <summary>
-        /// <para>The port number that is associated with the proxy endpoint. Enter a port number.</para>
-        /// <remarks>
-        /// <para>You must specify at least one of the <b>DBProxyNewConnectString</b> and <b>DBProxyNewConnectStringPort</b> parameters.</para>
-        /// </remarks>
+        /// The port number that is associated with the proxy endpoint. Enter a port number.
         /// 
-        /// <b>Example:</b>
-        /// <para>3307</para>
+        /// > You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.
         /// </summary>
         [NameInMap("DBProxyNewConnectStringPort")]
         [Validation(Required=false)]

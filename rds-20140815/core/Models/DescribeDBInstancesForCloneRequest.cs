@@ -10,152 +10,113 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesForCloneRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The connection mode of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Standard</b>: standard mode</description></item>
-        /// <item><description><b>Safe</b>: database proxy mode</description></item>
-        /// </list>
-        /// <para>By default, this operation queries the instances that use any of the supported connection modes.</para>
+        /// The connection mode of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Standard</para>
+        /// *   **Standard**: standard mode
+        /// *   **Safe**: database proxy mode
+        /// 
+        /// By default, this operation queries the instances that use any of the supported connection modes.
         /// </summary>
         [NameInMap("ConnectionMode")]
         [Validation(Required=false)]
         public string ConnectionMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the current instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// The ID of the current instance.
         /// </summary>
         [NameInMap("CurrentInstanceId")]
         [Validation(Required=false)]
         public string CurrentInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>mysql.n1.micro.1</para>
+        /// The instance type of the instance. For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Running</para>
+        /// The status of the instance. For more information, see [Instance state table](https://help.aliyun.com/document_detail/26315.html).
         /// </summary>
         [NameInMap("DBInstanceStatus")]
         [Validation(Required=false)]
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The role of the instance that you want to query. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Primary</b>: primary instance</description></item>
-        /// <item><description><b>Readonly</b>: read-only instance</description></item>
-        /// <item><description><b>Guard</b>: disaster recovery instance</description></item>
-        /// <item><description><b>Temp</b>: temporary instance</description></item>
-        /// </list>
-        /// <para>By default, this operation queries the instances of all roles.</para>
+        /// The role of the instance that you want to query. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Primary</para>
+        /// *   **Primary**: primary instance
+        /// *   **Readonly**: read-only instance
+        /// *   **Guard**: disaster recovery instance
+        /// *   **Temp**: temporary instance
+        /// 
+        /// By default, this operation queries the instances of all roles.
         /// </summary>
         [NameInMap("DBInstanceType")]
         [Validation(Required=false)]
         public string DBInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>MySQL</description></item>
-        /// <item><description>SQLServer</description></item>
-        /// <item><description>PostgreSQL</description></item>
-        /// <item><description>PPAS</description></item>
-        /// <item><description>MariaDB</description></item>
-        /// </list>
-        /// <para>By default, this operation queries the instances that run any of the supported database engine types.</para>
+        /// The database engine of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>MySQL</para>
+        /// *   MySQL
+        /// *   SQLServer
+        /// *   PostgreSQL
+        /// *   PPAS
+        /// *   MariaDB
+        /// 
+        /// By default, this operation queries the instances that run any of the supported database engine types.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>5.7</para>
+        /// The version of the database engine.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance expires. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>True</b>: queries the instances that have expired.</description></item>
-        /// <item><description><b>False</b>: does not query instances that have expired.</description></item>
-        /// </list>
+        /// Specifies whether the instance expires. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>True</para>
+        /// *   **True**: queries the instances that have expired.
+        /// *   **False**: does not query instances that have expired.
         /// </summary>
         [NameInMap("Expired")]
         [Validation(Required=false)]
         public string Expired { get; set; }
 
         /// <summary>
-        /// <para>The network type of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Classic</b></description></item>
-        /// <item><description><b>VPC</b></description></item>
-        /// </list>
+        /// The network type of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Classic</para>
+        /// *   **Classic**
+        /// *   **VPC**
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The type of the database node. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Master</b>: the primary node</description></item>
-        /// <item><description><b>Slave</b>: the secondary node</description></item>
-        /// </list>
+        /// The type of the database node. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Master</para>
+        /// *   **Master**: the primary node
+        /// *   **Slave**: the secondary node
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
@@ -170,57 +131,44 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1 to 100</b>.</para>
-        /// <para>Default value: <b>30</b>.</para>
+        /// The number of entries to return on each page. Valid values: **1 to 100**.
         /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// Default value: **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
-        /// <item><description><b>Prepaid</b>: subscription</description></item>
-        /// </list>
-        /// <para>By default, this operation queries the instances that use any of the supported billing methods.</para>
+        /// The billing method of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Postpaid</para>
+        /// *   **Postpaid**: pay-as-you-go
+        /// *   **Prepaid**: subscription
+        /// 
+        /// By default, this operation queries the instances that use any of the supported billing methods.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -235,50 +183,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used for the search. The keyword can be part of an instance ID or an instance description.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6w</para>
+        /// The keyword that is used for the search. The keyword can be part of an instance ID or an instance description.
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vsw-j6csw46bgrgkxxxxxxxxxx</para>
+        /// The ID of the vSwitch.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vpc-j6cjvqms29yxxxxxxxxxx</para>
+        /// The ID of the virtual private cloud (VPC).
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou-h</para>
+        /// The zone ID of the instance.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the proxy mode.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>API</para>
+        /// The ID of the proxy mode.
         /// </summary>
         [NameInMap("proxyId")]
         [Validation(Required=false)]

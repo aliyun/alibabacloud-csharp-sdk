@@ -10,35 +10,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDBInstanceSecurityGroupRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the IDs of instances.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the instance. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/2628785.html) operation to query the IDs of instances.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-bp15i4hn07r******</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the security group rule.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>zht_test</para>
+        /// The description of the security group rule.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of the transport layer protocol. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>TCP</description></item>
-        /// <item><description>UDP</description></item>
-        /// </list>
+        /// The type of the transport layer protocol. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>TCP</para>
+        /// *   TCP
+        /// *   UDP
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
@@ -53,12 +44,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The range of destination ports over which TCP and UDP traffic is allowed in the security group rule.</para>
-        /// <para>Valid values: 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</para>
-        /// <para>This parameter is required.</para>
+        /// The range of destination ports over which TCP and UDP traffic is allowed in the security group rule.
         /// 
-        /// <b>Example:</b>
-        /// <para>1/200</para>
+        /// Valid values: 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
@@ -73,10 +63,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The range of source IP addresses. CIDR blocks and IPv4 addresses are supported.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>192.XX.XX.100</para>
+        /// The range of source IP addresses. CIDR blocks and IPv4 addresses are supported.
         /// </summary>
         [NameInMap("SourceCidrIp")]
         [Validation(Required=false)]

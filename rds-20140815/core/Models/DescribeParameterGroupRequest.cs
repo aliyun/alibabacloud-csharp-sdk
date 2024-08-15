@@ -14,22 +14,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rpg-dp****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

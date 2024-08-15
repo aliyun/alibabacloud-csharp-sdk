@@ -10,36 +10,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyAccountDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</para>
-        /// <remarks>
-        /// <para> The description cannot start with http:// or https://.</para>
-        /// </remarks>
-        /// <para>This parameter is required.</para>
+        /// The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.
         /// 
-        /// <b>Example:</b>
-        /// <para>Test Account A</para>
+        /// >  The description cannot start with http:// or https://.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// <para>The username of the account. You can call the DescribeAccounts operation to obtain the username of the account.</para>
-        /// <para>This parameter is required.</para>
+        /// The username of the account. You can call the DescribeAccounts operation to obtain the username of the account.
         /// 
-        /// <b>Example:</b>
-        /// <para>test1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

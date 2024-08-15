@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCustinsResourceInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-wz9s06u4drmqj4aqv</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceIds")]
         [Validation(Required=false)]
@@ -25,10 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

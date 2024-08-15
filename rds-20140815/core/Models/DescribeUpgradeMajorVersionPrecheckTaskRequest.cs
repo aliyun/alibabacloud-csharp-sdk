@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeUpgradeMajorVersionPrecheckTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>pgm-bp1c808s731l****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,27 +27,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Valid values: any non-zero positive integer. Default value: 1</para>
+        /// The page number.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Valid values: any non-zero positive integer. Default value: 1
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>30 (default)</description></item>
-        /// <item><description>50</description></item>
-        /// <item><description>100</description></item>
-        /// </list>
+        /// The number of entries per page.
         /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// Valid values:
+        /// 
+        /// *   30 (default)
+        /// *   50
+        /// *   100
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -64,20 +57,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new major engine version of the instance. The new major engine version must be later than the original major engine version.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12.0</para>
+        /// The new major engine version of the instance. The new major engine version must be later than the original major engine version.
         /// </summary>
         [NameInMap("TargetMajorVersion")]
         [Validation(Required=false)]
         public string TargetMajorVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the <b>TaskId</b> parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>416980000</para>
+        /// The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the **TaskId** parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

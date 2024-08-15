@@ -10,33 +10,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the database.</para>
-        /// <para>This parameter is required.</para>
+        /// The description of the database.
         /// 
-        /// <b>Example:</b>
-        /// <para>Test database A</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBDescription")]
         [Validation(Required=false)]
         public string DBDescription { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
-        /// <para>This parameter is required.</para>
+        /// The name of the database.
         /// 
-        /// <b>Example:</b>
-        /// <para>testDB01</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

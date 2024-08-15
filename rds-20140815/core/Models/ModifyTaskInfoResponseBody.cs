@@ -10,40 +10,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>mst.errorcode.success.errormessage</para>
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the failed task. This parameter is returned when a task fails.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>t-83br18hlw11ue610yo</para>
+        /// The ID of the failed task. This parameter is returned when a task fails.
         /// </summary>
         [NameInMap("ErrorTaskId")]
         [Validation(Required=false)]
         public string ErrorTaskId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>18B3000C-2B06-5D4F-AA5B-456D5FBCA55B</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of completed tasks.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>5</para>
+        /// The number of completed tasks.
         /// </summary>
         [NameInMap("SuccessCount")]
         [Validation(Required=false)]

@@ -10,27 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyDBInstanceEndpointResponseBodyData Data { get; set; }
         public class ModifyDBInstanceEndpointResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The endpoint ID of the instance.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>ep-****</para>
+            /// The endpoint ID of the instance.
             /// </summary>
             [NameInMap("DBInstanceEndpointId")]
             [Validation(Required=false)]
             public string DBInstanceEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rm-****</para>
+            /// The ID of the instance.
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
@@ -39,10 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>F2911788-25E8-42E5-A3A3-1B38D263F01E</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

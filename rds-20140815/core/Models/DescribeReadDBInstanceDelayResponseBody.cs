@@ -10,27 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeReadDBInstanceDelayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The primary instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-bp*****</para>
+        /// The primary instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The latency of data replication. Unit: seconds.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0</para>
+        /// The latency of data replication. Unit: seconds.
         /// </summary>
         [NameInMap("DelayTime")]
         [Validation(Required=false)]
         public int? DelayTime { get; set; }
 
         /// <summary>
-        /// <para>The latency information.</para>
+        /// The latency information.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -41,17 +35,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeReadDBInstanceDelayResponseBodyItemsItems> Items { get; set; }
             public class DescribeReadDBInstanceDelayResponseBodyItemsItems : TeaModel {
                 /// <summary>
-                /// <para>The primary instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-bp*****</para>
+                /// The primary instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>An array that consists of information about the read-only instance.</para>
+                /// An array that consists of information about the read-only instance.
                 /// </summary>
                 [NameInMap("ReadDBInstanceNames")]
                 [Validation(Required=false)]
@@ -64,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>The latency of data replication.</para>
+                /// The latency of data replication.
                 /// </summary>
                 [NameInMap("ReadDelayTimes")]
                 [Validation(Required=false)]
@@ -77,10 +68,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>The information about the write-ahead log (WAL) latency.</para>
-                /// <remarks>
-                /// <para> This parameter is returned only when the primary instance runs PostgreSQL.</para>
-                /// </remarks>
+                /// The information about the write-ahead log (WAL) latency.
+                /// 
+                /// >  This parameter is returned only when the primary instance runs PostgreSQL.
                 /// </summary>
                 [NameInMap("ReadonlyInstanceDelay")]
                 [Validation(Required=false)]
@@ -91,80 +81,56 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay> ReadonlyInstanceDelay { get; set; }
                     public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay : TeaModel {
                         /// <summary>
-                        /// <para>The duration that is allowed for the latency in the persistence of WAL data. Unit: seconds.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
+                        /// The duration that is allowed for the latency in the persistence of WAL data. Unit: seconds.
                         /// </summary>
                         [NameInMap("FlushLag")]
                         [Validation(Required=false)]
                         public string FlushLag { get; set; }
 
                         /// <summary>
-                        /// <para>The data size that is allowed for the latency in the persistence of WAL data. Unit: MB.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
+                        /// The data size that is allowed for the latency in the persistence of WAL data. Unit: MB.
                         /// </summary>
                         [NameInMap("FlushLatency")]
                         [Validation(Required=false)]
                         public string FlushLatency { get; set; }
 
                         /// <summary>
-                        /// <para>The read-only instance ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>rr-bp*****</para>
+                        /// The read-only instance ID.
                         /// </summary>
                         [NameInMap("ReadDBInstanceName")]
                         [Validation(Required=false)]
                         public string ReadDBInstanceName { get; set; }
 
                         /// <summary>
-                        /// <para>The duration that is allowed for the latency in the playback of WAL data. Unit: seconds.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
+                        /// The duration that is allowed for the latency in the playback of WAL data. Unit: seconds.
                         /// </summary>
                         [NameInMap("ReplayLag")]
                         [Validation(Required=false)]
                         public string ReplayLag { get; set; }
 
                         /// <summary>
-                        /// <para>The data size that is allowed for the latency in the playback of WAL data. Unit: MB.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
+                        /// The data size that is allowed for the latency in the playback of WAL data. Unit: MB.
                         /// </summary>
                         [NameInMap("ReplayLatency")]
                         [Validation(Required=false)]
                         public string ReplayLatency { get; set; }
 
                         /// <summary>
-                        /// <para>The data size that is allowed for the latency in the sending of WAL data. Unit: MB.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
+                        /// The data size that is allowed for the latency in the sending of WAL data. Unit: MB.
                         /// </summary>
                         [NameInMap("SendLatency")]
                         [Validation(Required=false)]
                         public string SendLatency { get; set; }
 
                         /// <summary>
-                        /// <para>The duration that is allowed for the latency in the write-back of WAL data. Unit: seconds.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
+                        /// The duration that is allowed for the latency in the write-back of WAL data. Unit: seconds.
                         /// </summary>
                         [NameInMap("WriteLag")]
                         [Validation(Required=false)]
                         public string WriteLag { get; set; }
 
                         /// <summary>
-                        /// <para>The data size that is allowed for the latency in the write-back of WAL data. Unit: MB.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
+                        /// The data size that is allowed for the latency in the write-back of WAL data. Unit: MB.
                         /// </summary>
                         [NameInMap("WriteLatency")]
                         [Validation(Required=false)]
@@ -179,20 +145,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The read-only instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rr-bp*****</para>
+        /// The read-only instance ID.
         /// </summary>
         [NameInMap("ReadDBInstanceId")]
         [Validation(Required=false)]
         public string ReadDBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>F1BDDEA8-452D-450B-AB10-CD5C5BAFC5DF</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

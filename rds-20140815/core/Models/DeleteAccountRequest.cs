@@ -10,22 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account.</para>
-        /// <para>This parameter is required.</para>
+        /// The name of the account.
         /// 
-        /// <b>Example:</b>
-        /// <para>test1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

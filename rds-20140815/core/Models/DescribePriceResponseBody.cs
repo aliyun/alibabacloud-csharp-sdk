@@ -10,57 +10,44 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order parameters.</para>
-        /// <remarks>
-        /// <para> If the <b>OrderParamOut</b> parameter is set to <b>true</b>, the value of the OrderParams parameter is returned.</para>
-        /// </remarks>
+        /// The order parameters.
         /// 
-        /// <b>Example:</b>
-        /// <para>{\&quot;autoPay\&quot;:false}&quot;</para>
+        /// >  If the **OrderParamOut** parameter is set to **true**, the value of the OrderParams parameter is returned.
         /// </summary>
         [NameInMap("OrderParams")]
         [Validation(Required=false)]
         public string OrderParams { get; set; }
 
         /// <summary>
-        /// <para>The price information.</para>
+        /// The price information.
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The information about the promotion.</para>
+            /// The information about the promotion.
             /// </summary>
             [NameInMap("ActivityInfo")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoActivityInfo ActivityInfo { get; set; }
             public class DescribePriceResponseBodyPriceInfoActivityInfo : TeaModel {
                 /// <summary>
-                /// <para>The returned message.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Error description</para>
+                /// The returned message.
                 /// </summary>
                 [NameInMap("CheckErrMsg")]
                 [Validation(Required=false)]
                 public string CheckErrMsg { get; set; }
 
                 /// <summary>
-                /// <para>The error code that is returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123456</para>
+                /// The error code that is returned.
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the request was successful.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Success</para>
+                /// Indicates whether the request was successful.
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -69,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The information about the coupon.</para>
+            /// The information about the coupon.
             /// </summary>
             [NameInMap("Coupons")]
             [Validation(Required=false)]
@@ -80,40 +67,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public List<DescribePriceResponseBodyPriceInfoCouponsCoupon> Coupon { get; set; }
                 public class DescribePriceResponseBodyPriceInfoCouponsCoupon : TeaModel {
                     /// <summary>
-                    /// <para>The coupon ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>123456</para>
+                    /// The coupon ID.
                     /// </summary>
                     [NameInMap("CouponNo")]
                     [Validation(Required=false)]
                     public string CouponNo { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the coupon.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test</para>
+                    /// The description of the coupon.
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the coupon is selected.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
+                    /// Indicates whether the coupon is selected.
                     /// </summary>
                     [NameInMap("IsSelected")]
                     [Validation(Required=false)]
                     public string IsSelected { get; set; }
 
                     /// <summary>
-                    /// <para>The coupon name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test</para>
+                    /// The coupon name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -124,47 +99,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The currency unit.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>CNY</para>
+            /// The currency unit.
             /// </summary>
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The discount.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>0</para>
+            /// The discount.
             /// </summary>
             [NameInMap("DiscountPrice")]
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
 
             /// <summary>
-            /// <para>The order information.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>Order Information</para>
+            /// The order information.
             /// </summary>
             [NameInMap("OrderLines")]
             [Validation(Required=false)]
             public object OrderLines { get; set; }
 
             /// <summary>
-            /// <para>The original price.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2504</para>
+            /// The original price.
             /// </summary>
             [NameInMap("OriginalPrice")]
             [Validation(Required=false)]
             public float? OriginalPrice { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the ID of the promotion rule.</para>
+            /// An array that consists of the ID of the promotion rule.
             /// </summary>
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
@@ -177,30 +140,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1**</para>
+            /// The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.
             /// </summary>
             [NameInMap("TradeMaxRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMaxRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2**</para>
+            /// The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.
             /// </summary>
             [NameInMap("TradeMinRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMinRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The transaction price, which is equal to the original price minus the discount.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2504</para>
+            /// The transaction price, which is equal to the original price minus the discount.
             /// </summary>
             [NameInMap("TradePrice")]
             [Validation(Required=false)]
@@ -209,17 +163,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>CA0ADDDC-0BEB-4381-A3ED-73B4C79B8CC6</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the promotion rule.</para>
+        /// The details of the promotion rule.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -230,30 +181,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
                 /// <summary>
-                /// <para>The description of the promotion rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Activity Description</para>
+                /// The description of the promotion rule.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The name of the promotion rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Rule1</para>
+                /// The name of the promotion rule.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the promotion rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1020021003939076</para>
+                /// The ID of the promotion rule.
                 /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
@@ -264,107 +206,77 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The pricing information about a serverless RDS instance.</para>
+        /// The pricing information about a serverless RDS instance.
         /// </summary>
         [NameInMap("ServerlessPrice")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyServerlessPrice ServerlessPrice { get; set; }
         public class DescribePriceResponseBodyServerlessPrice : TeaModel {
             /// <summary>
-            /// <para>The discount amount of the maximum number of RCUs.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1**.*</para>
+            /// The discount amount of the maximum number of RCUs.
             /// </summary>
             [NameInMap("RCUDiscountMaxAmount")]
             [Validation(Required=false)]
             public float? RCUDiscountMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The discount amount of the minimum number of RCUs.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1*.*</para>
+            /// The discount amount of the minimum number of RCUs.
             /// </summary>
             [NameInMap("RCUDiscountMinAmount")]
             [Validation(Required=false)]
             public float? RCUDiscountMinAmount { get; set; }
 
             /// <summary>
-            /// <para>The price of the maximum number of RCUs.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2**.*</para>
+            /// The price of the maximum number of RCUs.
             /// </summary>
             [NameInMap("RCUOriginalMaxAmount")]
             [Validation(Required=false)]
             public float? RCUOriginalMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The price of the minimum number of RCUs.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>3*.*</para>
+            /// The price of the minimum number of RCUs.
             /// </summary>
             [NameInMap("RCUOriginalMinAmount")]
             [Validation(Required=false)]
             public float? RCUOriginalMinAmount { get; set; }
 
             /// <summary>
-            /// <para>The original price of the disk capacity.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1*</para>
+            /// The original price of the disk capacity.
             /// </summary>
             [NameInMap("StorageOriginalAmount")]
             [Validation(Required=false)]
             public float? StorageOriginalAmount { get; set; }
 
             /// <summary>
-            /// <para>The maximum total price before the discount.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2**.*</para>
+            /// The maximum total price before the discount.
             /// </summary>
             [NameInMap("TotalOriginalMaxAmount")]
             [Validation(Required=false)]
             public float? TotalOriginalMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The minimum total price before the discount.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2*.*</para>
+            /// The minimum total price before the discount.
             /// </summary>
             [NameInMap("TotalOriginalMinAmount")]
             [Validation(Required=false)]
             public float? TotalOriginalMinAmount { get; set; }
 
             /// <summary>
-            /// <para>The transaction price of the maximum number of RCUs.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1**.*</para>
+            /// The transaction price of the maximum number of RCUs.
             /// </summary>
             [NameInMap("TradeMaxRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMaxRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The transaction price of the minimum number of RCUs.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2*.*</para>
+            /// The transaction price of the minimum number of RCUs.
             /// </summary>
             [NameInMap("TradeMinRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMinRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The discounted price of the disk capacity.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2.*</para>
+            /// The discounted price of the disk capacity.
             /// </summary>
             [NameInMap("storageDiscountAmount")]
             [Validation(Required=false)]
@@ -373,30 +285,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether discounts can be used.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>True</para>
+        /// Indicates whether discounts can be used.
         /// </summary>
         [NameInMap("ShowDiscount")]
         [Validation(Required=false)]
         public bool? ShowDiscount { get; set; }
 
         /// <summary>
-        /// <para>The estimated hourly fee that is calculated based on the maximum number of RCUs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2**</para>
+        /// The estimated hourly fee that is calculated based on the maximum number of RCUs.
         /// </summary>
         [NameInMap("TradeMaxRCUAmount")]
         [Validation(Required=false)]
         public float? TradeMaxRCUAmount { get; set; }
 
         /// <summary>
-        /// <para>The estimated hourly fee that is calculated based on the minimum number of RCUs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1**</para>
+        /// The estimated hourly fee that is calculated based on the minimum number of RCUs.
         /// </summary>
         [NameInMap("TradeMinRCUAmount")]
         [Validation(Required=false)]

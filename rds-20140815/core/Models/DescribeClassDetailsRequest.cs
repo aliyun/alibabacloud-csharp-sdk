@@ -10,60 +10,48 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeClassDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the instance type.</para>
-        /// <para>This parameter is required.</para>
+        /// The code of the instance type.
         /// 
-        /// <b>Example:</b>
-        /// <para>rds.mysql.s3.large</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClassCode")]
         [Validation(Required=false)]
         public string ClassCode { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz*****</para>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The commodity code of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>bards_intl</b>: The instance is a pay-as-you-go primary instance.</description></item>
-        /// <item><description><b>rds_intl</b>: The instance is a subscription primary instance.</description></item>
-        /// <item><description><b>rords_intl</b>: The instance is a pay-as-you-go read-only instance.</description></item>
-        /// <item><description><b>rds_rordspre_public_intl</b>: The instance is a subscription read-only instance.</description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// The commodity code of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>rds</para>
+        /// *   **bards_intl**: The instance is a pay-as-you-go primary instance.
+        /// *   **rds_intl**: The instance is a subscription primary instance.
+        /// *   **rords_intl**: The instance is a pay-as-you-go read-only instance.
+        /// *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
-        /// <para>This parameter is required.</para>
+        /// The type of the database engine.
         /// 
-        /// <b>Example:</b>
-        /// <para>MySQL</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The database engine version of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>5.6</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -74,21 +62,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,41 +10,30 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0</para>
+        /// The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.
         /// </summary>
         [NameInMap("FromExecTime")]
         [Validation(Required=false)]
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, the specified time is automatically converted to a time that is exactly 30 days earlier than the current time.</para>
-        /// <para>This parameter is required.</para>
+        /// The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, the specified time is automatically converted to a time that is exactly 30 days earlier than the current time.
         /// 
-        /// <b>Example:</b>
-        /// <para>2022-01-02T11:31:03Z</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FromStartTime")]
         [Validation(Required=false)]
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf62br2491p5l****</para>
+        /// The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Only Instance is supported.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Instance</para>
+        /// Only Instance is supported.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -55,40 +44,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number. Pages start from page 1. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>10 to 100</b>. Default value: <b>10</b>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The number of entries per page. Valid values: **10 to 100**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-beijing</para>
+        /// The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-aekzbvctytru7ua</para>
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -107,61 +84,47 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Scheduled</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Succeed</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>Cancelling</description></item>
-        /// <item><description>Canceled</description></item>
-        /// <item><description>Waiting</description></item>
-        /// </list>
-        /// <para>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</para>
+        /// The status of the task. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Scheduled</para>
+        /// *   Scheduled
+        /// *   Running
+        /// *   Succeed
+        /// *   Failed
+        /// *   Cancelling
+        /// *   Canceled
+        /// *   Waiting
+        /// 
+        /// Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of task IDs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>t-83br18hloy3faf****</para>
+        /// The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of task IDs.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task type. Separate multiple task types with commas (,). You can specify up to 30 task types. This parameter is empty by default, which indicates that you can specify an unlimited number of task types.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>autotest_dispatch_cases</para>
+        /// The task type. Separate multiple task types with commas (,). You can specify up to 30 task types. This parameter is empty by default, which indicates that you can specify an unlimited number of task types.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0</para>
+        /// The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.
         /// </summary>
         [NameInMap("ToExecTime")]
         [Validation(Required=false)]
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
-        /// <para>This parameter is required.</para>
+        /// The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
-        /// <b>Example:</b>
-        /// <para>2022-03-02T11:31:03Z</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ToStartTime")]
         [Validation(Required=false)]

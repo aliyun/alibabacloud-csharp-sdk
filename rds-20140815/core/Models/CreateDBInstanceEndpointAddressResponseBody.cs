@@ -10,37 +10,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDBInstanceEndpointAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateDBInstanceEndpointAddressResponseBodyData Data { get; set; }
         public class CreateDBInstanceEndpointAddressResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The public endpoint.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rm-******.mysql.rds.aliyuncs.com</para>
+            /// The public endpoint.
             /// </summary>
             [NameInMap("ConnectionString")]
             [Validation(Required=false)]
             public string ConnectionString { get; set; }
 
             /// <summary>
-            /// <para>The endpoint ID of the instance.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>ep-****</para>
+            /// The endpoint ID of the instance.
             /// </summary>
             [NameInMap("DBInstanceEndpointId")]
             [Validation(Required=false)]
             public string DBInstanceEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rm-****</para>
+            /// The ID of the instance.
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
@@ -49,10 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

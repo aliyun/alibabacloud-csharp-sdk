@@ -10,31 +10,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeQuickSaleConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The product code. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>rds: The instance is a subscription instance.</description></item>
-        /// <item><description>bards: The instance is a pay-as-you-go instance.</description></item>
-        /// </list>
+        /// The product code. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>rds</para>
+        /// *   rds: The instance is a subscription instance.
+        /// *   bards: The instance is a pay-as-you-go instance.
         /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
         public string Commodity { get; set; }
 
         /// <summary>
-        /// <para>The configuration details of the product.</para>
+        /// The configuration details of the product.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public Dictionary<string, object> Items { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>5DFFE9EC-3369-5937-A4E2-507C0C86A4C6</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

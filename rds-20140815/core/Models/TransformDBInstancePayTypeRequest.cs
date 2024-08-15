@@ -10,51 +10,36 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class TransformDBInstancePayTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the auto-renewal feature for the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
-        /// </list>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</description></item>
-        /// <item><description>All strings except <b>true</b> are considered <b>false</b>.</description></item>
-        /// </list>
-        /// </remarks>
+        /// Specifies whether to enable the auto-renewal feature for the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// *   **true**
+        /// *   **false**
+        /// 
+        /// > - This parameter is valid only when you change the billing method from pay-as-you-go to subscription.
+        /// > - All strings except **true** are considered **false**.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The additional business information about the instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>None</para>
+        /// The additional business information about the instance.
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -69,32 +54,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new billing method of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
-        /// <item><description><b>Prepaid</b>: subscription</description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// The new billing method of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Prepaid</para>
+        /// *   **Postpaid**: pay-as-you-go
+        /// *   **Prepaid**: subscription
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The renewal cycle of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter must be specified if you set <b>PayType</b> to <b>Prepaid</b>.</para>
-        /// </remarks>
+        /// The renewal cycle of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Month</para>
+        /// *   **Year**
+        /// *   **Month**
+        /// 
+        /// > This parameter must be specified if you set **PayType** to **Prepaid**.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -109,17 +86,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>If you set <b>Period</b> to <b>Year</b>, the value of UsedTime ranges from <b>1 to 5</b>.</description></item>
-        /// <item><description>If you set <b>Period</b> to <b>Month</b>, the value of UsedTime ranges from <b>1 to 11</b>.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter must be specified when <b>PayType</b> is set to <b>Prepaid</b>.</para>
-        /// </remarks>
+        /// The subscription duration of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// *   If you set **Period** to **Year**, the value of UsedTime ranges from **1 to 5**.
+        /// *   If you set **Period** to **Month**, the value of UsedTime ranges from **1 to 11**.
+        /// 
+        /// > This parameter must be specified when **PayType** is set to **Prepaid**.
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]

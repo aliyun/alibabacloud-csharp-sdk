@@ -14,24 +14,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// <remarks>
-        /// <para> You can specify any region for this parameter, which does not affect your query results. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// </remarks>
-        /// <para>This parameter is required.</para>
+        /// The region ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// >  You can specify any region for this parameter, which does not affect your query results. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-bp67acfmxazb4p****</para>
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -46,14 +40,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The SLR name.</para>
-        /// <remarks>
-        /// <para> For more information about the SLRs supported by ApsaraDB RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</para>
-        /// </remarks>
-        /// <para>This parameter is required.</para>
+        /// The SLR name.
         /// 
-        /// <b>Example:</b>
-        /// <para>AliyunServiceRoleForRdsPgsqlOnEcs</para>
+        /// >  For more information about the SLRs supported by ApsaraDB RDS, see [Service-linked roles](https://help.aliyun.com/document_detail/342840.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceLinkedRole")]
         [Validation(Required=false)]

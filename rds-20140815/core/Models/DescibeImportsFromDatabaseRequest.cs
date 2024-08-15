@@ -10,53 +10,41 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescibeImportsFromDatabaseRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-bpxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
-        /// <para>This parameter is required.</para>
+        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// 
-        /// <b>Example:</b>
-        /// <para>2011-06-11T16:00Z</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance. Set the value to <b>MySQL</b></para>
-        /// <para>This parameter is required.</para>
+        /// The database engine of the instance. Set the value to **MySQL**
         /// 
-        /// <b>Example:</b>
-        /// <para>MySQL</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The ID of the migration task.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123</para>
+        /// The ID of the migration task.
         /// </summary>
         [NameInMap("ImportId")]
         [Validation(Required=false)]
@@ -71,37 +59,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: any non-zero positive integer.</para>
-        /// <para>Default value: <b>1</b>.</para>
+        /// The page number. Valid values: any non-zero positive integer.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
-        /// </list>
-        /// <para>Default value: <b>30</b>.</para>
+        /// The number of entries to return on each page. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// *   **30**
+        /// *   **50**
+        /// *   **100**
+        /// 
+        /// Default value: **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -116,11 +96,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
-        /// <para>This parameter is required.</para>
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// 
-        /// <b>Example:</b>
-        /// <para>2011-06-11T15:00Z</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

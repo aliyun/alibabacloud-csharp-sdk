@@ -10,66 +10,51 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeKmsAssociateResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the associated ApsaraDB RDS instances.</para>
+        /// The information about the associated ApsaraDB RDS instances.
         /// </summary>
         [NameInMap("AssociateDBInstances")]
         [Validation(Required=false)]
         public List<DescribeKmsAssociateResourcesResponseBodyAssociateDBInstances> AssociateDBInstances { get; set; }
         public class DescribeKmsAssociateResourcesResponseBodyAssociateDBInstances : TeaModel {
             /// <summary>
-            /// <para>The instance ID.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>pgm-bp16p6f68130****</para>
+            /// The instance ID.
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The database engine. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>MySQL</b></description></item>
-            /// <item><description><b>SQLServer</b></description></item>
-            /// <item><description><b>PostgreSQL</b></description></item>
-            /// </list>
+            /// The database engine. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>PostgreSQL</para>
+            /// *   **MySQL**
+            /// *   **SQLServer**
+            /// *   **PostgreSQL**
             /// </summary>
             [NameInMap("Engine")]
             [Validation(Required=false)]
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The purpose of the key. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>DiskEncryption</b>: cloud disk encryption</description></item>
-            /// <item><description><b>TDE</b>: transparent data encryption</description></item>
-            /// </list>
+            /// The purpose of the key. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>DiskEncryption</para>
+            /// *   **DiskEncryption**: cloud disk encryption
+            /// *   **TDE**: transparent data encryption
             /// </summary>
             [NameInMap("KeyUsedBy")]
             [Validation(Required=false)]
             public string KeyUsedBy { get; set; }
 
             /// <summary>
-            /// <para>The state of the instance. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>CREATING</b>: The instance is being created.</description></item>
-            /// <item><description><b>ACTIVATION</b>: The instance is running.</description></item>
-            /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
-            /// <item><description><b>RESTARTING</b>: The instance is being restarted.</description></item>
-            /// <item><description><b>INS_MAINTAINING</b>: The configuration of the instance is being changed.</description></item>
-            /// <item><description><b>INS_MAINTAINING</b>: The instance is being maintained.</description></item>
-            /// <item><description><b>BACKUP_RECOVERING</b>: The instance is being restored.</description></item>
-            /// <item><description><b>NET_MODIFYING</b>: The network type of the instance is being changed.</description></item>
-            /// </list>
+            /// The state of the instance. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>ACTIVATION</para>
+            /// *   **CREATING**: The instance is being created.
+            /// *   **ACTIVATION**: The instance is running.
+            /// *   **DELETING**: The instance is being deleted.
+            /// *   **RESTARTING**: The instance is being restarted.
+            /// *   **INS_MAINTAINING**: The configuration of the instance is being changed.
+            /// *   **INS_MAINTAINING**: The instance is being maintained.
+            /// *   **BACKUP_RECOVERING**: The instance is being restored.
+            /// *   **NET_MODIFYING**: The network type of the instance is being changed.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -78,24 +63,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether an associated RDS instance exists.</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: Yes</description></item>
-        /// <item><description><b>false</b>: No</description></item>
-        /// </list>
+        /// Indicates whether an associated RDS instance exists.
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// - **true**: Yes
+        /// - **false**: No
         /// </summary>
         [NameInMap("AssociateStatus")]
         [Validation(Required=false)]
         public bool? AssociateStatus { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

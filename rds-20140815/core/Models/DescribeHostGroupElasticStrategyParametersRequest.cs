@@ -10,32 +10,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHostGroupElasticStrategyParametersRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dedicated cluster.</para>
-        /// <para>This parameter is required.</para>
+        /// The name of the dedicated cluster.
         /// 
-        /// <b>Example:</b>
-        /// <para>dhg-d0dwi82293b2w9t5</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DedicatedHostGroupName")]
         [Validation(Required=false)]
         public string DedicatedHostGroupName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-shanghai</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy****</para>
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,48 +10,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ImportUserBackupFileRequest : TeaModel {
         /// <summary>
-        /// <para>A JSON array that consists of the information about the full backup file stored as an object in an OSS bucket. Example: <c>{&quot;Bucket&quot;:&quot;test&quot;, &quot;Object&quot;:&quot;test/test_db_employees.xb&quot;,&quot;Location&quot;:&quot;ap-southeast-1&quot;}</c></para>
-        /// <para>The JSON array contains the following fields:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Bucket</b>: The name of the OSS bucket in which the full backup file is stored as an object. You can call the <a href="https://help.aliyun.com/document_detail/31965.html">GetBucket</a> operation to query the name of the bucket.</description></item>
-        /// <item><description><b>Object</b>: The path of the full backup file that is stored as an object in the OSS bucket. You can call the <a href="https://help.aliyun.com/document_detail/31980.html">GetObject</a> operation to query the path of the object.</description></item>
-        /// <item><description><b>Location</b>: The ID of the region in which the OSS bucket is located. You can call the <a href="https://help.aliyun.com/document_detail/31967.html">GetBucketLocation</a> operation to query the region of the bucket.</description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// A JSON array that consists of the information about the full backup file stored as an object in an OSS bucket. Example: `{"Bucket":"test", "Object":"test/test_db_employees.xb","Location":"ap-southeast-1"}`
         /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;Bucket&quot;:&quot;test&quot;, &quot;Object&quot;:&quot;test/test_db_employees.xb&quot;,&quot;Location&quot;:&quot;ap-southeast-1&quot;}</para>
+        /// The JSON array contains the following fields:
+        /// 
+        /// *   **Bucket**: The name of the OSS bucket in which the full backup file is stored as an object. You can call the [GetBucket](https://help.aliyun.com/document_detail/31965.html) operation to query the name of the bucket.
+        /// *   **Object**: The path of the full backup file that is stored as an object in the OSS bucket. You can call the [GetObject](https://help.aliyun.com/document_detail/31980.html) operation to query the path of the object.
+        /// *   **Location**: The ID of the region in which the OSS bucket is located. You can call the [GetBucketLocation](https://help.aliyun.com/document_detail/31967.html) operation to query the region of the bucket.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BackupFile")]
         [Validation(Required=false)]
         public string BackupFile { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BucketRegion")]
         [Validation(Required=false)]
         public string BucketRegion { get; set; }
 
         /// <summary>
-        /// <para>The description of the full backup file.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>BackupTest</para>
+        /// The description of the full backup file.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine that is run on the self-managed MySQL database and ApsaraDB RDS for MySQL instance. Set the value to <b>5.7</b>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>5.7</para>
+        /// The version of the database engine that is run on the self-managed MySQL database and ApsaraDB RDS for MySQL instance. Set the value to **5.7**.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -62,27 +52,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>The value of this parameter is the ID of the region in which you want to create the instance.</description></item>
-        /// <item><description>The value of this parameter must be consistent with the value of <b>BucketRegion</b>.</description></item>
-        /// </list>
-        /// </remarks>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// > *   The value of this parameter is the ID of the region in which you want to create the instance.
+        /// > *   The value of this parameter must be consistent with the value of **BucketRegion**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy****</para>
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -97,42 +79,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The amount of storage that is required to restore the data of the full backup file. Unit: GB.</para>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>The default value of this parameter is 5 times the size of the full backup file.</description></item>
-        /// <item><description>The minimum value of this parameter is 20.</description></item>
-        /// </list>
-        /// </remarks>
+        /// The amount of storage that is required to restore the data of the full backup file. Unit: GB.
         /// 
-        /// <b>Example:</b>
-        /// <para>20</para>
+        /// > *   The default value of this parameter is 5 times the size of the full backup file.
+        /// > *   The minimum value of this parameter is 20.
         /// </summary>
         [NameInMap("RestoreSize")]
         [Validation(Required=false)]
         public int? RestoreSize { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the full backup file. Unit: days. Valid values: any <b>non-zero</b> positive integer.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// The retention period of the full backup file. Unit: days. Valid values: any **non-zero** positive integer.
         /// </summary>
         [NameInMap("Retention")]
         [Validation(Required=false)]
         public int? Retention { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. You can call the DescribeRegions operation to query the zone ID.</para>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If you specify this parameter, the system creates a snapshot in single-digit seconds, which greatly reduces the time that is required to import the full backup file.</description></item>
-        /// <item><description>When you call the CreateDBInstance operation to create an instance by using the full backup file, the instance is created in the zone that you specify for this parameter.</description></item>
-        /// </list>
-        /// </remarks>
+        /// The zone ID. You can call the DescribeRegions operation to query the zone ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou-b</para>
+        /// > *   If you specify this parameter, the system creates a snapshot in single-digit seconds, which greatly reduces the time that is required to import the full backup file.
+        /// > *   When you call the CreateDBInstance operation to create an instance by using the full backup file, the instance is created in the zone that you specify for this parameter.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

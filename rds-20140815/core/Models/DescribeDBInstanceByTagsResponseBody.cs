@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceByTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the instance.</para>
+        /// The details about the instance.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,17 +21,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTag> DBInstanceTag { get; set; }
             public class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTag : TeaModel {
                 /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf6w**********</para>
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The details about the tag.</para>
+                /// The details about the tag.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -42,20 +39,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTagsTag> Tag { get; set; }
                     public class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The tag key.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>key1</para>
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>value1</para>
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -70,40 +61,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeOssDownloadsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Details of the backup file.</para>
+        /// Details of the backup file.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -31,99 +28,73 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeOssDownloadsResponseBodyItemsOssDownload> OssDownload { get; set; }
             public class DescribeOssDownloadsResponseBodyItemsOssDownload : TeaModel {
                 /// <summary>
-                /// <para>The backup type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Database</b>: full backup file</description></item>
-                /// <item><description><b>Differential_Database</b>: incremental backup file</description></item>
-                /// <item><description><b>Transaction_Log</b>: log backup file</description></item>
-                /// </list>
+                /// The backup type. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Database</para>
+                /// *   **Database**: full backup file
+                /// *   **Differential_Database**: incremental backup file
+                /// *   **Transaction_Log**: log backup file
                 /// </summary>
                 [NameInMap("BackupMode")]
                 [Validation(Required=false)]
                 public string BackupMode { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backup file was created in the download list. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-08-17T12:45:15Z</para>
+                /// The time when the backup file was created in the download list. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the backup file.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>App description</para>
+                /// The description of the backup file.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-08-27T12:45:15Z</para>
+                /// The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the backup file stored in the Object Storage Service (OSS) bucket.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
+                /// The name of the backup file stored in the Object Storage Service (OSS) bucket.
                 /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>The size of the backup file. Unit: MB</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
+                /// The size of the backup file. Unit: MB
                 /// </summary>
                 [NameInMap("FileSize")]
                 [Validation(Required=false)]
                 public string FileSize { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the backup file is available. Valid values: <b>True and False</b>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>True</para>
+                /// Indicates whether the backup file is available. Valid values: **True and False**.
                 /// </summary>
                 [NameInMap("IsAvailable")]
                 [Validation(Required=false)]
                 public string IsAvailable { get; set; }
 
                 /// <summary>
-                /// <para>The state of the backup file. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>NoStart</b></description></item>
-                /// <item><description><b>Downloading</b></description></item>
-                /// <item><description><b>Finished</b></description></item>
-                /// <item><description><b>DownloadFailed</b></description></item>
-                /// <item><description><b>VerifyFailed</b></description></item>
-                /// <item><description><b>Deleted</b></description></item>
-                /// <item><description><b>DeleteFailed</b></description></item>
-                /// <item><description><b>CheckSuccess</b></description></item>
-                /// <item><description><b>CheckFailed</b></description></item>
-                /// <item><description><b>Restoring</b></description></item>
-                /// <item><description><b>Restored</b></description></item>
-                /// <item><description><b>RestoreFailed</b></description></item>
-                /// </list>
+                /// The state of the backup file. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Finished</para>
+                /// *   **NoStart**
+                /// *   **Downloading**
+                /// *   **Finished**
+                /// *   **DownloadFailed**
+                /// *   **VerifyFailed**
+                /// *   **Deleted**
+                /// *   **DeleteFailed**
+                /// *   **CheckSuccess**
+                /// *   **CheckFailed**
+                /// *   **Restoring**
+                /// *   **Restored**
+                /// *   **RestoreFailed**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -134,20 +105,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the migration task.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>562154852</para>
+        /// The ID of the migration task.
         /// </summary>
         [NameInMap("MigrateTaskId")]
         [Validation(Required=false)]
         public string MigrateTaskId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>A5409D02-D661-4BF3-8F3D-0A814D0574E7</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

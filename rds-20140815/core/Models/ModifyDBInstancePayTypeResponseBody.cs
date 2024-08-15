@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstancePayTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>100789370230206</para>
+        /// The order ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

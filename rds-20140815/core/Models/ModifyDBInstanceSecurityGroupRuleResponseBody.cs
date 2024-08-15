@@ -10,30 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceSecurityGroupRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>200</para>
+        /// The status code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the status code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>successful</para>
+        /// The information about the status code.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>07F6177E-6DE4-408A-BB4F-0723301340F7</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

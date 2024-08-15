@@ -10,22 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UnlockAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The account that you want to unlock. You can unlock a single account at a time.</para>
-        /// <para>This parameter is required.</para>
+        /// The account that you want to unlock. You can unlock a single account at a time.
         /// 
-        /// <b>Example:</b>
-        /// <para>testaccount</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>pgm-bpxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

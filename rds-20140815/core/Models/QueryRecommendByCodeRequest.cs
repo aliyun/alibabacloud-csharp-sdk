@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class QueryRecommendByCodeRequest : TeaModel {
         /// <summary>
-        /// <para>The code.</para>
-        /// <para>This parameter is required.</para>
+        /// The code.
         /// 
-        /// <b>Example:</b>
-        /// <para>rds_recommend</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -25,10 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy****</para>
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

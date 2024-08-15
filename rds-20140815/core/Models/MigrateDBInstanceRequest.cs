@@ -10,37 +10,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5******</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>dhg-4n******</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The time when you want the system to start the migration. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: The system immediately starts the migration. This is the default value.</description></item>
-        /// <item><description><b>MaintainTime</b>: The system starts the migration during the specified maintenance window.</description></item>
-        /// <item><description><b>Specified</b>: The system starts the migration at the specified point in time.</description></item>
-        /// </list>
+        /// The time when you want the system to start the migration. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>MaintainTime</para>
+        /// *   **Immediately**: The system immediately starts the migration. This is the default value.
+        /// *   **MaintainTime**: The system starts the migration during the specified maintenance window.
+        /// *   **Specified**: The system starts the migration at the specified point in time.
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
@@ -51,10 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -69,53 +58,37 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time when you want the system to start the migration. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// <remarks>
-        /// <para>This parameter must be specified when you set <b>EffectiveTime</b> to <b>Specified</b>.</para>
-        /// </remarks>
+        /// The point in time when you want the system to start the migration. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// 
-        /// <b>Example:</b>
-        /// <para>2019-10-21T10:00:00Z</para>
+        /// > This parameter must be specified when you set **EffectiveTime** to **Specified**.
         /// </summary>
         [NameInMap("SpecifiedTime")]
         [Validation(Required=false)]
         public string SpecifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host to which you want to migrate the primary instance. You can call the DescribeDedicatedHosts operation to query the host ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>i-bp******</para>
+        /// The ID of the host to which you want to migrate the primary instance. You can call the DescribeDedicatedHosts operation to query the host ID.
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForMaster")]
         [Validation(Required=false)]
         public string TargetDedicatedHostIdForMaster { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host to which you want to migrate the secondary instance. You can call the DescribeDedicatedHosts operation to query the host ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>i-bp******</para>
+        /// The ID of the host to which you want to migrate the secondary instance. You can call the DescribeDedicatedHosts operation to query the host ID.
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForSlave")]
         [Validation(Required=false)]
         public string TargetDedicatedHostIdForSlave { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the secondary node.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou-h</para>
+        /// The zone ID of the secondary node.
         /// </summary>
         [NameInMap("ZoneIdForFollower")]
         [Validation(Required=false)]
         public string ZoneIdForFollower { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the logger instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou-i</para>
+        /// The zone ID of the logger instance.
         /// </summary>
         [NameInMap("ZoneIdForLog")]
         [Validation(Required=false)]

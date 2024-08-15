@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of instances.</para>
+        /// The details of instances.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,88 +21,64 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute> DBInstanceAttribute { get; set; }
             public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute : TeaModel {
                 /// <summary>
-                /// <para>The maximum number of accounts that can be created on the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>50</para>
+                /// The maximum number of accounts that can be created on the instance.
                 /// </summary>
                 [NameInMap("AccountMaxQuantity")]
                 [Validation(Required=false)]
                 public int? AccountMaxQuantity { get; set; }
 
                 /// <summary>
-                /// <para>The advanced features that are enabled for the instance. If multiple advanced features are enabled, the advanced features are separated by commas (,). This parameter is available only to instances that run <b>SQL Server</b>. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>LinkedServer</b></description></item>
-                /// <item><description><b>DistributeTransaction</b></description></item>
-                /// </list>
+                /// The advanced features that are enabled for the instance. If multiple advanced features are enabled, the advanced features are separated by commas (,). This parameter is available only to instances that run **SQL Server**. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>LinkedServer</para>
+                /// *   **LinkedServer**
+                /// *   **DistributeTransaction**
                 /// </summary>
                 [NameInMap("AdvancedFeatures")]
                 [Validation(Required=false)]
                 public string AdvancedFeatures { get; set; }
 
                 /// <summary>
-                /// <para>The method that is used to update the minor engine version of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Auto</b>: automatic update.</description></item>
-                /// <item><description><b>Manual</b>: manual update. The minor engine version of the instance is forcefully updated only when the in-use minor engine version is phased out.</description></item>
-                /// </list>
+                /// The method that is used to update the minor engine version of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Auto</para>
+                /// *   **Auto**: automatic update.
+                /// *   **Manual**: manual update. The minor engine version of the instance is forcefully updated only when the in-use minor engine version is phased out.
                 /// </summary>
                 [NameInMap("AutoUpgradeMinorVersion")]
                 [Validation(Required=false)]
                 public string AutoUpgradeMinorVersion { get; set; }
 
                 /// <summary>
-                /// <para>The availability status of the instance in percentage.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>100.0%</para>
+                /// The availability status of the instance in percentage.
                 /// </summary>
                 [NameInMap("AvailabilityValue")]
                 [Validation(Required=false)]
                 public string AvailabilityValue { get; set; }
 
                 /// <summary>
-                /// <para>The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.</para>
-                /// <remarks>
-                /// <para> This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</para>
-                /// </remarks>
+                /// The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.
+                /// 
+                /// >  This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](https://help.aliyun.com/document_detail/428613.html).
                 /// </summary>
                 [NameInMap("BabelfishConfig")]
                 [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig BabelfishConfig { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether Babelfish is enabled.</para>
-                    /// <remarks>
-                    /// <para> If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as <b>true</b>.</para>
-                    /// </remarks>
+                    /// Indicates whether Babelfish is enabled.
                     /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
+                    /// >  If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as **true**.
                     /// </summary>
                     [NameInMap("BabelfishEnabled")]
                     [Validation(Required=false)]
                     public string BabelfishEnabled { get; set; }
 
                     /// <summary>
-                    /// <para>The migration mode for Babelfish. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>single-db</b></description></item>
-                    /// <item><description><b>multi-db</b></description></item>
-                    /// </list>
-                    /// <remarks>
-                    /// <para> For more information about migration modes for Babelfish, see <a href="https://help.aliyun.com/document_detail/428613.html">Migration modes</a>.</para>
-                    /// </remarks>
+                    /// The migration mode for Babelfish. Valid values:
                     /// 
-                    /// <b>Example:</b>
-                    /// <para>single-db</para>
+                    /// *   **single-db**
+                    /// *   **multi-db**
+                    /// 
+                    /// >  For more information about migration modes for Babelfish, see [Migration modes](https://help.aliyun.com/document_detail/428613.html).
                     /// </summary>
                     [NameInMap("MigrationMode")]
                     [Validation(Required=false)]
@@ -111,139 +87,101 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>A deprecated parameter. You do not need to specify this parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
+                /// A deprecated parameter. You do not need to specify this parameter.
                 /// </summary>
                 [NameInMap("BpeEnabled")]
                 [Validation(Required=false)]
                 public string BpeEnabled { get; set; }
 
                 /// <summary>
-                /// <para>An invalid parameter. You do not need to specify this parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
+                /// An invalid parameter. You do not need to specify this parameter.
                 /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the conditions for a temporary upgrade are met.</para>
-                /// <remarks>
-                /// <para> Pay-as-you-go instances do not support temporary upgrades.</para>
-                /// </remarks>
+                /// Indicates whether the conditions for a temporary upgrade are met.
                 /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
+                /// >  Pay-as-you-go instances do not support temporary upgrades.
                 /// </summary>
                 [NameInMap("CanTempUpgrade")]
                 [Validation(Required=false)]
                 public bool? CanTempUpgrade { get; set; }
 
                 /// <summary>
-                /// <para>The RDS edition. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Basic</b>: RDS Basic Edition</description></item>
-                /// <item><description><b>HighAvailability</b>: RDS High-availability Edition</description></item>
-                /// <item><description><b>cluster</b>: RDS Cluster Edition for ApsaraDB RDS for MySQL</description></item>
-                /// <item><description><b>AlwaysOn</b>: RDS Cluster Edition for ApsaraDB RDS for SQL Server</description></item>
-                /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
-                /// <item><description><b>Serverless_basic</b>: RDS Basic Edition for serverless instances</description></item>
-                /// </list>
+                /// The RDS edition. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Basic</para>
+                /// *   **Basic**: RDS Basic Edition
+                /// *   **HighAvailability**: RDS High-availability Edition
+                /// *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL
+                /// *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server
+                /// *   **Finance**: RDS Enterprise Edition
+                /// *   **Serverless_basic**: RDS Basic Edition for serverless instances
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>A reserved parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>None</para>
+                /// A reserved parameter.
                 /// </summary>
                 [NameInMap("ColdDataEnabled")]
                 [Validation(Required=false)]
                 public bool? ColdDataEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The character set collation of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Chinese_PRC_CI_AS</para>
+                /// The character set collation of the instance.
                 /// </summary>
                 [NameInMap("Collation")]
                 [Validation(Required=false)]
                 public string Collation { get; set; }
 
                 /// <summary>
-                /// <para>The connection mode of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Standard</b>: standard mode</description></item>
-                /// <item><description><b>Safe</b>: database proxy mode</description></item>
-                /// </list>
+                /// The connection mode of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Standard</para>
+                /// *   **Standard**: standard mode
+                /// *   **Safe**: database proxy mode
                 /// </summary>
                 [NameInMap("ConnectionMode")]
                 [Validation(Required=false)]
                 public string ConnectionMode { get; set; }
 
                 /// <summary>
-                /// <para>The internal endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf6wjk5*****.mysql.rds.aliyuncs.com</para>
+                /// The internal endpoint.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// <para>The type of the proxy that is used by the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>1</b>: shared database proxy</description></item>
-                /// <item><description><b>2</b>: dedicated database proxy</description></item>
-                /// </list>
-                /// <remarks>
-                /// <para> We recommend that you use the <b>ProxyType</b> parameter instead of this parameter.</para>
-                /// </remarks>
+                /// The type of the proxy that is used by the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
+                /// *   **1**: shared database proxy
+                /// *   **2**: dedicated database proxy
+                /// 
+                /// >  We recommend that you use the **ProxyType** parameter instead of this parameter.
                 /// </summary>
                 [NameInMap("ConsoleVersion")]
                 [Validation(Required=false)]
                 public string ConsoleVersion { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2011-05-30T12:11:04Z</para>
+                /// The creation time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The minor engine version.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rds_20181010</para>
+                /// The minor engine version.
                 /// </summary>
                 [NameInMap("CurrentKernelVersion")]
                 [Validation(Required=false)]
                 public string CurrentKernelVersion { get; set; }
 
                 /// <summary>
-                /// <para>The information about the node in the cluster.</para>
+                /// The information about the node in the cluster.
                 /// </summary>
                 [NameInMap("DBClusterNodes")]
                 [Validation(Required=false)]
@@ -254,105 +192,75 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode> DBClusterNode { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode : TeaModel {
                         /// <summary>
-                        /// <para>The node specification.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>mysql.n2.medium.xc</para>
+                        /// The node specification.
                         /// </summary>
                         [NameInMap("ClassCode")]
                         [Validation(Required=false)]
                         public string ClassCode { get; set; }
 
                         /// <summary>
-                        /// <para>The node type. Default value: true. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>d: dedicated node type</description></item>
-                        /// <item><description>x: general-purpose node type</description></item>
-                        /// </list>
+                        /// The node type. Default value: true. Valid values:
                         /// 
-                        /// <b>Example:</b>
-                        /// <para>x</para>
+                        /// *   d: dedicated node type
+                        /// *   x: general-purpose node type
                         /// </summary>
                         [NameInMap("ClassType")]
                         [Validation(Required=false)]
                         public string ClassType { get; set; }
 
                         /// <summary>
-                        /// <para>The number of CPU cores of the node.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>4</para>
+                        /// The number of CPU cores of the node.
                         /// </summary>
                         [NameInMap("Cpu")]
                         [Validation(Required=false)]
                         public string Cpu { get; set; }
 
                         /// <summary>
-                        /// <para>The memory capacity of the node. Unit: MB.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>4096</para>
+                        /// The memory capacity of the node. Unit: MB.
                         /// </summary>
                         [NameInMap("Memory")]
                         [Validation(Required=false)]
                         public string Memory { get; set; }
 
                         /// <summary>
-                        /// <para>The node ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>rn-****</para>
+                        /// The node ID.
                         /// </summary>
                         [NameInMap("NodeId")]
                         [Validation(Required=false)]
                         public string NodeId { get; set; }
 
                         /// <summary>
-                        /// <para>The region ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>cn-beijing</para>
+                        /// The region ID.
                         /// </summary>
                         [NameInMap("NodeRegionId")]
                         [Validation(Required=false)]
                         public string NodeRegionId { get; set; }
 
                         /// <summary>
-                        /// <para>The role of the node. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>primary</b></description></item>
-                        /// <item><description><b>secondary</b></description></item>
-                        /// </list>
+                        /// The role of the node. Valid values:
                         /// 
-                        /// <b>Example:</b>
-                        /// <para>primary</para>
+                        /// *   **primary**
+                        /// *   **secondary**
                         /// </summary>
                         [NameInMap("NodeRole")]
                         [Validation(Required=false)]
                         public string NodeRole { get; set; }
 
                         /// <summary>
-                        /// <para>The zone ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>cn-beijing-h</para>
+                        /// The zone ID.
                         /// </summary>
                         [NameInMap("NodeZoneId")]
                         [Validation(Required=false)]
                         public string NodeZoneId { get; set; }
 
                         /// <summary>
-                        /// <para>The node status. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>active</description></item>
-                        /// <item><description>creating</description></item>
-                        /// <item><description>deleting</description></item>
-                        /// <item><description>classchanging</description></item>
-                        /// <item><description>restarting</description></item>
-                        /// </list>
+                        /// The node status. Valid values:
                         /// 
-                        /// <b>Example:</b>
-                        /// <para>active</para>
+                        /// *   active
+                        /// *   creating
+                        /// *   deleting
+                        /// *   classchanging
+                        /// *   restarting
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
@@ -363,229 +271,168 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>The number of CPU cores.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
+                /// The number of CPU cores.
                 /// </summary>
                 [NameInMap("DBInstanceCPU")]
                 [Validation(Required=false)]
                 public string DBInstanceCPU { get; set; }
 
                 /// <summary>
-                /// <para>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rds.mys2.small</para>
+                /// The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
                 public string DBInstanceClass { get; set; }
 
                 /// <summary>
-                /// <para>The instance family. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>s</b>: shared instance family</description></item>
-                /// <item><description><b>x</b>: general-purpose instance family</description></item>
-                /// <item><description><b>d</b>: dedicated instance family</description></item>
-                /// <item><description><b>h</b>: dedicated host instance family</description></item>
-                /// </list>
+                /// The instance family. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>s</para>
+                /// *   **s**: shared instance family
+                /// *   **x**: general-purpose instance family
+                /// *   **d**: dedicated instance family
+                /// *   **h**: dedicated host instance family
                 /// </summary>
                 [NameInMap("DBInstanceClassType")]
                 [Validation(Required=false)]
                 public string DBInstanceClassType { get; set; }
 
                 /// <summary>
-                /// <para>The instance description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>The number of cores that are configured for the instance.</para>
+                /// The instance description.
                 /// </summary>
                 [NameInMap("DBInstanceDescription")]
                 [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// <para>The disk usage of the instance. Unit: MB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>300</para>
+                /// The disk usage of the instance. Unit: MB.
                 /// </summary>
                 [NameInMap("DBInstanceDiskUsed")]
                 [Validation(Required=false)]
                 public string DBInstanceDiskUsed { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf6wjk5*****</para>
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The memory capacity of the instance. Unit: MB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>4096</para>
+                /// The memory capacity of the instance. Unit: MB.
                 /// </summary>
                 [NameInMap("DBInstanceMemory")]
                 [Validation(Required=false)]
                 public long? DBInstanceMemory { get; set; }
 
                 /// <summary>
-                /// <para>The type of the network over which the instance is connected. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Internet</b></description></item>
-                /// <item><description><b>Intranet</b></description></item>
-                /// </list>
+                /// The type of the network over which the instance is connected. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Internet</para>
+                /// *   **Internet**
+                /// *   **Intranet**
                 /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance statuses</a>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Running</para>
+                /// The instance status. For more information, see [Instance statuses](https://help.aliyun.com/document_detail/26315.html).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
                 public string DBInstanceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The storage capacity of the instance. Unit: GB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10</para>
+                /// The storage capacity of the instance. Unit: GB.
                 /// </summary>
                 [NameInMap("DBInstanceStorage")]
                 [Validation(Required=false)]
                 public int? DBInstanceStorage { get; set; }
 
                 /// <summary>
-                /// <para>The storage type of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>local_ssd</b> or <b>ephemeral_ssd</b>: local SSD</description></item>
-                /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
-                /// <item><description><b>cloud_essd</b>: Enterprise SSD (ESSD).</description></item>
-                /// <item><description><b>general_essd</b>: general ESSD</description></item>
-                /// </list>
+                /// The storage type of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>local_ssd</para>
+                /// *   **local_ssd** or **ephemeral_ssd**: local SSD
+                /// *   **cloud_ssd**: standard SSD
+                /// *   **cloud_essd**: Enterprise SSD (ESSD).
+                /// *   **general_essd**: general ESSD
                 /// </summary>
                 [NameInMap("DBInstanceStorageType")]
                 [Validation(Required=false)]
                 public string DBInstanceStorageType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Primary</b>: primary instance</description></item>
-                /// <item><description><b>Readonly</b>: read-only instance</description></item>
-                /// <item><description><b>Guard</b>: disaster recovery instance</description></item>
-                /// <item><description><b>Temp</b>: temporary instance</description></item>
-                /// </list>
+                /// The type of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Primary</para>
+                /// *   **Primary**: primary instance
+                /// *   **Readonly**: read-only instance
+                /// *   **Guard**: disaster recovery instance
+                /// *   **Temp**: temporary instance
                 /// </summary>
                 [NameInMap("DBInstanceType")]
                 [Validation(Required=false)]
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of databases that can be created on the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>200</para>
+                /// The maximum number of databases that can be created on the instance.
                 /// </summary>
                 [NameInMap("DBMaxQuantity")]
                 [Validation(Required=false)]
                 public int? DBMaxQuantity { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the dedicated cluster to which the instance belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dhg-7a9*****</para>
+                /// The ID of the dedicated cluster to which the instance belongs.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
                 public string DedicatedHostGroupId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the release protection feature is enabled. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
-                /// </list>
+                /// Indicates whether the release protection feature is enabled. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("DeletionProtection")]
                 [Validation(Required=false)]
                 public bool? DeletionProtection { get; set; }
 
                 /// <summary>
-                /// <para>The database engine of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>MySQL</b></description></item>
-                /// <item><description><b>PostgreSQL</b></description></item>
-                /// <item><description><b>SQLServer</b></description></item>
-                /// <item><description><b>MariaDB</b></description></item>
-                /// </list>
+                /// The database engine of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>MySQL</para>
+                /// *   **MySQL**
+                /// *   **PostgreSQL**
+                /// *   **SQLServer**
+                /// *   **MariaDB**
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// <para>The database engine version.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5.5</para>
+                /// The database engine version.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
                 public string EngineVersion { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// <remarks>
-                /// <para> Pay-as-you-go instances never expire.</para>
-                /// </remarks>
+                /// The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// 
-                /// <b>Example:</b>
-                /// <para>2019-03-27T16:00:00Z</para>
+                /// >  Pay-as-you-go instances never expire.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The extended information of the instance.</para>
+                /// The extended information of the instance.
                 /// </summary>
                 [NameInMap("Extra")]
                 [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra Extra { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra : TeaModel {
                     /// <summary>
-                    /// <para>The instance IDs.</para>
+                    /// The instance IDs.
                     /// </summary>
                     [NameInMap("DBInstanceIds")]
                     [Validation(Required=false)]
@@ -598,10 +445,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                     /// <summary>
-                    /// <para>The recovery model. Valid values: Simple and Full.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Simple</para>
+                    /// The recovery model. Valid values: Simple and Full.
                     /// </summary>
                     [NameInMap("RecoveryModel")]
                     [Validation(Required=false)]
@@ -610,239 +454,172 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestGroup</para>
+                /// The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
                 /// </summary>
                 [NameInMap("GeneralGroupName")]
                 [Validation(Required=false)]
                 public string GeneralGroupName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the disaster recovery instance that is attached to the primary instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf64zsu*****</para>
+                /// The ID of the disaster recovery instance that is attached to the primary instance.
                 /// </summary>
                 [NameInMap("GuardDBInstanceId")]
                 [Validation(Required=false)]
                 public string GuardDBInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The IP address type. Only <b>IPv4 addresses</b> are supported.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>IPv4</para>
+                /// The IP address type. Only **IPv4 addresses** are supported.
                 /// </summary>
                 [NameInMap("IPType")]
                 [Validation(Required=false)]
                 public string IPType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf6wjk5*****</para>
+                /// The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
                 /// </summary>
                 [NameInMap("IncrementSourceDBInstanceId")]
                 [Validation(Required=false)]
                 public string IncrementSourceDBInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The network type of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Classic</b></description></item>
-                /// <item><description><b>VPC</b></description></item>
-                /// </list>
+                /// The network type of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Classic</para>
+                /// *   **Classic**
+                /// *   **VPC**
                 /// </summary>
                 [NameInMap("InstanceNetworkType")]
                 [Validation(Required=false)]
                 public string InstanceNetworkType { get; set; }
 
                 /// <summary>
-                /// <para>The architecture type of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>x86</b></description></item>
-                /// <item><description><b>arm</b></description></item>
-                /// </list>
+                /// The architecture type of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>x86</para>
+                /// *   **x86**
+                /// *   **arm**
                 /// </summary>
                 [NameInMap("InstructionSetArch")]
                 [Validation(Required=false)]
                 public string InstructionSetArch { get; set; }
 
                 /// <summary>
-                /// <para>A reserved parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>None</para>
+                /// A reserved parameter.
                 /// </summary>
                 [NameInMap("IoAccelerationEnabled")]
                 [Validation(Required=false)]
                 public string IoAccelerationEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The latest minor engine version that is supported by the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rds_20201031</para>
+                /// The latest minor engine version that is supported by the instance.
                 /// </summary>
                 [NameInMap("LatestKernelVersion")]
                 [Validation(Required=false)]
                 public string LatestKernelVersion { get; set; }
 
                 /// <summary>
-                /// <para>The lock mode of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Unlock</b>: The instance is not locked.</description></item>
-                /// <item><description><b>ManualLock</b>: The instance is manually locked.</description></item>
-                /// <item><description><b>LockByExpiration</b>: The instance is automatically locked due to instance expiration.</description></item>
-                /// <item><description><b>LockByRestoration</b>: The instance is automatically locked due to instance restoration.</description></item>
-                /// <item><description><b>LockByDiskQuota</b>: The instance is automatically locked due to exhausted storage space.</description></item>
-                /// <item><description><b>LockReadInstanceByDiskQuota</b>: The instance is a read-only instance and is automatically locked due to exhausted storage.</description></item>
-                /// </list>
+                /// The lock mode of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Unlock</para>
+                /// *   **Unlock**: The instance is not locked.
+                /// *   **ManualLock**: The instance is manually locked.
+                /// *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
+                /// *   **LockByRestoration**: The instance is automatically locked due to instance restoration.
+                /// *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage space.
+                /// *   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked due to exhausted storage.
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
                 public string LockMode { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the instance was locked.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>instance_expired</para>
+                /// The reason why the instance was locked.
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// <para>The maintenance window of the instance. The time is displayed in UTC. The maintenance window displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>00:00Z-02:00Z</para>
+                /// The maintenance window of the instance. The time is displayed in UTC. The maintenance window displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.
                 /// </summary>
                 [NameInMap("MaintainTime")]
                 [Validation(Required=false)]
                 public string MaintainTime { get; set; }
 
                 /// <summary>
-                /// <para>The primary instance ID.</para>
-                /// <remarks>
-                /// <para> If this parameter is not returned, the instance is the primary instance.</para>
-                /// </remarks>
+                /// The primary instance ID.
                 /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf6wjk5*****</para>
+                /// >  If this parameter is not returned, the instance is the primary instance.
                 /// </summary>
                 [NameInMap("MasterInstanceId")]
                 [Validation(Required=false)]
                 public string MasterInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID of the primary instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5454284</para>
+                /// The zone ID of the primary instance.
                 /// </summary>
                 [NameInMap("MasterZone")]
                 [Validation(Required=false)]
                 public string MasterZone { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of concurrent connections.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>60</para>
+                /// The maximum number of concurrent connections.
                 /// </summary>
                 [NameInMap("MaxConnections")]
                 [Validation(Required=false)]
                 public int? MaxConnections { get; set; }
 
                 /// <summary>
-                /// <para>The maximum I/O throughput. Unit: MB/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0MB/s</para>
+                /// The maximum I/O throughput. Unit: MB/s.
                 /// </summary>
                 [NameInMap("MaxIOMBPS")]
                 [Validation(Required=false)]
                 public int? MaxIOMBPS { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of I/O requests per second.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>150</para>
+                /// The maximum number of I/O requests per second.
                 /// </summary>
                 [NameInMap("MaxIOPS")]
                 [Validation(Required=false)]
                 public int? MaxIOPS { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether PgBouncer is enabled.</para>
-                /// <remarks>
-                /// <para> This parameter is returned only for RDS instances that run PostgreSQL. If PgBouncer is enabled, the return value is <b>true</b>.</para>
-                /// </remarks>
+                /// Indicates whether PgBouncer is enabled.
                 /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
+                /// >  This parameter is returned only for RDS instances that run PostgreSQL. If PgBouncer is enabled, the return value is **true**.
                 /// </summary>
                 [NameInMap("PGBouncerEnabled")]
                 [Validation(Required=false)]
                 public string PGBouncerEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The billing method of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
-                /// <item><description><b>Prepaid</b>: subscription</description></item>
-                /// <item><description><b>SERVERLESS</b></description></item>
-                /// </list>
+                /// The billing method of the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Postpaid</para>
+                /// *   **Postpaid**: pay-as-you-go
+                /// *   **Prepaid**: subscription
+                /// *   **SERVERLESS**
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// <para>The port that is used to connect to the instance over an internal network.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3306</para>
+                /// The port that is used to connect to the instance over an internal network.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// <para>The type of the proxy that is supported by the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>0</b>: The instance does not support database proxies.</description></item>
-                /// <item><description><b>1</b>: The instance supports shared proxies, with which the instance runs in multi-tenant mode.</description></item>
-                /// <item><description><b>2</b>: The instance supports dedicated proxies, with which the instance runs in single-tenant mode.</description></item>
-                /// </list>
+                /// The type of the proxy that is supported by the instance. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
+                /// *   **0**: The instance does not support database proxies.
+                /// *   **1**: The instance supports shared proxies, with which the instance runs in multi-tenant mode.
+                /// *   **2**: The instance supports dedicated proxies, with which the instance runs in single-tenant mode.
                 /// </summary>
                 [NameInMap("ProxyType")]
                 [Validation(Required=false)]
                 public int? ProxyType { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the read-only instances that are attached to the primary instance.</para>
+                /// The IDs of the read-only instances that are attached to the primary instance.
                 /// </summary>
                 [NameInMap("ReadOnlyDBInstanceIds")]
                 [Validation(Required=false)]
@@ -853,10 +630,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIdsReadOnlyDBInstanceId> ReadOnlyDBInstanceId { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIdsReadOnlyDBInstanceId : TeaModel {
                         /// <summary>
-                        /// <para>The read-only instance ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>rm-bp*****</para>
+                        /// The read-only instance ID.
                         /// </summary>
                         [NameInMap("DBInstanceId")]
                         [Validation(Required=false)]
@@ -867,115 +641,83 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>The latency at which the system replicates data to read-only instances. The system replicates data from the primary instance to the read-only instances at the latency that is specified by the <b>ReadonlyInstanceSQLDelayedTime</b> parameter. Unit: seconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>30</para>
+                /// The latency at which the system replicates data to read-only instances. The system replicates data from the primary instance to the read-only instances at the latency that is specified by the **ReadonlyInstanceSQLDelayedTime** parameter. Unit: seconds.
                 /// </summary>
                 [NameInMap("ReadonlyInstanceSQLDelayedTime")]
                 [Validation(Required=false)]
                 public string ReadonlyInstanceSQLDelayedTime { get; set; }
 
                 /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The resource group ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rg-acfmy*****</para>
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses in the IP address whitelist.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.XX.XX/24</para>
+                /// The IP addresses in the IP address whitelist.
                 /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
 
                 /// <summary>
-                /// <para>The whitelist mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>normal</b>: standard whitelist mode</description></item>
-                /// <item><description><b>safety</b>: enhanced whitelist mode</description></item>
-                /// </list>
+                /// The whitelist mode. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>normal</para>
+                /// *   **normal**: standard whitelist mode
+                /// *   **safety**: enhanced whitelist mode
                 /// </summary>
                 [NameInMap("SecurityIPMode")]
                 [Validation(Required=false)]
                 public string SecurityIPMode { get; set; }
 
                 /// <summary>
-                /// <para>The settings of the serverless instance.</para>
+                /// The settings of the serverless instance.
                 /// </summary>
                 [NameInMap("ServerlessConfig")]
                 [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig ServerlessConfig { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the automatic start and stop feature is enabled for the serverless instance. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>true</b></description></item>
-                    /// <item><description><b>false</b> (default)</description></item>
-                    /// </list>
-                    /// <remarks>
-                    /// <para> After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.</para>
-                    /// </remarks>
+                    /// Indicates whether the automatic start and stop feature is enabled for the serverless instance. Valid values:
                     /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
+                    /// *   **true**
+                    /// *   **false** (default)
+                    /// 
+                    /// >  After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.
                     /// </summary>
                     [NameInMap("AutoPause")]
                     [Validation(Required=false)]
                     public bool? AutoPause { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of RCUs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>8</para>
+                    /// The maximum number of RCUs.
                     /// </summary>
                     [NameInMap("ScaleMax")]
                     [Validation(Required=false)]
                     public double? ScaleMax { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum number of RDS Capacity Units (RCUs).</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0.5</para>
+                    /// The minimum number of RDS Capacity Units (RCUs).
                     /// </summary>
                     [NameInMap("ScaleMin")]
                     [Validation(Required=false)]
                     public double? ScaleMin { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the forced scaling feature is enabled for the serverless instance. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>true</b></description></item>
-                    /// <item><description><b>false</b> (default)</description></item>
-                    /// </list>
-                    /// <remarks>
-                    /// <para> In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance.</para>
-                    /// </remarks>
+                    /// Indicates whether the forced scaling feature is enabled for the serverless instance. Valid values:
                     /// 
-                    /// <b>Example:</b>
-                    /// <para>false</para>
+                    /// *   **true**
+                    /// *   **false** (default)
+                    /// 
+                    /// >  In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance.
                     /// </summary>
                     [NameInMap("SwitchForce")]
                     [Validation(Required=false)]
@@ -984,7 +726,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>The zone IDs of the secondary instances.</para>
+                /// The zone IDs of the secondary instances.
                 /// </summary>
                 [NameInMap("SlaveZones")]
                 [Validation(Required=false)]
@@ -995,10 +737,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZonesSlaveZone> SlaveZone { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZonesSlaveZone : TeaModel {
                         /// <summary>
-                        /// <para>The zone ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>cn-hangzhou-a</para>
+                        /// The zone ID.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -1009,138 +748,94 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, Active Directory (AD) account, and host account. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Enable</b></description></item>
-                /// <item><description><b>Disabled</b></description></item>
-                /// </list>
+                /// Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, Active Directory (AD) account, and host account. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Disabled</para>
+                /// *   **Enable**
+                /// *   **Disabled**
                 /// </summary>
                 [NameInMap("SuperPermissionMode")]
                 [Validation(Required=false)]
                 public string SuperPermissionMode { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the temporary instance that is attached to the primary instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf64zsu*****</para>
+                /// The ID of the temporary instance that is attached to the primary instance.
                 /// </summary>
                 [NameInMap("TempDBInstanceId")]
                 [Validation(Required=false)]
                 public string TempDBInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the temporary upgrade of the instance.</para>
-                /// <remarks>
-                /// <para> This parameter is unavailable for pay-as-you-go instances.</para>
-                /// </remarks>
+                /// The end time of the temporary upgrade of the instance.
                 /// 
-                /// <b>Example:</b>
-                /// <para>2024-05-30 00:00:00</para>
+                /// >  This parameter is unavailable for pay-as-you-go instances.
                 /// </summary>
                 [NameInMap("TempUpgradeTimeEnd")]
                 [Validation(Required=false)]
                 public string TempUpgradeTimeEnd { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the temporary upgrade of the instance.</para>
-                /// <remarks>
-                /// <para> This parameter is unavailable for pay-as-you-go instances.</para>
-                /// </remarks>
+                /// The start time of the temporary upgrade of the instance.
                 /// 
-                /// <b>Example:</b>
-                /// <para>2024-05-29 00:00:00</para>
+                /// >  This parameter is unavailable for pay-as-you-go instances.
                 /// </summary>
                 [NameInMap("TempUpgradeTimeStart")]
                 [Validation(Required=false)]
                 public string TempUpgradeTimeStart { get; set; }
 
                 /// <summary>
-                /// <para>The time zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Central Standard Time</para>
+                /// The time zone.
                 /// </summary>
                 [NameInMap("TimeZone")]
                 [Validation(Required=false)]
                 public string TimeZone { get; set; }
 
                 /// <summary>
-                /// <para>The information about the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>The IP addresses in the IP address whitelist.</para>
+                /// The information about the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
                 /// </summary>
                 [NameInMap("Tips")]
                 [Validation(Required=false)]
                 public string Tips { get; set; }
 
                 /// <summary>
-                /// <para>The severity of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>1</b>: The instance is normal.</description></item>
-                /// <item><description><b>2</b>: The specifications of the read-only instances do not match the specifications of the primary instance. You must adjust the specifications of these instances based on your business requirements.</description></item>
-                /// </list>
+                /// The severity of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
+                /// *   **1**: The instance is normal.
+                /// *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance. You must adjust the specifications of these instances based on your business requirements.
                 /// </summary>
                 [NameInMap("TipsLevel")]
                 [Validation(Required=false)]
                 public int? TipsLevel { get; set; }
 
                 /// <summary>
-                /// <para>The vSwitch ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vsw-*****</para>
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the VPC. This parameter is returned only when the instance resides in a VPC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-23rsxdf*****</para>
+                /// The ID of the VPC. This parameter is returned only when the instance resides in a VPC.
                 /// </summary>
                 [NameInMap("VpcCloudInstanceId")]
                 [Validation(Required=false)]
                 public string VpcCloudInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-*****</para>
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-a</para>
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
 
                 /// <summary>
-                /// <para>An internal parameter. You do not need to specify this parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>The architecture type of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>x86</b></description></item>
-                /// <item><description><b>arm</b></description></item>
-                /// </list>
+                /// An internal parameter. You do not need to specify this parameter.
                 /// </summary>
                 [NameInMap("kindCode")]
                 [Validation(Required=false)]
@@ -1151,10 +846,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

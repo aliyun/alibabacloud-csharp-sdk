@@ -10,92 +10,76 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</para>
-        /// <remarks>
-        /// <para>: The name cannot start with http:// or https://.</para>
-        /// </remarks>
+        /// The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.
         /// 
-        /// <b>Example:</b>
-        /// <para>Test Account A</para>
+        /// > : The name cannot start with http:// or https://.
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account.</para>
-        /// <list type="bullet">
-        /// <item><description><para>The name must be unique.</para>
-        /// </description></item>
-        /// <item><description><para>The name can contain lowercase letters, digits, and underscores (_). For MySQL databases, the name can contain uppercase letters.</para>
-        /// </description></item>
-        /// <item><description><para>The name must start with a letter and end with a letter or digit.</para>
-        /// </description></item>
-        /// <item><description><para>For MySQL databases, the name of the privileged account cannot be the same as that of the standard account. For example, if the name of the privileged account is <c>Test1</c>, the name of the standard account cannot be <c>test1</c>.</para>
-        /// </description></item>
-        /// <item><description><para>The length of the value must meet the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>If the instance runs MySQL 5.7 or MySQL 8.0, the value must be 2 to 32 characters in length.</description></item>
-        /// <item><description>If the instance runs MySQL 5.6, the value must be 2 to 16 characters in length.</description></item>
-        /// <item><description>If the instance runs SQL Server, the value must be 2 to 64 characters in length.</description></item>
-        /// <item><description>If the instance runs PostgreSQL with cloud disks, the value must be 2 to 63 characters in length.</description></item>
-        /// <item><description>If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.</description></item>
-        /// <item><description>If the instance runs MariaDB, the value must be 2 to 16 characters in length.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>For more information about invalid characters, see <a href="https://help.aliyun.com/document_detail/26317.html">Forbidden keywords</a>.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// The name of the database account.
         /// 
-        /// <b>Example:</b>
-        /// <para>test1</para>
+        /// 
+        /// *   The name must be unique.
+        /// 
+        /// *   The name can contain lowercase letters, digits, and underscores (_). For MySQL databases, the name can contain uppercase letters.
+        /// 
+        /// *   The name must start with a letter and end with a letter or digit.
+        /// 
+        /// *   For MySQL databases, the name of the privileged account cannot be the same as that of the standard account. For example, if the name of the privileged account is `Test1`, the name of the standard account cannot be `test1`.
+        /// 
+        /// *   The length of the value must meet the following requirements:
+        /// 
+        ///     *   If the instance runs MySQL 5.7 or MySQL 8.0, the value must be 2 to 32 characters in length.
+        ///     *   If the instance runs MySQL 5.6, the value must be 2 to 16 characters in length.
+        ///     *   If the instance runs SQL Server, the value must be 2 to 64 characters in length.
+        ///     *   If the instance runs PostgreSQL with cloud disks, the value must be 2 to 63 characters in length.
+        ///     *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.
+        ///     *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.
+        /// 
+        /// *   For more information about invalid characters, see [Forbidden keywords](https://help.aliyun.com/document_detail/26317.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the account.</para>
-        /// <list type="bullet">
-        /// <item><description><para>The value must be 8 to 32 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
-        /// </description></item>
-        /// <item><description><para>Special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></para>
-        /// </description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// The password of the account.
+        ///  
         /// 
-        /// <b>Example:</b>
-        /// <para>Test123456</para>
+        /// *   The value must be 8 to 32 characters in length.
+        /// 
+        /// *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+        /// 
+        /// *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The account type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Normal</b>: standard account (default).</description></item>
-        /// <item><description><b>Super</b>: privileged account.</description></item>
-        /// <item><description><b>Sysadmin</b>: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.</description></item>
-        /// </list>
-        /// <para>Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see <a href="https://help.aliyun.com/document_detail/170736.html">Create a system admin account</a>.</para>
+        /// The account type. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Normal</para>
+        /// *   **Normal** (default): standard account.
+        /// *   **Super**: privileged account.
+        /// *   **Sysadmin**: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.
+        /// 
+        /// Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see [Create a system admin account](https://help.aliyun.com/document_detail/170736.html).
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

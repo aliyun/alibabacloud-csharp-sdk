@@ -10,36 +10,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDatabasesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>testDB01</para>
+        /// The name of the database.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The status of the database. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Creating</b></description></item>
-        /// <item><description><b>Running</b></description></item>
-        /// <item><description><b>Deleting</b></description></item>
-        /// </list>
+        /// The status of the database. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Creating</para>
+        /// *   **Creating**
+        /// *   **Running**
+        /// *   **Deleting**
         /// </summary>
         [NameInMap("DBStatus")]
         [Validation(Required=false)]
@@ -54,41 +45,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: any non-zero positive integer.</para>
-        /// <para>Default value: <b>1</b>.</para>
+        /// The number of the page to return. Valid values: any non-zero positive integer.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
-        /// </list>
-        /// <para>Default value: 30.</para>
+        /// The number of entries per page. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// *   **30**
+        /// *   **50**
+        /// *   **100**
+        /// 
+        /// Default value: 30.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy****</para>
-        /// </summary>
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

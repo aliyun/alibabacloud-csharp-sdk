@@ -10,14 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParameterGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the parameter overview.</para>
-        /// <list type="bullet">
-        /// <item><description><b>false</b> (default): The parameter overview is returned.</description></item>
-        /// <item><description><b>true</b>: The parameter overview is not returned.</description></item>
-        /// </list>
+        /// Specifies whether to return the parameter overview.
         /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
+        /// *   **false** (default): The parameter overview is returned.
+        /// *   **true**: The parameter overview is not returned.
         /// </summary>
         [NameInMap("EnableDetail")]
         [Validation(Required=false)]
@@ -28,21 +24,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy****</para>
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySQLCollectorPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,10 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call theDescribeDBInstanceAttribute operation to query the most recent region list.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmx**********</para>
+        /// The resource group ID. You can call theDescribeDBInstanceAttribute operation to query the most recent region list.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -47,15 +42,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the SQL Explorer (SQL Audit) feature. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// Specifies whether to enable the SQL Explorer (SQL Audit) feature. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Enable</para>
+        /// *   **Enable**
+        /// *   **Disabled**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SQLCollectorStatus")]
         [Validation(Required=false)]

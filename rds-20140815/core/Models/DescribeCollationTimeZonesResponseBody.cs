@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCollationTimeZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the character set collations and time zones that are available.</para>
+        /// The list of the character set collations and time zones that are available.
         /// </summary>
         [NameInMap("CollationTimeZones")]
         [Validation(Required=false)]
@@ -21,30 +21,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone> CollationTimeZone { get; set; }
             public class DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone : TeaModel {
                 /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Kabul</para>
+                /// The description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The offset of the UTC time. The offset is in the following format: (UTC+<em>HH:mm</em>).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>(UTC+04:30)</para>
+                /// The offset of the UTC time. The offset is in the following format: (UTC+*HH:mm*).
                 /// </summary>
                 [NameInMap("StandardTimeOffset")]
                 [Validation(Required=false)]
                 public string StandardTimeOffset { get; set; }
 
                 /// <summary>
-                /// <para>The time zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Afghanistan Standard Time</para>
+                /// The time zone.
                 /// </summary>
                 [NameInMap("TimeZone")]
                 [Validation(Required=false)]
@@ -55,10 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>4EAED246-DB18-4C8D-9EB5-C319626F2A77</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

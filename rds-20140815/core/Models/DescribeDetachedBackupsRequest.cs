@@ -10,111 +10,81 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDetachedBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>327xxxxx3</para>
+        /// The ID of the backup set.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The backup method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Automated</b></description></item>
-        /// <item><description><b>Manual</b></description></item>
-        /// </list>
+        /// The backup method. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Automated</para>
+        /// *   **Automated**
+        /// *   **Manual**
         /// </summary>
         [NameInMap("BackupMode")]
         [Validation(Required=false)]
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The status of the backup set. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Success</b></description></item>
-        /// <item><description><b>Failed</b></description></item>
-        /// </list>
+        /// The status of the backup set. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Success</para>
+        /// *   **Success**
+        /// *   **Failed**
         /// </summary>
         [NameInMap("BackupStatus")]
         [Validation(Required=false)]
         public string BackupStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// The end of the time range to query. The end time must be later than the start time.
         /// 
-        /// <b>Example:</b>
-        /// <para>2021-03-15T16:00Z</para>
+        /// Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
-        /// <remarks>
-        /// <para>The default value is 1.</para>
-        /// </remarks>
+        /// The page number. Pages start from page 1.
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// > The default value is 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>The default value is <b>30</b>.</para>
-        /// </remarks>
+        /// The number of entries per page. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
+        /// *   **30**
+        /// *   **50**
+        /// *   **100**
+        /// 
+        /// > The default value is **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -125,11 +95,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// The beginning of the time range to query.
         /// 
-        /// <b>Example:</b>
-        /// <para>2021-03-01T16:00Z</para>
+        /// Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

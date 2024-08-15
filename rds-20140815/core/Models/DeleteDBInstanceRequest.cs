@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,18 +27,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>None</b>: No archived backup files are retained.</description></item>
-        /// <item><description><b>Lastest</b>: Only the last archived backup file is retained.</description></item>
-        /// <item><description><b>All</b>: All archived backup files are retained.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter is supported only for ApsaraDB RDS for MySQL instance with local disks.</para>
-        /// </remarks>
+        /// The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Lastest</para>
+        /// *   **None**: No archived backup files are retained.
+        /// *   **Lastest**: Only the last archived backup file is retained.
+        /// *   **All**: All archived backup files are retained.
+        /// 
+        /// > This parameter is supported only for ApsaraDB RDS for MySQL instance with local disks.
         /// </summary>
         [NameInMap("ReleasedKeepPolicy")]
         [Validation(Required=false)]

@@ -10,55 +10,41 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateSecretRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz*****</para>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can call the DescribeDBInstances operation to query the ID of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the instance. You can call the DescribeDBInstances operation to query the ID of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-sdfljk123***</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>users</para>
+        /// The name of the database.
         /// </summary>
         [NameInMap("DbNames")]
         [Validation(Required=false)]
         public string DbNames { get; set; }
 
         /// <summary>
-        /// <para>The description of the credential.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test</para>
+        /// The description of the credential.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The engine of the database.</para>
-        /// <remarks>
-        /// <para>Only MySQL is supported.</para>
-        /// </remarks>
-        /// <para>This parameter is required.</para>
+        /// The engine of the database.
         /// 
-        /// <b>Example:</b>
-        /// <para>MySQL</para>
+        /// > Only MySQL is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -69,33 +55,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password that is used to access the database.</para>
-        /// <para>This parameter is required.</para>
+        /// The password that is used to access the database.
         /// 
-        /// <b>Example:</b>
-        /// <para>12345678</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.
         /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmxypivk***</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -110,21 +90,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the credential.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Foo</para>
+        /// The name of the credential.
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to access the database.</para>
-        /// <para>This parameter is required.</para>
+        /// The username that is used to access the database.
         /// 
-        /// <b>Example:</b>
-        /// <para>user_jack</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

@@ -10,27 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*******</para>
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>MySQL</para>
+        /// The type of the database engine.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the information about each slow log.</para>
+        /// An array that consists of the information about each slow log.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -41,217 +35,151 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord> SQLSlowRecord { get; set; }
             public class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord : TeaModel {
                 /// <summary>
-                /// <para>The name of the application that is connected to the instance.</para>
-                /// <remarks>
-                /// <para>This parameter is returned only for instances that run SQL Server.</para>
-                /// </remarks>
+                /// The name of the application that is connected to the instance.
                 /// 
-                /// <b>Example:</b>
-                /// <para>example</para>
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("ApplicationName")]
                 [Validation(Required=false)]
                 public string ApplicationName { get; set; }
 
                 /// <summary>
-                /// <para>The hostname of the client.</para>
-                /// <remarks>
-                /// <para>This parameter is returned only for instances that run SQL Server.</para>
-                /// </remarks>
+                /// The hostname of the client.
                 /// 
-                /// <b>Example:</b>
-                /// <para>example</para>
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("ClientHostName")]
                 [Validation(Required=false)]
                 public string ClientHostName { get; set; }
 
                 /// <summary>
-                /// <para>The duration during which the SQL statement is processed by the CPU. Unit: milliseconds.</para>
-                /// <remarks>
-                /// <para>This parameter is returned only for instances that run SQL Server.</para>
-                /// </remarks>
+                /// The duration during which the SQL statement is processed by the CPU. Unit: milliseconds.
                 /// 
-                /// <b>Example:</b>
-                /// <para>0.002</para>
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("CpuTime")]
                 [Validation(Required=false)]
                 public long? CpuTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testDB</para>
+                /// The name of the database.
                 /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the execution of the SQL statement started. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2020-06-18T01:40:44Z</para>
+                /// The time when the execution of the SQL statement started. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ExecutionStartTime")]
                 [Validation(Required=false)]
                 public string ExecutionStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The name and IP address of the client that is connected to the database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>xxx[xxx] @  [1xx.xxx.xxx.xx]</para>
+                /// The name and IP address of the client that is connected to the database.
                 /// </summary>
                 [NameInMap("HostAddress")]
                 [Validation(Required=false)]
                 public string HostAddress { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows that are affected by the last SQL statement.</para>
-                /// <remarks>
-                /// <para>This parameter is returned only for instances that run SQL Server.</para>
-                /// </remarks>
+                /// The number of rows that are affected by the last SQL statement.
                 /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("LastRowsAffectedCount")]
                 [Validation(Required=false)]
                 public long? LastRowsAffectedCount { get; set; }
 
                 /// <summary>
-                /// <para>The lock duration of the query. Unit: seconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
+                /// The lock duration of the query. Unit: seconds.
                 /// </summary>
                 [NameInMap("LockTimes")]
                 [Validation(Required=false)]
                 public long? LockTimes { get; set; }
 
                 /// <summary>
-                /// <para>The number of logical reads.</para>
-                /// <remarks>
-                /// <para>This parameter is returned only for instances that run SQL Server.</para>
-                /// </remarks>
+                /// The number of logical reads.
                 /// 
-                /// <b>Example:</b>
-                /// <para>383</para>
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("LogicalIORead")]
                 [Validation(Required=false)]
                 public long? LogicalIORead { get; set; }
 
                 /// <summary>
-                /// <para>The number of parsed rows.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
+                /// The number of parsed rows.
                 /// </summary>
                 [NameInMap("ParseRowCounts")]
                 [Validation(Required=false)]
                 public long? ParseRowCounts { get; set; }
 
                 /// <summary>
-                /// <para>The number of physical reads.</para>
-                /// <remarks>
-                /// <para>This parameter is returned only for instances that run SQL Server.</para>
-                /// </remarks>
+                /// The number of physical reads.
                 /// 
-                /// <b>Example:</b>
-                /// <para>200</para>
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("PhysicalIORead")]
                 [Validation(Required=false)]
                 public long? PhysicalIORead { get; set; }
 
                 /// <summary>
-                /// <para>The execution duration of the query. Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2001</para>
+                /// The execution duration of the query. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("QueryTimeMS")]
                 [Validation(Required=false)]
                 public long? QueryTimeMS { get; set; }
 
                 /// <summary>
-                /// <para>The execution duration of the query. Unit: seconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
+                /// The execution duration of the query. Unit: seconds.
                 /// </summary>
                 [NameInMap("QueryTimes")]
                 [Validation(Required=false)]
                 public long? QueryTimes { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
+                /// The number of rows returned.
                 /// </summary>
                 [NameInMap("ReturnRowCounts")]
                 [Validation(Required=false)]
                 public long? ReturnRowCounts { get; set; }
 
                 /// <summary>
-                /// <para>The number of affected rows.</para>
-                /// <remarks>
-                /// <para>This parameter is returned only for instances that run SQL Server.</para>
-                /// </remarks>
+                /// The number of affected rows.
                 /// 
-                /// <b>Example:</b>
-                /// <para>34</para>
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("RowsAffectedCount")]
                 [Validation(Required=false)]
                 public long? RowsAffectedCount { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the SQL statement.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>U2FsdGVk****</para>
+                /// The unique ID of the SQL statement.
                 /// </summary>
                 [NameInMap("SQLHash")]
                 [Validation(Required=false)]
                 public string SQLHash { get; set; }
 
                 /// <summary>
-                /// <para>The details of the SQL statement.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>select sleep(2)</para>
+                /// The details of the SQL statement.
                 /// </summary>
                 [NameInMap("SQLText")]
                 [Validation(Required=false)]
                 public string SQLText { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user.</para>
-                /// <remarks>
-                /// <para>This parameter is returned only for instances that run SQL Server.</para>
-                /// </remarks>
+                /// The name of the user.
                 /// 
-                /// <b>Example:</b>
-                /// <para>user</para>
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
                 public string UserName { get; set; }
 
                 /// <summary>
-                /// <para>The number of I/O writes.</para>
-                /// <remarks>
-                /// <para>This parameter is returned only for instances that run SQL Server.</para>
-                /// </remarks>
+                /// The number of I/O writes.
                 /// 
-                /// <b>Example:</b>
-                /// <para>22</para>
+                /// > This parameter is returned only for instances that run SQL Server.
                 /// </summary>
                 [NameInMap("WriteIOCount")]
                 [Validation(Required=false)]
@@ -262,40 +190,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of SQL log reports on the current page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The number of SQL log reports on the current page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>4DBB1BB0-E5D8-4D41-B1C9-142364DB****</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

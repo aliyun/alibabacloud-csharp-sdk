@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceEndpointsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDBInstanceEndpointsResponseBodyData Data { get; set; }
         public class DescribeDBInstanceEndpointsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information of the endpoints of the instance.</para>
+            /// The information of the endpoints of the instance.
             /// </summary>
             [NameInMap("DBInstanceEndpoints")]
             [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public List<DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpoint> DBInstanceEndpoint { get; set; }
                 public class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpoint : TeaModel {
                     /// <summary>
-                    /// <para>The information about the endpoint.</para>
+                    /// The information about the endpoint.
                     /// </summary>
                     [NameInMap("AddressItems")]
                     [Validation(Required=false)]
@@ -39,64 +39,45 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public List<DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItemsAddressItem> AddressItem { get; set; }
                         public class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItemsAddressItem : TeaModel {
                             /// <summary>
-                            /// <para>The endpoints of the instance.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>rm****.mysql.rds.aliyuncs.com</para>
+                            /// The endpoints of the instance.
                             /// </summary>
                             [NameInMap("ConnectionString")]
                             [Validation(Required=false)]
                             public string ConnectionString { get; set; }
 
                             /// <summary>
-                            /// <para>The IP address.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>10.71.XX.XX</para>
+                            /// The IP address.
                             /// </summary>
                             [NameInMap("IpAddress")]
                             [Validation(Required=false)]
                             public string IpAddress { get; set; }
 
                             /// <summary>
-                            /// <para>The type of the IP address. Valid values:</para>
-                            /// <list type="bullet">
-                            /// <item><description><b>Public</b>: Internet</description></item>
-                            /// <item><description><b>Private</b>: internal network</description></item>
-                            /// </list>
+                            /// The type of the IP address. Valid values:
                             /// 
-                            /// <b>Example:</b>
-                            /// <para>Private</para>
+                            /// *   **Public**: Internet
+                            /// *   **Private**: internal network
                             /// </summary>
                             [NameInMap("IpType")]
                             [Validation(Required=false)]
                             public string IpType { get; set; }
 
                             /// <summary>
-                            /// <para>The port number of the endpoint.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>3306</para>
+                            /// The port number of the endpoint.
                             /// </summary>
                             [NameInMap("Port")]
                             [Validation(Required=false)]
                             public string Port { get; set; }
 
                             /// <summary>
-                            /// <para>The vSwitch ID.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>vsw-bp12u14ecz****</para>
+                            /// The vSwitch ID.
                             /// </summary>
                             [NameInMap("VSwitchId")]
                             [Validation(Required=false)]
                             public string VSwitchId { get; set; }
 
                             /// <summary>
-                            /// <para>The VPC ID.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>vpc-bp17xdic25d****</para>
+                            /// The VPC ID.
                             /// </summary>
                             [NameInMap("VpcId")]
                             [Validation(Required=false)]
@@ -107,41 +88,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                     /// <summary>
-                    /// <para>The user-defined description of the endpoint.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>for readonly business</para>
+                    /// The user-defined description of the endpoint.
                     /// </summary>
                     [NameInMap("EndpointDescription")]
                     [Validation(Required=false)]
                     public string EndpointDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The endpoint ID of the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>ep-****</para>
+                    /// The endpoint ID of the instance.
                     /// </summary>
                     [NameInMap("EndpointId")]
                     [Validation(Required=false)]
                     public string EndpointId { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the endpoint. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>Primary</b>: the read/write endpoint of the instance</description></item>
-                    /// <item><description><b>Readonly</b>: the read-only endpoint of the instance</description></item>
-                    /// </list>
+                    /// The type of the endpoint. Valid values:
                     /// 
-                    /// <b>Example:</b>
-                    /// <para>Readonly</para>
+                    /// *   **Primary**: the read/write endpoint of the instance
+                    /// *   **Readonly**: the read-only endpoint of the instance
                     /// </summary>
                     [NameInMap("EndpointType")]
                     [Validation(Required=false)]
                     public string EndpointType { get; set; }
 
                     /// <summary>
-                    /// <para>The information about the node that is configured for the endpoint.</para>
+                    /// The information about the node that is configured for the endpoint.
                     /// </summary>
                     [NameInMap("NodeItems")]
                     [Validation(Required=false)]
@@ -152,31 +123,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public List<DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItemsNodeItem> NodeItem { get; set; }
                         public class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItemsNodeItem : TeaModel {
                             /// <summary>
-                            /// <para>The instance ID.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>rm-u****</para>
+                            /// The instance ID.
                             /// </summary>
                             [NameInMap("DBInstanceId")]
                             [Validation(Required=false)]
                             public string DBInstanceId { get; set; }
 
                             /// <summary>
-                            /// <para>The node ID.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>rn-****13p6tum4289h</para>
+                            /// The node ID.
                             /// </summary>
                             [NameInMap("NodeId")]
                             [Validation(Required=false)]
                             public string NodeId { get; set; }
 
                             /// <summary>
-                            /// <para>The weight of the node. Read requests are distributed based on the weight.</para>
-                            /// <para>Valid values: 0 to 100.</para>
+                            /// The weight of the node. Read requests are distributed based on the weight.
                             /// 
-                            /// <b>Example:</b>
-                            /// <para>50</para>
+                            /// Valid values: 0 to 100.
                             /// </summary>
                             [NameInMap("Weight")]
                             [Validation(Required=false)]
@@ -191,24 +154,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rm-u****</para>
+            /// The name of the instance.
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The version of the IP protocol. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>ipv4</b></description></item>
-            /// <item><description><b>ipv6</b></description></item>
-            /// </list>
+            /// The version of the IP protocol. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>ipv4</para>
+            /// *   **ipv4**
+            /// *   **ipv6**
             /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
@@ -217,10 +173,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>777C4593-8053-427B-****105593277CAB</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

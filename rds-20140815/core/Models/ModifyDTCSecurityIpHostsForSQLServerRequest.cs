@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDTCSecurityIpHostsForSQLServerRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,11 +27,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -48,14 +44,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the ECS instance and the hostname of the Windows computer. Format: <c>IP address,Hostname</c>. Separate multiple entries with semicolon (;).</para>
-        /// <remarks>
-        /// <para> For more information about how to query the computer hostname, see <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a>.</para>
-        /// </remarks>
-        /// <para>This parameter is required.</para>
+        /// The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Separate multiple entries with semicolon (;).
         /// 
-        /// <b>Example:</b>
-        /// <para>192.168.1.100,k3ecstest</para>
+        /// >  For more information about how to query the computer hostname, see [Configure a distributed transaction whitelist](https://help.aliyun.com/document_detail/124321.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityIpHosts")]
         [Validation(Required=false)]
@@ -66,11 +59,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the IP address whitelist.</para>
-        /// <para>This parameter is required.</para>
+        /// The name of the IP address whitelist.
         /// 
-        /// <b>Example:</b>
-        /// <para>test1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WhiteListGroupName")]
         [Validation(Required=false)]

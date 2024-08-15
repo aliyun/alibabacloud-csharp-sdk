@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyHADiagnoseConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,11 +23,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -44,14 +40,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The availability check method of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>SHORT</b>: Alibaba Cloud uses short-lived connections to check the availability of the instance.</description></item>
-        /// <item><description><b>LONG</b>: Alibaba Cloud uses persistent connections to check the availability of the instance.</description></item>
-        /// </list>
+        /// The availability check method of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>SHORT</para>
+        /// *   **SHORT**: Alibaba Cloud uses short-lived connections to check the availability of the instance.
+        /// *   **LONG**: Alibaba Cloud uses persistent connections to check the availability of the instance.
         /// </summary>
         [NameInMap("TcpConnectionType")]
         [Validation(Required=false)]

@@ -10,93 +10,69 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBNodeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
-        /// <ol>
-        /// <item><description><b>true</b>: automatically completes the payment. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: does not automatically complete the payment. An unpaid order is generated.</description></item>
-        /// </ol>
-        /// <remarks>
-        /// <para> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.</para>
-        /// </remarks>
+        /// Specifies whether to automatically complete the payment. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// 1.  **true**: automatically completes the payment. Make sure that your account balance is sufficient.
+        /// 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
+        /// 
+        /// >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
+        /// The client token that is used to ensure the idempotence of the request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-bp1k8s41l2o52****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new storage capacity of the instance. Unit: GB For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>20</para>
+        /// The new storage capacity of the instance. Unit: GB For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
         public string DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>cloud_essd</b>: performance level 1 (PL1) enhanced SSD (ESSD)</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
-        /// </list>
+        /// The storage type of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>cloud_essd</para>
+        /// *   **cloud_essd**: performance level 1 (PL1) enhanced SSD (ESSD)
+        /// *   **cloud_essd2**: PL2 ESSD
+        /// *   **cloud_essd3**: PL3 ESSD
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The information about the node.</para>
-        /// <remarks>
-        /// <para> This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</para>
-        /// </remarks>
+        /// The information about the node.
+        /// 
+        /// >  This parameter is used for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
         /// </summary>
         [NameInMap("DBNode")]
         [Validation(Required=false)]
         public List<ModifyDBNodeRequestDBNode> DBNode { get; set; }
         public class ModifyDBNodeRequestDBNode : TeaModel {
             /// <summary>
-            /// <para>The instance type of the node.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>mysql.n2.medium.xc</para>
+            /// The specification information about the node.
             /// </summary>
             [NameInMap("classCode")]
             [Validation(Required=false)]
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// <para>The node ID.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rn-6256r4a87xvv7he5p</para>
+            /// The node ID.
             /// </summary>
             [NameInMap("nodeId")]
             [Validation(Required=false)]
@@ -105,28 +81,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values: Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run and does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</description></item>
-        /// </list>
+        /// Specifies whether to perform a dry run. Valid values: Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
+        /// *   **true**: performs a dry run and does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.
+        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Effective time, value:</para>
-        /// <list type="bullet">
-        /// <item><description>Immediate (default value): takes effect immediately.</description></item>
-        /// <item><description>MaintainTime: Effective within the operational time period, please refer to ModifyDBInstanceMaintainTime.</description></item>
-        /// </list>
+        /// The time when you want the change to take effect. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Immediate</para>
+        /// *   **Immediate** (default): The change immediately takes effect.
+        /// *   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
@@ -141,17 +109,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to asynchronously perform the operation. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b> (default): sends only the order. The operation is asynchronously performed.</description></item>
-        /// <item><description><b>false</b>: sends the request. After the request passes the check, the operation is directly performed.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> The default value is true, which indicates that the change operation is asynchronously performed. If you set this parameter to false, the change operation is simultaneously performed. This prolongs the response time of the operation.</para>
-        /// </remarks>
+        /// Specifies whether to asynchronously perform the operation. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// *   **true** (default): sends only the order. The operation is asynchronously performed.
+        /// *   **false**: sends the request. After the request passes the check, the operation is directly performed.
+        /// 
+        /// >  The default value is true, which indicates that the change operation is asynchronously performed. If you set this parameter to false, the change operation is simultaneously performed. This prolongs the response time of the operation.
         /// </summary>
         [NameInMap("ProduceAsync")]
         [Validation(Required=false)]

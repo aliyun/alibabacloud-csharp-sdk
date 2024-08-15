@@ -10,43 +10,34 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeletePostgresExtensionsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz****</para>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>pgm-bp156o9ti493****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database on which the extension is installed. If you want to specify multiple databases, separate the databases with commas (,).</para>
-        /// <para>This parameter is required.</para>
+        /// The database on which the extension is installed. If you want to specify multiple databases, separate the databases with commas (,).
         /// 
-        /// <b>Example:</b>
-        /// <para>test_db</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNames")]
         [Validation(Required=false)]
         public string DBNames { get; set; }
 
         /// <summary>
-        /// <para>The name of the extension. If you want to specify multiple extensions, separate the extension names with commas (,).</para>
-        /// <para>This parameter is required.</para>
+        /// The name of the extension. If you want to specify multiple extensions, separate the extension names with commas (,).
         /// 
-        /// <b>Example:</b>
-        /// <para>citext</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Extensions")]
         [Validation(Required=false)]
@@ -61,10 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy****</para>
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,50 +10,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSupportOnlineResizeDiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>NotExists.InstanceId</para>
+        /// The response code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response result set.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;SupportOnlineResizeDisk&quot;:true,&quot;DBInstanceName&quot;:&quot;rm-uf6wjk5xxxxxxx&quot;}</para>
+        /// The response result set.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>successful</para>
+        /// The response code.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>8B993DA9-5272-5414-94E3-4CA8BA0146C2</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,56 +10,39 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDdrInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The endpoint that is used to connect to the destination instance.</para>
-        /// <remarks>
-        /// <para> The <b>DBInstanceNetType</b> parameter indicates whether the endpoint is internal or public.</para>
-        /// </remarks>
+        /// The endpoint that is used to connect to the destination instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-xxxxx.mysql.rds.aliyuncs.com</para>
+        /// >  The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The destination instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-xxxxx</para>
+        /// The destination instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2038691xxxxx</para>
+        /// The order ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The port number that is used to connect to the destination instance.</para>
-        /// <remarks>
-        /// <para><b>DBInstanceNetType</b> indicates whether the port is internal or public.</para>
-        /// </remarks>
+        /// The port number that is used to connect to the destination instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>3306</para>
+        /// > **DBInstanceNetType** indicates whether the port is internal or public.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>E52666CC-330E-418A-8E5B-A19E3FB42D13</para>
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

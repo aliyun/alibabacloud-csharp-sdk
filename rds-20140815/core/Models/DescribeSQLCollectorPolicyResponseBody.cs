@@ -10,34 +10,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLCollectorPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the SQL Explorer (SQL Audit) feature. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
-        /// </list>
+        /// The status of the SQL Explorer (SQL Audit) feature. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Enable</para>
+        /// *   **Enable**
+        /// *   **Disabled**
         /// </summary>
         [NameInMap("SQLCollectorStatus")]
         [Validation(Required=false)]
         public string SQLCollectorStatus { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0</para>
+        /// A reserved parameter.
         /// </summary>
         [NameInMap("StoragePeriod")]
         [Validation(Required=false)]

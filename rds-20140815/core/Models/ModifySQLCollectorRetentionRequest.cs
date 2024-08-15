@@ -10,29 +10,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySQLCollectorRetentionRequest : TeaModel {
         /// <summary>
-        /// <para>The log retention period that is allowed by the SQL Explorer feature on the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>30: 30 days</description></item>
-        /// <item><description>180: 180 days</description></item>
-        /// <item><description>365: one year</description></item>
-        /// <item><description>1095: three years</description></item>
-        /// <item><description>1825: five years</description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// The log retention period that is allowed by the SQL Explorer feature on the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>365</para>
+        /// *   30: 30 days
+        /// *   180: 180 days
+        /// *   365: one year
+        /// *   1095: three years
+        /// *   1825: five years
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigValue")]
         [Validation(Required=false)]
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -47,10 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmyxxxx</para>
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

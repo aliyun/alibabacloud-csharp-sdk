@@ -10,34 +10,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceHAConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxx</para>
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The high availability mode of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>RPO</b>: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</description></item>
-        /// <item><description><b>RTO</b>: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter is returned only for instances that run MySQL.</para>
-        /// </remarks>
+        /// The high availability mode of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>RPO</para>
+        /// *   **RPO**: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.
+        /// *   **RTO**: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.
+        /// 
+        /// > This parameter is returned only for instances that run MySQL.
         /// </summary>
         [NameInMap("HAMode")]
         [Validation(Required=false)]
         public string HAMode { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the information of the primary and secondary instances.</para>
+        /// An array that consists of the information of the primary and secondary instances.
         /// </summary>
         [NameInMap("HostInstanceInfos")]
         [Validation(Required=false)]
@@ -48,80 +40,57 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo> NodeInfo { get; set; }
             public class DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo : TeaModel {
                 /// <summary>
-                /// <para>The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-05-05T15:15:00Z</para>
+                /// The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("DataSyncTime")]
                 [Validation(Required=false)]
                 public string DataSyncTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-05-05T15:15:00Z</para>
+                /// The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("LogSyncTime")]
                 [Validation(Required=false)]
                 public string LogSyncTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3397027</para>
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Master</b>: the primary node</description></item>
-                /// <item><description><b>Slave</b>: the secondary node</description></item>
-                /// </list>
+                /// The type of the node. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>Master</para>
+                /// *   **Master**: the primary node
+                /// *   **Slave**: the secondary node
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// The region ID of the instance.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The synchronization status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>NotAvailable</b>: The synchronization fails. This means that faults occur.</description></item>
-                /// <item><description><b>Syncing</b>: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.</description></item>
-                /// <item><description><b>Synchronized</b>: The synchronization is completed.</description></item>
-                /// <item><description><b>NotSupport</b>: The database engine or database engine version does not involve the synchronization between the primary and secondary instances.</description></item>
-                /// </list>
+                /// The synchronization status. Valid values:
                 /// 
-                /// <b>Example:</b>
-                /// <para>NotAvailable</para>
+                /// *   **NotAvailable**: The synchronization fails. This means that faults occur.
+                /// *   **Syncing**: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.
+                /// *   **Synchronized**: The synchronization is completed.
+                /// *   **NotSupport**: The database engine or database engine version does not involve the synchronization between the primary and secondary instances.
                 /// </summary>
                 [NameInMap("SyncStatus")]
                 [Validation(Required=false)]
                 public string SyncStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-b</para>
+                /// The ID of the zone.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -132,28 +101,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The data replication mode of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Sync</b>: the synchronous mode</description></item>
-        /// <item><description><b>Semi-sync</b>: the semi-synchronous replication mode</description></item>
-        /// <item><description><b>Async</b>: the asynchronous mode</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter is returned only for instances that run MySQL.</para>
-        /// </remarks>
+        /// The data replication mode of the instance. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Sync</para>
+        /// *   **Sync**: the synchronous mode
+        /// *   **Semi-sync**: the semi-synchronous replication mode
+        /// *   **Async**: the asynchronous mode
+        /// 
+        /// > This parameter is returned only for instances that run MySQL.
         /// </summary>
         [NameInMap("SyncMode")]
         [Validation(Required=false)]

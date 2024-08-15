@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAnalyticdbByPrimaryDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of associated analytic instances.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0</para>
+        /// The number of associated analytic instances.
         /// </summary>
         [NameInMap("AnalyticDBCount")]
         [Validation(Required=false)]
         public int? AnalyticDBCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>77862BFF-ED59-552A-A2E8-692FEAFC9527</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

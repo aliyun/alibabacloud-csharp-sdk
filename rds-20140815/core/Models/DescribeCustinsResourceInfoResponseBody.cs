@@ -10,237 +10,168 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCustinsResourceInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeCustinsResourceInfoResponseBodyData> Data { get; set; }
         public class DescribeCustinsResourceInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The deadline for the CPU adjustment.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2023-10-25</para>
+            /// The deadline for the CPU adjustment.
             /// </summary>
             [NameInMap("CpuAdjustDeadline")]
             [Validation(Required=false)]
             public string CpuAdjustDeadline { get; set; }
 
             /// <summary>
-            /// <para>The maximum percentage of the system CPU resources that the instance can use.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>30</para>
+            /// The maximum percentage of the system CPU resources that the instance can use.
             /// </summary>
             [NameInMap("CpuAdjustableMaxRatio")]
             [Validation(Required=false)]
             public string CpuAdjustableMaxRatio { get; set; }
 
             /// <summary>
-            /// <para>The maximum CPU utilization.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>60</para>
+            /// The maximum CPU utilization.
             /// </summary>
             [NameInMap("CpuAdjustableMaxValue")]
             [Validation(Required=false)]
             public string CpuAdjustableMaxValue { get; set; }
 
             /// <summary>
-            /// <para>The CPU utilization.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>10</para>
+            /// The CPU utilization.
             /// </summary>
             [NameInMap("CpuIncreaseRatio")]
             [Validation(Required=false)]
             public string CpuIncreaseRatio { get; set; }
 
             /// <summary>
-            /// <para>The CPU utilization. Unit: percentage.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>20</para>
+            /// The CPU utilization. Unit: percentage.
             /// </summary>
             [NameInMap("CpuIncreaseRatioValue")]
             [Validation(Required=false)]
             public string CpuIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rm-wz92gn1ll9fe5d3a4</para>
+            /// The instance ID.
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>20</para>
+            /// The maximum IOPS.
             /// </summary>
             [NameInMap("IopsAdjustableMaxValue")]
             [Validation(Required=false)]
             public string IopsAdjustableMaxValue { get; set; }
 
             /// <summary>
-            /// <para>The deadline for the adjustment of the maximum number of connections.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2023-10-25</para>
+            /// The deadline for the adjustment of the maximum number of connections.
             /// </summary>
             [NameInMap("MaxConnAdjustDeadline")]
             [Validation(Required=false)]
             public string MaxConnAdjustDeadline { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent connections.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>100</para>
+            /// The maximum number of concurrent connections.
             /// </summary>
             [NameInMap("MaxConnAdjustableMaxValue")]
             [Validation(Required=false)]
             public string MaxConnAdjustableMaxValue { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent connections.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>100</para>
+            /// The maximum number of concurrent connections.
             /// </summary>
             [NameInMap("MaxConnIncreaseRatio")]
             [Validation(Required=false)]
             public string MaxConnIncreaseRatio { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent connections.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>20</para>
+            /// The maximum number of concurrent connections.
             /// </summary>
             [NameInMap("MaxConnIncreaseRatioValue")]
             [Validation(Required=false)]
             public string MaxConnIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The deadline for the adjustment of the maximum IOPS.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2023-10-25</para>
+            /// The deadline for the adjustment of the maximum IOPS.
             /// </summary>
             [NameInMap("MaxIopsAdjustDeadline")]
             [Validation(Required=false)]
             public string MaxIopsAdjustDeadline { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>100</para>
+            /// The maximum IOPS.
             /// </summary>
             [NameInMap("MaxIopsIncreaseRatio")]
             [Validation(Required=false)]
             public string MaxIopsIncreaseRatio { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS that can be supported by the instance.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>20</para>
+            /// The maximum IOPS that can be supported by the instance.
             /// </summary>
             [NameInMap("MaxIopsIncreaseRatioValue")]
             [Validation(Required=false)]
             public string MaxIopsIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The maximum percentage of the system memory that the instance can use.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>60</para>
+            /// The maximum percentage of the system memory that the instance can use.
             /// </summary>
             [NameInMap("MemAdjustableMaxRatio")]
             [Validation(Required=false)]
             public string MemAdjustableMaxRatio { get; set; }
 
             /// <summary>
-            /// <para>The maximum value of the resources to be evaluated.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>200</para>
+            /// The maximum value of the resources to be evaluated.
             /// </summary>
             [NameInMap("MemAdjustableMaxValue")]
             [Validation(Required=false)]
             public string MemAdjustableMaxValue { get; set; }
 
             /// <summary>
-            /// <para>The deadline for the memory adjustment.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2023-10-25</para>
+            /// The deadline for the memory adjustment.
             /// </summary>
             [NameInMap("MemoryAdjustDeadline")]
             [Validation(Required=false)]
             public string MemoryAdjustDeadline { get; set; }
 
             /// <summary>
-            /// <para>The memory increase percentage.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2023-10-25</para>
+            /// The memory increase percentage.
             /// </summary>
             [NameInMap("MemoryIncreaseRatio")]
             [Validation(Required=false)]
             public string MemoryIncreaseRatio { get; set; }
 
             /// <summary>
-            /// <para>The memory usage. Unit: MB.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>200</para>
+            /// The memory usage. Unit: MB.
             /// </summary>
             [NameInMap("MemoryIncreaseRatioValue")]
             [Validation(Required=false)]
             public string MemoryIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The number of CPUs of the instance.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2</para>
+            /// The number of CPUs of the instance.
             /// </summary>
             [NameInMap("OriginCpu")]
             [Validation(Required=false)]
             public string OriginCpu { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent connections.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>30</para>
+            /// The maximum number of concurrent connections.
             /// </summary>
             [NameInMap("OriginMaxConn")]
             [Validation(Required=false)]
             public string OriginMaxConn { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>20</para>
+            /// The maximum IOPS.
             /// </summary>
             [NameInMap("OriginMaxIops")]
             [Validation(Required=false)]
             public string OriginMaxIops { get; set; }
 
             /// <summary>
-            /// <para>The actual memory used. Unit: MB.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>20</para>
+            /// The actual memory used. Unit: MB.
             /// </summary>
             [NameInMap("OriginMemory")]
             [Validation(Required=false)]
@@ -249,10 +180,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

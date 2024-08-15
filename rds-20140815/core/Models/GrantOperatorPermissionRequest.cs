@@ -10,22 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class GrantOperatorPermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the permissions. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// <para>This parameter is required.</para>
+        /// The expiration time of the permissions. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// 
-        /// <b>Example:</b>
-        /// <para>2019-03-27T16:00:00Z</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
@@ -40,15 +36,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The permissions that you want to grant to the service account. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Control</b>: the configuration permissions, which allow you to view and modify configurations of the instance.</description></item>
-        /// <item><description><b>Data</b>: the data permissions, which allow you to view schemas, indexes, and SQL statements of the instance.</description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// The permissions that you want to grant to the service account. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Control</para>
+        /// *   **Control**: the configuration permissions, which allow you to view and modify configurations of the instance.
+        /// *   **Data**: the data permissions, which allow you to view schemas, indexes, and SQL statements of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Privileges")]
         [Validation(Required=false)]

@@ -10,22 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateConnectionToOtherZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoint of the instance. The endpoint is specified when you create the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// The endpoint of the instance. The endpoint is specified when you create the instance.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-bp1oypo6ky19y****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-bp1oypo6ky19y****</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -40,11 +36,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone.</para>
-        /// <para>This parameter is required.</para>
+        /// The ID of the zone.
         /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou-i</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

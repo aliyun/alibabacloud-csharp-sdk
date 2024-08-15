@@ -10,36 +10,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryTasksStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the task.</para>
+        /// The information about the task.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryTasksStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryTasksStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The task status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Scheduled</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Succeed</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Cancelling</description></item>
-            /// <item><description>Canceled</description></item>
-            /// <item><description>Waiting</description></item>
-            /// </list>
+            /// The task status. Valid values:
             /// 
-            /// <b>Example:</b>
-            /// <para>Succeed,Waiting</para>
+            /// *   Scheduled
+            /// *   Running
+            /// *   Succeed
+            /// *   Failed
+            /// *   Cancelling
+            /// *   Canceled
+            /// *   Waiting
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total number of tasks.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>20</para>
+            /// The total number of tasks.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -48,10 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

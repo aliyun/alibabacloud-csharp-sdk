@@ -10,43 +10,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ResetAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the privileged account.</para>
-        /// <para>This parameter is required.</para>
+        /// The name of the privileged account.
         /// 
-        /// <b>Example:</b>
-        /// <para>test1</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The new password of the privileged account.</para>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>The password must be 8 to 32 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
-        /// </description></item>
-        /// <item><description><para>It can contain the following special characters: <c>! @ # $ &amp; ; % ^ * () _ + - =</c>.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>This parameter is required.</para>
+        /// The new password of the privileged account.
         /// 
-        /// <b>Example:</b>
-        /// <para>Test123456</para>
+        /// > 
+        /// 
+        /// *   The password must be 8 to 32 characters in length.
+        /// 
+        /// *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+        /// 
+        /// *   It can contain the following special characters: `! @ # $ & ; % ^ * () _ + - =`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

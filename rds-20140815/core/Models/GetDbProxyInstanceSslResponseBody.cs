@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class GetDbProxyInstanceSslResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of SSL encryption settings.</para>
+        /// An array that consists of SSL encryption settings.
         /// </summary>
         [NameInMap("DbProxyCertListItems")]
         [Validation(Required=false)]
@@ -21,50 +21,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems> DbProxyCertListItems { get; set; }
             public class GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems : TeaModel {
                 /// <summary>
-                /// <para>The dedicated proxy endpoint for which SSL encryption is enabled.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test1234.rwlb.rds.aliyuncs.com</para>
+                /// The dedicated proxy endpoint for which SSL encryption is enabled.
                 /// </summary>
                 [NameInMap("CertCommonName")]
                 [Validation(Required=false)]
                 public string CertCommonName { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-t4n3axxxxx</para>
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DbInstanceName")]
                 [Validation(Required=false)]
                 public string DbInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the dedicated proxy endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>buxxxxxxx</para>
+                /// The ID of the dedicated proxy endpoint.
                 /// </summary>
                 [NameInMap("EndpointName")]
                 [Validation(Required=false)]
                 public string EndpointName { get; set; }
 
                 /// <summary>
-                /// <para>The default identifier of the dedicated proxy endpoint. The value is fixed as <b>RWSplit</b>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>RWSplit</para>
+                /// The default identifier of the dedicated proxy endpoint. The value is fixed as **RWSplit**.
                 /// </summary>
                 [NameInMap("EndpointType")]
                 [Validation(Required=false)]
                 public string EndpointType { get; set; }
 
                 /// <summary>
-                /// <para>The time at which the certificate expires.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2021-12-16T08:43:20Z</para>
+                /// The time at which the certificate expires.
                 /// </summary>
                 [NameInMap("SslExpiredTime")]
                 [Validation(Required=false)]
@@ -75,10 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>D330E60C-8AAA-4D63-8F64-5B78F4692F98</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

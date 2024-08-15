@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceConnectivityRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-t4ns09hgoy99i5gez</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbInstanceName")]
         [Validation(Required=false)]
@@ -29,10 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy****</para>
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -51,11 +46,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The source IP address.</para>
-        /// <para>This parameter is required.</para>
+        /// The source IP address.
         /// 
-        /// <b>Example:</b>
-        /// <para>172.16.XX.XX</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceIpAddress")]
         [Validation(Required=false)]

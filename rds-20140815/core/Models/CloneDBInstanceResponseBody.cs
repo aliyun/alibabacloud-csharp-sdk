@@ -10,30 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CloneDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>100789370****</para>
+        /// The ID of the order.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</para>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

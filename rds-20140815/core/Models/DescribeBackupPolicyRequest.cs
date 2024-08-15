@@ -10,42 +10,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The backup type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>DataBackupPolicy</b>: data backup</description></item>
-        /// <item><description><b>LogBackupPolicy</b>: log backup</description></item>
-        /// </list>
+        /// The backup type. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>DataBackupPolicy</para>
+        /// *   **DataBackupPolicy**: data backup
+        /// *   **LogBackupPolicy**: log backup
         /// </summary>
         [NameInMap("BackupPolicyMode")]
         [Validation(Required=false)]
         public string BackupPolicyMode { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to compress backup data. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>0</b>: Backup data is not compressed.</description></item>
-        /// <item><description><b>1</b>: Backup data is compressed by using zlib.</description></item>
-        /// <item><description><b>2</b>: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.</description></item>
-        /// <item><description><b>4</b>: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.</description></item>
-        /// <item><description><b>8</b>: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.</description></item>
-        /// </list>
+        /// The method that is used to compress backup data. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// *   **0**: Backup data is not compressed.
+        /// *   **1**: Backup data is compressed by using zlib.
+        /// *   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.
+        /// *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.
+        /// *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.
         /// </summary>
         [NameInMap("CompressType")]
         [Validation(Required=false)]
         public string CompressType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
-        /// <para>This parameter is required.</para>
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -60,15 +50,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to retain archived backup files if the instance is released. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>None</b>: No archived backup files are retained.</description></item>
-        /// <item><description><b>Lastest</b>: Only the last archived backup file is retained.</description></item>
-        /// <item><description><b>All</b>: All archived backup files are retained.</description></item>
-        /// </list>
+        /// The policy that is used to retain archived backup files if the instance is released. Valid values:
         /// 
-        /// <b>Example:</b>
-        /// <para>Lastest</para>
+        /// *   **None**: No archived backup files are retained.
+        /// *   **Lastest**: Only the last archived backup file is retained.
+        /// *   **All**: All archived backup files are retained.
         /// </summary>
         [NameInMap("ReleasedKeepPolicy")]
         [Validation(Required=false)]
