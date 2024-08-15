@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteRumUploadFileRequest : TeaModel {
+        [NameInMap("BatchItems")]
+        [Validation(Required=false)]
+        public string BatchItems { get; set; }
+
         /// <summary>
         /// The file name, with the extension.
         /// </summary>
@@ -18,6 +22,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The application ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Pid")]
         [Validation(Required=false)]
