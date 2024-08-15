@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public string AutoChapters { get; set; }
 
+                [NameInMap("CustomPrompt")]
+                [Validation(Required=false)]
+                public string CustomPrompt { get; set; }
+
                 [NameInMap("MeetingAssistance")]
                 [Validation(Required=false)]
                 public string MeetingAssistance { get; set; }
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [NameInMap("PptExtraction")]
                 [Validation(Required=false)]
                 public string PptExtraction { get; set; }
+
+                [NameInMap("ServiceInspection")]
+                [Validation(Required=false)]
+                public string ServiceInspection { get; set; }
 
                 [NameInMap("Summarization")]
                 [Validation(Required=false)]
