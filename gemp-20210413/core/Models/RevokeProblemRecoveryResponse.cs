@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class RevokeProblemRecoveryResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public RevokeProblemRecoveryResponseBody Body { get; set; }
 
     }

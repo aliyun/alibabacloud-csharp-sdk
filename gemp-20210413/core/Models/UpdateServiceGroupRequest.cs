@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("enableWebhook")]
         [Validation(Required=false)]
         public string EnableWebhook { get; set; }
@@ -43,22 +46,37 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string ServiceGroupDescription { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("serviceGroupId")]
         [Validation(Required=false)]
         public long? ServiceGroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("serviceGroupName")]
         [Validation(Required=false)]
         public string ServiceGroupName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("userIds")]
         [Validation(Required=false)]
         public List<long?> UserIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("webhookLink")]
         [Validation(Required=false)]
         public string WebhookLink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("webhookType")]
         [Validation(Required=false)]
         public string WebhookType { get; set; }

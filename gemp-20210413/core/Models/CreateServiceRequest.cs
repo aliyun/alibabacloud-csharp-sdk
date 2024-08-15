@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public List<long?> ServiceGroupIdList { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("serviceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }

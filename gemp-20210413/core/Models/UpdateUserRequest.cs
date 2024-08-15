@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public List<long?> RoleIdList { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]
         public long? UserId { get; set; }

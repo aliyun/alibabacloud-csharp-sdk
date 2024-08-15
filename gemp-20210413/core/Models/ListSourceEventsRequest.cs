@@ -20,10 +20,16 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("instanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }

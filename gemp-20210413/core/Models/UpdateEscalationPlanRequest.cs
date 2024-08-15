@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string EscalationPlanDescription { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("escalationPlanId")]
         [Validation(Required=false)]
         public long? EscalationPlanId { get; set; }
@@ -100,6 +103,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public List<UpdateEscalationPlanRequestEscalationPlanScopeObjects> EscalationPlanScopeObjects { get; set; }
         public class UpdateEscalationPlanRequestEscalationPlanScopeObjects : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
@@ -108,6 +114,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public string Scope { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("scopeObjectId")]
             [Validation(Required=false)]
             public long? ScopeObjectId { get; set; }

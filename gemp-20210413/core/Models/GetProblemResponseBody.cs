@@ -167,6 +167,8 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 
             /// <summary>
             /// ID
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("problemId")]
             [Validation(Required=false)]

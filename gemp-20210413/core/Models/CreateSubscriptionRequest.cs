@@ -17,32 +17,53 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("expiredType")]
         [Validation(Required=false)]
         public long? ExpiredType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("notifyObjectList")]
         [Validation(Required=false)]
         public List<CreateSubscriptionRequestNotifyObjectList> NotifyObjectList { get; set; }
         public class CreateSubscriptionRequestNotifyObjectList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("notifyObjectId")]
             [Validation(Required=false)]
             public long? NotifyObjectId { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("notifyObjectType")]
         [Validation(Required=false)]
         public long? NotifyObjectType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("notifyStrategyList")]
         [Validation(Required=false)]
         public List<CreateSubscriptionRequestNotifyStrategyList> NotifyStrategyList { get; set; }
         public class CreateSubscriptionRequestNotifyStrategyList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("channels")]
             [Validation(Required=false)]
             public string Channels { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("instanceType")]
             [Validation(Required=false)]
             public long? InstanceType { get; set; }
@@ -61,6 +82,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("strategies")]
             [Validation(Required=false)]
             public List<CreateSubscriptionRequestNotifyStrategyListStrategies> Strategies { get; set; }
@@ -95,14 +119,23 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string Period { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public long? Scope { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("scopeObjectList")]
         [Validation(Required=false)]
         public List<CreateSubscriptionRequestScopeObjectList> ScopeObjectList { get; set; }
         public class CreateSubscriptionRequestScopeObjectList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("scopeObjectId")]
             [Validation(Required=false)]
             public long? ScopeObjectId { get; set; }
@@ -113,6 +146,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("subscriptionTitle")]
         [Validation(Required=false)]
         public string SubscriptionTitle { get; set; }

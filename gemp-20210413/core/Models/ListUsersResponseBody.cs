@@ -28,6 +28,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            [NameInMap("gmtActive")]
+            [Validation(Required=false)]
+            public string GmtActive { get; set; }
+
+            [NameInMap("gmtCreate")]
+            [Validation(Required=false)]
+            public string GmtCreate { get; set; }
+
+            [NameInMap("isActive")]
+            [Validation(Required=false)]
+            public long? IsActive { get; set; }
+
             [NameInMap("isEditableUser")]
             [Validation(Required=false)]
             public long? IsEditableUser { get; set; }

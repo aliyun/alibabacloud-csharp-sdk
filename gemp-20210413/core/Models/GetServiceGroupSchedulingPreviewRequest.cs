@@ -95,10 +95,16 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("schedulingWay")]
         [Validation(Required=false)]
         public string SchedulingWay { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("serviceGroupId")]
         [Validation(Required=false)]
         public long? ServiceGroupId { get; set; }

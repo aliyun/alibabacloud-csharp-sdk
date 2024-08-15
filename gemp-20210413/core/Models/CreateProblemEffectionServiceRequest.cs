@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public List<string> PictureUrl { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("problemId")]
         [Validation(Required=false)]
         public long? ProblemId { get; set; }

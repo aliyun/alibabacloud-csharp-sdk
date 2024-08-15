@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string Effect { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("incidentId")]
         [Validation(Required=false)]
         public long? IncidentId { get; set; }

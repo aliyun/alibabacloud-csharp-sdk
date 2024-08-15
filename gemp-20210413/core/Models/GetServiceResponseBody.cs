@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public GetServiceResponseBodyData Data { get; set; }
         public class GetServiceResponseBodyData : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("escalationPlanId")]
             [Validation(Required=false)]
             public long? EscalationPlanId { get; set; }

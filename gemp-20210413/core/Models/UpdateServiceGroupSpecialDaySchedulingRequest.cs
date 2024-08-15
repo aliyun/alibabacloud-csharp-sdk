@@ -13,14 +13,23 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("schedulingDate")]
         [Validation(Required=false)]
         public string SchedulingDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("schedulingSpecialDays")]
         [Validation(Required=false)]
         public List<UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays> SchedulingSpecialDays { get; set; }
         public class UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("schedulingEndTime")]
             [Validation(Required=false)]
             public string SchedulingEndTime { get; set; }
@@ -33,10 +42,16 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public int? SchedulingOrder { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("schedulingStartTime")]
             [Validation(Required=false)]
             public string SchedulingStartTime { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("schedulingUserId")]
             [Validation(Required=false)]
             public long? SchedulingUserId { get; set; }
@@ -47,6 +62,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("serviceGroupId")]
         [Validation(Required=false)]
         public long? ServiceGroupId { get; set; }
