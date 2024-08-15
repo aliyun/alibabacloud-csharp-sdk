@@ -29,8 +29,6 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         /// <summary>
         /// The maximum number of entries to return.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
