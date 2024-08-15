@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ParseTable")]
+        [Validation(Required=false)]
+        public bool? ParseTable { get; set; }
+
         /// <summary>
         /// SQL ID.
         /// 

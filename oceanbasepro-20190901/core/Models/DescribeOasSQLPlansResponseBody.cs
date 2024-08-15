@@ -65,6 +65,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public long? MergedVersion { get; set; }
 
+            [NameInMap("OutlineId")]
+            [Validation(Required=false)]
+            public string OutlineId { get; set; }
+
+            [NameInMap("OutlineStatus")]
+            [Validation(Required=false)]
+            public string OutlineStatus { get; set; }
+
             /// <summary>
             /// Execution plan.
             /// </summary>
@@ -359,6 +367,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("QuerySql")]
             [Validation(Required=false)]
             public string QuerySql { get; set; }
+
+            [NameInMap("TableScan")]
+            [Validation(Required=false)]
+            public bool? TableScan { get; set; }
 
         }
 

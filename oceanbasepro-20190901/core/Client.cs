@@ -6556,6 +6556,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParseTable))
+            {
+                body["ParseTable"] = request.ParseTable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlId))
             {
                 body["SqlId"] = request.SqlId;
@@ -6613,6 +6617,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParseTable))
+            {
+                body["ParseTable"] = request.ParseTable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlId))
             {

@@ -206,6 +206,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public long? MaxParallelQueryDegree { get; set; }
 
+            [NameInMap("OdpVersion")]
+            [Validation(Required=false)]
+            public string OdpVersion { get; set; }
+
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
@@ -497,6 +501,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public int? IntranetRpcPort { get; set; }
 
+                [NameInMap("IntranetSqlPort")]
+                [Validation(Required=false)]
+                public int? IntranetSqlPort { get; set; }
+
                 [NameInMap("MaxConnectionLimit")]
                 [Validation(Required=false)]
                 public long? MaxConnectionLimit { get; set; }
@@ -504,6 +512,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [NameInMap("MaxConnectionNum")]
                 [Validation(Required=false)]
                 public long? MaxConnectionNum { get; set; }
+
+                [NameInMap("OdpVersion")]
+                [Validation(Required=false)]
+                public string OdpVersion { get; set; }
 
                 [NameInMap("ParallelQueryDegree")]
                 [Validation(Required=false)]

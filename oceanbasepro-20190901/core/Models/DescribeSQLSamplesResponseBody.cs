@@ -202,6 +202,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public double? ObUserId { get; set; }
 
+            [NameInMap("ParamsValue")]
+            [Validation(Required=false)]
+            public string ParamsValue { get; set; }
+
             /// <summary>
             /// Average number of partition accessed during the execution period.
             /// </summary>

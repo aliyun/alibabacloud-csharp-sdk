@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public DescribeInstanceResponseBodyInstance Instance { get; set; }
         public class DescribeInstanceResponseBodyInstance : TeaModel {
+            [NameInMap("AllowCreateProxySqlFirewallRule")]
+            [Validation(Required=false)]
+            public bool? AllowCreateProxySqlFirewallRule { get; set; }
+
             [NameInMap("AllowModifyInternetAddressConnectionLimit")]
             [Validation(Required=false)]
             public bool? AllowModifyInternetAddressConnectionLimit { get; set; }
