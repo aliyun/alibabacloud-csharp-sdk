@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvironmentFeatureRequest : TeaModel {
+        /// <summary>
+        /// Language, en | zh.
+        /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
@@ -27,21 +30,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// 
         /// Valid values:
         /// 
-        /// *   app-agent-pilot
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   metric-agent
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// *   app-agent-pilot: App Pilot agent
+        /// *   arms-cmonitor: ARMS CMonitor agent
+        /// *   metric-agent: Prometheus agent
         /// 
         /// This parameter is required.
         /// </summary>

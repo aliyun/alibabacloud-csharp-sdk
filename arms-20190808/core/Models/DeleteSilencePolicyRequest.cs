@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteSilencePolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the silence policy.
+        /// 
+        /// For more information about how to obtain the ID of a silence policy, see [ListSilencePolicies](https://help.aliyun.com/document_detail/2612383.html).
         /// 
         /// This parameter is required.
         /// </summary>

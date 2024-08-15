@@ -32,6 +32,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The file type. Valid values:
+        /// 
+        /// *   source-map: SourceMap files
+        /// *   mapping: symbol table files for Android
+        /// *   dsym: dSYM files for iOS
+        /// </summary>
         [NameInMap("SourcemapType")]
         [Validation(Required=false)]
         public string SourcemapType { get; set; }

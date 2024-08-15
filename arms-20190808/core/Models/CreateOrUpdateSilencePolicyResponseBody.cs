@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public CreateOrUpdateSilencePolicyResponseBodySilencePolicy SilencePolicy { get; set; }
         public class CreateOrUpdateSilencePolicyResponseBodySilencePolicy : TeaModel {
+            [NameInMap("EffectiveTimeType")]
+            [Validation(Required=false)]
+            public string EffectiveTimeType { get; set; }
+
             /// <summary>
             /// The ID of the silence policy.
             /// </summary>
@@ -89,6 +93,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
+
+            [NameInMap("TimePeriod")]
+            [Validation(Required=false)]
+            public string TimePeriod { get; set; }
+
+            [NameInMap("TimeSlots")]
+            [Validation(Required=false)]
+            public string TimeSlots { get; set; }
 
         }
 

@@ -991,7 +991,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Associates a Prometheus instance with the ID and name of a Flink workspace.
+         * @summary Attaches the workspace ID and workspace name tags to the Prometheus instance corresponding to a Flink workspace.
          *
          * @param request AddTagToFlinkClusterRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1045,7 +1045,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Associates a Prometheus instance with the ID and name of a Flink workspace.
+         * @summary Attaches the workspace ID and workspace name tags to the Prometheus instance corresponding to a Flink workspace.
          *
          * @param request AddTagToFlinkClusterRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1099,7 +1099,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Associates a Prometheus instance with the ID and name of a Flink workspace.
+         * @summary Attaches the workspace ID and workspace name tags to the Prometheus instance corresponding to a Flink workspace.
          *
          * @param request AddTagToFlinkClusterRequest
          * @return AddTagToFlinkClusterResponse
@@ -1111,7 +1111,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Associates a Prometheus instance with the ID and name of a Flink workspace.
+         * @summary Attaches the workspace ID and workspace name tags to the Prometheus instance corresponding to a Flink workspace.
          *
          * @param request AddTagToFlinkClusterRequest
          * @return AddTagToFlinkClusterResponse
@@ -4776,6 +4776,19 @@ namespace AlibabaCloud.SDK.ARMS20190808
         public CreateOrUpdateSilencePolicyResponse CreateOrUpdateSilencePolicyWithOptions(CreateOrUpdateSilencePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTimeType))
+            {
+                query["EffectiveTimeType"] = request.EffectiveTimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimePeriod))
+            {
+                query["TimePeriod"] = request.TimePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeSlots))
+            {
+                query["TimeSlots"] = request.TimeSlots;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
@@ -4799,6 +4812,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4826,6 +4840,19 @@ namespace AlibabaCloud.SDK.ARMS20190808
         public async Task<CreateOrUpdateSilencePolicyResponse> CreateOrUpdateSilencePolicyWithOptionsAsync(CreateOrUpdateSilencePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTimeType))
+            {
+                query["EffectiveTimeType"] = request.EffectiveTimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimePeriod))
+            {
+                query["TimePeriod"] = request.TimePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeSlots))
+            {
+                query["TimeSlots"] = request.TimeSlots;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
@@ -4849,6 +4876,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -15335,7 +15363,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取RUM OCU统计数据
+         * @summary Queries the observability capacity unit (OCU) usage data of Real User Monitoring (RUM).
+         *
+         * @description You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.
          *
          * @param tmpReq GetRumOcuStatisticDataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15375,7 +15405,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取RUM OCU统计数据
+         * @summary Queries the observability capacity unit (OCU) usage data of Real User Monitoring (RUM).
+         *
+         * @description You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.
          *
          * @param tmpReq GetRumOcuStatisticDataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15415,7 +15447,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取RUM OCU统计数据
+         * @summary Queries the observability capacity unit (OCU) usage data of Real User Monitoring (RUM).
+         *
+         * @description You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.
          *
          * @param request GetRumOcuStatisticDataRequest
          * @return GetRumOcuStatisticDataResponse
@@ -15427,7 +15461,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取RUM OCU统计数据
+         * @summary Queries the observability capacity unit (OCU) usage data of Real User Monitoring (RUM).
+         *
+         * @description You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.
          *
          * @param request GetRumOcuStatisticDataRequest
          * @return GetRumOcuStatisticDataResponse

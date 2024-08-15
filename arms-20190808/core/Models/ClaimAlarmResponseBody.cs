@@ -41,7 +41,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? Result { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values: true and false.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// `true`
+        /// 
+        /// `false`
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

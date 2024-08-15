@@ -63,6 +63,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The time interval between data slices. Unit: seconds. Minimum value: 3600.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   3600: hours
+        /// *   86400: days
         /// </summary>
         [NameInMap("IntervalInSec")]
         [Validation(Required=false)]

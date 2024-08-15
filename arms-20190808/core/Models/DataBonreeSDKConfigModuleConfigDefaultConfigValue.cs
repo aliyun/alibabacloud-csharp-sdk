@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class DataBonreeSDKConfigModuleConfigValue : TeaModel {
+    public class DataBonreeSDKConfigModuleConfigDefaultConfigValue : TeaModel {
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }

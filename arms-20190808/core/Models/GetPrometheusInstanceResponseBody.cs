@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public GetPrometheusInstanceResponseBodyData Data { get; set; }
         public class GetPrometheusInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// Permission type: read Write, read Only, http Read Only
+            /// The permission type. Valid values: readWrite, readOnly, and httpReadOnly
             /// </summary>
             [NameInMap("AccessType")]
             [Validation(Required=false)]
@@ -70,10 +70,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
+            /// <summary>
+            /// Backend data storage status.
+            /// </summary>
             [NameInMap("DbInstanceStatus")]
             [Validation(Required=false)]
             public string DbInstanceStatus { get; set; }
 
+            /// <summary>
+            /// Whether to enable access token authentication.
+            /// </summary>
             [NameInMap("EnableAuthToken")]
             [Validation(Required=false)]
             public string EnableAuthToken { get; set; }
@@ -109,6 +115,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string PaymentType { get; set; }
 
+            /// <summary>
+            /// The product to which the prometheus instance belongs.
+            /// - arms
+            /// - cms
+            /// </summary>
             [NameInMap("Product")]
             [Validation(Required=false)]
             public string Product { get; set; }
@@ -197,9 +208,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string SubClustersJson { get; set; }
 
-            [NameInMap("SurpportAuthTypes")]
+            [NameInMap("SupportAuthTypes")]
             [Validation(Required=false)]
-            public List<string> SurpportAuthTypes { get; set; }
+            public List<string> SupportAuthTypes { get; set; }
 
             /// <summary>
             /// The tags of the instance.

@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// The subtype of the environment. Valid values:
         /// 
         /// *   CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)
-        /// *   ECS: Elastic Compute Service (ECS)
+        /// *   ECS: ECS
         /// *   Cloud: cloud service
         /// 
         /// This parameter is required.
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// The type of the environment. Valid values:
         /// 
-        /// *   CS: ACK
-        /// *   ECS: ECS
+        /// *   CS: Container Service
+        /// *   ECS: Elastic Compute Service
         /// *   Cloud: cloud service
         /// 
         /// This parameter is required.
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentType { get; set; }
 
         /// <summary>
-        /// The payable resource plan. Valid values:
+        /// The payable resource plan.
         /// 
         /// *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
         /// *   Otherwise, leave the parameter empty.
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string GrafanaWorkspaceId { get; set; }
 
         /// <summary>
-        /// Whether to initialize the environment.
+        /// Specifies whether to initialize the environment.
         /// </summary>
         [NameInMap("InitEnvironment")]
         [Validation(Required=false)]

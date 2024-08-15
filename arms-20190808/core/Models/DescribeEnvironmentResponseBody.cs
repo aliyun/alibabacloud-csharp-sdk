@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The security group ID bound to the environment.
+            /// The ID of the security group associated with the environment.
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]

@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Labels { get; set; }
 
                 /// <summary>
-                /// The information about the notification policy.
+                /// The associated notification policies.
                 /// </summary>
                 [NameInMap("NotificationPolicies")]
                 [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The number of times the alert is triggered.
+                /// The number of times the event is triggered.
                 /// </summary>
                 [NameInMap("TriggerCount")]
                 [Validation(Required=false)]

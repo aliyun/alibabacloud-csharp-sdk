@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteAlertRuleRequest : TeaModel {
         /// <summary>
-        /// Indicates whether the alert rule was successfully deleted.
+        /// The alert rule ID.
         /// 
-        /// *   `true`: The specified data is deleted.
-        /// *   `false`: The specified data fails to be deleted.
+        /// For more information about how to obtain the ID of an alert rule, see [GetAlertRules](https://help.aliyun.com/document_detail/2612348.html).
         /// 
         /// This parameter is required.
         /// </summary>

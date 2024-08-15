@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// The name of the add-on.
+        /// The name of the add-on. If you assign a value to AddonName, the ReleaseName parameter is ignored and all AddonReleases that belong to the same add-on are deleted.
         /// </summary>
         [NameInMap("AddonName")]
         [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public DescribeEnvironmentFeatureResponseBodyData Data { get; set; }
         public class DescribeEnvironmentFeatureResponseBodyData : TeaModel {
             /// <summary>
-            /// The installation information of the feature.
+            /// The installation information about the feature.
             /// </summary>
             [NameInMap("Feature")]
             [Validation(Required=false)]
@@ -94,7 +94,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The status.
+                /// The installation status of the agent.
+                /// 
+                /// *   Installing: The agent is being installed.
+                /// *   Success: The agent is installed.
+                /// *   Failed: The agent failed to be installed.
+                /// *   UnInstall: The agent is uninstalled or has not been installed.
+                /// *   Uninstalling: The agent is being uninstalled.
+                /// *   UnInstallFailed: The agent failed to be uninstalled.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -116,6 +123,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus FeatureStatus { get; set; }
             public class DescribeEnvironmentFeatureResponseBodyDataFeatureStatus : TeaModel {
+                /// <summary>
+                /// Binded resource ID.
+                /// </summary>
                 [NameInMap("BindResourceId")]
                 [Validation(Required=false)]
                 public string BindResourceId { get; set; }
@@ -135,14 +145,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public List<string> Args { get; set; }
 
                     /// <summary>
-                    /// The image of the container.
+                    /// The container image.
                     /// </summary>
                     [NameInMap("Image")]
                     [Validation(Required=false)]
                     public string Image { get; set; }
 
                     /// <summary>
-                    /// The name of the container.
+                    /// The container name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -150,6 +160,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                 }
 
+                /// <summary>
+                /// IPs for Pod.
+                /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
                 public List<string> Ips { get; set; }
@@ -168,6 +181,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
+                /// <summary>
+                /// The security group ID.
+                /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
@@ -183,6 +199,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The vSwitch ID.
+                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }

@@ -38,13 +38,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public GetRumAppInfoResponseBodyDataBonreeSDKConfig BonreeSDKConfig { get; set; }
             public class GetRumAppInfoResponseBodyDataBonreeSDKConfig : TeaModel {
-                [NameInMap("enable")]
-                [Validation(Required=false)]
-                public bool? Enable { get; set; }
-
                 [NameInMap("moduleConfig")]
                 [Validation(Required=false)]
-                public Dictionary<string, DataBonreeSDKConfigModuleConfigValue> ModuleConfig { get; set; }
+                public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig ModuleConfig { get; set; }
+                public class GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig : TeaModel {
+                    [NameInMap("defaultConfig")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, DataBonreeSDKConfigModuleConfigDefaultConfigValue> DefaultConfig { get; set; }
+
+                    [NameInMap("enable")]
+                    [Validation(Required=false)]
+                    public bool? Enable { get; set; }
+
+                    [NameInMap("versionConfigs")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, DataBonreeSDKConfigModuleConfigVersionConfigsValue> VersionConfigs { get; set; }
+
+                }
 
             }
 
@@ -123,37 +133,42 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// Service domain name configuration list (currently only supports mobile applications).
+            /// The list of service domain configurations. Only mobile applications are supported.
             /// </summary>
             [NameInMap("ServiceDomainConfigs")]
             [Validation(Required=false)]
             public List<GetRumAppInfoResponseBodyDataServiceDomainConfigs> ServiceDomainConfigs { get; set; }
             public class GetRumAppInfoResponseBodyDataServiceDomainConfigs : TeaModel {
                 /// <summary>
-                /// Describe.
+                /// The description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Domain name or IP.
+                /// The domain name or IP address.
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// Trace transparent transmission protocol list, must be transmitted when link tracking is enabled.
+                /// The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.
                 /// </summary>
                 [NameInMap("PropagatorTypes")]
                 [Validation(Required=false)]
                 public List<string> PropagatorTypes { get; set; }
 
+                [NameInMap("SamplingRate")]
+                [Validation(Required=false)]
+                public int? SamplingRate { get; set; }
+
                 /// <summary>
-                /// Whether to enable link tracking (need to enable the observable link Open Telemetry version), value:
-                /// - `true`: Enable link tracking (after enabling, the relevant header will be inserted into the domain name request).
-                /// - `false`: Do not enable link tracking.
+                /// Indicates whether the tracing analysis feature is enabled. To enable the tracing analysis feature, you must activate Managed Service for OpenTelemetry. Valid values:
+                /// 
+                /// *   `true`: enables the tracing analysis feature. If you enable the tracing analysis feature, related headers are inserted into requests for the domain name.
+                /// *   `false`: disables the tracing analysis feature.
                 /// </summary>
                 [NameInMap("Tracing")]
                 [Validation(Required=false)]
@@ -222,7 +237,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

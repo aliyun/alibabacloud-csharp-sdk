@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ClaimAlarmRequest : TeaModel {
         /// <summary>
-        /// The alert ID.
+        /// The ID of the alert.
+        /// 
+        /// For more information about how to obtain the ID of an alert, see [ListAlertEvents](https://help.aliyun.com/document_detail/2612346.html).
         /// 
         /// This parameter is required.
         /// </summary>

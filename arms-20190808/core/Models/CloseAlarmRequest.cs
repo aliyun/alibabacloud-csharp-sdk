@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CloseAlarmRequest : TeaModel {
         /// <summary>
-        /// The alert ID.
+        /// The ID of the alert.
+        /// 
+        /// For more information about how to obtain the ID of an alert, see [ListAlertEvents](https://help.aliyun.com/document_detail/2612346.html).
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? AlarmId { get; set; }
 
         /// <summary>
-        /// The ID of the handler.
+        /// The ID of the alert handler.
         /// </summary>
         [NameInMap("HandlerId")]
         [Validation(Required=false)]
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The solution to the alert.
+        /// The alert solution.
         /// </summary>
         [NameInMap("Solution")]
         [Validation(Required=false)]

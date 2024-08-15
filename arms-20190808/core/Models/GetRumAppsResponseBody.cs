@@ -94,37 +94,38 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// Service domain name configuration list. Currently only supports mobile applications.
+            /// The list of service domain configurations. Only mobile applications are supported.
             /// </summary>
             [NameInMap("ServiceDomainConfigs")]
             [Validation(Required=false)]
             public List<GetRumAppsResponseBodyAppListServiceDomainConfigs> ServiceDomainConfigs { get; set; }
             public class GetRumAppsResponseBodyAppListServiceDomainConfigs : TeaModel {
                 /// <summary>
-                /// Description.
+                /// The description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Domain name or IP.
+                /// The domain name or IP address.
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// Trace transparent transmission protocol list, which must be transmitted when link tracing is enabled.
+                /// The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.
                 /// </summary>
                 [NameInMap("PropagatorTypes")]
                 [Validation(Required=false)]
                 public List<string> PropagatorTypes { get; set; }
 
                 /// <summary>
-                /// Whether to enable link tracking (need to enable the observable link Open Telemetry version), value:
-                /// - `true`: Enable link tracking (after enabling, the relevant header will be inserted into the domain name request).
-                /// - `false`: Do not enable link tracking.
+                /// Indicates whether the tracing analysis feature is enabled. To enable the tracing analysis feature, you must activate Managed Service for OpenTelemetry. Valid values:
+                /// 
+                /// *   `true`: enables the tracing analysis feature. If you enable the tracing analysis feature, related headers are inserted into requests for the domain name.
+                /// *   `false`: disables the tracing analysis feature.
                 /// </summary>
                 [NameInMap("Tracing")]
                 [Validation(Required=false)]
