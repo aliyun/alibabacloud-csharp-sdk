@@ -1,3 +1,7 @@
+2024-08-15 Version: 6.9.0
+- Support API DescribeNatGatewayAssociateNetworkInterfaces.
+
+
 2024-08-09 Version: 6.8.4
 - Update API CreateSnatEntry: add param NetworkInterfaceId.
 - Update API CreateSnatEntry: update param SnatIp.
