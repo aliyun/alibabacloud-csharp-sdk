@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// 
         /// *   CurrentAccount: The current account is used to enable a resource directory.
         /// *   NewManagementAccount: A newly created account is used to enable a resource directory. If you select this mode, you must configure the `MAName`, `MASecureMobilePhone`, and `VerificationCode` parameters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnableMode")]
         [Validation(Required=false)]

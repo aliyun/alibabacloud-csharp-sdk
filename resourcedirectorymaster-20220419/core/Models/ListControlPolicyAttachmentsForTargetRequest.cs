@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// *   Root folder
         /// *   Subfolders of the Root folder
         /// *   Members
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetId")]
         [Validation(Required=false)]

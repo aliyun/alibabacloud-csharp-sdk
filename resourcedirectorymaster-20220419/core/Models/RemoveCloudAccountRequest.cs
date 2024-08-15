@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
     public class RemoveCloudAccountRequest : TeaModel {
         /// <summary>
         /// The Alibaba Cloud account ID of the member.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]

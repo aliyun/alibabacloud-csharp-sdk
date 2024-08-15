@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
     public class DisassociateMembersRequest : TeaModel {
         /// <summary>
         /// The ID of the contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         /// <summary>
         /// The IDs of objects from which you want to unbind the contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]

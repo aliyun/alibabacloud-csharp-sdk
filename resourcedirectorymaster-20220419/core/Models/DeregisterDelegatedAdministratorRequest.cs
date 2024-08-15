@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
     public class DeregisterDelegatedAdministratorRequest : TeaModel {
         /// <summary>
         /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         /// <summary>
         /// The identifier of the trusted service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServicePrincipal")]
         [Validation(Required=false)]

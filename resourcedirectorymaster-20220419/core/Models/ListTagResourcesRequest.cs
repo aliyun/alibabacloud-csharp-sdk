@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// The type of the objects whose tags you want to query. This parameter specifies a filter condition for the query. Valid values:
         /// 
         /// *   Account: member
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

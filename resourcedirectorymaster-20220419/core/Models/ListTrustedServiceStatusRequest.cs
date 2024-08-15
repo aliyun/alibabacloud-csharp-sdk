@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// *   If you set this parameter to the ID of a management account, the trusted services that are enabled within the management account are queried. The default value of this parameter is the ID of an management account.
         /// *   If you set this parameter to the ID of a delegated administrator account, the trusted services that are enabled within the delegated administrator account are queried.
         /// 
-        /// For more information about trusted services and delegated administrator accounts, see [Overview of trusted services](~~208133~~) and [Delegated administrator accounts](~~208117~~).
+        /// For more information about trusted services and delegated administrator accounts, see [Overview of trusted services](https://help.aliyun.com/document_detail/208133.html) and [Delegated administrator accounts](https://help.aliyun.com/document_detail/208117.html).
         /// </summary>
         [NameInMap("AdminAccountId")]
         [Validation(Required=false)]

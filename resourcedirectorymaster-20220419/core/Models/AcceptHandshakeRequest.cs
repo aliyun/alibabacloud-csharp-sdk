@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// The ID of the invitation.
         /// 
         /// You can call the [ListHandshakesForAccount](~~ListHandshakesForAccount~~) operation to obtain the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HandshakeId")]
         [Validation(Required=false)]

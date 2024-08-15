@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
     public class BindSecureMobilePhoneRequest : TeaModel {
         /// <summary>
         /// The Alibaba Cloud account ID of the member.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
@@ -21,9 +23,11 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// 
         /// The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the [SendVerificationCodeForBindSecureMobilePhone](~~SendVerificationCodeForBindSecureMobilePhone~~) operation to obtain a verification code.
         /// 
-        /// Specify the mobile phone number in the \<Country code>-\<Mobile phone number> format.
+        /// Specify the mobile phone number in the \\<Country code>-\\<Mobile phone number> format.
         /// 
         /// > Mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are not supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecureMobilePhone")]
         [Validation(Required=false)]
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// The verification code.
         /// 
         /// You can call the [SendVerificationCodeForBindSecureMobilePhone](~~SendVerificationCodeForBindSecureMobilePhone~~) operation to obtain the verification code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VerificationCode")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
     public class ListAncestorsRequest : TeaModel {
         /// <summary>
         /// The ID of the subfolder.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChildId")]
         [Validation(Required=false)]

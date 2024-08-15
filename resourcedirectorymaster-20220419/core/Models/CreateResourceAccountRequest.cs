@@ -29,9 +29,11 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// 
         /// The name must be 2 to 50 characters in length.
         /// 
-        /// The name can contain letters, digits, underscores (\_), periods (.), hyphens (-), and spaces.
+        /// The name can contain letters, digits, underscores (_), periods (.), hyphens (-), and spaces.
         /// 
         /// The name must be unique in the resource directory.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// The ID of the billing account. If you leave this parameter empty, the member is used as its own billing account.
+        /// The ID of the billing account. If you leave this parameter empty, the newly created member is used as its billing account.
         /// </summary>
         [NameInMap("PayerAccountId")]
         [Validation(Required=false)]

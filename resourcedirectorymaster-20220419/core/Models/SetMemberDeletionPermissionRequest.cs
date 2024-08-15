@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// 
         /// *   Enabled: enables the member deletion feature.
         /// *   Disabled: disables the member deletion feature.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

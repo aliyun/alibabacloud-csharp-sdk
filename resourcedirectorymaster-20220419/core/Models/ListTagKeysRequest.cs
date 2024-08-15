@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// The resource type.
         /// 
         /// The value Account indicates the members of the resource directory.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

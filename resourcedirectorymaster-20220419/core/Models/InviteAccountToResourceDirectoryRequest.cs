@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         /// <summary>
         /// The ID or logon email address of the account that you want to invite.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetEntity")]
         [Validation(Required=false)]
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// 
         /// *   Account: indicates the ID of the account.
         /// *   Email: indicates the logon email address of the account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

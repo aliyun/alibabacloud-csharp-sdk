@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// <summary>
         /// The identifier of the trusted service.
         /// 
-        /// For more information, see the `Trusted service identifier` column in [Supported trusted services](~~208133~~).
+        /// For more information, see the `Trusted service identifier` column in [Supported trusted services](https://help.aliyun.com/document_detail/208133.html).
         /// </summary>
         [NameInMap("ServicePrincipal")]
         [Validation(Required=false)]

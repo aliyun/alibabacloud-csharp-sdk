@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
     public class MoveAccountRequest : TeaModel {
         /// <summary>
         /// The Alibaba Cloud account ID of the member that you want to move.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         /// <summary>
         /// The ID of the destination folder.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationFolderId")]
         [Validation(Required=false)]

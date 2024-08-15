@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         /// <summary>
         /// The ID of the access control policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

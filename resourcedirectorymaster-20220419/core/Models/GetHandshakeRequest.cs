@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
     public class GetHandshakeRequest : TeaModel {
         /// <summary>
         /// The ID of the invitation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HandshakeId")]
         [Validation(Required=false)]

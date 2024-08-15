@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetAccountResponseBody : TeaModel {
         /// <summary>
-        /// The information of the member.
+        /// The information about the member.
         /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]
@@ -56,6 +56,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
+            /// <summary>
+            /// Indicates whether a mobile phone number is bound to the member for security purposes. Valid values:
+            /// 
+            /// *   true
+            /// *   false
+            /// </summary>
             [NameInMap("HasSecureMobilePhone")]
             [Validation(Required=false)]
             public bool? HasSecureMobilePhone { get; set; }
@@ -135,14 +141,14 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             public List<GetAccountResponseBodyAccountTags> Tags { get; set; }
             public class GetAccountResponseBodyAccountTags : TeaModel {
                 /// <summary>
-                /// A tag key.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// A tag value.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

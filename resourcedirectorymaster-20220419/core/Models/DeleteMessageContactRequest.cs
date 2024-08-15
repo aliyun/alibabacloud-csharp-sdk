@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
     public class DeleteMessageContactRequest : TeaModel {
         /// <summary>
         /// The ID of the contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]

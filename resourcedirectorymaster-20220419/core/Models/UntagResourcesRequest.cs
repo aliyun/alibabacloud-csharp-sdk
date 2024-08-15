@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// The Alibaba Cloud account IDs of the members.
         /// 
         /// You can specify a maximum of 50 IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// The type of the objects from which you want to remove tags. Valid values:
         /// 
         /// *   Account: member
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

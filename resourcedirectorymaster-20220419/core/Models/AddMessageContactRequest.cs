@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// The email address of the contact.
         /// 
         /// After you specify an email address, you need to call [SendEmailVerificationForMessageContact](~~SendEmailVerificationForMessageContact~~) to send verification information to the email address. After the verification is passed, the email address takes effect.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EmailAddress")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         /// <summary>
         /// The types of messages received by the contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MessageTypes")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// The name must be unique in your resource directory.
         /// 
         /// The name must be 2 to 12 characters in length and can contain only letters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -101,6 +107,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         ///     <!-- -->
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
