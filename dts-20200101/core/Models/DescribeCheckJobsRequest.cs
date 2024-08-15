@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeCheckJobsRequest : TeaModel {
+        [NameInMap("CheckJobId")]
+        [Validation(Required=false)]
+        public string CheckJobId { get; set; }
+
         [NameInMap("CheckType")]
         [Validation(Required=false)]
         public int? CheckType { get; set; }

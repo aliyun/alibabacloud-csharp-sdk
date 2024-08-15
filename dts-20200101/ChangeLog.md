@@ -1,3 +1,8 @@
+2024-08-15 Version: 1.5.2
+- Update API DescribeCheckJobs: add param CheckJobId.
+- Update API DescribeDtsJobs: update response param.
+
+
 2024-07-24 Version: 1.5.1
 - Generated csharp 2020-01-01 for Dts.
 

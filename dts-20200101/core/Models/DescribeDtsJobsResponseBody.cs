@@ -410,6 +410,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public string DtsJobName { get; set; }
 
+            [NameInMap("DuRealUsage")]
+            [Validation(Required=false)]
+            public string DuRealUsage { get; set; }
+
             /// <summary>
             /// The number of DUs that have been used.
             /// </summary>

@@ -5170,6 +5170,10 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckJobId))
+            {
+                query["CheckJobId"] = request.CheckJobId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckType))
             {
                 query["CheckType"] = request.CheckType;
@@ -5224,6 +5228,10 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckJobId))
+            {
+                query["CheckJobId"] = request.CheckJobId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckType))
             {
                 query["CheckType"] = request.CheckType;
