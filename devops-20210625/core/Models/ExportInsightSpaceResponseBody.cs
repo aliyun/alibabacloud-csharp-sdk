@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string Category { get; set; }
 
+            [NameInMap("customCode")]
+            [Validation(Required=false)]
+            public string CustomCode { get; set; }
+
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
