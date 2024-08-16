@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("EngineType")]
+        [Validation(Required=false)]
+        public string EngineType { get; set; }
+
         /// <summary>
         /// The ID of the instance to which data in the column of the table belongs.
         /// 
@@ -42,6 +46,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("ModelTagId")]
+        [Validation(Required=false)]
+        public string ModelTagId { get; set; }
+
         /// <summary>
         /// The search keyword. Fuzzy match is supported.
         /// 
@@ -64,6 +72,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
+
+        [NameInMap("ProductId")]
+        [Validation(Required=false)]
+        public string ProductId { get; set; }
 
         /// <summary>
         /// The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:
@@ -122,6 +134,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("TableName")]
         [Validation(Required=false)]
         public string TableName { get; set; }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
+
+        [NameInMap("TemplateRuleId")]
+        [Validation(Required=false)]
+        public string TemplateRuleId { get; set; }
 
     }
 

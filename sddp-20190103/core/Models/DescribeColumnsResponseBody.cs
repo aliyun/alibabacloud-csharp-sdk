@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
             /// <summary>
             /// The ID of the revision record.
             /// </summary>
