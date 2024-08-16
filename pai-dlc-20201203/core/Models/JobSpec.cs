@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class JobSpec : TeaModel {
+        [NameInMap("AssignNodeSpec")]
+        [Validation(Required=false)]
+        public AssignNodeSpec AssignNodeSpec { get; set; }
+
         [NameInMap("EcsSpec")]
         [Validation(Required=false)]
         public string EcsSpec { get; set; }
