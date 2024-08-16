@@ -233,6 +233,114 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         }
 
         /**
+         * @summary 文档结构化流式接口
+         *
+         * @param request GetDocParserResultRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDocParserResultResponse
+         */
+        public GetDocParserResultResponse GetDocParserResultWithOptions(GetDocParserResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LayoutNum))
+            {
+                query["LayoutNum"] = request.LayoutNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LayoutStepSize))
+            {
+                query["LayoutStepSize"] = request.LayoutStepSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDocParserResult",
+                Version = "2022-07-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDocParserResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 文档结构化流式接口
+         *
+         * @param request GetDocParserResultRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDocParserResultResponse
+         */
+        public async Task<GetDocParserResultResponse> GetDocParserResultWithOptionsAsync(GetDocParserResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LayoutNum))
+            {
+                query["LayoutNum"] = request.LayoutNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LayoutStepSize))
+            {
+                query["LayoutStepSize"] = request.LayoutStepSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDocParserResult",
+                Version = "2022-07-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDocParserResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 文档结构化流式接口
+         *
+         * @param request GetDocParserResultRequest
+         * @return GetDocParserResultResponse
+         */
+        public GetDocParserResultResponse GetDocParserResult(GetDocParserResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDocParserResultWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 文档结构化流式接口
+         *
+         * @param request GetDocParserResultRequest
+         * @return GetDocParserResultResponse
+         */
+        public async Task<GetDocParserResultResponse> GetDocParserResultAsync(GetDocParserResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDocParserResultWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 文档智能解析结果查询
          *
          * @param request GetDocStructureResultRequest
@@ -254,6 +362,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevealMarkdown))
             {
                 query["RevealMarkdown"] = request.RevealMarkdown;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseUrlResponseBody))
+            {
+                query["UseUrlResponseBody"] = request.UseUrlResponseBody;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -296,6 +408,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevealMarkdown))
             {
                 query["RevealMarkdown"] = request.RevealMarkdown;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseUrlResponseBody))
+            {
+                query["UseUrlResponseBody"] = request.UseUrlResponseBody;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -798,6 +914,98 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTableUnderstandingResultWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 获取文档智能解析处理状态
+         *
+         * @param request QueryDocParserStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryDocParserStatusResponse
+         */
+        public QueryDocParserStatusResponse QueryDocParserStatusWithOptions(QueryDocParserStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDocParserStatus",
+                Version = "2022-07-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDocParserStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取文档智能解析处理状态
+         *
+         * @param request QueryDocParserStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryDocParserStatusResponse
+         */
+        public async Task<QueryDocParserStatusResponse> QueryDocParserStatusWithOptionsAsync(QueryDocParserStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDocParserStatus",
+                Version = "2022-07-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDocParserStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取文档智能解析处理状态
+         *
+         * @param request QueryDocParserStatusRequest
+         * @return QueryDocParserStatusResponse
+         */
+        public QueryDocParserStatusResponse QueryDocParserStatus(QueryDocParserStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDocParserStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取文档智能解析处理状态
+         *
+         * @param request QueryDocParserStatusRequest
+         * @return QueryDocParserStatusResponse
+         */
+        public async Task<QueryDocParserStatusResponse> QueryDocParserStatusAsync(QueryDocParserStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDocParserStatusWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -2431,6 +2639,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             {
                 query["RevealMarkdown"] = request.RevealMarkdown;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseUrlResponseBody))
+            {
+                query["UseUrlResponseBody"] = request.UseUrlResponseBody;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2480,6 +2692,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevealMarkdown))
             {
                 query["RevealMarkdown"] = request.RevealMarkdown;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseUrlResponseBody))
+            {
+                query["UseUrlResponseBody"] = request.UseUrlResponseBody;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2686,6 +2902,286 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             }
             SubmitDigitalDocStructureJobResponse submitDigitalDocStructureJobResp = await SubmitDigitalDocStructureJobWithOptionsAsync(submitDigitalDocStructureJobReq, runtime);
             return submitDigitalDocStructureJobResp;
+        }
+
+        /**
+         * @summary 文档智能解析流式输出
+         *
+         * @param request SubmitDocParserJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitDocParserJobResponse
+         */
+        public SubmitDocParserJobResponse SubmitDocParserJobWithOptions(SubmitDocParserJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileNameExtension))
+            {
+                query["FileNameExtension"] = request.FileNameExtension;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                query["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormulaEnhancement))
+            {
+                query["FormulaEnhancement"] = request.FormulaEnhancement;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitDocParserJob",
+                Version = "2022-07-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitDocParserJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 文档智能解析流式输出
+         *
+         * @param request SubmitDocParserJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitDocParserJobResponse
+         */
+        public async Task<SubmitDocParserJobResponse> SubmitDocParserJobWithOptionsAsync(SubmitDocParserJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileNameExtension))
+            {
+                query["FileNameExtension"] = request.FileNameExtension;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                query["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormulaEnhancement))
+            {
+                query["FormulaEnhancement"] = request.FormulaEnhancement;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitDocParserJob",
+                Version = "2022-07-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitDocParserJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 文档智能解析流式输出
+         *
+         * @param request SubmitDocParserJobRequest
+         * @return SubmitDocParserJobResponse
+         */
+        public SubmitDocParserJobResponse SubmitDocParserJob(SubmitDocParserJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitDocParserJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 文档智能解析流式输出
+         *
+         * @param request SubmitDocParserJobRequest
+         * @return SubmitDocParserJobResponse
+         */
+        public async Task<SubmitDocParserJobResponse> SubmitDocParserJobAsync(SubmitDocParserJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitDocParserJobWithOptionsAsync(request, runtime);
+        }
+
+        public SubmitDocParserJobResponse SubmitDocParserJobAdvance(SubmitDocParserJobAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            string accessKeyId = this._credential.GetAccessKeyId();
+            string accessKeySecret = this._credential.GetAccessKeySecret();
+            string securityToken = this._credential.GetSecurityToken();
+            string credentialType = this._credential.GetType();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            {
+                Product = "docmind-api",
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
+            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                Type = "access_key",
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
+            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
+            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
+            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            SubmitDocParserJobRequest submitDocParserJobReq = new SubmitDocParserJobRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, submitDocParserJobReq);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrlObject))
+            {
+                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
+                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponse.Body.ObjectKey,
+                    Content = request.FileUrlObject,
+                    ContentType = "",
+                };
+                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                {
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
+                    File = fileObj,
+                    SuccessActionStatus = "201",
+                };
+                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+                {
+                    BucketName = authResponse.Body.Bucket,
+                    Header = ossHeader,
+                };
+                ossClient.PostObject(uploadRequest, ossRuntime);
+                submitDocParserJobReq.FileUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+            }
+            SubmitDocParserJobResponse submitDocParserJobResp = SubmitDocParserJobWithOptions(submitDocParserJobReq, runtime);
+            return submitDocParserJobResp;
+        }
+
+        public async Task<SubmitDocParserJobResponse> SubmitDocParserJobAdvanceAsync(SubmitDocParserJobAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
+            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
+            string securityToken = await this._credential.GetSecurityTokenAsync();
+            string credentialType = this._credential.GetType();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            {
+                Product = "docmind-api",
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
+            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                Type = "access_key",
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
+            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
+            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
+            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            SubmitDocParserJobRequest submitDocParserJobReq = new SubmitDocParserJobRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, submitDocParserJobReq);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrlObject))
+            {
+                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
+                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponse.Body.ObjectKey,
+                    Content = request.FileUrlObject,
+                    ContentType = "",
+                };
+                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                {
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
+                    File = fileObj,
+                    SuccessActionStatus = "201",
+                };
+                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+                {
+                    BucketName = authResponse.Body.Bucket,
+                    Header = ossHeader,
+                };
+                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
+                submitDocParserJobReq.FileUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+            }
+            SubmitDocParserJobResponse submitDocParserJobResp = await SubmitDocParserJobWithOptionsAsync(submitDocParserJobReq, runtime);
+            return submitDocParserJobResp;
         }
 
         /**

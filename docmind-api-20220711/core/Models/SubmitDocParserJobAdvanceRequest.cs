@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
-    public class SubmitDigitalDocStructureJobAdvanceRequest : TeaModel {
+    public class SubmitDocParserJobAdvanceRequest : TeaModel {
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
@@ -21,17 +21,9 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public Stream FileUrlObject { get; set; }
 
-        [NameInMap("ImageStrategy")]
+        [NameInMap("FormulaEnhancement")]
         [Validation(Required=false)]
-        public string ImageStrategy { get; set; }
-
-        [NameInMap("RevealMarkdown")]
-        [Validation(Required=false)]
-        public bool? RevealMarkdown { get; set; }
-
-        [NameInMap("UseUrlResponseBody")]
-        [Validation(Required=false)]
-        public bool? UseUrlResponseBody { get; set; }
+        public bool? FormulaEnhancement { get; set; }
 
     }
 

@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
-    public class GetDocStructureResultRequest : TeaModel {
+    public class GetDocParserResultRequest : TeaModel {
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
-        [NameInMap("ImageStrategy")]
+        [NameInMap("LayoutNum")]
         [Validation(Required=false)]
-        public string ImageStrategy { get; set; }
+        public int? LayoutNum { get; set; }
 
-        [NameInMap("RevealMarkdown")]
+        [NameInMap("LayoutStepSize")]
         [Validation(Required=false)]
-        public bool? RevealMarkdown { get; set; }
-
-        [NameInMap("UseUrlResponseBody")]
-        [Validation(Required=false)]
-        public bool? UseUrlResponseBody { get; set; }
+        public int? LayoutStepSize { get; set; }
 
     }
 
