@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AppendInstancesToPrometheusGlobalViewResponseBody : TeaModel {
+        /// <summary>
+        /// Status code. 200 means success, other status codes are exceptions.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -46,6 +49,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// Additional message.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The application ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Pid")]
         [Validation(Required=false)]

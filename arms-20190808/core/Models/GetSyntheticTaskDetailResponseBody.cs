@@ -162,6 +162,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public long? EndMinute { get; set; }
 
+                /// <summary>
+                /// 周期结束时间 ，格式为yyyy-MM-dd HH。
+                /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
@@ -187,6 +190,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public long? StartMinute { get; set; }
 
+                /// <summary>
+                /// 周期开始时间，格式yyyy-MM-dd HH 。
+                /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
@@ -215,14 +221,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public long? IntervalTime { get; set; }
 
+            /// <summary>
+            /// 监测周期类型：
+            /// 
+            /// 0：每天
+            /// 1：自定义扩展频率
+            /// </summary>
             [NameInMap("IntervalType")]
             [Validation(Required=false)]
             public long? IntervalType { get; set; }
 
+            /// <summary>
+            /// IP类型：
+            /// 
+            /// 0：自动
+            /// 1：IPv4
+            /// 2：IPv6
+            /// </summary>
             [NameInMap("IpType")]
             [Validation(Required=false)]
             public long? IpType { get; set; }
 
+            /// <summary>
+            /// 拨测任务的检测点列表。
+            /// </summary>
             [NameInMap("MonitorList")]
             [Validation(Required=false)]
             public List<GetSyntheticTaskDetailResponseBodyTaskDetailMonitorList> MonitorList { get; set; }
@@ -234,14 +256,26 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public long? CityCode { get; set; }
 
+                /// <summary>
+                /// 监测类型：
+                /// - IDC
+                /// - LastMilie
+                /// - Mobile
+                /// </summary>
                 [NameInMap("MonitorType")]
                 [Validation(Required=false)]
                 public long? MonitorType { get; set; }
 
+                /// <summary>
+                /// 运营商ID。
+                /// </summary>
                 [NameInMap("NetServiceId")]
                 [Validation(Required=false)]
                 public long? NetServiceId { get; set; }
 
+                /// <summary>
+                /// 下发次数。
+                /// </summary>
                 [NameInMap("SendCount")]
                 [Validation(Required=false)]
                 public long? SendCount { get; set; }
@@ -566,6 +600,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
+            /// <summary>
+            /// 任务类型：
+            /// 
+            /// 3：网页性能-IE
+            /// 34：网页性能-Chrome
+            /// 0：网络质量
+            /// 40：文件下载
+            /// 7：API性能
+            /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public long? TaskType { get; set; }

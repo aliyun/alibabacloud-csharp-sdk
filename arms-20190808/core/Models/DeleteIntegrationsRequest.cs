@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteIntegrationsRequest : TeaModel {
         /// <summary>
+        /// The ID of the alert integration.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("IntegrationId")]

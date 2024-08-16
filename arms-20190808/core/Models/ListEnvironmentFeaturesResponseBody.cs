@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentFeaturesResponseBody : TeaModel {
+        /// <summary>
+        /// Status Code. Description 200 indicates success.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -72,6 +75,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string LatestVersion { get; set; }
 
+            /// <summary>
+            /// Whether hosted scenario.
+            /// </summary>
             [NameInMap("Managed")]
             [Validation(Required=false)]
             public bool? Managed { get; set; }
@@ -106,6 +112,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// The returned message.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -117,6 +126,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the alert rule was deleted. Valid values:
+        /// 
+        /// *   `true`: The alert rule was deleted.
+        /// *   `false`: The alert rule failed to be deleted.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

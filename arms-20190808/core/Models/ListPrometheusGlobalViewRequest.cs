@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListPrometheusGlobalViewRequest : TeaModel {
         /// <summary>
+        /// The ID of the region.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

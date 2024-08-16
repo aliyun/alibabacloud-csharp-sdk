@@ -8223,7 +8223,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除feature信息
+         * @summary Deletes a feature.
          *
          * @param request DeleteEnvironmentFeatureRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8265,7 +8265,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除feature信息
+         * @summary Deletes a feature.
          *
          * @param request DeleteEnvironmentFeatureRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8307,7 +8307,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除feature信息
+         * @summary Deletes a feature.
          *
          * @param request DeleteEnvironmentFeatureRequest
          * @return DeleteEnvironmentFeatureResponse
@@ -8319,7 +8319,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除feature信息
+         * @summary Deletes a feature.
          *
          * @param request DeleteEnvironmentFeatureRequest
          * @return DeleteEnvironmentFeatureResponse
@@ -9031,7 +9031,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.
+         * @summary Deletes an alert rule of Prometheus Service.
          *
          * @param request DeletePrometheusAlertRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9069,7 +9069,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.
+         * @summary Deletes an alert rule of Prometheus Service.
          *
          * @param request DeletePrometheusAlertRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9107,7 +9107,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.
+         * @summary Deletes an alert rule of Prometheus Service.
          *
          * @param request DeletePrometheusAlertRuleRequest
          * @return DeletePrometheusAlertRuleResponse
@@ -9119,7 +9119,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.
+         * @summary Deletes an alert rule of Prometheus Service.
          *
          * @param request DeletePrometheusAlertRuleRequest
          * @return DeletePrometheusAlertRuleResponse
@@ -20571,7 +20571,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取账号下聚合实例列表
+         * @summary Creates a global aggregation instance in Prometheus Service and obtains the list of global aggregation instances.
          *
          * @param request ListPrometheusGlobalViewRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20605,7 +20605,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取账号下聚合实例列表
+         * @summary Creates a global aggregation instance in Prometheus Service and obtains the list of global aggregation instances.
          *
          * @param request ListPrometheusGlobalViewRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20639,7 +20639,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取账号下聚合实例列表
+         * @summary Creates a global aggregation instance in Prometheus Service and obtains the list of global aggregation instances.
          *
          * @param request ListPrometheusGlobalViewRequest
          * @return ListPrometheusGlobalViewResponse
@@ -20651,7 +20651,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取账号下聚合实例列表
+         * @summary Creates a global aggregation instance in Prometheus Service and obtains the list of global aggregation instances.
          *
          * @param request ListPrometheusGlobalViewRequest
          * @return ListPrometheusGlobalViewResponse
@@ -23531,7 +23531,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 重新启动 feature信息
+         * @summary Restarts a feature.
          *
          * @param request RestartEnvironmentFeatureRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23573,7 +23573,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 重新启动 feature信息
+         * @summary Restarts a feature.
          *
          * @param request RestartEnvironmentFeatureRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23615,7 +23615,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 重新启动 feature信息
+         * @summary Restarts a feature.
          *
          * @param request RestartEnvironmentFeatureRequest
          * @return RestartEnvironmentFeatureResponse
@@ -23627,7 +23627,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 重新启动 feature信息
+         * @summary Restarts a feature.
          *
          * @param request RestartEnvironmentFeatureRequest
          * @return RestartEnvironmentFeatureResponse
@@ -25591,7 +25591,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 启动定时拨测任务
+         * @summary Starts scheduled synthetic monitoring tasks.
          *
          * @param tmpReq StartTimingSyntheticTaskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -25635,7 +25635,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 启动定时拨测任务
+         * @summary Starts scheduled synthetic monitoring tasks.
          *
          * @param tmpReq StartTimingSyntheticTaskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -25679,7 +25679,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 启动定时拨测任务
+         * @summary Starts scheduled synthetic monitoring tasks.
          *
          * @param request StartTimingSyntheticTaskRequest
          * @return StartTimingSyntheticTaskResponse
@@ -25691,7 +25691,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 启动定时拨测任务
+         * @summary Starts scheduled synthetic monitoring tasks.
          *
          * @param request StartTimingSyntheticTaskRequest
          * @return StartTimingSyntheticTaskResponse
@@ -26233,9 +26233,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
          *
-         * @summary Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.
+         * @summary Uninstalls a managed Prometheus agent for a serverless Kubernetes (ASK) cluster, Distributed Cloud Container Platform for Kubernetes (ACK One) cluster, or Elastic Compute Service (ECS) cluster.
          *
-         * @description Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
+         * @description This operation is available only for ASK, ECS, and ACK One clusters. Before you call this operation, make sure that a managed Prometheus agent is installed for your cluster.
          *
          * @param request UninstallManagedPrometheusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -26288,9 +26288,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
          *
-         * @summary Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.
+         * @summary Uninstalls a managed Prometheus agent for a serverless Kubernetes (ASK) cluster, Distributed Cloud Container Platform for Kubernetes (ACK One) cluster, or Elastic Compute Service (ECS) cluster.
          *
-         * @description Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
+         * @description This operation is available only for ASK, ECS, and ACK One clusters. Before you call this operation, make sure that a managed Prometheus agent is installed for your cluster.
          *
          * @param request UninstallManagedPrometheusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -26343,9 +26343,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
          *
-         * @summary Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.
+         * @summary Uninstalls a managed Prometheus agent for a serverless Kubernetes (ASK) cluster, Distributed Cloud Container Platform for Kubernetes (ACK One) cluster, or Elastic Compute Service (ECS) cluster.
          *
-         * @description Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
+         * @description This operation is available only for ASK, ECS, and ACK One clusters. Before you call this operation, make sure that a managed Prometheus agent is installed for your cluster.
          *
          * @param request UninstallManagedPrometheusRequest
          * @return UninstallManagedPrometheusResponse
@@ -26360,9 +26360,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
          *
-         * @summary Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.
+         * @summary Uninstalls a managed Prometheus agent for a serverless Kubernetes (ASK) cluster, Distributed Cloud Container Platform for Kubernetes (ACK One) cluster, or Elastic Compute Service (ECS) cluster.
          *
-         * @description Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
+         * @description This operation is available only for ASK, ECS, and ACK One clusters. Before you call this operation, make sure that a managed Prometheus agent is installed for your cluster.
          *
          * @param request UninstallManagedPrometheusRequest
          * @return UninstallManagedPrometheusResponse
@@ -29855,7 +29855,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 更新 feature信息
+         * @summary Updates the feature information of an environment.
          *
          * @param request UpgradeEnvironmentFeatureRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -29909,7 +29909,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 更新 feature信息
+         * @summary Updates the feature information of an environment.
          *
          * @param request UpgradeEnvironmentFeatureRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -29963,7 +29963,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 更新 feature信息
+         * @summary Updates the feature information of an environment.
          *
          * @param request UpgradeEnvironmentFeatureRequest
          * @return UpgradeEnvironmentFeatureResponse
@@ -29975,7 +29975,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 更新 feature信息
+         * @summary Updates the feature information of an environment.
          *
          * @param request UpgradeEnvironmentFeatureRequest
          * @return UpgradeEnvironmentFeatureResponse

@@ -9,20 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeletePrometheusAlertRuleResponseBody : TeaModel {
+        /// <summary>
+        /// Status code. 200 means success, other status codes are exceptions.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// More Information.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Indicates whether the alert rule was deleted. Valid values:
+        /// 
+        /// *   `true`: The alert rule was deleted.
+        /// *   `false`: The alert rule failed to be deleted.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

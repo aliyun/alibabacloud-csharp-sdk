@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class QueryMetricByPageRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: `1`.
+        /// The page number. Default value: `1`.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The time interval at which data entries are aggregated. Unit: milliseconds. Minimum value: 60000.
+        /// The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000.
         /// </summary>
         [NameInMap("IntervalInSec")]
         [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page.
+        /// This parameter is no longer supported. The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

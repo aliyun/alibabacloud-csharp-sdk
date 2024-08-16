@@ -24,7 +24,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The type of the cluster. Valid values: ask and ecs.
+        /// The cluster type.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   ecs: ECS
+        /// *   one: ACK One
+        /// *   ask: ASK
+        /// *   pro: Container Monitoring Pro
         /// 
         /// This parameter is required.
         /// </summary>
@@ -33,14 +40,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The ID of the Grafana workspace in which the cluster resides. If you set this parameter to free or leave this parameter empty, the cluster is deployed in a shared Grafana workspace.
+        /// The ID of the managed Grafana workspace that is associated with the cluster. If you set this parameter to free or leave this parameter empty, the cluster is associated with a shared Grafana workspace.
         /// </summary>
         [NameInMap("GrafanaInstanceId")]
         [Validation(Required=false)]
         public string GrafanaInstanceId { get; set; }
 
         /// <summary>
-        /// The parameter is not supported.
+        /// This parameter is not supported.
         /// </summary>
         [NameInMap("KubeConfig")]
         [Validation(Required=false)]
@@ -53,9 +60,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// Prometheus实例的资源组ID。
-        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

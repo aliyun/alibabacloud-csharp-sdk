@@ -17,12 +17,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
+        /// The environment ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

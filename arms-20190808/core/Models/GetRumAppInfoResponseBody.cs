@@ -58,6 +58,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             }
 
+            /// <summary>
+            /// The domain name of the SDK.
+            /// </summary>
             [NameInMap("CdnDomain")]
             [Validation(Required=false)]
             public string CdnDomain { get; set; }

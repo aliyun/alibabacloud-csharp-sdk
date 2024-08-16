@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteRumUploadFileRequest : TeaModel {
+        /// <summary>
+        /// Information of files to be deleted in JSON array format. If a single file needs to be deleted, this field should be left empty. If multiple files need to be deleted, just fill in this field.
+        /// </summary>
         [NameInMap("BatchItems")]
         [Validation(Required=false)]
         public string BatchItems { get; set; }

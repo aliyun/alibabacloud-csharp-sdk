@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// The returned message.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// Backend data storage status.
+            /// The data storage status at the backend.
             /// </summary>
             [NameInMap("DbInstanceStatus")]
             [Validation(Required=false)]
             public string DbInstanceStatus { get; set; }
 
             /// <summary>
-            /// Whether to enable access token authentication.
+            /// Indicates whether access token authentication is enabled.
             /// </summary>
             [NameInMap("EnableAuthToken")]
             [Validation(Required=false)]
@@ -116,9 +116,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// The product to which the prometheus instance belongs.
-            /// - arms
-            /// - cms
+            /// The product to which the Prometheus instance belongs. Valid values: arms and cms.
             /// </summary>
             [NameInMap("Product")]
             [Validation(Required=false)]

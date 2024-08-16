@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UninstallManagedPrometheusRequest : TeaModel {
         /// <summary>
-        /// The ID of the ASK cluster. This parameter is required if the ClusterType parameter is set to ask.
+        /// The ID of the Container Service for Kubernetes (ACK) cluster. This parameter is required when the ClusterType parameter is set to ask or one.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The type of the monitoring object. Valid values: ask and ecs.
+        /// The cluster type. Valid values: ask, ecs, and one.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.
+        /// The ID of the virtual private cloud (VPC) where the cluster resides.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
