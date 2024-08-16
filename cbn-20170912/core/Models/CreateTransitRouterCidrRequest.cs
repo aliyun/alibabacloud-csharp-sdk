@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? PublishCidrRoute { get; set; }
 
         /// <summary>
-        /// The region ID of the transit router.
+        /// The ID of the region to which the transfer router belongs.
         /// 
         /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
         /// 

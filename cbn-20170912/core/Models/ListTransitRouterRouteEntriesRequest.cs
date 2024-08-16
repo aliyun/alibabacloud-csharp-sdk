@@ -89,19 +89,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The route ID.
-        /// 
-        /// >  You can use this parameter to query only static routes in the specified route table. This parameter is incompatible with query conditions other than TransitRouterRouteEntryNames.
         /// </summary>
         [NameInMap("TransitRouterRouteEntryIds")]
         [Validation(Required=false)]
         public List<string> TransitRouterRouteEntryIds { get; set; }
 
         /// <summary>
-        /// The name of the route.
-        /// 
-        /// The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
-        /// 
-        /// >  You can use this parameter to query only static routes in the specified route table. This parameter conflicts with other query conditions except for TransitRouterRouteEntryIds.
+        /// The route name.
         /// </summary>
         [NameInMap("TransitRouterRouteEntryNames")]
         [Validation(Required=false)]

@@ -40,9 +40,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string QosQueueName { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("RemainBandwidthPercent")]
         [Validation(Required=false)]
         public string RemainBandwidthPercent { get; set; }

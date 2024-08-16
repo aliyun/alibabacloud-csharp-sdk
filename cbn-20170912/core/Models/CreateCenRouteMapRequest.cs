@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenRouteMapRequest : TeaModel {
         /// <summary>
-        /// The match method that is used to match routes based on AS paths. Valid values:
+        /// The match method that is used to match routes based on the AS path. Valid values:
         /// 
-        /// *   **Include**: fuzzy match. A route meets the match condition if the AS path of the route overlaps with the AS path specified in the match condition.
-        /// *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as an AS path specified in the match condition.
+        /// *   **Include**: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path in the match conditions.
+        /// *   **Complete**: exact match. A route is a match only if the AS path of the route matches the AS path in the match conditions.
         /// </summary>
         [NameInMap("AsPathMatchMode")]
         [Validation(Required=false)]
@@ -44,28 +44,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// *   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.
         /// 
-        /// For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is applied, the route whose prefix is 10.10.1.0/24 meets the match condition.
+        /// For example, if you set the match condition to 1.1.0.0/16 and fuzzy match is applied, the route whose prefix is 1.1.1.0/24 meets the match condition.
         /// 
         /// *   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.
         /// 
-        /// For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
+        /// For example, if you set the match condition to 1.1.0.0/16 and exact match is applied, only the route whose prefix is 1.1.0.0/16 meets the match condition.
         /// </summary>
         [NameInMap("CidrMatchMode")]
         [Validation(Required=false)]
         public string CidrMatchMode { get; set; }
 
         /// <summary>
-        /// The match method that is used to evaluate routes based on the community. Valid values:
+        /// The match method that is used to match routes based on the community. Valid values:
         /// 
-        /// *   **Include**: fuzzy match. A route meets the match condition if the community of the route overlaps with the community specified in the match condition.
-        /// *   **Complete**: exact match. A route meets the match condition only if the community of the route is the same as the community specified in the match condition.
+        /// *   **Include**: fuzzy match. A route is a match if the community of the route overlaps with the community in the match conditions.
+        /// *   **Complete**: exact match. A route is a match only if the community of the route matches the community in the match conditions.
         /// </summary>
         [NameInMap("CommunityMatchMode")]
         [Validation(Required=false)]
         public string CommunityMatchMode { get; set; }
 
         /// <summary>
-        /// The action that is performed on the community. Valid values:
+        /// The action to be performed on the community. Valid values:
         /// 
         /// *   **Additive**: adds the community to the route.
         /// *   **Replace**: replaces the original community of the route.
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The description of the routing policy.
         /// 
-        /// The description must be 2 to 256 characters in length, and can contain letters, digits, hyphens (-), periods (.), and underscores (_). It must start with a letter and cannot start with `http://` or `https://`.
+        /// This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -133,10 +133,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> DestinationInstanceIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to exclude the destination network instance IDs. Valid values:
+        /// Specifies whether to exclude destination instance IDs. Valid values:
         /// 
-        /// *   **false** (default value): A route meets the match condition if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
-        /// *   **true**: A route meets the match condition if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
+        /// *   **false** (default): A route is a match if the destination instance ID is included in the list specified by **SourceInstanceIds.N**.
+        /// *   **true**: A route is a match if the destination network instance ID is not in the list specified by **SourceInstanceIds.N**.
         /// </summary>
         [NameInMap("DestinationInstanceIdsReverseMatch")]
         [Validation(Required=false)]
@@ -324,10 +324,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> SourceInstanceIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to exclude the source network instance IDs. Valid values:
+        /// Specifies whether to exclude source instance IDs. Valid values:
         /// 
-        /// *   **false** (default value): A route meets the match condition if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
-        /// *   **true**: A route is a match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
+        /// *   **false** (default): A route is a match if the source instance ID is included in the list specified by **SourceInstanceIds.N**.
+        /// *   **true**: A route is a match if the source network instance ID is not in the list specified by **SourceInstanceIds.N**.
         /// </summary>
         [NameInMap("SourceInstanceIdsReverseMatch")]
         [Validation(Required=false)]

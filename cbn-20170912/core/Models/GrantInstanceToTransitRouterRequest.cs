@@ -37,11 +37,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The type of the network instance. Valid values:
+        /// The type of network instance. Valid values:
         /// 
         /// *   **VPC**: VPC
         /// *   **ExpressConnect**: VBR
-        /// *   **VPN**: IPsec connection
+        /// *   **VPN**: IPsec-VPN connection
+        /// *   **ECR**: ECR
         /// 
         /// This parameter is required.
         /// </summary>

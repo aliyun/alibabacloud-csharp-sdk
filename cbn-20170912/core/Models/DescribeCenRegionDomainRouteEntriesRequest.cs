@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRegionDomainRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The CEN instance ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of the region that you want to query.
+        /// The region ID.
         /// 
         /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+        /// The number of entries per page. Valid values: **1** to **500**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -60,13 +60,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the routes that you want to query. Valid values:
+        /// The route status. Valid values:
         /// 
-        /// *   **Active** (default value): active routes
-        /// *   **Candidate**: standby routes
-        /// *   **Rejected**: rejected routes
-        /// *   **Prohibited**: prohibited routes
-        /// *   **All**: all routes
+        /// *   **Active** (default): available
+        /// *   **Candidate**: standby
+        /// *   **Rejected**: rejected
+        /// *   **Prohibited**: prohibited
+        /// *   **All** (default value): all routes
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

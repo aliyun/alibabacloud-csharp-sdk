@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the transit router is deployed.
+        /// The region ID of the transit router.
         /// 
         /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
         /// </summary>

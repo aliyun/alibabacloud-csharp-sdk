@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosQueuesResponseBody : TeaModel {
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// - If NextToken was not returned, it indicates that no additional results exist.
-        /// - If NextToken was returned in the previous query, specify the value to obtain the next set of results.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value of **NextToken** is returned, the value indicates the token that is used for the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -27,34 +27,34 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// A list of queues.
+        /// The information about the QoS queue.
         /// </summary>
         [NameInMap("TrafficQosQueues")]
         [Validation(Required=false)]
         public List<ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues> TrafficQosQueues { get; set; }
         public class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues : TeaModel {
             /// <summary>
-            /// The differentiated services code point (DSCP) value that matches the current queue.
+            /// The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.
             /// </summary>
             [NameInMap("Dscps")]
             [Validation(Required=false)]
             public List<int?> Dscps { get; set; }
 
             /// <summary>
-            /// The percentage of bandwidth resources that can be allocated to the current queue.
+            /// The percentage of the inter-region bandwidth that can be consumed by the QoS queue.
             /// 
-            /// For example, a value of 1 indicates that 1 percent of bandwidth resources can be allocated to the queue.
+            /// A value of **1** indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.
             /// </summary>
             [NameInMap("RemainBandwidthPercent")]
             [Validation(Required=false)]
             public int? RemainBandwidthPercent { get; set; }
 
             /// <summary>
-            /// The status of the queue. Valid values:
+            /// The status of the QoS queue. Valid values:
             /// 
-            /// - **Creating**: The queue is being created. 
-            /// - **Active**: The queue is available. 
-            /// - **Deleting**: The queue is being deleted.
+            /// *   **Creating**
+            /// *   **Active**
+            /// *   **Deleting**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -68,21 +68,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosPolicyId { get; set; }
 
             /// <summary>
-            /// The description of the queue.
+            /// The description of the QoS queue.
             /// </summary>
             [NameInMap("TrafficQosQueueDescription")]
             [Validation(Required=false)]
             public string TrafficQosQueueDescription { get; set; }
 
             /// <summary>
-            /// The ID of the queue.
+            /// The ID of the QoS queue.
             /// </summary>
             [NameInMap("TrafficQosQueueId")]
             [Validation(Required=false)]
             public string TrafficQosQueueId { get; set; }
 
             /// <summary>
-            /// The name of the queue.
+            /// The name of the QoS queue.
             /// </summary>
             [NameInMap("TrafficQosQueueName")]
             [Validation(Required=false)]

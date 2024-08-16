@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeFlowlogsResponseBody : TeaModel {
         /// <summary>
-        /// A list of flow logs.
+        /// The information about the flow log.
         /// </summary>
         [NameInMap("FlowLogs")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeFlowlogsResponseBodyFlowLogsFlowLog> FlowLog { get; set; }
             public class DescribeFlowlogsResponseBodyFlowLogsFlowLog : TeaModel {
                 /// <summary>
-                /// The ID of the CEN instance.
+                /// The ID of the Cloud Enterprise Network (CEN) instance.
                 /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string FlowLogVersion { get; set; }
 
                 /// <summary>
-                /// The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.
+                /// The time window for collecting log data. Unit: seconds. Valid values: **60** or **600** Default value: **600**.
                 /// </summary>
                 [NameInMap("Interval")]
                 [Validation(Required=false)]
@@ -73,21 +73,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string LogFormatString { get; set; }
 
                 /// <summary>
-                /// The name of the Logstore where the flow log is stored.
+                /// The Logstore that stores the captured traffic data.
                 /// </summary>
                 [NameInMap("LogStoreName")]
                 [Validation(Required=false)]
                 public string LogStoreName { get; set; }
 
                 /// <summary>
-                /// The name of the project where the flow log is stored.
+                /// The name of the project that stores the captured traffic data.
                 /// </summary>
                 [NameInMap("ProjectName")]
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the flow log is deployed.
+                /// The region ID of the flow log.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The ID of the network instance connection.
+                /// The ID of the network instance connection
                 /// </summary>
                 [NameInMap("TransitRouterAttachmentId")]
                 [Validation(Required=false)]

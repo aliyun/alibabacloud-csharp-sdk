@@ -78,9 +78,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? SupportMulticast { get; set; }
 
         /// <summary>
-        /// The information about the tags.
-        /// 
-        /// You can specify at most 20 tags in each call.
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -89,9 +87,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The tag key.
             /// 
-            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The tag keys cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
             /// 
-            /// You can specify at most 20 tag keys.
+            /// You can specify at most 20 tag keys in each call.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -100,9 +98,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The tag value.
             /// 
-            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag value can be an empty string or up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each key-value must be unique. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -111,11 +109,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The CIDR blocks of the transit router.
-        /// 
-        /// You can add up to five CIDR blocks at a time. For more information about CIDR blocks of transit routers, see [CIDR blocks of transit routers](https://help.aliyun.com/document_detail/462635.html).
-        /// 
-        /// >  Only Enterprise Edition transit routers support CIDR blocks.
+        /// The CIDR blocks to be added to the transit router.
         /// </summary>
         [NameInMap("TransitRouterCidrList")]
         [Validation(Required=false)]
@@ -129,7 +123,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Cidr { get; set; }
 
             /// <summary>
-            /// The description of the CIDR block.
+            /// The description of the transit router CIDR block.
             /// 
             /// The description must be 1 to 256 characters in length.
             /// </summary>
@@ -138,7 +132,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The name of the CIDR block.
+            /// The name of the transit router CIDR block.
             /// 
             /// The name must be 1 to 128 characters in length.
             /// </summary>
@@ -149,15 +143,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
             /// 
-            /// *   **true** (default): yes.
+            /// *   **true** (default)
             /// 
-            ///     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached.
+            ///     If you set the value to true, after you create a VPN attachment on a private VPN gateway and enable route learning for the VPN attachment, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN attachment:
             /// 
-            ///     The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.
+            ///     A blackhole route whose destination CIDR block is the transit router CIDR block, which refers to the CIDR block from which gateway IP addresses are allocated to the IPsec-VPN connection.
             /// 
-            ///     The blackhole route is only advertised to the route table of the virtual border router (VBR) that is connected to the transit router.
+            ///     The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.
             /// 
-            /// *   **false**: no.
+            /// *   **false**
             /// </summary>
             [NameInMap("PublishCidrRoute")]
             [Validation(Required=false)]

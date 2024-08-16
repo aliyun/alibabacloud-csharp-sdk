@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query.
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// 
-        /// - If NextToken was not returned in the previous query, it indicates that no additional results exist.
-        /// - If NextToken was returned in the previous query, specify the value to obtain the next set of results.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value of **NextToken** is returned, the value indicates the token that is used for the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -50,7 +50,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosPolicyId { get; set; }
 
         /// <summary>
-        /// The description of the queue.
+        /// The description of the QoS queue.
+        /// 
+        /// This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
         /// </summary>
         [NameInMap("TrafficQosQueueDescription")]
         [Validation(Required=false)]
@@ -64,7 +66,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosQueueId { get; set; }
 
         /// <summary>
-        /// The name of the queue.
+        /// The name of the QoS queue.
+        /// 
+        /// The name must be 1 to 128 characters in length, and cannot start with http:// or https://.
         /// </summary>
         [NameInMap("TrafficQosQueueName")]
         [Validation(Required=false)]

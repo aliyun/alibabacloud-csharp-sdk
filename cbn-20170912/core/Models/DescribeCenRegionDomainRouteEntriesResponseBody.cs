@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRegionDomainRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// The array of routes.
+        /// A list of route entries.
         /// </summary>
         [NameInMap("CenRouteEntries")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry> CenRouteEntry { get; set; }
             public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry : TeaModel {
                 /// <summary>
-                /// The AS paths of the routes.
+                /// The AS paths of the route.
                 /// </summary>
                 [NameInMap("AsPaths")]
                 [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The route maps that the routes match in the outbound direction.
+                /// The routing policy that the routes match in the outbound direction.
                 /// </summary>
                 [NameInMap("CenOutRouteMapRecords")]
                 [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord> CenOutRouteMapRecord { get; set; }
                     public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord : TeaModel {
                         /// <summary>
-                        /// The ID of the region where the route map is applied.
+                        /// The ID of the region where the routing policy is applied.
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The ID of the route map.
+                        /// The ID of the routing policy.
                         /// </summary>
                         [NameInMap("RouteMapId")]
                         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The route maps that the routes match in the inbound direction.
+                /// The routing policy that the routes match in the inbound direction.
                 /// </summary>
                 [NameInMap("CenRouteMapRecords")]
                 [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord> CenRouteMapRecord { get; set; }
                     public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord : TeaModel {
                         /// <summary>
-                        /// The ID of the region where the route map is applied.
+                        /// The ID of the region where the routing policy is applied.
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The ID of the route map.
+                        /// The ID of the routing policy.
                         /// </summary>
                         [NameInMap("RouteMapId")]
                         [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The community attributes of the routes.
+                /// The communities of the route.
                 /// </summary>
                 [NameInMap("Communities")]
                 [Validation(Required=false)]
@@ -119,61 +119,61 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string NextHopInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the network instance specified as the next hop in the route belongs.
+                /// The ID of the region to which the network instance specified as the next hop in the route belongs.
                 /// </summary>
                 [NameInMap("NextHopRegionId")]
                 [Validation(Required=false)]
                 public string NextHopRegionId { get; set; }
 
                 /// <summary>
-                /// The type of the network instance specified as the next hop in the route. 
+                /// The type of the instance specified as the next hop in the route. Valid values:
                 /// 
-                /// - **VPC**
-                /// - **VBR**
-                /// - **CCN**
-                /// - **local_service**: system route. No next hop is specified.
+                /// *   **VPC**: virtual private cloud (VPC)
+                /// *   **VBR**: virtual border router (VBR)
+                /// *   **CCN**: Cloud Connect Network (CCN) instance
+                /// *   **local_service**: system route. No next hop is specified.
                 /// </summary>
                 [NameInMap("NextHopType")]
                 [Validation(Required=false)]
                 public string NextHopType { get; set; }
 
                 /// <summary>
-                /// The priority of the route. 
+                /// The route priority.
                 /// 
-                /// > A smaller value indicates a higher priority.
+                /// A smaller value indicates a higher priority.
                 /// </summary>
                 [NameInMap("Preference")]
                 [Validation(Required=false)]
                 public int? Preference { get; set; }
 
                 /// <summary>
-                /// The status of the route. Valid values: 
+                /// The route status. Valid values:
                 /// 
-                /// - **Active**: The route is active.
-                /// - **Candidate**: The route is a standby route.
-                /// - **Rejected**: The route is rejected.
-                /// - **Prohibited**: The route is prohibited.
+                /// *   **Active**: available
+                /// *   **Candidate**: standby
+                /// *   **Rejected**: rejected
+                /// *   **Prohibited**: prohibited
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// Whether the route can be advertised to other regions. Valid values: 
+                /// Indicates whether the route can be advertised to other regions. Valid values:
                 /// 
-                /// - **Active**: The route can be advertised to other regions.
-                /// - **Prohibited**: The route cannot be advertised to other regions.
+                /// *   **Active**: The route can be advertised to other regions.
+                /// *   **Prohibited**: The route cannot be advertised to other regions.
                 /// </summary>
                 [NameInMap("ToOtherRegionStatus")]
                 [Validation(Required=false)]
                 public string ToOtherRegionStatus { get; set; }
 
                 /// <summary>
-                /// The type of the route. Valid values: 
+                /// The route type. Valid values:
                 /// 
-                /// - **CEN**: route that is advertised through CEN
-                /// - **Custom**: custom route
-                /// - **System**: system route
+                /// *   **CEN**: route that is advertised through CEN
+                /// *   **Custom**: custom route
+                /// *   **System**: system route
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -191,14 +191,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

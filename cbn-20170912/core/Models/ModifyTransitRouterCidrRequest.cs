@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        /// > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -64,15 +64,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
-        /// - **true**: yes
-        ///   
-        ///   A value of **true** specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds the following blackhole route to the route table of the transit router to which the VPN connection is attached:
+        /// Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router. Valid values:
         /// 
-        ///    The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. 
+        /// *   **true**
         /// 
-        ///     The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. 
-        /// -  **false**: no
+        ///     If you specify true, create a private VPN connection, and enable route learning for the VPN connection, the system automatically adds the following route to the transit router route table that is in route learning relationship with the VPN connection: a blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which IP addresses of IPsec-VPN connections are allocated. The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.
+        /// 
+        /// *   **false**
         /// </summary>
         [NameInMap("PublishCidrRoute")]
         [Validation(Required=false)]
