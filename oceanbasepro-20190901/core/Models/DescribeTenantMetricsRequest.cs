@@ -57,17 +57,11 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         [Obsolete]
         public string TenantId { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("TenantIdList")]
         [Validation(Required=false)]
         public string TenantIdList { get; set; }
