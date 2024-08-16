@@ -38,6 +38,160 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         }
 
         /**
+         * @summary 根据类型调用大模型
+         *
+         * @param request AnalyzeConversationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AnalyzeConversationResponse
+         */
+        public AnalyzeConversationResponse AnalyzeConversationWithOptions(string workspaceId, string appId, AnalyzeConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dialogue))
+            {
+                body["dialogue"] = request.Dialogue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExampleList))
+            {
+                body["exampleList"] = request.ExampleList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                body["modelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultTypes))
+            {
+                body["resultTypes"] = request.ResultTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneName))
+            {
+                body["sceneName"] = request.SceneName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInspection))
+            {
+                body["serviceInspection"] = request.ServiceInspection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnalyzeConversation",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ccai/app/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appId) + "/analyze_conversation",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AnalyzeConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 根据类型调用大模型
+         *
+         * @param request AnalyzeConversationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AnalyzeConversationResponse
+         */
+        public async Task<AnalyzeConversationResponse> AnalyzeConversationWithOptionsAsync(string workspaceId, string appId, AnalyzeConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dialogue))
+            {
+                body["dialogue"] = request.Dialogue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExampleList))
+            {
+                body["exampleList"] = request.ExampleList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                body["modelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultTypes))
+            {
+                body["resultTypes"] = request.ResultTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneName))
+            {
+                body["sceneName"] = request.SceneName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInspection))
+            {
+                body["serviceInspection"] = request.ServiceInspection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnalyzeConversation",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ccai/app/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appId) + "/analyze_conversation",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AnalyzeConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 根据类型调用大模型
+         *
+         * @param request AnalyzeConversationRequest
+         * @return AnalyzeConversationResponse
+         */
+        public AnalyzeConversationResponse AnalyzeConversation(string workspaceId, string appId, AnalyzeConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AnalyzeConversationWithOptions(workspaceId, appId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 根据类型调用大模型
+         *
+         * @param request AnalyzeConversationRequest
+         * @return AnalyzeConversationResponse
+         */
+        public async Task<AnalyzeConversationResponse> AnalyzeConversationAsync(string workspaceId, string appId, AnalyzeConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AnalyzeConversationWithOptionsAsync(workspaceId, appId, request, headers, runtime);
+        }
+
+        /**
          * @summary CCAI服务面API
          *
          * @param request RunCompletionRequest
