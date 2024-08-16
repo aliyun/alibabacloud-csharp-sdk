@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
         /// <summary>
         /// The renewal duration. Unit: month.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("duration")]
         [Validation(Required=false)]

@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// *   PostPaid: pay-as-you-go
         /// 
         /// > This parameter is invalid for shared instances. Shared instances have fixed specifications and are pay-as-you-go instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("chargeType")]
         [Validation(Required=false)]
@@ -105,6 +107,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
         /// <summary>
         /// The name of the Hologres instance that you want to purchase. The name must be 2 to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("instanceName")]
         [Validation(Required=false)]
@@ -117,6 +121,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// *   Follower: read-only secondary instance
         /// *   Warehouse: virtual warehouse instance
         /// *   Shared: shared instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("instanceType")]
         [Validation(Required=false)]
@@ -161,6 +167,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
         /// <summary>
         /// The ID of the region. You can go to the [OpenAPI Explorer](https://api.aliyun.com/product/Hologram) or the Usage notes section to view the ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
@@ -184,6 +192,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
         /// <summary>
         /// The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the instance resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("vSwitchId")]
         [Validation(Required=false)]
@@ -191,6 +201,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
         /// <summary>
         /// The ID of the virtual private cloud (VPC). The region in which the VPC resides must be the same as the region in which the Hologres instance resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]
@@ -198,6 +210,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
         /// <summary>
         /// The ID of the zone. For more information about how to obtain the ID of the zone, see the Usage notes section.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("zoneId")]
         [Validation(Required=false)]

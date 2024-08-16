@@ -67,6 +67,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// *   If you set this parameter to UPGRADE, the new specifications must be higher than the original specifications. You must configure at least one of the cpu, storageSize, and coldStorageSize parameters. If you leave a parameter empty, the related configuration remains unchanged.
         /// 
         /// *   If you set this parameter to DOWNGRADE, the new specifications must be lower than the original specifications. You must configure at least one of the cpu, storageSize, and coldStorageSize parameters. If you leave a parameter empty, the related configuration remains unchanged.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("scaleType")]
         [Validation(Required=false)]
