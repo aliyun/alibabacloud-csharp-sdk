@@ -163,6 +163,10 @@ namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501
             {
                 query["sessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
+            {
+                query["timeRange"] = request.TimeRange;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -202,6 +206,10 @@ namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRange))
+            {
+                query["timeRange"] = request.TimeRange;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
