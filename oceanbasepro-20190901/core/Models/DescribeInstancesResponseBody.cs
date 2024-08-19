@@ -244,6 +244,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public long? Mem { get; set; }
 
+            [NameInMap("ObRpmVersion")]
+            [Validation(Required=false)]
+            public string ObRpmVersion { get; set; }
+
             /// <summary>
             /// The billing method for the OceanBase cluster. Valid values:  
             /// - PREPAY: the subscription billing method.  
