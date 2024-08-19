@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> InstanceGroupIds { get; set; }
 
+        [NameInMap("InstanceGroupInfos")]
+        [Validation(Required=false)]
+        public List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> InstanceGroupInfos { get; set; }
+        public class CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos : TeaModel {
+            [NameInMap("InstanceGroupId")]
+            [Validation(Required=false)]
+            public string InstanceGroupId { get; set; }
+
+            [NameInMap("InstanceIds")]
+            [Validation(Required=false)]
+            public List<string> InstanceIds { get; set; }
+
+        }
+
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }

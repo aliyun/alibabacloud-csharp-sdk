@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
-    public class CreatePolicyGroupRequest : TeaModel {
+    public class ModifyPolicyGroupShrinkRequest : TeaModel {
         [NameInMap("CameraRedirect")]
         [Validation(Required=false)]
         public string CameraRedirect { get; set; }
@@ -27,31 +27,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         [NameInMap("NetRedirectPolicy")]
         [Validation(Required=false)]
-        public CreatePolicyGroupRequestNetRedirectPolicy NetRedirectPolicy { get; set; }
-        public class CreatePolicyGroupRequestNetRedirectPolicy : TeaModel {
-            [NameInMap("NetRedirect")]
-            [Validation(Required=false)]
-            public string NetRedirect { get; set; }
+        public string NetRedirectPolicyShrink { get; set; }
 
-            [NameInMap("NetRedirectRule")]
-            [Validation(Required=false)]
-            public List<CreatePolicyGroupRequestNetRedirectPolicyNetRedirectRule> NetRedirectRule { get; set; }
-            public class CreatePolicyGroupRequestNetRedirectPolicyNetRedirectRule : TeaModel {
-                [NameInMap("Policy")]
-                [Validation(Required=false)]
-                public string Policy { get; set; }
-
-                [NameInMap("RuleType")]
-                [Validation(Required=false)]
-                public string RuleType { get; set; }
-
-                [NameInMap("Target")]
-                [Validation(Required=false)]
-                public string Target { get; set; }
-
-            }
-
-        }
+        [NameInMap("PolicyGroupId")]
+        [Validation(Required=false)]
+        public string PolicyGroupId { get; set; }
 
         [NameInMap("PolicyGroupName")]
         [Validation(Required=false)]

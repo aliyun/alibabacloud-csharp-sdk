@@ -517,6 +517,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
             {
                 query["GpuAcceleration"] = request.GpuAcceleration;
@@ -606,6 +610,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 query["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
             {
@@ -841,6 +849,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -883,6 +895,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -1033,13 +1049,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /**
          * @summary 创建策略
          *
-         * @param request CreatePolicyGroupRequest
+         * @param tmpReq CreatePolicyGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreatePolicyGroupResponse
          */
-        public CreatePolicyGroupResponse CreatePolicyGroupWithOptions(CreatePolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreatePolicyGroupResponse CreatePolicyGroupWithOptions(CreatePolicyGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePolicyGroupShrinkRequest request = new CreatePolicyGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetRedirectPolicy))
+            {
+                request.NetRedirectPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetRedirectPolicy, "NetRedirectPolicy", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraRedirect))
             {
@@ -1056,6 +1078,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 body["LocalDrive"] = request.LocalDrive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetRedirectPolicyShrink))
+            {
+                body["NetRedirectPolicy"] = request.NetRedirectPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupName))
             {
@@ -1091,13 +1117,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /**
          * @summary 创建策略
          *
-         * @param request CreatePolicyGroupRequest
+         * @param tmpReq CreatePolicyGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreatePolicyGroupResponse
          */
-        public async Task<CreatePolicyGroupResponse> CreatePolicyGroupWithOptionsAsync(CreatePolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreatePolicyGroupResponse> CreatePolicyGroupWithOptionsAsync(CreatePolicyGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePolicyGroupShrinkRequest request = new CreatePolicyGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetRedirectPolicy))
+            {
+                request.NetRedirectPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetRedirectPolicy, "NetRedirectPolicy", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraRedirect))
             {
@@ -1114,6 +1146,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 body["LocalDrive"] = request.LocalDrive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetRedirectPolicyShrink))
+            {
+                body["NetRedirectPolicy"] = request.NetRedirectPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupName))
             {
@@ -1821,6 +1857,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["InstanceGroupId"] = request.InstanceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupIds))
+            {
+                query["InstanceGroupIds"] = request.InstanceGroupIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
             {
                 query["KeyPairId"] = request.KeyPairId;
@@ -1882,6 +1922,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupId))
             {
                 query["InstanceGroupId"] = request.InstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupIds))
+            {
+                query["InstanceGroupIds"] = request.InstanceGroupIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
             {
@@ -3553,6 +3597,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["InstanceGroupIdList"] = request.InstanceGroupIdList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
+            {
+                query["InstanceIdList"] = request.InstanceIdList;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3590,6 +3638,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupIdList))
             {
                 query["InstanceGroupIdList"] = request.InstanceGroupIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
+            {
+                query["InstanceIdList"] = request.InstanceIdList;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4177,13 +4229,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /**
          * @summary 修改policy
          *
-         * @param request ModifyPolicyGroupRequest
+         * @param tmpReq ModifyPolicyGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyPolicyGroupResponse
          */
-        public ModifyPolicyGroupResponse ModifyPolicyGroupWithOptions(ModifyPolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyPolicyGroupResponse ModifyPolicyGroupWithOptions(ModifyPolicyGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyPolicyGroupShrinkRequest request = new ModifyPolicyGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetRedirectPolicy))
+            {
+                request.NetRedirectPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetRedirectPolicy, "NetRedirectPolicy", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraRedirect))
             {
@@ -4200,6 +4258,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 body["LocalDrive"] = request.LocalDrive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetRedirectPolicyShrink))
+            {
+                body["NetRedirectPolicy"] = request.NetRedirectPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
             {
@@ -4239,13 +4301,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /**
          * @summary 修改policy
          *
-         * @param request ModifyPolicyGroupRequest
+         * @param tmpReq ModifyPolicyGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyPolicyGroupResponse
          */
-        public async Task<ModifyPolicyGroupResponse> ModifyPolicyGroupWithOptionsAsync(ModifyPolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyPolicyGroupResponse> ModifyPolicyGroupWithOptionsAsync(ModifyPolicyGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyPolicyGroupShrinkRequest request = new ModifyPolicyGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetRedirectPolicy))
+            {
+                request.NetRedirectPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetRedirectPolicy, "NetRedirectPolicy", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraRedirect))
             {
@@ -4262,6 +4330,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 body["LocalDrive"] = request.LocalDrive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetRedirectPolicyShrink))
+            {
+                body["NetRedirectPolicy"] = request.NetRedirectPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
             {
