@@ -9041,7 +9041,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建故障演练任务
+         * @summary Creates a failover test.
+         *
+         * @description You cannot create a failover test in the following scenarios:
+         * *   You have created a failover test in the region and its type is StartNow.
+         * *   The Express Connect circuit or hosted connection has pending orders or overdue payments.
+         * *   A failover test is already performed on the Express Connect circuit or hosted connection.
+         * *   More than one hosted connection is created over the Express Connect circuit.
+         * *   More than one cross-account VBR is created on the Express Connect circuit.
+         * *   No VBR is associated with the hosted connection.
+         * *   The VLAN ID of the hosted connection is set to 0.
          *
          * @param request CreateFailoverTestJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9123,7 +9132,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建故障演练任务
+         * @summary Creates a failover test.
+         *
+         * @description You cannot create a failover test in the following scenarios:
+         * *   You have created a failover test in the region and its type is StartNow.
+         * *   The Express Connect circuit or hosted connection has pending orders or overdue payments.
+         * *   A failover test is already performed on the Express Connect circuit or hosted connection.
+         * *   More than one hosted connection is created over the Express Connect circuit.
+         * *   More than one cross-account VBR is created on the Express Connect circuit.
+         * *   No VBR is associated with the hosted connection.
+         * *   The VLAN ID of the hosted connection is set to 0.
          *
          * @param request CreateFailoverTestJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9205,7 +9223,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建故障演练任务
+         * @summary Creates a failover test.
+         *
+         * @description You cannot create a failover test in the following scenarios:
+         * *   You have created a failover test in the region and its type is StartNow.
+         * *   The Express Connect circuit or hosted connection has pending orders or overdue payments.
+         * *   A failover test is already performed on the Express Connect circuit or hosted connection.
+         * *   More than one hosted connection is created over the Express Connect circuit.
+         * *   More than one cross-account VBR is created on the Express Connect circuit.
+         * *   No VBR is associated with the hosted connection.
+         * *   The VLAN ID of the hosted connection is set to 0.
          *
          * @param request CreateFailoverTestJobRequest
          * @return CreateFailoverTestJobResponse
@@ -9217,7 +9244,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 创建故障演练任务
+         * @summary Creates a failover test.
+         *
+         * @description You cannot create a failover test in the following scenarios:
+         * *   You have created a failover test in the region and its type is StartNow.
+         * *   The Express Connect circuit or hosted connection has pending orders or overdue payments.
+         * *   A failover test is already performed on the Express Connect circuit or hosted connection.
+         * *   More than one hosted connection is created over the Express Connect circuit.
+         * *   More than one cross-account VBR is created on the Express Connect circuit.
+         * *   No VBR is associated with the hosted connection.
+         * *   The VLAN ID of the hosted connection is set to 0.
          *
          * @param request CreateFailoverTestJobRequest
          * @return CreateFailoverTestJobResponse
@@ -13065,7 +13101,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Creates an order for resource usage fees.
+         * @summary Creates an order for resource occupation of an Express Connect circuit.
          *
          * @description >  You can call this operation only when the Express Connect circuit is in the **Complete** state.
          *
@@ -13141,7 +13177,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Creates an order for resource usage fees.
+         * @summary Creates an order for resource occupation of an Express Connect circuit.
          *
          * @description >  You can call this operation only when the Express Connect circuit is in the **Complete** state.
          *
@@ -13217,7 +13253,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Creates an order for resource usage fees.
+         * @summary Creates an order for resource occupation of an Express Connect circuit.
          *
          * @description >  You can call this operation only when the Express Connect circuit is in the **Complete** state.
          *
@@ -13231,7 +13267,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Creates an order for resource usage fees.
+         * @summary Creates an order for resource occupation of an Express Connect circuit.
          *
          * @description >  You can call this operation only when the Express Connect circuit is in the **Complete** state.
          *
@@ -49201,6 +49237,186 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 查询路由发布情况
+         *
+         * @param request ListVpcPublishedRouteEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListVpcPublishedRouteEntriesResponse
+         */
+        public ListVpcPublishedRouteEntriesResponse ListVpcPublishedRouteEntriesWithOptions(ListVpcPublishedRouteEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidrBlock))
+            {
+                query["DestinationCidrBlock"] = request.DestinationCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableId))
+            {
+                query["RouteTableId"] = request.RouteTableId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                query["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcPublishedRouteEntries",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcPublishedRouteEntriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询路由发布情况
+         *
+         * @param request ListVpcPublishedRouteEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListVpcPublishedRouteEntriesResponse
+         */
+        public async Task<ListVpcPublishedRouteEntriesResponse> ListVpcPublishedRouteEntriesWithOptionsAsync(ListVpcPublishedRouteEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidrBlock))
+            {
+                query["DestinationCidrBlock"] = request.DestinationCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableId))
+            {
+                query["RouteTableId"] = request.RouteTableId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                query["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcPublishedRouteEntries",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcPublishedRouteEntriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询路由发布情况
+         *
+         * @param request ListVpcPublishedRouteEntriesRequest
+         * @return ListVpcPublishedRouteEntriesResponse
+         */
+        public ListVpcPublishedRouteEntriesResponse ListVpcPublishedRouteEntries(ListVpcPublishedRouteEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVpcPublishedRouteEntriesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询路由发布情况
+         *
+         * @param request ListVpcPublishedRouteEntriesRequest
+         * @return ListVpcPublishedRouteEntriesResponse
+         */
+        public async Task<ListVpcPublishedRouteEntriesResponse> ListVpcPublishedRouteEntriesAsync(ListVpcPublishedRouteEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVpcPublishedRouteEntriesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the association between VPN gateways and certificates in a region.
          *
          * @description When you call **ListVpnCertificateAssociations**, take note of the following information:
@@ -60513,6 +60729,170 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 发布VPC路由
+         *
+         * @param request PublishVpcRouteEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PublishVpcRouteEntriesResponse
+         */
+        public PublishVpcRouteEntriesResponse PublishVpcRouteEntriesWithOptions(PublishVpcRouteEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteEntries))
+            {
+                query["RouteEntries"] = request.RouteEntries;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                query["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishVpcRouteEntries",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishVpcRouteEntriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 发布VPC路由
+         *
+         * @param request PublishVpcRouteEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PublishVpcRouteEntriesResponse
+         */
+        public async Task<PublishVpcRouteEntriesResponse> PublishVpcRouteEntriesWithOptionsAsync(PublishVpcRouteEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteEntries))
+            {
+                query["RouteEntries"] = request.RouteEntries;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                query["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishVpcRouteEntries",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishVpcRouteEntriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 发布VPC路由
+         *
+         * @param request PublishVpcRouteEntriesRequest
+         * @return PublishVpcRouteEntriesResponse
+         */
+        public PublishVpcRouteEntriesResponse PublishVpcRouteEntries(PublishVpcRouteEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PublishVpcRouteEntriesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 发布VPC路由
+         *
+         * @param request PublishVpcRouteEntriesRequest
+         * @return PublishVpcRouteEntriesResponse
+         */
+        public async Task<PublishVpcRouteEntriesResponse> PublishVpcRouteEntriesAsync(PublishVpcRouteEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PublishVpcRouteEntriesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Advertises a VPN route to a VPC.
          *
          * @param request PublishVpnRouteEntryRequest
@@ -68434,6 +68814,170 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await VpcDescribeVpcNatGatewayNetworkInterfaceQuotaWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 撤回VPC已发布路由
+         *
+         * @param request WithdrawVpcPublishedRouteEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return WithdrawVpcPublishedRouteEntriesResponse
+         */
+        public WithdrawVpcPublishedRouteEntriesResponse WithdrawVpcPublishedRouteEntriesWithOptions(WithdrawVpcPublishedRouteEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteEntries))
+            {
+                query["RouteEntries"] = request.RouteEntries;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                query["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WithdrawVpcPublishedRouteEntries",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WithdrawVpcPublishedRouteEntriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 撤回VPC已发布路由
+         *
+         * @param request WithdrawVpcPublishedRouteEntriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return WithdrawVpcPublishedRouteEntriesResponse
+         */
+        public async Task<WithdrawVpcPublishedRouteEntriesResponse> WithdrawVpcPublishedRouteEntriesWithOptionsAsync(WithdrawVpcPublishedRouteEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteEntries))
+            {
+                query["RouteEntries"] = request.RouteEntries;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                query["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WithdrawVpcPublishedRouteEntries",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WithdrawVpcPublishedRouteEntriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 撤回VPC已发布路由
+         *
+         * @param request WithdrawVpcPublishedRouteEntriesRequest
+         * @return WithdrawVpcPublishedRouteEntriesResponse
+         */
+        public WithdrawVpcPublishedRouteEntriesResponse WithdrawVpcPublishedRouteEntries(WithdrawVpcPublishedRouteEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WithdrawVpcPublishedRouteEntriesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 撤回VPC已发布路由
+         *
+         * @param request WithdrawVpcPublishedRouteEntriesRequest
+         * @return WithdrawVpcPublishedRouteEntriesResponse
+         */
+        public async Task<WithdrawVpcPublishedRouteEntriesResponse> WithdrawVpcPublishedRouteEntriesAsync(WithdrawVpcPublishedRouteEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WithdrawVpcPublishedRouteEntriesWithOptionsAsync(request, runtime);
         }
 
     }
