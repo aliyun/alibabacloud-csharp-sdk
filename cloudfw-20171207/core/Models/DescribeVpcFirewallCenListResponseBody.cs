@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [Validation(Required=false)]
                 public int? EnableAllPatch { get; set; }
 
+                [NameInMap("RuleClass")]
+                [Validation(Required=false)]
+                public int? RuleClass { get; set; }
+
                 /// <summary>
                 /// The mode of the IPS. Valid values:
                 /// 

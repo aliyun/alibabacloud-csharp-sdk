@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// The end of the time range to query. Specify a value in the YYYYMMDD format.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SearchItem { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// The beginning of the time range to query. Specify a value in the YYYYMMDD format.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -72,7 +72,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The traffic type. This parameter is required. Valid values:
         /// 
         /// *   **EIP_TRAFFIC**: traffic for the Internet firewall
-        /// *   **NatGateway_TRAFFIC**: traffic for the NAT firewall
+        /// *   **NatGateway_TRAFFIC**: traffic for NAT firewalls
+        /// *   **VPC_TRAFFIC**: traffic for virtual private cloud (VPC) firewalls
         /// 
         /// This parameter is required.
         /// </summary>

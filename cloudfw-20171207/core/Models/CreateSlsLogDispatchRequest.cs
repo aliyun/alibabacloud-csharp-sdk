@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class CreateTrFirewallV2RoutePolicyResponseBody : TeaModel {
+    public class CreateSlsLogDispatchRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The region ID of the Simple Log Service project.
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("SlsRegionId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string SlsRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the routing policy.
+        /// The log retention period. Unit: days.
         /// </summary>
-        [NameInMap("TrFirewallRoutePolicyId")]
+        [NameInMap("Ttl")]
         [Validation(Required=false)]
-        public string TrFirewallRoutePolicyId { get; set; }
+        public long? Ttl { get; set; }
 
     }
 

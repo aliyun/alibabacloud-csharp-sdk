@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteControlPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the access control policy.
+        /// The UUID of the access control policy.
         /// 
-        /// To delete an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](https://help.aliyun.com/document_detail/138866.html) operation to query the ID.
+        /// To delete an access control policy, you must specify the UUID of the policy. You can call the [DescribeControlPolicy](https://help.aliyun.com/document_detail/138866.html) operation to query the UUID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -27,20 +27,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **in**: inbound traffic
         /// *   **out**: outbound traffic
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
         /// <summary>
-        /// The natural language of the request and response.
+        /// The language of the content within the request and response.
         /// 
         /// Valid values:
         /// 
-        /// *   **zh**: Chinese (default)
-        /// *   **en**: English
+        /// *   **zh** (default)
+        /// *   **en**
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("ModifyMode")]
+        [Validation(Required=false)]
+        public string ModifyMode { get; set; }
+
         /// <summary>
         /// The source IP address of the request.
         /// </summary>

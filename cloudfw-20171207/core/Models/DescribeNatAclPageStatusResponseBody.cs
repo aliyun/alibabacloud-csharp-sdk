@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatAclPageStatusResponseBody : TeaModel {
+        [NameInMap("Detail")]
+        [Validation(Required=false)]
+        public string Detail { get; set; }
+
         /// <summary>
         /// Indicates whether pagination for access control policies for NAT firewalls is supported.
         /// </summary>

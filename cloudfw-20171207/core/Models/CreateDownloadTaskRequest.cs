@@ -28,6 +28,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string TaskData { get; set; }
 
+        /// <summary>
+        /// The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.
+        /// </summary>
+        [NameInMap("TimeZone")]
+        [Validation(Required=false)]
+        public string TimeZone { get; set; }
+
     }
 
 }

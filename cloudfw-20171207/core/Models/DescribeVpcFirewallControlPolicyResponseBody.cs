@@ -155,6 +155,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationType { get; set; }
 
             /// <summary>
+            /// The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:
+            /// 
+            /// * **FQDN**: fully qualified domain name (FQDN)-based resolution
+            /// * **DNS**: DNS-based dynamic resolution
+            /// * **FQDN_AND_DNS**: FQDN and DNS-based dynamic resolution
+            /// </summary>
+            [NameInMap("DomainResolveType")]
+            [Validation(Required=false)]
+            public string DomainResolveType { get; set; }
+
+            /// <summary>
             /// The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.
             /// 
             /// >  If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.

@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// The application type used in the access control policy.
+        /// The type of the application that the access control policy supports.
         /// 
         /// Valid values:
         /// 
@@ -135,6 +135,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
         public string DestinationType { get; set; }
+
+        [NameInMap("DomainResolveType")]
+        [Validation(Required=false)]
+        public string DomainResolveType { get; set; }
 
         /// <summary>
         /// The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.

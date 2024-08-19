@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DeleteSecurityProxyResponseBody : TeaModel {
+    public class CreateSlsLogDispatchResponseBody : TeaModel {
         /// <summary>
         /// The request ID.
         /// </summary>

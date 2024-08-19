@@ -51,7 +51,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **Memcache**
         /// *   **SSL**
         /// 
-        /// >  The value *ANY* indicates all types of applications.
+        /// >  The value **ANY** indicates all types of applications.
+        /// 
+        /// >  You must specify one of the ApplicationNameList and ApplicationName parameters. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
@@ -59,6 +61,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The application names.
+        /// 
+        /// >  You must specify one of the ApplicationNameList and ApplicationName parameters. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.
         /// </summary>
         [NameInMap("ApplicationNameList")]
         [Validation(Required=false)]
@@ -138,6 +142,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
+        /// The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:
+        /// 
+        /// * **FQDN**: fully qualified domain name (FQDN)-based resolution
+        /// * **DNS**: DNS-based dynamic resolution
+        /// * **FQDN_AND_DNS**: FQDN and DNS-based dynamic resolution
+        /// </summary>
+        [NameInMap("DomainResolveType")]
+        [Validation(Required=false)]
+        public string DomainResolveType { get; set; }
+
+        /// <summary>
         /// The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.
         /// 
         /// >  If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.
@@ -157,14 +172,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The protocol type supported by the access control policy. Valid values:
+        /// The protocol type that the access control policy supports. Valid values:
         /// 
         /// *   **ANY**
         /// *   **TCP**
         /// *   **UDP**
         /// *   **ICMP**
         /// 
-        /// >  The value *ANY* indicates all types of applications.
+        /// >  The value **ANY** indicates all types of applications.
+        /// 
+        /// >  If the traffic direction is outbound and the destination address is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto to TCP or ANY. If you set Proto to TCP, you can set ApplicationName to HTTP, HTTPS, SMTP, SMTPS, and SSL. If you set Proto to ANY, you can set ApplicationName to ANY.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string DestinationType { get; set; }
 
+        [NameInMap("DomainResolveType")]
+        [Validation(Required=false)]
+        public string DomainResolveType { get; set; }
+
         /// <summary>
         /// The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.
         /// 

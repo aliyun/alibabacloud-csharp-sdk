@@ -189,6 +189,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// </summary>
             [NameInMap("DnsResult")]
             [Validation(Required=false)]
+            [Obsolete]
             public string DnsResult { get; set; }
 
             /// <summary>
@@ -197,6 +198,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("DnsResultTime")]
             [Validation(Required=false)]
             public long? DnsResultTime { get; set; }
+
+            /// <summary>
+            /// The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:
+            /// 
+            /// * **FQDN**: fully qualified domain name (FQDN)-based resolution
+            /// * **DNS**: DNS-based dynamic resolution
+            /// * **FQDN_AND_DNS**: FQDN and DNS-based dynamic resolution
+            /// </summary>
+            [NameInMap("DomainResolveType")]
+            [Validation(Required=false)]
+            public string DomainResolveType { get; set; }
 
             /// <summary>
             /// The time when the access control policy stops taking effect. The value is a timestamp. Unit: seconds. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.

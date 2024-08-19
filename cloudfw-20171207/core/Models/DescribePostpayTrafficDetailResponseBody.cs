@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The traffic statistics.
+        /// The statistics on traffic.
         /// </summary>
         [NameInMap("TrafficList")]
         [Validation(Required=false)]
         public List<DescribePostpayTrafficDetailResponseBodyTrafficList> TrafficList { get; set; }
         public class DescribePostpayTrafficDetailResponseBodyTrafficList : TeaModel {
             /// <summary>
-            /// The inbound network throughput, which indicates the total number of bytes that are received. Unit: bytes.
+            /// The inbound network throughput, which indicates the total number of bytes that are received Unit: bytes.
             /// </summary>
             [NameInMap("InBytes")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The type of the asset. This value takes effect only for the Internet firewall.
+            /// The asset type. This value takes effect only for the Internet firewall.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public long? OutBytes { get; set; }
 
+            [NameInMap("ProtectionDuration")]
+            [Validation(Required=false)]
+            public long? ProtectionDuration { get; set; }
+
             /// <summary>
             /// The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.
             /// </summary>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The total inbound and outbound network throughput, which indicates the total number of bytes that are sent and received. Unit: bytes.
+            /// The total inbound and outbound network throughput, which indicates the total number of bytes that are received and sent. Unit: bytes.
             /// </summary>
             [NameInMap("TotalBytes")]
             [Validation(Required=false)]
@@ -83,7 +87,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// The traffic type. Valid values:
             /// 
             /// *   **EIP_TRAFFIC**: traffic for the Internet firewall
-            /// *   **NatGateway_TRAFFIC**: traffic for the NAT firewall
+            /// *   **NatGateway_TRAFFIC**: traffic for NAT firewalls
+            /// *   **VPC_TRAFFIC**: traffic for VPC firewalls
             /// </summary>
             [NameInMap("TrafficType")]
             [Validation(Required=false)]

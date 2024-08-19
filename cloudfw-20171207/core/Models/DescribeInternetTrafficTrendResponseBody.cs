@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? NewConn { get; set; }
 
             /// <summary>
-            /// The outbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
+            /// The outbound network throughput, which indicates the number of bits that are sent outbound per second. Unit: bit/s.
             /// </summary>
             [NameInMap("OutBps")]
             [Validation(Required=false)]
@@ -102,6 +102,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// The time when traffic is generated. The value is a UNIX timestamp. Unit: seconds.
+            /// 
+            /// If processing is not complete at this point in time, -1 is returned for all other fields.
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
@@ -123,6 +125,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? MaxBandwidthTime { get; set; }
 
+        /// <summary>
+        /// The maximum volume of excess traffic allowed per day.
+        /// </summary>
         [NameInMap("MaxDayExceedBytes")]
         [Validation(Required=false)]
         public long? MaxDayExceedBytes { get; set; }
@@ -169,6 +174,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? TotalBytes { get; set; }
 
+        /// <summary>
+        /// The total volume of excess traffic.
+        /// </summary>
         [NameInMap("TotalExceedBytes")]
         [Validation(Required=false)]
         public long? TotalExceedBytes { get; set; }

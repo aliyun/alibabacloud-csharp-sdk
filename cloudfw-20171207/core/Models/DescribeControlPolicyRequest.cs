@@ -50,12 +50,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The destination address in the access control policy. Fuzzy match is supported. The value of this parameter depends on the value of the DestinationType parameter.
+        /// The destination address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the DestinationType parameter.
         /// 
-        /// *   If DestinationType is set to `net`, the value of Destination must be a CIDR block. Example: 10.0.3.0/24.
-        /// *   If DestinationType is set to `domain`, the value of Destination must be a domain name. Example: aliyun.
-        /// *   If DestinationType is set to `group`, the value of Destination must be the name of an address book. Example: db_group.
-        /// *   If DestinationType is set to `location`, the value of Destination must be a location. Example: beijing.
+        /// *   If you set DestinationType to `net`, the value of Destination is a CIDR block. Example: 10.0.3.0/24.
+        /// *   If you set DestinationType to `domain`, the value of Destination is a domain name. Example: aliyun.
+        /// *   If you set DestinationType to `group`, the value of Destination is the name of an address book. Example: db_group.
+        /// *   If you set DestinationType to `location`, the value of Destination is the name of a location. For more information about location codes, see AddControlPolicy. Example: ["BJ11", "ZB"].
         /// 
         /// >  If you do not specify this parameter, access control policies of all destination address types are queried.
         /// </summary>
@@ -68,8 +68,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **in**: inbound traffic
         /// *   **out**: outbound traffic
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]

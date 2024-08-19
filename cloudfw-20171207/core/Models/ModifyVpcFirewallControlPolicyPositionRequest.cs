@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The new priority of the access control policy.
         /// 
+        /// >  For more information about the valid values of the new priority, see [DescribeVpcFirewallPolicyPriorUsed](https://help.aliyun.com/document_detail/474145.html).
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("NewOrder")]

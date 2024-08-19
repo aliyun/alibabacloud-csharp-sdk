@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string MemberUid { get; set; }
 
+        [NameInMap("RuleClass")]
+        [Validation(Required=false)]
+        public string RuleClass { get; set; }
+
         /// <summary>
         /// The mode of the intrusion prevention system (IPS). Valid values:
         /// 

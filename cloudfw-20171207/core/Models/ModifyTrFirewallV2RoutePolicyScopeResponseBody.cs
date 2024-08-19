@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyTrFirewallV2RoutePolicyScopeResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the routing policy.
+        /// </summary>
         [NameInMap("TrFirewallRoutePolicyId")]
         [Validation(Required=false)]
         public string TrFirewallRoutePolicyId { get; set; }

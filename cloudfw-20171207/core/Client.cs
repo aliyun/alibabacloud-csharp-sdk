@@ -269,6 +269,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Direction"] = request.Direction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -398,6 +402,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
                 query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -877,6 +885,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["TaskData"] = request.TaskData;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
+            {
+                query["TimeZone"] = request.TimeZone;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -914,6 +926,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskData))
             {
                 query["TaskData"] = request.TaskData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
+            {
+                query["TimeZone"] = request.TimeZone;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1243,6 +1259,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 创建安全正向代理
+         *
          * @param request CreateSecurityProxyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateSecurityProxyResponse
@@ -1315,6 +1333,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 创建安全正向代理
+         *
          * @param request CreateSecurityProxyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateSecurityProxyResponse
@@ -1387,6 +1407,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 创建安全正向代理
+         *
          * @param request CreateSecurityProxyRequest
          * @return CreateSecurityProxyResponse
          */
@@ -1397,6 +1419,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 创建安全正向代理
+         *
          * @param request CreateSecurityProxyRequest
          * @return CreateSecurityProxyResponse
          */
@@ -1404,6 +1428,106 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSecurityProxyWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建云防火墙SLS日志投递
+         *
+         * @param request CreateSlsLogDispatchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSlsLogDispatchResponse
+         */
+        public CreateSlsLogDispatchResponse CreateSlsLogDispatchWithOptions(CreateSlsLogDispatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsRegionId))
+            {
+                body["SlsRegionId"] = request.SlsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
+            {
+                body["Ttl"] = request.Ttl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSlsLogDispatch",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSlsLogDispatchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建云防火墙SLS日志投递
+         *
+         * @param request CreateSlsLogDispatchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSlsLogDispatchResponse
+         */
+        public async Task<CreateSlsLogDispatchResponse> CreateSlsLogDispatchWithOptionsAsync(CreateSlsLogDispatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsRegionId))
+            {
+                body["SlsRegionId"] = request.SlsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
+            {
+                body["Ttl"] = request.Ttl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSlsLogDispatch",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSlsLogDispatchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建云防火墙SLS日志投递
+         *
+         * @param request CreateSlsLogDispatchRequest
+         * @return CreateSlsLogDispatchResponse
+         */
+        public CreateSlsLogDispatchResponse CreateSlsLogDispatch(CreateSlsLogDispatchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSlsLogDispatchWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建云防火墙SLS日志投递
+         *
+         * @param request CreateSlsLogDispatchRequest
+         * @return CreateSlsLogDispatchResponse
+         */
+        public async Task<CreateSlsLogDispatchResponse> CreateSlsLogDispatchAsync(CreateSlsLogDispatchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSlsLogDispatchWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -1611,6 +1735,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Creates a routing policy for a VPC firewall of a transit router.
+         *
          * @param tmpReq CreateTrFirewallV2RoutePolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateTrFirewallV2RoutePolicyResponse
@@ -1677,6 +1803,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Creates a routing policy for a VPC firewall of a transit router.
+         *
          * @param tmpReq CreateTrFirewallV2RoutePolicyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateTrFirewallV2RoutePolicyResponse
@@ -1743,6 +1871,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Creates a routing policy for a VPC firewall of a transit router.
+         *
          * @param request CreateTrFirewallV2RoutePolicyRequest
          * @return CreateTrFirewallV2RoutePolicyResponse
          */
@@ -1753,6 +1883,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Creates a routing policy for a VPC firewall of a transit router.
+         *
          * @param request CreateTrFirewallV2RoutePolicyRequest
          * @return CreateTrFirewallV2RoutePolicyResponse
          */
@@ -2181,6 +2313,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DestinationType"] = request.DestinationType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -2306,6 +2442,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
             {
                 query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -2541,8 +2681,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Deletes an access control policy.
          *
-         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
-         * ## Limits
+         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteControlPolicyRequest
@@ -2591,8 +2731,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Deletes an access control policy.
          *
-         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
-         * ## Limits
+         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteControlPolicyRequest
@@ -2641,8 +2781,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Deletes an access control policy.
          *
-         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
-         * ## Limits
+         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteControlPolicyRequest
@@ -2657,8 +2797,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /**
          * @summary Deletes an access control policy.
          *
-         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
-         * ## Limits
+         * @description You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.
+         * ## [](#qps-)Limits
          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DeleteControlPolicyRequest
@@ -2903,6 +3043,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.
+         *
          * @param request DeleteFirewallV2RoutePoliciesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteFirewallV2RoutePoliciesResponse
@@ -2943,6 +3085,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.
+         *
          * @param request DeleteFirewallV2RoutePoliciesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteFirewallV2RoutePoliciesResponse
@@ -2983,6 +3127,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.
+         *
          * @param request DeleteFirewallV2RoutePoliciesRequest
          * @return DeleteFirewallV2RoutePoliciesResponse
          */
@@ -2993,6 +3139,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Deletes routing policies for a virtual private cloud (VPC) firewall of a transit router.
+         *
          * @param request DeleteFirewallV2RoutePoliciesRequest
          * @return DeleteFirewallV2RoutePoliciesResponse
          */
@@ -3351,6 +3499,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Deletes a NAT firewall.
+         *
          * @param request DeleteSecurityProxyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteSecurityProxyResponse
@@ -3387,6 +3537,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Deletes a NAT firewall.
+         *
          * @param request DeleteSecurityProxyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteSecurityProxyResponse
@@ -3423,6 +3575,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Deletes a NAT firewall.
+         *
          * @param request DeleteSecurityProxyRequest
          * @return DeleteSecurityProxyResponse
          */
@@ -3433,6 +3587,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Deletes a NAT firewall.
+         *
          * @param request DeleteSecurityProxyRequest
          * @return DeleteSecurityProxyResponse
          */
@@ -4827,6 +4983,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Queries the default configurations of the intrusion prevention system (IPS).
+         *
          * @param request DescribeDefaultIPSConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeDefaultIPSConfigResponse
@@ -4838,10 +4996,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4863,6 +5017,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Queries the default configurations of the intrusion prevention system (IPS).
+         *
          * @param request DescribeDefaultIPSConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeDefaultIPSConfigResponse
@@ -4874,10 +5030,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4899,6 +5051,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Queries the default configurations of the intrusion prevention system (IPS).
+         *
          * @param request DescribeDefaultIPSConfigRequest
          * @return DescribeDefaultIPSConfigResponse
          */
@@ -4909,6 +5063,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Queries the default configurations of the intrusion prevention system (IPS).
+         *
          * @param request DescribeDefaultIPSConfigRequest
          * @return DescribeDefaultIPSConfigResponse
          */
@@ -6383,7 +6539,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 获取 NAT 防火墙列表
+         * @summary Queries details of NAT firewalls.
          *
          * @param request DescribeNatFirewallListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6457,7 +6613,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 获取 NAT 防火墙列表
+         * @summary Queries details of NAT firewalls.
          *
          * @param request DescribeNatFirewallListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6531,7 +6687,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 获取 NAT 防火墙列表
+         * @summary Queries details of NAT firewalls.
          *
          * @param request DescribeNatFirewallListRequest
          * @return DescribeNatFirewallListResponse
@@ -6543,7 +6699,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 获取 NAT 防火墙列表
+         * @summary Queries details of NAT firewalls.
          *
          * @param request DescribeNatFirewallListRequest
          * @return DescribeNatFirewallListResponse
@@ -7303,7 +7459,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the traffic details of Cloud Firewall that uses the pay-as-you-go billing method.
+         * @summary Queries the details of traffic billed based on the pay-as-you-go billing method.
+         *
+         * @description If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.
          *
          * @param request DescribePostpayTrafficDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7365,7 +7523,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the traffic details of Cloud Firewall that uses the pay-as-you-go billing method.
+         * @summary Queries the details of traffic billed based on the pay-as-you-go billing method.
+         *
+         * @description If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.
          *
          * @param request DescribePostpayTrafficDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7427,7 +7587,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the traffic details of Cloud Firewall that uses the pay-as-you-go billing method.
+         * @summary Queries the details of traffic billed based on the pay-as-you-go billing method.
+         *
+         * @description If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.
          *
          * @param request DescribePostpayTrafficDetailRequest
          * @return DescribePostpayTrafficDetailResponse
@@ -7439,7 +7601,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the traffic details of Cloud Firewall that uses the pay-as-you-go billing method.
+         * @summary Queries the details of traffic billed based on the pay-as-you-go billing method.
+         *
+         * @description If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.
          *
          * @param request DescribePostpayTrafficDetailRequest
          * @return DescribePostpayTrafficDetailResponse
@@ -7451,7 +7615,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the total traffic of Cloud Firewall that uses the pay-as-you-go billing method. The traffic for each type of firewall is queried.
+         * @summary Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.
+         *
+         * @description You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.
          *
          * @param request DescribePostpayTrafficTotalRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7485,7 +7651,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the total traffic of Cloud Firewall that uses the pay-as-you-go billing method. The traffic for each type of firewall is queried.
+         * @summary Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.
+         *
+         * @description You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.
          *
          * @param request DescribePostpayTrafficTotalRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7519,7 +7687,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the total traffic of Cloud Firewall that uses the pay-as-you-go billing method. The traffic for each type of firewall is queried.
+         * @summary Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.
+         *
+         * @description You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.
          *
          * @param request DescribePostpayTrafficTotalRequest
          * @return DescribePostpayTrafficTotalResponse
@@ -7531,7 +7701,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary Queries the total traffic of Cloud Firewall that uses the pay-as-you-go billing method. The traffic for each type of firewall is queried.
+         * @summary Queries the total volume of traffic that is billed based on the pay-as-you-go billing method, including all firewalls within the current account.
+         *
+         * @description You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.
          *
          * @param request DescribePostpayTrafficTotalRequest
          * @return DescribePostpayTrafficTotalResponse
@@ -8663,6 +8835,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Queries the route tables of the VPC firewalls that are created for transit routers.
+         *
          * @param request DescribeTrFirewallsV2RouteListRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeTrFirewallsV2RouteListResponse
@@ -8711,6 +8885,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Queries the route tables of the VPC firewalls that are created for transit routers.
+         *
          * @param request DescribeTrFirewallsV2RouteListRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeTrFirewallsV2RouteListResponse
@@ -8759,6 +8935,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Queries the route tables of the VPC firewalls that are created for transit routers.
+         *
          * @param request DescribeTrFirewallsV2RouteListRequest
          * @return DescribeTrFirewallsV2RouteListResponse
          */
@@ -8769,6 +8947,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Queries the route tables of the VPC firewalls that are created for transit routers.
+         *
          * @param request DescribeTrFirewallsV2RouteListRequest
          * @return DescribeTrFirewallsV2RouteListResponse
          */
@@ -10829,6 +11009,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyMode))
+            {
+                query["ModifyMode"] = request.ModifyMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -10898,6 +11082,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyMode))
+            {
+                query["ModifyMode"] = request.ModifyMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
@@ -11021,6 +11209,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Direction"] = request.Direction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -11142,6 +11334,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
                 query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -11379,6 +11575,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the default configuration of the intrusion prevention system (IPS).
+         *
          * @param request ModifyDefaultIPSConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyDefaultIPSConfigResponse
@@ -11387,10 +11585,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiRules))
-            {
-                query["AiRules"] = request.AiRules;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BasicRules))
             {
                 query["BasicRules"] = request.BasicRules;
@@ -11398,14 +11592,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CtiRules))
             {
                 query["CtiRules"] = request.CtiRules;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAllPatch))
-            {
-                query["EnableAllPatch"] = request.EnableAllPatch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDefault))
-            {
-                query["EnableDefault"] = request.EnableDefault;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -11422,10 +11608,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
             {
                 query["RunMode"] = request.RunMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11447,6 +11629,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the default configuration of the intrusion prevention system (IPS).
+         *
          * @param request ModifyDefaultIPSConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyDefaultIPSConfigResponse
@@ -11455,10 +11639,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiRules))
-            {
-                query["AiRules"] = request.AiRules;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BasicRules))
             {
                 query["BasicRules"] = request.BasicRules;
@@ -11466,14 +11646,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CtiRules))
             {
                 query["CtiRules"] = request.CtiRules;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAllPatch))
-            {
-                query["EnableAllPatch"] = request.EnableAllPatch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDefault))
-            {
-                query["EnableDefault"] = request.EnableDefault;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -11490,10 +11662,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
             {
                 query["RunMode"] = request.RunMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11515,6 +11683,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the default configuration of the intrusion prevention system (IPS).
+         *
          * @param request ModifyDefaultIPSConfigRequest
          * @return ModifyDefaultIPSConfigResponse
          */
@@ -11525,6 +11695,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the default configuration of the intrusion prevention system (IPS).
+         *
          * @param request ModifyDefaultIPSConfigRequest
          * @return ModifyDefaultIPSConfigResponse
          */
@@ -12167,6 +12339,146 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary 修改对象组操作
+         *
+         * @param request ModifyObjectGroupOperationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyObjectGroupOperationResponse
+         */
+        public ModifyObjectGroupOperationResponse ModifyObjectGroupOperationWithOptions(ModifyObjectGroupOperationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectList))
+            {
+                query["ObjectList"] = request.ObjectList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectOperation))
+            {
+                query["ObjectOperation"] = request.ObjectOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                query["ObjectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyObjectGroupOperation",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyObjectGroupOperationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改对象组操作
+         *
+         * @param request ModifyObjectGroupOperationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyObjectGroupOperationResponse
+         */
+        public async Task<ModifyObjectGroupOperationResponse> ModifyObjectGroupOperationWithOptionsAsync(ModifyObjectGroupOperationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectList))
+            {
+                query["ObjectList"] = request.ObjectList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectOperation))
+            {
+                query["ObjectOperation"] = request.ObjectOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                query["ObjectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyObjectGroupOperation",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyObjectGroupOperationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改对象组操作
+         *
+         * @param request ModifyObjectGroupOperationRequest
+         * @return ModifyObjectGroupOperationResponse
+         */
+        public ModifyObjectGroupOperationResponse ModifyObjectGroupOperation(ModifyObjectGroupOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyObjectGroupOperationWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改对象组操作
+         *
+         * @param request ModifyObjectGroupOperationRequest
+         * @return ModifyObjectGroupOperationResponse
+         */
+        public async Task<ModifyObjectGroupOperationResponse> ModifyObjectGroupOperationAsync(ModifyObjectGroupOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyObjectGroupOperationWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Enables or disables the strict mode for an access control policy.
          *
          * @description You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  
@@ -12291,6 +12603,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.
+         *
          * @param request ModifyTrFirewallV2ConfigurationRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyTrFirewallV2ConfigurationResponse
@@ -12331,6 +12645,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.
+         *
          * @param request ModifyTrFirewallV2ConfigurationRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyTrFirewallV2ConfigurationResponse
@@ -12371,6 +12687,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.
+         *
          * @param request ModifyTrFirewallV2ConfigurationRequest
          * @return ModifyTrFirewallV2ConfigurationResponse
          */
@@ -12381,6 +12699,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the configuration of a virtual private cloud (VPC) firewall that is created for a transit router.
+         *
          * @param request ModifyTrFirewallV2ConfigurationRequest
          * @return ModifyTrFirewallV2ConfigurationResponse
          */
@@ -12391,6 +12711,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.
+         *
          * @param tmpReq ModifyTrFirewallV2RoutePolicyScopeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyTrFirewallV2RoutePolicyScopeResponse
@@ -12453,6 +12775,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.
+         *
          * @param tmpReq ModifyTrFirewallV2RoutePolicyScopeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyTrFirewallV2RoutePolicyScopeResponse
@@ -12515,6 +12839,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.
+         *
          * @param request ModifyTrFirewallV2RoutePolicyScopeRequest
          * @return ModifyTrFirewallV2RoutePolicyScopeResponse
          */
@@ -12525,6 +12851,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Modifies the effective scope of the routing policy created for the VPC firewall for a transit router.
+         *
          * @param request ModifyTrFirewallV2RoutePolicyScopeRequest
          * @return ModifyTrFirewallV2RoutePolicyScopeResponse
          */
@@ -13145,6 +13473,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["DestinationType"] = request.DestinationType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -13266,6 +13598,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
             {
                 query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveType))
+            {
+                query["DomainResolveType"] = request.DomainResolveType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -13537,6 +13873,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["MemberUid"] = request.MemberUid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleClass))
+            {
+                query["RuleClass"] = request.RuleClass;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
             {
                 query["RunMode"] = request.RunMode;
@@ -13598,6 +13938,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
             {
                 query["MemberUid"] = request.MemberUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleClass))
+            {
+                query["RuleClass"] = request.RuleClass;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
             {
@@ -14459,7 +14803,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 释放按量付费实例
+         * @summary Releases Cloud Firewall that uses the pay-as-you-go billing method.
          *
          * @param request ReleasePostInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14493,7 +14837,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 释放按量付费实例
+         * @summary Releases Cloud Firewall that uses the pay-as-you-go billing method.
          *
          * @param request ReleasePostInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14527,7 +14871,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 释放按量付费实例
+         * @summary Releases Cloud Firewall that uses the pay-as-you-go billing method.
          *
          * @param request ReleasePostInstanceRequest
          * @return ReleasePostInstanceResponse
@@ -14539,7 +14883,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-         * @summary 释放按量付费实例
+         * @summary Releases Cloud Firewall that uses the pay-as-you-go billing method.
          *
          * @param request ReleasePostInstanceRequest
          * @return ReleasePostInstanceResponse
@@ -14775,6 +15119,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Enables or disables a NAT firewall.
+         *
          * @param request SwitchSecurityProxyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return SwitchSecurityProxyResponse
@@ -14815,6 +15161,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Enables or disables a NAT firewall.
+         *
          * @param request SwitchSecurityProxyRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return SwitchSecurityProxyResponse
@@ -14855,6 +15203,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Enables or disables a NAT firewall.
+         *
          * @param request SwitchSecurityProxyRequest
          * @return SwitchSecurityProxyResponse
          */
@@ -14865,6 +15215,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
+         * @summary Enables or disables a NAT firewall.
+         *
          * @param request SwitchSecurityProxyRequest
          * @return SwitchSecurityProxyResponse
          */

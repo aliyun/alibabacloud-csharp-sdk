@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallPolicyBackUpAssociationListRequest : TeaModel {
         /// <summary>
-        /// An array that consists of the details about the traffic redirection instance.
+        /// The traffic redirection instances.
         /// </summary>
         [NameInMap("CandidateList")]
         [Validation(Required=false)]
