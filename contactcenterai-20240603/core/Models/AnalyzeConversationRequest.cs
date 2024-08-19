@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         }
 
-        [NameInMap("exampleList")]
+        [NameInMap("examples")]
         [Validation(Required=false)]
-        public List<AnalyzeConversationRequestExampleList> ExampleList { get; set; }
-        public class AnalyzeConversationRequestExampleList : TeaModel {
+        public List<AnalyzeConversationRequestExamples> Examples { get; set; }
+        public class AnalyzeConversationRequestExamples : TeaModel {
             /// <summary>
             /// This parameter is required.
             /// </summary>
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             /// <summary>
             /// This parameter is required.
             /// </summary>
-            [NameInMap("sentenceList")]
+            [NameInMap("sentences")]
             [Validation(Required=false)]
-            public List<AnalyzeConversationRequestExampleListSentenceList> SentenceList { get; set; }
-            public class AnalyzeConversationRequestExampleListSentenceList : TeaModel {
+            public List<AnalyzeConversationRequestExamplesSentences> Sentences { get; set; }
+            public class AnalyzeConversationRequestExamplesSentences : TeaModel {
                 [NameInMap("chatId")]
                 [Validation(Required=false)]
                 public string ChatId { get; set; }

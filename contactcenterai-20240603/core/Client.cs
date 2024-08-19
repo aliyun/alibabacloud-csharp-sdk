@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             {
                 body["dialogue"] = request.Dialogue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExampleList))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Examples))
             {
-                body["exampleList"] = request.ExampleList;
+                body["examples"] = request.Examples;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
             {
@@ -117,9 +117,9 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             {
                 body["dialogue"] = request.Dialogue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExampleList))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Examples))
             {
-                body["exampleList"] = request.ExampleList;
+                body["examples"] = request.Examples;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
             {
