@@ -7314,6 +7314,142 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
+         * @summary 创建文件扫描任务
+         *
+         * @param tmpReq ScanOssObjectV1Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScanOssObjectV1Response
+         */
+        public ScanOssObjectV1Response ScanOssObjectV1WithOptions(ScanOssObjectV1Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ScanOssObjectV1ShrinkRequest request = new ScanOssObjectV1ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectKeyList))
+            {
+                request.ObjectKeyListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectKeyList, "ObjectKeyList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectKeyListShrink))
+            {
+                query["ObjectKeyList"] = request.ObjectKeyListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ScanOssObjectV1",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ScanOssObjectV1Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建文件扫描任务
+         *
+         * @param tmpReq ScanOssObjectV1Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScanOssObjectV1Response
+         */
+        public async Task<ScanOssObjectV1Response> ScanOssObjectV1WithOptionsAsync(ScanOssObjectV1Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ScanOssObjectV1ShrinkRequest request = new ScanOssObjectV1ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectKeyList))
+            {
+                request.ObjectKeyListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectKeyList, "ObjectKeyList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectKeyListShrink))
+            {
+                query["ObjectKeyList"] = request.ObjectKeyListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ScanOssObjectV1",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ScanOssObjectV1Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建文件扫描任务
+         *
+         * @param request ScanOssObjectV1Request
+         * @return ScanOssObjectV1Response
+         */
+        public ScanOssObjectV1Response ScanOssObjectV1(ScanOssObjectV1Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ScanOssObjectV1WithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建文件扫描任务
+         *
+         * @param request ScanOssObjectV1Request
+         * @return ScanOssObjectV1Response
+         */
+        public async Task<ScanOssObjectV1Response> ScanOssObjectV1Async(ScanOssObjectV1Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ScanOssObjectV1WithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Stops a de-identification task. After you stop a de-identification task, you can resume the task by calling the ManualTriggerMaskingProcess operation.
          *
          * @description You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
