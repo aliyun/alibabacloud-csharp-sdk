@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateJobRequest : TeaModel {
+        [NameInMap("Accessibility")]
+        [Validation(Required=false)]
+        public string Accessibility { get; set; }
+
         [NameInMap("CodeSource")]
         [Validation(Required=false)]
         public CreateJobRequestCodeSource CodeSource { get; set; }

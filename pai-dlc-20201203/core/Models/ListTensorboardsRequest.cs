@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListTensorboardsRequest : TeaModel {
+        [NameInMap("Accessibility")]
+        [Validation(Required=false)]
+        public string Accessibility { get; set; }
+
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }

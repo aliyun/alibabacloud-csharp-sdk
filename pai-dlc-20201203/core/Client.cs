@@ -102,6 +102,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeSource))
             {
                 body["CodeSource"] = request.CodeSource;
@@ -214,6 +218,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeSource))
             {
                 body["CodeSource"] = request.CodeSource;
@@ -352,6 +360,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 body["Cpu"] = request.Cpu;
@@ -460,6 +472,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 body["Cpu"] = request.Cpu;
@@ -2162,6 +2178,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                query["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessUserId))
             {
                 query["BusinessUserId"] = request.BusinessUserId;
@@ -2284,6 +2304,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                query["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessUserId))
             {
                 query["BusinessUserId"] = request.BusinessUserId;
@@ -2426,6 +2450,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                query["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
                 query["DisplayName"] = request.DisplayName;
@@ -2534,6 +2562,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                query["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
                 query["DisplayName"] = request.DisplayName;
