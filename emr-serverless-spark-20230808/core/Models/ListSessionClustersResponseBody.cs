@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            [NameInMap("displayReleaseVersion")]
+            [Validation(Required=false)]
+            public string DisplayReleaseVersion { get; set; }
+
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
@@ -113,6 +117,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("draftId")]
             [Validation(Required=false)]
             public string DraftId { get; set; }
+
+            [NameInMap("fusion")]
+            [Validation(Required=false)]
+            public bool? Fusion { get; set; }
 
             [NameInMap("kind")]
             [Validation(Required=false)]

@@ -1456,9 +1456,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["configurationOverrides"] = request.ConfigurationOverrides;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionTimeoutSeconds))
             {
                 body["executionTimeoutSeconds"] = request.ExecutionTimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
+            {
+                body["fusion"] = request.Fusion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDriver))
             {
@@ -1534,9 +1542,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["configurationOverrides"] = request.ConfigurationOverrides;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionTimeoutSeconds))
             {
                 body["executionTimeoutSeconds"] = request.ExecutionTimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
+            {
+                body["fusion"] = request.Fusion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDriver))
             {

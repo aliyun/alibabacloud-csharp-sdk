@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public List<string> Files { get; set; }
 
+        [NameInMap("fusion")]
+        [Validation(Required=false)]
+        public bool? Fusion { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

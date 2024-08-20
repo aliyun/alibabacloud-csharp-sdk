@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string DlfCatalogId { get; set; }
 
+            [NameInMap("dlfType")]
+            [Validation(Required=false)]
+            public string DlfType { get; set; }
+
             /// <summary>
             /// The subscription period. This parameter is required only if the paymentType parameter is set to Subscription.
             /// </summary>

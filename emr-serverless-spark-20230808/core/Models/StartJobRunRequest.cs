@@ -66,12 +66,20 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         }
 
+        [NameInMap("displayReleaseVersion")]
+        [Validation(Required=false)]
+        public string DisplayReleaseVersion { get; set; }
+
         /// <summary>
         /// The timeout period of the job.
         /// </summary>
         [NameInMap("executionTimeoutSeconds")]
         [Validation(Required=false)]
         public int? ExecutionTimeoutSeconds { get; set; }
+
+        [NameInMap("fusion")]
+        [Validation(Required=false)]
+        public bool? Fusion { get; set; }
 
         /// <summary>
         /// The information about Spark Driver.

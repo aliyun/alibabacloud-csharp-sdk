@@ -44,6 +44,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public List<string> CpuArchitectures { get; set; }
 
+            [NameInMap("displayReleaseVersion")]
+            [Validation(Required=false)]
+            public string DisplayReleaseVersion { get; set; }
+
+            [NameInMap("fusion")]
+            [Validation(Required=false)]
+            public bool? Fusion { get; set; }
+
             /// <summary>
             /// The creation time.
             /// </summary>
