@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public long? LogTime { get; set; }
 
+                [NameInMap("Protocol")]
+                [Validation(Required=false)]
+                public string Protocol { get; set; }
+
                 [NameInMap("QueryName")]
                 [Validation(Required=false)]
                 public string QueryName { get; set; }
