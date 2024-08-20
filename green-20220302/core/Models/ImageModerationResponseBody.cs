@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class ImageModerationResponseBody : TeaModel {
         /// <summary>
-        /// The returned HTTP status code.
+        /// The returned HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The moderation results.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public class ImageModerationResponseBodyData : TeaModel {
             /// <summary>
             /// The ID of the moderated object.
+            /// 
+            /// >  If you specify the dataId parameter in the request, the value of the dataId parameter is returned in the response.
             /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
@@ -217,22 +219,37 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [Validation(Required=false)]
                     public string FigureName { get; set; }
 
+                    /// <summary>
+                    /// the data array of location info
+                    /// </summary>
                     [NameInMap("Location")]
                     [Validation(Required=false)]
                     public List<ImageModerationResponseBodyDataExtPublicFigureLocation> Location { get; set; }
                     public class ImageModerationResponseBodyDataExtPublicFigureLocation : TeaModel {
+                        /// <summary>
+                        /// The height
+                        /// </summary>
                         [NameInMap("H")]
                         [Validation(Required=false)]
                         public int? H { get; set; }
 
+                        /// <summary>
+                        /// The weight
+                        /// </summary>
                         [NameInMap("W")]
                         [Validation(Required=false)]
                         public int? W { get; set; }
 
+                        /// <summary>
+                        /// X coordinate
+                        /// </summary>
                         [NameInMap("X")]
                         [Validation(Required=false)]
                         public int? X { get; set; }
 
+                        /// <summary>
+                        /// Y coordinate
+                        /// </summary>
                         [NameInMap("Y")]
                         [Validation(Required=false)]
                         public int? Y { get; set; }
@@ -366,7 +383,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// The results of image moderation parameters such as the label parameter and the confidence parameter.
+            /// The results of image moderation parameters such as the label parameter and the confidence parameter, which are an array structure.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -379,8 +396,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public float? Confidence { get; set; }
 
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
                 /// <summary>
-                /// The labels returned after the image moderation.
+                /// The labels returned after the image moderation. Multiple risk labels and the corresponding scores of confidence levels may be returned for an image.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
@@ -405,7 +426,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The request ID, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

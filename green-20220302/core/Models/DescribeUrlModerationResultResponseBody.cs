@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeUrlModerationResultResponseBody : TeaModel {
         /// <summary>
-        /// The returned HTTP status code.
+        /// The returned HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,33 +24,36 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public DescribeUrlModerationResultResponseBodyData Data { get; set; }
         public class DescribeUrlModerationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the moderated object.
+            /// The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.
             /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
 
             /// <summary>
-            /// Supplementary information.
+            /// The supplementary information.
             /// </summary>
             [NameInMap("ExtraInfo")]
             [Validation(Required=false)]
             public DescribeUrlModerationResultResponseBodyDataExtraInfo ExtraInfo { get; set; }
             public class DescribeUrlModerationResultResponseBodyDataExtraInfo : TeaModel {
                 /// <summary>
-                /// ICP record number.
+                /// The ICP number.
                 /// </summary>
                 [NameInMap("IcpNo")]
                 [Validation(Required=false)]
                 public string IcpNo { get; set; }
 
                 /// <summary>
-                /// ICP filing type.
+                /// The type of the ICP filing.
                 /// </summary>
                 [NameInMap("IcpType")]
                 [Validation(Required=false)]
                 public string IcpType { get; set; }
 
+                /// <summary>
+                /// The type of site
+                /// </summary>
                 [NameInMap("SiteType")]
                 [Validation(Required=false)]
                 public string SiteType { get; set; }
@@ -58,28 +61,28 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// The reqId field returned by the Url Async Moderation API.
+            /// The ReqId field returned by an asynchronous URL moderation operation.
             /// </summary>
             [NameInMap("ReqId")]
             [Validation(Required=false)]
             public string ReqId { get; set; }
 
             /// <summary>
-            /// The results of url async moderation parameters such as the label parameter and the confidence parameter.
+            /// The returned results.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<DescribeUrlModerationResultResponseBodyDataResult> Result { get; set; }
             public class DescribeUrlModerationResultResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
+                /// The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
                 /// </summary>
                 [NameInMap("Confidence")]
                 [Validation(Required=false)]
                 public float? Confidence { get; set; }
 
                 /// <summary>
-                /// The labels returned after the url async moderation.
+                /// The labels returned after the asynchronous URL moderation.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]

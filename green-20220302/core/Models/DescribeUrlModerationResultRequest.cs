@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeUrlModerationResultRequest : TeaModel {
         /// <summary>
-        /// The reqId field returned by the Url Async Moderation API.
+        /// The ReqId field returned by an asynchronous URL moderation operation.
         /// </summary>
         [NameInMap("ReqId")]
         [Validation(Required=false)]

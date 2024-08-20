@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public float? Confidence { get; set; }
 
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
                 /// <summary>
                 /// The labels returned after the image moderation.
                 /// </summary>
