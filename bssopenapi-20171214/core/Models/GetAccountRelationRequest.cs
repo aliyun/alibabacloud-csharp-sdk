@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetAccountRelationRequest : TeaModel {
         /// <summary>
-        /// The ID of the financial relationship.
+        /// The ID of the financial relationship. Value returned by calling the AddAccountRelation operation.
         /// </summary>
         [NameInMap("RelationId")]
         [Validation(Required=false)]

@@ -101,7 +101,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
          * @summary Creates a financial relationship.
          *
-         * @description 1\\. For more information about a financial relationship, see [Financial relationships](https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE) or [Financial relationships](https://www.alibabacloud.com/help/en/doc-detail/116383.html). 2. If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.
+         * @description For more information about a financial relationship, see [Financial relationships](https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE) or [Financial relationships](https://www.alibabacloud.com/help/en/doc-detail/116383.html). 
+         * If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.
          *
          * @param request AddAccountRelationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -161,7 +162,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
          * @summary Creates a financial relationship.
          *
-         * @description 1\\. For more information about a financial relationship, see [Financial relationships](https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE) or [Financial relationships](https://www.alibabacloud.com/help/en/doc-detail/116383.html). 2. If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.
+         * @description For more information about a financial relationship, see [Financial relationships](https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE) or [Financial relationships](https://www.alibabacloud.com/help/en/doc-detail/116383.html). 
+         * If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.
          *
          * @param request AddAccountRelationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -221,7 +223,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
          * @summary Creates a financial relationship.
          *
-         * @description 1\\. For more information about a financial relationship, see [Financial relationships](https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE) or [Financial relationships](https://www.alibabacloud.com/help/en/doc-detail/116383.html). 2. If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.
+         * @description For more information about a financial relationship, see [Financial relationships](https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE) or [Financial relationships](https://www.alibabacloud.com/help/en/doc-detail/116383.html). 
+         * If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.
          *
          * @param request AddAccountRelationRequest
          * @return AddAccountRelationResponse
@@ -235,7 +238,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
          * @summary Creates a financial relationship.
          *
-         * @description 1\\. For more information about a financial relationship, see [Financial relationships](https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE) or [Financial relationships](https://www.alibabacloud.com/help/en/doc-detail/116383.html). 2. If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.
+         * @description For more information about a financial relationship, see [Financial relationships](https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE) or [Financial relationships](https://www.alibabacloud.com/help/en/doc-detail/116383.html). 
+         * If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.
          *
          * @param request AddAccountRelationRequest
          * @return AddAccountRelationResponse
@@ -4403,6 +4407,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
+         * @summary Queries the usage details of savings plans.
+         *
          * @param request DescribeSavingsPlansUsageDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeSavingsPlansUsageDetailResponse
@@ -4455,6 +4461,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
+         * @summary Queries the usage details of savings plans.
+         *
          * @param request DescribeSavingsPlansUsageDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeSavingsPlansUsageDetailResponse
@@ -4507,6 +4515,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
+         * @summary Queries the usage details of savings plans.
+         *
          * @param request DescribeSavingsPlansUsageDetailRequest
          * @return DescribeSavingsPlansUsageDetailResponse
          */
@@ -4517,6 +4527,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
+         * @summary Queries the usage details of savings plans.
+         *
          * @param request DescribeSavingsPlansUsageDetailRequest
          * @return DescribeSavingsPlansUsageDetailResponse
          */
@@ -10373,6 +10385,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -10435,6 +10451,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -12275,6 +12295,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
+         * @summary Modify the quota ledger and consumption ledger.
+         *
          * @param request SetResellerUserQuotaRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return SetResellerUserQuotaResponse
@@ -12319,6 +12341,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
+         * @summary Modify the quota ledger and consumption ledger.
+         *
          * @param request SetResellerUserQuotaRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return SetResellerUserQuotaResponse
@@ -12363,6 +12387,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
+         * @summary Modify the quota ledger and consumption ledger.
+         *
          * @param request SetResellerUserQuotaRequest
          * @return SetResellerUserQuotaResponse
          */
@@ -12373,6 +12399,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
+         * @summary Modify the quota ledger and consumption ledger.
+         *
          * @param request SetResellerUserQuotaRequest
          * @return SetResellerUserQuotaResponse
          */

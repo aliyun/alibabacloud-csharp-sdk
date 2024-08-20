@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public AddAccountRelationResponseBodyData Data { get; set; }
         public class AddAccountRelationResponseBodyData : TeaModel {
             /// <summary>
-            /// HostId
+            /// The IP address of the request
             /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]

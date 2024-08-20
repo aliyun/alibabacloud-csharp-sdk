@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
         /// *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
         /// *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
+        /// 
+        /// The params[PermissionCodes, RoleCodes] can not be null at the same time.
         /// </summary>
         [NameInMap("PermissionCodes")]
         [Validation(Required=false)]

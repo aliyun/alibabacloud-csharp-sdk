@@ -80,9 +80,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   Subscription
         /// *   PayAsYouGo
         /// 
-        /// **
-        /// 
-        /// ****This parameter must be used together with the ProductCode parameter.
+        /// This parameter must be used together with the ProductCode parameter.
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]

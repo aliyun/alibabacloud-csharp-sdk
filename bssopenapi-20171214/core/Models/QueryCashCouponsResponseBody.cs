@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string CashCouponNo { get; set; }
 
+                /// <summary>
+                /// The description of the voucher.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }

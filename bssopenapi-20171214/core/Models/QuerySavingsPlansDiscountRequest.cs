@@ -29,6 +29,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The identifier of the language.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   EN: English.
+        /// *   ZH: Chinese.
         /// </summary>
         [NameInMap("Locale")]
         [Validation(Required=false)]
@@ -56,7 +61,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The payment mode.
+        /// The payment mode. Valid values: total: all upfront. half: half upfront. zero: no upfront.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -78,8 +83,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Spec { get; set; }
 
+        [NameInMap("SpnCommodityCode")]
+        [Validation(Required=false)]
+        public string SpnCommodityCode { get; set; }
+
         /// <summary>
-        /// The type of the savings plan.
+        /// The type of the savings plan. Valid values: ecs: Elastic Compute Service (ECS) compute type. universal: general-purpose type.
         /// 
         /// This parameter is required.
         /// </summary>

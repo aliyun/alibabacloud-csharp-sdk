@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The number of the page to return. Default value is 1.
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries to return on each page. Default value is 20.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

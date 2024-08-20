@@ -92,6 +92,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The code of the service. The code is the same as that in Cost Center.
+        /// </summary>
         [NameInMap("PipCode")]
         [Validation(Required=false)]
         public string PipCode { get; set; }

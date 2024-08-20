@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public string MybankCreditAmount { get; set; }
 
+            /// <summary>
+            /// The quota limit for eco customers.
+            /// </summary>
             [NameInMap("QuotaLimit")]
             [Validation(Required=false)]
             public string QuotaLimit { get; set; }

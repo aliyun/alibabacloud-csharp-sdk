@@ -51,6 +51,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string InstanceID { get; set; }
 
+        /// <summary>
+        /// Specifies whether to filter bills if both the pretax gross amount and pretax amount are 0. Valid values:
+        /// 
+        /// *   false: does not filter bills.
+        /// *   true: filters bills.
+        /// </summary>
         [NameInMap("IsHideZeroCharge")]
         [Validation(Required=false)]
         public bool? IsHideZeroCharge { get; set; }
@@ -73,6 +79,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The code of the service. The code is the same as that in Cost Center.
+        /// </summary>
         [NameInMap("PipCode")]
         [Validation(Required=false)]
         public string PipCode { get; set; }

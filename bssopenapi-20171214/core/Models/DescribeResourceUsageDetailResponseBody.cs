@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeResourceUsageDetailResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// The response code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,21 +31,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public List<DescribeResourceUsageDetailResponseBodyDataItems> Items { get; set; }
             public class DescribeResourceUsageDetailResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// The unit that is used to measure the resources deducted from deduction plans.
+                /// The unit that is used to measure the resources that are deducted.
                 /// </summary>
                 [NameInMap("CapacityUnit")]
                 [Validation(Required=false)]
                 public string CapacityUnit { get; set; }
 
                 /// <summary>
-                /// The currency in which deduction plans were priced.
+                /// The type of the currency.
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// The amount of the resources deducted from deduction plans.
+                /// The amount of the deducted resources.
                 /// </summary>
                 [NameInMap("DeductQuantity")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ImageType { get; set; }
 
                 /// <summary>
-                /// The specifications of a deduction plan.
+                /// The instance type.
                 /// </summary>
                 [NameInMap("InstanceSpec")]
                 [Validation(Required=false)]
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// The fee of purchased deduction plans.
+                /// The fee of the deduction plan.
                 /// </summary>
                 [NameInMap("ReservationCost")]
                 [Validation(Required=false)]
                 public string ReservationCost { get; set; }
 
                 /// <summary>
-                /// The ID of a deduction plan.
+                /// The ID of the deduction plan.
                 /// </summary>
                 [NameInMap("ResourceInstanceId")]
                 [Validation(Required=false)]
@@ -143,28 +143,28 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The name of the state.
+                /// The name of the status.
                 /// </summary>
                 [NameInMap("StatusName")]
                 [Validation(Required=false)]
                 public string StatusName { get; set; }
 
                 /// <summary>
-                /// The total capacity of deduction plans.
+                /// The total capacity of the deduction plan.
                 /// </summary>
                 [NameInMap("TotalQuantity")]
                 [Validation(Required=false)]
                 public float? TotalQuantity { get; set; }
 
                 /// <summary>
-                /// The usage of deduction plans.
+                /// The usage rate of the deduction plan.
                 /// </summary>
                 [NameInMap("UsagePercentage")]
                 [Validation(Required=false)]
                 public float? UsagePercentage { get; set; }
 
                 /// <summary>
-                /// The ID of the account.
+                /// The account ID.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string UserName { get; set; }
 
                 /// <summary>
-                /// The code of the zone.
+                /// The zone.
                 /// </summary>
                 [NameInMap("Zone")]
                 [Validation(Required=false)]
                 public string Zone { get; set; }
 
                 /// <summary>
-                /// The zone.
+                /// The code of the zone.
                 /// </summary>
                 [NameInMap("ZoneName")]
                 [Validation(Required=false)]
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// The token of the next page.
+            /// A pagination token. It can be used in the next request to retrieve a new page of results.
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
@@ -217,21 +217,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation was successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

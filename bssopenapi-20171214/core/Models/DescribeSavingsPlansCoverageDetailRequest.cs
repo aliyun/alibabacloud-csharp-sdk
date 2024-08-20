@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeSavingsPlansCoverageDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the account for which you want to query coverage details. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.
+        /// The ID of the account for which you want to query coverage details.
         /// </summary>
         [NameInMap("BillOwnerId")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// data
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -90,6 +90,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                /// <summary>
+                /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/26231.html) operation to query the region ID of the instance.
+                /// </summary>
                 [NameInMap("RegionCode")]
                 [Validation(Required=false)]
                 public string RegionCode { get; set; }

@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string EffectiveDate { get; set; }
 
+        /// <summary>
+        /// The extended parameters.
+        /// </summary>
         [NameInMap("ExtendMap")]
         [Validation(Required=false)]
         public Dictionary<string, string> ExtendMap { get; set; }
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string PoolValue { get; set; }
 
         /// <summary>
-        /// The unit of the service duration. This parameter is used together with the During parameter. Valid values:
+        /// The unit of the subscription duration. This parameter is used together with Duration. Valid values:
         /// 
         /// *   Year
         /// *   Month
@@ -100,7 +103,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// The type of the savings plan. Valid values:
         /// 
         /// *   universal: general-purpose type
-        /// *   ecs: ECS compute type
+        /// *   ecs: Elastic Compute Service (ECS) compute type
         /// *   elasticy: elastic type
         /// 
         /// This parameter is required.

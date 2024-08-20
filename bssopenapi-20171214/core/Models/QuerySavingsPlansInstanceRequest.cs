@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySavingsPlansInstanceRequest : TeaModel {
+        [NameInMap("CommodityCode")]
+        [Validation(Required=false)]
+        public string CommodityCode { get; set; }
+
         /// <summary>
         /// The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
         /// </summary>

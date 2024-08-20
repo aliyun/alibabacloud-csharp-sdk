@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public float? AdjustAmount { get; set; }
 
+                    /// <summary>
+                    /// The amount paid after the tax is deducted.
+                    /// </summary>
                     [NameInMap("AfterTaxAmount")]
                     [Validation(Required=false)]
                     public float? AfterTaxAmount { get; set; }
@@ -173,6 +176,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public float? PaymentAmount { get; set; }
 
+                    /// <summary>
+                    /// The currency used for payment.
+                    /// </summary>
                     [NameInMap("PaymentCurrency")]
                     [Validation(Required=false)]
                     public string PaymentCurrency { get; set; }
@@ -191,6 +197,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public float? PretaxAmount { get; set; }
 
+                    /// <summary>
+                    /// The pretax amount paid in local currency.
+                    /// </summary>
                     [NameInMap("PretaxAmountLocal")]
                     [Validation(Required=false)]
                     public float? PretaxAmountLocal { get; set; }
@@ -247,6 +256,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public string SubscriptionType { get; set; }
 
+                    /// <summary>
+                    /// The tax.
+                    /// </summary>
                     [NameInMap("Tax")]
                     [Validation(Required=false)]
                     public float? Tax { get; set; }
