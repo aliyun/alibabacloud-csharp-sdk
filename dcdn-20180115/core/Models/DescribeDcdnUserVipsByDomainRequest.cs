@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// The accelerated domain name. You can specify only one domain name.
         /// 
         /// Enumeration values: example.com
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

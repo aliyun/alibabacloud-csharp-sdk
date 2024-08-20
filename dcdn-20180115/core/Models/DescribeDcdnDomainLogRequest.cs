@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnDomainLogRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name that you want to query. You can specify only one domain name in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

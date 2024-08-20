@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainRealTimeBpsDataResponseBody : TeaModel {
         /// <summary>
-        /// The list of the data returned.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel> BpsModel { get; set; }
             public class DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel : TeaModel {
                 /// <summary>
-                /// The bandwidth, in bit/s.
+                /// The bandwidth. Unit: bit/s.
                 /// </summary>
                 [NameInMap("Bps")]
                 [Validation(Required=false)]

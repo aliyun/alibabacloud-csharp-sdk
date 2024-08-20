@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// The domain name to be added to IPA.
         /// 
         /// A wildcard domain that starts with a period (.) is supported, such as .example.com.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -71,6 +73,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The information about the addresses of origin servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]

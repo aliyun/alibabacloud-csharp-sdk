@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   **PayByTraffic**: pay-by-traffic
         /// *   **PayByBandwidth**: pay-by-bandwidth
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BillType")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   **websockettraffic**: pay-by-data-transfer
         /// *   **websocketbps**: pay-by-bandwidth
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WebsocketBillType")]
         [Validation(Required=false)]

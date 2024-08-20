@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The protected domain names for which you want to change the protection status. You can specify up to 50 domain names. Separate multiple domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]

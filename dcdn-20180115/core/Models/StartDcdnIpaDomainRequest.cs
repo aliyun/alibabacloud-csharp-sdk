@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class StartDcdnIpaDomainRequest : TeaModel {
         /// <summary>
         /// The name of the accelerated domain to be enabled. You can specify only one accelerated domain name at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// *   in: India
         /// *   eu: Europe
         /// *   us: United States
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataCenter")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The name of a real-time log delivery project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -49,6 +55,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The name of the Log Service Logstore.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SLSLogStore")]
         [Validation(Required=false)]
@@ -56,6 +64,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The name of the Log Service project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SLSProject")]
         [Validation(Required=false)]
@@ -63,6 +73,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The region to which real-time logs are delivered.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SLSRegion")]
         [Validation(Required=false)]

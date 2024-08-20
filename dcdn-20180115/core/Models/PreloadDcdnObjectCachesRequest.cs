@@ -30,7 +30,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public bool? L2Preload { get; set; }
 
         /// <summary>
-        /// The path of the content that you want to prefetch. Separate multiple URLs with line feed characters (\n) or a pair of carriage return and line feed characters (\r\n).
+        /// The path of the content that you want to prefetch. Separate multiple URLs with line feed characters (\\n) or a pair of carriage return and line feed characters (\\r\\n).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]

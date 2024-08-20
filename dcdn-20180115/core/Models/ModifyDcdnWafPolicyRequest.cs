@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class ModifyDcdnWafPolicyRequest : TeaModel {
         /// <summary>
         /// The ID of the protection policy that you want to modify. You can specify only one ID in each request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

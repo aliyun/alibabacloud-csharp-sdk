@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnBlockedRegionsRequest : TeaModel {
         /// <summary>
         /// The language. Valid values: zh, en, and jp.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

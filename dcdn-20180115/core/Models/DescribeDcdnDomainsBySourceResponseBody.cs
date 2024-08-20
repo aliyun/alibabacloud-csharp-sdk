@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnDomainsBySourceResponseBody : TeaModel {
         /// <summary>
         /// The information about each origin server and the corresponding domain names.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainInfo")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class SetDcdnDomainSSLCertificateRequest : TeaModel {
         /// <summary>
-        /// The ID of the certificate. This parameter takes effect only when **CertType** is set to **cas**.
+        /// The certificate ID. This parameter is required and valid only when **CertType** is set to **cas**. If you specify this parameter, an existing certificate is used.
         /// </summary>
         [NameInMap("CertId")]
         [Validation(Required=false)]
         public long? CertId { get; set; }
 
         /// <summary>
-        /// The name of the SSL certificate. You can specify only one certificate name.
+        /// The name of the new certificate. You can specify only one certificate name. This parameter is optional and valid only when **CertType** is set to **upload**.
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The domain name that is secured by the SSL certificate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -70,6 +72,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   **on**
         /// *   **off**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]

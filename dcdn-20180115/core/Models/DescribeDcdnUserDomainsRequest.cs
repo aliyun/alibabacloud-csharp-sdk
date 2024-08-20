@@ -133,6 +133,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         }
 
+        /// <summary>
+        /// The business type of the domain. Separate multiple values with commas (,). Default value: **dynamic**. To query common domains, keep the default value. To query domains of the computing business type, enter **computing_routine** or **computing_image**.
+        /// </summary>
         [NameInMap("WebSiteType")]
         [Validation(Required=false)]
         public string WebSiteType { get; set; }

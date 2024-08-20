@@ -18,13 +18,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// *   ip_blacklist: IP address blacklist
         /// *   region_block: region blacklist
         /// *   bot: bot management
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefenseScene")]
         [Validation(Required=false)]
         public string DefenseScene { get; set; }
 
         /// <summary>
-        /// The name of the protection policy. The name can be up to 64 characters in length and can contain letters, digits, and underscores (\_).
+        /// The name of the protection policy. The name can be up to 64 characters in length and can contain letters, digits, and underscores (_).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   on: The policy is enabled.
         /// *   off: The policy is disabled.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyStatus")]
         [Validation(Required=false)]
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   default: sets the current policy as the default policy.
         /// *   custom: does not set the current policy as the default policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

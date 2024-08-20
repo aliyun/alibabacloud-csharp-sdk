@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchPutDcdnKvRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("KvList")]
         [Validation(Required=false)]
         public List<BatchPutDcdnKvRequestKvList> KvList { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public long? ExpirationTtl { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -33,6 +42,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The name of the namespace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

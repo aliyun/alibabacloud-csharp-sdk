@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class SetDcdnUserConfigRequest : TeaModel {
         /// <summary>
         /// The configuration parameters of the feature.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The ID of the feature.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FunctionId")]
         [Validation(Required=false)]

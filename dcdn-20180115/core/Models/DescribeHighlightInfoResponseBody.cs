@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeHighlightInfoResponseBody : TeaModel {
         /// <summary>
-        /// The model of the highlighted data.
+        /// The data model of the highlighted data.
         /// </summary>
         [NameInMap("DataModule")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public string Hit { get; set; }
 
             /// <summary>
-            /// The type of the highlight data.
+            /// The type of the highlighted data.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// Complete data.
+            /// The complete data.
             /// </summary>
             [NameInMap("Raw")]
             [Validation(Required=false)]

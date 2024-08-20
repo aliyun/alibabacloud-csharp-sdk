@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnSMCertificateDetailRequest : TeaModel {
         /// <summary>
         /// The ID of the certificate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]

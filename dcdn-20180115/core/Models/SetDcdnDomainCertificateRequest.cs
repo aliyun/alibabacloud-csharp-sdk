@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// The accelerated domain name. You can specify only one domain name.
         /// 
         /// HTTPS acceleration must be enabled for the accelerated domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -67,6 +69,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   **on**
         /// *   **off**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]

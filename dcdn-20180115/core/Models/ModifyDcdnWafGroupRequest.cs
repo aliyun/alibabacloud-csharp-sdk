@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class ModifyDcdnWafGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the custom WAF rule group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The incremental modification of the rules in the custom WAF rule group. The value is a string in the JSON format.
+        /// The incremental modifications of the rules in the custom WAF rule group. The value is a JSON string.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchSetDcdnDomainConfigsResponseBody : TeaModel {
         /// <summary>
-        /// 域名配置清单。
+        /// The list of domain configurations.
         /// </summary>
         [NameInMap("DomainConfigList")]
         [Validation(Required=false)]
@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<BatchSetDcdnDomainConfigsResponseBodyDomainConfigListDomainConfigModel> DomainConfigModel { get; set; }
             public class BatchSetDcdnDomainConfigsResponseBodyDomainConfigListDomainConfigModel : TeaModel {
                 /// <summary>
-                /// 配置ID，如果返回为0，则表示该条配置未配置成功，需要重新配置。
+                /// The ID of the configuration.
                 /// </summary>
                 [NameInMap("ConfigId")]
                 [Validation(Required=false)]
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// 域名。
+                /// The domain name.
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// 功能名称。
+                /// The name of the feature.
                 /// </summary>
                 [NameInMap("FunctionName")]
                 [Validation(Required=false)]

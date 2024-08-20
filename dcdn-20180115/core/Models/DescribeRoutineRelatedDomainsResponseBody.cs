@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeRoutineRelatedDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The list of domain names associated with the routine.
+        /// The domain names associated with a routine.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

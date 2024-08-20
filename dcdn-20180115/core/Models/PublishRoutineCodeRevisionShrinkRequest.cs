@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// *   production: the name of the environment, including the environment name (SpecName) and the domain name whitelist (AllowedHosts).
         /// 
         /// *   presetCanary: You can add canary release environments based on your business requirements. This parameter is optional.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The version of the routine code that you want to publish.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SelectCodeRevision")]
         [Validation(Required=false)]

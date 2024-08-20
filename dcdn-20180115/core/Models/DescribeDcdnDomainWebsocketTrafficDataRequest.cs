@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// The name of the ISP.
         /// 
-        /// You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.
+        /// You can call the [DescribeDcdnRegionAndIsp](https://help.aliyun.com/document_detail/207199.html) operation to query ISPs.
         /// </summary>
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// The name of the region.
         /// 
-        /// You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
+        /// You can call the [DescribeDcdnRegionAndIsp](https://help.aliyun.com/document_detail/207199.html) operation to query regions.
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]

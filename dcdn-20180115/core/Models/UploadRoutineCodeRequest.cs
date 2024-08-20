@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class UploadRoutineCodeRequest : TeaModel {
         /// <summary>
         /// The description of the code version.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CodeDescription")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

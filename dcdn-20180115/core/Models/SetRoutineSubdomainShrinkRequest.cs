@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         ///     Subdomains: [
         ///         "subdomain-test"
         ///     ]
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Subdomains")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DeleteDcdnRealTimeLogProjectRequest : TeaModel {
         /// <summary>
         /// The name of a real-time log delivery project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]

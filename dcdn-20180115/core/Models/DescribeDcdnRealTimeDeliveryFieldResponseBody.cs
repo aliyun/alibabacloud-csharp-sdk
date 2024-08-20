@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](~~324199~~).
+                /// The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](https://help.aliyun.com/document_detail/324199.html).
                 /// </summary>
                 [NameInMap("FieldName")]
                 [Validation(Required=false)]

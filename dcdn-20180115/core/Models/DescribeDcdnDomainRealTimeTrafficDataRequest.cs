@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnDomainRealTimeTrafficDataRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name. You can specify one or more domain names and separate them with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

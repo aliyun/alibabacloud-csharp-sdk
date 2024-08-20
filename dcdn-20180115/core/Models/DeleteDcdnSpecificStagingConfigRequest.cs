@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).
         /// 
         /// You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The accelerated domain name. You can specify only one domain name in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

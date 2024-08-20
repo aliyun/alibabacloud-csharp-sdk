@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserCertificateExpireCountResponseBody : TeaModel {
         /// <summary>
-        /// The number of domain names whose SSL certificates are about to expires within 30 days.
+        /// The number of domain names whose SSL certificates are about to expire within 30 days.
         /// </summary>
         [NameInMap("ExpireWithin30DaysCount")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public int? ExpiredCount { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

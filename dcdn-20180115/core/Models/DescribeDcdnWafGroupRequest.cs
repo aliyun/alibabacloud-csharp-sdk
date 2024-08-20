@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnWafGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the WAF rule group. You can query the ID by calling the [DescribeDcdnWafGroups](~~DescribeDcdnWafGroups~~) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -19,8 +21,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// *   **en**: English
-        /// *    **zh**: Chinese
+        /// *   **en**: English.
+        /// *   **zh**: Chinese.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -41,11 +45,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The query conditions. The value needs to be a JSON string in the following format: Format:
+        /// The query conditions. The value is a JSON string in the following format:
         /// 
-        /// `QueryArgs={"PolicyIds":"IDs of protection policies","RuleIds":"IDs of protection rules","RuleNameLike":"Names of protection rules","DomainNames":"Protected domain names","DefenseScenes":"waf_group","RuleStatus":"on","OrderBy":"GmtModified","Desc":"false"}`
+        /// `QueryArgs={"PolicyIds":"The range of protection policy IDs","RuleIds":"The range of protection rule IDs","RuleNameLike":"The name of the protection rule","DomainNames":"The protected domain names","DefenseScenes":"waf_group","RuleStatus":"on","OrderBy":"GmtModified","Desc":"false"}`
         /// 
-        /// > If you do not specify this parameter, all protection rules are queried.
+        /// >  If you do not specify this parameter, all protection rules are queried.
         /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]
@@ -54,8 +58,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// The range of the rule group to be queried.
         /// 
-        /// *   **in**: rules in the rule group are returned.
-        /// *  **out**: rules that are in the full rule set but are not in the rule group are returned.
+        /// *   **in**: Rules in the rule group are returned.
+        /// *   **out**: Rules that are in the full rule set but are not in the rule group are returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]

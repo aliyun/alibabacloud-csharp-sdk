@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnDomainRealTimeBpsDataRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// The name of the Internet service provider (ISP).
         /// 
-        /// You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.
+        /// If you do not set this parameter, all ISPs are queried. You can call [DescribeDcdnRegionAndIsp](~~DescribeDcdnRegionAndIsp~~) to query ISP names.
         /// </summary>
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// The name of the region.
         /// 
-        /// You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
+        /// If you do not set this parameter, all regions are queried. You can call [DescribeDcdnRegionAndIsp](~~DescribeDcdnRegionAndIsp~~) to query regions.
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]

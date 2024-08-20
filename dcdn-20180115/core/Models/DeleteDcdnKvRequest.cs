@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DeleteDcdnKvRequest : TeaModel {
         /// <summary>
         /// The name of the key that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The namespace that you specify when you call the PutDcdnKvNamespace operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

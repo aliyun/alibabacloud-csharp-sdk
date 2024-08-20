@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class BatchSetDcdnIpaDomainConfigsRequest : TeaModel {
         /// <summary>
         /// The domain names accelerated by IPA. Separate multiple domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The list of features. `[{"functionArgs":[{"argName":"parameter name","argValue":"parameter value"}],"functionName":"feature name"}]`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Functions")]
         [Validation(Required=false)]

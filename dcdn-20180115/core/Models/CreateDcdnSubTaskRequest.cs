@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// *   **24**: Distribution of ISPs
         /// *   **26**: Peak IPv4/IPv6 Bandwidth
         /// *   **27**: Back-to-origin bandwidth
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReportIds")]
         [Validation(Required=false)]

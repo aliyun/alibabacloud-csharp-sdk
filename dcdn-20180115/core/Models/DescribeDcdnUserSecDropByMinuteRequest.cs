@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The language. Valid values: en and zh. Default value: en
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -62,6 +64,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The name of the security feature.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecFunc")]
         [Validation(Required=false)]

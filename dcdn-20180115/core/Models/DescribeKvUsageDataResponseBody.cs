@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The detailed usage data.
+        /// The usage details.
         /// </summary>
         [NameInMap("KvUsageData")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public long? Acc { get; set; }
 
             /// <summary>
-            /// The request method. This parameter is returned only if **SplitBy** is set to **type**.
+            /// The request method. This parameter is available only when the **SplitBy** parameter is set to **type**.
             /// </summary>
             [NameInMap("AccessType")]
             [Validation(Required=false)]
             public string AccessType { get; set; }
 
             /// <summary>
-            /// The ID of the namespace. This parameter is returned only if **SplitBy** is set to **namespace**.
+            /// The namespace ID. This parameter is available only when the **SplitBy** parameter is set to **namespace**.
             /// </summary>
             [NameInMap("NamespaceId")]
             [Validation(Required=false)]

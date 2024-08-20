@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnDomainRealTimeDetailDataRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
         /// > The end time must be later than the start time, and the maximum time range to query is 10 minutes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -31,13 +35,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// *   **qps**: queries per second (QPS)
         /// *   **bps**: bandwidth
         /// *   **http_code**: HTTP status code
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Field")]
         [Validation(Required=false)]
         public string Field { get; set; }
 
         /// <summary>
-        /// The name of the ISP. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the ISP name.
+        /// The name of the ISP. You can call the [DescribeDcdnRegionAndIsp](https://help.aliyun.com/document_detail/207199.html) operation to query the ISP name.
         /// 
         /// If you leave this parameter empty, all ISPs are queried.
         /// </summary>
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// The name of the region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the region name.
+        /// The name of the region. You can call the [DescribeDcdnRegionAndIsp](https://help.aliyun.com/document_detail/207199.html) operation to query the region name.
         /// 
         /// If you leave this parameter empty, all regions are queried.
         /// </summary>
@@ -80,6 +86,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

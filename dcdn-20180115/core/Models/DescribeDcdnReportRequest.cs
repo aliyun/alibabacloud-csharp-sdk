@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnReportRequest : TeaModel {
         /// <summary>
-        /// The region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
+        /// The region. You can call the [DescribeDcdnRegionAndIsp](https://help.aliyun.com/document_detail/207199.html) operation to query regions.
         /// 
         /// *   If you do not specify a region, data in all regions is queried.
         /// *   If you specify a region, data in the specified region is returned. You can specify one or more regions. Separate regions with commas (,).
@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -58,7 +60,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string IsOverseas { get; set; }
 
         /// <summary>
-        /// The ID of the operations report that you want to query. You can enter only one ID in each call. You can call the [DescribeDcdnSubList](~~270075~~) operation to query report IDs.
+        /// The ID of the operations report that you want to query. You can enter only one ID in each call. You can call the [DescribeDcdnSubList](https://help.aliyun.com/document_detail/270075.html) operation to query report IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

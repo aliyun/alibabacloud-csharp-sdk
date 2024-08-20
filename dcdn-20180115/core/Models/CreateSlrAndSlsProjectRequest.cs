@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// *   **us-west-1**
         /// *   **ap-south-1**
         /// *   **ap-southeast-1**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]

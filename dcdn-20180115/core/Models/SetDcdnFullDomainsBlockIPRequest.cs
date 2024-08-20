@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The IP addresses that you want to block or unblock. Separate multiple IP addresses with commas (,). You can specify up to 1,000 IP addresses.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IPList")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   **block**
         /// *   **unblock**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperationType")]
         [Validation(Required=false)]

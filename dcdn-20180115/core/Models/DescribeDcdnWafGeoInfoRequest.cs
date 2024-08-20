@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// 
         /// *   cn: Chinese
         /// *   en: English
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

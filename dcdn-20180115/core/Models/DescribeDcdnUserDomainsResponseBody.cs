@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.
+        /// The information about the queried domains.
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
@@ -21,60 +21,67 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnUserDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeDcdnUserDomainsResponseBodyDomainsPageData : TeaModel {
                 /// <summary>
-                /// The CNAME assigned to the accelerated domain name.
+                /// The CNAME of the domain.
                 /// </summary>
                 [NameInMap("Cname")]
                 [Validation(Required=false)]
                 public string Cname { get; set; }
 
                 /// <summary>
-                /// The reason why the accelerated domain name failed the review.
+                /// The reason why the domain failed the review.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the accelerated domain name.
+                /// The domain ID.
                 /// </summary>
                 [NameInMap("DomainId")]
                 [Validation(Required=false)]
                 public long? DomainId { get; set; }
 
                 /// <summary>
-                /// The information about the accelerated domain name.
+                /// The domain name.
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The status of the accelerated domain name.
+                /// The domain status.
                 /// 
-                /// *   **online**: enabled
-                /// *   **offline**: disabled
-                /// *   **configuring**: configuring
-                /// *   **configure_failed**: configuration failed
-                /// *   **checking**: reviewing
-                /// *   **check_failed:** review failed
+                /// *   **online**: The domain is active.
+                /// *   **offline**: The domain is suspended.
+                /// *   **configuring**: The domain is being configured.
+                /// *   **configure_failed**: The domain failed to be configured.
+                /// *   **checking**: The domain is under review.
+                /// *   **check_failed**: The domain failed the review.
                 /// </summary>
                 [NameInMap("DomainStatus")]
                 [Validation(Required=false)]
                 public string DomainStatus { get; set; }
 
+                /// <summary>
+                /// The computing service type. Valid values:
+                /// 
+                /// *   **routine**
+                /// *   **image**
+                /// *   **cloudFunction**
+                /// </summary>
                 [NameInMap("FunctionType")]
                 [Validation(Required=false)]
                 public string FunctionType { get; set; }
 
                 /// <summary>
-                /// The time when the accelerated domain name was added to Dynamic Content Delivery Network (DCDN).
+                /// The time when the domain was added to DCDN.
                 /// </summary>
                 [NameInMap("GmtCreated")]
                 [Validation(Required=false)]
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// The time when the accelerated domain name was modified.
+                /// The time when the domain was modified.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
@@ -88,28 +95,36 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The status of HTTPS.
+                /// Indicates whether HTTPS was enabled.
                 /// 
-                /// *   **on**
-                /// *   **off**
+                /// *   **on**: enabled.
+                /// *   **off**: disabled.
                 /// </summary>
                 [NameInMap("SSLProtocol")]
                 [Validation(Required=false)]
                 public string SSLProtocol { get; set; }
 
                 /// <summary>
-                /// Indicates whether the accelerated domain name was in a sandbox.
+                /// The sandbox status.
                 /// </summary>
                 [NameInMap("Sandbox")]
                 [Validation(Required=false)]
                 public string Sandbox { get; set; }
 
+                /// <summary>
+                /// The acceleration scenario. Valid values:
+                /// 
+                /// *   **apiscene**: accelerates response to API calls.
+                /// *   **webservicescene**: accelerates content delivery for websites.
+                /// *   **staticscene**: accelerates the delivery of videos, images, and text.
+                /// *   **If you leave this parameter empty, no scenarios are supported.
+                /// </summary>
                 [NameInMap("Scene")]
                 [Validation(Required=false)]
                 public string Scene { get; set; }
 
                 /// <summary>
-                /// The information about the origin server.
+                /// The information about the origin servers.
                 /// </summary>
                 [NameInMap("Sources")]
                 [Validation(Required=false)]
@@ -134,7 +149,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         public int? Port { get; set; }
 
                         /// <summary>
-                        /// The priority.
+                        /// The priority of the origin server.
                         /// </summary>
                         [NameInMap("Priority")]
                         [Validation(Required=false)]
@@ -148,7 +163,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// The weight.
+                        /// The weight of the origin server.
                         /// </summary>
                         [NameInMap("Weight")]
                         [Validation(Required=false)]

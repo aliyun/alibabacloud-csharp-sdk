@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class BatchCreateDcdnWafRulesRequest : TeaModel {
         /// <summary>
         /// The ID of the protection policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The configuration of the protection rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleConfigs")]
         [Validation(Required=false)]

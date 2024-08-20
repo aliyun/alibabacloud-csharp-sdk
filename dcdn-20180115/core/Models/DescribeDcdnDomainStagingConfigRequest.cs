@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnDomainStagingConfigRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The names of the features to query. You can separate multiple features with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]

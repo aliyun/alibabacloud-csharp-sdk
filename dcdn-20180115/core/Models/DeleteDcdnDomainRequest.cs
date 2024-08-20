@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DeleteDcdnDomainRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name to be deleted. You can specify only one domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

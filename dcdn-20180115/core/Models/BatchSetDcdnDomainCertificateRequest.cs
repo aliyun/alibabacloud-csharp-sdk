@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// The accelerated domain name for which you want to configure the HTTPS certificate. The accelerated domain must have HTTPS acceleration enabled. You can specify multiple domain names and separate them with commas (,).
         /// 
         /// > You can configure up to 10 domain names in each request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// *   **off**: does not enable the HTTPS certificate.
         /// 
         /// This is the default value.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]

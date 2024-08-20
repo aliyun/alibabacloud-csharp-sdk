@@ -11,13 +11,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class BatchDeleteDcdnDomainConfigsRequest : TeaModel {
         /// <summary>
         /// The accelerated domain names whose configurations you want to delete. Separate multiple accelerated domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }
 
         /// <summary>
-        /// The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see [Feature settings for a domain name](~~410622~~).
+        /// The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see [Feature settings for a domain name](https://help.aliyun.com/document_detail/410622.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]

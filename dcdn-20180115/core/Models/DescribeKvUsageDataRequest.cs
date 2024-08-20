@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The type of the request data. Set the value to **acc**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Field")]
         [Validation(Required=false)]

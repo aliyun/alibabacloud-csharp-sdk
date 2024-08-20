@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainByCertificateRequest : TeaModel {
         /// <summary>
-        /// Specifies whether the domain name list to return match the SSL certificate.
-        /// 
-        /// - **true**: The domain name list match the SSL certificate.
-        /// - **false**: The domain name list do not match the SSL certificate.
+        /// Specifies whether the domain name list to return matches the SSL certificate.
+        /// - **true**: The domain name list matches the SSL certificate.
+        /// - **false**: The domain name list does not match the SSL certificate.
         /// </summary>
         [NameInMap("Exact")]
         [Validation(Required=false)]
@@ -23,6 +22,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// The public key of the certificate.
         /// 
         /// You must use Base64 encoding schemes and then the encodeURIComponent method to encode the public key. PEM files are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SSLPub")]
         [Validation(Required=false)]

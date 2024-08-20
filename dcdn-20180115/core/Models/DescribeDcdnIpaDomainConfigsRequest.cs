@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnIpaDomainConfigsRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name. Separate multiple domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The name of the feature. Set the value to protogw, which indicates IP Application Accelerator (IPA).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]

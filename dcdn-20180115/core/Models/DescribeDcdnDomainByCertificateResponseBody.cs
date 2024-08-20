@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string CertSubjectCommonName { get; set; }
 
                 /// <summary>
-                /// The type of the certificate. **RSA**, **DSA**, and **ECDSA**.
+                /// The type of the certificate. Valid values: **RSA**, **DSA**, and **ECDSA**.
                 /// </summary>
                 [NameInMap("CertType")]
                 [Validation(Required=false)]

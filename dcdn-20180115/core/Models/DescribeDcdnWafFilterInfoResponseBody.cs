@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public List<DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol> LogicalSymbol { get; set; }
                 public class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol : TeaModel {
                     /// <summary>
-                    /// The configurable attributes, which are bit-field variables that are shown in the following list.\
+                    /// The configurable attributes, which are bit-field variables that are shown in the following list.\\
                     /// For example, 1(00000001) indicates that case sensitivity can be enabled and stream match cannot be enabled, and 3(00000011) indicates that case sensitivity and stream match can be enabled.
                     /// 
                     /// *   Bit (low to high) - Description

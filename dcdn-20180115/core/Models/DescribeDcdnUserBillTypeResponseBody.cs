@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 /// 
                 /// *   **hour_flow**: pay by hourly traffic
                 /// *   **day_bandwidth**: pay by daily bandwidth
-                /// *   **month\_95**: pay by monthly 95th percentile
+                /// *   **month_95**: pay by monthly 95th percentile
                 /// *   **month_avg_day_bandwidth**: pay by average daily peak bandwidth per month
-                /// *   **month\_4th_day_bandwidth**: pay by 4th peak bandwidth per month
-                /// *   **month_avg_day\_95**: pay by average daily 95th percentile per month
-                /// *   **month\_95\_night_half**: pay by 95th percentile (50% off during nighttime)
+                /// *   **month_4th_day_bandwidth**: pay by 4th peak bandwidth per month
+                /// *   **month_avg_day_95**: pay by average daily 95th percentile per month
+                /// *   **month_95_night_half**: pay by 95th percentile (50% off during nighttime)
                 /// *   **hour_vas**: pay by value-added service per month
                 /// *   **quic_hour_count**: pay by QUIC request per hour
                 /// *   **hour_count**: pay by request per hour

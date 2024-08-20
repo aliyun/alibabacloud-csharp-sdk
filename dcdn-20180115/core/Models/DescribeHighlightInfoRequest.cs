@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// <summary>
         /// The access language. Valid values:
         /// 
-        /// *   **en-US** (default): English
-        /// *   **zh-CN**: Chinese
+        /// *   **en-US** (default): English.
+        /// *   **zh-CN**: Chinese.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The ID of the trace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

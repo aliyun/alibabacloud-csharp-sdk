@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string FuncFilter { get; set; }
 
         /// <summary>
-        /// The ID of the feature. For example, a value of 7 specifies the feature of configuring an expiration rule for a specific directory. For more information about feature IDs, see [Parameters for configuring features for domain names](~~410622~~).
+        /// The ID of the feature. For example, a value of 7 specifies the feature of configuring an expiration rule for a specific directory. For more information about feature IDs, see [Parameters for configuring features for domain names](https://help.aliyun.com/document_detail/410622.html).
         /// </summary>
         [NameInMap("FuncId")]
         [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the returned page. Valid values: **1** to **100000**. Default value: **1**.
+        /// The page number. Valid values: **1** to **100000**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of domain names to return on each page. Default value: **20**. Maximum value: **500**. Valid values: an integer between **1** and **500**.
+        /// The number of domain names per page. Default value: **20**.**** Valid values: **1** to **500**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

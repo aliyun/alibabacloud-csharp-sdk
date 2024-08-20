@@ -30,12 +30,20 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public List<DescribeDcdnKvAccountResponseBodyNamespaceList> NamespaceList { get; set; }
         public class DescribeDcdnKvAccountResponseBodyNamespaceList : TeaModel {
+            [NameInMap("Capacity")]
+            [Validation(Required=false)]
+            public long? Capacity { get; set; }
+
             /// <summary>
             /// The available capacity of the namespace.
             /// </summary>
             [NameInMap("CapacityString")]
             [Validation(Required=false)]
             public string CapacityString { get; set; }
+
+            [NameInMap("CapacityUsed")]
+            [Validation(Required=false)]
+            public long? CapacityUsed { get; set; }
 
             /// <summary>
             /// The namespace has used capacity.

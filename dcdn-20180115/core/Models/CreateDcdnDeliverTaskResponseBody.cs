@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class CreateDcdnDeliverTaskResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the tracking task.
+        /// The ID of the change tracking task.
         /// </summary>
         [NameInMap("DeliverId")]
         [Validation(Required=false)]

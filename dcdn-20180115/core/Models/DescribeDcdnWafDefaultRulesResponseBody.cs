@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafDefaultRulesResponseBody : TeaModel {
         /// <summary>
-        /// The configurations of the rule.
+        /// The rule configurations.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -19,15 +19,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             /// <summary>
             /// The protection scenario. Valid values:
             /// 
-            /// *   **waf_group**: basic web protection
-            /// *   **anti_scan**: scan protection
+            /// *   **waf_group**: basic web protection.
+            /// *   **anti_scan**: scan protection.
             /// </summary>
             [NameInMap("DefenseScene")]
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
 
             /// <summary>
-            /// The configurations of the rule.
+            /// The rules.
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 /// <summary>
                 /// The default action of the rule. Valid values:
                 /// 
-                /// *   **monitor**: monitors requests.
-                /// *   **deny**: denies requests.
-                /// *   **block**: blocks requests.
+                /// *   **monitor**
+                /// *   **deny**
+                /// *   **block**
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
@@ -69,12 +69,12 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The rule type. Valid values:
+                /// The type of the rule. Valid values:
                 /// 
-                /// *   **waf_group**: basic web protection
-                /// *   **high_frequency**: high-frequency scanning blocking
-                /// *   **directory_traversal**: directory traversal blocking
-                /// *   **scan_tools**: scanner blocking
+                /// *   **waf_group**: basic web protection.
+                /// *   **high_frequency**: high-frequency scanning blocking.
+                /// *   **directory_traversal**: directory traversal blocking.
+                /// *   **scan_tools**: scanner blocking.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

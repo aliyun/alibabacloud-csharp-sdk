@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         /// <summary>
                         /// The path of the log file.
                         /// 
-                        /// Take note of the Expires field (expiration timestamp) in the response parameter LogPath. If the log download URL expires, you must obtain it again. For more information, see [LogPath field](~~31952~~).
+                        /// Take note of the Expires field (expiration timestamp) in the response parameter LogPath. If the log download URL expires, you must obtain it again. For more information, see [LogPath field](https://help.aliyun.com/document_detail/31952.html).
                         /// </summary>
                         [NameInMap("LogPath")]
                         [Validation(Required=false)]

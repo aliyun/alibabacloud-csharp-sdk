@@ -8,24 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class PublishDcdnStagingConfigToProductionRequest : TeaModel {
+    public class BatchDeleteDcdnKvWithHighCapacityAdvanceRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each request.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("DomainName")]
+        [NameInMap("Namespace")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string Namespace { get; set; }
 
         /// <summary>
-        /// The name of the feature.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("FunctionName")]
+        [NameInMap("Url")]
         [Validation(Required=false)]
-        public string FunctionName { get; set; }
+        public Stream UrlObject { get; set; }
 
     }
 

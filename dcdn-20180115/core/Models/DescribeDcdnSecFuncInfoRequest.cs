@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DescribeDcdnSecFuncInfoRequest : TeaModel {
         /// <summary>
         /// The language. Valid values: en and zh. Default value: en.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The type of the drop-down list. Valid values: RobotRuleName and RobotObject.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecFuncType")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         /// *   ip_blacklist: IP address blacklist
         /// *   region_block: region blacklist
         /// *   bot: bot management
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefenseScene")]
         [Validation(Required=false)]

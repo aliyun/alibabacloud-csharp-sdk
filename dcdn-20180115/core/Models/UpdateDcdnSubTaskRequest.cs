@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The IDs of the metrics that you want to update. Separate IDs with commas (,). You can call the [DescribeDcdnSubList](~~270075~~) operation to query the IDs.
+        /// The IDs of the metrics that you want to update. Separate IDs with commas (,). You can call the [DescribeDcdnSubList](https://help.aliyun.com/document_detail/270075.html) operation to query the IDs.
         /// </summary>
         [NameInMap("ReportIds")]
         [Validation(Required=false)]

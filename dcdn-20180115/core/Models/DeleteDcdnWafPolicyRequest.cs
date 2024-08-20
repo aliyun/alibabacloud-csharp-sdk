@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class DeleteDcdnWafPolicyRequest : TeaModel {
         /// <summary>
         /// The ID of the protection policy that you want to delete. You can specify only one ID in each request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         public string CdnRegion { get; set; }
 
                         /// <summary>
-                        /// The billing method of the disk. Valid values: Valid values: **StaticHttp**, **DynamicHttp**, and **DynamicHttps**.
+                        /// The billing method of the disk. Valid values: **StaticHttp**, **DynamicHttp**, and **DynamicHttps**.
                         /// </summary>
                         [NameInMap("ChargeType")]
                         [Validation(Required=false)]

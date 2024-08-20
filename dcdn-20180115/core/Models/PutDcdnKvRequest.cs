@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The key. The key can be up to 512 characters in length, and cannot contain spaces.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The name of the namespace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         /// <summary>
         /// The value of the key. The maximum size is 2 MB (2 x 1000 x 1000 bytes).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
