@@ -530,6 +530,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SourceDBCluster { get; set; }
 
+        [NameInMap("SourceRegionId")]
+        [Validation(Required=false)]
+        public string SourceRegionId { get; set; }
+
         /// <summary>
         /// Indicates whether the cross-zone disaster recovery feature is enabled. Valid values: ON OFF 0: Customer Drill Mode
         /// </summary>
