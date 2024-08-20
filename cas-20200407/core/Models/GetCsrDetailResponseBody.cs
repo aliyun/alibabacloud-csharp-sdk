@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Csr { get; set; }
 
         /// <summary>
+        /// The private key. Specify a Base64-encoded string.
+        /// </summary>
+        [NameInMap("PrivateKey")]
+        [Validation(Required=false)]
+        public string PrivateKey { get; set; }
+
+        /// <summary>
         /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]

@@ -1,3 +1,7 @@
+2024-08-20 Version: 1.3.2
+- Update API GetCsrDetail: update response param.
+
+
 2024-08-13 Version: 1.3.1
 - Update API GetUserCertificateDetail: update response param.
 - Update API ListCloudResources: add param CertIds.
