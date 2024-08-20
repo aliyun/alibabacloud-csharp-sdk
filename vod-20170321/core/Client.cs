@@ -6834,6 +6834,82 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
+         * @param request DescribeVodDomainMax95BpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVodDomainMax95BpsDataResponse
+         */
+        public DescribeVodDomainMax95BpsDataResponse DescribeVodDomainMax95BpsDataWithOptions(DescribeVodDomainMax95BpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainMax95BpsData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainMax95BpsDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeVodDomainMax95BpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVodDomainMax95BpsDataResponse
+         */
+        public async Task<DescribeVodDomainMax95BpsDataResponse> DescribeVodDomainMax95BpsDataWithOptionsAsync(DescribeVodDomainMax95BpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainMax95BpsData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainMax95BpsDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeVodDomainMax95BpsDataRequest
+         * @return DescribeVodDomainMax95BpsDataResponse
+         */
+        public DescribeVodDomainMax95BpsDataResponse DescribeVodDomainMax95BpsData(DescribeVodDomainMax95BpsDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainMax95BpsDataWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request DescribeVodDomainMax95BpsDataRequest
+         * @return DescribeVodDomainMax95BpsDataResponse
+         */
+        public async Task<DescribeVodDomainMax95BpsDataResponse> DescribeVodDomainMax95BpsDataAsync(DescribeVodDomainMax95BpsDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainMax95BpsDataWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the number of queries per second (QPS) for one or more accelerated domain names. Data is collected every 5 minutes. You can query data collected in the last 90 days.
          *
          * @description * You can call this operation up to 100 times per second per account.
