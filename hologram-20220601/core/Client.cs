@@ -144,6 +144,112 @@ namespace AlibabaCloud.SDK.Hologram20220601
         }
 
         /**
+         * @summary 创建计算组
+         *
+         * @param request CreateHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateHoloWarehouseResponse
+         */
+        public CreateHoloWarehouseResponse CreateHoloWarehouseWithOptions(string instanceId, CreateHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/createHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHoloWarehouseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建计算组
+         *
+         * @param request CreateHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateHoloWarehouseResponse
+         */
+        public async Task<CreateHoloWarehouseResponse> CreateHoloWarehouseWithOptionsAsync(string instanceId, CreateHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/createHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建计算组
+         *
+         * @param request CreateHoloWarehouseRequest
+         * @return CreateHoloWarehouseResponse
+         */
+        public CreateHoloWarehouseResponse CreateHoloWarehouse(string instanceId, CreateHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateHoloWarehouseWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建计算组
+         *
+         * @param request CreateHoloWarehouseRequest
+         * @return CreateHoloWarehouseResponse
+         */
+        public async Task<CreateHoloWarehouseResponse> CreateHoloWarehouseAsync(string instanceId, CreateHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /**
          * @summary Creates a Hologres instance.
          *
          * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
@@ -463,6 +569,104 @@ namespace AlibabaCloud.SDK.Hologram20220601
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateInstanceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除计算组
+         *
+         * @param request DeleteHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteHoloWarehouseResponse
+         */
+        public DeleteHoloWarehouseResponse DeleteHoloWarehouseWithOptions(string instanceId, DeleteHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/deleteHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHoloWarehouseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除计算组
+         *
+         * @param request DeleteHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteHoloWarehouseResponse
+         */
+        public async Task<DeleteHoloWarehouseResponse> DeleteHoloWarehouseWithOptionsAsync(string instanceId, DeleteHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/deleteHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除计算组
+         *
+         * @param request DeleteHoloWarehouseRequest
+         * @return DeleteHoloWarehouseResponse
+         */
+        public DeleteHoloWarehouseResponse DeleteHoloWarehouse(string instanceId, DeleteHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteHoloWarehouseWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除计算组
+         *
+         * @param request DeleteHoloWarehouseRequest
+         * @return DeleteHoloWarehouseResponse
+         */
+        public async Task<DeleteHoloWarehouseResponse> DeleteHoloWarehouseAsync(string instanceId, DeleteHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         /**
@@ -1134,6 +1338,210 @@ namespace AlibabaCloud.SDK.Hologram20220601
         }
 
         /**
+         * @summary 停止计算组
+         *
+         * @param request RebalanceHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebalanceHoloWarehouseResponse
+         */
+        public RebalanceHoloWarehouseResponse RebalanceHoloWarehouseWithOptions(string instanceId, RebalanceHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebalanceHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/rebalanceHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebalanceHoloWarehouseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RebalanceHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebalanceHoloWarehouseResponse
+         */
+        public async Task<RebalanceHoloWarehouseResponse> RebalanceHoloWarehouseWithOptionsAsync(string instanceId, RebalanceHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebalanceHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/rebalanceHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebalanceHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RebalanceHoloWarehouseRequest
+         * @return RebalanceHoloWarehouseResponse
+         */
+        public RebalanceHoloWarehouseResponse RebalanceHoloWarehouse(string instanceId, RebalanceHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RebalanceHoloWarehouseWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RebalanceHoloWarehouseRequest
+         * @return RebalanceHoloWarehouseResponse
+         */
+        public async Task<RebalanceHoloWarehouseResponse> RebalanceHoloWarehouseAsync(string instanceId, RebalanceHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RebalanceHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RenameHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenameHoloWarehouseResponse
+         */
+        public RenameHoloWarehouseResponse RenameHoloWarehouseWithOptions(string instanceId, RenameHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewWarehouseName))
+            {
+                body["newWarehouseName"] = request.NewWarehouseName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenameHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/renameHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenameHoloWarehouseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RenameHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenameHoloWarehouseResponse
+         */
+        public async Task<RenameHoloWarehouseResponse> RenameHoloWarehouseWithOptionsAsync(string instanceId, RenameHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewWarehouseName))
+            {
+                body["newWarehouseName"] = request.NewWarehouseName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenameHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/renameHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenameHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RenameHoloWarehouseRequest
+         * @return RenameHoloWarehouseResponse
+         */
+        public RenameHoloWarehouseResponse RenameHoloWarehouse(string instanceId, RenameHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RenameHoloWarehouseWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RenameHoloWarehouseRequest
+         * @return RenameHoloWarehouseResponse
+         */
+        public async Task<RenameHoloWarehouseResponse> RenameHoloWarehouseAsync(string instanceId, RenameHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RenameHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /**
          * @summary Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.
          *
          * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
@@ -1260,6 +1668,104 @@ namespace AlibabaCloud.SDK.Hologram20220601
         }
 
         /**
+         * @summary 停止计算组
+         *
+         * @param request RestartHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestartHoloWarehouseResponse
+         */
+        public RestartHoloWarehouseResponse RestartHoloWarehouseWithOptions(string instanceId, RestartHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestartHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/restartHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestartHoloWarehouseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RestartHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestartHoloWarehouseResponse
+         */
+        public async Task<RestartHoloWarehouseResponse> RestartHoloWarehouseWithOptionsAsync(string instanceId, RestartHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestartHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/restartHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestartHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RestartHoloWarehouseRequest
+         * @return RestartHoloWarehouseResponse
+         */
+        public RestartHoloWarehouseResponse RestartHoloWarehouse(string instanceId, RestartHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RestartHoloWarehouseWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request RestartHoloWarehouseRequest
+         * @return RestartHoloWarehouseResponse
+         */
+        public async Task<RestartHoloWarehouseResponse> RestartHoloWarehouseAsync(string instanceId, RestartHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RestartHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 重启实例
          *
          * @param headers map
@@ -1340,6 +1846,104 @@ namespace AlibabaCloud.SDK.Hologram20220601
         }
 
         /**
+         * @summary 停止计算组
+         *
+         * @param request ResumeHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeHoloWarehouseResponse
+         */
+        public ResumeHoloWarehouseResponse ResumeHoloWarehouseWithOptions(string instanceId, ResumeHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/resumeHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeHoloWarehouseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request ResumeHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeHoloWarehouseResponse
+         */
+        public async Task<ResumeHoloWarehouseResponse> ResumeHoloWarehouseWithOptionsAsync(string instanceId, ResumeHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/resumeHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request ResumeHoloWarehouseRequest
+         * @return ResumeHoloWarehouseResponse
+         */
+        public ResumeHoloWarehouseResponse ResumeHoloWarehouse(string instanceId, ResumeHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ResumeHoloWarehouseWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request ResumeHoloWarehouseRequest
+         * @return ResumeHoloWarehouseResponse
+         */
+        public async Task<ResumeHoloWarehouseResponse> ResumeHoloWarehouseAsync(string instanceId, ResumeHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ResumeHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /**
          * @summary Resumes a suspended instance.
          *
          * @param headers map
@@ -1417,6 +2021,112 @@ namespace AlibabaCloud.SDK.Hologram20220601
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ResumeInstanceWithOptionsAsync(instanceId, headers, runtime);
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request ScaleHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScaleHoloWarehouseResponse
+         */
+        public ScaleHoloWarehouseResponse ScaleHoloWarehouseWithOptions(string instanceId, ScaleHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ScaleHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/scaleHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ScaleHoloWarehouseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request ScaleHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScaleHoloWarehouseResponse
+         */
+        public async Task<ScaleHoloWarehouseResponse> ScaleHoloWarehouseWithOptionsAsync(string instanceId, ScaleHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ScaleHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/scaleHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ScaleHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request ScaleHoloWarehouseRequest
+         * @return ScaleHoloWarehouseResponse
+         */
+        public ScaleHoloWarehouseResponse ScaleHoloWarehouse(string instanceId, ScaleHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ScaleHoloWarehouseWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request ScaleHoloWarehouseRequest
+         * @return ScaleHoloWarehouseResponse
+         */
+        public async Task<ScaleHoloWarehouseResponse> ScaleHoloWarehouseAsync(string instanceId, ScaleHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ScaleHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         /**
@@ -1651,6 +2361,104 @@ namespace AlibabaCloud.SDK.Hologram20220601
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await StopInstanceWithOptionsAsync(instanceId, headers, runtime);
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request SuspendHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SuspendHoloWarehouseResponse
+         */
+        public SuspendHoloWarehouseResponse SuspendHoloWarehouseWithOptions(string instanceId, SuspendHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SuspendHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/suspendHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SuspendHoloWarehouseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request SuspendHoloWarehouseRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SuspendHoloWarehouseResponse
+         */
+        public async Task<SuspendHoloWarehouseResponse> SuspendHoloWarehouseWithOptionsAsync(string instanceId, SuspendHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SuspendHoloWarehouse",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/suspendHoloWarehouse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SuspendHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request SuspendHoloWarehouseRequest
+         * @return SuspendHoloWarehouseResponse
+         */
+        public SuspendHoloWarehouseResponse SuspendHoloWarehouse(string instanceId, SuspendHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SuspendHoloWarehouseWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止计算组
+         *
+         * @param request SuspendHoloWarehouseRequest
+         * @return SuspendHoloWarehouseResponse
+         */
+        public async Task<SuspendHoloWarehouseResponse> SuspendHoloWarehouseAsync(string instanceId, SuspendHoloWarehouseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SuspendHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         /**
