@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DestinationRegion { get; set; }
 
+        [NameInMap("DtsRegion")]
+        [Validation(Required=false)]
+        public string DtsRegion { get; set; }
+
         /// <summary>
         /// The number of DTS units (DUs) that are assigned to a DTS task that is run on a DTS dedicated cluster. Valid values: **1** to **100**.
         /// 

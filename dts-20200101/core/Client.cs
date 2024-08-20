@@ -3103,6 +3103,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DestinationRegion"] = request.DestinationRegion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsRegion))
+            {
+                query["DtsRegion"] = request.DtsRegion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Du))
             {
                 query["Du"] = request.Du;
@@ -3221,6 +3225,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegion))
             {
                 query["DestinationRegion"] = request.DestinationRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsRegion))
+            {
+                query["DtsRegion"] = request.DtsRegion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Du))
             {
