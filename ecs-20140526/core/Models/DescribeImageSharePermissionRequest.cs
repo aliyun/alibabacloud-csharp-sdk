@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Pages start from page 1.
         /// 
-        /// Default value: 1.
+        /// Default value: 1
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

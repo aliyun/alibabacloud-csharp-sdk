@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> ImageComponentId { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 500.
+        /// The maximum number of entries per page. Valid values: 1 to 500.
         /// 
         /// Default value: 50.
         /// </summary>

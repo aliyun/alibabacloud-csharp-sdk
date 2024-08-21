@@ -185,23 +185,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// The error message returned when the command failed to be sent or run. Valid values:
                         /// 
                         /// *   If this parameter is empty, the command was run as expected.
-                        /// *   the specified instance does not exists
-                        /// *   the instance has released when create task
-                        /// *   the instance is not running when create task
-                        /// *   the command is not applicable
-                        /// *   the specified account does not exists
-                        /// *   the specified directory does not exists
-                        /// *   the cron job expression is invalid
-                        /// *   the aliyun service is not running on the instance
-                        /// *   the aliyun service in the instance does not response
-                        /// *   the aliyun service in the instance is upgrading now
-                        /// *   the aliyun service in the instance need upgrade
-                        /// *   the command delivery has been timeout
-                        /// *   the command execution has been timeout
-                        /// *   the command execution got an exception
-                        /// *   the command execution has been interrupted
-                        /// *   the command execution exit code is not zero
-                        /// *   the specified instance has been released
+                        /// *   The security group rules denied access to the aliyun service.
+                        /// *   The specified instance does not exist.
+                        /// *   The specified instance was released during task execution.
+                        /// *   The specified instance was not running during task execution.
+                        /// *   The OS type of the instance does not support the specified command type.
+                        /// *   The specified account does not exist.
+                        /// *   The specified directory does not exist.
+                        /// *   The cron expression is invalid.
+                        /// *   The aliyun service is not running on the instance.
+                        /// *   The aliyun service in the instance does not response.
+                        /// *   The aliyun service in the instance is upgrading during task execution.
+                        /// *   The aliyun service in the instance need to be upgraded to at least version to support the feature. indicates the earliest version that supports the feature. indicates the name of the feature.
+                        /// *   The command delivery has been timeout.
+                        /// *   The command execution has been timeout.
+                        /// *   The command execution got an exception.
+                        /// *   The command execution exit code is not zero.
+                        /// *   The specified instance was released during task execution.
                         /// </summary>
                         [NameInMap("ErrorInfo")]
                         [Validation(Required=false)]
@@ -341,6 +341,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string InvokeStatus { get; set; }
 
+                /// <summary>
+                /// The launcher for script execution. The value cannot exceed 1 KB in length.
+                /// </summary>
                 [NameInMap("Launcher")]
                 [Validation(Required=false)]
                 public string Launcher { get; set; }
