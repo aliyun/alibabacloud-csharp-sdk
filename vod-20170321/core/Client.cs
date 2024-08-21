@@ -9562,6 +9562,138 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
+         * @summary 查询证书列表，支持翻页
+         *
+         * @param request DescribeVodSSLCertificateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVodSSLCertificateListResponse
+         */
+        public DescribeVodSSLCertificateListResponse DescribeVodSSLCertificateListWithOptions(DescribeVodSSLCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyword))
+            {
+                query["SearchKeyword"] = request.SearchKeyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodSSLCertificateList",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodSSLCertificateListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询证书列表，支持翻页
+         *
+         * @param request DescribeVodSSLCertificateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVodSSLCertificateListResponse
+         */
+        public async Task<DescribeVodSSLCertificateListResponse> DescribeVodSSLCertificateListWithOptionsAsync(DescribeVodSSLCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyword))
+            {
+                query["SearchKeyword"] = request.SearchKeyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodSSLCertificateList",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodSSLCertificateListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询证书列表，支持翻页
+         *
+         * @param request DescribeVodSSLCertificateListRequest
+         * @return DescribeVodSSLCertificateListResponse
+         */
+        public DescribeVodSSLCertificateListResponse DescribeVodSSLCertificateList(DescribeVodSSLCertificateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodSSLCertificateListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询证书列表，支持翻页
+         *
+         * @param request DescribeVodSSLCertificateListRequest
+         * @return DescribeVodSSLCertificateListResponse
+         */
+        public async Task<DescribeVodSSLCertificateListResponse> DescribeVodSSLCertificateListAsync(DescribeVodSSLCertificateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodSSLCertificateListWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the usage of storage-related resources, including the storage volume and outbound traffic.
          *
          * @description > *   This operation is available only in the **China (Shanghai)** region.
@@ -18851,6 +18983,178 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetVodDomainCertificateWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 设置证书
+         *
+         * @param request SetVodDomainSSLCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetVodDomainSSLCertificateResponse
+         */
+        public SetVodDomainSSLCertificateResponse SetVodDomainSSLCertificateWithOptions(SetVodDomainSSLCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegion))
+            {
+                query["CertRegion"] = request.CertRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPri))
+            {
+                query["SSLPri"] = request.SSLPri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLProtocol))
+            {
+                query["SSLProtocol"] = request.SSLProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPub))
+            {
+                query["SSLPub"] = request.SSLPub;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetVodDomainSSLCertificate",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetVodDomainSSLCertificateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 设置证书
+         *
+         * @param request SetVodDomainSSLCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetVodDomainSSLCertificateResponse
+         */
+        public async Task<SetVodDomainSSLCertificateResponse> SetVodDomainSSLCertificateWithOptionsAsync(SetVodDomainSSLCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegion))
+            {
+                query["CertRegion"] = request.CertRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPri))
+            {
+                query["SSLPri"] = request.SSLPri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLProtocol))
+            {
+                query["SSLProtocol"] = request.SSLProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPub))
+            {
+                query["SSLPub"] = request.SSLPub;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetVodDomainSSLCertificate",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetVodDomainSSLCertificateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 设置证书
+         *
+         * @param request SetVodDomainSSLCertificateRequest
+         * @return SetVodDomainSSLCertificateResponse
+         */
+        public SetVodDomainSSLCertificateResponse SetVodDomainSSLCertificate(SetVodDomainSSLCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetVodDomainSSLCertificateWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 设置证书
+         *
+         * @param request SetVodDomainSSLCertificateRequest
+         * @return SetVodDomainSSLCertificateResponse
+         */
+        public async Task<SetVodDomainSSLCertificateResponse> SetVodDomainSSLCertificateAsync(SetVodDomainSSLCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetVodDomainSSLCertificateWithOptionsAsync(request, runtime);
         }
 
         /**

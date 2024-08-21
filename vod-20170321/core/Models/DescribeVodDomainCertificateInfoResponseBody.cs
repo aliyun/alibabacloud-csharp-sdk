@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string CertExpireTime { get; set; }
 
+                [NameInMap("CertId")]
+                [Validation(Required=false)]
+                public string CertId { get; set; }
+
                 /// <summary>
                 /// The validity period of the certificate. Unit: months or years.
                 /// </summary>
@@ -55,6 +59,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string CertOrg { get; set; }
 
+                [NameInMap("CertRegion")]
+                [Validation(Required=false)]
+                public string CertRegion { get; set; }
+
+                [NameInMap("CertStartTime")]
+                [Validation(Required=false)]
+                public string CertStartTime { get; set; }
+
                 /// <summary>
                 /// The type of the certificate. Valid values:
                 /// 
@@ -66,12 +78,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string CertType { get; set; }
 
+                [NameInMap("CertUpdateTime")]
+                [Validation(Required=false)]
+                public string CertUpdateTime { get; set; }
+
+                [NameInMap("DomainCnameStatus")]
+                [Validation(Required=false)]
+                public string DomainCnameStatus { get; set; }
+
                 /// <summary>
                 /// The accelerated domain name whose ICP filing status you want to update.
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("ServerCertificate")]
+                [Validation(Required=false)]
+                public string ServerCertificate { get; set; }
 
                 /// <summary>
                 /// The status of the SSL certificate.
