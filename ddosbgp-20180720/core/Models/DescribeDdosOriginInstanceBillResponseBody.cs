@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeDdosOriginInstanceBillResponseBody : TeaModel {
+        [NameInMap("AssetStatus")]
+        [Validation(Required=false)]
+        public int? AssetStatus { get; set; }
+
         /// <summary>
         /// The payment status. Valid values:
         /// 
