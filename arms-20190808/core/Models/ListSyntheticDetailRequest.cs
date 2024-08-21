@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// The type of the results. Set the value to SYNTHETIC.
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -64,22 +67,37 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Detail { get; set; }
 
+        /// <summary>
+        /// The timestamp of the end time of the query. Unit: milliseconds.
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// A reserved field.
+        /// </summary>
         [NameInMap("ExactFilters")]
         [Validation(Required=false)]
         public List<ListSyntheticDetailRequestExactFilters> ExactFilters { get; set; }
         public class ListSyntheticDetailRequestExactFilters : TeaModel {
+            /// <summary>
+            /// A reserved field.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// A reserved field.
+            /// </summary>
             [NameInMap("OpType")]
             [Validation(Required=false)]
             public string OpType { get; set; }
 
+            /// <summary>
+            /// A reserved field.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public object Value { get; set; }
@@ -96,30 +114,54 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Filters { get; set; }
 
+        /// <summary>
+        /// The order in which results are sorted. Valid values:
+        /// 
+        /// - `ASC`: ascending order
+        /// - `DESC`: descending order
+        /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
+        /// <summary>
+        /// The field based on which results are sorted. Set the value to timestamp.
+        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
+        /// <summary>
+        /// The page number. Pages start from page 1.
+        /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
+        /// <summary>
+        /// The number of entries per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the region. Set the value to cn-hangzhou.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The timestamp of the start time of the query. Unit: milliseconds.
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        /// <summary>
+        /// The type of the synthetic test. Valid values: 1 and 2. 1 represents an immediate test, and 2 represents a scheduled test.
+        /// </summary>
         [NameInMap("SyntheticType")]
         [Validation(Required=false)]
         public int? SyntheticType { get; set; }

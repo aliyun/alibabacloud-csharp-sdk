@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? HandlerId { get; set; }
 
         /// <summary>
+        /// The region ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

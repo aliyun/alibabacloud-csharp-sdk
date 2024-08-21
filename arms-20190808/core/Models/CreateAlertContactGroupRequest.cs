@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateAlertContactGroupRequest : TeaModel {
         /// <summary>
+        /// The name of the alert contact group.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]
         public string ContactGroupName { get; set; }
 
+        /// <summary>
+        /// The IDs of contacts in the contact group. Separate multiple contact IDs with spaces. You can call the SearchAlertContact operation to query the contact IDs. For more information, see [SearchAlertContact](https://help.aliyun.com/document_detail/130703.html).
+        /// </summary>
         [NameInMap("ContactIds")]
         [Validation(Required=false)]
         public string ContactIds { get; set; }
 
         /// <summary>
+        /// The ID of the region. Default value: `cn-hangzhou`.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public ListAddonsResponseBodyDataEnvironmentsDependencies Dependencies { get; set; }
                 public class ListAddonsResponseBodyDataEnvironmentsDependencies : TeaModel {
                     /// <summary>
-                    /// Dependency cluster types.
+                    /// The supported cluster types.
                     /// </summary>
                     [NameInMap("ClusterTypes")]
                     [Validation(Required=false)]

@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string LatestVersion { get; set; }
 
                 /// <summary>
-                /// Whether or not it is a managed component.
+                /// Indicates whether the component is fully managed.
                 /// </summary>
                 [NameInMap("Managed")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus FeatureStatus { get; set; }
             public class DescribeEnvironmentFeatureResponseBodyDataFeatureStatus : TeaModel {
                 /// <summary>
-                /// Binded resource ID.
+                /// The ID of the resource.
                 /// </summary>
                 [NameInMap("BindResourceId")]
                 [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// IPs for Pod.
+                /// The IP address of the pod.
                 /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The security group ID.
+                /// The ID of the security group.
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID.
+                /// The ID of the vSwitch.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]

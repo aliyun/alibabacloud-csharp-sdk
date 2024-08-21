@@ -20,11 +20,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public long? AlarmId { get; set; }
 
+        /// <summary>
+        /// The ID of the handler.
+        /// </summary>
         [NameInMap("HandlerId")]
         [Validation(Required=false)]
         public long? HandlerId { get; set; }
 
         /// <summary>
+        /// The region ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

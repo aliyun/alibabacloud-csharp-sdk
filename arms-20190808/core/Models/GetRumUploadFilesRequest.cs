@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// The application ID.
+        /// The process ID (PID) of the application.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The version ID. When this field is not provided, the default response includes all versions.
+        /// The version number of the files. If you do not specify this parameter, all versions of the files are returned by default.
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]

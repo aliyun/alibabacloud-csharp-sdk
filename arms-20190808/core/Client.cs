@@ -2567,6 +2567,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Creates an alert contact group.
+         *
+         * @description ************
+         *
          * @param request CreateAlertContactGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateAlertContactGroupResponse
@@ -2607,6 +2611,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Creates an alert contact group.
+         *
+         * @description ************
+         *
          * @param request CreateAlertContactGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateAlertContactGroupResponse
@@ -2647,6 +2655,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Creates an alert contact group.
+         *
+         * @description ************
+         *
          * @param request CreateAlertContactGroupRequest
          * @return CreateAlertContactGroupResponse
          */
@@ -2657,6 +2669,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Creates an alert contact group.
+         *
+         * @description ************
+         *
          * @param request CreateAlertContactGroupRequest
          * @return CreateAlertContactGroupResponse
          */
@@ -2667,7 +2683,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to CreateDispatchRule.
+         * @summary Creates a dispatch policy.
          *
          * @param request CreateDispatchRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2705,7 +2721,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to CreateDispatchRule.
+         * @summary Creates a dispatch policy.
          *
          * @param request CreateDispatchRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2743,7 +2759,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to CreateDispatchRule.
+         * @summary Creates a dispatch policy.
          *
          * @param request CreateDispatchRuleRequest
          * @return CreateDispatchRuleResponse
@@ -2755,7 +2771,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to CreateDispatchRule.
+         * @summary Creates a dispatch policy.
          *
          * @param request CreateDispatchRuleRequest
          * @return CreateDispatchRuleResponse
@@ -6027,7 +6043,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 创建或更新云拨测定时监控任务
+         * @summary Creates or updates a synthetic monitoring task.
          *
          * @param tmpReq CreateSyntheticTaskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6147,7 +6163,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 创建或更新云拨测定时监控任务
+         * @summary Creates or updates a synthetic monitoring task.
          *
          * @param tmpReq CreateSyntheticTaskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6267,7 +6283,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 创建或更新云拨测定时监控任务
+         * @summary Creates or updates a synthetic monitoring task.
          *
          * @param request CreateSyntheticTaskRequest
          * @return CreateSyntheticTaskResponse
@@ -6279,7 +6295,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 创建或更新云拨测定时监控任务
+         * @summary Creates or updates a synthetic monitoring task.
          *
          * @param request CreateSyntheticTaskRequest
          * @return CreateSyntheticTaskResponse
@@ -7195,6 +7211,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Deletes alert rules.
+         *
+         * @description The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.
+         *
          * @param request DeleteAlertRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteAlertRulesResponse
@@ -7231,6 +7251,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Deletes alert rules.
+         *
+         * @description The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.
+         *
          * @param request DeleteAlertRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteAlertRulesResponse
@@ -7267,6 +7291,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Deletes alert rules.
+         *
+         * @description The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.
+         *
          * @param request DeleteAlertRulesRequest
          * @return DeleteAlertRulesResponse
          */
@@ -7277,6 +7305,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Deletes alert rules.
+         *
+         * @description The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.
+         *
          * @param request DeleteAlertRulesRequest
          * @return DeleteAlertRulesResponse
          */
@@ -7499,7 +7531,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the request.
+         * @summary Deletes alert contacts.
          *
          * @param request DeleteContactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7533,7 +7565,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the request.
+         * @summary Deletes alert contacts.
          *
          * @param request DeleteContactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7567,7 +7599,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the request.
+         * @summary Deletes alert contacts.
          *
          * @param request DeleteContactRequest
          * @return DeleteContactResponse
@@ -7579,7 +7611,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the request.
+         * @summary Deletes alert contacts.
          *
          * @param request DeleteContactRequest
          * @return DeleteContactResponse
@@ -7683,6 +7715,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Deletes the dispatch policy of a specified ID.
+         *
          * @param request DeleteDispatchRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteDispatchRuleResponse
@@ -7719,6 +7753,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Deletes the dispatch policy of a specified ID.
+         *
          * @param request DeleteDispatchRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteDispatchRuleResponse
@@ -7755,6 +7791,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Deletes the dispatch policy of a specified ID.
+         *
          * @param request DeleteDispatchRuleRequest
          * @return DeleteDispatchRuleResponse
          */
@@ -7765,6 +7803,8 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Deletes the dispatch policy of a specified ID.
+         *
          * @param request DeleteDispatchRuleRequest
          * @return DeleteDispatchRuleResponse
          */
@@ -8535,9 +8575,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 释放工作区
+         * @summary Deletes a Managed Service for Prometheus workspace.
          *
-         * @description >  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+         * @description *   You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+         * *   You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the [User Center](https://usercenter2.aliyun.com/refund/refund) to unsubscribe from workspaces.
          *
          * @param request DeleteGrafanaWorkspaceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8575,9 +8616,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 释放工作区
+         * @summary Deletes a Managed Service for Prometheus workspace.
          *
-         * @description >  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+         * @description *   You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+         * *   You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the [User Center](https://usercenter2.aliyun.com/refund/refund) to unsubscribe from workspaces.
          *
          * @param request DeleteGrafanaWorkspaceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8615,9 +8657,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 释放工作区
+         * @summary Deletes a Managed Service for Prometheus workspace.
          *
-         * @description >  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+         * @description *   You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+         * *   You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the [User Center](https://usercenter2.aliyun.com/refund/refund) to unsubscribe from workspaces.
          *
          * @param request DeleteGrafanaWorkspaceRequest
          * @return DeleteGrafanaWorkspaceResponse
@@ -8629,9 +8672,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 释放工作区
+         * @summary Deletes a Managed Service for Prometheus workspace.
          *
-         * @description >  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+         * @description *   You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+         * *   You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the [User Center](https://usercenter2.aliyun.com/refund/refund) to unsubscribe from workspaces.
          *
          * @param request DeleteGrafanaWorkspaceRequest
          * @return DeleteGrafanaWorkspaceResponse
@@ -9579,7 +9623,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除前端监控应用
+         * @summary Deletes a RUM application.
          *
          * @param request DeleteRumAppRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9621,7 +9665,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除前端监控应用
+         * @summary Deletes a RUM application.
          *
          * @param request DeleteRumAppRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9663,7 +9707,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除前端监控应用
+         * @summary Deletes a RUM application.
          *
          * @param request DeleteRumAppRequest
          * @return DeleteRumAppResponse
@@ -9675,7 +9719,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除前端监控应用
+         * @summary Deletes a RUM application.
          *
          * @param request DeleteRumAppRequest
          * @return DeleteRumAppResponse
@@ -14631,7 +14675,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取前端监控应用SLS存储的详细信息
+         * @summary Queries the Log Service project and Logstore that correspond to an application of browser monitoring.
          *
          * @param request GetRetcodeLogstoreRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14669,7 +14713,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取前端监控应用SLS存储的详细信息
+         * @summary Queries the Log Service project and Logstore that correspond to an application of browser monitoring.
          *
          * @param request GetRetcodeLogstoreRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14707,7 +14751,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取前端监控应用SLS存储的详细信息
+         * @summary Queries the Log Service project and Logstore that correspond to an application of browser monitoring.
          *
          * @param request GetRetcodeLogstoreRequest
          * @return GetRetcodeLogstoreResponse
@@ -14719,7 +14763,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取前端监控应用SLS存储的详细信息
+         * @summary Queries the Log Service project and Logstore that correspond to an application of browser monitoring.
          *
          * @param request GetRetcodeLogstoreRequest
          * @return GetRetcodeLogstoreResponse
@@ -15091,7 +15135,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取前端监控应用sql查询分页结果
+         * @summary Queries Real User Monitoring (RUM) data by page.
+         *
+         * @description Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
          *
          * @param request GetRumDataForPageRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15153,7 +15199,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取前端监控应用sql查询分页结果
+         * @summary Queries Real User Monitoring (RUM) data by page.
+         *
+         * @description Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
          *
          * @param request GetRumDataForPageRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15215,7 +15263,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取前端监控应用sql查询分页结果
+         * @summary Queries Real User Monitoring (RUM) data by page.
+         *
+         * @description Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
          *
          * @param request GetRumDataForPageRequest
          * @return GetRumDataForPageResponse
@@ -15227,7 +15277,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取前端监控应用sql查询分页结果
+         * @summary Queries Real User Monitoring (RUM) data by page.
+         *
+         * @description Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
          *
          * @param request GetRumDataForPageRequest
          * @return GetRumDataForPageResponse
@@ -15239,7 +15291,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取RUM异常堆栈
+         * @summary Queries the exception stack information of a Real User Monitoring (RUM) application.
+         *
+         * @description Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
          *
          * @param request GetRumExceptionStackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15293,7 +15347,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取RUM异常堆栈
+         * @summary Queries the exception stack information of a Real User Monitoring (RUM) application.
+         *
+         * @description Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
          *
          * @param request GetRumExceptionStackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15347,7 +15403,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取RUM异常堆栈
+         * @summary Queries the exception stack information of a Real User Monitoring (RUM) application.
+         *
+         * @description Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
          *
          * @param request GetRumExceptionStackRequest
          * @return GetRumExceptionStackResponse
@@ -15359,7 +15417,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取RUM异常堆栈
+         * @summary Queries the exception stack information of a Real User Monitoring (RUM) application.
+         *
+         * @description Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
          *
          * @param request GetRumExceptionStackRequest
          * @return GetRumExceptionStackResponse
@@ -16223,7 +16283,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取拨测任务的监测点信息
+         * @summary Obtains the information about synthetic monitoring points.
          *
          * @param request GetSyntheticTaskMonitorsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16257,7 +16317,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取拨测任务的监测点信息
+         * @summary Obtains the information about synthetic monitoring points.
          *
          * @param request GetSyntheticTaskMonitorsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16291,7 +16351,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取拨测任务的监测点信息
+         * @summary Obtains the information about synthetic monitoring points.
          *
          * @param request GetSyntheticTaskMonitorsRequest
          * @return GetSyntheticTaskMonitorsResponse
@@ -16303,7 +16363,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取拨测任务的监测点信息
+         * @summary Obtains the information about synthetic monitoring points.
          *
          * @param request GetSyntheticTaskMonitorsRequest
          * @return GetSyntheticTaskMonitorsResponse
@@ -19771,7 +19831,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取指定工作区列表
+         * @summary Obtain Specified Workspace List
+         *
+         * @description >The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
          *
          * @param tmpReq ListGrafanaWorkspaceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -19823,7 +19885,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取指定工作区列表
+         * @summary Obtain Specified Workspace List
+         *
+         * @description >The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
          *
          * @param tmpReq ListGrafanaWorkspaceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -19875,7 +19939,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取指定工作区列表
+         * @summary Obtain Specified Workspace List
+         *
+         * @description >The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
          *
          * @param request ListGrafanaWorkspaceRequest
          * @return ListGrafanaWorkspaceResponse
@@ -19887,7 +19953,9 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取指定工作区列表
+         * @summary Obtain Specified Workspace List
+         *
+         * @description >The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
          *
          * @param request ListGrafanaWorkspaceRequest
          * @return ListGrafanaWorkspaceResponse
@@ -20023,7 +20091,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries alert integrations.
+         * @summary Views a list of alert integrations.
          *
          * @param request ListIntegrationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20053,7 +20121,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries alert integrations.
+         * @summary Views a list of alert integrations.
          *
          * @param request ListIntegrationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20083,7 +20151,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries alert integrations.
+         * @summary Views a list of alert integrations.
          *
          * @param request ListIntegrationRequest
          * @return ListIntegrationResponse
@@ -20095,7 +20163,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries alert integrations.
+         * @summary Views a list of alert integrations.
          *
          * @param request ListIntegrationRequest
          * @return ListIntegrationResponse
@@ -20471,7 +20539,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The available memory on node {{ $labels.instance }} is less than 10%. Available memory: {{ $value }}%
+         * @summary Queries the alert templates of Prometheus Service.
          *
          * @param request ListPrometheusAlertTemplatesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20509,7 +20577,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The available memory on node {{ $labels.instance }} is less than 10%. Available memory: {{ $value }}%
+         * @summary Queries the alert templates of Prometheus Service.
          *
          * @param request ListPrometheusAlertTemplatesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20547,7 +20615,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The available memory on node {{ $labels.instance }} is less than 10%. Available memory: {{ $value }}%
+         * @summary Queries the alert templates of Prometheus Service.
          *
          * @param request ListPrometheusAlertTemplatesRequest
          * @return ListPrometheusAlertTemplatesResponse
@@ -20559,7 +20627,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The available memory on node {{ $labels.instance }} is less than 10%. Available memory: {{ $value }}%
+         * @summary Queries the alert templates of Prometheus Service.
          *
          * @param request ListPrometheusAlertTemplatesRequest
          * @return ListPrometheusAlertTemplatesResponse
@@ -21451,7 +21519,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 查询拨测明细列表
+         * @summary Obtains the results of one or more synthetic tests.
          *
          * @param tmpReq ListSyntheticDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21495,7 +21563,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 查询拨测明细列表
+         * @summary Obtains the results of one or more synthetic tests.
          *
          * @param tmpReq ListSyntheticDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21539,7 +21607,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 查询拨测明细列表
+         * @summary Obtains the results of one or more synthetic tests.
          *
          * @param request ListSyntheticDetailRequest
          * @return ListSyntheticDetailResponse
@@ -21551,7 +21619,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 查询拨测明细列表
+         * @summary Obtains the results of one or more synthetic tests.
          *
          * @param request ListSyntheticDetailRequest
          * @return ListSyntheticDetailResponse
@@ -23151,7 +23219,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary QueryReleaseMetric 
+         * @summary Queries the metrics that are provided for different versions of a specified Enterprise Distributed Application Service (EDAS) or Kubernetes application.
          *
          * @param request QueryReleaseMetricRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23213,7 +23281,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary QueryReleaseMetric 
+         * @summary Queries the metrics that are provided for different versions of a specified Enterprise Distributed Application Service (EDAS) or Kubernetes application.
          *
          * @param request QueryReleaseMetricRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23275,7 +23343,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary QueryReleaseMetric 
+         * @summary Queries the metrics that are provided for different versions of a specified Enterprise Distributed Application Service (EDAS) or Kubernetes application.
          *
          * @param request QueryReleaseMetricRequest
          * @return QueryReleaseMetricResponse
@@ -23287,7 +23355,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary QueryReleaseMetric 
+         * @summary Queries the metrics that are provided for different versions of a specified Enterprise Distributed Application Service (EDAS) or Kubernetes application.
          *
          * @param request QueryReleaseMetricRequest
          * @return QueryReleaseMetricResponse
@@ -26987,7 +27055,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the request.
+         * @summary Modifies a dispatch policy.
          *
          * @param request UpdateDispatchRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -27025,7 +27093,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the request.
+         * @summary Modifies a dispatch policy.
          *
          * @param request UpdateDispatchRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -27063,7 +27131,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the request.
+         * @summary Modifies a dispatch policy.
          *
          * @param request UpdateDispatchRuleRequest
          * @return UpdateDispatchRuleResponse
@@ -27075,7 +27143,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The ID of the request.
+         * @summary Modifies a dispatch policy.
          *
          * @param request UpdateDispatchRuleRequest
          * @return UpdateDispatchRuleResponse

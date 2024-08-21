@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// The application ID.
+        /// The process ID (PID) of the application.
         /// 
         /// This parameter is required.
         /// </summary>

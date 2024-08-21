@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateOrUpdateSilencePolicyRequest : TeaModel {
+        /// <summary>
+        /// The effective duration of the silence policy. Valid values: PERMANENT, CUSTOM_TIME, and CYCLE_EFFECT.
+        /// </summary>
         [NameInMap("EffectiveTimeType")]
         [Validation(Required=false)]
         public string EffectiveTimeType { get; set; }
@@ -65,10 +68,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string State { get; set; }
 
+        /// <summary>
+        /// The recurring period. This parameter is required when EffectiveTimeType is set to CYCLE_EFFECT. DAY: The silence policy is effective by day. WEEK: The silence policy is effective by week.
+        /// </summary>
         [NameInMap("TimePeriod")]
         [Validation(Required=false)]
         public string TimePeriod { get; set; }
 
+        /// <summary>
+        /// The time period during which the silence policy is effective. If you set EffectiveTimeType to CUSTOM_TIME, specify a custom time period in the following format: [{"startTime":"2024-08-04 22:13","endTime":"2024-08-04 22:21"}] If you set EffectiveTimeType to CYCLE_EFFECT and TimePeriod to DAY, specify a custom time period in the following format: [{"startTime":"22:13","endTime":"22:21"}]. The start time cannot be later than the end time. If you set EffectiveTimeType to CYCLE_EFFECT and TimePeriod to WEEK, specify a custom time period in the following format: [{"startWeek":"1", "endWeek":"2" "startTime":"22:13","endTime":"22:21"}]. Valid values of startWeek and endWeek: 1 to 7. The start time cannot be later than the end time.
+        /// </summary>
         [NameInMap("TimeSlots")]
         [Validation(Required=false)]
         public string TimeSlots { get; set; }

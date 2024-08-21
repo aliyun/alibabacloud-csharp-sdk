@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListPrometheusAlertTemplatesRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// The ID of the region.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

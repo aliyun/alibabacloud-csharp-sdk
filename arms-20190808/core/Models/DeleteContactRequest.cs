@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteContactRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DeleteContact**.
+        /// The ID of the alert contact.
         /// 
         /// This parameter is required.
         /// </summary>

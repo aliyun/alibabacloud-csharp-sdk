@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentFeaturesRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values: zh and en. Default value: zh.
+        /// The language. Default value: zh.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   en: English.
+        /// *   zh: Chinese.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]

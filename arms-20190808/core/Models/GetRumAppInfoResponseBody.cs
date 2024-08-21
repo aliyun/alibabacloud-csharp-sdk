@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public GetRumAppInfoResponseBodyData Data { get; set; }
         public class GetRumAppInfoResponseBodyData : TeaModel {
+            /// <summary>
+            /// The group to which the application belongs.
+            /// </summary>
             [NameInMap("AppGroup")]
             [Validation(Required=false)]
             public string AppGroup { get; set; }
@@ -34,22 +37,37 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string AppType { get; set; }
 
+            /// <summary>
+            /// The mobile collection configurations.
+            /// </summary>
             [NameInMap("BonreeSDKConfig")]
             [Validation(Required=false)]
             public GetRumAppInfoResponseBodyDataBonreeSDKConfig BonreeSDKConfig { get; set; }
             public class GetRumAppInfoResponseBodyDataBonreeSDKConfig : TeaModel {
+                /// <summary>
+                /// The module configuration.
+                /// </summary>
                 [NameInMap("moduleConfig")]
                 [Validation(Required=false)]
                 public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig ModuleConfig { get; set; }
                 public class GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig : TeaModel {
+                    /// <summary>
+                    /// The default configuration of the application.
+                    /// </summary>
                     [NameInMap("defaultConfig")]
                     [Validation(Required=false)]
                     public Dictionary<string, DataBonreeSDKConfigModuleConfigDefaultConfigValue> DefaultConfig { get; set; }
 
+                    /// <summary>
+                    /// Indicates whether the configuration is enabled.
+                    /// </summary>
                     [NameInMap("enable")]
                     [Validation(Required=false)]
                     public bool? Enable { get; set; }
 
+                    /// <summary>
+                    /// The version configurations of the application.
+                    /// </summary>
                     [NameInMap("versionConfigs")]
                     [Validation(Required=false)]
                     public Dictionary<string, DataBonreeSDKConfigModuleConfigVersionConfigsValue> VersionConfigs { get; set; }

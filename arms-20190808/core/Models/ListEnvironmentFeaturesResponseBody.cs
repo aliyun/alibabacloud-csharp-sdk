@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string LatestVersion { get; set; }
 
             /// <summary>
-            /// Whether hosted scenario.
+            /// Indicates whether the component is fully managed.
             /// </summary>
             [NameInMap("Managed")]
             [Validation(Required=false)]

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteRumAppRequest : TeaModel {
+        /// <summary>
+        /// The group where the application resides.
+        /// </summary>
         [NameInMap("AppGroup")]
         [Validation(Required=false)]
         public string AppGroup { get; set; }
 
         /// <summary>
+        /// The ID of the application.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
@@ -21,6 +26,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// The ID of the region.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public bool? AutoRestart { get; set; }
 
+        /// <summary>
+        /// The collection configurations of the mobile SDK. You can enable or disable collection configurations based on the app version.
+        /// </summary>
         [NameInMap("BonreeSDKConfigJson")]
         [Validation(Required=false)]
         public string BonreeSDKConfigJson { get; set; }

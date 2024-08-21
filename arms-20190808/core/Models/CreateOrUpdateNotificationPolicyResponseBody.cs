@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy NotificationPolicy { get; set; }
         public class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy : TeaModel {
+            /// <summary>
+            /// Specifies whether to enable simple mode.
+            /// </summary>
             [NameInMap("DirectedMode")]
             [Validation(Required=false)]
             public bool? DirectedMode { get; set; }

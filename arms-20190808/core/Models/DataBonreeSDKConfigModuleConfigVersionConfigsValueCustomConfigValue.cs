@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue : TeaModel {
+        /// <summary>
+        /// Indicates whether the configuration is enabled.
+        /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
