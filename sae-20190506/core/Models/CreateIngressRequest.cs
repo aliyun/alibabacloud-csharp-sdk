@@ -50,12 +50,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
+        [NameInMap("RequestTimeout")]
+        [Validation(Required=false)]
+        public int? RequestTimeout { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public string Rules { get; set; }
+
+        [NameInMap("SecurityPolicyId")]
+        [Validation(Required=false)]
+        public string SecurityPolicyId { get; set; }
 
         /// <summary>
         /// This parameter is required.

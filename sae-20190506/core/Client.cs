@@ -1757,6 +1757,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["NamespaceId"] = request.NamespaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                query["RequestTimeout"] = request.RequestTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyId))
+            {
+                query["SecurityPolicyId"] = request.SecurityPolicyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlbId))
             {
                 query["SlbId"] = request.SlbId;
@@ -1830,6 +1838,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
             {
                 query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                query["RequestTimeout"] = request.RequestTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyId))
+            {
+                query["SecurityPolicyId"] = request.SecurityPolicyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlbId))
             {
@@ -14181,6 +14197,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["LoadBalanceType"] = request.LoadBalanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                query["RequestTimeout"] = request.RequestTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyId))
+            {
+                query["SecurityPolicyId"] = request.SecurityPolicyId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
             {
@@ -14248,6 +14272,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalanceType))
             {
                 query["LoadBalanceType"] = request.LoadBalanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                query["RequestTimeout"] = request.RequestTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyId))
+            {
+                query["SecurityPolicyId"] = request.SecurityPolicyId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))

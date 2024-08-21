@@ -44,9 +44,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string LoadBalanceType { get; set; }
 
+        [NameInMap("RequestTimeout")]
+        [Validation(Required=false)]
+        public int? RequestTimeout { get; set; }
+
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public string Rules { get; set; }
+
+        [NameInMap("SecurityPolicyId")]
+        [Validation(Required=false)]
+        public string SecurityPolicyId { get; set; }
 
     }
 

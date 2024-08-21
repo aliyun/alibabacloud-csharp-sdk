@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string NamespaceId { get; set; }
 
+            [NameInMap("RequestTimeout")]
+            [Validation(Required=false)]
+            public int? RequestTimeout { get; set; }
+
             /// <summary>
             /// The ID of the application specified in the forwarding rule.
             /// </summary>
@@ -179,6 +183,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string RewritePath { get; set; }
 
             }
+
+            [NameInMap("SecurityPolicyId")]
+            [Validation(Required=false)]
+            public string SecurityPolicyId { get; set; }
 
             /// <summary>
             /// The type of the SLB instance based on the IP address. Valid values:
