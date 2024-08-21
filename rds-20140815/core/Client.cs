@@ -8098,6 +8098,146 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+         * @summary 创建RDS CUSTOM部署集
+         *
+         * @param request CreateRCDeploymentSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRCDeploymentSetResponse
+         */
+        public CreateRCDeploymentSetResponse CreateRCDeploymentSetWithOptions(CreateRCDeploymentSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetName))
+            {
+                query["DeploymentSetName"] = request.DeploymentSetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCount))
+            {
+                query["GroupCount"] = request.GroupCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnUnableToRedeployFailedInstance))
+            {
+                query["OnUnableToRedeployFailedInstance"] = request.OnUnableToRedeployFailedInstance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                query["Strategy"] = request.Strategy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRCDeploymentSet",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRCDeploymentSetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建RDS CUSTOM部署集
+         *
+         * @param request CreateRCDeploymentSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRCDeploymentSetResponse
+         */
+        public async Task<CreateRCDeploymentSetResponse> CreateRCDeploymentSetWithOptionsAsync(CreateRCDeploymentSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetName))
+            {
+                query["DeploymentSetName"] = request.DeploymentSetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCount))
+            {
+                query["GroupCount"] = request.GroupCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnUnableToRedeployFailedInstance))
+            {
+                query["OnUnableToRedeployFailedInstance"] = request.OnUnableToRedeployFailedInstance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                query["Strategy"] = request.Strategy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRCDeploymentSet",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRCDeploymentSetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建RDS CUSTOM部署集
+         *
+         * @param request CreateRCDeploymentSetRequest
+         * @return CreateRCDeploymentSetResponse
+         */
+        public CreateRCDeploymentSetResponse CreateRCDeploymentSet(CreateRCDeploymentSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRCDeploymentSetWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建RDS CUSTOM部署集
+         *
+         * @param request CreateRCDeploymentSetRequest
+         * @return CreateRCDeploymentSetResponse
+         */
+        public async Task<CreateRCDeploymentSetResponse> CreateRCDeploymentSetAsync(CreateRCDeploymentSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRCDeploymentSetWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Creates a read-only instance.
          *
          * @description ### Supported database engines
@@ -8507,6 +8647,178 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateReadOnlyDBInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建复制链路
+         *
+         * @param request CreateReplicationLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateReplicationLinkResponse
+         */
+        public CreateReplicationLinkResponse CreateReplicationLinkWithOptions(CreateReplicationLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicatorAccount))
+            {
+                query["ReplicatorAccount"] = request.ReplicatorAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicatorPassword))
+            {
+                query["ReplicatorPassword"] = request.ReplicatorPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAddress))
+            {
+                query["SourceAddress"] = request.SourceAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCategory))
+            {
+                query["SourceCategory"] = request.SourceCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceName))
+            {
+                query["SourceInstanceName"] = request.SourceInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceRegionId))
+            {
+                query["SourceInstanceRegionId"] = request.SourceInstanceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePort))
+            {
+                query["SourcePort"] = request.SourcePort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                query["TaskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReplicationLink",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReplicationLinkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建复制链路
+         *
+         * @param request CreateReplicationLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateReplicationLinkResponse
+         */
+        public async Task<CreateReplicationLinkResponse> CreateReplicationLinkWithOptionsAsync(CreateReplicationLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicatorAccount))
+            {
+                query["ReplicatorAccount"] = request.ReplicatorAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicatorPassword))
+            {
+                query["ReplicatorPassword"] = request.ReplicatorPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAddress))
+            {
+                query["SourceAddress"] = request.SourceAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCategory))
+            {
+                query["SourceCategory"] = request.SourceCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceName))
+            {
+                query["SourceInstanceName"] = request.SourceInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceRegionId))
+            {
+                query["SourceInstanceRegionId"] = request.SourceInstanceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePort))
+            {
+                query["SourcePort"] = request.SourcePort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                query["TaskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReplicationLink",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReplicationLinkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建复制链路
+         *
+         * @param request CreateReplicationLinkRequest
+         * @return CreateReplicationLinkResponse
+         */
+        public CreateReplicationLinkResponse CreateReplicationLink(CreateReplicationLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateReplicationLinkWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建复制链路
+         *
+         * @param request CreateReplicationLinkRequest
+         * @return CreateReplicationLinkResponse
+         */
+        public async Task<CreateReplicationLinkResponse> CreateReplicationLinkAsync(CreateReplicationLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateReplicationLinkWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -11575,6 +11887,458 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeletePostgresExtensionsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 删除RDS CUSTOM部署集
+         *
+         * @param request DeleteRCDeploymentSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRCDeploymentSetResponse
+         */
+        public DeleteRCDeploymentSetResponse DeleteRCDeploymentSetWithOptions(DeleteRCDeploymentSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetId))
+            {
+                query["DeploymentSetId"] = request.DeploymentSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRCDeploymentSet",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRCDeploymentSetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除RDS CUSTOM部署集
+         *
+         * @param request DeleteRCDeploymentSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRCDeploymentSetResponse
+         */
+        public async Task<DeleteRCDeploymentSetResponse> DeleteRCDeploymentSetWithOptionsAsync(DeleteRCDeploymentSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetId))
+            {
+                query["DeploymentSetId"] = request.DeploymentSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRCDeploymentSet",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRCDeploymentSetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除RDS CUSTOM部署集
+         *
+         * @param request DeleteRCDeploymentSetRequest
+         * @return DeleteRCDeploymentSetResponse
+         */
+        public DeleteRCDeploymentSetResponse DeleteRCDeploymentSet(DeleteRCDeploymentSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteRCDeploymentSetWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除RDS CUSTOM部署集
+         *
+         * @param request DeleteRCDeploymentSetRequest
+         * @return DeleteRCDeploymentSetResponse
+         */
+        public async Task<DeleteRCDeploymentSetResponse> DeleteRCDeploymentSetAsync(DeleteRCDeploymentSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteRCDeploymentSetWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 删除RDS用户专属主机实例
+         *
+         * @param request DeleteRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRCInstanceResponse
+         */
+        public DeleteRCInstanceResponse DeleteRCInstanceWithOptions(DeleteRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRCInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除RDS用户专属主机实例
+         *
+         * @param request DeleteRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRCInstanceResponse
+         */
+        public async Task<DeleteRCInstanceResponse> DeleteRCInstanceWithOptionsAsync(DeleteRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRCInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除RDS用户专属主机实例
+         *
+         * @param request DeleteRCInstanceRequest
+         * @return DeleteRCInstanceResponse
+         */
+        public DeleteRCInstanceResponse DeleteRCInstance(DeleteRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteRCInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除RDS用户专属主机实例
+         *
+         * @param request DeleteRCInstanceRequest
+         * @return DeleteRCInstanceResponse
+         */
+        public async Task<DeleteRCInstanceResponse> DeleteRCInstanceAsync(DeleteRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteRCInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 批量删除RDS用户专属主机实例
+         *
+         * @param tmpReq DeleteRCInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRCInstancesResponse
+         */
+        public DeleteRCInstancesResponse DeleteRCInstancesWithOptions(DeleteRCInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteRCInstancesShrinkRequest request = new DeleteRCInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceId))
+            {
+                request.InstanceIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceId, "InstanceId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdShrink))
+            {
+                query["InstanceId"] = request.InstanceIdShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminateSubscription))
+            {
+                query["TerminateSubscription"] = request.TerminateSubscription;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRCInstances",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRCInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量删除RDS用户专属主机实例
+         *
+         * @param tmpReq DeleteRCInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRCInstancesResponse
+         */
+        public async Task<DeleteRCInstancesResponse> DeleteRCInstancesWithOptionsAsync(DeleteRCInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteRCInstancesShrinkRequest request = new DeleteRCInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceId))
+            {
+                request.InstanceIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceId, "InstanceId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdShrink))
+            {
+                query["InstanceId"] = request.InstanceIdShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminateSubscription))
+            {
+                query["TerminateSubscription"] = request.TerminateSubscription;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRCInstances",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRCInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量删除RDS用户专属主机实例
+         *
+         * @param request DeleteRCInstancesRequest
+         * @return DeleteRCInstancesResponse
+         */
+        public DeleteRCInstancesResponse DeleteRCInstances(DeleteRCInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteRCInstancesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 批量删除RDS用户专属主机实例
+         *
+         * @param request DeleteRCInstancesRequest
+         * @return DeleteRCInstancesResponse
+         */
+        public async Task<DeleteRCInstancesResponse> DeleteRCInstancesAsync(DeleteRCInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteRCInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 删除复制链路
+         *
+         * @param request DeleteReplicationLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteReplicationLinkResponse
+         */
+        public DeleteReplicationLinkResponse DeleteReplicationLinkWithOptions(DeleteReplicationLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromoteToMaster))
+            {
+                query["PromoteToMaster"] = request.PromoteToMaster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteReplicationLink",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteReplicationLinkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除复制链路
+         *
+         * @param request DeleteReplicationLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteReplicationLinkResponse
+         */
+        public async Task<DeleteReplicationLinkResponse> DeleteReplicationLinkWithOptionsAsync(DeleteReplicationLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromoteToMaster))
+            {
+                query["PromoteToMaster"] = request.PromoteToMaster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteReplicationLink",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteReplicationLinkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除复制链路
+         *
+         * @param request DeleteReplicationLinkRequest
+         * @return DeleteReplicationLinkResponse
+         */
+        public DeleteReplicationLinkResponse DeleteReplicationLink(DeleteReplicationLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteReplicationLinkWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除复制链路
+         *
+         * @param request DeleteReplicationLinkRequest
+         * @return DeleteReplicationLinkResponse
+         */
+        public async Task<DeleteReplicationLinkResponse> DeleteReplicationLinkAsync(DeleteReplicationLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteReplicationLinkWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -28586,6 +29350,466 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+         * @summary 描述RDS CUSTOM部署集
+         *
+         * @param request DescribeRCDeploymentSetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCDeploymentSetsResponse
+         */
+        public DescribeRCDeploymentSetsResponse DescribeRCDeploymentSetsWithOptions(DescribeRCDeploymentSetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCDeploymentSets",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCDeploymentSetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 描述RDS CUSTOM部署集
+         *
+         * @param request DescribeRCDeploymentSetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCDeploymentSetsResponse
+         */
+        public async Task<DescribeRCDeploymentSetsResponse> DescribeRCDeploymentSetsWithOptionsAsync(DescribeRCDeploymentSetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCDeploymentSets",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCDeploymentSetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 描述RDS CUSTOM部署集
+         *
+         * @param request DescribeRCDeploymentSetsRequest
+         * @return DescribeRCDeploymentSetsResponse
+         */
+        public DescribeRCDeploymentSetsResponse DescribeRCDeploymentSets(DescribeRCDeploymentSetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRCDeploymentSetsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 描述RDS CUSTOM部署集
+         *
+         * @param request DescribeRCDeploymentSetsRequest
+         * @return DescribeRCDeploymentSetsResponse
+         */
+        public async Task<DescribeRCDeploymentSetsResponse> DescribeRCDeploymentSetsAsync(DescribeRCDeploymentSetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRCDeploymentSetsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询镜像资源
+         *
+         * @param request DescribeRCImageListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCImageListResponse
+         */
+        public DescribeRCImageListResponse DescribeRCImageListWithOptions(DescribeRCImageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCImageList",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCImageListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询镜像资源
+         *
+         * @param request DescribeRCImageListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCImageListResponse
+         */
+        public async Task<DescribeRCImageListResponse> DescribeRCImageListWithOptionsAsync(DescribeRCImageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCImageList",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCImageListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询镜像资源
+         *
+         * @param request DescribeRCImageListRequest
+         * @return DescribeRCImageListResponse
+         */
+        public DescribeRCImageListResponse DescribeRCImageList(DescribeRCImageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRCImageListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询镜像资源
+         *
+         * @param request DescribeRCImageListRequest
+         * @return DescribeRCImageListResponse
+         */
+        public async Task<DescribeRCImageListResponse> DescribeRCImageListAsync(DescribeRCImageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRCImageListWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询RDS用户专属主机实例
+         *
+         * @param request DescribeRCInstanceAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCInstanceAttributeResponse
+         */
+        public DescribeRCInstanceAttributeResponse DescribeRCInstanceAttributeWithOptions(DescribeRCInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCInstanceAttribute",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCInstanceAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询RDS用户专属主机实例
+         *
+         * @param request DescribeRCInstanceAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCInstanceAttributeResponse
+         */
+        public async Task<DescribeRCInstanceAttributeResponse> DescribeRCInstanceAttributeWithOptionsAsync(DescribeRCInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCInstanceAttribute",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询RDS用户专属主机实例
+         *
+         * @param request DescribeRCInstanceAttributeRequest
+         * @return DescribeRCInstanceAttributeResponse
+         */
+        public DescribeRCInstanceAttributeResponse DescribeRCInstanceAttribute(DescribeRCInstanceAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRCInstanceAttributeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询RDS用户专属主机实例
+         *
+         * @param request DescribeRCInstanceAttributeRequest
+         * @return DescribeRCInstanceAttributeResponse
+         */
+        public async Task<DescribeRCInstanceAttributeResponse> DescribeRCInstanceAttributeAsync(DescribeRCInstanceAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRCInstanceAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询RC实例列表
+         *
+         * @param request DescribeRCInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCInstancesResponse
+         */
+        public DescribeRCInstancesResponse DescribeRCInstancesWithOptions(DescribeRCInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCInstances",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询RC实例列表
+         *
+         * @param request DescribeRCInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCInstancesResponse
+         */
+        public async Task<DescribeRCInstancesResponse> DescribeRCInstancesWithOptionsAsync(DescribeRCInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCInstances",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询RC实例列表
+         *
+         * @param request DescribeRCInstancesRequest
+         * @return DescribeRCInstancesResponse
+         */
+        public DescribeRCInstancesResponse DescribeRCInstances(DescribeRCInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRCInstancesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询RC实例列表
+         *
+         * @param request DescribeRCInstancesRequest
+         * @return DescribeRCInstancesResponse
+         */
+        public async Task<DescribeRCInstancesResponse> DescribeRCInstancesAsync(DescribeRCInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRCInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询指定云产品的指定监控项的监控数据
+         *
+         * @param request DescribeRCMetricListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCMetricListResponse
+         */
+        public DescribeRCMetricListResponse DescribeRCMetricListWithOptions(DescribeRCMetricListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCMetricList",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCMetricListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询指定云产品的指定监控项的监控数据
+         *
+         * @param request DescribeRCMetricListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRCMetricListResponse
+         */
+        public async Task<DescribeRCMetricListResponse> DescribeRCMetricListWithOptionsAsync(DescribeRCMetricListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCMetricList",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCMetricListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询指定云产品的指定监控项的监控数据
+         *
+         * @param request DescribeRCMetricListRequest
+         * @return DescribeRCMetricListResponse
+         */
+        public DescribeRCMetricListResponse DescribeRCMetricList(DescribeRCMetricListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRCMetricListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询指定云产品的指定监控项的监控数据
+         *
+         * @param request DescribeRCMetricListRequest
+         * @return DescribeRCMetricListResponse
+         */
+        public async Task<DescribeRCMetricListResponse> DescribeRCMetricListAsync(DescribeRCMetricListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRCMetricListWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated
          *
          * @summary This operation is deprecated.
@@ -29375,6 +30599,138 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRenewalPriceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询复制链路操作日志
+         *
+         * @param request DescribeReplicationLinkLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeReplicationLinkLogsResponse
+         */
+        public DescribeReplicationLinkLogsResponse DescribeReplicationLinkLogsWithOptions(DescribeReplicationLinkLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                query["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeReplicationLinkLogs",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeReplicationLinkLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询复制链路操作日志
+         *
+         * @param request DescribeReplicationLinkLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeReplicationLinkLogsResponse
+         */
+        public async Task<DescribeReplicationLinkLogsResponse> DescribeReplicationLinkLogsWithOptionsAsync(DescribeReplicationLinkLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                query["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeReplicationLinkLogs",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeReplicationLinkLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询复制链路操作日志
+         *
+         * @param request DescribeReplicationLinkLogsRequest
+         * @return DescribeReplicationLinkLogsResponse
+         */
+        public DescribeReplicationLinkLogsResponse DescribeReplicationLinkLogs(DescribeReplicationLinkLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeReplicationLinkLogsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询复制链路操作日志
+         *
+         * @param request DescribeReplicationLinkLogsRequest
+         * @return DescribeReplicationLinkLogsResponse
+         */
+        public async Task<DescribeReplicationLinkLogsResponse> DescribeReplicationLinkLogsAsync(DescribeReplicationLinkLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeReplicationLinkLogsWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -44442,6 +45798,270 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+         * @summary ModifyRCInstance
+         *
+         * @param request ModifyRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRCInstanceResponse
+         */
+        public ModifyRCInstanceResponse ModifyRCInstanceWithOptions(ModifyRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRCInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary ModifyRCInstance
+         *
+         * @param request ModifyRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRCInstanceResponse
+         */
+        public async Task<ModifyRCInstanceResponse> ModifyRCInstanceWithOptionsAsync(ModifyRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRCInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary ModifyRCInstance
+         *
+         * @param request ModifyRCInstanceRequest
+         * @return ModifyRCInstanceResponse
+         */
+        public ModifyRCInstanceResponse ModifyRCInstance(ModifyRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyRCInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary ModifyRCInstance
+         *
+         * @param request ModifyRCInstanceRequest
+         * @return ModifyRCInstanceResponse
+         */
+        public async Task<ModifyRCInstanceResponse> ModifyRCInstanceAsync(ModifyRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyRCInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 修改RDS用户专属主机实例付费类型
+         *
+         * @param request ModifyRCInstanceChargeTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRCInstanceChargeTypeResponse
+         */
+        public ModifyRCInstanceChargeTypeResponse ModifyRCInstanceChargeTypeWithOptions(ModifyRCInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeDataDisks))
+            {
+                query["IncludeDataDisks"] = request.IncludeDataDisks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRCInstanceChargeType",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRCInstanceChargeTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改RDS用户专属主机实例付费类型
+         *
+         * @param request ModifyRCInstanceChargeTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRCInstanceChargeTypeResponse
+         */
+        public async Task<ModifyRCInstanceChargeTypeResponse> ModifyRCInstanceChargeTypeWithOptionsAsync(ModifyRCInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeDataDisks))
+            {
+                query["IncludeDataDisks"] = request.IncludeDataDisks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRCInstanceChargeType",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRCInstanceChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改RDS用户专属主机实例付费类型
+         *
+         * @param request ModifyRCInstanceChargeTypeRequest
+         * @return ModifyRCInstanceChargeTypeResponse
+         */
+        public ModifyRCInstanceChargeTypeResponse ModifyRCInstanceChargeType(ModifyRCInstanceChargeTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyRCInstanceChargeTypeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改RDS用户专属主机实例付费类型
+         *
+         * @param request ModifyRCInstanceChargeTypeRequest
+         * @return ModifyRCInstanceChargeTypeResponse
+         */
+        public async Task<ModifyRCInstanceChargeTypeResponse> ModifyRCInstanceChargeTypeAsync(ModifyRCInstanceChargeTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyRCInstanceChargeTypeWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Modifies the latency threshold of the read/write splitting link and the read weights of a primary instance and its read-only instances.
          *
          * @description ### [](#)Supported database engines
@@ -46690,6 +48310,122 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+         * @summary 重启RDS用户专属主机实例
+         *
+         * @param request RebootRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebootRCInstanceResponse
+         */
+        public RebootRCInstanceResponse RebootRCInstanceWithOptions(RebootRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
+            {
+                query["ForceStop"] = request.ForceStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebootRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebootRCInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重启RDS用户专属主机实例
+         *
+         * @param request RebootRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebootRCInstanceResponse
+         */
+        public async Task<RebootRCInstanceResponse> RebootRCInstanceWithOptionsAsync(RebootRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
+            {
+                query["ForceStop"] = request.ForceStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebootRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebootRCInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重启RDS用户专属主机实例
+         *
+         * @param request RebootRCInstanceRequest
+         * @return RebootRCInstanceResponse
+         */
+        public RebootRCInstanceResponse RebootRCInstance(RebootRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RebootRCInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 重启RDS用户专属主机实例
+         *
+         * @param request RebootRCInstanceRequest
+         * @return RebootRCInstanceResponse
+         */
+        public async Task<RebootRCInstanceResponse> RebootRCInstanceAsync(RebootRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RebootRCInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Rebuilds the secondary instance of a primary instance in a dedicated cluster.
          *
          * @description Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
@@ -46843,6 +48579,110 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RebuildDBInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Re-creates a data synchronization link for a disaster recovery ApsaraDB RDS instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
+         *
+         * @param request RebuildReplicationLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebuildReplicationLinkResponse
+         */
+        public RebuildReplicationLinkResponse RebuildReplicationLinkWithOptions(RebuildReplicationLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebuildReplicationLink",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebuildReplicationLinkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Re-creates a data synchronization link for a disaster recovery ApsaraDB RDS instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
+         *
+         * @param request RebuildReplicationLinkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebuildReplicationLinkResponse
+         */
+        public async Task<RebuildReplicationLinkResponse> RebuildReplicationLinkWithOptionsAsync(RebuildReplicationLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebuildReplicationLink",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebuildReplicationLinkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Re-creates a data synchronization link for a disaster recovery ApsaraDB RDS instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
+         *
+         * @param request RebuildReplicationLinkRequest
+         * @return RebuildReplicationLinkResponse
+         */
+        public RebuildReplicationLinkResponse RebuildReplicationLink(RebuildReplicationLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RebuildReplicationLinkWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Re-creates a data synchronization link for a disaster recovery ApsaraDB RDS instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
+         *
+         * @param request RebuildReplicationLinkRequest
+         * @return RebuildReplicationLinkResponse
+         */
+        public async Task<RebuildReplicationLinkResponse> RebuildReplicationLinkAsync(RebuildReplicationLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RebuildReplicationLinkWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -48530,6 +50370,138 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+         * @summary ResizeRCInstanceDisk
+         *
+         * @param request ResizeRCInstanceDiskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResizeRCInstanceDiskResponse
+         */
+        public ResizeRCInstanceDiskResponse ResizeRCInstanceDiskWithOptions(ResizeRCInstanceDiskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewSize))
+            {
+                query["NewSize"] = request.NewSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResizeRCInstanceDisk",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResizeRCInstanceDiskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary ResizeRCInstanceDisk
+         *
+         * @param request ResizeRCInstanceDiskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResizeRCInstanceDiskResponse
+         */
+        public async Task<ResizeRCInstanceDiskResponse> ResizeRCInstanceDiskWithOptionsAsync(ResizeRCInstanceDiskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewSize))
+            {
+                query["NewSize"] = request.NewSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResizeRCInstanceDisk",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResizeRCInstanceDiskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary ResizeRCInstanceDisk
+         *
+         * @param request ResizeRCInstanceDiskRequest
+         * @return ResizeRCInstanceDiskResponse
+         */
+        public ResizeRCInstanceDiskResponse ResizeRCInstanceDisk(ResizeRCInstanceDiskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResizeRCInstanceDiskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary ResizeRCInstanceDisk
+         *
+         * @param request ResizeRCInstanceDiskRequest
+         * @return ResizeRCInstanceDiskResponse
+         */
+        public async Task<ResizeRCInstanceDiskResponse> ResizeRCInstanceDiskAsync(ResizeRCInstanceDiskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResizeRCInstanceDiskWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Restarts an instance.
          *
          * @description ### Supported database engines
@@ -49474,6 +51446,302 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+         * @summary 创建RDS用户专属主机实例
+         *
+         * @param tmpReq RunRCInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunRCInstancesResponse
+         */
+        public RunRCInstancesResponse RunRCInstancesWithOptions(RunRCInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunRCInstancesShrinkRequest request = new RunRCInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataDisk))
+            {
+                request.DataDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataDisk, "DataDisk", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk))
+            {
+                request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskShrink))
+            {
+                query["DataDisk"] = request.DataDiskShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetId))
+            {
+                query["DeploymentSetId"] = request.DeploymentSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
+            {
+                query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMaxBandwidthOut))
+            {
+                query["InternetMaxBandwidthOut"] = request.InternetMaxBandwidthOut;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoOptimized))
+            {
+                query["IoOptimized"] = request.IoOptimized;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEnhancementStrategy))
+            {
+                query["SecurityEnhancementStrategy"] = request.SecurityEnhancementStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskShrink))
+            {
+                query["SystemDisk"] = request.SystemDiskShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunRCInstances",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunRCInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建RDS用户专属主机实例
+         *
+         * @param tmpReq RunRCInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunRCInstancesResponse
+         */
+        public async Task<RunRCInstancesResponse> RunRCInstancesWithOptionsAsync(RunRCInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunRCInstancesShrinkRequest request = new RunRCInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataDisk))
+            {
+                request.DataDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataDisk, "DataDisk", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk))
+            {
+                request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskShrink))
+            {
+                query["DataDisk"] = request.DataDiskShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetId))
+            {
+                query["DeploymentSetId"] = request.DeploymentSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
+            {
+                query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMaxBandwidthOut))
+            {
+                query["InternetMaxBandwidthOut"] = request.InternetMaxBandwidthOut;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoOptimized))
+            {
+                query["IoOptimized"] = request.IoOptimized;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEnhancementStrategy))
+            {
+                query["SecurityEnhancementStrategy"] = request.SecurityEnhancementStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskShrink))
+            {
+                query["SystemDisk"] = request.SystemDiskShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunRCInstances",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunRCInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建RDS用户专属主机实例
+         *
+         * @param request RunRCInstancesRequest
+         * @return RunRCInstancesResponse
+         */
+        public RunRCInstancesResponse RunRCInstances(RunRCInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunRCInstancesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建RDS用户专属主机实例
+         *
+         * @param request RunRCInstancesRequest
+         * @return RunRCInstancesResponse
+         */
+        public async Task<RunRCInstancesResponse> RunRCInstancesAsync(RunRCInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunRCInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Resumes an instance.
          *
          * @description ### Supported database engines
@@ -49734,6 +52002,106 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+         * @summary 启动RDS用户专属主机实例
+         *
+         * @param request StartRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartRCInstanceResponse
+         */
+        public StartRCInstanceResponse StartRCInstanceWithOptions(StartRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRCInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启动RDS用户专属主机实例
+         *
+         * @param request StartRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartRCInstanceResponse
+         */
+        public async Task<StartRCInstanceResponse> StartRCInstanceWithOptionsAsync(StartRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRCInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启动RDS用户专属主机实例
+         *
+         * @param request StartRCInstanceRequest
+         * @return StartRCInstanceResponse
+         */
+        public StartRCInstanceResponse StartRCInstance(StartRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartRCInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 启动RDS用户专属主机实例
+         *
+         * @param request StartRCInstanceRequest
+         * @return StartRCInstanceResponse
+         */
+        public async Task<StartRCInstanceResponse> StartRCInstanceAsync(StartRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartRCInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Suspends an ApsaraDB RDS instance.
          *
          * @description ### Supported database engines
@@ -49895,6 +52263,114 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDBInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 停止RDS用户专属主机实例
+         *
+         * @param request StopRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopRCInstanceResponse
+         */
+        public StopRCInstanceResponse StopRCInstanceWithOptions(StopRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
+            {
+                query["ForceStop"] = request.ForceStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRCInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止RDS用户专属主机实例
+         *
+         * @param request StopRCInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopRCInstanceResponse
+         */
+        public async Task<StopRCInstanceResponse> StopRCInstanceWithOptionsAsync(StopRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
+            {
+                query["ForceStop"] = request.ForceStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRCInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止RDS用户专属主机实例
+         *
+         * @param request StopRCInstanceRequest
+         * @return StopRCInstanceResponse
+         */
+        public StopRCInstanceResponse StopRCInstance(StopRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopRCInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 停止RDS用户专属主机实例
+         *
+         * @param request StopRCInstanceRequest
+         * @return StopRCInstanceResponse
+         */
+        public async Task<StopRCInstanceResponse> StopRCInstanceAsync(StopRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopRCInstanceWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -50455,6 +52931,106 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchDBInstanceVpcWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 同步密钥对
+         *
+         * @param request SyncRCKeyPairRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncRCKeyPairResponse
+         */
+        public SyncRCKeyPairResponse SyncRCKeyPairWithOptions(SyncRCKeyPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncRCKeyPair",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncRCKeyPairResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 同步密钥对
+         *
+         * @param request SyncRCKeyPairRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncRCKeyPairResponse
+         */
+        public async Task<SyncRCKeyPairResponse> SyncRCKeyPairWithOptionsAsync(SyncRCKeyPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncRCKeyPair",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncRCKeyPairResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 同步密钥对
+         *
+         * @param request SyncRCKeyPairRequest
+         * @return SyncRCKeyPairResponse
+         */
+        public SyncRCKeyPairResponse SyncRCKeyPair(SyncRCKeyPairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SyncRCKeyPairWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 同步密钥对
+         *
+         * @param request SyncRCKeyPairRequest
+         * @return SyncRCKeyPairResponse
+         */
+        public async Task<SyncRCKeyPairResponse> SyncRCKeyPairAsync(SyncRCKeyPairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SyncRCKeyPairWithOptionsAsync(request, runtime);
         }
 
         /**

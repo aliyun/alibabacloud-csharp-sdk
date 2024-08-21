@@ -118,10 +118,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// Specifies whether to query instances that have expired. Valid values:
+        /// Specifies whether the instances have expired. Valid values:
         /// 
-        /// *   **True**: queries instances that have expired.
-        /// *   **False**: does not query instances that have expired.
+        /// *   **True**
+        /// *   **False**
         /// </summary>
         [NameInMap("Expired")]
         [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Valid values: any non-zero positive integer.
+        /// The page number. Pages start from 1.
         /// 
         /// Default value: **1**.
         /// </summary>
