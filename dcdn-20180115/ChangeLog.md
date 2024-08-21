@@ -1,3 +1,7 @@
+2024-08-21 Version: 1.14.2
+- Update API DescribeDcdnKvAccount: update response param.
+
+
 2024-08-20 Version: 1.14.1
 - Update API BatchDeleteDcdnKvWithHighCapacity: update param Url.
 - Update API BatchPutDcdnKv: update param KvList.

@@ -9,12 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnKvAccountResponseBody : TeaModel {
+        [NameInMap("Capacity")]
+        [Validation(Required=false)]
+        public long? Capacity { get; set; }
+
         /// <summary>
         /// The available capacity of all namespaces.
         /// </summary>
         [NameInMap("CapacityString")]
         [Validation(Required=false)]
         public string CapacityString { get; set; }
+
+        [NameInMap("CapacityUsed")]
+        [Validation(Required=false)]
+        public long? CapacityUsed { get; set; }
 
         /// <summary>
         /// All namespaces have used capacity.
