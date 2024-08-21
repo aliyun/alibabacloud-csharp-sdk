@@ -1,3 +1,6 @@
+2024-08-21 Version: 1.3.3
+- Generated csharp 2020-04-07 for cas.
+
 2024-08-20 Version: 1.3.2
 - Update API GetCsrDetail: update response param.
 
