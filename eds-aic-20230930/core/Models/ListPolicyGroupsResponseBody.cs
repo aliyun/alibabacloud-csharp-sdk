@@ -45,24 +45,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [Validation(Required=false)]
                 public string NetRedirect { get; set; }
 
-                [NameInMap("NetRedirectRule")]
-                [Validation(Required=false)]
-                public List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule> NetRedirectRule { get; set; }
-                public class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyNetRedirectRule : TeaModel {
-                    [NameInMap("Policy")]
-                    [Validation(Required=false)]
-                    public string Policy { get; set; }
-
-                    [NameInMap("RuleType")]
-                    [Validation(Required=false)]
-                    public string RuleType { get; set; }
-
-                    [NameInMap("Target")]
-                    [Validation(Required=false)]
-                    public string Target { get; set; }
-
-                }
-
             }
 
             [NameInMap("PolicyGroupId")]

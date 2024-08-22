@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
+            [NameInMap("Result")]
+            [Validation(Required=false)]
+            public string Result { get; set; }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
