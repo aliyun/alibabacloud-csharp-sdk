@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
 
                 [NameInMap("priceType")]
                 [Validation(Required=false)]
-                public float? PriceType { get; set; }
+                public string PriceType { get; set; }
 
             }
 

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
 {
     public class ListDataSourcesShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("attributeName")]
         [Validation(Required=false)]
         public string AttributeName { get; set; }
