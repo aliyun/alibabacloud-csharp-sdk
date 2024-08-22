@@ -61,6 +61,27 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// 闪信模板id
+            /// </summary>
+            [NameInMap("FlashSmsTemplateId")]
+            [Validation(Required=false)]
+            public long? FlashSmsTemplateId { get; set; }
+
+            /// <summary>
+            /// 闪信模板名称
+            /// </summary>
+            [NameInMap("FlashSmsTemplateName")]
+            [Validation(Required=false)]
+            public string FlashSmsTemplateName { get; set; }
+
+            /// <summary>
+            /// 发送闪信配置，可选0，1；0表示否，1表示是
+            /// </summary>
+            [NameInMap("FlashSmsType")]
+            [Validation(Required=false)]
+            public long? FlashSmsType { get; set; }
+
+            /// <summary>
             /// 最近导入时间
             /// </summary>
             [NameInMap("ImportTime")]

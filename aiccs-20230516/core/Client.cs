@@ -218,6 +218,14 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 query["CallbackUrl"] = request.CallbackUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsTemplateId))
+            {
+                query["FlashSmsTemplateId"] = request.FlashSmsTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsType))
+            {
+                query["FlashSmsType"] = request.FlashSmsType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
             {
                 query["MaxConcurrency"] = request.MaxConcurrency;
@@ -345,6 +353,14 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
                 query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsTemplateId))
+            {
+                query["FlashSmsTemplateId"] = request.FlashSmsTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsType))
+            {
+                query["FlashSmsType"] = request.FlashSmsType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
             {
@@ -1018,6 +1034,14 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 query["CallbackUrl"] = request.CallbackUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsTemplateId))
+            {
+                query["FlashSmsTemplateId"] = request.FlashSmsTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsType))
+            {
+                query["FlashSmsType"] = request.FlashSmsType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
             {
                 query["MaxConcurrency"] = request.MaxConcurrency;
@@ -1145,6 +1169,14 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
                 query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsTemplateId))
+            {
+                query["FlashSmsTemplateId"] = request.FlashSmsTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsType))
+            {
+                query["FlashSmsType"] = request.FlashSmsType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
             {

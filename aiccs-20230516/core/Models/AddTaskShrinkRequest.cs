@@ -24,6 +24,20 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
+        /// 当发送闪信配置为1时，闪信模板ID必填
+        /// </summary>
+        [NameInMap("FlashSmsTemplateId")]
+        [Validation(Required=false)]
+        public long? FlashSmsTemplateId { get; set; }
+
+        /// <summary>
+        /// 发送闪信配置
+        /// </summary>
+        [NameInMap("FlashSmsType")]
+        [Validation(Required=false)]
+        public long? FlashSmsType { get; set; }
+
+        /// <summary>
         /// 并发数
         /// </summary>
         [NameInMap("MaxConcurrency")]

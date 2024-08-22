@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class EditTaskResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
