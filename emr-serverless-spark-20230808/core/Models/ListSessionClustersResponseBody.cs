@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The SQL Computes.
+        /// The SQL computes.
         /// </summary>
         [NameInMap("sessionClusters")]
         [Validation(Required=false)]

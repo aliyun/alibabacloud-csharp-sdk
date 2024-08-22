@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CodeType { get; set; }
 
             /// <summary>
-            /// The task configurations of Spark.
+            /// The job configurations of Spark.
             /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            [NameInMap("displayReleaseVersion")]
+            [Validation(Required=false)]
+            public string DisplayReleaseVersion { get; set; }
+
             /// <summary>
             /// The end time of the job.
             /// </summary>
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("executionTimeoutSeconds")]
             [Validation(Required=false)]
             public int? ExecutionTimeoutSeconds { get; set; }
+
+            [NameInMap("fusion")]
+            [Validation(Required=false)]
+            public bool? Fusion { get; set; }
 
             /// <summary>
             /// The information about Spark Driver.
