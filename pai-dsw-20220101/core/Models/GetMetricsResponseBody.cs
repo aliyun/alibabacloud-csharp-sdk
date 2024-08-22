@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("DataPoints")]
+        [NameInMap("Datapoints")]
         [Validation(Required=false)]
-        public string DataPoints { get; set; }
+        public string Datapoints { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
