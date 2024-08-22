@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public long? Target { get; set; }
 
+        [NameInMap("timeZone")]
+        [Validation(Required=false)]
+        public string TimeZone { get; set; }
+
     }
 
 }

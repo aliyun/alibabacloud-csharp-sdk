@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// The function version or alias.
+        /// The version or alias of the function.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SortOrderByTime { get; set; }
 
         /// <summary>
-        /// The start time of the period in which the asynchronous tasks are launched.
+        /// The start time of the period during which the asynchronous tasks are initiated.
         /// </summary>
         [NameInMap("startedTimeBegin")]
         [Validation(Required=false)]
         public long? StartedTimeBegin { get; set; }
 
         /// <summary>
-        /// The end time of the period in which the asynchronous tasks are launched.
+        /// The end time of the period during which the asynchronous tasks are initiated.
         /// </summary>
         [NameInMap("startedTimeEnd")]
         [Validation(Required=false)]

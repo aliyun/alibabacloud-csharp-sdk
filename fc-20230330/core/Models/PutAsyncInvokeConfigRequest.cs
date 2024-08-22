@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutAsyncInvokeConfigRequest : TeaModel {
         /// <summary>
-        /// The configurations of asynchronous function invocation.
+        /// The asynchronous invocation configurations.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class GetAsyncTaskRequest : TeaModel {
         /// <summary>
-        /// The function version or alias.
+        /// The version or alias of the function.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

@@ -126,7 +126,9 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-         * @summary 创建自定义域名。
+         * @summary Creates a custom domain name.
+         *
+         * @description If you wish to access applications or functions created in Function Compute via a fixed domain name in a production environment, or if you need to address the forced download behavior when accessing HTTP triggers, you can achieve this by binding a custom domain to your application or function.
          *
          * @param request CreateCustomDomainRequest
          * @param headers map
@@ -157,7 +159,9 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-         * @summary 创建自定义域名。
+         * @summary Creates a custom domain name.
+         *
+         * @description If you wish to access applications or functions created in Function Compute via a fixed domain name in a production environment, or if you need to address the forced download behavior when accessing HTTP triggers, you can achieve this by binding a custom domain to your application or function.
          *
          * @param request CreateCustomDomainRequest
          * @param headers map
@@ -188,7 +192,9 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-         * @summary 创建自定义域名。
+         * @summary Creates a custom domain name.
+         *
+         * @description If you wish to access applications or functions created in Function Compute via a fixed domain name in a production environment, or if you need to address the forced download behavior when accessing HTTP triggers, you can achieve this by binding a custom domain to your application or function.
          *
          * @param request CreateCustomDomainRequest
          * @return CreateCustomDomainResponse
@@ -201,7 +207,9 @@ namespace AlibabaCloud.SDK.FC20230330
         }
 
         /**
-         * @summary 创建自定义域名。
+         * @summary Creates a custom domain name.
+         *
+         * @description If you wish to access applications or functions created in Function Compute via a fixed domain name in a production environment, or if you need to address the forced download behavior when accessing HTTP triggers, you can achieve this by binding a custom domain to your application or function.
          *
          * @param request CreateCustomDomainRequest
          * @return CreateCustomDomainResponse
@@ -215,6 +223,8 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /**
          * @summary Creates a function.
+         *
+         * @description In Function Compute, a function serves as the smallest unit of resource scheduling and execution, typically referring to a piece of code written by users that can execute independently in response to specific events or requests.
          *
          * @param request CreateFunctionRequest
          * @param headers map
@@ -247,6 +257,8 @@ namespace AlibabaCloud.SDK.FC20230330
         /**
          * @summary Creates a function.
          *
+         * @description In Function Compute, a function serves as the smallest unit of resource scheduling and execution, typically referring to a piece of code written by users that can execute independently in response to specific events or requests.
+         *
          * @param request CreateFunctionRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -278,6 +290,8 @@ namespace AlibabaCloud.SDK.FC20230330
         /**
          * @summary Creates a function.
          *
+         * @description In Function Compute, a function serves as the smallest unit of resource scheduling and execution, typically referring to a piece of code written by users that can execute independently in response to specific events or requests.
+         *
          * @param request CreateFunctionRequest
          * @return CreateFunctionResponse
          */
@@ -290,6 +304,8 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /**
          * @summary Creates a function.
+         *
+         * @description In Function Compute, a function serves as the smallest unit of resource scheduling and execution, typically referring to a piece of code written by users that can execute independently in response to specific events or requests.
          *
          * @param request CreateFunctionRequest
          * @return CreateFunctionResponse
@@ -3285,6 +3301,10 @@ namespace AlibabaCloud.SDK.FC20230330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcVersion))
+            {
+                query["fcVersion"] = request.FcVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["limit"] = request.Limit;
@@ -3329,6 +3349,10 @@ namespace AlibabaCloud.SDK.FC20230330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcVersion))
+            {
+                query["fcVersion"] = request.FcVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["limit"] = request.Limit;
@@ -4770,6 +4794,8 @@ namespace AlibabaCloud.SDK.FC20230330
         /**
          * @summary Adds tags to a resource.
          *
+         * @description Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](https://help.aliyun.com/document_detail/156983.html).
+         *
          * @param request TagResourcesRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -4800,6 +4826,8 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /**
          * @summary Adds tags to a resource.
+         *
+         * @description Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](https://help.aliyun.com/document_detail/156983.html).
          *
          * @param request TagResourcesRequest
          * @param headers map
@@ -4832,6 +4860,8 @@ namespace AlibabaCloud.SDK.FC20230330
         /**
          * @summary Adds tags to a resource.
          *
+         * @description Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](https://help.aliyun.com/document_detail/156983.html).
+         *
          * @param request TagResourcesRequest
          * @return TagResourcesResponse
          */
@@ -4844,6 +4874,8 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /**
          * @summary Adds tags to a resource.
+         *
+         * @description Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](https://help.aliyun.com/document_detail/156983.html).
          *
          * @param request TagResourcesRequest
          * @return TagResourcesResponse

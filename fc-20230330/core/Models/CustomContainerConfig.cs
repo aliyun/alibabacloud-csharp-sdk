@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public int? Port { get; set; }
 
+        [NameInMap("registryConfig")]
+        [Validation(Required=false)]
+        public RegistryConfig RegistryConfig { get; set; }
+
         [NameInMap("resolvedImageUri")]
         [Validation(Required=false)]
         public string ResolvedImageUri { get; set; }

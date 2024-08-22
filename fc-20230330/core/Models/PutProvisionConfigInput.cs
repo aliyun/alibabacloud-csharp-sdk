@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? AlwaysAllocateCPU { get; set; }
 
+        [NameInMap("alwaysAllocateGPU")]
+        [Validation(Required=false)]
+        public bool? AlwaysAllocateGPU { get; set; }
+
         [NameInMap("scheduledActions")]
         [Validation(Required=false)]
         public List<ScheduledAction> ScheduledActions { get; set; }

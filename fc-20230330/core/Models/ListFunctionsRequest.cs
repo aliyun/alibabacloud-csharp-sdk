@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListFunctionsRequest : TeaModel {
+        [NameInMap("fcVersion")]
+        [Validation(Required=false)]
+        public string FcVersion { get; set; }
+
         /// <summary>
         /// The number of functions to return. The minimum value is 1 and the maximum value is 100.
         /// </summary>
