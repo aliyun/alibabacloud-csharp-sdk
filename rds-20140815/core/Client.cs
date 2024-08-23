@@ -54686,6 +54686,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["TargetMajorVersion"] = request.TargetMajorVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeMode))
+            {
+                query["UpgradeMode"] = request.UpgradeMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -54801,6 +54805,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetMajorVersion))
             {
                 query["TargetMajorVersion"] = request.TargetMajorVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeMode))
+            {
+                query["UpgradeMode"] = request.UpgradeMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
