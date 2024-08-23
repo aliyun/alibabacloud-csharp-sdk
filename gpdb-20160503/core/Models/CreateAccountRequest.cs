@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
         /// <summary>
         /// The ID of the instance.
         /// 

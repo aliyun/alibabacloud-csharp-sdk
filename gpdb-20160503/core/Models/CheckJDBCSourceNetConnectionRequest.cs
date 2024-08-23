@@ -18,15 +18,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("DataSourceId")]
+        [Validation(Required=false)]
+        public string DataSourceId { get; set; }
+
         /// <summary>
         /// The JDBC connection string.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("JdbcConnectionString")]
         [Validation(Required=false)]
         public string JdbcConnectionString { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

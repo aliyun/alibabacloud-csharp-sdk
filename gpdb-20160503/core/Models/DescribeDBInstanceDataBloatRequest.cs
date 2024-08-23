@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("Database")]
+        [Validation(Required=false)]
+        public string Database { get; set; }
+
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
         /// <summary>
         /// The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
         /// </summary>

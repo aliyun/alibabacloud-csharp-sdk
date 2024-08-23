@@ -18,10 +18,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("DataSourceId")]
+        [Validation(Required=false)]
+        public string DataSourceId { get; set; }
+
         /// <summary>
         /// The E-MapReduce (EMR) Hadoop cluster ID.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("EmrInstanceId")]
         [Validation(Required=false)]

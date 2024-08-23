@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceIndexUsageResponseBody : TeaModel {
         /// <summary>
-        /// The time when the table was last deleted, inserted, or updated.
+        /// The queried index usage.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// </summary>
             [NameInMap("IndexScanTimes")]
             [Validation(Required=false)]
-            public int? IndexScanTimes { get; set; }
+            public long? IndexScanTimes { get; set; }
 
             /// <summary>
             /// The size of the index. Unit: bytes.

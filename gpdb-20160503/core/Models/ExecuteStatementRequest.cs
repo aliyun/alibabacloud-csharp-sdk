@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public List<string> Sqls { get; set; }
 
         /// <summary>
-        /// The name of the set of SQL statements that you want to execute.
+        /// The name of the set of SQL statements that you want to execute. This parameter takes effect when the RunType parameter is set to asynchronous.
         /// </summary>
         [NameInMap("StatementName")]
         [Validation(Required=false)]

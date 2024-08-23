@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("Database")]
+        [Validation(Required=false)]
+        public string Database { get; set; }
+
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
         /// <summary>
         /// The page number. Pages start from page 1. Default value: **1**.
         /// </summary>

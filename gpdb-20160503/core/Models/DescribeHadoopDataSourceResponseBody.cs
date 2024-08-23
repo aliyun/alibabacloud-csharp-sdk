@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EmrInstanceId { get; set; }
 
+        [NameInMap("ExternalDataServiceId")]
+        [Validation(Required=false)]
+        public string ExternalDataServiceId { get; set; }
+
         /// <summary>
         /// The content of the Hadoop hdfs-site.xml file.
         /// </summary>
@@ -111,6 +115,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("MapReduceConf")]
         [Validation(Required=false)]
         public string MapReduceConf { get; set; }
+
+        [NameInMap("ModifyTime")]
+        [Validation(Required=false)]
+        public string ModifyTime { get; set; }
 
         /// <summary>
         /// The request ID.

@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
+        [NameInMap("ExternalDataServiceId")]
+        [Validation(Required=false)]
+        public string ExternalDataServiceId { get; set; }
+
         /// <summary>
         /// The JDBC connection string.
         /// </summary>
@@ -66,6 +70,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("JDBCUserName")]
         [Validation(Required=false)]
         public string JDBCUserName { get; set; }
+
+        [NameInMap("ModifyTime")]
+        [Validation(Required=false)]
+        public string ModifyTime { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
