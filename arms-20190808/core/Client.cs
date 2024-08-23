@@ -10055,7 +10055,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Delete s SourceMap file that was uploaded to Browser Monitoring.
+         * @summary Deletes the SourceMap files uploaded in Browser Monitoring.
          *
          * @param tmpReq DeleteSourceMapRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10103,7 +10103,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Delete s SourceMap file that was uploaded to Browser Monitoring.
+         * @summary Deletes the SourceMap files uploaded in Browser Monitoring.
          *
          * @param tmpReq DeleteSourceMapRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10151,7 +10151,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Delete s SourceMap file that was uploaded to Browser Monitoring.
+         * @summary Deletes the SourceMap files uploaded in Browser Monitoring.
          *
          * @param request DeleteSourceMapRequest
          * @return DeleteSourceMapResponse
@@ -10163,7 +10163,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Delete s SourceMap file that was uploaded to Browser Monitoring.
+         * @summary Deletes the SourceMap files uploaded in Browser Monitoring.
          *
          * @param request DeleteSourceMapRequest
          * @return DeleteSourceMapResponse
@@ -12055,7 +12055,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 执行Insights相关的操作
+         * @summary Performs the corresponding operation based on the specified module type.
          *
          * @param request DoInsightsActionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12093,7 +12093,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 执行Insights相关的操作
+         * @summary Performs the corresponding operation based on the specified module type.
          *
          * @param request DoInsightsActionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12131,7 +12131,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 执行Insights相关的操作
+         * @summary Performs the corresponding operation based on the specified module type.
          *
          * @param request DoInsightsActionRequest
          * @return DoInsightsActionResponse
@@ -12143,7 +12143,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 执行Insights相关的操作
+         * @summary Performs the corresponding operation based on the specified module type.
          *
          * @param request DoInsightsActionRequest
          * @return DoInsightsActionResponse
@@ -20175,7 +20175,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries notification policies based on specific conditions.
+         * @summary Queries notification policies based on specified conditions.
          *
          * @param request ListNotificationPoliciesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20233,7 +20233,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries notification policies based on specific conditions.
+         * @summary Queries notification policies based on specified conditions.
          *
          * @param request ListNotificationPoliciesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20291,7 +20291,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries notification policies based on specific conditions.
+         * @summary Queries notification policies based on specified conditions.
          *
          * @param request ListNotificationPoliciesRequest
          * @return ListNotificationPoliciesResponse
@@ -20303,7 +20303,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries notification policies based on specific conditions.
+         * @summary Queries notification policies based on specified conditions.
          *
          * @param request ListNotificationPoliciesRequest
          * @return ListNotificationPoliciesResponse

@@ -52,7 +52,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? GroupWait { get; set; }
 
                 /// <summary>
-                /// The field that is used for grouping.
+                /// An array of alert event group objects.
+                /// 
+                /// *   If you do not specify the groupingFields field, all alerts will be sent to contacts based on `alertname`.
+                /// *   If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.
                 /// </summary>
                 [NameInMap("GroupingFields")]
                 [Validation(Required=false)]
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? IntegrationId { get; set; }
 
             /// <summary>
-            /// An array of alert event matching rule objects.
+            /// The matching rules.
             /// </summary>
             [NameInMap("MatchingRules")]
             [Validation(Required=false)]
@@ -135,13 +138,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRule NotifyRule { get; set; }
             public class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRule : TeaModel {
                 /// <summary>
-                /// The notification methods. Valid values: 
-                /// 
-                /// - `dingTalk`: DingTalk
-                /// - `email`: email
-                /// - `sms`: text message
-                /// - `tts`: phone call
-                /// - `webhook`: webhook
+                /// The notification method.
                 /// </summary>
                 [NameInMap("NotifyChannels")]
                 [Validation(Required=false)]
@@ -155,7 +152,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string NotifyEndTime { get; set; }
 
                 /// <summary>
-                /// An array of notification contact objects.
+                /// An array of notification objects.
                 /// </summary>
                 [NameInMap("NotifyObjects")]
                 [Validation(Required=false)]
@@ -169,7 +166,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public List<string> NotifyChannels { get; set; }
 
                     /// <summary>
-                    /// The ID of the notification contact.
+                    /// The ID of the notification object.
                     /// </summary>
                     [NameInMap("NotifyObjectId")]
                     [Validation(Required=false)]
@@ -185,11 +182,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <summary>
                     /// The type of the notification object. Valid values:
                     /// 
-                    /// *   CONTACT: individual contact
+                    /// *   CONTACT: contact
                     /// *   CONTACT_GROUP: contact group
-                    /// *   ARMS_CONTACT: individual ARMS contact
+                    /// *   ARMS_CONTACT: ARMS contact
                     /// *   ARMS_CONTACT_GROUP: ARMS contact group
-                    /// *   DING_ROBOT_GROUP: DingTalk, Lark, or WeCom IM chatbot
+                    /// *   DING_ROBOT_GROUP: DingTalk, Lark, WeCom, or IM robot
                     /// *   CONTACT_SCHEDULE: user on duty defined by a schedule
                     /// </summary>
                     [NameInMap("NotifyObjectType")]
@@ -208,7 +205,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// An array of notification template objects.
+            /// The notification template.
             /// </summary>
             [NameInMap("NotifyTemplate")]
             [Validation(Required=false)]
@@ -280,10 +277,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// Indicates whether a notification is resent for a long-lasting unresolved alert. Default value: true. Valid values:  
+            /// Indicates whether a notification is resent for a long-lasting unresolved alert. Default value: true. Valid values:
             /// 
-            /// - `true`: The system resends a notification for a long-lasting unresolved alert at a specified time interval.
-            /// - `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.
+            /// *   `true`: The system resends a notification for a long-lasting unresolved alert at a specified time interval.
+            /// *   `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.
             /// </summary>
             [NameInMap("Repeat")]
             [Validation(Required=false)]
@@ -297,10 +294,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? RepeatInterval { get; set; }
 
             /// <summary>
-            /// Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:   
+            /// Indicates whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. ARMS notifies contacts when the alert status changes to Resolved.
             /// 
-            /// - `true`: The system sends a notification.
-            /// - `false`: The system does not send a notification.
+            /// *   `true`: The system sends a notification.
+            /// *   `false`: The system does not send a notification.
             /// </summary>
             [NameInMap("SendRecoverMessage")]
             [Validation(Required=false)]

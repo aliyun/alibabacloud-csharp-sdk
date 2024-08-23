@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The ID of the region. Default value: **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
