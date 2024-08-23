@@ -108,6 +108,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string SecurityLevel { get; set; }
 
+        [NameInMap("ShowAlbumIcon")]
+        [Validation(Required=false)]
+        public string ShowAlbumIcon { get; set; }
+
+        [NameInMap("ShowOcrResult")]
+        [Validation(Required=false)]
+        public string ShowOcrResult { get; set; }
+
         [NameInMap("StyleConfig")]
         [Validation(Required=false)]
         public string StyleConfig { get; set; }

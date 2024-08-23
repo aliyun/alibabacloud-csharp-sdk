@@ -2336,6 +2336,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["SecurityLevel"] = request.SecurityLevel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowAlbumIcon))
+            {
+                query["ShowAlbumIcon"] = request.ShowAlbumIcon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOcrResult))
+            {
+                query["ShowOcrResult"] = request.ShowOcrResult;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleConfig))
             {
                 query["StyleConfig"] = request.StyleConfig;
@@ -2467,6 +2475,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityLevel))
             {
                 query["SecurityLevel"] = request.SecurityLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowAlbumIcon))
+            {
+                query["ShowAlbumIcon"] = request.ShowAlbumIcon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOcrResult))
+            {
+                query["ShowOcrResult"] = request.ShowOcrResult;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleConfig))
             {
