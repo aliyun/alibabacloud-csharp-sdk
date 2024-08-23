@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: enabled.
         /// 
-        /// > For more information about instance metadata, see [Overview of ECS instance metadata](https://help.aliyun.com/document_detail/49122.html).
+        /// >  For information about instance metadata, see [Obtain instance metadata](https://help.aliyun.com/document_detail/49122.html).
         /// 
         /// This parameter is required.
         /// </summary>
@@ -26,21 +26,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HttpEndpoint { get; set; }
 
         /// <summary>
-        /// > This parameter is in invitational preview and is not publicly available.
+        /// >  This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("HttpPutResponseHopLimit")]
         [Validation(Required=false)]
         public int? HttpPutResponseHopLimit { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
+        /// Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:
         /// 
-        /// *   optional: does not forcefully use the security-enhanced mode (IMDSv2).
-        /// *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
+        /// *   optional: does not forcefully use the security hardening mode (IMDSv2).
+        /// *   required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
         /// 
         /// Default value: optional.
         /// 
-        /// > For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](https://help.aliyun.com/document_detail/150575.html).
+        /// >  For more information about modes of accessing instance metadata, see [Obtain instance metadata](https://help.aliyun.com/document_detail/150575.html).
         /// </summary>
         [NameInMap("HttpTokens")]
         [Validation(Required=false)]

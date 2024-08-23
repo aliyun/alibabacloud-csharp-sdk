@@ -273,6 +273,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public bool? Primary { get; set; }
 
+                        /// <summary>
+                        /// >  This parameter is in invitational preview and is not publicly available.
+                        /// </summary>
                         [NameInMap("PrivateDnsName")]
                         [Validation(Required=false)]
                         public string PrivateDnsName { get; set; }

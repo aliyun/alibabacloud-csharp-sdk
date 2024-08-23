@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyNetworkInterfaceAttributeRequest : TeaModel {
         /// <summary>
-        /// This parameter is not publicly available.
+        /// >  This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]
         [Validation(Required=false)]
         public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration : TeaModel {
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is in invitational preview and is not publicly available.
             /// </summary>
             [NameInMap("TcpClosedAndTimeWaitTimeout")]
             [Validation(Required=false)]
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is in invitational preview and is not publicly available.
             /// </summary>
             [NameInMap("TcpEstablishedTimeout")]
             [Validation(Required=false)]
             public int? TcpEstablishedTimeout { get; set; }
 
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is in invitational preview and is not publicly available.
             /// </summary>
             [NameInMap("UdpTimeout")]
             [Validation(Required=false)]

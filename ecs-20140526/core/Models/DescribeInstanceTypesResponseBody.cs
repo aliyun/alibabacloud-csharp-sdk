@@ -66,21 +66,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? DiskQuantity { get; set; }
 
                 /// <summary>
-                /// This parameter is unavailable for public use.
+                /// >  This parameter is not publicly available.
                 /// </summary>
                 [NameInMap("EnhancedNetwork")]
                 [Validation(Required=false)]
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork EnhancedNetwork { get; set; }
                 public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork : TeaModel {
                     /// <summary>
-                    /// This parameter is unavailable for public use.
+                    /// *
+                    /// *
+                    /// 
+                    /// >  This parameter is not publicly available.
                     /// </summary>
                     [NameInMap("SriovSupport")]
                     [Validation(Required=false)]
                     public bool? SriovSupport { get; set; }
 
                     /// <summary>
-                    /// This parameter is unavailable for public use.
+                    /// >  This parameter is not publicly available.
                     /// </summary>
                     [NameInMap("VfQueueNumberPerEni")]
                     [Validation(Required=false)]
@@ -287,7 +290,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? NetworkCardQuantity { get; set; }
 
                 /// <summary>
-                /// The information of the network cards.
+                /// The information about the network cards.
                 /// </summary>
                 [NameInMap("NetworkCards")]
                 [Validation(Required=false)]

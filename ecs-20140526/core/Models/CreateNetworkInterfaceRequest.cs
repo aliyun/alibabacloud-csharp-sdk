@@ -24,28 +24,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// This parameter is not publicly available.
+        /// >  This parameter is not publicly available.
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceRequestConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class CreateNetworkInterfaceRequestConnectionTrackingConfiguration : TeaModel {
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("TcpClosedAndTimeWaitTimeout")]
             [Validation(Required=false)]
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("TcpEstablishedTimeout")]
             [Validation(Required=false)]
             public int? TcpEstablishedTimeout { get; set; }
 
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("UdpTimeout")]
             [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is not publicly available.
+        /// >  This parameter is unavailable.
         /// </summary>
         [NameInMap("EnhancedNetwork")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceRequestEnhancedNetwork EnhancedNetwork { get; set; }
         public class CreateNetworkInterfaceRequestEnhancedNetwork : TeaModel {
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("EnableSriov")]
             [Validation(Required=false)]

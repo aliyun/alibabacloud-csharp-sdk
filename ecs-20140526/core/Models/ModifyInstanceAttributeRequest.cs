@@ -64,11 +64,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:
         /// 
-        /// true
+        /// *   true
+        /// *   false
         /// 
-        /// false
-        /// 
-        /// You can enable the Jumbo Frames feature only for specific instance types. For more information, see [MTUs](https://help.aliyun.com/document_detail/200512.html).
+        /// You can enable the Jumbo Frames feature only for specific instance types. For more information, see [MTU and jumbo frames](https://help.aliyun.com/document_detail/200512.html).
         /// </summary>
         [NameInMap("EnableJumboFrame")]
         [Validation(Required=false)]
@@ -133,26 +132,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// >  This parameter is in invitational preview and is not publicly available.
+        /// </summary>
         [NameInMap("PrivateDnsNameOptions")]
         [Validation(Required=false)]
         public ModifyInstanceAttributeRequestPrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
         public class ModifyInstanceAttributeRequestPrivateDnsNameOptions : TeaModel {
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("EnableInstanceIdDnsAAAARecord")]
             [Validation(Required=false)]
             public bool? EnableInstanceIdDnsAAAARecord { get; set; }
 
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("EnableInstanceIdDnsARecord")]
             [Validation(Required=false)]
             public bool? EnableInstanceIdDnsARecord { get; set; }
 
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("EnableIpDnsARecord")]
             [Validation(Required=false)]
             public bool? EnableIpDnsARecord { get; set; }
 
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("EnableIpDnsPtrRecord")]
             [Validation(Required=false)]
             public bool? EnableIpDnsPtrRecord { get; set; }
 
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("HostnameType")]
             [Validation(Required=false)]
             public string HostnameType { get; set; }
@@ -205,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.
         /// *   The security groups and the instance must belong to the same VPC.
         /// *   The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section in the "Limits and quotas" topic.
-        /// *   New security groups become valid for the instance after a short latency.
+        /// *   New security groups become valid for the instance after a short delay.
         /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfacePermissionRequest : TeaModel {
         /// <summary>
-        /// The ID of the ENI.
+        /// The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,9 +19,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? AccountId { get; set; }
 
         /// <summary>
-        /// The permission on the ENI. Set the value to InstanceAttach.
-        /// 
-        /// InstanceAttach: allows authorized users to attach the ENI to an ECS instance. The ENI and the ECS instance must reside in the same zone.
+        /// The ID of the ENI.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -38,7 +36,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The permission on the ENI. Valid values:
+        /// 
+        /// InstanceAttach: the permission to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
+        /// The region ID of the ENI. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>

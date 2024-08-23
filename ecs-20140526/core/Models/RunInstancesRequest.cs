@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Affinity { get; set; }
 
         /// <summary>
-        /// The desired number of ECS instances. Valid values: 1 to 100.
+        /// The desired number of ECS instances that you want to create. Valid values: 1 to 100.
         /// 
         /// The number of ECS instances that can be created varies based on the Amount and MinAmount values.
         /// 
@@ -338,28 +338,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// This parameter is not publicly available.
+        /// >  This parameter is not publicly available.
         /// </summary>
         [NameInMap("Arn")]
         [Validation(Required=false)]
         public List<RunInstancesRequestArn> Arn { get; set; }
         public class RunInstancesRequestArn : TeaModel {
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("AssumeRoleFor")]
             [Validation(Required=false)]
             public long? AssumeRoleFor { get; set; }
 
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("RoleType")]
             [Validation(Required=false)]
             public string RoleType { get; set; }
 
             /// <summary>
-            /// This parameter is not publicly available.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("Rolearn")]
             [Validation(Required=false)]
@@ -457,8 +457,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// Specifies whether to enable the performance burst feature for data disk N. Valid values:
             /// 
-            /// *   true: enables the performance burst feature for the data disk.
-            /// *   false: disables the performance burst feature for the data disk.
+            /// *   true
+            /// *   false
             /// 
             /// >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
             /// </summary>
@@ -498,8 +498,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// Specifies whether to release data disk N when the instance is released. Valid values:
             /// 
-            /// *   true: releases data disk N when the instance is released.
-            /// *   false: does not release data disk N when the instance is released.
+            /// *   true
+            /// *   false
             /// 
             /// Default value: true.
             /// </summary>
@@ -543,8 +543,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// Specifies whether to encrypt data disk N. Valid values:
             /// 
-            /// *   true: encrypts data disk N.
-            /// *   false: does not encrypt data disk N.
+            /// *   true
+            /// *   false
             /// 
             /// Default value: false.
             /// </summary>
@@ -629,7 +629,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the dedicated host on which to create the instance. If you set the `DedicatedHostId` parameter, the `SpotStrategy` and `SpotPriceLimit` parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.
+        /// The ID of the dedicated host on which to create the instance. Preemptible instances cannot be created on dedicated hosts. If you specify `DedicatedHostId`, `SpotStrategy` and `SpotPriceLimit` are ignored.
         /// 
         /// You can call the [DescribeDedicatedHosts](https://help.aliyun.com/document_detail/134242.html) operation to query the list of dedicated host IDs.
         /// </summary>
@@ -759,9 +759,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create instances.
         /// 
+        /// The name must be 2 to 128 characters in length. The name cannot start with a digit, a special character, http://, or https://. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).
+        /// 
+        /// Take note of the following items:
+        /// 
         /// *   If you specify `ImageId`, you cannot specify ImageFamily.
-        /// *   If you do not specify `ImageId` but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that has the `ImageId` parameter specified, you cannot specify ImageFamily.
-        /// *   If you do not specify `ImageId` but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that does not have the `ImageId` parameter specified, you can specify ImageFamily.
+        /// *   If you do not specify `ImageId` but use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template that has `ImageId` specified, you cannot specify ImageFamily.
+        /// *   If you do not specify `ImageId` but use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template that does not have `ImageId` specified, you can specify ImageFamily.
         /// *   If you do not specify `ImageId`, `LaunchTemplateId`, or `LaunchTemplateName`, you can specify ImageFamily.
         /// 
         /// >  For information about image families that are associated with Alibaba Cloud official images, see [Overview of public images](https://help.aliyun.com/document_detail/108393.html).
@@ -940,7 +944,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// The minimum number of ECS instances to be created. Valid values: 1 to 100.
+        /// The minimum number of ECS instances that you want to create. Valid values: 1 to 100.
         /// 
         /// The number of ECS instances that can be created varies based on the Amount and MinAmount values.
         /// 
@@ -1279,26 +1283,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        /// <summary>
+        /// >  This parameter is in invitational preview and is not publicly available.
+        /// </summary>
         [NameInMap("PrivateDnsNameOptions")]
         [Validation(Required=false)]
         public RunInstancesRequestPrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
         public class RunInstancesRequestPrivateDnsNameOptions : TeaModel {
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("EnableInstanceIdDnsAAAARecord")]
             [Validation(Required=false)]
             public bool? EnableInstanceIdDnsAAAARecord { get; set; }
 
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("EnableInstanceIdDnsARecord")]
             [Validation(Required=false)]
             public bool? EnableInstanceIdDnsARecord { get; set; }
 
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("EnableIpDnsARecord")]
             [Validation(Required=false)]
             public bool? EnableIpDnsARecord { get; set; }
 
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("EnableIpDnsPtrRecord")]
             [Validation(Required=false)]
             public bool? EnableIpDnsPtrRecord { get; set; }
 
+            /// <summary>
+            /// >  This parameter is in invitational preview and is not publicly available.
+            /// </summary>
             [NameInMap("HostnameType")]
             [Validation(Required=false)]
             public string HostnameType { get; set; }
@@ -1407,7 +1429,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// *   Terminate: The instance is released.
         /// 
-        /// *   Stop: The instance is stopped in economical mode. To use the economical mode, submit a ticket.
+        /// *   Stop: The instance is stopped in economical mode.
         /// 
         ///     For information about the economical mode, see [Economical mode](https://help.aliyun.com/document_detail/63353.html).
         /// 

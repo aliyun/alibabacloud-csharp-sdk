@@ -107,6 +107,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
+        /// <summary>
+        /// The launcher for script execution. The value cannot exceed 1 KB in length.
+        /// </summary>
         [NameInMap("Launcher")]
         [Validation(Required=false)]
         public string Launcher { get; set; }
@@ -196,8 +199,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// *   This parameter and InstanceId.N are mutually exclusive.
             /// *   Valid values of N: 1 to 10. The tag key cannot be an empty string.
-            /// *   The number of instances that have the specified tags cannot exceed 50. If more than 50 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 50 instances.
-            /// *   The tag key can be up to 64 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+            /// *   The number of instances that have the specified tags cannot exceed 100. If more than 100 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 100 instances.
+            /// *   The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -218,6 +221,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// The tags of the command.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<InvokeCommandRequestTag> Tag { get; set; }

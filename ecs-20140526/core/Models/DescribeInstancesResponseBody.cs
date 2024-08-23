@@ -614,7 +614,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string PrimaryIpAddress { get; set; }
 
                         /// <summary>
-                        /// Details about the private IP addresses of the ENI.
+                        /// The private IP addresses of the ENI.
                         /// </summary>
                         [NameInMap("PrivateIpSets")]
                         [Validation(Required=false)]
@@ -634,6 +634,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 [Validation(Required=false)]
                                 public bool? Primary { get; set; }
 
+                                /// <summary>
+                                /// >  This parameter is in invitational preview and is not publicly available.
+                                /// </summary>
                                 [NameInMap("PrivateDnsName")]
                                 [Validation(Required=false)]
                                 public string PrivateDnsName { get; set; }
@@ -722,26 +725,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                /// <summary>
+                /// >  This parameter is in invitational preview and is not publicly available.
+                /// </summary>
                 [NameInMap("PrivateDnsNameOptions")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions : TeaModel {
+                    /// <summary>
+                    /// >  This parameter is in invitational preview and is not publicly available.
+                    /// </summary>
                     [NameInMap("EnableInstanceIdDnsAAAARecord")]
                     [Validation(Required=false)]
                     public bool? EnableInstanceIdDnsAAAARecord { get; set; }
 
+                    /// <summary>
+                    /// >  This parameter is in invitational preview and is not publicly available.
+                    /// </summary>
                     [NameInMap("EnableInstanceIdDnsARecord")]
                     [Validation(Required=false)]
                     public bool? EnableInstanceIdDnsARecord { get; set; }
 
+                    /// <summary>
+                    /// >  This parameter is in invitational preview and is not publicly available.
+                    /// </summary>
                     [NameInMap("EnableIpDnsARecord")]
                     [Validation(Required=false)]
                     public bool? EnableIpDnsARecord { get; set; }
 
+                    /// <summary>
+                    /// >  This parameter is in invitational preview and is not publicly available.
+                    /// </summary>
                     [NameInMap("EnableIpDnsPtrRecord")]
                     [Validation(Required=false)]
                     public bool? EnableIpDnsPtrRecord { get; set; }
 
+                    /// <summary>
+                    /// >  This parameter is in invitational preview and is not publicly available.
+                    /// </summary>
                     [NameInMap("HostnameType")]
                     [Validation(Required=false)]
                     public string HostnameType { get; set; }

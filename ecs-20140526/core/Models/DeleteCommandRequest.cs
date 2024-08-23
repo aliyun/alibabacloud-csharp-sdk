@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteCommandRequest : TeaModel {
         /// <summary>
+        /// The ID of the command. You can call the [DescribeCommands](https://help.aliyun.com/document_detail/64843.html) operation to query all available command IDs.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("CommandId")]
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// $.parameters[1].schema.enumValueTitles
+        /// The region ID of the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>
