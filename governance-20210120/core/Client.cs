@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("governance", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
