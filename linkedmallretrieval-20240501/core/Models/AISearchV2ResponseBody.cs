@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.LinkedmallRetrieval20240501.Models
 
             [NameInMap("responseTime")]
             [Validation(Required=false)]
-            public string ResponseTime { get; set; }
+            public long? ResponseTime { get; set; }
 
         }
 
