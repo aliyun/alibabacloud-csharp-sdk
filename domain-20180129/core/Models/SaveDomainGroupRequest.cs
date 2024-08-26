@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public long? DomainGroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainGroupName")]
         [Validation(Required=false)]
         public string DomainGroupName { get; set; }

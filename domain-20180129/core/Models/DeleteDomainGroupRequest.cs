@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class DeleteDomainGroupRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainGroupId")]
         [Validation(Required=false)]
         public long? DomainGroupId { get; set; }

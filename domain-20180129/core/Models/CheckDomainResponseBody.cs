@@ -37,6 +37,30 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("StaticPriceInfo")]
+        [Validation(Required=false)]
+        public CheckDomainResponseBodyStaticPriceInfo StaticPriceInfo { get; set; }
+        public class CheckDomainResponseBodyStaticPriceInfo : TeaModel {
+            [NameInMap("PriceInfo")]
+            [Validation(Required=false)]
+            public List<CheckDomainResponseBodyStaticPriceInfoPriceInfo> PriceInfo { get; set; }
+            public class CheckDomainResponseBodyStaticPriceInfoPriceInfo : TeaModel {
+                [NameInMap("action")]
+                [Validation(Required=false)]
+                public string Action { get; set; }
+
+                [NameInMap("money")]
+                [Validation(Required=false)]
+                public double? Money { get; set; }
+
+                [NameInMap("period")]
+                [Validation(Required=false)]
+                public long? Period { get; set; }
+
+            }
+
+        }
+
     }
 
 }

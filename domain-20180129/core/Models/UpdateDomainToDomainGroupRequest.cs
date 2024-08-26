@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class UpdateDomainToDomainGroupRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DataSource")]
         [Validation(Required=false)]
         public int? DataSource { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainGroupId")]
         [Validation(Required=false)]
         public long? DomainGroupId { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Replace")]
         [Validation(Required=false)]
         public bool? Replace { get; set; }

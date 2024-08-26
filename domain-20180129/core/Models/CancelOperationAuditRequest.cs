@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class CancelOperationAuditRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuditRecordId")]
         [Validation(Required=false)]
         public long? AuditRecordId { get; set; }

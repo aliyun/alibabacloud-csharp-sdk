@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
     public class QueryDomainByDomainNameRequest : TeaModel {
         /// <summary>
         /// The domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

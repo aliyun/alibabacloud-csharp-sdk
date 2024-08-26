@@ -8,21 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
-    public class CancelTaskRequest : TeaModel {
-        [NameInMap("Lang")]
+    public class SaveSingleTaskForReserveDropListDomainResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string RequestId { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("TaskNo")]
         [Validation(Required=false)]
         public string TaskNo { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
     }
 

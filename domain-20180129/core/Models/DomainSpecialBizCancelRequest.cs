@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
     public class DomainSpecialBizCancelRequest : TeaModel {
         /// <summary>
         /// The business ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]

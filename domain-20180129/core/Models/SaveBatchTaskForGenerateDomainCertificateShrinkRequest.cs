@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
     public class SaveBatchTaskForGenerateDomainCertificateShrinkRequest : TeaModel {
         /// <summary>
         /// The domain names.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]

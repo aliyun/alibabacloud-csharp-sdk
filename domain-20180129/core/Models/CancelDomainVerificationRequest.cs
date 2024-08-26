@@ -14,13 +14,17 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         /// 
         /// *   **DOMAINAUDIT**: review a domain name review.
         /// *   **AUDITCONTACT**: review a contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
         public string ActionType { get; set; }
 
         /// <summary>
-        /// Thee instance ID of the domain name. You can call the [QueryDomainList](~~67712~~) operation to query the instance ID.
+        /// Thee instance ID of the domain name. You can call the [QueryDomainList](https://help.aliyun.com/document_detail/67712.html) operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

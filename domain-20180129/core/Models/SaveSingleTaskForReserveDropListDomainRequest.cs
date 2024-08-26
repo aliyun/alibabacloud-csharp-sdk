@@ -8,28 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
-    public class QueryFailReasonForDomainRealNameVerificationRequest : TeaModel {
+    public class SaveSingleTaskForReserveDropListDomainRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ContactTemplateId")]
+        [Validation(Required=false)]
+        public string ContactTemplateId { get; set; }
+
+        [NameInMap("Dns1")]
+        [Validation(Required=false)]
+        public string Dns1 { get; set; }
+
+        [NameInMap("Dns2")]
+        [Validation(Required=false)]
+        public string Dns2 { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("RealNameVerificationAction")]
-        [Validation(Required=false)]
-        public string RealNameVerificationAction { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
     }
 

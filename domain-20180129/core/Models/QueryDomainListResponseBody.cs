@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string Ccompany { get; set; }
 
+                [NameInMap("ChgholderStatus")]
+                [Validation(Required=false)]
+                public string ChgholderStatus { get; set; }
+
                 /// <summary>
                 /// The state of real-name verification for the domain name. Valid values:
                 /// 

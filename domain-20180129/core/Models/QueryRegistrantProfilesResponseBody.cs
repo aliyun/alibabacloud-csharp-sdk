@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string RegistrantType { get; set; }
 
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
+                public string Remark { get; set; }
+
                 [NameInMap("TelArea")]
                 [Validation(Required=false)]
                 public string TelArea { get; set; }

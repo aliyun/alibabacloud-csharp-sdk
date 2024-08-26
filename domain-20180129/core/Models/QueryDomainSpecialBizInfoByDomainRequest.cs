@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
     public class QueryDomainSpecialBizInfoByDomainRequest : TeaModel {
         /// <summary>
         /// The business type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
         /// <summary>
         /// The domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
