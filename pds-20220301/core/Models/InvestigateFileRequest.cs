@@ -32,32 +32,6 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         }
 
-        [NameInMap("policy")]
-        [Validation(Required=false)]
-        public InvestigateFileRequestPolicy Policy { get; set; }
-        public class InvestigateFileRequestPolicy : TeaModel {
-            [NameInMap("first_product_name")]
-            [Validation(Required=false)]
-            public string FirstProductName { get; set; }
-
-            [NameInMap("mtee_code")]
-            [Validation(Required=false)]
-            public string MteeCode { get; set; }
-
-            [NameInMap("provider")]
-            [Validation(Required=false)]
-            public string Provider { get; set; }
-
-        }
-
-        [NameInMap("recursive")]
-        [Validation(Required=false)]
-        public bool? Recursive { get; set; }
-
-        [NameInMap("user_data")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
-
     }
 
 }

@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         }
 
+        [NameInMap("master_url")]
+        [Validation(Required=false)]
+        public string MasterUrl { get; set; }
+
         [NameInMap("meta")]
         [Validation(Required=false)]
         public VideoPreviewPlayInfoMeta Meta { get; set; }

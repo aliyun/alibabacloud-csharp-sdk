@@ -6896,6 +6896,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["get_without_url"] = request.GetWithoutUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReTranscode))
+            {
+                body["re_transcode"] = request.ReTranscode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
             {
                 body["share_id"] = request.ShareId;
@@ -6961,6 +6965,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetWithoutUrl))
             {
                 body["get_without_url"] = request.GetWithoutUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReTranscode))
+            {
+                body["re_transcode"] = request.ReTranscode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
             {
@@ -7430,18 +7438,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["drive_file_ids"] = request.DriveFileIds;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
-            {
-                body["policy"] = request.Policy;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recursive))
-            {
-                body["recursive"] = request.Recursive;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
-            {
-                body["user_data"] = request.UserData;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7477,18 +7473,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveFileIds))
             {
                 body["drive_file_ids"] = request.DriveFileIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
-            {
-                body["policy"] = request.Policy;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recursive))
-            {
-                body["recursive"] = request.Recursive;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
-            {
-                body["user_data"] = request.UserData;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

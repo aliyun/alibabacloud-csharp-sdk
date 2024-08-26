@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
+        [NameInMap("drive_name")]
+        [Validation(Required=false)]
+        public string DriveName { get; set; }
+
         [NameInMap("file_category")]
         [Validation(Required=false)]
         public string FileCategory { get; set; }
@@ -36,6 +40,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("file_image_time")]
         [Validation(Required=false)]
         public long? FileImageTime { get; set; }
+
+        [NameInMap("file_last_modifier_id")]
+        [Validation(Required=false)]
+        public string FileLastModifierId { get; set; }
+
+        [NameInMap("file_last_modifier_type")]
+        [Validation(Required=false)]
+        public string FileLastModifierType { get; set; }
 
         [NameInMap("file_name")]
         [Validation(Required=false)]

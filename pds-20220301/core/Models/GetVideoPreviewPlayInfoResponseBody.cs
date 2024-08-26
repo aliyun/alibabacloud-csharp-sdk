@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetVideoPreviewPlayInfoResponseBody : TeaModel {
-        [NameInMap("code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         /// <summary>
         /// The domain ID.
         /// </summary>
@@ -33,14 +29,6 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }
-
-        [NameInMap("master_url")]
-        [Validation(Required=false)]
-        public string MasterUrl { get; set; }
-
-        [NameInMap("message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
         /// <summary>
         /// The share ID.
