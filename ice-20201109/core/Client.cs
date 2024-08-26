@@ -20710,6 +20710,126 @@ namespace AlibabaCloud.SDK.ICE20201109
         }
 
         /**
+         * @summary 发起体育集锦任务
+         *
+         * @param request SubmitSportsHighlightsJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitSportsHighlightsJobResponse
+         */
+        public SubmitSportsHighlightsJobResponse SubmitSportsHighlightsJobWithOptions(SubmitSportsHighlightsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSportsHighlightsJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSportsHighlightsJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 发起体育集锦任务
+         *
+         * @param request SubmitSportsHighlightsJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitSportsHighlightsJobResponse
+         */
+        public async Task<SubmitSportsHighlightsJobResponse> SubmitSportsHighlightsJobWithOptionsAsync(SubmitSportsHighlightsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSportsHighlightsJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSportsHighlightsJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 发起体育集锦任务
+         *
+         * @param request SubmitSportsHighlightsJobRequest
+         * @return SubmitSportsHighlightsJobResponse
+         */
+        public SubmitSportsHighlightsJobResponse SubmitSportsHighlightsJob(SubmitSportsHighlightsJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitSportsHighlightsJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 发起体育集锦任务
+         *
+         * @param request SubmitSportsHighlightsJobRequest
+         * @return SubmitSportsHighlightsJobResponse
+         */
+        public async Task<SubmitSportsHighlightsJobResponse> SubmitSportsHighlightsJobAsync(SubmitSportsHighlightsJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitSportsHighlightsJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 提交标准版人声克隆训练任务
          *
          * @param request SubmitStandardCustomizedVoiceJobRequest
