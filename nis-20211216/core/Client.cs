@@ -686,12 +686,759 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @summary 删除报告
+         *
+         * @param request DeleteNisInspectionReportRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNisInspectionReportResponse
+         */
+        public DeleteNisInspectionReportResponse DeleteNisInspectionReportWithOptions(DeleteNisInspectionReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNisInspectionReport",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNisInspectionReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除报告
+         *
+         * @param request DeleteNisInspectionReportRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNisInspectionReportResponse
+         */
+        public async Task<DeleteNisInspectionReportResponse> DeleteNisInspectionReportWithOptionsAsync(DeleteNisInspectionReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNisInspectionReport",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNisInspectionReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除报告
+         *
+         * @param request DeleteNisInspectionReportRequest
+         * @return DeleteNisInspectionReportResponse
+         */
+        public DeleteNisInspectionReportResponse DeleteNisInspectionReport(DeleteNisInspectionReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNisInspectionReportWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除报告
+         *
+         * @param request DeleteNisInspectionReportRequest
+         * @return DeleteNisInspectionReportResponse
+         */
+        public async Task<DeleteNisInspectionReportResponse> DeleteNisInspectionReportAsync(DeleteNisInspectionReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNisInspectionReportWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 删除巡检任务
+         *
+         * @param request DeleteNisInspectionTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNisInspectionTaskResponse
+         */
+        public DeleteNisInspectionTaskResponse DeleteNisInspectionTaskWithOptions(DeleteNisInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNisInspectionTask",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNisInspectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除巡检任务
+         *
+         * @param request DeleteNisInspectionTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNisInspectionTaskResponse
+         */
+        public async Task<DeleteNisInspectionTaskResponse> DeleteNisInspectionTaskWithOptionsAsync(DeleteNisInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNisInspectionTask",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNisInspectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除巡检任务
+         *
+         * @param request DeleteNisInspectionTaskRequest
+         * @return DeleteNisInspectionTaskResponse
+         */
+        public DeleteNisInspectionTaskResponse DeleteNisInspectionTask(DeleteNisInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNisInspectionTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除巡检任务
+         *
+         * @param request DeleteNisInspectionTaskRequest
+         * @return DeleteNisInspectionTaskResponse
+         */
+        public async Task<DeleteNisInspectionTaskResponse> DeleteNisInspectionTaskAsync(DeleteNisInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNisInspectionTaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 受影响资源列表
+         *
+         * @param request DescribeNisInspectionRecommendationResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionRecommendationResourcesResponse
+         */
+        public DescribeNisInspectionRecommendationResourcesResponse DescribeNisInspectionRecommendationResourcesWithOptions(DescribeNisInspectionRecommendationResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendationCode))
+            {
+                query["RecommendationCode"] = request.RecommendationCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionRecommendationResources",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionRecommendationResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 受影响资源列表
+         *
+         * @param request DescribeNisInspectionRecommendationResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionRecommendationResourcesResponse
+         */
+        public async Task<DescribeNisInspectionRecommendationResourcesResponse> DescribeNisInspectionRecommendationResourcesWithOptionsAsync(DescribeNisInspectionRecommendationResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendationCode))
+            {
+                query["RecommendationCode"] = request.RecommendationCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionRecommendationResources",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionRecommendationResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 受影响资源列表
+         *
+         * @param request DescribeNisInspectionRecommendationResourcesRequest
+         * @return DescribeNisInspectionRecommendationResourcesResponse
+         */
+        public DescribeNisInspectionRecommendationResourcesResponse DescribeNisInspectionRecommendationResources(DescribeNisInspectionRecommendationResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNisInspectionRecommendationResourcesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 受影响资源列表
+         *
+         * @param request DescribeNisInspectionRecommendationResourcesRequest
+         * @return DescribeNisInspectionRecommendationResourcesResponse
+         */
+        public async Task<DescribeNisInspectionRecommendationResourcesResponse> DescribeNisInspectionRecommendationResourcesAsync(DescribeNisInspectionRecommendationResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNisInspectionRecommendationResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 报告巡检项列表
+         *
+         * @param tmpReq DescribeNisInspectionReportCheckItemsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionReportCheckItemsResponse
+         */
+        public DescribeNisInspectionReportCheckItemsResponse DescribeNisInspectionReportCheckItemsWithOptions(DescribeNisInspectionReportCheckItemsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeNisInspectionReportCheckItemsShrinkRequest request = new DescribeNisInspectionReportCheckItemsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceType))
+            {
+                request.ResourceTypeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceType, "ResourceType", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RiskLevel))
+            {
+                request.RiskLevelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RiskLevel, "RiskLevel", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryCode))
+            {
+                query["CategoryCode"] = request.CategoryCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeShrink))
+            {
+                query["ResourceType"] = request.ResourceTypeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevelShrink))
+            {
+                query["RiskLevel"] = request.RiskLevelShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionReportCheckItems",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionReportCheckItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 报告巡检项列表
+         *
+         * @param tmpReq DescribeNisInspectionReportCheckItemsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionReportCheckItemsResponse
+         */
+        public async Task<DescribeNisInspectionReportCheckItemsResponse> DescribeNisInspectionReportCheckItemsWithOptionsAsync(DescribeNisInspectionReportCheckItemsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeNisInspectionReportCheckItemsShrinkRequest request = new DescribeNisInspectionReportCheckItemsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceType))
+            {
+                request.ResourceTypeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceType, "ResourceType", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RiskLevel))
+            {
+                request.RiskLevelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RiskLevel, "RiskLevel", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryCode))
+            {
+                query["CategoryCode"] = request.CategoryCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeShrink))
+            {
+                query["ResourceType"] = request.ResourceTypeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevelShrink))
+            {
+                query["RiskLevel"] = request.RiskLevelShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionReportCheckItems",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionReportCheckItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 报告巡检项列表
+         *
+         * @param request DescribeNisInspectionReportCheckItemsRequest
+         * @return DescribeNisInspectionReportCheckItemsResponse
+         */
+        public DescribeNisInspectionReportCheckItemsResponse DescribeNisInspectionReportCheckItems(DescribeNisInspectionReportCheckItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNisInspectionReportCheckItemsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 报告巡检项列表
+         *
+         * @param request DescribeNisInspectionReportCheckItemsRequest
+         * @return DescribeNisInspectionReportCheckItemsResponse
+         */
+        public async Task<DescribeNisInspectionReportCheckItemsResponse> DescribeNisInspectionReportCheckItemsAsync(DescribeNisInspectionReportCheckItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNisInspectionReportCheckItemsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询报告状态
+         *
+         * @param request DescribeNisInspectionReportStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionReportStatusResponse
+         */
+        public DescribeNisInspectionReportStatusResponse DescribeNisInspectionReportStatusWithOptions(DescribeNisInspectionReportStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionReportStatus",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionReportStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询报告状态
+         *
+         * @param request DescribeNisInspectionReportStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionReportStatusResponse
+         */
+        public async Task<DescribeNisInspectionReportStatusResponse> DescribeNisInspectionReportStatusWithOptionsAsync(DescribeNisInspectionReportStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionReportStatus",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionReportStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询报告状态
+         *
+         * @param request DescribeNisInspectionReportStatusRequest
+         * @return DescribeNisInspectionReportStatusResponse
+         */
+        public DescribeNisInspectionReportStatusResponse DescribeNisInspectionReportStatus(DescribeNisInspectionReportStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNisInspectionReportStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询报告状态
+         *
+         * @param request DescribeNisInspectionReportStatusRequest
+         * @return DescribeNisInspectionReportStatusResponse
+         */
+        public async Task<DescribeNisInspectionReportStatusResponse> DescribeNisInspectionReportStatusAsync(DescribeNisInspectionReportStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNisInspectionReportStatusWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 报告总结信息
+         *
+         * @param request DescribeNisInspectionReportSummaryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionReportSummaryResponse
+         */
+        public DescribeNisInspectionReportSummaryResponse DescribeNisInspectionReportSummaryWithOptions(DescribeNisInspectionReportSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionReportSummary",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionReportSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 报告总结信息
+         *
+         * @param request DescribeNisInspectionReportSummaryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionReportSummaryResponse
+         */
+        public async Task<DescribeNisInspectionReportSummaryResponse> DescribeNisInspectionReportSummaryWithOptionsAsync(DescribeNisInspectionReportSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionReportId))
+            {
+                query["InspectionReportId"] = request.InspectionReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionReportSummary",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionReportSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 报告总结信息
+         *
+         * @param request DescribeNisInspectionReportSummaryRequest
+         * @return DescribeNisInspectionReportSummaryResponse
+         */
+        public DescribeNisInspectionReportSummaryResponse DescribeNisInspectionReportSummary(DescribeNisInspectionReportSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNisInspectionReportSummaryWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 报告总结信息
+         *
+         * @param request DescribeNisInspectionReportSummaryRequest
+         * @return DescribeNisInspectionReportSummaryResponse
+         */
+        public async Task<DescribeNisInspectionReportSummaryResponse> DescribeNisInspectionReportSummaryAsync(DescribeNisInspectionReportSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNisInspectionReportSummaryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询巡检任务
+         *
+         * @param request DescribeNisInspectionTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionTaskResponse
+         */
+        public DescribeNisInspectionTaskResponse DescribeNisInspectionTaskWithOptions(DescribeNisInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionTask",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询巡检任务
+         *
+         * @param request DescribeNisInspectionTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNisInspectionTaskResponse
+         */
+        public async Task<DescribeNisInspectionTaskResponse> DescribeNisInspectionTaskWithOptionsAsync(DescribeNisInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisInspectionTask",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisInspectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询巡检任务
+         *
+         * @param request DescribeNisInspectionTaskRequest
+         * @return DescribeNisInspectionTaskResponse
+         */
+        public DescribeNisInspectionTaskResponse DescribeNisInspectionTask(DescribeNisInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNisInspectionTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询巡检任务
+         *
+         * @param request DescribeNisInspectionTaskRequest
+         * @return DescribeNisInspectionTaskResponse
+         */
+        public async Task<DescribeNisInspectionTaskResponse> DescribeNisInspectionTaskAsync(DescribeNisInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNisInspectionTaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @deprecated OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param tmpReq GetInternetTupleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetInternetTupleResponse
          */
+        // Deprecated
         public GetInternetTupleResponse GetInternetTupleWithOptions(GetInternetTupleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -814,12 +1561,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param tmpReq GetInternetTupleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetInternetTupleResponse
          */
+        // Deprecated
         public async Task<GetInternetTupleResponse> GetInternetTupleWithOptionsAsync(GetInternetTupleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -942,11 +1692,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param request GetInternetTupleRequest
          * @return GetInternetTupleResponse
          */
+        // Deprecated
         public GetInternetTupleResponse GetInternetTuple(GetInternetTupleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -954,11 +1707,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param request GetInternetTupleRequest
          * @return GetInternetTupleResponse
          */
+        // Deprecated
         public async Task<GetInternetTupleResponse> GetInternetTupleAsync(GetInternetTupleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -966,12 +1722,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetNatTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the real-time SNAT performance ranking of a NAT gateway.
          *
          * @param request GetNatTopNRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetNatTopNResponse
          */
+        // Deprecated
         public GetNatTopNResponse GetNatTopNWithOptions(GetNatTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1024,12 +1783,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetNatTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the real-time SNAT performance ranking of a NAT gateway.
          *
          * @param request GetNatTopNRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetNatTopNResponse
          */
+        // Deprecated
         public async Task<GetNatTopNResponse> GetNatTopNWithOptionsAsync(GetNatTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1082,11 +1844,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetNatTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the real-time SNAT performance ranking of a NAT gateway.
          *
          * @param request GetNatTopNRequest
          * @return GetNatTopNResponse
          */
+        // Deprecated
         public GetNatTopNResponse GetNatTopN(GetNatTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1094,11 +1859,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetNatTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the real-time SNAT performance ranking of a NAT gateway.
          *
          * @param request GetNatTopNRequest
          * @return GetNatTopNResponse
          */
+        // Deprecated
         public async Task<GetNatTopNResponse> GetNatTopNAsync(GetNatTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1582,12 +2350,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetTransitRouterFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param tmpReq GetTransitRouterFlowTopNRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetTransitRouterFlowTopNResponse
          */
+        // Deprecated
         public GetTransitRouterFlowTopNResponse GetTransitRouterFlowTopNWithOptions(GetTransitRouterFlowTopNRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1690,12 +2461,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetTransitRouterFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param tmpReq GetTransitRouterFlowTopNRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetTransitRouterFlowTopNResponse
          */
+        // Deprecated
         public async Task<GetTransitRouterFlowTopNResponse> GetTransitRouterFlowTopNWithOptionsAsync(GetTransitRouterFlowTopNRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1798,11 +2572,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetTransitRouterFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param request GetTransitRouterFlowTopNRequest
          * @return GetTransitRouterFlowTopNResponse
          */
+        // Deprecated
         public GetTransitRouterFlowTopNResponse GetTransitRouterFlowTopN(GetTransitRouterFlowTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1810,11 +2587,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetTransitRouterFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param request GetTransitRouterFlowTopNRequest
          * @return GetTransitRouterFlowTopNResponse
          */
+        // Deprecated
         public async Task<GetTransitRouterFlowTopNResponse> GetTransitRouterFlowTopNAsync(GetTransitRouterFlowTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1822,12 +2602,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetVbrFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param tmpReq GetVbrFlowTopNRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetVbrFlowTopNResponse
          */
+        // Deprecated
         public GetVbrFlowTopNResponse GetVbrFlowTopNWithOptions(GetVbrFlowTopNRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1930,12 +2713,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetVbrFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param tmpReq GetVbrFlowTopNRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetVbrFlowTopNResponse
          */
+        // Deprecated
         public async Task<GetVbrFlowTopNResponse> GetVbrFlowTopNWithOptionsAsync(GetVbrFlowTopNRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2038,11 +2824,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetVbrFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param request GetVbrFlowTopNRequest
          * @return GetVbrFlowTopNResponse
          */
+        // Deprecated
         public GetVbrFlowTopNResponse GetVbrFlowTopN(GetVbrFlowTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2050,15 +2839,522 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
+         * @deprecated OpenAPI GetVbrFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
+         *
          * @summary Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.
          *
          * @param request GetVbrFlowTopNRequest
          * @return GetVbrFlowTopNResponse
          */
+        // Deprecated
         public async Task<GetVbrFlowTopNResponse> GetVbrFlowTopNAsync(GetVbrFlowTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetVbrFlowTopNWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 巡检资源类型列表
+         *
+         * @param request ListNisInspectionResourceTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListNisInspectionResourceTypeResponse
+         */
+        public ListNisInspectionResourceTypeResponse ListNisInspectionResourceTypeWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNisInspectionResourceType",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNisInspectionResourceTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 巡检资源类型列表
+         *
+         * @param request ListNisInspectionResourceTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListNisInspectionResourceTypeResponse
+         */
+        public async Task<ListNisInspectionResourceTypeResponse> ListNisInspectionResourceTypeWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNisInspectionResourceType",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNisInspectionResourceTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 巡检资源类型列表
+         *
+         * @return ListNisInspectionResourceTypeResponse
+         */
+        public ListNisInspectionResourceTypeResponse ListNisInspectionResourceType()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNisInspectionResourceTypeWithOptions(runtime);
+        }
+
+        /**
+         * @summary 巡检资源类型列表
+         *
+         * @return ListNisInspectionResourceTypeResponse
+         */
+        public async Task<ListNisInspectionResourceTypeResponse> ListNisInspectionResourceTypeAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNisInspectionResourceTypeWithOptionsAsync(runtime);
+        }
+
+        /**
+         * @summary 查询巡检报告列表
+         *
+         * @param request ListNisInspectionTaskReportsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListNisInspectionTaskReportsResponse
+         */
+        public ListNisInspectionTaskReportsResponse ListNisInspectionTaskReportsWithOptions(ListNisInspectionTaskReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNisInspectionTaskReports",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNisInspectionTaskReportsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询巡检报告列表
+         *
+         * @param request ListNisInspectionTaskReportsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListNisInspectionTaskReportsResponse
+         */
+        public async Task<ListNisInspectionTaskReportsResponse> ListNisInspectionTaskReportsWithOptionsAsync(ListNisInspectionTaskReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNisInspectionTaskReports",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNisInspectionTaskReportsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询巡检报告列表
+         *
+         * @param request ListNisInspectionTaskReportsRequest
+         * @return ListNisInspectionTaskReportsResponse
+         */
+        public ListNisInspectionTaskReportsResponse ListNisInspectionTaskReports(ListNisInspectionTaskReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNisInspectionTaskReportsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询巡检报告列表
+         *
+         * @param request ListNisInspectionTaskReportsRequest
+         * @return ListNisInspectionTaskReportsResponse
+         */
+        public async Task<ListNisInspectionTaskReportsResponse> ListNisInspectionTaskReportsAsync(ListNisInspectionTaskReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNisInspectionTaskReportsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 巡检任务列表
+         *
+         * @param request ListNisInspectionTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListNisInspectionTasksResponse
+         */
+        public ListNisInspectionTasksResponse ListNisInspectionTasksWithOptions(ListNisInspectionTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionName))
+            {
+                query["InspectionName"] = request.InspectionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionProject))
+            {
+                query["InspectionProject"] = request.InspectionProject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNisInspectionTasks",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNisInspectionTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 巡检任务列表
+         *
+         * @param request ListNisInspectionTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListNisInspectionTasksResponse
+         */
+        public async Task<ListNisInspectionTasksResponse> ListNisInspectionTasksWithOptionsAsync(ListNisInspectionTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionName))
+            {
+                query["InspectionName"] = request.InspectionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionProject))
+            {
+                query["InspectionProject"] = request.InspectionProject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNisInspectionTasks",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNisInspectionTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 巡检任务列表
+         *
+         * @param request ListNisInspectionTasksRequest
+         * @return ListNisInspectionTasksResponse
+         */
+        public ListNisInspectionTasksResponse ListNisInspectionTasks(ListNisInspectionTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNisInspectionTasksWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 巡检任务列表
+         *
+         * @param request ListNisInspectionTasksRequest
+         * @return ListNisInspectionTasksResponse
+         */
+        public async Task<ListNisInspectionTasksResponse> ListNisInspectionTasksAsync(ListNisInspectionTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNisInspectionTasksWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 请补充描述开启任务
+         *
+         * @param request StartNisInspectionTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartNisInspectionTaskResponse
+         */
+        public StartNisInspectionTaskResponse StartNisInspectionTaskWithOptions(StartNisInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartNisInspectionTask",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartNisInspectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 请补充描述开启任务
+         *
+         * @param request StartNisInspectionTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartNisInspectionTaskResponse
+         */
+        public async Task<StartNisInspectionTaskResponse> StartNisInspectionTaskWithOptionsAsync(StartNisInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartNisInspectionTask",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartNisInspectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 请补充描述开启任务
+         *
+         * @param request StartNisInspectionTaskRequest
+         * @return StartNisInspectionTaskResponse
+         */
+        public StartNisInspectionTaskResponse StartNisInspectionTask(StartNisInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartNisInspectionTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 请补充描述开启任务
+         *
+         * @param request StartNisInspectionTaskRequest
+         * @return StartNisInspectionTaskResponse
+         */
+        public async Task<StartNisInspectionTaskResponse> StartNisInspectionTaskAsync(StartNisInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartNisInspectionTaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 修改巡检项
+         *
+         * @param request UpdateNisInspectionTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateNisInspectionTaskResponse
+         */
+        public UpdateNisInspectionTaskResponse UpdateNisInspectionTaskWithOptions(UpdateNisInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNisInspectionTask",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNisInspectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改巡检项
+         *
+         * @param request UpdateNisInspectionTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateNisInspectionTaskResponse
+         */
+        public async Task<UpdateNisInspectionTaskResponse> UpdateNisInspectionTaskWithOptionsAsync(UpdateNisInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionTaskId))
+            {
+                query["InspectionTaskId"] = request.InspectionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNisInspectionTask",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNisInspectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改巡检项
+         *
+         * @param request UpdateNisInspectionTaskRequest
+         * @return UpdateNisInspectionTaskResponse
+         */
+        public UpdateNisInspectionTaskResponse UpdateNisInspectionTask(UpdateNisInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateNisInspectionTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改巡检项
+         *
+         * @param request UpdateNisInspectionTaskRequest
+         * @return UpdateNisInspectionTaskResponse
+         */
+        public async Task<UpdateNisInspectionTaskResponse> UpdateNisInspectionTaskAsync(UpdateNisInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateNisInspectionTaskWithOptionsAsync(request, runtime);
         }
 
     }
