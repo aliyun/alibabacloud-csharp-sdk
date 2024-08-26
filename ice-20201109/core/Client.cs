@@ -13354,6 +13354,106 @@ namespace AlibabaCloud.SDK.ICE20201109
         }
 
         /**
+         * @summary 获取搜索库列表
+         *
+         * @param request ListSearchLibRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSearchLibResponse
+         */
+        public ListSearchLibResponse ListSearchLibWithOptions(ListSearchLibRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSearchLib",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSearchLibResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取搜索库列表
+         *
+         * @param request ListSearchLibRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSearchLibResponse
+         */
+        public async Task<ListSearchLibResponse> ListSearchLibWithOptionsAsync(ListSearchLibRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSearchLib",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSearchLibResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取搜索库列表
+         *
+         * @param request ListSearchLibRequest
+         * @return ListSearchLibResponse
+         */
+        public ListSearchLibResponse ListSearchLib(ListSearchLibRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSearchLibWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取搜索库列表
+         *
+         * @param request ListSearchLibRequest
+         * @return ListSearchLibResponse
+         */
+        public async Task<ListSearchLibResponse> ListSearchLibAsync(ListSearchLibRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSearchLibWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary ListSmartJobs
          *
          * @param request ListSmartJobsRequest
@@ -15631,6 +15731,114 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchEditingProjectWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 搜索索引任务重新分析
+         *
+         * @param request SearchIndexJobRerunRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SearchIndexJobRerunResponse
+         */
+        public SearchIndexJobRerunResponse SearchIndexJobRerunWithOptions(SearchIndexJobRerunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
+            {
+                query["MediaIds"] = request.MediaIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
+            {
+                query["SearchLibName"] = request.SearchLibName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
+            {
+                query["Task"] = request.Task;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchIndexJobRerun",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchIndexJobRerunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 搜索索引任务重新分析
+         *
+         * @param request SearchIndexJobRerunRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SearchIndexJobRerunResponse
+         */
+        public async Task<SearchIndexJobRerunResponse> SearchIndexJobRerunWithOptionsAsync(SearchIndexJobRerunRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
+            {
+                query["MediaIds"] = request.MediaIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
+            {
+                query["SearchLibName"] = request.SearchLibName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
+            {
+                query["Task"] = request.Task;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchIndexJobRerun",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchIndexJobRerunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 搜索索引任务重新分析
+         *
+         * @param request SearchIndexJobRerunRequest
+         * @return SearchIndexJobRerunResponse
+         */
+        public SearchIndexJobRerunResponse SearchIndexJobRerun(SearchIndexJobRerunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchIndexJobRerunWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 搜索索引任务重新分析
+         *
+         * @param request SearchIndexJobRerunRequest
+         * @return SearchIndexJobRerunResponse
+         */
+        public async Task<SearchIndexJobRerunResponse> SearchIndexJobRerunAsync(SearchIndexJobRerunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchIndexJobRerunWithOptionsAsync(request, runtime);
         }
 
         /**

@@ -426,6 +426,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
+            [NameInMap("IndexStatusList")]
+            [Validation(Required=false)]
+            public List<SearchMediaResponseBodyMediaInfoListIndexStatusList> IndexStatusList { get; set; }
+            public class SearchMediaResponseBodyMediaInfoListIndexStatusList : TeaModel {
+                [NameInMap("IndexStatus")]
+                [Validation(Required=false)]
+                public string IndexStatus { get; set; }
+
+                [NameInMap("IndexType")]
+                [Validation(Required=false)]
+                public string IndexType { get; set; }
+
+            }
+
             /// <summary>
             /// The basic information about the media asset.
             /// </summary>
