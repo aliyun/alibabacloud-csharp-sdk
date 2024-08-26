@@ -1078,6 +1078,128 @@ namespace AlibabaCloud.SDK.DianJin20240628
         }
 
         /**
+         * @summary 分页查询文档库列表
+         *
+         * @param request GetHistoryListByBizTypeRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetHistoryListByBizTypeResponse
+         */
+        public GetHistoryListByBizTypeResponse GetHistoryListByBizTypeWithOptions(string workspaceId, GetHistoryListByBizTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["bizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["bizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHistoryListByBizType",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/history/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHistoryListByBizTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 分页查询文档库列表
+         *
+         * @param request GetHistoryListByBizTypeRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetHistoryListByBizTypeResponse
+         */
+        public async Task<GetHistoryListByBizTypeResponse> GetHistoryListByBizTypeWithOptionsAsync(string workspaceId, GetHistoryListByBizTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["bizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["bizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHistoryListByBizType",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/history/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHistoryListByBizTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 分页查询文档库列表
+         *
+         * @param request GetHistoryListByBizTypeRequest
+         * @return GetHistoryListByBizTypeResponse
+         */
+        public GetHistoryListByBizTypeResponse GetHistoryListByBizType(string workspaceId, GetHistoryListByBizTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetHistoryListByBizTypeWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 分页查询文档库列表
+         *
+         * @param request GetHistoryListByBizTypeRequest
+         * @return GetHistoryListByBizTypeResponse
+         */
+        public async Task<GetHistoryListByBizTypeResponse> GetHistoryListByBizTypeAsync(string workspaceId, GetHistoryListByBizTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetHistoryListByBizTypeWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 获取文档库配置详情
          *
          * @param request GetLibraryRequest
@@ -1955,6 +2077,240 @@ namespace AlibabaCloud.SDK.DianJin20240628
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RunChatResultGenerationWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取生成式对话结果
+         *
+         * @param request RunLibraryChatGenerationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunLibraryChatGenerationResponse
+         */
+        public RunLibraryChatGenerationResponse RunLibraryChatGenerationWithOptions(string workspaceId, RunLibraryChatGenerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocIdList))
+            {
+                body["docIdList"] = request.DocIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFollowUp))
+            {
+                body["enableFollowUp"] = request.EnableFollowUp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMultiQuery))
+            {
+                body["enableMultiQuery"] = request.EnableMultiQuery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableOpenQa))
+            {
+                body["enableOpenQa"] = request.EnableOpenQa;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FollowUpLlm))
+            {
+                body["followUpLlm"] = request.FollowUpLlm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LibraryId))
+            {
+                body["libraryId"] = request.LibraryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmType))
+            {
+                body["llmType"] = request.LlmType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiQueryLlm))
+            {
+                body["multiQueryLlm"] = request.MultiQueryLlm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryCriteria))
+            {
+                body["queryCriteria"] = request.QueryCriteria;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankType))
+            {
+                body["rerankType"] = request.RerankType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubQueryList))
+            {
+                body["subQueryList"] = request.SubQueryList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextSearchParameter))
+            {
+                body["textSearchParameter"] = request.TextSearchParameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                body["topK"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectorSearchParameter))
+            {
+                body["vectorSearchParameter"] = request.VectorSearchParameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithDocumentReference))
+            {
+                body["withDocumentReference"] = request.WithDocumentReference;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunLibraryChatGeneration",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/run/library/chat/generation",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunLibraryChatGenerationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取生成式对话结果
+         *
+         * @param request RunLibraryChatGenerationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunLibraryChatGenerationResponse
+         */
+        public async Task<RunLibraryChatGenerationResponse> RunLibraryChatGenerationWithOptionsAsync(string workspaceId, RunLibraryChatGenerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocIdList))
+            {
+                body["docIdList"] = request.DocIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFollowUp))
+            {
+                body["enableFollowUp"] = request.EnableFollowUp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMultiQuery))
+            {
+                body["enableMultiQuery"] = request.EnableMultiQuery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableOpenQa))
+            {
+                body["enableOpenQa"] = request.EnableOpenQa;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FollowUpLlm))
+            {
+                body["followUpLlm"] = request.FollowUpLlm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LibraryId))
+            {
+                body["libraryId"] = request.LibraryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmType))
+            {
+                body["llmType"] = request.LlmType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiQueryLlm))
+            {
+                body["multiQueryLlm"] = request.MultiQueryLlm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryCriteria))
+            {
+                body["queryCriteria"] = request.QueryCriteria;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankType))
+            {
+                body["rerankType"] = request.RerankType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubQueryList))
+            {
+                body["subQueryList"] = request.SubQueryList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextSearchParameter))
+            {
+                body["textSearchParameter"] = request.TextSearchParameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                body["topK"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectorSearchParameter))
+            {
+                body["vectorSearchParameter"] = request.VectorSearchParameter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithDocumentReference))
+            {
+                body["withDocumentReference"] = request.WithDocumentReference;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunLibraryChatGeneration",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/run/library/chat/generation",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunLibraryChatGenerationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取生成式对话结果
+         *
+         * @param request RunLibraryChatGenerationRequest
+         * @return RunLibraryChatGenerationResponse
+         */
+        public RunLibraryChatGenerationResponse RunLibraryChatGeneration(string workspaceId, RunLibraryChatGenerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunLibraryChatGenerationWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取生成式对话结果
+         *
+         * @param request RunLibraryChatGenerationRequest
+         * @return RunLibraryChatGenerationResponse
+         */
+        public async Task<RunLibraryChatGenerationResponse> RunLibraryChatGenerationAsync(string workspaceId, RunLibraryChatGenerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunLibraryChatGenerationWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /**
