@@ -2,6 +2,10 @@
 - Update API ModifyApiGroup: add param FilterAppCodeForBackend.
 
 
+2024-08-27 Version: 4.4.3
+- Update API ModifyApiGroup: add param FilterAppCodeForBackend.
+
+
 2024-08-05 Version: 4.4.2
 - Generated csharp 2016-07-14 for CloudAPI.
 
