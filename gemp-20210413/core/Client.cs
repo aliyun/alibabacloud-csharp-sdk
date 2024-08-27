@@ -10110,6 +10110,14 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["endTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceGroupName))
             {
                 body["serviceGroupName"] = request.ServiceGroupName;
@@ -10153,6 +10161,14 @@ namespace AlibabaCloud.SDK.GEMP20210413
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceGroupName))
             {

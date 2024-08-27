@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("pageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
         [NameInMap("serviceGroupName")]
         [Validation(Required=false)]
         public string ServiceGroupName { get; set; }

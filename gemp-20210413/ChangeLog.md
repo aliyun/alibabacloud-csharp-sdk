@@ -1,3 +1,7 @@
+2024-08-27 Version: 1.0.15
+- Update API ListDataReportForServiceGroup: update param body.
+
+
 2024-08-15 Version: 1.0.14
 - Update API GeneratePictureLink: update response param.
 - Update API GeneratePictureUploadSign: update response param.
