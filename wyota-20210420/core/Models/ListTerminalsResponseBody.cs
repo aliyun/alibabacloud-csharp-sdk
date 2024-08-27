@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             [Validation(Required=false)]
             public string LocationInfo { get; set; }
 
+            [NameInMap("ManageTime")]
+            [Validation(Required=false)]
+            public string ManageTime { get; set; }
+
             [NameInMap("Model")]
             [Validation(Required=false)]
             public string Model { get; set; }
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             [NameInMap("SerialNumber")]
             [Validation(Required=false)]
             public string SerialNumber { get; set; }
+
+            [NameInMap("SetPasswordFreeLoginUserTime")]
+            [Validation(Required=false)]
+            public string SetPasswordFreeLoginUserTime { get; set; }
 
             [NameInMap("TerminalGroupId")]
             [Validation(Required=false)]
