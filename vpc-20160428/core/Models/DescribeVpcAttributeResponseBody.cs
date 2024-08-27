@@ -191,6 +191,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string DhcpOptionsSetStatus { get; set; }
 
+        [NameInMap("DnsHostnameStatus")]
+        [Validation(Required=false)]
+        public string DnsHostnameStatus { get; set; }
+
         /// <summary>
         /// Indicates whether the VPC enables IPv6 .
         /// - true

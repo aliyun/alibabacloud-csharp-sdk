@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("EnableDnsHostname")]
+        [Validation(Required=false)]
+        public bool? EnableDnsHostname { get; set; }
+
         /// <summary>
         /// Specifies whether to enable IPv6. Valid values:
         /// 

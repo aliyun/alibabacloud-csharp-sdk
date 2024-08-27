@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EnableDnsHostname")]
+        [Validation(Required=false)]
+        public bool? EnableDnsHostname { get; set; }
+
         /// <summary>
         /// Specifies whether to enable IPv6 CIDR blocks. Valid values:
         /// 

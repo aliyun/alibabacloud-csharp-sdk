@@ -17354,6 +17354,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDnsHostname))
+            {
+                query["EnableDnsHostname"] = request.EnableDnsHostname;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIpv6))
             {
                 query["EnableIpv6"] = request.EnableIpv6;
@@ -17466,6 +17470,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDnsHostname))
+            {
+                query["EnableDnsHostname"] = request.EnableDnsHostname;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIpv6))
             {
@@ -57858,6 +57866,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDnsHostname))
+            {
+                query["EnableDnsHostname"] = request.EnableDnsHostname;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIPv6))
             {
                 query["EnableIPv6"] = request.EnableIPv6;
@@ -57938,6 +57950,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDnsHostname))
+            {
+                query["EnableDnsHostname"] = request.EnableDnsHostname;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIPv6))
             {

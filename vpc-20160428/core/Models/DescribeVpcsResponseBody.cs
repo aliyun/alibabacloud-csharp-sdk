@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string DhcpOptionsSetStatus { get; set; }
 
+                [NameInMap("DnsHostnameStatus")]
+                [Validation(Required=false)]
+                public string DnsHostnameStatus { get; set; }
+
                 [NameInMap("EnabledIpv6")]
                 [Validation(Required=false)]
                 public bool? EnabledIpv6 { get; set; }

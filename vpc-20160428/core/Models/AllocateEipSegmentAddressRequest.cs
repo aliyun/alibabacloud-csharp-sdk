@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EipMask { get; set; }
 
         /// <summary>
-        /// The metering method of the contiguous EIP group. Valid values:
+        /// The metering method of contiguous EIPs. Valid values:
         /// 
         /// *   **PayByBandwidth** (default)
         /// *   **PayByTraffic**
