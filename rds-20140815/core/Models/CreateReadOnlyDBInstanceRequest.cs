@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReadOnlyDBInstanceRequest : TeaModel {
         /// <summary>
-        /// 是否自动创建代理。取值范围：
+        /// Specifies whether to automatically create database proxies. Valid values:
         /// 
-        /// - **true**：开启自动创建，默认为通用代理。
-        /// 
-        /// - **false**：不开启自动创建。
+        /// *   **true**: enables the feature. By default, general-purpose database proxies are created.
+        /// *   **false**: disables the feature. No database proxies are created.
         /// </summary>
         [NameInMap("AutoCreateProxy")]
         [Validation(Required=false)]

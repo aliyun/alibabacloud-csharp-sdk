@@ -53,12 +53,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// Specifies whether to replace the key. Valid values:
         /// 
-        /// *   **true**: replaces the key.
-        /// *   **false**: does not replace the key.
+        /// *   **true**
+        /// *   **false** (default)
         /// 
-        /// Default value: **false**
-        /// 
-        /// > This parameter is available only when the instance runs PostgreSQL.
+        /// >  This parameter is available for only ApsaraDB RDS for PostgreSQL instances.
         /// </summary>
         [NameInMap("IsRotate")]
         [Validation(Required=false)]

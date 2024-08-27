@@ -6087,6 +6087,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DBInstanceStorageType"] = request.DBInstanceStorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
+            {
+                query["EncryptionKey"] = request.EncryptionKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
@@ -6142,6 +6146,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreType))
             {
                 query["RestoreType"] = request.RestoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleARN))
+            {
+                query["RoleARN"] = request.RoleARN;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
             {
@@ -6248,6 +6256,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DBInstanceStorageType"] = request.DBInstanceStorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
+            {
+                query["EncryptionKey"] = request.EncryptionKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
@@ -6303,6 +6315,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreType))
             {
                 query["RestoreType"] = request.RestoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleARN))
+            {
+                query["RoleARN"] = request.RoleARN;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
             {
@@ -24566,7 +24582,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 事件中心事件统计
+         * @summary Queries event statistics in the event center.
          *
          * @param request DescribeHistoryEventsStatRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24616,7 +24632,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 事件中心事件统计
+         * @summary Queries event statistics in the event center.
          *
          * @param request DescribeHistoryEventsStatRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24666,7 +24682,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 事件中心事件统计
+         * @summary Queries event statistics in the event center.
          *
          * @param request DescribeHistoryEventsStatRequest
          * @return DescribeHistoryEventsStatResponse
@@ -24678,7 +24694,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 事件中心事件统计
+         * @summary Queries event statistics in the event center.
          *
          * @param request DescribeHistoryEventsStatRequest
          * @return DescribeHistoryEventsStatResponse

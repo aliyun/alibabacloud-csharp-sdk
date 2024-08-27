@@ -23,11 +23,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// 是否自动创建代理。取值范围：
+        /// Specifies whether to automatically create a proxy. Valid values:
         /// 
-        /// - **true**：开启自动创建，默认为通用代理。
-        /// 
-        /// - **false**：不开启自动创建。
+        /// *   **true**: automatically creates a proxy. By default, general-purpose proxies are enabled.
+        /// *   **false**: does not automatically create a proxy.
         /// </summary>
         [NameInMap("AutoCreateProxy")]
         [Validation(Required=false)]
@@ -84,7 +83,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// An invalid parameter. You do not need to specify this parameter.
+        /// Specifies whether to enable the I/O burst feature of general ESSDs. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// 
+        /// >  For more information about the I/O burst feature of general ESSDs, see [What are general ESSDs?](https://help.aliyun.com/document_detail/2340501.html)
         /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
@@ -130,7 +134,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// Specifies whether to enable the data archiving feature of general ESSDs. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// 
+        /// >  For more information about the data archiving feature of general ESSDs, see [Use the data archiving feature of general ESSDs](https://help.aliyun.com/document_detail/2701832.html).
         /// </summary>
         [NameInMap("ColdDataEnabled")]
         [Validation(Required=false)]
@@ -215,17 +224,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The storage type of the instance. Valid values:
         /// 
         /// *   **local_ssd**: local SSD. This is the recommended storage type.
+        /// *   **general_essd**: general Enterprise SSD (ESSD). This is the recommended storage type.
+        /// *   **cloud_essd**: PL1 ESSD
+        /// *   **cloud_essd2**: PL2 ESSD
+        /// *   **cloud_essd3**: PL3 ESSD
         /// *   **cloud_ssd**: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.
-        /// *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1).
-        /// *   **cloud_essd2**: ESSD of PL2.
-        /// *   **cloud_essd3**: ESSD of PL3.
         /// 
         /// The default value of this parameter is determined by the instance type specified by the **DBInstanceClass** parameter.
         /// 
         /// *   If the instance type specifies the local SSD storage type, the default value of this parameter is **local_ssd**.
         /// *   If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is **cloud_essd**.
         /// 
-        /// >  Serverless instances use only ESSDs of PL1. If you create a serverless instance, you must set this parameter to **cloud_essd**.
+        /// >  Serverless instances support only PL1 ESSDs and general ESSDs.
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
@@ -369,20 +379,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **VPC**: virtual private cloud (VPC)
         /// *   **Classic**: the classic network
         /// 
-        /// > 
-        /// 
-        /// *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
-        /// 
-        /// *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
-        /// 
-        /// *   If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to **VPC**.
+        /// > *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
+        /// > *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
+        /// > *   If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to **VPC**.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// Specifies whether to enable the I/O acceleration feature of general ESSDs. Valid values:
+        /// 
+        /// *   **1**: enabled
+        /// *   **0**: disabled
+        /// 
+        /// >  For more information about the I/O acceleration feature of general ESSDs, see [Introduction](https://help.aliyun.com/document_detail/2527067.html).
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]

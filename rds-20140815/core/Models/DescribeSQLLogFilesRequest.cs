@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: **1 to 100000**. Default value: **1**.
+        /// The page number. Valid values: **1 to 100000**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid value: **30 to 200**. Default value: **30**.
+        /// The number of entries per page. Valid values: **30 to 200**. Default value: **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

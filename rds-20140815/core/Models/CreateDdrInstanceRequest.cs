@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceStorageType { get; set; }
 
+        [NameInMap("EncryptionKey")]
+        [Validation(Required=false)]
+        public string EncryptionKey { get; set; }
+
         /// <summary>
         /// The database engine of the destination instance. Valid values:
         /// 
@@ -206,6 +210,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RestoreType")]
         [Validation(Required=false)]
         public string RestoreType { get; set; }
+
+        [NameInMap("RoleARN")]
+        [Validation(Required=false)]
+        public string RoleARN { get; set; }
 
         /// <summary>
         /// The IP address whitelist of the destination instance. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add a maximum of 1,000 entries. For more information, see [Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/43185.html). The entries in the IP address whitelist must be in one of the following formats:
