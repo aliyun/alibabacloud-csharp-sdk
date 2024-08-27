@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AclName { get; set; }
 
         /// <summary>
-        /// The IP version of the Classic Load Balancer (CLB) instance with which the ACL is associated. Valid values:
+        /// The IP protocol version of the ACL. Valid values:
         /// 
-        /// *   **ipv4**
-        /// *   **ipv6**
+        /// *   **IPv4**
+        /// *   **IPv6**
         /// </summary>
         [NameInMap("AddressIPVersion")]
         [Validation(Required=false)]

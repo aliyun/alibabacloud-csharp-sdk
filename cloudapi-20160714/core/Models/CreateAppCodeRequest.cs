@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateAppCodeRequest : TeaModel {
+        /// <summary>
+        /// The application AppCode.
+        /// </summary>
         [NameInMap("AppCode")]
         [Validation(Required=false)]
         public string AppCode { get; set; }
 
         /// <summary>
+        /// The application ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]

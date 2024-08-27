@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The definition of the model description.
+                /// The description of the model definition.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ModelRef { get; set; }
 
                 /// <summary>
-                /// The last modification time of the model.
+                /// The time when the model was last modified.
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string Schema { get; set; }
 
+                /// <summary>
+                /// The tags of the model.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeModelsResponseBodyModelDetailsModelDetailTags Tags { get; set; }
@@ -84,10 +87,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     [Validation(Required=false)]
                     public List<DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo> TagInfo { get; set; }
                     public class DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo : TeaModel {
+                        /// <summary>
+                        /// The tag key.
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// The tag value.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -101,21 +110,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number of the page to return.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

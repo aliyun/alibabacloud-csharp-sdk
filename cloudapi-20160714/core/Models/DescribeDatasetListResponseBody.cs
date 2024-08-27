@@ -56,21 +56,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// The tags of the dataset.
+            /// 标签
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeDatasetListResponseBodyDatasetInfoListTags> Tags { get; set; }
             public class DescribeDatasetListResponseBodyDatasetInfoListTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// 标签的键
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// 标签值
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

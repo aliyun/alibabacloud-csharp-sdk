@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry> AclEntry { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry : TeaModel {
                 /// <summary>
-                /// The description of an entry.
+                /// The entry description.
                 /// </summary>
                 [NameInMap("AclEntryComment")]
                 [Validation(Required=false)]
                 public string AclEntryComment { get; set; }
 
                 /// <summary>
-                /// The entries of the access control policy.
+                /// The ACL entry.
                 /// </summary>
                 [NameInMap("AclEntryIp")]
                 [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AclName { get; set; }
 
         /// <summary>
-        /// The IP version. Valid values: **ipv4** and **ipv6**.
+        /// The IP protocol version. Valid values: **ipv4** and **ipv6**.
         /// </summary>
         [NameInMap("AddressIPVersion")]
         [Validation(Required=false)]

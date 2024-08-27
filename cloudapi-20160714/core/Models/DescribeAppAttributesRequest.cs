@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public bool? EnableTagAuth { get; set; }
 
         /// <summary>
-        /// The extended information.
+        /// 扩展信息
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
@@ -87,9 +87,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public List<DescribeAppAttributesRequestTag> Tag { get; set; }
         public class DescribeAppAttributesRequestTag : TeaModel {
             /// <summary>
-            /// The value of tag N.
+            /// The key of the tag.
             /// 
-            /// Valid values of n: `[1, 20]`.
+            /// N can be an integer from 1 to 20.``
             /// 
             /// This parameter is required.
             /// </summary>
@@ -98,9 +98,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The key of tag N.
+            /// The key of the tag.
             /// 
-            /// Valid values of n: `[1, 20]`.
+            /// N can be an integer from 1 to 20.``
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

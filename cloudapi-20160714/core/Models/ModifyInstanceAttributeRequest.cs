@@ -48,22 +48,37 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string MaintainStartTime { get; set; }
 
+        /// <summary>
+        /// The information about the CIDR block that API Gateway can use to access the virtual private cloud (VPC) of the backend service.
+        /// </summary>
         [NameInMap("ToConnectVpcIpBlock")]
         [Validation(Required=false)]
         public ModifyInstanceAttributeRequestToConnectVpcIpBlock ToConnectVpcIpBlock { get; set; }
         public class ModifyInstanceAttributeRequestToConnectVpcIpBlock : TeaModel {
+            /// <summary>
+            /// The CIDR block of the VSwitch.
+            /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
+            /// <summary>
+            /// Specifies whether the CIDR block is a custom CIDR block.
+            /// </summary>
             [NameInMap("Customized")]
             [Validation(Required=false)]
             public bool? Customized { get; set; }
 
+            /// <summary>
+            /// The vSwitch ID.
+            /// </summary>
             [NameInMap("VswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
 
+            /// <summary>
+            /// The zone ID.
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }

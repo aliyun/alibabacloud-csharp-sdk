@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateAccessControlListResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the access control policy.
+        /// The ACL ID.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]

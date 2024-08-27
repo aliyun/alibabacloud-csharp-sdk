@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The HTTP request method of the API.
+                /// The HTTP method of the API.
                 /// </summary>
                 [NameInMap("Method")]
                 [Validation(Required=false)]
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// Environmental alias.
+                /// The environment alias.
                 /// </summary>
                 [NameInMap("StageAlias")]
                 [Validation(Required=false)]
                 public string StageAlias { get; set; }
 
                 /// <summary>
-                /// The environment.
+                /// The environment name.
                 /// </summary>
                 [NameInMap("StageName")]
                 [Validation(Required=false)]

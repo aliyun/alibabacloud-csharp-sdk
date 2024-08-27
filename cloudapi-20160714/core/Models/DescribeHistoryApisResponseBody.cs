@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeHistoryApisResponseBody : TeaModel {
         /// <summary>
-        /// The returned API information. It is an array consisting of ApiHisItem data.
+        /// The returned API information. It is an array consisting of ApiHisItems.
         /// </summary>
         [NameInMap("ApiHisItems")]
         [Validation(Required=false)]
@@ -21,42 +21,42 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeHistoryApisResponseBodyApiHisItemsApiHisItem> ApiHisItem { get; set; }
             public class DescribeHistoryApisResponseBodyApiHisItemsApiHisItem : TeaModel {
                 /// <summary>
-                /// The ID of the API.
+                /// The API ID.
                 /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// The name of the API.
+                /// The API name.
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
                 /// <summary>
-                /// The publising time (UTC) of the API.
+                /// The time when the API was published. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("DeployedTime")]
                 [Validation(Required=false)]
                 public string DeployedTime { get; set; }
 
                 /// <summary>
-                /// The description of the API.
+                /// The API description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the API group.
+                /// The API group ID.
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The name of the group to which the API belongs.
+                /// The name of the API group to which the API belongs.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
@@ -70,24 +70,24 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string HistoryVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// Environmental alias
+                /// The environment alias.
                 /// </summary>
                 [NameInMap("StageAlias")]
                 [Validation(Required=false)]
                 public string StageAlias { get; set; }
 
                 /// <summary>
-                /// The name of the runtime environment. Valid values:
+                /// The environment name. Valid values:
                 /// 
                 /// *   **RELEASE**
-                /// *   **TEST.
+                /// *   **TEST**
                 /// </summary>
                 [NameInMap("StageName")]
                 [Validation(Required=false)]

@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The description of the error code.
+                /// The error description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The returned API frontend definition information. It is an array consisting of RequestConfig data.
+        /// The returned API frontend definition. It is an array consisting of RequestConfig data.
         /// </summary>
         [NameInMap("RequestConfig")]
         [Validation(Required=false)]
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DemoValue { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// The parameter description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DocShow { get; set; }
 
                 /// <summary>
-                /// The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
+                /// The hash values that are supported when **ParameterType** is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
                 /// </summary>
                 [NameInMap("EnumValue")]
                 [Validation(Required=false)]
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ParameterType { get; set; }
 
                 /// <summary>
-                /// The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.
+                /// The regular expression that is used for parameter validation when **ParameterType** is set to String.
                 /// </summary>
                 [NameInMap("RegularExpression")]
                 [Validation(Required=false)]

@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiHistoryResponseBodyConstantParametersConstantParameter> ConstantParameter { get; set; }
             public class DescribeApiHistoryResponseBodyConstantParametersConstantParameter : TeaModel {
                 /// <summary>
-                /// The constant value.
+                /// The value of the constant parameter.
                 /// </summary>
                 [NameInMap("ConstantValue")]
                 [Validation(Required=false)]
                 public string ConstantValue { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// The parameter description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The name of the backend service parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
@@ -150,14 +150,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiHistoryResponseBodyCustomSystemParametersCustomSystemParameter> CustomSystemParameter { get; set; }
             public class DescribeApiHistoryResponseBodyCustomSystemParametersCustomSystemParameter : TeaModel {
                 /// <summary>
-                /// Example
+                /// The sample value.
                 /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
                 /// <summary>
-                /// The description of the custom system parameter.
+                /// The parameter description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The name of the custom system parameter.
+                /// The parameter name.
                 /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// The name of the corresponding backend parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
@@ -224,21 +224,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiHistoryResponseBodyErrorCodeSamplesErrorCodeSample> ErrorCodeSample { get; set; }
             public class DescribeApiHistoryResponseBodyErrorCodeSamplesErrorCodeSample : TeaModel {
                 /// <summary>
-                /// The error code.
+                /// The returned error code.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// The error description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The error message.
+                /// The returned error message.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Configuration items of API requests sent by the consumer to API Gateway.
+        /// The configuration items of API requests sent by the consumer to API Gateway.
         /// 
         /// For more information, see [RequestConfig](https://help.aliyun.com/document_detail/43985.html).
         /// </summary>
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiHistoryResponseBodyRequestParametersRequestParameter> RequestParameter { get; set; }
             public class DescribeApiHistoryResponseBodyRequestParametersRequestParameter : TeaModel {
                 /// <summary>
-                /// The name of the API parameter.
+                /// The name of the parameter in the API request.
                 /// </summary>
                 [NameInMap("ApiParameterName")]
                 [Validation(Required=false)]
@@ -434,42 +434,42 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ArrayItemsType { get; set; }
 
                 /// <summary>
-                /// Default value
+                /// The default value.
                 /// </summary>
                 [NameInMap("DefaultValue")]
                 [Validation(Required=false)]
                 public string DefaultValue { get; set; }
 
                 /// <summary>
-                /// Examples
+                /// The sample value.
                 /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// The parameter description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The order in the document.
+                /// The order in which the parameter is sorted in the document.
                 /// </summary>
                 [NameInMap("DocOrder")]
                 [Validation(Required=false)]
                 public int? DocOrder { get; set; }
 
                 /// <summary>
-                /// Specifies whether the document is public. Valid values: PUBLIC and PRIVATE.
+                /// Indicates whether the document is public. Valid values: **PUBLIC** and **PRIVATE**.
                 /// </summary>
                 [NameInMap("DocShow")]
                 [Validation(Required=false)]
                 public string DocShow { get; set; }
 
                 /// <summary>
-                /// The hash values that can be entered when ParameterType is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.
+                /// The hash values that are supported when **ParameterType** is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
                 /// </summary>
                 [NameInMap("EnumValue")]
                 [Validation(Required=false)]
@@ -490,49 +490,49 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The maximum parameter length when ParameterType is set to String.
+                /// The maximum parameter length when **ParameterType** is set to String.
                 /// </summary>
                 [NameInMap("MaxLength")]
                 [Validation(Required=false)]
                 public long? MaxLength { get; set; }
 
                 /// <summary>
-                /// The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.
+                /// The maximum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
                 /// </summary>
                 [NameInMap("MaxValue")]
                 [Validation(Required=false)]
                 public long? MaxValue { get; set; }
 
                 /// <summary>
-                /// The minimum parameter length when ParameterType is set to String.
+                /// The minimum parameter length when **ParameterType** is set to String.
                 /// </summary>
                 [NameInMap("MinLength")]
                 [Validation(Required=false)]
                 public long? MinLength { get; set; }
 
                 /// <summary>
-                /// The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.
+                /// The minimum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
                 /// </summary>
                 [NameInMap("MinValue")]
                 [Validation(Required=false)]
                 public long? MinValue { get; set; }
 
                 /// <summary>
-                /// The type of a request parameter. Valid values: String, Int, Long, Float, Double, and Boolean.
+                /// The data type of the parameter. Valid values: String, Int, Long, Float, Double, and Boolean.
                 /// </summary>
                 [NameInMap("ParameterType")]
                 [Validation(Required=false)]
                 public string ParameterType { get; set; }
 
                 /// <summary>
-                /// The regular expression used for parameter validation when ParameterType is set to String.
+                /// The regular expression that is used for parameter validation when **ParameterType** is set to String.
                 /// </summary>
                 [NameInMap("RegularExpression")]
                 [Validation(Required=false)]
                 public string RegularExpression { get; set; }
 
                 /// <summary>
-                /// Indicates whether the parameter is required. Valid values: REQUIRED and OPTIONAL.
+                /// Indicates whether the parameter is required. Valid values: **REQUIRED** and **OPTIONAL**.
                 /// </summary>
                 [NameInMap("Required")]
                 [Validation(Required=false)]
@@ -561,21 +561,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiHistoryResponseBodyResultDescriptionsResultDescription> ResultDescription { get; set; }
             public class DescribeApiHistoryResponseBodyResultDescriptionsResultDescription : TeaModel {
                 /// <summary>
-                /// The description.
+                /// The subnode description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Specifies whether a subnode exists.
+                /// Indicates whether a subnode exists.
                 /// </summary>
                 [NameInMap("HasChild")]
                 [Validation(Required=false)]
                 public bool? HasChild { get; set; }
 
                 /// <summary>
-                /// The ID of the result.
+                /// The result ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -589,14 +589,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// Specifies whether the parameter is required.
+                /// Indicates whether the parameter is required.
                 /// </summary>
                 [NameInMap("Mandatory")]
                 [Validation(Required=false)]
                 public bool? Mandatory { get; set; }
 
                 /// <summary>
-                /// The name of the result.
+                /// The result name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -610,7 +610,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Pid { get; set; }
 
                 /// <summary>
-                /// The type of the result.
+                /// The result type.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -815,14 +815,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public List<DescribeApiHistoryResponseBodyServiceConfigMockHeadersMockHeader> MockHeader { get; set; }
                 public class DescribeApiHistoryResponseBodyServiceConfigMockHeadersMockHeader : TeaModel {
                     /// <summary>
-                    /// The name of the HTTP header parameter.
+                    /// The HTTP headers.
                     /// </summary>
                     [NameInMap("HeaderName")]
                     [Validation(Required=false)]
                     public string HeaderName { get; set; }
 
                     /// <summary>
-                    /// The value of the HTTP header parameter.
+                    /// The values of the HTTP headers.
                     /// </summary>
                     [NameInMap("HeaderValue")]
                     [Validation(Required=false)]
@@ -1012,14 +1012,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The data type of the back-end service parameter.
+                /// The data type of the parameter. Valid values: STRING, NUMBER, and BOOLEAN.
                 /// </summary>
                 [NameInMap("ParameterType")]
                 [Validation(Required=false)]
                 public string ParameterType { get; set; }
 
                 /// <summary>
-                /// The name of the backend service parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
@@ -1043,14 +1043,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiHistoryResponseBodyServiceParametersMapServiceParameterMap> ServiceParameterMap { get; set; }
             public class DescribeApiHistoryResponseBodyServiceParametersMapServiceParameterMap : TeaModel {
                 /// <summary>
-                /// The corresponding frontend parameter. It must be included in RequestParametersObject and matches ApiParameterName in RequestParameter data.
+                /// The corresponding frontend parameter name. The value must be contained in RequestParametersObject and match RequestParam.ApiParameterName.
                 /// </summary>
                 [NameInMap("RequestParameterName")]
                 [Validation(Required=false)]
                 public string RequestParameterName { get; set; }
 
                 /// <summary>
-                /// The name of the backend service parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
@@ -1090,7 +1090,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiHistoryResponseBodySystemParametersSystemParameter> SystemParameter { get; set; }
             public class DescribeApiHistoryResponseBodySystemParametersSystemParameter : TeaModel {
                 /// <summary>
-                /// The sample value of the parameter.
+                /// The sample value.
                 /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
@@ -1111,14 +1111,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The name of the system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.
+                /// The system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.
                 /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// The name of the corresponding backend parameter.
+                /// The mapped parameter name in the backend service.
                 /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]

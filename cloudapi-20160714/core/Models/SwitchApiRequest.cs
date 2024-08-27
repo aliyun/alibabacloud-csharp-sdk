@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SwitchApiRequest : TeaModel {
         /// <summary>
-        /// The ID of the API.
+        /// The API ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The description of the switch operation.
+        /// The description. The description can be up to 200 characters in length.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the API group.
+        /// The API group ID.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The historical version that you want to switch to.
+        /// The historical version number of the API.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -48,10 +48,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The name of the runtime environment. Valid values:
+        /// The environment. Valid values:
         /// 
-        /// *   **RELEASE**
-        /// *   **TEST**
+        /// *   **RELEASE**: the production environment
+        /// *   **PRE**: the staging environment
+        /// *   **TEST**: the test environment
         /// 
         /// This parameter is required.
         /// </summary>

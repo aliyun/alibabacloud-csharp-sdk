@@ -1983,7 +1983,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建新的AppCode
+         * @summary Adds an AppCode to an application.
          *
          * @param request CreateAppCodeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2021,7 +2021,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建新的AppCode
+         * @summary Adds an AppCode to an application.
          *
          * @param request CreateAppCodeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2059,7 +2059,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建新的AppCode
+         * @summary Adds an AppCode to an application.
          *
          * @param request CreateAppCodeRequest
          * @return CreateAppCodeResponse
@@ -2071,7 +2071,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建新的AppCode
+         * @summary Adds an AppCode to an application.
          *
          * @param request CreateAppCodeRequest
          * @return CreateAppCodeResponse
@@ -2083,7 +2083,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建新的AK、SK
+         * @summary Adds an AppKey and AppSecret pair to an application.
          *
          * @param request CreateAppKeyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2125,7 +2125,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建新的AK、SK
+         * @summary Adds an AppKey and AppSecret pair to an application.
          *
          * @param request CreateAppKeyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2167,7 +2167,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建新的AK、SK
+         * @summary Adds an AppKey and AppSecret pair to an application.
          *
          * @param request CreateAppKeyRequest
          * @return CreateAppKeyResponse
@@ -2179,7 +2179,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 创建新的AK、SK
+         * @summary Adds an AppKey and AppSecret pair to an application.
          *
          * @param request CreateAppKeyRequest
          * @return CreateAppKeyResponse
@@ -4147,7 +4147,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Deletes an API.
+         * @summary Deletes the definition of a specified API.
          *
          * @description *   This operation is intended for API providers and cannot be undone after it is complete.
          * *   An API that is running in the runtime environment must be unpublished before you can delete the API.****
@@ -4193,7 +4193,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Deletes an API.
+         * @summary Deletes the definition of a specified API.
          *
          * @description *   This operation is intended for API providers and cannot be undone after it is complete.
          * *   An API that is running in the runtime environment must be unpublished before you can delete the API.****
@@ -4239,7 +4239,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Deletes an API.
+         * @summary Deletes the definition of a specified API.
          *
          * @description *   This operation is intended for API providers and cannot be undone after it is complete.
          * *   An API that is running in the runtime environment must be unpublished before you can delete the API.****
@@ -4255,7 +4255,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Deletes an API.
+         * @summary Deletes the definition of a specified API.
          *
          * @description *   This operation is intended for API providers and cannot be undone after it is complete.
          * *   An API that is running in the runtime environment must be unpublished before you can delete the API.****
@@ -4751,7 +4751,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 删除新的AppCode
+         * @summary Deletes the AppCode of an application.
          *
          * @param request DeleteAppCodeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4789,7 +4789,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 删除新的AppCode
+         * @summary Deletes the AppCode of an application.
          *
          * @param request DeleteAppCodeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4827,7 +4827,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 删除新的AppCode
+         * @summary Deletes the AppCode of an application.
          *
          * @param request DeleteAppCodeRequest
          * @return DeleteAppCodeResponse
@@ -4839,7 +4839,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 删除新的AppCode
+         * @summary Deletes the AppCode of an application.
          *
          * @param request DeleteAppCodeRequest
          * @return DeleteAppCodeResponse
@@ -4851,7 +4851,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 删除新的AppKey
+         * @summary Deletes the AppKey and AppSecret of an application.
          *
          * @param request DeleteAppKeyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4889,7 +4889,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 删除新的AppKey
+         * @summary Deletes the AppKey and AppSecret of an application.
          *
          * @param request DeleteAppKeyRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4927,7 +4927,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 删除新的AppKey
+         * @summary Deletes the AppKey and AppSecret of an application.
          *
          * @param request DeleteAppKeyRequest
          * @return DeleteAppKeyResponse
@@ -4939,7 +4939,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 删除新的AppKey
+         * @summary Deletes the AppKey and AppSecret of an application.
          *
          * @param request DeleteAppKeyRequest
          * @return DeleteAppKeyResponse
@@ -5375,7 +5375,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Unbinds a custom domain name from a specified API group.
+         * @summary Unbinds a custom domain name from an API group.
          *
          * @description *   This operation is intended for API providers.
          * *   If the specified domain name does not exist, a successful response will still appear.
@@ -5421,7 +5421,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Unbinds a custom domain name from a specified API group.
+         * @summary Unbinds a custom domain name from an API group.
          *
          * @description *   This operation is intended for API providers.
          * *   If the specified domain name does not exist, a successful response will still appear.
@@ -5467,7 +5467,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Unbinds a custom domain name from a specified API group.
+         * @summary Unbinds a custom domain name from an API group.
          *
          * @description *   This operation is intended for API providers.
          * *   If the specified domain name does not exist, a successful response will still appear.
@@ -5483,7 +5483,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Unbinds a custom domain name from a specified API group.
+         * @summary Unbinds a custom domain name from an API group.
          *
          * @description *   This operation is intended for API providers.
          * *   If the specified domain name does not exist, a successful response will still appear.
@@ -5931,7 +5931,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Deletes a model from Model Management for an API group.
+         * @summary Deletes a model.
          *
          * @param request DeleteModelRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5969,7 +5969,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Deletes a model from Model Management for an API group.
+         * @summary Deletes a model.
          *
          * @param request DeleteModelRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6007,7 +6007,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Deletes a model from Model Management for an API group.
+         * @summary Deletes a model.
          *
          * @param request DeleteModelRequest
          * @return DeleteModelResponse
@@ -6019,7 +6019,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Deletes a model from Model Management for an API group.
+         * @summary Deletes a model.
          *
          * @param request DeleteModelRequest
          * @return DeleteModelResponse
@@ -10091,6 +10091,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
+         * @summary Queries the APIs that are associated with a virtual private cloud (VPC) access authorization in a region.
+         *
          * @param request DescribeApisByVpcAccessRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeApisByVpcAccessResponse
@@ -10135,6 +10137,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
+         * @summary Queries the APIs that are associated with a virtual private cloud (VPC) access authorization in a region.
+         *
          * @param request DescribeApisByVpcAccessRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeApisByVpcAccessResponse
@@ -10179,6 +10183,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
+         * @summary Queries the APIs that are associated with a virtual private cloud (VPC) access authorization in a region.
+         *
          * @param request DescribeApisByVpcAccessRequest
          * @return DescribeApisByVpcAccessResponse
          */
@@ -10189,6 +10195,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
+         * @summary Queries the APIs that are associated with a virtual private cloud (VPC) access authorization in a region.
+         *
          * @param request DescribeApisByVpcAccessRequest
          * @return DescribeApisByVpcAccessResponse
          */
@@ -10639,7 +10647,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询APP的密钥信息
+         * @summary Queries the key-related information of an application.
          *
          * @param request DescribeAppSecuritiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10677,7 +10685,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询APP的密钥信息
+         * @summary Queries the key-related information of an application.
          *
          * @param request DescribeAppSecuritiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10715,7 +10723,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询APP的密钥信息
+         * @summary Queries the key-related information of an application.
          *
          * @param request DescribeAppSecuritiesRequest
          * @return DescribeAppSecuritiesResponse
@@ -10727,7 +10735,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询APP的密钥信息
+         * @summary Queries the key-related information of an application.
          *
          * @param request DescribeAppSecuritiesRequest
          * @return DescribeAppSecuritiesResponse
@@ -10855,10 +10863,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the apps. App information is returned only to the app owner.
+         * @summary Queries the apps of a user. App information is returned only to the app owner.
          *
          * @description *   This API is intended for API providers.
-         * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
+         * *   API providers can use the app IDs or their Alibaba Cloud accounts to query app information.
          * *   Each provider can call this operation for a maximum of 200 times every day in a region.
          *
          * @param request DescribeAppsRequest
@@ -10909,10 +10917,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the apps. App information is returned only to the app owner.
+         * @summary Queries the apps of a user. App information is returned only to the app owner.
          *
          * @description *   This API is intended for API providers.
-         * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
+         * *   API providers can use the app IDs or their Alibaba Cloud accounts to query app information.
          * *   Each provider can call this operation for a maximum of 200 times every day in a region.
          *
          * @param request DescribeAppsRequest
@@ -10963,10 +10971,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the apps. App information is returned only to the app owner.
+         * @summary Queries the apps of a user. App information is returned only to the app owner.
          *
          * @description *   This API is intended for API providers.
-         * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
+         * *   API providers can use the app IDs or their Alibaba Cloud accounts to query app information.
          * *   Each provider can call this operation for a maximum of 200 times every day in a region.
          *
          * @param request DescribeAppsRequest
@@ -10979,10 +10987,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the apps. App information is returned only to the app owner.
+         * @summary Queries the apps of a user. App information is returned only to the app owner.
          *
          * @description *   This API is intended for API providers.
-         * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
+         * *   API providers can use the app IDs or their Alibaba Cloud accounts to query app information.
          * *   Each provider can call this operation for a maximum of 200 times every day in a region.
          *
          * @param request DescribeAppsRequest
@@ -12327,9 +12335,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the APIs that are published to and running in an environment.
+         * @summary Queries the APIs that have been published to a specified environment.
          *
-         * @description *   This operation is intended for API callers.
+         * @description *   This API is intended for API providers.
          *
          * @param request DescribeDeployedApisRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12403,9 +12411,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the APIs that are published to and running in an environment.
+         * @summary Queries the APIs that have been published to a specified environment.
          *
-         * @description *   This operation is intended for API callers.
+         * @description *   This API is intended for API providers.
          *
          * @param request DescribeDeployedApisRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12479,9 +12487,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the APIs that are published to and running in an environment.
+         * @summary Queries the APIs that have been published to a specified environment.
          *
-         * @description *   This operation is intended for API callers.
+         * @description *   This API is intended for API providers.
          *
          * @param request DescribeDeployedApisRequest
          * @return DescribeDeployedApisResponse
@@ -12493,9 +12501,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the APIs that are published to and running in an environment.
+         * @summary Queries the APIs that have been published to a specified environment.
          *
-         * @description *   This operation is intended for API callers.
+         * @description *   This API is intended for API providers.
          *
          * @param request DescribeDeployedApisRequest
          * @return DescribeDeployedApisResponse
@@ -12507,7 +12515,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the details about a bound custom domain name, including the system assigned second-level domain name, custom domain name, and SSL certificate.
+         * @summary Queries details about a bound custom domain name, including the automatically assigned second-level domain name, custom domain name, and SSL certificate.
          *
          * @param request DescribeDomainRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12549,7 +12557,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the details about a bound custom domain name, including the system assigned second-level domain name, custom domain name, and SSL certificate.
+         * @summary Queries details about a bound custom domain name, including the automatically assigned second-level domain name, custom domain name, and SSL certificate.
          *
          * @param request DescribeDomainRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12591,7 +12599,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the details about a bound custom domain name, including the system assigned second-level domain name, custom domain name, and SSL certificate.
+         * @summary Queries details about a bound custom domain name, including the automatically assigned second-level domain name, custom domain name, and SSL certificate.
          *
          * @param request DescribeDomainRequest
          * @return DescribeDomainResponse
@@ -12603,7 +12611,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries the details about a bound custom domain name, including the system assigned second-level domain name, custom domain name, and SSL certificate.
+         * @summary Queries details about a bound custom domain name, including the automatically assigned second-level domain name, custom domain name, and SSL certificate.
          *
          * @param request DescribeDomainRequest
          * @return DescribeDomainResponse
@@ -13227,7 +13235,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询专享实例集群的详情
+         * @summary Queries the information about a dedicated instance cluster.
          *
          * @param request DescribeInstanceClusterInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13265,7 +13273,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询专享实例集群的详情
+         * @summary Queries the information about a dedicated instance cluster.
          *
          * @param request DescribeInstanceClusterInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13303,7 +13311,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询专享实例集群的详情
+         * @summary Queries the information about a dedicated instance cluster.
          *
          * @param request DescribeInstanceClusterInfoRequest
          * @return DescribeInstanceClusterInfoResponse
@@ -13315,7 +13323,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询专享实例集群的详情
+         * @summary Queries the information about a dedicated instance cluster.
          *
          * @param request DescribeInstanceClusterInfoRequest
          * @return DescribeInstanceClusterInfoResponse
@@ -13327,7 +13335,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询专享实例集群列表
+         * @summary Queries dedicated instance clusters.
          *
          * @param request DescribeInstanceClusterListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13377,7 +13385,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询专享实例集群列表
+         * @summary Queries dedicated instance clusters.
          *
          * @param request DescribeInstanceClusterListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13427,7 +13435,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询专享实例集群列表
+         * @summary Queries dedicated instance clusters.
          *
          * @param request DescribeInstanceClusterListRequest
          * @return DescribeInstanceClusterListResponse
@@ -13439,7 +13447,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary 查询专享实例集群列表
+         * @summary Queries dedicated instance clusters.
          *
          * @param request DescribeInstanceClusterListRequest
          * @return DescribeInstanceClusterListResponse
@@ -15171,7 +15179,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Obtains the created models of an API group.
+         * @summary Queries the created models of an API group.
          *
          * @description *   Fuzzy queries are supported.
          *
@@ -15227,7 +15235,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Obtains the created models of an API group.
+         * @summary Queries the created models of an API group.
          *
          * @description *   Fuzzy queries are supported.
          *
@@ -15283,7 +15291,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Obtains the created models of an API group.
+         * @summary Queries the created models of an API group.
          *
          * @description *   Fuzzy queries are supported.
          *
@@ -15297,7 +15305,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Obtains the created models of an API group.
+         * @summary Queries the created models of an API group.
          *
          * @description *   Fuzzy queries are supported.
          *
@@ -16071,7 +16079,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries API groups that are purchased from Alibaba Cloud Marketplace.
+         * @summary Queries the API groups purchased from Alibaba Cloud Marketplace.
          *
          * @param request DescribePurchasedApiGroupsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16113,7 +16121,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries API groups that are purchased from Alibaba Cloud Marketplace.
+         * @summary Queries the API groups purchased from Alibaba Cloud Marketplace.
          *
          * @param request DescribePurchasedApiGroupsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16155,7 +16163,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries API groups that are purchased from Alibaba Cloud Marketplace.
+         * @summary Queries the API groups purchased from Alibaba Cloud Marketplace.
          *
          * @param request DescribePurchasedApiGroupsRequest
          * @return DescribePurchasedApiGroupsResponse
@@ -16167,7 +16175,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Queries API groups that are purchased from Alibaba Cloud Marketplace.
+         * @summary Queries the API groups purchased from Alibaba Cloud Marketplace.
          *
          * @param request DescribePurchasedApiGroupsRequest
          * @return DescribePurchasedApiGroupsResponse
@@ -19656,6 +19664,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterAppCodeForBackend))
+            {
+                query["FilterAppCodeForBackend"] = request.FilterAppCodeForBackend;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -19744,6 +19756,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterAppCodeForBackend))
+            {
+                query["FilterAppCodeForBackend"] = request.FilterAppCodeForBackend;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
@@ -22551,7 +22567,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          *
          * @description *   This operation is intended for API providers.
          * *   You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.
-         * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.
+         * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to call APIs.
          * *   You can call this operation to reactivate the domain name to resume normal access.
          *
          * @param request ReactivateDomainRequest
@@ -22598,7 +22614,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          *
          * @description *   This operation is intended for API providers.
          * *   You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.
-         * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.
+         * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to call APIs.
          * *   You can call this operation to reactivate the domain name to resume normal access.
          *
          * @param request ReactivateDomainRequest
@@ -22645,7 +22661,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          *
          * @description *   This operation is intended for API providers.
          * *   You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.
-         * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.
+         * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to call APIs.
          * *   You can call this operation to reactivate the domain name to resume normal access.
          *
          * @param request ReactivateDomainRequest
@@ -22662,7 +22678,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          *
          * @description *   This operation is intended for API providers.
          * *   You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.
-         * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.
+         * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to call APIs.
          * *   You can call this operation to reactivate the domain name to resume normal access.
          *
          * @param request ReactivateDomainRequest
@@ -23963,7 +23979,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Resets the AppCode of an app.
+         * @summary Resets the AppCode of an application. You can call this operation only once per minute.
          *
          * @param request ResetAppCodeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24005,7 +24021,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Resets the AppCode of an app.
+         * @summary Resets the AppCode of an application. You can call this operation only once per minute.
          *
          * @param request ResetAppCodeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24047,7 +24063,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Resets the AppCode of an app.
+         * @summary Resets the AppCode of an application. You can call this operation only once per minute.
          *
          * @param request ResetAppCodeRequest
          * @return ResetAppCodeResponse
@@ -24059,7 +24075,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Resets the AppCode of an app.
+         * @summary Resets the AppCode of an application. You can call this operation only once per minute.
          *
          * @param request ResetAppCodeRequest
          * @return ResetAppCodeResponse
@@ -24758,8 +24774,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          * @summary Authorizes a specified application to call multiple APIs.
          *
          * @description *   This operation is intended for API providers and callers.
-         * *   API providers can authorize any apps to call their APIs.
-         * *   API callers can authorize their own apps to call the APIs that they have purchased.
+         * *   API providers can authorize all applications to call their APIs.
+         * *   API callers can authorize their own applications to call the APIs that they have purchased.
          *
          * @param request SetApisAuthoritiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24820,8 +24836,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          * @summary Authorizes a specified application to call multiple APIs.
          *
          * @description *   This operation is intended for API providers and callers.
-         * *   API providers can authorize any apps to call their APIs.
-         * *   API callers can authorize their own apps to call the APIs that they have purchased.
+         * *   API providers can authorize all applications to call their APIs.
+         * *   API callers can authorize their own applications to call the APIs that they have purchased.
          *
          * @param request SetApisAuthoritiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24882,8 +24898,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          * @summary Authorizes a specified application to call multiple APIs.
          *
          * @description *   This operation is intended for API providers and callers.
-         * *   API providers can authorize any apps to call their APIs.
-         * *   API callers can authorize their own apps to call the APIs that they have purchased.
+         * *   API providers can authorize all applications to call their APIs.
+         * *   API callers can authorize their own applications to call the APIs that they have purchased.
          *
          * @param request SetApisAuthoritiesRequest
          * @return SetApisAuthoritiesResponse
@@ -24898,8 +24914,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          * @summary Authorizes a specified application to call multiple APIs.
          *
          * @description *   This operation is intended for API providers and callers.
-         * *   API providers can authorize any apps to call their APIs.
-         * *   API callers can authorize their own apps to call the APIs that they have purchased.
+         * *   API providers can authorize all applications to call their APIs.
+         * *   API callers can authorize their own applications to call the APIs that they have purchased.
          *
          * @param request SetApisAuthoritiesRequest
          * @return SetApisAuthoritiesResponse
@@ -25038,8 +25054,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          * @summary Grants access permissions on a specified API to multiple applications.
          *
          * @description *   This operation is intended for API providers and callers.
-         * *   API providers can authorize any apps to call their APIs.
-         * *   API callers can authorize their own apps to call the APIs that they have purchased.
+         * *   API providers can authorize all applications to call their APIs.
+         * *   API callers can authorize their own applications to call the APIs that they have purchased.
          *
          * @param request SetAppsAuthoritiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -25100,8 +25116,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          * @summary Grants access permissions on a specified API to multiple applications.
          *
          * @description *   This operation is intended for API providers and callers.
-         * *   API providers can authorize any apps to call their APIs.
-         * *   API callers can authorize their own apps to call the APIs that they have purchased.
+         * *   API providers can authorize all applications to call their APIs.
+         * *   API callers can authorize their own applications to call the APIs that they have purchased.
          *
          * @param request SetAppsAuthoritiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -25162,8 +25178,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          * @summary Grants access permissions on a specified API to multiple applications.
          *
          * @description *   This operation is intended for API providers and callers.
-         * *   API providers can authorize any apps to call their APIs.
-         * *   API callers can authorize their own apps to call the APIs that they have purchased.
+         * *   API providers can authorize all applications to call their APIs.
+         * *   API callers can authorize their own applications to call the APIs that they have purchased.
          *
          * @param request SetAppsAuthoritiesRequest
          * @return SetAppsAuthoritiesResponse
@@ -25178,8 +25194,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
          * @summary Grants access permissions on a specified API to multiple applications.
          *
          * @description *   This operation is intended for API providers and callers.
-         * *   API providers can authorize any apps to call their APIs.
-         * *   API callers can authorize their own apps to call the APIs that they have purchased.
+         * *   API providers can authorize all applications to call their APIs.
+         * *   API callers can authorize their own applications to call the APIs that they have purchased.
          *
          * @param request SetAppsAuthoritiesRequest
          * @return SetAppsAuthoritiesResponse
@@ -25323,7 +25339,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Uploads an SSL certificate for a custom domain name.
+         * @summary Uploads an SSL certificate for a specified custom domain name.
          *
          * @description *   This operation is intended for API providers.
          * *   The SSL certificate must match the custom domain name.
@@ -25389,7 +25405,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Uploads an SSL certificate for a custom domain name.
+         * @summary Uploads an SSL certificate for a specified custom domain name.
          *
          * @description *   This operation is intended for API providers.
          * *   The SSL certificate must match the custom domain name.
@@ -25455,7 +25471,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Uploads an SSL certificate for a custom domain name.
+         * @summary Uploads an SSL certificate for a specified custom domain name.
          *
          * @description *   This operation is intended for API providers.
          * *   The SSL certificate must match the custom domain name.
@@ -25471,7 +25487,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-         * @summary Uploads an SSL certificate for a custom domain name.
+         * @summary Uploads an SSL certificate for a specified custom domain name.
          *
          * @description *   This operation is intended for API providers.
          * *   The SSL certificate must match the custom domain name.
@@ -26385,12 +26401,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         /**
          * @summary Switches the definition of an API in a specified runtime environment to a historical version.
          *
-         * @description *   This API is intended for API providers.
-         * *   The historical version can be obtained by calling the **DescribeHistoryApis** operation.
-         * *   Only APIs that have been published more than once have historical versions.
-         * *   This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.
-         * *   The switch operation is essentially a publish operation. A reason for this operation must be provided.
-         *
          * @param request SwitchApiRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return SwitchApiResponse
@@ -26444,12 +26454,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
          * @summary Switches the definition of an API in a specified runtime environment to a historical version.
-         *
-         * @description *   This API is intended for API providers.
-         * *   The historical version can be obtained by calling the **DescribeHistoryApis** operation.
-         * *   Only APIs that have been published more than once have historical versions.
-         * *   This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.
-         * *   The switch operation is essentially a publish operation. A reason for this operation must be provided.
          *
          * @param request SwitchApiRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -26505,12 +26509,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         /**
          * @summary Switches the definition of an API in a specified runtime environment to a historical version.
          *
-         * @description *   This API is intended for API providers.
-         * *   The historical version can be obtained by calling the **DescribeHistoryApis** operation.
-         * *   Only APIs that have been published more than once have historical versions.
-         * *   This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.
-         * *   The switch operation is essentially a publish operation. A reason for this operation must be provided.
-         *
          * @param request SwitchApiRequest
          * @return SwitchApiResponse
          */
@@ -26522,12 +26520,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
          * @summary Switches the definition of an API in a specified runtime environment to a historical version.
-         *
-         * @description *   This API is intended for API providers.
-         * *   The historical version can be obtained by calling the **DescribeHistoryApis** operation.
-         * *   Only APIs that have been published more than once have historical versions.
-         * *   This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.
-         * *   The switch operation is essentially a publish operation. A reason for this operation must be provided.
          *
          * @param request SwitchApiRequest
          * @return SwitchApiResponse

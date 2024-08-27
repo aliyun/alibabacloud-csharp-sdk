@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The subscription duration of the instance.
         /// 
-        /// *   Valid values if PricingCycle is set to **Month**: **1** to **9**
-        /// *   Valid values if PricingCycle is set to **Year**: **1** to **3**
+        /// *   If PricingCycle is set to **Month**, set this parameter to an integer ranges from **1** to **9**.
+        /// *   If PricingCycle is set to **Year**, set this parameter to an integer ranges from **1** to **3**.
         /// 
-        /// >  This parameter is available and required only if the ChargeType parameter is set to **PrePaid**.
+        /// >  This parameter is valid and required only if the ChargeType parameter is set to **PrePaid**.
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **year**
         /// *   **month**
         /// 
-        /// >  This parameter is available and required only if the ChargeType parameter is set to PrePaid.
+        /// >  This parameter is required if the ChargeType parameter is set to Prepaid.
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]

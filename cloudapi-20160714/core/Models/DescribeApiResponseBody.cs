@@ -549,28 +549,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The maximum parameter length when ParameterType is set to String.
+                /// The maximum parameter length when **ParameterType** is set to String.
                 /// </summary>
                 [NameInMap("MaxLength")]
                 [Validation(Required=false)]
                 public long? MaxLength { get; set; }
 
                 /// <summary>
-                /// The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.
+                /// The maximum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
                 /// </summary>
                 [NameInMap("MaxValue")]
                 [Validation(Required=false)]
                 public long? MaxValue { get; set; }
 
                 /// <summary>
-                /// The minimum parameter length when ParameterType is set to String.
+                /// The minimum parameter length when **ParameterType** is set to String.
                 /// </summary>
                 [NameInMap("MinLength")]
                 [Validation(Required=false)]
                 public long? MinLength { get; set; }
 
                 /// <summary>
-                /// The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.
+                /// The minimum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
                 /// </summary>
                 [NameInMap("MinValue")]
                 [Validation(Required=false)]
@@ -584,7 +584,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ParameterType { get; set; }
 
                 /// <summary>
-                /// The regular expression that is used for parameter validation when ParameterType is set to String.
+                /// The regular expression that is used for parameter validation when **ParameterType** is set to String.
                 /// </summary>
                 [NameInMap("RegularExpression")]
                 [Validation(Required=false)]

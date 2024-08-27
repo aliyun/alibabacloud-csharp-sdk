@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
-        /// <summary>
-        /// The HTTP method of the API request.
-        /// </summary>
         [NameInMap("ApiMethod")]
         [Validation(Required=false)]
         public string ApiMethod { get; set; }
@@ -30,9 +27,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ApiName { get; set; }
 
-        /// <summary>
-        /// The request path of the API.
-        /// </summary>
         [NameInMap("ApiPath")]
         [Validation(Required=false)]
         public string ApiPath { get; set; }
@@ -80,7 +74,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string StageName { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

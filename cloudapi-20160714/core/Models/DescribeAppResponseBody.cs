@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The extended information.
+        /// 扩展信息
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]

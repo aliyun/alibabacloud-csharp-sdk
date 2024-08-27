@@ -30,12 +30,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The environment to which the API is published. Valid values:
+        /// The environment name. Valid values:
         /// 
         /// *   **RELEASE**
         /// *   **TEST**
         /// 
-        /// If this parameter is not specified, the default value is used, which is RELEASE.
+        /// If this parameter is not specified, the default value RELEASE is used.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

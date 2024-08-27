@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteAppCodeRequest : TeaModel {
         /// <summary>
+        /// The application AppCode.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("AppCode")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AppCode { get; set; }
 
         /// <summary>
+        /// The application ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]

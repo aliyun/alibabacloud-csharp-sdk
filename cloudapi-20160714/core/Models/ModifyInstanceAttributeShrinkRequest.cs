@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string MaintainStartTime { get; set; }
 
+        /// <summary>
+        /// The information about the CIDR block that API Gateway can use to access the virtual private cloud (VPC) of the backend service.
+        /// </summary>
         [NameInMap("ToConnectVpcIpBlock")]
         [Validation(Required=false)]
         public string ToConnectVpcIpBlockShrink { get; set; }

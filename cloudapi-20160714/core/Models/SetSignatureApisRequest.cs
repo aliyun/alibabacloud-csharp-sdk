@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetSignatureApisRequest : TeaModel {
         /// <summary>
-        /// The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+        /// The API IDs.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ApiIds { get; set; }
 
         /// <summary>
-        /// The ID of the API group to which the API that you want to manage belongs.
+        /// The API group ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the signature key.
+        /// The signature ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SignatureId { get; set; }
 
         /// <summary>
-        /// The name of the runtime environment. Valid values:
+        /// The environment. Valid values:
         /// 
-        /// *   **RELEASE**
-        /// *   **PRE**
-        /// *   **TEST**
+        /// *   **RELEASE**: the production environment
+        /// *   **PRE**: the staging environment
+        /// *   **TEST**: the testing environment
         /// 
         /// This parameter is required.
         /// </summary>

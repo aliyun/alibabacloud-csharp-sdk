@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteAppKeyRequest : TeaModel {
         /// <summary>
+        /// The application ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// The AppKey of the application. The AppKey is used for calling an API.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("AppKey")]

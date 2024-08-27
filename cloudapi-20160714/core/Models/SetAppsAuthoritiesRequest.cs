@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+        /// The IDs of applications. Separate multiple application IDs with commas (,). A maximum of 100 applications IDs can be entered.
         /// 
         /// This parameter is required.
         /// </summary>

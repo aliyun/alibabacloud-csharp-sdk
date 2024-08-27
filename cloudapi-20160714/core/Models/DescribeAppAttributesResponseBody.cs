@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppAttributesResponseBody : TeaModel {
         /// <summary>
-        /// The returned application information. It is an array that consists of AppAttribute data.
+        /// The returned app information. It is an array that consists of AppAttribute data.
         /// </summary>
         [NameInMap("Apps")]
         [Validation(Required=false)]
@@ -21,42 +21,42 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeAppAttributesResponseBodyAppsAppAttribute> AppAttribute { get; set; }
             public class DescribeAppAttributesResponseBodyAppsAppAttribute : TeaModel {
                 /// <summary>
-                /// The application ID.
+                /// The ID of the app.
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public long? AppId { get; set; }
 
                 /// <summary>
-                /// The application name.
+                /// The name of the app.
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The creation time (UTC) of the application.
+                /// The creation time (UTC) of the app.
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The application description.
+                /// The description of the app.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The extended information.
+                /// 扩展信息
                 /// </summary>
                 [NameInMap("Extend")]
                 [Validation(Required=false)]
                 public string Extend { get; set; }
 
                 /// <summary>
-                /// The modification time (UTC) of the application.
+                /// The modification time (UTC) of the app.
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     public List<DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo> TagInfo { get; set; }
                     public class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The value of the tag.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

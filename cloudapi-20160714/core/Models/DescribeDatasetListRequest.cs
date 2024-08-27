@@ -35,21 +35,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The tag of objects that match the rule. You can specify multiple tags.
+        /// 指定规则所适用的对象标签，可设置多个
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDatasetListRequestTag> Tag { get; set; }
         public class DescribeDatasetListRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// 标签键
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// 标签值
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

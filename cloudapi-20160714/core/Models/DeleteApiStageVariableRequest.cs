@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the runtime environment.
+        /// The ID of the environment.
         /// 
         /// This parameter is required.
         /// </summary>

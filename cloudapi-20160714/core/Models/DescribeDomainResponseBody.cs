@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeDomainResponseBody : TeaModel {
         /// <summary>
-        /// The certificate content.
+        /// The content of the certificate.
         /// </summary>
         [NameInMap("CertificateBody")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string CertificateId { get; set; }
 
         /// <summary>
-        /// The SSL certificate name.
+        /// The name of the SSL certificate.
         /// </summary>
         [NameInMap("CertificateName")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string CertificatePrivateKey { get; set; }
 
         /// <summary>
-        /// The time when the certificate expires. The value is a timestamp. Unit: milliseconds.
+        /// 证书失效时间戳（毫秒）
         /// </summary>
         [NameInMap("CertificateValidEnd")]
         [Validation(Required=false)]
         public long? CertificateValidEnd { get; set; }
 
         /// <summary>
-        /// The time when the certificate takes effect. The value is a timestamp. Unit: milliseconds.
+        /// 证书生效时间戳（毫秒）
         /// </summary>
         [NameInMap("CertificateValidStart")]
         [Validation(Required=false)]
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The binding status of the custom domain name. Valid values:
         /// 
-        /// *   BINDING: The domain name is bound to the API group.
-        /// *   BOUND: The domain name is not bound to the API group.
+        /// *   BINDING: The domain name has been bound.
+        /// *   BOUND: The domain name has not been bound.
         /// </summary>
         [NameInMap("DomainBindingStatus")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// The validity status of the domain name. Valid values:
         /// 
         /// *   NORMAL
-        /// *   ABNORMAL: This status affects API calls and must be rectified as soon as possible.
+        /// *   ABNORMAL: This status affects API calls and must be resolved as soon as possible.
         /// </summary>
         [NameInMap("DomainLegalStatus")]
         [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
