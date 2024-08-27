@@ -8,31 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
-    public class AddCustomAuthIdentityResponseBody : TeaModel {
-        /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the request is successful.
-        /// </summary>
+    public class CloseConnectionResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// The message returned.
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// Indicates whether the operation is successful. Valid values: true and false.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

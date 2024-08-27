@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public List<BatchQuerySessionByClientIdsResponseBodyOnlineStatusList> OnlineStatusList { get; set; }
         public class BatchQuerySessionByClientIdsResponseBodyOnlineStatusList : TeaModel {
             /// <summary>
-            /// The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see [Terms](~~42420~~).
+            /// The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see [Terms](https://help.aliyun.com/document_detail/42420.html).
             /// </summary>
             [NameInMap("ClientId")]
             [Validation(Required=false)]

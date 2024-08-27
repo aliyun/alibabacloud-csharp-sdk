@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class InactivateCaCertificateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MqttInstanceId")]
         [Validation(Required=false)]
         public string MqttInstanceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Sn")]
         [Validation(Required=false)]
         public string Sn { get; set; }
