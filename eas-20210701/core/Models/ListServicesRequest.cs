@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("Gateway")]
+        [Validation(Required=false)]
+        public string Gateway { get; set; }
+
         /// <summary>
         /// The name of the service group. For more information about how to query the name of a service group, see [ListServices](https://help.aliyun.com/document_detail/412109.html).
         /// </summary>

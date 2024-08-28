@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("Replicas")]
+        [Validation(Required=false)]
+        public int? Replicas { get; set; }
+
     }
 
 }

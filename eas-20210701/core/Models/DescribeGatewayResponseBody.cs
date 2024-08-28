@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeGatewayResponseBody : TeaModel {
         /// <summary>
-        /// The UID of the account that is used to create the private gateway.
-        /// </summary>
-        [NameInMap("CallerUid")]
-        [Validation(Required=false)]
-        public string CallerUid { get; set; }
-
-        /// <summary>
         /// The time when the private gateway was created. The time is displayed in UTC.
         /// </summary>
         [NameInMap("CreateTime")]
@@ -52,54 +45,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The Internet access control policies.
-        /// </summary>
-        [NameInMap("InternetAclPolicyList")]
-        [Validation(Required=false)]
-        public List<DescribeGatewayResponseBodyInternetAclPolicyList> InternetAclPolicyList { get; set; }
-        public class DescribeGatewayResponseBodyInternetAclPolicyList : TeaModel {
-            /// <summary>
-            /// The description.
-            /// </summary>
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public string Comment { get; set; }
-
-            /// <summary>
-            /// The Classless Inter-Domain Routing (CIDR) block that is allowed to access the private gateway.
-            /// </summary>
-            [NameInMap("Entry")]
-            [Validation(Required=false)]
-            public string Entry { get; set; }
-
-            /// <summary>
-            /// The state of the private gateway.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   Creating
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Running
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// </summary>
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-        }
-
-        /// <summary>
         /// The public endpoint.
         /// </summary>
         [NameInMap("InternetDomain")]
@@ -113,6 +58,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? InternetEnabled { get; set; }
 
+        [NameInMap("InternetStatus")]
+        [Validation(Required=false)]
+        public string InternetStatus { get; set; }
+
         /// <summary>
         /// The internal endpoint.
         /// </summary>
@@ -120,75 +69,13 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string IntranetDomain { get; set; }
 
-        /// <summary>
-        /// Indicates whether internal network access is enabled.
-        /// </summary>
-        [NameInMap("IntranetEnabled")]
+        [NameInMap("IsDefault")]
         [Validation(Required=false)]
-        public bool? IntranetEnabled { get; set; }
+        public bool? IsDefault { get; set; }
 
-        /// <summary>
-        /// The internal endpoints.
-        /// </summary>
-        [NameInMap("IntranetLinkedVpcList")]
+        [NameInMap("Replicas")]
         [Validation(Required=false)]
-        public List<DescribeGatewayResponseBodyIntranetLinkedVpcList> IntranetLinkedVpcList { get; set; }
-        public class DescribeGatewayResponseBodyIntranetLinkedVpcList : TeaModel {
-            /// <summary>
-            /// The IP address.
-            /// </summary>
-            [NameInMap("Ip")]
-            [Validation(Required=false)]
-            public string Ip { get; set; }
-
-            /// <summary>
-            /// The security group ID.
-            /// </summary>
-            [NameInMap("SecurityGroupId")]
-            [Validation(Required=false)]
-            public string SecurityGroupId { get; set; }
-
-            /// <summary>
-            /// The state of the private gateway. Valid values:
-            /// 
-            /// *   Creating
-            /// *   Running
-            /// </summary>
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            /// <summary>
-            /// The vSwitch ID.
-            /// </summary>
-            [NameInMap("VSwitchId")]
-            [Validation(Required=false)]
-            public string VSwitchId { get; set; }
-
-            /// <summary>
-            /// The ID of the virtual private cloud (VPC).
-            /// </summary>
-            [NameInMap("VpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-        }
-
-        /// <summary>
-        /// The user ID (UID) of the Alibaba Cloud account that is used to create the private gateway.
-        /// </summary>
-        [NameInMap("ParentUid")]
-        [Validation(Required=false)]
-        public string ParentUid { get; set; }
-
-        /// <summary>
-        /// The region ID of the private gateway.
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
+        public int? Replicas { get; set; }
 
         /// <summary>
         /// The request ID.

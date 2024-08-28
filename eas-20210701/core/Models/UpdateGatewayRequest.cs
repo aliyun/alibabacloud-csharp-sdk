@@ -48,12 +48,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        [NameInMap("IsDefault")]
+        [Validation(Required=false)]
+        public bool? IsDefault { get; set; }
+
         /// <summary>
         /// The private gateway alias.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("Replicas")]
+        [Validation(Required=false)]
+        public int? Replicas { get; set; }
 
     }
 

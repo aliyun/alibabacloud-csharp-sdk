@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class CloneServiceRequest : TeaModel {
+    public class CloneServiceShrinkRequest : TeaModel {
         [NameInMap("Labels")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Labels { get; set; }
+        public string LabelsShrink { get; set; }
 
         /// <summary>
         /// The request body. For more information, see [CreateService](https://help.aliyun.com/document_detail/412086.html).

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeSpotDiscountHistoryRequest : TeaModel {
         /// <summary>
-        /// The type of the Elastic Compute Service (ECS) instance.
+        /// The type of the Elastic Algorithm Service (EAS) instance.
         /// 
         /// This parameter is required.
         /// </summary>
