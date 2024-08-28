@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenInterRegionTrafficQosPolicyRequest : TeaModel {
+        [NameInMap("BandwidthGuaranteeMode")]
+        [Validation(Required=false)]
+        public string BandwidthGuaranteeMode { get; set; }
+
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
@@ -71,6 +75,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues> TrafficQosQueues { get; set; }
         public class CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues : TeaModel {
+            [NameInMap("Bandwidth")]
+            [Validation(Required=false)]
+            public string Bandwidth { get; set; }
+
             /// <summary>
             /// The Differentiated Services Code Point (DSCP) value that matches the current queue.
             /// 

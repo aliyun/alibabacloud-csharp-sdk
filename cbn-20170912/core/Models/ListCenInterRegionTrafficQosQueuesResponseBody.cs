@@ -33,12 +33,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues> TrafficQosQueues { get; set; }
         public class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues : TeaModel {
+            [NameInMap("Bandwidth")]
+            [Validation(Required=false)]
+            public string Bandwidth { get; set; }
+
             /// <summary>
             /// The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.
             /// </summary>
             [NameInMap("Dscps")]
             [Validation(Required=false)]
             public List<int?> Dscps { get; set; }
+
+            [NameInMap("EffectiveBandwidth")]
+            [Validation(Required=false)]
+            public string EffectiveBandwidth { get; set; }
 
             /// <summary>
             /// The percentage of the inter-region bandwidth that can be consumed by the QoS queue.

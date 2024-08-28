@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies> TrafficQosPolicies { get; set; }
         public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies : TeaModel {
+            [NameInMap("BandwidthGuaranteeMode")]
+            [Validation(Required=false)]
+            public string BandwidthGuaranteeMode { get; set; }
+
             /// <summary>
             /// The description of the QoS policy.
             /// </summary>
@@ -87,12 +91,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues> TrafficQosQueues { get; set; }
             public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues : TeaModel {
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
+                public string Bandwidth { get; set; }
+
                 /// <summary>
                 /// The differentiated services code point (DSCP) value that is used to match packets.
                 /// </summary>
                 [NameInMap("Dscps")]
                 [Validation(Required=false)]
                 public List<int?> Dscps { get; set; }
+
+                [NameInMap("EffectiveBandwidth")]
+                [Validation(Required=false)]
+                public string EffectiveBandwidth { get; set; }
 
                 /// <summary>
                 /// The description of the queue.

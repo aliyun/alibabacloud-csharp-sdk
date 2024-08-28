@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosQueuesRequest : TeaModel {
+        [NameInMap("EffectiveBandwidthFilter")]
+        [Validation(Required=false)]
+        public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter EffectiveBandwidthFilter { get; set; }
+        public class ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter : TeaModel {
+            [NameInMap("Gte")]
+            [Validation(Required=false)]
+            public long? Gte { get; set; }
+
+            [NameInMap("Lte")]
+            [Validation(Required=false)]
+            public long? Lte { get; set; }
+
+        }
+
         /// <summary>
         /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
         /// </summary>
