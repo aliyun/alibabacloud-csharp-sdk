@@ -1098,10 +1098,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary Creates a privileged account for an AnalyticDB for PostgreSQL instance.
+         * @summary Creates an initial account for an AnalyticDB for PostgreSQL instance.
          *
-         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
-         * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
+         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.
+         * *   You can call this operation to create only initial accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
          * ## Limits
          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
@@ -1165,10 +1165,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary Creates a privileged account for an AnalyticDB for PostgreSQL instance.
+         * @summary Creates an initial account for an AnalyticDB for PostgreSQL instance.
          *
-         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
-         * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
+         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.
+         * *   You can call this operation to create only initial accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
          * ## Limits
          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
@@ -1232,10 +1232,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary Creates a privileged account for an AnalyticDB for PostgreSQL instance.
+         * @summary Creates an initial account for an AnalyticDB for PostgreSQL instance.
          *
-         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
-         * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
+         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.
+         * *   You can call this operation to create only initial accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
          * ## Limits
          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
@@ -1249,10 +1249,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary Creates a privileged account for an AnalyticDB for PostgreSQL instance.
+         * @summary Creates an initial account for an AnalyticDB for PostgreSQL instance.
          *
-         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
-         * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
+         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.
+         * *   You can call this operation to create only initial accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
          * ## Limits
          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
@@ -21009,6 +21009,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 request.HybridSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HybridSearchArgs, "HybridSearchArgs", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RelationalTableFilter))
+            {
+                request.RelationalTableFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelationalTableFilter, "RelationalTableFilter", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Vector))
             {
                 request.VectorShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Vector, "Vector", "json");
@@ -21073,6 +21077,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationalTableFilterShrink))
+            {
+                query["RelationalTableFilter"] = request.RelationalTableFilterShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {
@@ -21121,6 +21129,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 request.HybridSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HybridSearchArgs, "HybridSearchArgs", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RelationalTableFilter))
+            {
+                request.RelationalTableFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelationalTableFilter, "RelationalTableFilter", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Vector))
             {
                 request.VectorShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Vector, "Vector", "json");
@@ -21185,6 +21197,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationalTableFilterShrink))
+            {
+                query["RelationalTableFilter"] = request.RelationalTableFilterShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {

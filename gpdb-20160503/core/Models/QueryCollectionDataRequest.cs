@@ -174,6 +174,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("RelationalTableFilter")]
+        [Validation(Required=false)]
+        public QueryCollectionDataRequestRelationalTableFilter RelationalTableFilter { get; set; }
+        public class QueryCollectionDataRequestRelationalTableFilter : TeaModel {
+            [NameInMap("CollectionMetadataField")]
+            [Validation(Required=false)]
+            public string CollectionMetadataField { get; set; }
+
+            [NameInMap("Condition")]
+            [Validation(Required=false)]
+            public string Condition { get; set; }
+
+            [NameInMap("TableField")]
+            [Validation(Required=false)]
+            public string TableField { get; set; }
+
+            [NameInMap("TableName")]
+            [Validation(Required=false)]
+            public string TableName { get; set; }
+
+        }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

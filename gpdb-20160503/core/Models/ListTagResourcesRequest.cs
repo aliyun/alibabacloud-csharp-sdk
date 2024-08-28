@@ -49,10 +49,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The storage mode of the instance. Valid values:
-        /// 
-        /// *   `instance`: reserved storage mode
-        /// *   `ALIYUN::GPDB::INSTANCE`: elastic storage mode
+        /// The resource type. Set the value to instance.
         /// 
         /// This parameter is required.
         /// </summary>

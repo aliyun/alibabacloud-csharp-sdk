@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1. Default value: 1
+        /// The page number. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

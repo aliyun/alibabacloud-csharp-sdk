@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// The description of the privileged account.
+        /// The description of the initial account.
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The name of the privileged account.
+        /// The name of the initial account.
         /// 
         /// *   The name can contain lowercase letters, digits, and underscores (_).
         /// *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
@@ -31,8 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The password of the privileged account.
-        /// 
+        /// The password of the initial account.
         /// *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
         /// *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
         /// *   The password must be 8 to 32 characters in length.
@@ -43,6 +42,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
+        /// <summary>
+        /// The type of the initial account. Default value: Super, which specifies a privileged account. To create a standard account, set the value to Normal.
+        /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }

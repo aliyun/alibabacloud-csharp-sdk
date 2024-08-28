@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("RelationalTableFilter")]
+        [Validation(Required=false)]
+        public string RelationalTableFilterShrink { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
