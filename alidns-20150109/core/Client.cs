@@ -5610,6 +5610,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
+         * @summary Queries the complete configuration information about a Global Traffic Manager (GTM) instance, including the details about the access domain name, alert notifications, address pools, and addresses.
+         *
          * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeCloudGtmInstanceConfigFullInfoResponse
@@ -5654,6 +5656,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
+         * @summary Queries the complete configuration information about a Global Traffic Manager (GTM) instance, including the details about the access domain name, alert notifications, address pools, and addresses.
+         *
          * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeCloudGtmInstanceConfigFullInfoResponse
@@ -5698,6 +5702,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
+         * @summary Queries the complete configuration information about a Global Traffic Manager (GTM) instance, including the details about the access domain name, alert notifications, address pools, and addresses.
+         *
          * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
          * @return DescribeCloudGtmInstanceConfigFullInfoResponse
          */
@@ -5708,6 +5714,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
+         * @summary Queries the complete configuration information about a Global Traffic Manager (GTM) instance, including the details about the access domain name, alert notifications, address pools, and addresses.
+         *
          * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
          * @return DescribeCloudGtmInstanceConfigFullInfoResponse
          */

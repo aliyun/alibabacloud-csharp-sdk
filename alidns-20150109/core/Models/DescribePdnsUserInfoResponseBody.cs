@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public long? PdnsId { get; set; }
 
+            [NameInMap("SecretKey")]
+            [Validation(Required=false)]
+            public string SecretKey { get; set; }
+
             [NameInMap("ServiceType")]
             [Validation(Required=false)]
             public string ServiceType { get; set; }

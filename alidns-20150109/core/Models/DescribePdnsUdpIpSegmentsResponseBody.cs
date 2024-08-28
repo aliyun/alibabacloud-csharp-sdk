@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
+            [NameInMap("CreateTimestamp")]
+            [Validation(Required=false)]
+            public long? CreateTimestamp { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
@@ -28,6 +36,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("SecretKey")]
+            [Validation(Required=false)]
+            public string SecretKey { get; set; }
 
             [NameInMap("State")]
             [Validation(Required=false)]
