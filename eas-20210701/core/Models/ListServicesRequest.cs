@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        /// <summary>
+        /// The ID of the private gateway.
+        /// </summary>
         [NameInMap("Gateway")]
         [Validation(Required=false)]
         public string Gateway { get; set; }

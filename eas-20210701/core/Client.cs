@@ -6258,6 +6258,166 @@ namespace AlibabaCloud.SDK.Eas20210701
         }
 
         /**
+         * @summary 获取租户配置列表
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTenantAddonsResponse
+         */
+        public ListTenantAddonsResponse ListTenantAddonsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTenantAddons",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/tenantaddons",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTenantAddonsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取租户配置列表
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTenantAddonsResponse
+         */
+        public async Task<ListTenantAddonsResponse> ListTenantAddonsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTenantAddons",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/tenantaddons",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTenantAddonsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取租户配置列表
+         *
+         * @return ListTenantAddonsResponse
+         */
+        public ListTenantAddonsResponse ListTenantAddons()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListTenantAddonsWithOptions(headers, runtime);
+        }
+
+        /**
+         * @summary 获取租户配置列表
+         *
+         * @return ListTenantAddonsResponse
+         */
+        public async Task<ListTenantAddonsResponse> ListTenantAddonsAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListTenantAddonsWithOptionsAsync(headers, runtime);
+        }
+
+        /**
+         * @summary 重置租户配置
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReinstallTenantAddonResponse
+         */
+        public ReinstallTenantAddonResponse ReinstallTenantAddonWithOptions(string ClusterId, string TenantAddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReinstallTenantAddon",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/tenantaddons/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TenantAddonName) + "/reinstall",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReinstallTenantAddonResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重置租户配置
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReinstallTenantAddonResponse
+         */
+        public async Task<ReinstallTenantAddonResponse> ReinstallTenantAddonWithOptionsAsync(string ClusterId, string TenantAddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReinstallTenantAddon",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/tenantaddons/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TenantAddonName) + "/reinstall",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReinstallTenantAddonResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重置租户配置
+         *
+         * @return ReinstallTenantAddonResponse
+         */
+        public ReinstallTenantAddonResponse ReinstallTenantAddon(string ClusterId, string TenantAddonName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReinstallTenantAddonWithOptions(ClusterId, TenantAddonName, headers, runtime);
+        }
+
+        /**
+         * @summary 重置租户配置
+         *
+         * @return ReinstallTenantAddonResponse
+         */
+        public async Task<ReinstallTenantAddonResponse> ReinstallTenantAddonAsync(string ClusterId, string TenantAddonName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReinstallTenantAddonWithOptionsAsync(ClusterId, TenantAddonName, headers, runtime);
+        }
+
+        /**
          * @summary Performs canary release or blue-green release of a service.
          *
          * @param request ReleaseServiceRequest
