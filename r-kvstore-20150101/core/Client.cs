@@ -29,7 +29,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 {"cn-shenzhen", "r-kvstore.aliyuncs.com"},
                 {"cn-heyuan", "r-kvstore.aliyuncs.com"},
                 {"cn-guangzhou", "r-kvstore.aliyuncs.com"},
-                {"cn-hongkong", "r-kvstore.aliyuncs.com"},
                 {"cn-hangzhou-finance", "r-kvstore.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "r-kvstore.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "r-kvstore.aliyuncs.com"},
@@ -9393,7 +9392,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-         * @summary Queries a list of parameters that can be configured for different versions of parameter templates.
+         * @summary Queries the parameters that can be configured in parameter templates across different database versions.
          *
          * @param request DescribeParameterGroupSupportParamRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9455,7 +9454,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-         * @summary Queries a list of parameters that can be configured for different versions of parameter templates.
+         * @summary Queries the parameters that can be configured in parameter templates across different database versions.
          *
          * @param request DescribeParameterGroupSupportParamRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9517,7 +9516,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-         * @summary Queries a list of parameters that can be configured for different versions of parameter templates.
+         * @summary Queries the parameters that can be configured in parameter templates across different database versions.
          *
          * @param request DescribeParameterGroupSupportParamRequest
          * @return DescribeParameterGroupSupportParamResponse
@@ -9529,7 +9528,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-         * @summary Queries a list of parameters that can be configured for different versions of parameter templates.
+         * @summary Queries the parameters that can be configured in parameter templates across different database versions.
          *
          * @param request DescribeParameterGroupSupportParamRequest
          * @return DescribeParameterGroupSupportParamResponse
@@ -10347,6 +10346,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
+            {
+                query["ShardCount"] = request.ShardCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
                 query["ZoneId"] = request.ZoneId;
@@ -10456,6 +10459,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
+            {
+                query["ShardCount"] = request.ShardCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
@@ -16139,6 +16146,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["Parameters"] = request.Parameters;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -16200,6 +16211,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
             {
                 query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {

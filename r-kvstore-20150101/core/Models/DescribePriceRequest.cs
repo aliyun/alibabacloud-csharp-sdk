@@ -161,6 +161,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("ShardCount")]
+        [Validation(Required=false)]
+        public int? ShardCount { get; set; }
+
         /// <summary>
         /// The zone ID of the instance. You can call the [DescribeZones](https://help.aliyun.com/document_detail/94527.html) operation to query the most recent zone list.
         /// </summary>

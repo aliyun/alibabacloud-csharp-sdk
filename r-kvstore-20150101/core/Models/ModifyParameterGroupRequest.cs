@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// *   The name can contain letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.
         /// *   The name can be 8 to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParameterGroupName")]
         [Validation(Required=false)]

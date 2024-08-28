@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The service category. Valid values:
         /// 
-        /// *   **standard**: Community Edition
-        /// *   **enterprise**: Enhanced Edition (Tair)
+        /// *   **standard**: ApsaraDB for Redis Community Edition
+        /// *   **enterprise**: ApsaraDB for Redis Enhanced Edition (Tair)
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -22,16 +22,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The engine type. Valid values:
         /// 
-        /// *   **redis**: Redis or Tair DRAM-based instances
-        /// *   **tair_pena**: Tair persistent memory-optimized instances
-        /// *   **tair_pdb**: Tair ESSD-based instances
+        /// *   **redis**: ApsaraDB for Redis Community Edition instance or Tair DRAM-based instance
+        /// *   **tair_pena**: Tair persistent memory-optimized instance
+        /// *   **tair_pdb**: Tair ESSD/SSD-based instance
         /// </summary>
         [NameInMap("EngineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }
 
         /// <summary>
-        /// The engine version.
+        /// The compatible engine version. Valid values:
+        /// 
+        /// *   For ApsaraDB for Redis Community Edition instances, set the parameter to **5.0**, **6.0**, or **7.0**.
+        /// *   For Tair DRAM-based instances that are compatible with Redis 5.0 or Redis 6.0, set the parameter to **5.0** or **6.0**.
+        /// *   For Tair persistent memory-optimized instances that are compatible with Redis 6.0, set the parameter to **1.0**.
+        /// *   For Tair ESSD-based instances that are compatible with Redis 6.0, set the parameter to **1.0**. For Tair SSD-based instances that are compatible with Redis 6.0, set the parameter to **2.0**.
         /// 
         /// This parameter is required.
         /// </summary>
