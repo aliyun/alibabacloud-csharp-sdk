@@ -747,6 +747,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EnableEbpf"] = request.EnableEbpf;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNewArms))
+            {
+                query["EnableNewArms"] = request.EnableNewArms;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
                 query["Envs"] = request.Envs;
@@ -1022,6 +1026,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEbpf))
             {
                 query["EnableEbpf"] = request.EnableEbpf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNewArms))
+            {
+                query["EnableNewArms"] = request.EnableNewArms;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
@@ -1442,7 +1450,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
-         * @summary name
+         * @summary Create a ConfigMap in a namespace.
          *
          * @param request CreateConfigMapRequest
          * @param headers map
@@ -1492,7 +1500,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
-         * @summary name
+         * @summary Create a ConfigMap in a namespace.
          *
          * @param request CreateConfigMapRequest
          * @param headers map
@@ -1542,7 +1550,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
-         * @summary name
+         * @summary Create a ConfigMap in a namespace.
          *
          * @param request CreateConfigMapRequest
          * @return CreateConfigMapResponse
@@ -1555,7 +1563,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         }
 
         /**
-         * @summary name
+         * @summary Create a ConfigMap in a namespace.
          *
          * @param request CreateConfigMapRequest
          * @return CreateConfigMapResponse
@@ -4133,6 +4141,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EnableGreyTagRoute"] = request.EnableGreyTagRoute;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNewArms))
+            {
+                query["EnableNewArms"] = request.EnableNewArms;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
                 query["Envs"] = request.Envs;
@@ -4406,6 +4418,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGreyTagRoute))
             {
                 query["EnableGreyTagRoute"] = request.EnableGreyTagRoute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNewArms))
+            {
+                query["EnableNewArms"] = request.EnableNewArms;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {

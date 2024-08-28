@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class WebCustomDomain : TeaModel {
-        [NameInMap("AccountId")]
-        [Validation(Required=false)]
-        public string AccountId { get; set; }
-
         [NameInMap("CreatedTime")]
         [Validation(Required=false)]
         public string CreatedTime { get; set; }
@@ -37,6 +33,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        [NameInMap("RouteConfig")]
+        [Validation(Required=false)]
+        public RouteConfig RouteConfig { get; set; }
+
         [NameInMap("WebCertConfig")]
         [Validation(Required=false)]
         public WebCertConfig WebCertConfig { get; set; }
@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("WebWAFConfig")]
         [Validation(Required=false)]
         public WebWAFConfig WebWAFConfig { get; set; }
+
+        [NameInMap("accountId")]
+        [Validation(Required=false)]
+        public string AccountId { get; set; }
 
     }
 

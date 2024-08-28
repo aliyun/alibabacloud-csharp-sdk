@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string EnableEbpf { get; set; }
 
+        [NameInMap("EnableNewArms")]
+        [Validation(Required=false)]
+        public bool? EnableNewArms { get; set; }
+
         /// <summary>
         /// [{"name":"envtmp","value":"0"}]
         /// </summary>

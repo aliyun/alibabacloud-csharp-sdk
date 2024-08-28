@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public WebCustomDomainBody Body { get; set; }
+        public WebCustomDomain Body { get; set; }
 
     }
 

@@ -209,6 +209,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public bool? EnableIdle { get; set; }
 
+            [NameInMap("EnableNewArms")]
+            [Validation(Required=false)]
+            public bool? EnableNewArms { get; set; }
+
             /// <summary>
             /// The environment variables. Variable description:
             /// 

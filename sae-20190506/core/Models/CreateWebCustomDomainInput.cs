@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        [NameInMap("RouteConfig")]
+        [Validation(Required=false)]
+        public RouteConfig RouteConfig { get; set; }
+
         [NameInMap("WebCertConfig")]
         [Validation(Required=false)]
         public WebCertConfig WebCertConfig { get; set; }

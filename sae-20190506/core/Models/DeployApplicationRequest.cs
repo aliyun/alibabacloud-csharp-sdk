@@ -157,6 +157,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public bool? EnableGreyTagRoute { get; set; }
 
+        [NameInMap("EnableNewArms")]
+        [Validation(Required=false)]
+        public bool? EnableNewArms { get; set; }
+
         /// <summary>
         /// The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](https://help.aliyun.com/document_detail/176914.html). Take note of the following rules:
         /// 
