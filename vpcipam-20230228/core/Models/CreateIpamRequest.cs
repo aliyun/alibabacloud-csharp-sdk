@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public string IpamName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OperatingRegionList")]
         [Validation(Required=false)]
         public List<string> OperatingRegionList { get; set; }

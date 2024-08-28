@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("DefaultResourceDiscoveryAssociationId")]
+            [Validation(Required=false)]
+            public string DefaultResourceDiscoveryAssociationId { get; set; }
+
+            [NameInMap("DefaultResourceDiscoveryId")]
+            [Validation(Required=false)]
+            public string DefaultResourceDiscoveryId { get; set; }
+
             [NameInMap("IpamDescription")]
             [Validation(Required=false)]
             public string IpamDescription { get; set; }
@@ -52,6 +60,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("ResourceDiscoveryAssociationCount")]
+            [Validation(Required=false)]
+            public int? ResourceDiscoveryAssociationCount { get; set; }
 
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
