@@ -113,6 +113,52 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public string InstanceStatus { get; set; }
 
+            [NameInMap("MeasureConfig")]
+            [Validation(Required=false)]
+            public GetInstanceDetailResponseBodyDataMeasureConfig MeasureConfig { get; set; }
+            public class GetInstanceDetailResponseBodyDataMeasureConfig : TeaModel {
+                [NameInMap("DataNodeCuNum")]
+                [Validation(Required=false)]
+                public int? DataNodeCuNum { get; set; }
+
+                [NameInMap("DataNodeReplica")]
+                [Validation(Required=false)]
+                public int? DataNodeReplica { get; set; }
+
+                [NameInMap("IndexNodeCuNum")]
+                [Validation(Required=false)]
+                public int? IndexNodeCuNum { get; set; }
+
+                [NameInMap("IndexNodeReplica")]
+                [Validation(Required=false)]
+                public int? IndexNodeReplica { get; set; }
+
+                [NameInMap("MixCoodinatorNodeCuNum")]
+                [Validation(Required=false)]
+                public int? MixCoodinatorNodeCuNum { get; set; }
+
+                [NameInMap("MixCoodinatorNodeReplica")]
+                [Validation(Required=false)]
+                public int? MixCoodinatorNodeReplica { get; set; }
+
+                [NameInMap("ProxyNodeCuNum")]
+                [Validation(Required=false)]
+                public int? ProxyNodeCuNum { get; set; }
+
+                [NameInMap("ProxyNodeReplica")]
+                [Validation(Required=false)]
+                public int? ProxyNodeReplica { get; set; }
+
+                [NameInMap("QueryNodeCuNum")]
+                [Validation(Required=false)]
+                public int? QueryNodeCuNum { get; set; }
+
+                [NameInMap("QueryNodeReplica")]
+                [Validation(Required=false)]
+                public int? QueryNodeReplica { get; set; }
+
+            }
+
             [NameInMap("OpenPublicNet")]
             [Validation(Required=false)]
             public bool? OpenPublicNet { get; set; }
@@ -132,6 +178,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
 
             [NameInMap("RunningTime")]
             [Validation(Required=false)]

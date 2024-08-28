@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("RunningTime")]
             [Validation(Required=false)]
             public int? RunningTime { get; set; }
