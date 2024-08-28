@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [Validation(Required=false)]
                         public string ConnectString { get; set; }
 
+                        [NameInMap("LockMode")]
+                        [Validation(Required=false)]
+                        public string LockMode { get; set; }
+
                         /// <summary>
                         /// The maximum number of connections to the Configserver node.
                         /// </summary>
@@ -379,6 +383,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [Validation(Required=false)]
                         public string ConnectSting { get; set; }
 
+                        [NameInMap("LockMode")]
+                        [Validation(Required=false)]
+                        public string LockMode { get; set; }
+
                         /// <summary>
                         /// The maximum number of connections to the mongos node.
                         /// </summary>
@@ -665,6 +673,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [NameInMap("ConnectString")]
                         [Validation(Required=false)]
                         public string ConnectString { get; set; }
+
+                        [NameInMap("LockMode")]
+                        [Validation(Required=false)]
+                        public string LockMode { get; set; }
 
                         /// <summary>
                         /// The maximum number of connections to the shard node.
