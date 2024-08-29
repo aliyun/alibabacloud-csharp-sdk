@@ -4531,6 +4531,8 @@ namespace AlibabaCloud.SDK.Green20220926
         }
 
         /**
+         * @summary 获取用户购买状态
+         *
          * @param request GetUserBuyStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetUserBuyStatusResponse
@@ -4563,6 +4565,8 @@ namespace AlibabaCloud.SDK.Green20220926
         }
 
         /**
+         * @summary 获取用户购买状态
+         *
          * @param request GetUserBuyStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetUserBuyStatusResponse
@@ -4595,6 +4599,8 @@ namespace AlibabaCloud.SDK.Green20220926
         }
 
         /**
+         * @summary 获取用户购买状态
+         *
          * @param request GetUserBuyStatusRequest
          * @return GetUserBuyStatusResponse
          */
@@ -4605,6 +4611,8 @@ namespace AlibabaCloud.SDK.Green20220926
         }
 
         /**
+         * @summary 获取用户购买状态
+         *
          * @param request GetUserBuyStatusRequest
          * @return GetUserBuyStatusResponse
          */
