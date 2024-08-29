@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("Search")]
+        [Validation(Required=false)]
+        public string Search { get; set; }
+
     }
 
 }

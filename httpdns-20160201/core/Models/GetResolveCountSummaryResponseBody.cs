@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [NameInMap("Http")]
             [Validation(Required=false)]
             public long? Http { get; set; }
+
             [NameInMap("Http6")]
             [Validation(Required=false)]
             public long? Http6 { get; set; }
+
             [NameInMap("Https")]
             [Validation(Required=false)]
             public long? Https { get; set; }
+
             [NameInMap("Https6")]
             [Validation(Required=false)]
             public long? Https6 { get; set; }
-        };
+
+        }
 
     }
 

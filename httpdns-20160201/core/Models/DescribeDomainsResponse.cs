@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
 {
     public class DescribeDomainsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeDomainsResponseBody Body { get; set; }
 
     }

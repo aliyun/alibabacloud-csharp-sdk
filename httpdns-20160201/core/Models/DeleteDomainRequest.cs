@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

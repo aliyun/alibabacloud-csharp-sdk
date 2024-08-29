@@ -17,13 +17,33 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [Validation(Required=false)]
             public List<ListDomainsResponseBodyDomainInfosDomainInfo> DomainInfo { get; set; }
             public class ListDomainsResponseBodyDomainInfosDomainInfo : TeaModel {
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("Resolved")]
+                [Validation(Required=false)]
                 public long? Resolved { get; set; }
+
+                [NameInMap("Resolved6")]
+                [Validation(Required=false)]
                 public long? Resolved6 { get; set; }
+
+                [NameInMap("ResolvedHttps")]
+                [Validation(Required=false)]
                 public long? ResolvedHttps { get; set; }
+
+                [NameInMap("ResolvedHttps6")]
+                [Validation(Required=false)]
                 public long? ResolvedHttps6 { get; set; }
+
+                [NameInMap("TimeModified")]
+                [Validation(Required=false)]
+                public long? TimeModified { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

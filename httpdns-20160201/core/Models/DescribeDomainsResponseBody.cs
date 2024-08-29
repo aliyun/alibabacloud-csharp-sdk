@@ -17,9 +17,13 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [Validation(Required=false)]
             public List<DescribeDomainsResponseBodyDomainsDomain> Domain { get; set; }
             public class DescribeDomainsResponseBodyDomainsDomain : TeaModel {
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Httpdns20160201.Models
 {
     public class GetResolveStatisticsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         [Validation(Required=false)]
         public string ProtocolName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TimeSpan")]
         [Validation(Required=false)]
         public int? TimeSpan { get; set; }
