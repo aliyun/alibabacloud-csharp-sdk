@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public bool? IsAutoCreate { get; set; }
 
+            [NameInMap("PayloadRuleEnable")]
+            [Validation(Required=false)]
+            public long? PayloadRuleEnable { get; set; }
+
             /// <summary>
             /// The forwarding protocol. Valid values:
             /// 
@@ -56,6 +60,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
+
+            [NameInMap("ProxyEnable")]
+            [Validation(Required=false)]
+            public long? ProxyEnable { get; set; }
+
+            [NameInMap("ProxyStatus")]
+            [Validation(Required=false)]
+            public string ProxyStatus { get; set; }
 
             /// <summary>
             /// The IP addresses of origin servers.

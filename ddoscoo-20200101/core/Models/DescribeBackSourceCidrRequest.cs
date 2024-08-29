@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeBackSourceCidrRequest : TeaModel {
         /// <summary>
-        /// The IP version of the back-to-origin CIDR block.
+        /// The IP version of the back-to-origin CIDR blocks.
         /// 
         /// *   **Ipv4**
         /// *   **Ipv6**

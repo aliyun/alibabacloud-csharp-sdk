@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ProxyEnable")]
+        [Validation(Required=false)]
+        public long? ProxyEnable { get; set; }
+
         /// <summary>
         /// An array that consists of the IP addresses of origin servers.
         /// 

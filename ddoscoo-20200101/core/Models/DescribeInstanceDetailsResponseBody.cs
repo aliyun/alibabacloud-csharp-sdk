@@ -10,19 +10,22 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeInstanceDetailsResponseBody : TeaModel {
         /// <summary>
-        /// The IP address and ISP line information about the instance.
+        /// The IP address and ISP line information about the Anti-DDoS Proxy instance.
         /// </summary>
         [NameInMap("InstanceDetails")]
         [Validation(Required=false)]
         public List<DescribeInstanceDetailsResponseBodyInstanceDetails> InstanceDetails { get; set; }
         public class DescribeInstanceDetailsResponseBodyInstanceDetails : TeaModel {
             /// <summary>
-            /// The information about the IP address of the instance.
+            /// The IP address information about the Anti-DDoS Proxy instance.
             /// </summary>
             [NameInMap("EipInfos")]
             [Validation(Required=false)]
             public List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> EipInfos { get; set; }
             public class DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos : TeaModel {
+                /// <summary>
+                /// Indicates whether a custom certificate is configured.
+                /// </summary>
                 [NameInMap("CertConfigured")]
                 [Validation(Required=false)]
                 public bool? CertConfigured { get; set; }
@@ -34,6 +37,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [Validation(Required=false)]
                 public string Eip { get; set; }
 
+                /// <summary>
+                /// The type of the instance.
+                /// </summary>
                 [NameInMap("FunctionVersion")]
                 [Validation(Required=false)]
                 public string FunctionVersion { get; set; }
@@ -58,6 +64,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [Validation(Required=false)]
                 public string IpVersion { get; set; }
 
+                /// <summary>
+                /// Indicates whether the TLS 1.3 version is supported.
+                /// </summary>
                 [NameInMap("Ssl13Enabled")]
                 [Validation(Required=false)]
                 public bool? Ssl13Enabled { get; set; }
@@ -75,6 +84,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The Transport Layer Security (TLS) version that is configured.
+                /// </summary>
                 [NameInMap("TlsVersion")]
                 [Validation(Required=false)]
                 public string TlsVersion { get; set; }
@@ -98,7 +110,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -2250,6 +2250,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyEnable))
+            {
+                query["ProxyEnable"] = request.ProxyEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealServers))
             {
                 query["RealServers"] = request.RealServers;
@@ -2301,6 +2305,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyEnable))
+            {
+                query["ProxyEnable"] = request.ProxyEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealServers))
             {
@@ -4012,7 +4020,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /**
          * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
          *
-         * @summary Deletes custom frequency control rules of a website.
+         * @summary Deletes a custom frequency control rule of a website.
          *
          * @param request DeleteWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4057,7 +4065,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /**
          * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
          *
-         * @summary Deletes custom frequency control rules of a website.
+         * @summary Deletes a custom frequency control rule of a website.
          *
          * @param request DeleteWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4102,7 +4110,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /**
          * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
          *
-         * @summary Deletes custom frequency control rules of a website.
+         * @summary Deletes a custom frequency control rule of a website.
          *
          * @param request DeleteWebCCRuleRequest
          * @return DeleteWebCCRuleResponse
@@ -4117,7 +4125,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /**
          * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
          *
-         * @summary Deletes custom frequency control rules of a website.
+         * @summary Deletes a custom frequency control rule of a website.
          *
          * @param request DeleteWebCCRuleRequest
          * @return DeleteWebCCRuleResponse
@@ -5126,7 +5134,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.
+         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.
          *
          * @param request DescribeBackSourceCidrRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5168,7 +5176,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.
+         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.
          *
          * @param request DescribeBackSourceCidrRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5210,7 +5218,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.
+         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.
          *
          * @param request DescribeBackSourceCidrRequest
          * @return DescribeBackSourceCidrResponse
@@ -5222,7 +5230,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.
+         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.
          *
          * @param request DescribeBackSourceCidrRequest
          * @return DescribeBackSourceCidrResponse
@@ -15590,7 +15598,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Disables the Frequency Control policy for a website.
+         * @summary Disables frequency control for a website.
          *
          * @param request DisableWebCCRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15628,7 +15636,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Disables the Frequency Control policy for a website.
+         * @summary Disables frequency control for a website.
          *
          * @param request DisableWebCCRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15666,7 +15674,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Disables the Frequency Control policy for a website.
+         * @summary Disables frequency control for a website.
          *
          * @param request DisableWebCCRequest
          * @return DisableWebCCResponse
@@ -15678,7 +15686,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Disables the Frequency Control policy for a website.
+         * @summary Disables frequency control for a website.
          *
          * @param request DisableWebCCRequest
          * @return DisableWebCCResponse
@@ -15690,7 +15698,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Turns off the Custom Rule switch of the Frequency Control policy for a website.
+         * @summary Disables custom frequency control rules for a website.
          *
          * @param request DisableWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15728,7 +15736,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Turns off the Custom Rule switch of the Frequency Control policy for a website.
+         * @summary Disables custom frequency control rules for a website.
          *
          * @param request DisableWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15766,7 +15774,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Turns off the Custom Rule switch of the Frequency Control policy for a website.
+         * @summary Disables custom frequency control rules for a website.
          *
          * @param request DisableWebCCRuleRequest
          * @return DisableWebCCRuleResponse
@@ -15778,7 +15786,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Turns off the Custom Rule switch of the Frequency Control policy for a website.
+         * @summary Disables custom frequency control rules for a website.
          *
          * @param request DisableWebCCRuleRequest
          * @return DisableWebCCRuleResponse
@@ -16358,7 +16366,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Turns on the Custom Rule switch of the Frequency Control policy for a website.
+         * @summary Enables custom frequency control rules for a website.
          *
          * @param request EnableWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16396,7 +16404,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Turns on the Custom Rule switch of the Frequency Control policy for a website.
+         * @summary Enables custom frequency control rules for a website.
          *
          * @param request EnableWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16434,7 +16442,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Turns on the Custom Rule switch of the Frequency Control policy for a website.
+         * @summary Enables custom frequency control rules for a website.
          *
          * @param request EnableWebCCRuleRequest
          * @return EnableWebCCRuleResponse
@@ -16446,7 +16454,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Turns on the Custom Rule switch of the Frequency Control policy for a website.
+         * @summary Enables custom frequency control rules for a website.
          *
          * @param request EnableWebCCRuleRequest
          * @return EnableWebCCRuleResponse
@@ -18178,6 +18186,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyEnable))
+            {
+                query["ProxyEnable"] = request.ProxyEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealServers))
             {
                 query["RealServers"] = request.RealServers;
@@ -18229,6 +18241,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyEnable))
+            {
+                query["ProxyEnable"] = request.ProxyEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealServers))
             {
@@ -18846,7 +18862,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Changes the mode of the Intelligent Protection policy for a website.
+         * @summary Changes the mode of the intelligent protection feature for a website.
          *
          * @param request ModifyWebAIProtectModeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18888,7 +18904,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Changes the mode of the Intelligent Protection policy for a website.
+         * @summary Changes the mode of the intelligent protection feature for a website.
          *
          * @param request ModifyWebAIProtectModeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18930,7 +18946,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Changes the mode of the Intelligent Protection policy for a website.
+         * @summary Changes the mode of the intelligent protection feature for a website.
          *
          * @param request ModifyWebAIProtectModeRequest
          * @return ModifyWebAIProtectModeResponse
@@ -18942,7 +18958,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Changes the mode of the Intelligent Protection policy for a website.
+         * @summary Changes the mode of the intelligent protection feature for a website.
          *
          * @param request ModifyWebAIProtectModeRequest
          * @return ModifyWebAIProtectModeResponse
@@ -20226,7 +20242,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Enables or disables the Accurate Access Control policy for a website.
+         * @summary Enables or disables accurate access control for a website.
          *
          * @param request ModifyWebPreciseAccessSwitchRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20268,7 +20284,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Enables or disables the Accurate Access Control policy for a website.
+         * @summary Enables or disables accurate access control for a website.
          *
          * @param request ModifyWebPreciseAccessSwitchRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20310,7 +20326,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Enables or disables the Accurate Access Control policy for a website.
+         * @summary Enables or disables accurate access control for a website.
          *
          * @param request ModifyWebPreciseAccessSwitchRequest
          * @return ModifyWebPreciseAccessSwitchResponse
@@ -20322,7 +20338,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Enables or disables the Accurate Access Control policy for a website.
+         * @summary Enables or disables accurate access control for a website.
          *
          * @param request ModifyWebPreciseAccessSwitchRequest
          * @return ModifyWebPreciseAccessSwitchResponse
