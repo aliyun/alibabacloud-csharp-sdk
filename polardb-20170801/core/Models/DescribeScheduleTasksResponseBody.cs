@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string PlannedEndTime { get; set; }
 
+                [NameInMap("PlannedFlashingOffTime")]
+                [Validation(Required=false)]
+                public string PlannedFlashingOffTime { get; set; }
+
                 /// <summary>
                 /// The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.
                 /// </summary>

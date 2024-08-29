@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("EnableGlobalDomainName")]
+        [Validation(Required=false)]
+        public bool? EnableGlobalDomainName { get; set; }
+
         /// <summary>
         /// The description of the GDN. The description must meet the following requirements:
         /// 

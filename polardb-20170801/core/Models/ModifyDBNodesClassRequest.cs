@@ -84,6 +84,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string PlannedEndTime { get; set; }
 
+        [NameInMap("PlannedFlashingOffTime")]
+        [Validation(Required=false)]
+        public string PlannedFlashingOffTime { get; set; }
+
         /// <summary>
         /// The earliest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
         /// 

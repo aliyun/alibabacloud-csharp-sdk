@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyGlobalDatabaseNetworkRequest : TeaModel {
+        [NameInMap("EnableGlobalDomainName")]
+        [Validation(Required=false)]
+        public bool? EnableGlobalDomainName { get; set; }
+
         /// <summary>
         /// The description of the GDN. The description must meet the following requirements:
         /// 
@@ -16,8 +20,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   It must start with a letter.
         /// *   It can contain letters, digits, underscores (_), and hyphens (-).
         /// *   It must be 2 to 126 characters in length.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("GDNDescription")]
         [Validation(Required=false)]

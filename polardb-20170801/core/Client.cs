@@ -3053,6 +3053,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGlobalDomainName))
+            {
+                query["EnableGlobalDomainName"] = request.EnableGlobalDomainName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNDescription))
             {
                 query["GDNDescription"] = request.GDNDescription;
@@ -3116,6 +3120,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGlobalDomainName))
+            {
+                query["EnableGlobalDomainName"] = request.EnableGlobalDomainName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNDescription))
             {
@@ -18571,6 +18579,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["PlannedEndTime"] = request.PlannedEndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedFlashingOffTime))
+            {
+                query["PlannedFlashingOffTime"] = request.PlannedFlashingOffTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedStartTime))
             {
                 query["PlannedStartTime"] = request.PlannedStartTime;
@@ -18648,6 +18660,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedEndTime))
             {
                 query["PlannedEndTime"] = request.PlannedEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedFlashingOffTime))
+            {
+                query["PlannedFlashingOffTime"] = request.PlannedFlashingOffTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedStartTime))
             {
@@ -18887,6 +18903,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["PlannedEndTime"] = request.PlannedEndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedFlashingOffTime))
+            {
+                query["PlannedFlashingOffTime"] = request.PlannedFlashingOffTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedStartTime))
             {
                 query["PlannedStartTime"] = request.PlannedStartTime;
@@ -18960,6 +18980,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedEndTime))
             {
                 query["PlannedEndTime"] = request.PlannedEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedFlashingOffTime))
+            {
+                query["PlannedFlashingOffTime"] = request.PlannedFlashingOffTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedStartTime))
             {
@@ -19203,6 +19227,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGlobalDomainName))
+            {
+                query["EnableGlobalDomainName"] = request.EnableGlobalDomainName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNDescription))
             {
                 query["GDNDescription"] = request.GDNDescription;
@@ -19265,6 +19293,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGlobalDomainName))
+            {
+                query["EnableGlobalDomainName"] = request.EnableGlobalDomainName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNDescription))
             {
                 query["GDNDescription"] = request.GDNDescription;
