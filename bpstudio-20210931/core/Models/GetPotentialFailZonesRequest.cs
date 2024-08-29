@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class GetPotentialFailZonesRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether the value of this parameter is the ID of a disaster recovery set.
+        /// </summary>
         [NameInMap("IsPlanId")]
         [Validation(Required=false)]
         public bool? IsPlanId { get; set; }
 
+        /// <summary>
+        /// If you set IsPlanId to false, specify the ID of a disaster recovery application. If you set IsPlanId to true, specify the ID of a disaster recovery set.
+        /// </summary>
         [NameInMap("ObjectId")]
         [Validation(Required=false)]
         public string ObjectId { get; set; }

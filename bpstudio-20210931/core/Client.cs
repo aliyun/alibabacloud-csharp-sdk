@@ -38,7 +38,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 容灾应用切回
+         * @summary Switches a disaster recovery application back to the primary zone.
+         *
+         * @description You can call this operation to switch a disaster recovery application back to the primary zone.
          *
          * @param request AppFailBackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -72,7 +74,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 容灾应用切回
+         * @summary Switches a disaster recovery application back to the primary zone.
+         *
+         * @description You can call this operation to switch a disaster recovery application back to the primary zone.
          *
          * @param request AppFailBackRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -106,7 +110,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 容灾应用切回
+         * @summary Switches a disaster recovery application back to the primary zone.
+         *
+         * @description You can call this operation to switch a disaster recovery application back to the primary zone.
          *
          * @param request AppFailBackRequest
          * @return AppFailBackResponse
@@ -118,7 +124,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 容灾应用切回
+         * @summary Switches a disaster recovery application back to the primary zone.
+         *
+         * @description You can call this operation to switch a disaster recovery application back to the primary zone.
          *
          * @param request AppFailBackRequest
          * @return AppFailBackResponse
@@ -130,7 +138,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 容灾应用切换
+         * @summary Switches a disaster recovery application to another supported zone.
+         *
+         * @description You can call this operation to switch a disaster recovery application to another supported zone.
          *
          * @param request AppFailOverRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -168,7 +178,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 容灾应用切换
+         * @summary Switches a disaster recovery application to another supported zone.
+         *
+         * @description You can call this operation to switch a disaster recovery application to another supported zone.
          *
          * @param request AppFailOverRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -206,7 +218,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 容灾应用切换
+         * @summary Switches a disaster recovery application to another supported zone.
+         *
+         * @description You can call this operation to switch a disaster recovery application to another supported zone.
          *
          * @param request AppFailOverRequest
          * @return AppFailOverResponse
@@ -218,7 +232,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 容灾应用切换
+         * @summary Switches a disaster recovery application to another supported zone.
+         *
+         * @description You can call this operation to switch a disaster recovery application to another supported zone.
          *
          * @param request AppFailOverRequest
          * @return AppFailOverResponse
@@ -1122,6 +1138,98 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
+         * @summary 获取需要重新配置的变量列表
+         *
+         * @param request GetApplicationVariables4FailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetApplicationVariables4FailResponse
+         */
+        public GetApplicationVariables4FailResponse GetApplicationVariables4FailWithOptions(GetApplicationVariables4FailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApplicationVariables4Fail",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApplicationVariables4FailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取需要重新配置的变量列表
+         *
+         * @param request GetApplicationVariables4FailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetApplicationVariables4FailResponse
+         */
+        public async Task<GetApplicationVariables4FailResponse> GetApplicationVariables4FailWithOptionsAsync(GetApplicationVariables4FailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApplicationVariables4Fail",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApplicationVariables4FailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取需要重新配置的变量列表
+         *
+         * @param request GetApplicationVariables4FailRequest
+         * @return GetApplicationVariables4FailResponse
+         */
+        public GetApplicationVariables4FailResponse GetApplicationVariables4Fail(GetApplicationVariables4FailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetApplicationVariables4FailWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取需要重新配置的变量列表
+         *
+         * @param request GetApplicationVariables4FailRequest
+         * @return GetApplicationVariables4FailResponse
+         */
+        public async Task<GetApplicationVariables4FailResponse> GetApplicationVariables4FailAsync(GetApplicationVariables4FailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetApplicationVariables4FailWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Asynchronously queries the result of an operation that is performed on a service instance.
          *
          * @param request GetExecuteOperationResultRequest
@@ -1222,7 +1330,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取容灾切换任务状态
+         * @summary Queries the status of a disaster recovery switchover task by task ID.
+         *
+         * @description You can call this operation to query the status of a disaster recovery switchover task by task ID.
          *
          * @param request GetFoTaskStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1256,7 +1366,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取容灾切换任务状态
+         * @summary Queries the status of a disaster recovery switchover task by task ID.
+         *
+         * @description You can call this operation to query the status of a disaster recovery switchover task by task ID.
          *
          * @param request GetFoTaskStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1290,7 +1402,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取容灾切换任务状态
+         * @summary Queries the status of a disaster recovery switchover task by task ID.
+         *
+         * @description You can call this operation to query the status of a disaster recovery switchover task by task ID.
          *
          * @param request GetFoTaskStatusRequest
          * @return GetFoTaskStatusResponse
@@ -1302,7 +1416,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取容灾切换任务状态
+         * @summary Queries the status of a disaster recovery switchover task by task ID.
+         *
+         * @description You can call this operation to query the status of a disaster recovery switchover task by task ID.
          *
          * @param request GetFoTaskStatusRequest
          * @return GetFoTaskStatusResponse
@@ -1314,7 +1430,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取容灾服务可切换的可用区列表
+         * @summary Queries the zones where the specified disaster recovery service can be switched.
+         *
+         * @description You can call this operation to query the zones where the specified disaster recovery service can be switched.
          *
          * @param request GetPotentialFailZonesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1352,7 +1470,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取容灾服务可切换的可用区列表
+         * @summary Queries the zones where the specified disaster recovery service can be switched.
+         *
+         * @description You can call this operation to query the zones where the specified disaster recovery service can be switched.
          *
          * @param request GetPotentialFailZonesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1390,7 +1510,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取容灾服务可切换的可用区列表
+         * @summary Queries the zones where the specified disaster recovery service can be switched.
+         *
+         * @description You can call this operation to query the zones where the specified disaster recovery service can be switched.
          *
          * @param request GetPotentialFailZonesRequest
          * @return GetPotentialFailZonesResponse
@@ -1402,7 +1524,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取容灾服务可切换的可用区列表
+         * @summary Queries the zones where the specified disaster recovery service can be switched.
+         *
+         * @description You can call this operation to query the zones where the specified disaster recovery service can be switched.
          *
          * @param request GetPotentialFailZonesRequest
          * @return GetPotentialFailZonesResponse
@@ -1634,7 +1758,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 准备应用切换
+         * @summary Prepares for application switchover and initiates a switchover task.
+         *
+         * @description You can call this operation to prepare for application switchover and initiate a switchover task.
          *
          * @param request InitAppFailOverRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1668,7 +1794,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 准备应用切换
+         * @summary Prepares for application switchover and initiates a switchover task.
+         *
+         * @description You can call this operation to prepare for application switchover and initiate a switchover task.
          *
          * @param request InitAppFailOverRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1702,7 +1830,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 准备应用切换
+         * @summary Prepares for application switchover and initiates a switchover task.
+         *
+         * @description You can call this operation to prepare for application switchover and initiate a switchover task.
          *
          * @param request InitAppFailOverRequest
          * @return InitAppFailOverResponse
@@ -1714,7 +1844,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 准备应用切换
+         * @summary Prepares for application switchover and initiates a switchover task.
+         *
+         * @description You can call this operation to prepare for application switchover and initiate a switchover task.
          *
          * @param request InitAppFailOverRequest
          * @return InitAppFailOverResponse
@@ -1874,7 +2006,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取已经创建的APP
+         * @summary Queries disaster recovery plans.
+         *
+         * @description You can call this operation to query all disaster recovery plans.
          *
          * @param request ListFoCreatedAppsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1899,7 +2033,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取已经创建的APP
+         * @summary Queries disaster recovery plans.
+         *
+         * @description You can call this operation to query all disaster recovery plans.
          *
          * @param request ListFoCreatedAppsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1924,7 +2060,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取已经创建的APP
+         * @summary Queries disaster recovery plans.
+         *
+         * @description You can call this operation to query all disaster recovery plans.
          *
          * @return ListFoCreatedAppsResponse
          */
@@ -1935,7 +2073,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         }
 
         /**
-         * @summary 获取已经创建的APP
+         * @summary Queries disaster recovery plans.
+         *
+         * @description You can call this operation to query all disaster recovery plans.
          *
          * @return ListFoCreatedAppsResponse
          */
@@ -2227,6 +2367,106 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 重新配置应用
+         *
+         * @param request ReConfigApplicationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReConfigApplicationResponse
+         */
+        public ReConfigApplicationResponse ReConfigApplicationWithOptions(ReConfigApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                body["Variables"] = request.Variables;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReConfigApplication",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReConfigApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重新配置应用
+         *
+         * @param request ReConfigApplicationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReConfigApplicationResponse
+         */
+        public async Task<ReConfigApplicationResponse> ReConfigApplicationWithOptionsAsync(ReConfigApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                body["Variables"] = request.Variables;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReConfigApplication",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReConfigApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重新配置应用
+         *
+         * @param request ReConfigApplicationRequest
+         * @return ReConfigApplicationResponse
+         */
+        public ReConfigApplicationResponse ReConfigApplication(ReConfigApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReConfigApplicationWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 重新配置应用
+         *
+         * @param request ReConfigApplicationRequest
+         * @return ReConfigApplicationResponse
+         */
+        public async Task<ReConfigApplicationResponse> ReConfigApplicationAsync(ReConfigApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReConfigApplicationWithOptionsAsync(request, runtime);
         }
 
         /**

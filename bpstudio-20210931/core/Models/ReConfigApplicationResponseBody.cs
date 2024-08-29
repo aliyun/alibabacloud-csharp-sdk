@@ -8,30 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
-    public class GetPotentialFailZonesResponseBody : TeaModel {
-        /// <summary>
-        /// The response code.
-        /// </summary>
+    public class ReConfigApplicationResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? Code { get; set; }
 
-        /// <summary>
-        /// The zones where the current disaster recovery service can be switched.
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<string> Data { get; set; }
-
-        /// <summary>
-        /// The error message.
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

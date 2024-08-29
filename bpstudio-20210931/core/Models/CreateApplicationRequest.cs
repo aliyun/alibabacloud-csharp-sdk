@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         /// </summary>
         [NameInMap("Variables")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Variables { get; set; }
+        public Dictionary<string, object> Variables { get; set; }
 
     }
 

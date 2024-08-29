@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
-    public class InitAppFailOverRequest : TeaModel {
-        /// <summary>
-        /// The application ID.
-        /// </summary>
-        [NameInMap("ApplicationId")]
+    public class GetApplicationVariables4FailRequest : TeaModel {
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string ApplicationId { get; set; }
+        public string AppId { get; set; }
 
     }
 
