@@ -29,9 +29,17 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public FaceLivenessResponseBodyResultExtFaceInfo ExtFaceInfo { get; set; }
             public class FaceLivenessResponseBodyResultExtFaceInfo : TeaModel {
+                [NameInMap("FaceAge")]
+                [Validation(Required=false)]
+                public int? FaceAge { get; set; }
+
                 [NameInMap("FaceAttack")]
                 [Validation(Required=false)]
                 public string FaceAttack { get; set; }
+
+                [NameInMap("FaceGender")]
+                [Validation(Required=false)]
+                public string FaceGender { get; set; }
 
                 [NameInMap("FaceQualityScore")]
                 [Validation(Required=false)]
