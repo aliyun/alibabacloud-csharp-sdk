@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateAlertRequest : TeaModel {
         /// <summary>
+        /// The detailed configurations of the alert rule.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
         public AlertConfiguration Configuration { get; set; }
 
+        /// <summary>
+        /// The description of the alert rule.
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// The display name of the alert rule.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("displayName")]
@@ -28,6 +35,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// The name of the alert rule. Make sure that the name is unique in a project.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("name")]
@@ -35,6 +44,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// The scheduling configurations of the alert rule.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("schedule")]

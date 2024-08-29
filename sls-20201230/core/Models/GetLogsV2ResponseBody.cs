@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<Dictionary<string, string>> Data { get; set; }
 
         /// <summary>
-        /// The metadata that is returned.
+        /// The metadata of the returned data.
         /// </summary>
         [NameInMap("meta")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public List<List<LogContent>> Highlights { get; set; }
 
             /// <summary>
-            /// Indicates whether the returned result is accurate.
+            /// Indicates whether the returned result is accurate to seconds.
             /// </summary>
             [NameInMap("isAccurate")]
             [Validation(Required=false)]

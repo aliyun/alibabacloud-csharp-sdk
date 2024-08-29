@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Mode { get; set; }
 
+        [NameInMap("processorId")]
+        [Validation(Required=false)]
+        public string ProcessorId { get; set; }
+
         [NameInMap("productType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

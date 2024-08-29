@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetContextLogsRequest : TeaModel {
         /// <summary>
-        /// The number of logs that you want to obtain and are generated before the generation time of the start log. Valid values: (0,100].
+        /// The number of logs that you want to obtain and are generated before the generation time of the start log. Valid values: `(0,100]`.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? BackLines { get; set; }
 
         /// <summary>
-        /// The number of logs that you want to obtain and are generated after the generation time of the start log. Valid values: (0,100].
+        /// The number of logs that you want to obtain and are generated after the generation time of the start log. Valid values: `(0,100]`.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ExternalStoreName { get; set; }
 
         /// <summary>
-        /// The parameters that are configured for the external store.
+        /// The parameters of the external store.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public CreateOssExternalStoreRequestParameter Parameter { get; set; }
         public class CreateOssExternalStoreRequestParameter : TeaModel {
             /// <summary>
-            /// The AccessKey ID of your account.
+            /// The AccessKey ID.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Accessid { get; set; }
 
             /// <summary>
-            /// The AccessKey secret of your account.
+            /// The AccessKey secret.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// The fields that are associated to the external store.
+            /// The associated fields.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The type of the field.
+                /// The data type of the field.
                 /// 
                 /// This parameter is required.
                 /// </summary>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
-            /// The Object Storage Service (OSS) endpoint.
+            /// The OSS endpoint. For more information, see [Regions and endpoints](https://help.aliyun.com/document_detail/31837.html).
             /// 
             /// This parameter is required.
             /// </summary>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// The names of the OSS objects that are associated to the external store.
+            /// The associated OSS objects. Valid values of n: 1 to 100.
             /// 
             /// This parameter is required.
             /// </summary>

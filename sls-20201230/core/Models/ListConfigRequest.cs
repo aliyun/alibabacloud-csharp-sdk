@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListConfigRequest : TeaModel {
         /// <summary>
-        /// The name of the Logtail configuration.
+        /// The name of the Logtail configuration, which is used for fuzzy match.
         /// </summary>
         [NameInMap("configName")]
         [Validation(Required=false)]

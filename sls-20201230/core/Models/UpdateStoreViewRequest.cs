@@ -10,6 +10,26 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateStoreViewRequest : TeaModel {
         /// <summary>
+        /// The type of the dataset.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   metricstore
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   logstore
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("storeType")]
@@ -17,6 +37,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string StoreType { get; set; }
 
         /// <summary>
+        /// The Logstores or Metricstores.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("stores")]

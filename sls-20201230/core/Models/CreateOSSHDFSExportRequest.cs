@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateOSSHDFSExportRequest : TeaModel {
         /// <summary>
+        /// The configuration details of the job.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
         public OSSExportConfiguration Configuration { get; set; }
 
+        /// <summary>
+        /// The description of the job.
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// The display name of the job.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("displayName")]
@@ -28,6 +35,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// The unique identifier of the OSS data shipping job.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("name")]

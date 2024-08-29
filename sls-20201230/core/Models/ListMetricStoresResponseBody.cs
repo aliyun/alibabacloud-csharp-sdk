@@ -8,24 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListStoreViewsResponseBody : TeaModel {
-        /// <summary>
-        /// The number of returned datasets.
-        /// </summary>
+    public class ListMetricStoresResponseBody : TeaModel {
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
-        /// <summary>
-        /// The dataset names.
-        /// </summary>
-        [NameInMap("storeviews")]
+        [NameInMap("metricstores")]
         [Validation(Required=false)]
-        public List<string> Storeviews { get; set; }
+        public List<string> Metricstores { get; set; }
 
-        /// <summary>
-        /// The total number of datasets in the project.
-        /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]
         public int? Total { get; set; }
