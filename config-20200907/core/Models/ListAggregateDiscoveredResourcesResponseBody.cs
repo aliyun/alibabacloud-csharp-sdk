@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string Tags { get; set; }
 
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
+                public long? UpdateTime { get; set; }
+
                 /// <summary>
                 /// The build version of the resource.
                 /// </summary>

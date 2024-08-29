@@ -1,3 +1,15 @@
+2024-08-29 Version: 2.4.7
+- Update API ListAggregateDiscoveredResources: add param EndUpdateTimestamp.
+- Update API ListAggregateDiscoveredResources: add param ExcludeResourceTypes.
+- Update API ListAggregateDiscoveredResources: add param StartUpdateTimestamp.
+- Update API ListAggregateDiscoveredResources: update response param.
+- Update API ListDiscoveredResources: add param EndUpdateTimestamp.
+- Update API ListDiscoveredResources: add param ExcludeResourceTypes.
+- Update API ListDiscoveredResources: add param StartUpdateTimestamp.
+- Update API ListDiscoveredResources: update param MaxResults.
+- Update API ListDiscoveredResources: update response param.
+
+
 2024-08-07 Version: 2.4.6
 - Generated csharp 2020-09-07 for Config.
 

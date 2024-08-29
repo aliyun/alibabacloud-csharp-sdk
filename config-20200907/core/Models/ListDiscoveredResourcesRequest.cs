@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListDiscoveredResourcesRequest : TeaModel {
+        [NameInMap("EndUpdateTimestamp")]
+        [Validation(Required=false)]
+        public long? EndUpdateTimestamp { get; set; }
+
+        [NameInMap("ExcludeResourceTypes")]
+        [Validation(Required=false)]
+        public string ExcludeResourceTypes { get; set; }
+
         /// <summary>
         /// The maximum number of entries returned for a single request. Valid values: 1 to 100.
         /// 
@@ -55,6 +63,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public string ResourceTypes { get; set; }
+
+        [NameInMap("StartUpdateTimestamp")]
+        [Validation(Required=false)]
+        public long? StartUpdateTimestamp { get; set; }
 
     }
 
