@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// *   32 CU
         /// 
         /// >  You are charged for coordinator node resources of more than 8 compute units (CUs).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MasterCU")]
         [Validation(Required=false)]
