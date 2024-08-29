@@ -55365,6 +55365,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidrBlock))
+            {
+                query["DestinationCidrBlock"] = request.DestinationCidrBlock;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNextHopId))
             {
                 query["NewNextHopId"] = request.NewNextHopId;
@@ -55400,6 +55404,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteEntryName))
             {
                 query["RouteEntryName"] = request.RouteEntryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableId))
+            {
+                query["RouteTableId"] = request.RouteTableId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -55437,6 +55445,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidrBlock))
+            {
+                query["DestinationCidrBlock"] = request.DestinationCidrBlock;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNextHopId))
             {
                 query["NewNextHopId"] = request.NewNextHopId;
@@ -55472,6 +55484,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteEntryName))
             {
                 query["RouteEntryName"] = request.RouteEntryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableId))
+            {
+                query["RouteTableId"] = request.RouteTableId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

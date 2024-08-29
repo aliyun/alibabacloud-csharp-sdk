@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DestinationCidrBlock")]
+        [Validation(Required=false)]
+        public string DestinationCidrBlock { get; set; }
+
         /// <summary>
         /// The ID of the new next hop instance.
         /// </summary>
@@ -61,8 +65,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the custom route entry.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteEntryId")]
         [Validation(Required=false)]
@@ -76,6 +78,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("RouteEntryName")]
         [Validation(Required=false)]
         public string RouteEntryName { get; set; }
+
+        [NameInMap("RouteTableId")]
+        [Validation(Required=false)]
+        public string RouteTableId { get; set; }
 
     }
 
