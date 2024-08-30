@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string CodeType { get; set; }
 
+        [NameInMap("GmtCreatedTime")]
+        [Validation(Required=false)]
+        public string GmtCreatedTime { get; set; }
+
         [NameInMap("GmtDequeuedTime")]
         [Validation(Required=false)]
         public string GmtDequeuedTime { get; set; }
@@ -69,9 +73,17 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string UserId { get; set; }
 
+        [NameInMap("UserName")]
+        [Validation(Required=false)]
+        public string UserName { get; set; }
+
         [NameInMap("WorkloadId")]
         [Validation(Required=false)]
         public string WorkloadId { get; set; }
+
+        [NameInMap("WorkloadName")]
+        [Validation(Required=false)]
+        public string WorkloadName { get; set; }
 
         [NameInMap("WorkloadType")]
         [Validation(Required=false)]

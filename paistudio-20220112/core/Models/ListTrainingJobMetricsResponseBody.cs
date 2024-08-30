@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
+            /// </summary>
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
             public string Timestamp { get; set; }

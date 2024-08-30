@@ -79,7 +79,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
+                [NameInMap("ResourceName")]
+                [Validation(Required=false)]
+                public string ResourceName { get; set; }
+
             }
+
+            [NameInMap("Environments")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Environments { get; set; }
 
             [NameInMap("ExperimentConfig")]
             [Validation(Required=false)]
@@ -171,6 +179,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
             }
 
+            [NameInMap("PythonRequirements")]
+            [Validation(Required=false)]
+            public List<string> PythonRequirements { get; set; }
+
             [NameInMap("ReasonCode")]
             [Validation(Required=false)]
             public string ReasonCode { get; set; }
@@ -259,6 +271,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
                 [Validation(Required=false)]
                 public string SwitchId { get; set; }
 
+                /// <summary>
+                /// VPC ID。
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }

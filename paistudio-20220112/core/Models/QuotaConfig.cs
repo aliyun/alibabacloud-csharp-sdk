@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string DefaultGPUDriver { get; set; }
 
+        [NameInMap("EnablePreemptSubquotaWorkloads")]
+        [Validation(Required=false)]
+        public bool? EnablePreemptSubquotaWorkloads { get; set; }
+
         [NameInMap("ResourceSpecs")]
         [Validation(Required=false)]
         public List<WorkspaceSpecs> ResourceSpecs { get; set; }

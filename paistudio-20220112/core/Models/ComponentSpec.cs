@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public Location CodeDir { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Command")]
         [Validation(Required=false)]
         public string Command { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<HyperParameterDefinition> HyperParameters { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
         public string Image { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<Channel> InputChannels { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }

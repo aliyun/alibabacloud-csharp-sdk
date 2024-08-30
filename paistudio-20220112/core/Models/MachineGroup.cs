@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string MachineGroupID { get; set; }
 
+        [NameInMap("OrderInstanceId")]
+        [Validation(Required=false)]
+        public string OrderInstanceId { get; set; }
+
         [NameInMap("PaymentDuration")]
         [Validation(Required=false)]
         public string PaymentDuration { get; set; }

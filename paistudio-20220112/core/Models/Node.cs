@@ -49,6 +49,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public bool? IsBound { get; set; }
 
+        [NameInMap("LimitCPU")]
+        [Validation(Required=false)]
+        public string LimitCPU { get; set; }
+
+        [NameInMap("LimitGPU")]
+        [Validation(Required=false)]
+        public string LimitGPU { get; set; }
+
+        [NameInMap("LimitMemory")]
+        [Validation(Required=false)]
+        public string LimitMemory { get; set; }
+
         [NameInMap("MachineGroupId")]
         [Validation(Required=false)]
         public string MachineGroupId { get; set; }
@@ -73,6 +85,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string OrderStatus { get; set; }
 
+        [NameInMap("PodNum")]
+        [Validation(Required=false)]
+        public long? PodNum { get; set; }
+
         [NameInMap("ReasonCode")]
         [Validation(Required=false)]
         public string ReasonCode { get; set; }
@@ -81,6 +97,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ReasonMessage { get; set; }
 
+        [NameInMap("RequestCPU")]
+        [Validation(Required=false)]
+        public string RequestCPU { get; set; }
+
+        [NameInMap("RequestGPU")]
+        [Validation(Required=false)]
+        public string RequestGPU { get; set; }
+
+        [NameInMap("RequestMemory")]
+        [Validation(Required=false)]
+        public string RequestMemory { get; set; }
+
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -88,6 +116,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
+
+        [NameInMap("Users")]
+        [Validation(Required=false)]
+        public List<UserInfo> Users { get; set; }
+
+        [NameInMap("WorkloadNum")]
+        [Validation(Required=false)]
+        public long? WorkloadNum { get; set; }
 
     }
 

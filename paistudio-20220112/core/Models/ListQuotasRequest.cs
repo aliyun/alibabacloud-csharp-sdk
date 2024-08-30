@@ -53,9 +53,17 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Statuses { get; set; }
 
+        [NameInMap("Verbose")]
+        [Validation(Required=false)]
+        public bool? Verbose { get; set; }
+
         [NameInMap("WorkspaceIds")]
         [Validation(Required=false)]
         public string WorkspaceIds { get; set; }
+
+        [NameInMap("WorkspaceName")]
+        [Validation(Required=false)]
+        public string WorkspaceName { get; set; }
 
     }
 

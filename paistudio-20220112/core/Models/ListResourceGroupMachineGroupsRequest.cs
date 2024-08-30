@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Order { get; set; }
 
+        [NameInMap("OrderInstanceId")]
+        [Validation(Required=false)]
+        public string OrderInstanceId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }

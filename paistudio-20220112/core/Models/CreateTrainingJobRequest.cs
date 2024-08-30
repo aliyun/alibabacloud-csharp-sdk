@@ -75,7 +75,29 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
+            [NameInMap("SpotSpec")]
+            [Validation(Required=false)]
+            public CreateTrainingJobRequestComputeResourceSpotSpec SpotSpec { get; set; }
+            public class CreateTrainingJobRequestComputeResourceSpotSpec : TeaModel {
+                [NameInMap("SpotDiscountLimit")]
+                [Validation(Required=false)]
+                public float? SpotDiscountLimit { get; set; }
+
+                [NameInMap("SpotStrategy")]
+                [Validation(Required=false)]
+                public string SpotStrategy { get; set; }
+
+            }
+
+            [NameInMap("UseSpotInstance")]
+            [Validation(Required=false)]
+            public bool? UseSpotInstance { get; set; }
+
         }
+
+        [NameInMap("Environments")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Environments { get; set; }
 
         [NameInMap("ExperimentConfig")]
         [Validation(Required=false)]
@@ -117,6 +139,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Options")]
+            [Validation(Required=false)]
+            public string Options { get; set; }
+
         }
 
         [NameInMap("Labels")]
@@ -150,6 +176,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string OutputUri { get; set; }
 
         }
+
+        [NameInMap("PythonRequirements")]
+        [Validation(Required=false)]
+        public List<string> PythonRequirements { get; set; }
 
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
@@ -191,6 +221,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string TrainingJobDescription { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TrainingJobName")]
         [Validation(Required=false)]
         public string TrainingJobName { get; set; }
@@ -215,12 +248,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public string SwitchId { get; set; }
 
+            /// <summary>
+            /// VPC ID。
+            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
