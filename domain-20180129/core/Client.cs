@@ -1018,6 +1018,98 @@ namespace AlibabaCloud.SDK.Domain20180129
         }
 
         /**
+         * @summary 校验在售国际一口价域名状态和询价
+         *
+         * @param request CheckIntlFixPriceDomainStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckIntlFixPriceDomainStatusResponse
+         */
+        public CheckIntlFixPriceDomainStatusResponse CheckIntlFixPriceDomainStatusWithOptions(CheckIntlFixPriceDomainStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckIntlFixPriceDomainStatus",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckIntlFixPriceDomainStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 校验在售国际一口价域名状态和询价
+         *
+         * @param request CheckIntlFixPriceDomainStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckIntlFixPriceDomainStatusResponse
+         */
+        public async Task<CheckIntlFixPriceDomainStatusResponse> CheckIntlFixPriceDomainStatusWithOptionsAsync(CheckIntlFixPriceDomainStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckIntlFixPriceDomainStatus",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckIntlFixPriceDomainStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 校验在售国际一口价域名状态和询价
+         *
+         * @param request CheckIntlFixPriceDomainStatusRequest
+         * @return CheckIntlFixPriceDomainStatusResponse
+         */
+        public CheckIntlFixPriceDomainStatusResponse CheckIntlFixPriceDomainStatus(CheckIntlFixPriceDomainStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckIntlFixPriceDomainStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 校验在售国际一口价域名状态和询价
+         *
+         * @param request CheckIntlFixPriceDomainStatusRequest
+         * @return CheckIntlFixPriceDomainStatusResponse
+         */
+        public async Task<CheckIntlFixPriceDomainStatusResponse> CheckIntlFixPriceDomainStatusAsync(CheckIntlFixPriceDomainStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckIntlFixPriceDomainStatusWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @param request CheckMaxYearOfServerLockRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CheckMaxYearOfServerLockResponse
@@ -1447,6 +1539,122 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfirmTransferInEmailWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建国际一口价订单
+         *
+         * @param request CreateIntlFixedPriceDomainOrderRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateIntlFixedPriceDomainOrderResponse
+         */
+        public CreateIntlFixedPriceDomainOrderResponse CreateIntlFixedPriceDomainOrderWithOptions(CreateIntlFixedPriceDomainOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedPrice))
+            {
+                query["ExpectedPrice"] = request.ExpectedPrice;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIntlFixedPriceDomainOrder",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIntlFixedPriceDomainOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建国际一口价订单
+         *
+         * @param request CreateIntlFixedPriceDomainOrderRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateIntlFixedPriceDomainOrderResponse
+         */
+        public async Task<CreateIntlFixedPriceDomainOrderResponse> CreateIntlFixedPriceDomainOrderWithOptionsAsync(CreateIntlFixedPriceDomainOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedPrice))
+            {
+                query["ExpectedPrice"] = request.ExpectedPrice;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIntlFixedPriceDomainOrder",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIntlFixedPriceDomainOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建国际一口价订单
+         *
+         * @param request CreateIntlFixedPriceDomainOrderRequest
+         * @return CreateIntlFixedPriceDomainOrderResponse
+         */
+        public CreateIntlFixedPriceDomainOrderResponse CreateIntlFixedPriceDomainOrder(CreateIntlFixedPriceDomainOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateIntlFixedPriceDomainOrderWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建国际一口价订单
+         *
+         * @param request CreateIntlFixedPriceDomainOrderRequest
+         * @return CreateIntlFixedPriceDomainOrderResponse
+         */
+        public async Task<CreateIntlFixedPriceDomainOrderResponse> CreateIntlFixedPriceDomainOrderAsync(CreateIntlFixedPriceDomainOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateIntlFixedPriceDomainOrderWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -2191,6 +2399,98 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FuzzyMatchDomainSensitiveWordWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询国际一口价在售域名列表
+         *
+         * @param request GetIntlFixPriceDomainListUrlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetIntlFixPriceDomainListUrlResponse
+         */
+        public GetIntlFixPriceDomainListUrlResponse GetIntlFixPriceDomainListUrlWithOptions(GetIntlFixPriceDomainListUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListDate))
+            {
+                query["ListDate"] = request.ListDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIntlFixPriceDomainListUrl",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIntlFixPriceDomainListUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询国际一口价在售域名列表
+         *
+         * @param request GetIntlFixPriceDomainListUrlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetIntlFixPriceDomainListUrlResponse
+         */
+        public async Task<GetIntlFixPriceDomainListUrlResponse> GetIntlFixPriceDomainListUrlWithOptionsAsync(GetIntlFixPriceDomainListUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListDate))
+            {
+                query["ListDate"] = request.ListDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIntlFixPriceDomainListUrl",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIntlFixPriceDomainListUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询国际一口价在售域名列表
+         *
+         * @param request GetIntlFixPriceDomainListUrlRequest
+         * @return GetIntlFixPriceDomainListUrlResponse
+         */
+        public GetIntlFixPriceDomainListUrlResponse GetIntlFixPriceDomainListUrl(GetIntlFixPriceDomainListUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetIntlFixPriceDomainListUrlWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询国际一口价在售域名列表
+         *
+         * @param request GetIntlFixPriceDomainListUrlRequest
+         * @return GetIntlFixPriceDomainListUrlResponse
+         */
+        public async Task<GetIntlFixPriceDomainListUrlResponse> GetIntlFixPriceDomainListUrlAsync(GetIntlFixPriceDomainListUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetIntlFixPriceDomainListUrlWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -5383,6 +5683,122 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryFailingReasonListForQualificationWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询国际一口价订单列表
+         *
+         * @param request QueryIntlFixedPriceOrderListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryIntlFixedPriceOrderListResponse
+         */
+        public QueryIntlFixedPriceOrderListResponse QueryIntlFixedPriceOrderListWithOptions(QueryIntlFixedPriceOrderListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryIntlFixedPriceOrderList",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryIntlFixedPriceOrderListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询国际一口价订单列表
+         *
+         * @param request QueryIntlFixedPriceOrderListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryIntlFixedPriceOrderListResponse
+         */
+        public async Task<QueryIntlFixedPriceOrderListResponse> QueryIntlFixedPriceOrderListWithOptionsAsync(QueryIntlFixedPriceOrderListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryIntlFixedPriceOrderList",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryIntlFixedPriceOrderListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询国际一口价订单列表
+         *
+         * @param request QueryIntlFixedPriceOrderListRequest
+         * @return QueryIntlFixedPriceOrderListResponse
+         */
+        public QueryIntlFixedPriceOrderListResponse QueryIntlFixedPriceOrderList(QueryIntlFixedPriceOrderListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryIntlFixedPriceOrderListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询国际一口价订单列表
+         *
+         * @param request QueryIntlFixedPriceOrderListRequest
+         * @return QueryIntlFixedPriceOrderListResponse
+         */
+        public async Task<QueryIntlFixedPriceOrderListResponse> QueryIntlFixedPriceOrderListAsync(QueryIntlFixedPriceOrderListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryIntlFixedPriceOrderListWithOptionsAsync(request, runtime);
         }
 
         /**

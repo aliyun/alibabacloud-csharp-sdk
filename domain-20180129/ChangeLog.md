@@ -1,3 +1,10 @@
+2024-08-30 Version: 3.16.0
+- Support API CheckIntlFixPriceDomainStatus.
+- Support API CreateIntlFixedPriceDomainOrder.
+- Support API GetIntlFixPriceDomainListUrl.
+- Support API QueryIntlFixedPriceOrderList.
+
+
 2024-08-26 Version: 3.15.0
 - Support API SaveSingleTaskForReserveDropListDomain.
 - Update API CheckDomain: update response param.
