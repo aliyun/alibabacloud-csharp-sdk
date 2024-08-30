@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("DeployPercent")]
+            [Validation(Required=false)]
+            public double? DeployPercent { get; set; }
+
             /// <summary>
             /// Application description
             /// </summary>
@@ -259,6 +263,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
                 [NameInMap("Lifecycle")]
                 [Validation(Required=false)]
                 public string Lifecycle { get; set; }
+
+                [NameInMap("NodeLabel")]
+                [Validation(Required=false)]
+                public string NodeLabel { get; set; }
 
                 /// <summary>
                 /// The deployment result.
