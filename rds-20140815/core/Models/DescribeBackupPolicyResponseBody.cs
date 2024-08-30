@@ -271,6 +271,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? SupportVolumeShadowCopy { get; set; }
 
+        [NameInMap("SupportsHighFrequencyBackup")]
+        [Validation(Required=false)]
+        public long? SupportsHighFrequencyBackup { get; set; }
+
     }
 
 }

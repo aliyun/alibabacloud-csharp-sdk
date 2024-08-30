@@ -396,6 +396,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public bool? DeletionProtection { get; set; }
 
+                [NameInMap("DisasterRecoveryInfo")]
+                [Validation(Required=false)]
+                public string DisasterRecoveryInfo { get; set; }
+
+                [NameInMap("DisasterRecoveryInstances")]
+                [Validation(Required=false)]
+                public string DisasterRecoveryInstances { get; set; }
+
                 /// <summary>
                 /// The database engine of the instance. Valid values:
                 /// 
@@ -431,6 +439,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra Extra { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra : TeaModel {
+                    [NameInMap("AccountSecurityPolicy")]
+                    [Validation(Required=false)]
+                    public string AccountSecurityPolicy { get; set; }
+
                     /// <summary>
                     /// The instance IDs.
                     /// </summary>

@@ -8666,7 +8666,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 创建复制链路
+         * @summary Creates a disaster recovery instance for an ApsaraDB RDS instance and configures a data synchronization link.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request CreateReplicationLinkRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8740,7 +8743,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 创建复制链路
+         * @summary Creates a disaster recovery instance for an ApsaraDB RDS instance and configures a data synchronization link.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request CreateReplicationLinkRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8814,7 +8820,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 创建复制链路
+         * @summary Creates a disaster recovery instance for an ApsaraDB RDS instance and configures a data synchronization link.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request CreateReplicationLinkRequest
          * @return CreateReplicationLinkResponse
@@ -8826,7 +8835,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 创建复制链路
+         * @summary Creates a disaster recovery instance for an ApsaraDB RDS instance and configures a data synchronization link.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request CreateReplicationLinkRequest
          * @return CreateReplicationLinkResponse
@@ -12250,7 +12262,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 删除复制链路
+         * @summary Deletes the data synchronization link of a disaster recovery RDS instance and promotes the disaster recovery instance to the primary instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request DeleteReplicationLinkRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12292,7 +12307,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 删除复制链路
+         * @summary Deletes the data synchronization link of a disaster recovery RDS instance and promotes the disaster recovery instance to the primary instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request DeleteReplicationLinkRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12334,7 +12352,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 删除复制链路
+         * @summary Deletes the data synchronization link of a disaster recovery RDS instance and promotes the disaster recovery instance to the primary instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request DeleteReplicationLinkRequest
          * @return DeleteReplicationLinkResponse
@@ -12346,7 +12367,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 删除复制链路
+         * @summary Deletes the data synchronization link of a disaster recovery RDS instance and promotes the disaster recovery instance to the primary instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request DeleteReplicationLinkRequest
          * @return DeleteReplicationLinkResponse
@@ -30618,7 +30642,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 查询复制链路操作日志
+         * @summary Queries the details of the task that is used to create a disaster recovery instance for an ApsaraDB RDS instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request DescribeReplicationLinkLogsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -30672,7 +30699,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 查询复制链路操作日志
+         * @summary Queries the details of the task that is used to create a disaster recovery instance for an ApsaraDB RDS instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request DescribeReplicationLinkLogsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -30726,7 +30756,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 查询复制链路操作日志
+         * @summary Queries the details of the task that is used to create a disaster recovery instance for an ApsaraDB RDS instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request DescribeReplicationLinkLogsRequest
          * @return DescribeReplicationLinkLogsResponse
@@ -30738,7 +30771,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 查询复制链路操作日志
+         * @summary Queries the details of the task that is used to create a disaster recovery instance for an ApsaraDB RDS instance.
+         *
+         * @description ### [](#)Supported database engine
+         * *   PostgreSQL
          *
          * @param request DescribeReplicationLinkLogsRequest
          * @return DescribeReplicationLinkLogsResponse
@@ -47354,7 +47390,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 任务中心修改任务信息
+         * @summary Modifies the task information in the task center.
          *
          * @param request ModifyTaskInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -47416,7 +47452,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 任务中心修改任务信息
+         * @summary Modifies the task information in the task center.
          *
          * @param request ModifyTaskInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -47478,7 +47514,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 任务中心修改任务信息
+         * @summary Modifies the task information in the task center.
          *
          * @param request ModifyTaskInfoRequest
          * @return ModifyTaskInfoResponse
@@ -47490,7 +47526,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 任务中心修改任务信息
+         * @summary Modifies the task information in the task center.
          *
          * @param request ModifyTaskInfoRequest
          * @return ModifyTaskInfoResponse
@@ -48842,7 +48878,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Restores an ApsaraDB RDS for SQL Server instance.
+         * @summary Restores backup data of an ApsaraDB RDS for SQL Server instance to an existing instance or a new instance.
          *
          * @description ### [](#)Supported database engines
          * SQL Server 2012 or later
@@ -48942,7 +48978,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Restores an ApsaraDB RDS for SQL Server instance.
+         * @summary Restores backup data of an ApsaraDB RDS for SQL Server instance to an existing instance or a new instance.
          *
          * @description ### [](#)Supported database engines
          * SQL Server 2012 or later
@@ -49042,7 +49078,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Restores an ApsaraDB RDS for SQL Server instance.
+         * @summary Restores backup data of an ApsaraDB RDS for SQL Server instance to an existing instance or a new instance.
          *
          * @description ### [](#)Supported database engines
          * SQL Server 2012 or later
@@ -49060,7 +49096,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Restores an ApsaraDB RDS for SQL Server instance.
+         * @summary Restores backup data of an ApsaraDB RDS for SQL Server instance to an existing instance or a new instance.
          *
          * @description ### [](#)Supported database engines
          * SQL Server 2012 or later

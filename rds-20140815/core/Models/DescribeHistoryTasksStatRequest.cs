@@ -65,17 +65,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The task status. Valid values:
+        /// The status of the task. Valid values:
         /// 
-        /// *   Scheduled
-        /// *   Running
-        /// *   Succeed
-        /// *   Failed
-        /// *   Cancelling
-        /// *   Canceled
-        /// *   Waiting
+        /// *   **Scheduled**
+        /// *   **Running**
+        /// *   **Succeed**
+        /// *   **Failed**
+        /// *   **Cancelling**
+        /// *   **Canceled**
+        /// *   **Waiting**
         /// 
-        /// Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.
+        /// Separate multiple statuses with commas (,). By default, this parameter is left empty. This indicates that tasks in all statuses are queried.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryTasksStatResponseBody : TeaModel {
         /// <summary>
-        /// The information about the task.
+        /// The queried tasks.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryTasksStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryTasksStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// The task status. Valid values:
+            /// The status of the task. Valid values:
             /// 
-            /// *   Scheduled
-            /// *   Running
-            /// *   Succeed
-            /// *   Failed
-            /// *   Cancelling
-            /// *   Canceled
-            /// *   Waiting
+            /// *   **Scheduled**
+            /// *   **Running**
+            /// *   **Succeed**
+            /// *   **Failed**
+            /// *   **Cancelling**
+            /// *   **Canceled**
+            /// *   **Waiting**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

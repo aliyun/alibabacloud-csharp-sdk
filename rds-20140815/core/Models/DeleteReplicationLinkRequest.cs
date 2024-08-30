@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteReplicationLinkRequest : TeaModel {
         /// <summary>
+        /// The ID of the instance.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
@@ -17,6 +19,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// Specifies whether to promote the disaster recovery instance to the primary instance. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("PromoteToMaster")]

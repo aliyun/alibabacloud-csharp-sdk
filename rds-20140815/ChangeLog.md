@@ -1,3 +1,9 @@
+2024-08-30 Version: 7.1.3
+- Update API DescribeBackupPolicy: update response param.
+- Update API DescribeDBInstanceAttribute: update response param.
+- Update API TransformDBInstancePayType: update response param.
+
+
 2024-08-27 Version: 7.1.2
 - Update API CreateDBInstance: update param InstanceNetworkType.
 - Update API CreateDdrInstance: add param EncryptionKey.
