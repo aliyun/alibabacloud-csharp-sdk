@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
+        [NameInMap("FlashSmsVariables")]
+        [Validation(Required=false)]
+        public string FlashSmsVariables { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

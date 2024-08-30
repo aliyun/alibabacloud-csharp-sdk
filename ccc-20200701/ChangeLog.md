@@ -1,3 +1,7 @@
+2024-08-30 Version: 2.29.2
+- Update API MakeCall: add param FlashSmsVariables.
+
+
 2024-08-13 Version: 2.29.1
 - Update API LaunchSurvey: update param ContactFlowId.
 

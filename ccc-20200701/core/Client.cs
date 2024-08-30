@@ -18971,6 +18971,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["DeviceId"] = request.DeviceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsVariables))
+            {
+                query["FlashSmsVariables"] = request.FlashSmsVariables;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -19034,6 +19038,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
             {
                 query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsVariables))
+            {
+                query["FlashSmsVariables"] = request.FlashSmsVariables;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
