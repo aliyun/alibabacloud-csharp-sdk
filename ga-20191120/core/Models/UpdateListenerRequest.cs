@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// Specifies whether to enable client affinity for the listener.
+        /// Indicates whether client affinity is enabled for the listener. Valid values:
         /// 
-        /// *   If this parameter is left empty, client affinity is disabled. After client affinity is disabled, requests from a specific client IP address may be forwarded to different endpoints.
-        /// *   To enable client affinity, set this parameter to **SOURCE_IP**. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.
+        /// *   **NONE**: Client affinity is disabled. Requests from the same client may be forwarded to different endpoints.
+        /// *   **SOURCE_IP**: Client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.
         /// </summary>
         [NameInMap("ClientAffinity")]
         [Validation(Required=false)]

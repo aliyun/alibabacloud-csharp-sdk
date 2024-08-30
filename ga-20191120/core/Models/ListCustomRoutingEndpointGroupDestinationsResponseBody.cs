@@ -84,23 +84,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The actions that you can perform on the managed instance.
             /// 
-            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-            /// 
-            /// *   You can perform only specific actions on a managed instance.
+            /// >  - This parameter takes effect only if **ServiceManaged** is set to **True**.
+            /// >  - You can perform only specific actions on the managed instance.
             /// </summary>
             [NameInMap("ServiceManagedInfos")]
             [Validation(Required=false)]
             public List<ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinationsServiceManagedInfos> ServiceManagedInfos { get; set; }
             public class ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinationsServiceManagedInfos : TeaModel {
                 /// <summary>
-                /// Managed policy action name, Valid values:
+                /// The name of the action that you can perform on the managed instance. Valid values:
                 /// 
-                /// Create
-                /// Update
-                /// Delete
-                /// Associate
-                /// UserUnmanaged
-                /// CreateChild
+                /// *   **Create**: Create an instance.
+                /// *   **Update**: Update the current instance.
+                /// *   **Delete**: Delete the current instance.
+                /// *   **Associate**: Reference the current instance.
+                /// *   **UserUnmanaged**: Unmanage the instance.
+                /// *   **CreateChild**: Create a child resource in the current instance.
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]

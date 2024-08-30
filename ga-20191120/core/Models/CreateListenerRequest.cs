@@ -440,6 +440,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
 
+            /// <summary>
+            /// The backend service protocol version of the endpoint that is associated with the intelligent routing listener. Valid values:
+            /// 
+            /// *   **HTTP1.1** (default)
+            /// *   **HTTP2**
+            /// 
+            /// >*   You can specify this parameter only for **HTTPS** endpoint request protocol.
+            /// </summary>
             [NameInMap("EndpointProtocolVersion")]
             [Validation(Required=false)]
             public string EndpointProtocolVersion { get; set; }

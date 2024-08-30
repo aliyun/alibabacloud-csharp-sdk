@@ -150,6 +150,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string EndpointGroupName { get; set; }
 
+            /// <summary>
+            /// The protocol version that is used by the backend service. Valid values:
+            /// 
+            /// *   **HTTP1.1**
+            /// *   **HTTP2**
+            /// 
+            /// > *   You can specify this parameter only if the endpoint request protocol uses **HTTPS**.
+            /// </summary>
             [NameInMap("EndpointProtocolVersion")]
             [Validation(Required=false)]
             public string EndpointProtocolVersion { get; set; }

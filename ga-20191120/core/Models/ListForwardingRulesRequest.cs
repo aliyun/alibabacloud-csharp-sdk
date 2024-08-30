@@ -47,8 +47,6 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

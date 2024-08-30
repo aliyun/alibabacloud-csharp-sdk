@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **100**. Default value: **10**.
+        /// The number of entries per page. Valid values: **1 to 100**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

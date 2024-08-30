@@ -1,3 +1,7 @@
+2024-08-30 Version: 2.1.9
+- Update API ListForwardingRules: update param MaxResults.
+
+
 2024-07-20 Version: 2.1.8
 - Update API CreateEndpointGroup: add param EndpointProtocolVersion.
 - Update API CreateEndpointGroups: update param EndpointGroupConfigurations.

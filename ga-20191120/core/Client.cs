@@ -9726,7 +9726,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-         * @summary Queries the information about an endpoint group.
+         * @summary Queries information about an endpoint group.
          *
          * @param request DescribeEndpointGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9764,7 +9764,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-         * @summary Queries the information about an endpoint group.
+         * @summary Queries information about an endpoint group.
          *
          * @param request DescribeEndpointGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9802,7 +9802,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-         * @summary Queries the information about an endpoint group.
+         * @summary Queries information about an endpoint group.
          *
          * @param request DescribeEndpointGroupRequest
          * @return DescribeEndpointGroupResponse
@@ -9814,7 +9814,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-         * @summary Queries the information about an endpoint group.
+         * @summary Queries information about an endpoint group.
          *
          * @param request DescribeEndpointGroupRequest
          * @return DescribeEndpointGroupResponse
@@ -14306,7 +14306,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-         * @summary Queries the endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.
+         * @summary Queries endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.
          *
          * @param request ListCustomRoutingEndpointGroupDestinationsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14372,7 +14372,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-         * @summary Queries the endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.
+         * @summary Queries endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.
          *
          * @param request ListCustomRoutingEndpointGroupDestinationsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14438,7 +14438,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-         * @summary Queries the endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.
+         * @summary Queries endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.
          *
          * @param request ListCustomRoutingEndpointGroupDestinationsRequest
          * @return ListCustomRoutingEndpointGroupDestinationsResponse
@@ -14450,7 +14450,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-         * @summary Queries the endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.
+         * @summary Queries endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.
          *
          * @param request ListCustomRoutingEndpointGroupDestinationsRequest
          * @return ListCustomRoutingEndpointGroupDestinationsResponse

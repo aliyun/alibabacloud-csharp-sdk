@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// Indicates the status of the binding between the Log Service project and the endpoint group. Valid values:
+        /// Indicates the binding status between the Simple Log Service project and the endpoint group. Valid values:
         /// 
-        /// *   **on**: The Log Service project is bound to the endpoint group.
-        /// *   **off**: No Log Service projects are bound to the endpoint group.
-        /// *   **binding**: The Log Service project is being bound to the endpoint group.
-        /// *   **unbinding**: The Log Service project is being unbound from the endpoint group.
+        /// *   **on:** The endpoint group is bound to the Simple Log Service project.
+        /// *   **off:** The endpoint group is not bound to the Simple Log Service project.
+        /// *   **binding:** The endpoint group is being bound to the Simple Log Service project.
+        /// *   **unbinding:** The endpoint group is being unbound from the Simple Log Service project.
         /// </summary>
         [NameInMap("AccessLogSwitch")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? EnableAccessLog { get; set; }
 
         /// <summary>
-        /// The configurations of the endpoints in the endpoint group.
+        /// The configurations of endpoints in the endpoint group.
         /// </summary>
         [NameInMap("EndpointConfigurations")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? EnableProxyProtocol { get; set; }
 
             /// <summary>
-            /// The IP address or domain name of the endpoint.
+            /// The IP address, domain name, or ID of the endpoint.
             /// </summary>
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
@@ -103,13 +103,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of the endpoint. Valid values:
             /// 
-            /// *   **Domain**: a custom domain name
-            /// *   **Ip**: a custom IP address
-            /// *   **PublicIp**: a public IP address provided by Alibaba Cloud
-            /// *   **ECS**: an Elastic Compute Service (ECS) instance
-            /// *   **SLB**: a Server Load Balancer (SLB) instance
-            /// *   **ALB**: an Application Load Balancer (ALB) instance
-            /// *   **OSS**: an Object Storage Service (OSS) bucket
+            /// *   **Domain:** a custom domain name.
+            /// *   **Ip:** a custom IP address.
+            /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
+            /// *   **ECS:** an Elastic Compute Service (ECS) instance.
+            /// *   **SLB:**: a Server Load Balancer (SLB) instance.
+            /// *   **ALB:** an Application Load Balancer (ALB) instance.
+            /// *   **OSS:** an Object Storage Service (OSS) bucket.
+            /// *   **ENI:** an elastic network interface (ENI).
+            /// *   **NLB:** a Network Load Balancer (NLB) instance.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -162,6 +164,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<string> EndpointGroupUnconfirmedIpList { get; set; }
 
+        /// <summary>
+        /// The version of the protocol that is used by the backend service.
+        /// 
+        /// *   **HTTP1.1**
+        /// *   **HTTP2**
+        /// </summary>
         [NameInMap("EndpointProtocolVersion")]
         [Validation(Required=false)]
         public string EndpointProtocolVersion { get; set; }
@@ -217,9 +225,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The protocol over which health check requests are sent. Valid values:
         /// 
-        /// *   **tcp**: TCP
-        /// *   **http**: HTTP
-        /// *   **https**: HTTPS
+        /// *   **tcp** or **TCP**
+        /// *   **http** or **HTTP**
+        /// *   **https** or **HTTPS**
         /// </summary>
         [NameInMap("HealthCheckProtocol")]
         [Validation(Required=false)]
@@ -279,7 +287,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// Indicates whether the GA instance is managed. Valid values:
+        /// Indicates whether the instance is managed.
         /// 
         /// *   **true**
         /// *   **false**
@@ -290,17 +298,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The actions that users can perform on the managed instance.
-        /// 
-        /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-        /// 
-        /// *   Users can perform only specific actions on a managed instance.
+        /// >*   This parameter takes effect only if the value of **ServiceManaged** is **true**.
+        /// >*   Users can perform only specific actions on a managed instance.
         /// </summary>
         [NameInMap("ServiceManagedInfos")]
         [Validation(Required=false)]
         public List<DescribeEndpointGroupResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
         public class DescribeEndpointGroupResponseBodyServiceManagedInfos : TeaModel {
             /// <summary>
-            /// The name of the action on the managed instance. Valid values:
+            /// The name of the action on the managed instance.
             /// 
             /// *   **Create**
             /// *   **Update**
@@ -314,27 +320,27 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// The type of the child resource. Valid values:
+            /// The type of the child resource.
             /// 
-            /// *   **Listener**: listener
-            /// *   **IpSet**: acceleration region
-            /// *   **EndpointGroup**: endpoint group
-            /// *   **ForwardingRule**: forwarding rule
-            /// *   **Endpoint**: endpoint
-            /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
-            /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
+            /// *   **Listener:** listener.
+            /// *   **IpSet:** acceleration region.
+            /// *   **EndpointGroup:** endpoint group.
+            /// *   **ForwardingRule:** forwarding rule.
+            /// *   **Endpoint:** endpoint.
+            /// *   **EndpointGroupDestination:** protocol mapping of an endpoint group associated with a custom routing listener.
+            /// *   **EndpointPolicy:** traffic policy of an endpoint associated with a custom routing listener.
             /// 
-            /// >  This parameter takes effect only if **Action** is set to **CreateChild**.
+            /// >  This parameter takes effect only if the value of **Action** is **CreateChild**.
             /// </summary>
             [NameInMap("ChildType")]
             [Validation(Required=false)]
             public string ChildType { get; set; }
 
             /// <summary>
-            /// Indicates whether the specified actions are managed. Valid values:
+            /// Indicates whether the specified actions are managed.
             /// 
-            /// *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
-            /// *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
+            /// *   **true:** The specified actions are managed. Users cannot perform the specified actions on the managed instance.****
+            /// *   **false:** The specified actions are not managed. Users can perform the specified actions on the managed instance.
             /// </summary>
             [NameInMap("IsManaged")]
             [Validation(Required=false)]
@@ -376,21 +382,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string State { get; set; }
 
         /// <summary>
-        /// Tags.
+        /// The tag of the endpoint group.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeEndpointGroupResponseBodyTags> Tags { get; set; }
         public class DescribeEndpointGroupResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// The tag key of the endpoint group.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The tag value of the endpoint group.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -406,7 +412,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? ThresholdCount { get; set; }
 
         /// <summary>
-        /// The weight of the endpoint group. If the listener is associated with multiple endpoint groups, this parameter indicates the weight of the current endpoint group.
+        /// The traffic ratio of the endpoint group when the specified listener is associated with multiple endpoint groups.
         /// </summary>
         [NameInMap("TrafficPercentage")]
         [Validation(Required=false)]
