@@ -4,6 +4,12 @@
 - Update API ListAlerts: update response param.
 
 
+2024-08-30 Version: 7.1.0
+- Support API GetAgentDownloadUrlV2.
+- Update API ListActivatedAlerts: update response param.
+- Update API ListAlerts: update response param.
+
+
 2024-08-23 Version: 7.0.4
 - Generated csharp 2019-08-08 for ARMS.
 
