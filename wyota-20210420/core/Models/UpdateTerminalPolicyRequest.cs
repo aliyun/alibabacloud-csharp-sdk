@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class UpdateTerminalPolicyRequest : TeaModel {
+        [NameInMap("BackgroundModeTitle")]
+        [Validation(Required=false)]
+        public string BackgroundModeTitle { get; set; }
+
         [NameInMap("DisplayLayout")]
         [Validation(Required=false)]
         public string DisplayLayout { get; set; }
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public int? EnableAutoLogin { get; set; }
 
+        [NameInMap("EnableBackgroundMode")]
+        [Validation(Required=false)]
+        public int? EnableBackgroundMode { get; set; }
+
         [NameInMap("EnableBluetooth")]
         [Validation(Required=false)]
         public int? EnableBluetooth { get; set; }
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [NameInMap("EnableModifyPassword")]
         [Validation(Required=false)]
         public int? EnableModifyPassword { get; set; }
+
+        [NameInMap("EnableScheduledReboot")]
+        [Validation(Required=false)]
+        public int? EnableScheduledReboot { get; set; }
 
         [NameInMap("EnableScheduledShutdown")]
         [Validation(Required=false)]
@@ -76,6 +88,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [NameInMap("PowerOnBehavior")]
         [Validation(Required=false)]
         public int? PowerOnBehavior { get; set; }
+
+        [NameInMap("ScheduledReboot")]
+        [Validation(Required=false)]
+        public string ScheduledReboot { get; set; }
 
         [NameInMap("ScheduledShutdown")]
         [Validation(Required=false)]
