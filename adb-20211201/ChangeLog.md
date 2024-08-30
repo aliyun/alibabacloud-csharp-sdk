@@ -1,3 +1,7 @@
+2024-08-30 Version: 2.0.6
+- Update API DescribeDiagnosisRecords: update response param.
+
+
 2024-08-20 Version: 2.0.5
 - Update API GetTableObjects: update param PageNumber.
 - Update API GetTableObjects: update param PageSize.

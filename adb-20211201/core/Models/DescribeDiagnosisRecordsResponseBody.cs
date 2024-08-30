@@ -99,6 +99,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string ProcessId { get; set; }
 
+            [NameInMap("QueryProperties")]
+            [Validation(Required=false)]
+            public List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> QueryProperties { get; set; }
+            public class DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// The amount of time that is consumed for queuing. Unit: milliseconds.
             /// </summary>

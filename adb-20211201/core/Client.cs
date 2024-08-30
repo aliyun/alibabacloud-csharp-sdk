@@ -7341,9 +7341,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-         * @summary Queries scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * @summary Queries scaling plans of an AnalyticDB for MySQL cluster.
          *
-         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
          *
          * @param request DescribeElasticPlansRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7401,9 +7401,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-         * @summary Queries scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * @summary Queries scaling plans of an AnalyticDB for MySQL cluster.
          *
-         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
          *
          * @param request DescribeElasticPlansRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7461,9 +7461,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-         * @summary Queries scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * @summary Queries scaling plans of an AnalyticDB for MySQL cluster.
          *
-         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
          *
          * @param request DescribeElasticPlansRequest
          * @return DescribeElasticPlansResponse
@@ -7475,9 +7475,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-         * @summary Queries scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * @summary Queries scaling plans of an AnalyticDB for MySQL cluster.
          *
-         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
          *
          * @param request DescribeElasticPlansRequest
          * @return DescribeElasticPlansResponse
