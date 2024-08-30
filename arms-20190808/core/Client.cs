@@ -659,12 +659,15 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.
+         *
          * @summary Creates a Prometheus instance for Remote Write.
          *
          * @param request AddPrometheusInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return AddPrometheusInstanceResponse
          */
+        // Deprecated
         public AddPrometheusInstanceResponse AddPrometheusInstanceWithOptions(AddPrometheusInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -701,12 +704,15 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.
+         *
          * @summary Creates a Prometheus instance for Remote Write.
          *
          * @param request AddPrometheusInstanceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return AddPrometheusInstanceResponse
          */
+        // Deprecated
         public async Task<AddPrometheusInstanceResponse> AddPrometheusInstanceWithOptionsAsync(AddPrometheusInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -743,11 +749,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.
+         *
          * @summary Creates a Prometheus instance for Remote Write.
          *
          * @param request AddPrometheusInstanceRequest
          * @return AddPrometheusInstanceResponse
          */
+        // Deprecated
         public AddPrometheusInstanceResponse AddPrometheusInstance(AddPrometheusInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -755,11 +764,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.
+         *
          * @summary Creates a Prometheus instance for Remote Write.
          *
          * @param request AddPrometheusInstanceRequest
          * @return AddPrometheusInstanceResponse
          */
+        // Deprecated
         public async Task<AddPrometheusInstanceResponse> AddPrometheusInstanceAsync(AddPrometheusInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2569,7 +2581,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @summary Creates an alert contact group.
          *
-         * @description ************
+         * @description The current API operation is no longer maintained. Call the CreateOrUpdateContactGroup operation of the new Alert Management module to create or modify alert contact groups.
          *
          * @param request CreateAlertContactGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2613,7 +2625,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @summary Creates an alert contact group.
          *
-         * @description ************
+         * @description The current API operation is no longer maintained. Call the CreateOrUpdateContactGroup operation of the new Alert Management module to create or modify alert contact groups.
          *
          * @param request CreateAlertContactGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2657,7 +2669,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @summary Creates an alert contact group.
          *
-         * @description ************
+         * @description The current API operation is no longer maintained. Call the CreateOrUpdateContactGroup operation of the new Alert Management module to create or modify alert contact groups.
          *
          * @param request CreateAlertContactGroupRequest
          * @return CreateAlertContactGroupResponse
@@ -2671,7 +2683,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @summary Creates an alert contact group.
          *
-         * @description ************
+         * @description The current API operation is no longer maintained. Call the CreateOrUpdateContactGroup operation of the new Alert Management module to create or modify alert contact groups.
          *
          * @param request CreateAlertContactGroupRequest
          * @return CreateAlertContactGroupResponse
@@ -5083,7 +5095,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 创建Prometheus告警规则
+         * @summary Creates an alert rule.
          *
          * @param request CreatePrometheusAlertRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5161,7 +5173,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 创建Prometheus告警规则
+         * @summary Creates an alert rule.
          *
          * @param request CreatePrometheusAlertRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5239,7 +5251,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 创建Prometheus告警规则
+         * @summary Creates an alert rule.
          *
          * @param request CreatePrometheusAlertRuleRequest
          * @return CreatePrometheusAlertRuleResponse
@@ -5251,7 +5263,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 创建Prometheus告警规则
+         * @summary Creates an alert rule.
          *
          * @param request CreatePrometheusAlertRuleRequest
          * @return CreatePrometheusAlertRuleResponse
@@ -10175,7 +10187,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除云拨测任务
+         * @summary Deletes scheduled synthetic monitoring tasks.
          *
          * @param request DeleteSyntheticTaskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10213,7 +10225,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除云拨测任务
+         * @summary Deletes scheduled synthetic monitoring tasks.
          *
          * @param request DeleteSyntheticTaskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10251,7 +10263,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除云拨测任务
+         * @summary Deletes scheduled synthetic monitoring tasks.
          *
          * @param request DeleteSyntheticTaskRequest
          * @return DeleteSyntheticTaskResponse
@@ -10263,7 +10275,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 删除云拨测任务
+         * @summary Deletes scheduled synthetic monitoring tasks.
          *
          * @param request DeleteSyntheticTaskRequest
          * @return DeleteSyntheticTaskResponse
@@ -11779,7 +11791,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries the details about an alert rule of Prometheus Service.
+         * @summary Queries the details about an alert rule for a Prometheus instance.
          *
          * @param request DescribePrometheusAlertRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -11817,7 +11829,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries the details about an alert rule of Prometheus Service.
+         * @summary Queries the details about an alert rule for a Prometheus instance.
          *
          * @param request DescribePrometheusAlertRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -11855,7 +11867,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries the details about an alert rule of Prometheus Service.
+         * @summary Queries the details about an alert rule for a Prometheus instance.
          *
          * @param request DescribePrometheusAlertRuleRequest
          * @return DescribePrometheusAlertRuleResponse
@@ -11867,7 +11879,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries the details about an alert rule of Prometheus Service.
+         * @summary Queries the details about an alert rule for a Prometheus instance.
          *
          * @param request DescribePrometheusAlertRuleRequest
          * @return DescribePrometheusAlertRuleResponse
@@ -12344,6 +12356,114 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAgentDownloadUrlWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 获取探针下载地址
+         *
+         * @param request GetAgentDownloadUrlV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAgentDownloadUrlV2Response
+         */
+        public GetAgentDownloadUrlV2Response GetAgentDownloadUrlV2WithOptions(GetAgentDownloadUrlV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchType))
+            {
+                query["ArchType"] = request.ArchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                query["OsType"] = request.OsType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentDownloadUrlV2",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentDownloadUrlV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取探针下载地址
+         *
+         * @param request GetAgentDownloadUrlV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAgentDownloadUrlV2Response
+         */
+        public async Task<GetAgentDownloadUrlV2Response> GetAgentDownloadUrlV2WithOptionsAsync(GetAgentDownloadUrlV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchType))
+            {
+                query["ArchType"] = request.ArchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                query["OsType"] = request.OsType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentDownloadUrlV2",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentDownloadUrlV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取探针下载地址
+         *
+         * @param request GetAgentDownloadUrlV2Request
+         * @return GetAgentDownloadUrlV2Response
+         */
+        public GetAgentDownloadUrlV2Response GetAgentDownloadUrlV2(GetAgentDownloadUrlV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgentDownloadUrlV2WithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取探针下载地址
+         *
+         * @param request GetAgentDownloadUrlV2Request
+         * @return GetAgentDownloadUrlV2Response
+         */
+        public async Task<GetAgentDownloadUrlV2Response> GetAgentDownloadUrlV2Async(GetAgentDownloadUrlV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgentDownloadUrlV2WithOptionsAsync(request, runtime);
         }
 
         /**
@@ -12947,12 +13067,15 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.
+         *
          * @summary Obtains all the URLs of a cluster, including remote read and write URLs, Pushgateway URLs, and Grafana URLs.
          *
          * @param request GetClusterAllUrlRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetClusterAllUrlResponse
          */
+        // Deprecated
         public GetClusterAllUrlResponse GetClusterAllUrlWithOptions(GetClusterAllUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12985,12 +13108,15 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.
+         *
          * @summary Obtains all the URLs of a cluster, including remote read and write URLs, Pushgateway URLs, and Grafana URLs.
          *
          * @param request GetClusterAllUrlRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetClusterAllUrlResponse
          */
+        // Deprecated
         public async Task<GetClusterAllUrlResponse> GetClusterAllUrlWithOptionsAsync(GetClusterAllUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13023,11 +13149,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.
+         *
          * @summary Obtains all the URLs of a cluster, including remote read and write URLs, Pushgateway URLs, and Grafana URLs.
          *
          * @param request GetClusterAllUrlRequest
          * @return GetClusterAllUrlResponse
          */
+        // Deprecated
         public GetClusterAllUrlResponse GetClusterAllUrl(GetClusterAllUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13035,11 +13164,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @deprecated OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.
+         *
          * @summary Obtains all the URLs of a cluster, including remote read and write URLs, Pushgateway URLs, and Grafana URLs.
          *
          * @param request GetClusterAllUrlRequest
          * @return GetClusterAllUrlResponse
          */
+        // Deprecated
         public async Task<GetClusterAllUrlResponse> GetClusterAllUrlAsync(GetClusterAllUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16027,7 +16159,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取单个拨测任务的详情
+         * @summary Queries the details of a scheduled synthetic monitoring task.
          *
          * @param request GetSyntheticTaskDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16065,7 +16197,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取单个拨测任务的详情
+         * @summary Queries the details of a scheduled synthetic monitoring task.
          *
          * @param request GetSyntheticTaskDetailRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16103,7 +16235,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取单个拨测任务的详情
+         * @summary Queries the details of a scheduled synthetic monitoring task.
          *
          * @param request GetSyntheticTaskDetailRequest
          * @return GetSyntheticTaskDetailResponse
@@ -16115,7 +16247,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取单个拨测任务的详情
+         * @summary Queries the details of a scheduled synthetic monitoring task.
          *
          * @param request GetSyntheticTaskDetailRequest
          * @return GetSyntheticTaskDetailResponse
@@ -16127,7 +16259,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取拨测任务列表
+         * @summary Queries a list of scheduled synthetic monitoring tasks.
          *
          * @param request GetSyntheticTaskListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16193,7 +16325,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取拨测任务列表
+         * @summary Queries a list of scheduled synthetic monitoring tasks.
          *
          * @param request GetSyntheticTaskListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16259,7 +16391,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取拨测任务列表
+         * @summary Queries a list of scheduled synthetic monitoring tasks.
          *
          * @param request GetSyntheticTaskListRequest
          * @return GetSyntheticTaskListResponse
@@ -16271,7 +16403,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 获取拨测任务列表
+         * @summary Queries a list of scheduled synthetic monitoring tasks.
          *
          * @param request GetSyntheticTaskListRequest
          * @return GetSyntheticTaskListResponse
@@ -16691,7 +16823,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches.
+         * @summary Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches. This operation is applicable only to applications that are monitored by Application Monitoring. It is not applicable to applications that are monitored by Managed Service for OpenTelemetry.
          *
          * @param request GetTraceAppConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16725,7 +16857,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches.
+         * @summary Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches. This operation is applicable only to applications that are monitored by Application Monitoring. It is not applicable to applications that are monitored by Managed Service for OpenTelemetry.
          *
          * @param request GetTraceAppConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16759,7 +16891,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches.
+         * @summary Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches. This operation is applicable only to applications that are monitored by Application Monitoring. It is not applicable to applications that are monitored by Managed Service for OpenTelemetry.
          *
          * @param request GetTraceAppConfigRequest
          * @return GetTraceAppConfigResponse
@@ -16771,7 +16903,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches.
+         * @summary Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches. This operation is applicable only to applications that are monitored by Application Monitoring. It is not applicable to applications that are monitored by Managed Service for OpenTelemetry.
          *
          * @param request GetTraceAppConfigRequest
          * @return GetTraceAppConfigResponse
@@ -18871,6 +19003,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Queries notification policies.
+         *
+         * @description The current API operation is no longer maintained. To query the notification policy information, call the ListNotificationPolicies operation instead.
+         *
          * @param request ListDispatchRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListDispatchRuleResponse
@@ -18911,6 +19047,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Queries notification policies.
+         *
+         * @description The current API operation is no longer maintained. To query the notification policy information, call the ListNotificationPolicies operation instead.
+         *
          * @param request ListDispatchRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListDispatchRuleResponse
@@ -18951,6 +19091,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Queries notification policies.
+         *
+         * @description The current API operation is no longer maintained. To query the notification policy information, call the ListNotificationPolicies operation instead.
+         *
          * @param request ListDispatchRuleRequest
          * @return ListDispatchRuleResponse
          */
@@ -18961,6 +19105,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
+         * @summary Queries notification policies.
+         *
+         * @description The current API operation is no longer maintained. To query the notification policy information, call the ListNotificationPolicies operation instead.
+         *
          * @param request ListDispatchRuleRequest
          * @return ListDispatchRuleResponse
          */
@@ -20399,7 +20547,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The value of the annotation.
+         * @summary Queries the alert rules created for a Prometheus instance.
          *
          * @param request ListPrometheusAlertRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20457,7 +20605,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The value of the annotation.
+         * @summary Queries the alert rules created for a Prometheus instance.
          *
          * @param request ListPrometheusAlertRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20515,7 +20663,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The value of the annotation.
+         * @summary Queries the alert rules created for a Prometheus instance.
          *
          * @param request ListPrometheusAlertRulesRequest
          * @return ListPrometheusAlertRulesResponse
@@ -20527,7 +20675,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary The value of the annotation.
+         * @summary Queries the alert rules created for a Prometheus instance.
          *
          * @param request ListPrometheusAlertRulesRequest
          * @return ListPrometheusAlertRulesResponse
@@ -25983,7 +26131,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 启动或者禁用云拨测的任务
+         * @summary Starts or stops a scheduled synthetic monitoring task.
          *
          * @param request SwitchSyntheticTaskStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -26021,7 +26169,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 启动或者禁用云拨测的任务
+         * @summary Starts or stops a scheduled synthetic monitoring task.
          *
          * @param request SwitchSyntheticTaskStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -26059,7 +26207,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 启动或者禁用云拨测的任务
+         * @summary Starts or stops a scheduled synthetic monitoring task.
          *
          * @param request SwitchSyntheticTaskStatusRequest
          * @return SwitchSyntheticTaskStatusResponse
@@ -26071,7 +26219,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary 启动或者禁用云拨测的任务
+         * @summary Starts or stops a scheduled synthetic monitoring task.
          *
          * @param request SwitchSyntheticTaskStatusRequest
          * @return SwitchSyntheticTaskStatusResponse

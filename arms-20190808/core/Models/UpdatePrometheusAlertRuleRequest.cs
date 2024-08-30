@@ -74,14 +74,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<UpdatePrometheusAlertRuleRequestTags> Tags { get; set; }
         public class UpdatePrometheusAlertRuleRequestTags : TeaModel {
+            /// <summary>
+            /// The tag key.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

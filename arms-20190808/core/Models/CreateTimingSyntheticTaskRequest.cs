@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateTimingSyntheticTaskRequest : TeaModel {
+        /// <summary>
+        /// The list of assertions.
+        /// </summary>
         [NameInMap("AvailableAssertions")]
         [Validation(Required=false)]
         public List<CreateTimingSyntheticTaskRequestAvailableAssertions> AvailableAssertions { get; set; }
         public class CreateTimingSyntheticTaskRequestAvailableAssertions : TeaModel {
             /// <summary>
+            /// The expected value.
+            /// 
             /// This parameter is required.
             /// </summary>
             [NameInMap("Expect")]
@@ -21,17 +26,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Expect { get; set; }
 
             /// <summary>
+            /// The condition. gt: greater than. gte: greater than or equal to. lt: less than. lte: less than or equal to. eq: equal to. neq: not equal to. ctn: contain. nctn: does not contain. exist: exist. n_exist: does not exist. belong: belong to. n_belong: does not belong to. reg_match: regular expression.
+            /// 
             /// This parameter is required.
             /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }
 
+            /// <summary>
+            /// The check target. If you set the type parameter to HttpResCode, HttpResBody, or HttpResponseTime, you do not need to set the target parameter. If you set the type parameter to HttpResHead, you must specify the key in the header. If you set the type parameter to HttpResBodyJson, use jsonPath.
+            /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
             public string Target { get; set; }
 
             /// <summary>
+            /// The assertion type. Valid values: HttpResCode, HttpResHead, HttpResBody, HttpResBodyJson, HttpResponseTime, IcmpPackLoss (packet loss rate), IcmpPackMaxLatency (maximum packet latency), IcmpPackAvgLatency (average packet latency), TraceRouteHops (number of hops), DnsARecord (A record), DnsCName (CNAME), websiteTTFB (time to first packet), websiteTTLB (time to last packet), websiteFST (first paint time), websiteFFST (first meaningful paint), websiteOnload (full loaded time). For more information, see the following description.
+            /// 
             /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
@@ -64,7 +76,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public List<CreateTimingSyntheticTaskRequestCommonSettingCustomHostHosts> Hosts { get; set; }
                 public class CreateTimingSyntheticTaskRequestCommonSettingCustomHostHosts : TeaModel {
                     /// <summary>
-                    /// The domain name
+                    /// The domain name.
                     /// 
                     /// This parameter is required.
                     /// </summary>
@@ -110,18 +122,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             }
 
+            /// <summary>
+            /// The reserved parameters.
+            /// </summary>
             [NameInMap("CustomPrometheusSetting")]
             [Validation(Required=false)]
             public CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting CustomPrometheusSetting { get; set; }
             public class CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting : TeaModel {
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("PrometheusClusterId")]
                 [Validation(Required=false)]
                 public string PrometheusClusterId { get; set; }
 
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("PrometheusClusterRegion")]
                 [Validation(Required=false)]
                 public string PrometheusClusterRegion { get; set; }
 
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("PrometheusLabels")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> PrometheusLabels { get; set; }
@@ -213,11 +237,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// The general settings.
+        /// </summary>
         [NameInMap("CustomPeriod")]
         [Validation(Required=false)]
         public CreateTimingSyntheticTaskRequestCustomPeriod CustomPeriod { get; set; }
         public class CreateTimingSyntheticTaskRequestCustomPeriod : TeaModel {
             /// <summary>
+            /// The custom host settings.
+            /// 
             /// This parameter is required.
             /// </summary>
             [NameInMap("EndHour")]
@@ -225,6 +254,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public int? EndHour { get; set; }
 
             /// <summary>
+            /// The list of hosts.
+            /// 
             /// This parameter is required.
             /// </summary>
             [NameInMap("StartHour")]
@@ -234,6 +265,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
+        /// The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Frequency")]
@@ -241,6 +274,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Frequency { get; set; }
 
         /// <summary>
+        /// The detection point type. Valid values:
+        /// 
+        /// - 1: PC
+        /// - 2: mobile device
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorCategory")]
@@ -284,6 +322,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Method { get; set; }
 
+                /// <summary>
+                /// The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:
+                /// 
+                /// 0: default
+                /// 
+                /// 1: http/1.1
+                /// 
+                /// 2: h2
+                /// 
+                /// 3: disables the ALPN protocol
+                /// </summary>
                 [NameInMap("ProtocolAlpnProtocol")]
                 [Validation(Required=false)]
                 public int? ProtocolAlpnProtocol { get; set; }
@@ -498,7 +547,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// The IP version of the DNS server.
                 /// 
-                /// *   0 (default value): IPv4.
+                /// *   0 (default): IPv4.
                 /// *   1: IPv6.
                 /// *   2: A version is automatically selected.
                 /// </summary>
@@ -516,7 +565,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// The DNS query method. Valid values:
                 /// 
-                /// *   0 (default value): recursive
+                /// *   0 (default): recursive
                 /// *   1: iterative
                 /// </summary>
                 [NameInMap("QueryMethod")]
@@ -703,7 +752,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// The address type of the resource. Valid values:
                 /// 
                 /// *   1: resource URL
-                /// *   0 (default value): page URL
+                /// *   0 (default): page URL
                 /// </summary>
                 [NameInMap("StreamAddressType")]
                 [Validation(Required=false)]
@@ -749,7 +798,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// Specifies whether to automatically scroll up and down the screen to load a page.
                 /// 
-                /// *   0 (default value): no
+                /// *   0 (default): no
                 /// *   1: yes
                 /// </summary>
                 [NameInMap("AutomaticScrolling")]
@@ -759,7 +808,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// Specifies whether to create a custom header.
                 /// 
-                /// *   0 (default value): No custom header is created.
+                /// *   0 (default): No custom header is created.
                 /// *   1: A custom header is created for the first packet.
                 /// *   2: A custom header is created for all packets.
                 /// </summary>
@@ -787,7 +836,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// Specifies whether to disable caching.
                 /// 
                 /// *   0: no
-                /// *   1 (default value): yes
+                /// *   1 (default): yes
                 /// </summary>
                 [NameInMap("DisableCache")]
                 [Validation(Required=false)]
@@ -900,6 +949,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
+        /// The list of detection points.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Monitors")]
@@ -907,6 +958,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public List<CreateTimingSyntheticTaskRequestMonitors> Monitors { get; set; }
         public class CreateTimingSyntheticTaskRequestMonitors : TeaModel {
             /// <summary>
+            /// The city code.
+            /// 
             /// This parameter is required.
             /// </summary>
             [NameInMap("CityCode")]
@@ -914,6 +967,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string CityCode { get; set; }
 
             /// <summary>
+            /// The client type of the detection point. Valid values:
+            /// 
+            /// - 1: data center
+            /// - 2: Internet
+            /// - 3: mobile device
+            /// - 4: ECS instance
+            /// 
             /// This parameter is required.
             /// </summary>
             [NameInMap("ClientType")]
@@ -921,6 +981,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public int? ClientType { get; set; }
 
             /// <summary>
+            /// The carrier code.
+            /// 
             /// This parameter is required.
             /// </summary>
             [NameInMap("OperatorCode")]
@@ -947,18 +1009,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The parameter is optional.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateTimingSyntheticTaskRequestTags> Tags { get; set; }
         public class CreateTimingSyntheticTaskRequestTags : TeaModel {
+            /// <summary>
+            /// The key of the tag.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

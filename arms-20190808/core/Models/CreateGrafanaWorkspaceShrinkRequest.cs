@@ -31,6 +31,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string GrafanaVersion { get; set; }
 
         /// <summary>
+        /// The edition.
+        /// 
+        /// **Valid values:**
+        /// 
+        /// *   standard: `Beta Edition or Standard Edition`
+        /// *   personal_edition: Developer Edition
+        /// *   experts_edition: Pro Edition
+        /// *   advanced_edition: Advanced Edition
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("GrafanaWorkspaceEdition")]

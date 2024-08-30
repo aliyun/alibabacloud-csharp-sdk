@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListActivatedAlertsResponseBody : TeaModel {
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         /// <summary>
         /// The struct returned.
         /// </summary>

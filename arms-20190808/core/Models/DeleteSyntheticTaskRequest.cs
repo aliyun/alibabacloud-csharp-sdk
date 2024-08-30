@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteSyntheticTaskRequest : TeaModel {
         /// <summary>
+        /// The region ID. Default value: cn-hangzhou.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// The task IDs.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("TaskIds")]

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public long? AlertId { get; set; }
 
+        /// <summary>
+        /// The ID of the Prometheus instance.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }

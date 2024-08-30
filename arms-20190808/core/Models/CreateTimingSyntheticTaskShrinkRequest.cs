@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateTimingSyntheticTaskShrinkRequest : TeaModel {
+        /// <summary>
+        /// The list of assertions.
+        /// </summary>
         [NameInMap("AvailableAssertions")]
         [Validation(Required=false)]
         public string AvailableAssertionsShrink { get; set; }
@@ -20,11 +23,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string CommonSettingShrink { get; set; }
 
+        /// <summary>
+        /// The general settings.
+        /// </summary>
         [NameInMap("CustomPeriod")]
         [Validation(Required=false)]
         public string CustomPeriodShrink { get; set; }
 
         /// <summary>
+        /// The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Frequency")]
@@ -32,6 +40,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Frequency { get; set; }
 
         /// <summary>
+        /// The detection point type. Valid values:
+        /// 
+        /// - 1: PC
+        /// - 2: mobile device
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorCategory")]
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string MonitorConfShrink { get; set; }
 
         /// <summary>
+        /// The list of detection points.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Monitors")]
@@ -72,10 +87,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The parameter is optional.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }

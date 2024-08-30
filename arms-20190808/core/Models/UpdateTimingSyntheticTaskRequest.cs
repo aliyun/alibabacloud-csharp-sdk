@@ -106,18 +106,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             }
 
+            /// <summary>
+            /// The reserved parameters.
+            /// </summary>
             [NameInMap("CustomPrometheusSetting")]
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting CustomPrometheusSetting { get; set; }
             public class UpdateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting : TeaModel {
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("PrometheusClusterId")]
                 [Validation(Required=false)]
                 public string PrometheusClusterId { get; set; }
 
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("PrometheusClusterRegion")]
                 [Validation(Required=false)]
                 public string PrometheusClusterRegion { get; set; }
 
+                /// <summary>
+                /// The reserved parameters.
+                /// </summary>
                 [NameInMap("PrometheusLabels")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> PrometheusLabels { get; set; }
@@ -182,8 +194,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <summary>
             /// Specifies whether to evenly distribute monitoring samples. Valid values:
             /// 
-            /// *   0: no.
-            /// *   1: yes.
+            /// *   0: no
+            /// *   1: yes
             /// </summary>
             [NameInMap("MonitorSamples")]
             [Validation(Required=false)]
@@ -254,7 +266,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public UpdateTimingSyntheticTaskRequestMonitorConfApiHTTP ApiHTTP { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfApiHTTP : TeaModel {
                 /// <summary>
-                /// Specifies whether to verify the certificate. Default value: No.
+                /// Specifies whether to verify the certificate. Default value: false.
                 /// </summary>
                 [NameInMap("CheckCert")]
                 [Validation(Required=false)]
@@ -268,7 +280,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? ConnectTimeout { get; set; }
 
                 /// <summary>
-                /// The request method.
+                /// The request method. Valid values:
                 /// 
                 /// *   POST
                 /// *   GET
@@ -277,6 +289,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Method { get; set; }
 
+                /// <summary>
+                /// The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:
+                /// 
+                /// 0: default
+                /// 
+                /// 1-http/1.1
+                /// 
+                /// 2-h2
+                /// 
+                /// 3: disables the ALPN protocol
+                /// </summary>
                 [NameInMap("ProtocolAlpnProtocol")]
                 [Validation(Required=false)]
                 public int? ProtocolAlpnProtocol { get; set; }
@@ -289,7 +312,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public UpdateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody RequestBody { get; set; }
                 public class UpdateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody : TeaModel {
                     /// <summary>
-                    /// The content of the request body. Format: JSON string. The parameter is required if the type parameter is set to text/plain, application/json, application/xml, or text/html.
+                    /// The content of the request body. Format: JSON string. The parameter is required if the Type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -359,49 +382,49 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public int? DownloadKernel { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore CA certificate authentication errors. Valid values: 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore CA certificate authentication errors. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateAuthError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateAuthError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore certificate revocation errors. Valid values: 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore certificate revocation errors. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateCanceledError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateCanceledError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore certificate invalidity. Valid values: 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore certificate invalidity. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateOutOfDateError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateOutOfDateError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore certificate status errors. 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore certificate status errors. 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateStatusError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateStatusError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore certificate incredibility. Valid values: 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore certificate incredibility. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateUntrustworthyError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateUntrustworthyError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore certificate usage errors. Valid values: 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore certificate usage errors. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateUsingError")]
                 [Validation(Required=false)]
                 public int? IgnoreCertificateUsingError { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore host invalidity. Valid values: 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore host invalidity. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreInvalidHostError")]
                 [Validation(Required=false)]
@@ -419,14 +442,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// 
                 /// *   1: HTTP/1
                 /// *   2: HTTP/2
-                /// *   3: HTTP/3
+                /// *   3: http3
                 /// </summary>
                 [NameInMap("QuickProtocol")]
                 [Validation(Required=false)]
                 public int? QuickProtocol { get; set; }
 
                 /// <summary>
-                /// Specifies whether to support redirection. Valid values: 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to support redirection. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("Redirection")]
                 [Validation(Required=false)]
@@ -481,7 +504,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public UpdateTimingSyntheticTaskRequestMonitorConfNetDNS NetDNS { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfNetDNS : TeaModel {
                 /// <summary>
-                /// Specifies whether to use the dig command to display the data. Valid values: 0: No. 1: Yes.
+                /// Specifies whether to use the dig command to display the data. Valid values: 0: no. 1: yes.
                 /// </summary>
                 [NameInMap("Dig")]
                 [Validation(Required=false)]
@@ -516,7 +539,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string TargetUrl { get; set; }
 
                 /// <summary>
-                /// The timeout period for the DNS synthetic test. Unit: milliseconds. The minimum value is 1000 and the maximum value is 45000. Default value: 5000.
+                /// The timeout period for the DNS synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 45000. Default value: 5000.
                 /// </summary>
                 [NameInMap("Timeout")]
                 [Validation(Required=false)]
@@ -597,7 +620,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The parameters of the TCP synthetic test. This parameter is required if the TaskType parameter is set to 2.
+            /// The parameters of the TCP synthetic test.
             /// </summary>
             [NameInMap("NetTCP")]
             [Validation(Required=false)]
@@ -681,8 +704,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// The address type of the resource. Valid values:
                 /// 
-                /// *   1: resource URL
-                /// *   0: page URL Default value: 0.
+                /// *   1: resource URL.
+                /// *   0: page URL. Default value: 0.
                 /// </summary>
                 [NameInMap("StreamAddressType")]
                 [Validation(Required=false)]
@@ -726,14 +749,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public UpdateTimingSyntheticTaskRequestMonitorConfWebsite Website { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfWebsite : TeaModel {
                 /// <summary>
-                /// Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: No. 1: Yes. Default value: 0.
+                /// Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: no. 1: yes. Default value: 0.
                 /// </summary>
                 [NameInMap("AutomaticScrolling")]
                 [Validation(Required=false)]
                 public int? AutomaticScrolling { get; set; }
 
                 /// <summary>
-                /// Specifies whether to create a custom header. Valid values: 0: No. 1: The first packet is modified. 2: All packets are modified. Default value: 0.
+                /// Specifies whether to create a custom header. Valid values: 0: no. 1: The first packet is modified. 2: All packets are modified. Default value: 0.
                 /// </summary>
                 [NameInMap("CustomHeader")]
                 [Validation(Required=false)]
@@ -756,14 +779,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string DNSHijackWhitelist { get; set; }
 
                 /// <summary>
-                /// Specifies whether to disable the cache. Valid values: 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to disable the cache. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("DisableCache")]
                 [Validation(Required=false)]
                 public int? DisableCache { get; set; }
 
                 /// <summary>
-                /// Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: No. 1: Yes. Default value: 0.
+                /// Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: no. 1: yes. Default value: 0.
                 /// </summary>
                 [NameInMap("DisableCompression")]
                 [Validation(Required=false)]
@@ -779,8 +802,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// Specifies whether to exclude invalid IP addresses. Valid values:
                 /// 
-                /// *   1: No
-                /// *   0: Yes
+                /// *   1: no
+                /// *   0: yes
                 /// </summary>
                 [NameInMap("FilterInvalidIP")]
                 [Validation(Required=false)]
@@ -801,7 +824,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string FlowHijackLogo { get; set; }
 
                 /// <summary>
-                /// Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: No. 1: Yes. Default value: 1.
+                /// Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("IgnoreCertificateError")]
                 [Validation(Required=false)]
@@ -822,7 +845,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string PageTamper { get; set; }
 
                 /// <summary>
-                /// Specifies whether to continue browsing after redirection. Valid values: 0: No. 1:Yes. Default value: 1.
+                /// Specifies whether to continue browsing after redirection. Valid values: 0: no. 1: yes. Default value: 1.
                 /// </summary>
                 [NameInMap("Redirection")]
                 [Validation(Required=false)]

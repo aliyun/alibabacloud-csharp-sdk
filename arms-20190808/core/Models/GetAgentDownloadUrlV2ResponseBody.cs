@@ -8,34 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class StartTimingSyntheticTaskResponseBody : TeaModel {
-        /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
-        /// </summary>
+    public class GetAgentDownloadUrlV2ResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
-        /// <summary>
-        /// Indicates whether the request was successful. Valid values: true and false.
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public GetAgentDownloadUrlV2ResponseBodyData Data { get; set; }
+        public class GetAgentDownloadUrlV2ResponseBodyData : TeaModel {
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
 
-        /// <summary>
-        /// The returned message.
-        /// </summary>
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ContactIds { get; set; }
 
         /// <summary>
-        /// The ID of the region. Default value: `cn-hangzhou`.
+        /// The region ID. Default value: `cn-hangzhou`.
         /// 
         /// This parameter is required.
         /// </summary>
