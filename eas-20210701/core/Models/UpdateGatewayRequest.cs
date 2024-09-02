@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        /// <summary>
+        /// Indicates whether it is the default private gateway.
+        /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
         public bool? IsDefault { get; set; }
@@ -59,6 +62,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The number of nodes in the private gateway.
+        /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public int? Replicas { get; set; }

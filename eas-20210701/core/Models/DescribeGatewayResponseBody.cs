@@ -31,14 +31,21 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// The private gateway alias.
+        /// The alias of the private gateway.
         /// </summary>
         [NameInMap("GatewayName")]
         [Validation(Required=false)]
         public string GatewayName { get; set; }
 
         /// <summary>
-        /// The instance type used for the private gateway.
+        /// The instance type used by the private gateway.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   8c16g
+        /// *   4c8g
+        /// *   2c4g
+        /// *   16c32g
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -58,6 +65,17 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? InternetEnabled { get; set; }
 
+        /// <summary>
+        /// Indicates whether Internet access is enabled.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   Creating: Internet access is being enabled.
+        /// *   Failed: Internet access failed to be enabled or deleted.
+        /// *   Running: Internet access is running.
+        /// *   Deleted: Internet access is deleted.
+        /// *   Deleting: Internet access is being deleted.
+        /// </summary>
         [NameInMap("InternetStatus")]
         [Validation(Required=false)]
         public string InternetStatus { get; set; }
@@ -69,10 +87,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string IntranetDomain { get; set; }
 
+        /// <summary>
+        /// Indicates whether it is the default private gateway.
+        /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
         public bool? IsDefault { get; set; }
 
+        /// <summary>
+        /// The number of nodes in the private gateway.
+        /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public int? Replicas { get; set; }
@@ -85,7 +109,17 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The state of the private gateway.
+        /// The status of the private gateway.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   Creating
+        /// *   Stopped
+        /// *   Failed
+        /// *   Running
+        /// *   Deleted
+        /// *   Deleting
+        /// *   Waiting
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

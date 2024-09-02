@@ -17,13 +17,19 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public List<ListAclPolicyResponseBodyInternetAclPolicyList> InternetAclPolicyList { get; set; }
         public class ListAclPolicyResponseBodyInternetAclPolicyList : TeaModel {
-            [NameInMap("Comment")]
+            [NameInMap("AclPolicyList")]
             [Validation(Required=false)]
-            public string Comment { get; set; }
+            public List<ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList> AclPolicyList { get; set; }
+            public class ListAclPolicyResponseBodyInternetAclPolicyListAclPolicyList : TeaModel {
+                [NameInMap("Comment")]
+                [Validation(Required=false)]
+                public string Comment { get; set; }
 
-            [NameInMap("Entry")]
-            [Validation(Required=false)]
-            public string Entry { get; set; }
+                [NameInMap("Entry")]
+                [Validation(Required=false)]
+                public string Entry { get; set; }
+
+            }
 
         }
 
@@ -31,10 +37,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public List<ListAclPolicyResponseBodyIntranetVpcAclPolicyList> IntranetVpcAclPolicyList { get; set; }
         public class ListAclPolicyResponseBodyIntranetVpcAclPolicyList : TeaModel {
-            [NameInMap("IntranetAclPolicyList")]
+            [NameInMap("AclPolicyList")]
             [Validation(Required=false)]
-            public List<ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList> IntranetAclPolicyList { get; set; }
-            public class ListAclPolicyResponseBodyIntranetVpcAclPolicyListIntranetAclPolicyList : TeaModel {
+            public List<ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList> AclPolicyList { get; set; }
+            public class ListAclPolicyResponseBodyIntranetVpcAclPolicyListAclPolicyList : TeaModel {
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }

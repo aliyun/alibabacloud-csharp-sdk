@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayRequest : TeaModel {
         /// <summary>
-        /// The name of the resource group.
+        /// The resource group ID. To obtain a resource group ID, see the ResourceId field in the response of the [ListResources](https://help.aliyun.com/document_detail/412133.html) operation.
         /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
@@ -22,34 +22,31 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// Valid values:
         /// 
         /// *   true
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
         /// *   false
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
         /// </summary>
         [NameInMap("EnableInternet")]
         [Validation(Required=false)]
         public bool? EnableInternet { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable internal network access. Default value: true.
+        /// Specifies whether to enable private access. Default value: true.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("EnableIntranet")]
         [Validation(Required=false)]
         public bool? EnableIntranet { get; set; }
 
         /// <summary>
-        /// The instance type used for the private gateway.
+        /// The instance type used by the private gateway. Valid values:
+        /// 
+        /// *   2c4g
+        /// *   4c8g
+        /// *   8c16g
+        /// *   16c32g
         /// 
         /// This parameter is required.
         /// </summary>
@@ -58,12 +55,15 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The private gateway alias.
+        /// The alias of the private gateway.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The number of nodes in the private gateway.
+        /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public int? Replicas { get; set; }
