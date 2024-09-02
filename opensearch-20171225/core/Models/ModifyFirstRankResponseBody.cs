@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ModifyFirstRankResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public bool? Active { get; set; }
 
             /// <summary>
-            /// The description of the expression.
+            /// The description of the rough sort expression.
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The content of the expression.
+            /// The information about the expression.
             /// </summary>
             [NameInMap("meta")]
             [Validation(Required=false)]
@@ -53,17 +53,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
                 /// <summary>
                 /// The attribute, feature function, or field to be searched for.
-                /// 
-                /// For more information about supported feature functions, see Rough sort functions.
                 /// </summary>
                 [NameInMap("attribute")]
                 [Validation(Required=false)]
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// The weight.
-                /// 
-                /// Valid values: \[-100000,100000] (excluding 0).
+                /// The weight. Valid values: -100000 to 100000. The value cannot be 0.
                 /// </summary>
                 [NameInMap("weight")]
                 [Validation(Required=false)]

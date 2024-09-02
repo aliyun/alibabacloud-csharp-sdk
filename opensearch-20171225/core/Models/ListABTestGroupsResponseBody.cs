@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// <summary>
         /// The test groups.
         /// 
-        /// For more information, see [ABTestGroup](~~178935~~).
+        /// For more information, see [ABTestGroup](https://help.aliyun.com/document_detail/178935.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

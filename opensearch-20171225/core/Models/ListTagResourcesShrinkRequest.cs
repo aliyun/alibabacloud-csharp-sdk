@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
         /// <summary>
         /// The resource type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]

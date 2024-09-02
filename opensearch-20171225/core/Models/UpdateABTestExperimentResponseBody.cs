@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateABTestExperimentResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -31,40 +31,38 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public int? Created { get; set; }
 
             /// <summary>
-            /// The ID of the test.
+            /// The test ID.
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the test.
+            /// The alias of the test.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The status of the test. Valid values:
+            /// Indicates whether the test is in effect. Valid values:
             /// 
-            /// *   true: in effect
-            /// *   false: not in effect
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("online")]
             [Validation(Required=false)]
             public bool? Online { get; set; }
 
             /// <summary>
-            /// The parameters of the test.
+            /// The test parameters.
             /// </summary>
             [NameInMap("params")]
             [Validation(Required=false)]
             public Dictionary<string, object> Params { get; set; }
 
             /// <summary>
-            /// The percentage of traffic that is routed to the test.
-            /// 
-            /// Value values: 0 to 100.
+            /// The percentage of traffic that is routed to the test. Valid values: [0,100]
             /// </summary>
             [NameInMap("traffic")]
             [Validation(Required=false)]

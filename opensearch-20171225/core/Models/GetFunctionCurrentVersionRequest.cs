@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// *   Drop-down suggestion model: offline_inference
         /// *   Word segmentation model: text
         /// *   Word weight model: tf_checkpoint
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("modelType")]
         [Validation(Required=false)]

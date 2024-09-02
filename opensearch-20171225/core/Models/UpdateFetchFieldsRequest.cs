@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateFetchFieldsRequest : TeaModel {
+        /// <summary>
+        /// The request body.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<string> Body { get; set; }

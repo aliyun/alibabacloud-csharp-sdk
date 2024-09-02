@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListQueryProcessorsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about each query analysis rule.
+        /// The information about the query analysis rule.
         /// 
-        /// For more information, see [QueryProcessor](~~170014~~).
+        /// For more information, see [QueryProcessor](https://help.aliyun.com/document_detail/170014.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListQueryProcessorsResponseBodyResult> Result { get; set; }
         public class ListQueryProcessorsResponseBodyResult : TeaModel {
             /// <summary>
-            /// Indicates whether the query analysis rule is the default one.
+            /// Indicates whether the query analysis rule is a default rule.
             /// </summary>
             [NameInMap("active")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public int? Created { get; set; }
 
             /// <summary>
-            /// The type of the industry. Valid values:
+            /// The type of the industry to which the query analysis rule is applied. Valid values:
             /// 
             /// *   GENERAL
             /// *   ECOMMERCE
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// The indexes to which the query analysis rule applies.
+            /// The indexes to which the query analysis rule is applied.
             /// </summary>
             [NameInMap("indexes")]
             [Validation(Required=false)]
@@ -66,15 +66,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
             /// <summary>
             /// The features that are used in the query analysis rule.
-            /// 
-            /// For more information, see the ["Processor"](~~170014~~) section of the QueryProcessor topic.
             /// </summary>
             [NameInMap("processors")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Processors { get; set; }
 
             /// <summary>
-            /// The time when the query analysis rule was last updated.
+            /// The time when the query analysis rule was last modified.
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

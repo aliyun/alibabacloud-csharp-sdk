@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// The weight. Valid values: \[-100000,100000]. The value cannot be 0.
+                /// The weight. Valid values: [-100000,100000]. The value cannot be 0.
                 /// </summary>
                 [NameInMap("weight")]
                 [Validation(Required=false)]

@@ -71,9 +71,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The type of the industry. Valid values:
+            /// 
+            /// *   GENERAL: general.
+            /// *   ECOMMERCE: e-commerce.
+            /// *   IT_CONTENT: IT content.
+            /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
+
+            [NameInMap("engineType")]
+            [Validation(Required=false)]
+            public string EngineType { get; set; }
 
             /// <summary>
             /// The expiration time.
@@ -81,13 +92,6 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("expireOn")]
             [Validation(Required=false)]
             public string ExpireOn { get; set; }
-
-            /// <summary>
-            /// The ID of the created rough sort expression.
-            /// </summary>
-            [NameInMap("firstRankAlgoDeploymentId")]
-            [Validation(Required=false)]
-            public int? FirstRankAlgoDeploymentId { get; set; }
 
             /// <summary>
             /// The approval status of the quotas. Valid values:
@@ -125,32 +129,11 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// Indicates whether the instance is automatically locked after it expires.
-            /// </summary>
-            [NameInMap("lockedByExpiration")]
-            [Validation(Required=false)]
-            public int? LockedByExpiration { get; set; }
-
-            /// <summary>
             /// The name of the application.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-
-            /// <summary>
-            /// The ID of the fine sort expression that is being created.
-            /// </summary>
-            [NameInMap("pendingSecondRankAlgoDeploymentId")]
-            [Validation(Required=false)]
-            public int? PendingSecondRankAlgoDeploymentId { get; set; }
-
-            /// <summary>
-            /// The ID of the order that is not complete for the instance. For example, an order is one that is initiated to create the instance or change the quotas or billing method.
-            /// </summary>
-            [NameInMap("processingOrderId")]
-            [Validation(Required=false)]
-            public string ProcessingOrderId { get; set; }
 
             /// <summary>
             /// Indicates whether the order is complete. Valid values:
@@ -206,13 +189,6 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 public string Spec { get; set; }
 
             }
-
-            /// <summary>
-            /// The ID of the created fine sort expression.
-            /// </summary>
-            [NameInMap("secondRankAlgoDeploymentId")]
-            [Validation(Required=false)]
-            public int? SecondRankAlgoDeploymentId { get; set; }
 
             /// <summary>
             /// The status of the application. Valid values:

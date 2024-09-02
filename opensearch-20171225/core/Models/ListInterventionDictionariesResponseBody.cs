@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// <summary>
         /// The information about each intervention dictionary.
         /// 
-        /// For more information, see [InterventionDictionary](~~173608~~).
+        /// For more information, see [InterventionDictionary](https://help.aliyun.com/document_detail/173608.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

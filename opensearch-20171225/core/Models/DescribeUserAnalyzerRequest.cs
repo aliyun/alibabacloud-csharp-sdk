@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class DescribeUserAnalyzerRequest : TeaModel {
         /// <summary>
-        /// all
+        /// The Associated information,output properties based on hierarchy.
+        /// * **all**: Outputs associated app information
         /// </summary>
         [NameInMap("with")]
         [Validation(Required=false)]

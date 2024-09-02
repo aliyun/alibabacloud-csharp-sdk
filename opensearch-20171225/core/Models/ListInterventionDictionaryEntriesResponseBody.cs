@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListInterventionDictionaryEntriesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about each intervention entry.
+        /// The information about intervention entries.
         /// 
-        /// For more information, see [InterventionDictionaryEntry](~~173606~~).
+        /// For more information, see [InterventionDictionaryEntry](https://help.aliyun.com/document_detail/173606.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListInterventionDictionaryEntriesResponseBodyResult> Result { get; set; }
         public class ListInterventionDictionaryEntriesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The action. Valid values:
+            /// The command. Valid values:
             /// 
             /// *   add
             /// *   delete
@@ -43,11 +43,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public long? Created { get; set; }
 
             /// <summary>
-            /// The content of an intervention entry for category prediction.
-            /// 
-            /// The parameter returns key-value pairs. The key in a key-value pair indicates the ID of the category. The value in a key-value pair indicates the relevance value of the category. A value of 0 indicates irrelevant. A value of 1 indicates slightly relevant. A value of 2 indicates relevant.
-            /// 
-            /// Example: {"2":1, "100":0}
+            /// The content of an intervention entry for category prediction. The field value consists of key-value pairs. The key in a key-value pair indicates the ID of the category. The value in a key-value pair indicates the relevance to the category. A value of 0 indicates irrelevant. A value of 1 indicates slightly relevant. A value of 2 indicates relevant. Example: {"2":1, "100":0}
             /// </summary>
             [NameInMap("relevance")]
             [Validation(Required=false)]
@@ -63,7 +59,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The content of an intervention entry for term weight analysis.
+            /// The content of the intervention entry for term weight analysis.
             /// </summary>
             [NameInMap("tokens")]
             [Validation(Required=false)]
@@ -144,7 +140,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public long? Updated { get; set; }
 
             /// <summary>
-            /// The intervention query in the intervention entry.
+            /// The intervention entry.
             /// </summary>
             [NameInMap("word")]
             [Validation(Required=false)]

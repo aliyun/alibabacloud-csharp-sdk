@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 /// <summary>
                 /// The weight.
                 /// 
-                /// Valid values: \[-100000,100000] (excluding 0).
+                /// Valid values: [-100000,100000] (excluding 0).
                 /// </summary>
                 [NameInMap("weight")]
                 [Validation(Required=false)]

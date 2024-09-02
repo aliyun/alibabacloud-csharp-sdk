@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The result that was returned.
+        /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public Dictionary<string, object> Result { get; set; }

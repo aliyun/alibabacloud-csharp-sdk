@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListInterventionDictionaryNerResultsRequest : TeaModel {
         /// <summary>
-        /// Soymilk
+        /// Query keywords.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]

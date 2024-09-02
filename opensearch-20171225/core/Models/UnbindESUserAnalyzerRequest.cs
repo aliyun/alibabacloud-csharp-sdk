@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UnbindESUserAnalyzerRequest : TeaModel {
+        /// <summary>
+        /// The request parameters.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public object Body { get; set; }

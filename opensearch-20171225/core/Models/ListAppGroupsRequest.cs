@@ -10,55 +10,69 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListAppGroupsRequest : TeaModel {
         /// <summary>
-        /// ops-cn-xxxx
+        /// The ID of the instance. Exact match is used.
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// my_name
+        /// The name of the application.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// 1
+        /// The page number. Default value: 1.
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// 10
+        /// The number of entries per page. Default value: 10.
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// ""
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// 0
+        /// The method based on which applications are sorted. Valid values:
+        /// 
+        /// *   0: sorts applications in descending order by creation time.
+        /// *   1: sorts applications in descending order by modification time.
+        /// 
+        /// Default value: 0.
         /// </summary>
         [NameInMap("sortBy")]
         [Validation(Required=false)]
         public int? SortBy { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<ListAppGroupsRequestTags> Tags { get; set; }
         public class ListAppGroupsRequestTags : TeaModel {
+            /// <summary>
+            /// The tag key.
+            /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value.
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -66,7 +80,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         }
 
         /// <summary>
-        /// standard
+        /// The type of the application. Valid values:
+        /// 
+        /// *   standard: a High-performance Search Edition application.
+        /// *   enhanced: an Industry Algorithm Edition application.
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

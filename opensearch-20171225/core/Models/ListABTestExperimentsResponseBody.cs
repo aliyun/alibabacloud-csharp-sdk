@@ -10,70 +10,69 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListABTestExperimentsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the tests.
-        /// 
-        /// For more information, see [ABTestExperiment](~~173617~~).
+        /// The experiment details.\\
+        /// For more information, see [ABTestExperiment](https://help.aliyun.com/document_detail/173617.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListABTestExperimentsResponseBodyResult> Result { get; set; }
         public class ListABTestExperimentsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The time when the test was created.
+            /// The time when the experiment was created.
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public int? Created { get; set; }
 
             /// <summary>
-            /// The ID of the test group.
+            /// The experiment ID.
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the test group.
+            /// The group alias.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The status of the test. Valid values:
+            /// Indicates whether the experiment is in effect. Valid values:
             /// 
-            /// *   true: in effect
-            /// *   false: not in effect
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("online")]
             [Validation(Required=false)]
             public bool? Online { get; set; }
 
             /// <summary>
-            /// The parameters of the test.
+            /// The experiment parameters.
             /// </summary>
             [NameInMap("params")]
             [Validation(Required=false)]
             public Dictionary<string, object> Params { get; set; }
 
             /// <summary>
-            /// The percentage of traffic that is routed to the test.
+            /// The percentage of traffic that is routed to the experiment.
             /// 
-            /// Valid values: \[0,100].
+            /// Valid values: [0,100]
             /// </summary>
             [NameInMap("traffic")]
             [Validation(Required=false)]
             public int? Traffic { get; set; }
 
             /// <summary>
-            /// The time when the test was last modified.
+            /// The time when the experiment was last modified.
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

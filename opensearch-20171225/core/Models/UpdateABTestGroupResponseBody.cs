@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateABTestGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the test group.
+            /// The alias of the test group.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// The time when the test group was last modified.
+            /// The time when the test group was last updated.
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

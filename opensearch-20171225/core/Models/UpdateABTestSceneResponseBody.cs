@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the test scenario. For more information, see [ABTestScene](~~173618~~).
+        /// The details of the test scenario. For more information, see [ABTestScene](https://help.aliyun.com/document_detail/173618.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

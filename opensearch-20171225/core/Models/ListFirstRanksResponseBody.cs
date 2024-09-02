@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// <summary>
         /// The information about each rough sort expression.
         /// 
-        /// For more information, see [FirstRank](~~170007~~).
+        /// For more information, see [FirstRank](https://help.aliyun.com/document_detail/170007.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public bool? Active { get; set; }
 
+            /// <summary>
+            /// The time when the cluster was created.
+            /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public int? Created { get; set; }
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 /// <summary>
                 /// The parameters that are used by a function in the expression.
                 /// 
-                /// For more information, see [Rough sort functions](~~180765~~).
+                /// For more information, see [Rough sort functions](https://help.aliyun.com/document_detail/180765.html).
                 /// </summary>
                 [NameInMap("arg")]
                 [Validation(Required=false)]
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 /// <summary>
                 /// The attribute, feature function, or field to be searched for.
                 /// 
-                /// For more information about supported feature functions, see [Rough sort functions](~~180765~~).
+                /// For more information about supported feature functions, see [Rough sort functions](https://help.aliyun.com/document_detail/180765.html).
                 /// </summary>
                 [NameInMap("attribute")]
                 [Validation(Required=false)]
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 /// <summary>
                 /// The weight.
                 /// 
-                /// Valid values: \[-100000,100000] (excluding 0).
+                /// Valid values: [-100000,100000] (excluding 0).
                 /// </summary>
                 [NameInMap("weight")]
                 [Validation(Required=false)]
@@ -86,6 +89,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The time when the cluster was updated.
+            /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]
             public int? Updated { get; set; }

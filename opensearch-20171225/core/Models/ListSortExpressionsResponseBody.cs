@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListSortExpressionsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the rough sort or fine sort expressions that were returned.
+        /// The information about the rough sort or fine sort expressions that are returned.
         /// 
-        /// For more information, see [FirstRank](~~170007~~) and [SecondRank](~~170008~~).
+        /// For more information, see [FirstRank](https://help.aliyun.com/document_detail/170007.html) and [SecondRank](https://help.aliyun.com/document_detail/170008.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -33,28 +33,28 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public bool? Active { get; set; }
 
             /// <summary>
-            /// The time when the expression was created.
+            /// The timestamp when the sort expression was created.
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public int? Created { get; set; }
 
             /// <summary>
-            /// The description of the expression.
+            /// The description of the sort expression.
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The name of the expression.
+            /// The name of the sort expression.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The time when the expression was last updated.
+            /// The timestamp when the sort expression was updated.
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

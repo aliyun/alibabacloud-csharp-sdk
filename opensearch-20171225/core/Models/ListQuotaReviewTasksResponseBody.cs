@@ -10,37 +10,35 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListQuotaReviewTasksResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the ticket for application quota approval.
-        /// 
-        /// For more information, see [QuotaReviewTask](~~173609~~).
+        /// The information about the tickets. For more information, see [QuotaReviewTask](https://help.aliyun.com/document_detail/173609.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListQuotaReviewTasksResponseBodyResult> Result { get; set; }
         public class ListQuotaReviewTasksResponseBodyResult : TeaModel {
             /// <summary>
-            /// The ID of the application.
+            /// The application ID.
             /// </summary>
             [NameInMap("appGroupId")]
             [Validation(Required=false)]
             public int? AppGroupId { get; set; }
 
             /// <summary>
-            /// The name of the application.
+            /// The application name.
             /// </summary>
             [NameInMap("appGroupName")]
             [Validation(Required=false)]
             public string AppGroupName { get; set; }
 
             /// <summary>
-            /// The type of the application.
+            /// The application type.
             /// </summary>
             [NameInMap("appGroupType")]
             [Validation(Required=false)]
@@ -54,7 +52,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public bool? Approved { get; set; }
 
             /// <summary>
-            /// Indicates whether the model is available.
+            /// Indicates whether the application is available.
             /// </summary>
             [NameInMap("available")]
             [Validation(Required=false)]
@@ -75,14 +73,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The ID of the ticket.
+            /// The ticket ID.
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public int? Id { get; set; }
 
             /// <summary>
-            /// The remarks of the ticket.
+            /// The remarks.
             /// </summary>
             [NameInMap("memo")]
             [Validation(Required=false)]
@@ -124,7 +122,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public int? OldDocSize { get; set; }
 
             /// <summary>
-            /// The original application specifications.
+            /// The original specifications of the application.
             /// </summary>
             [NameInMap("oldSpec")]
             [Validation(Required=false)]
@@ -140,7 +138,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         }
 
         /// <summary>
-        /// The total number of the returned tickets.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

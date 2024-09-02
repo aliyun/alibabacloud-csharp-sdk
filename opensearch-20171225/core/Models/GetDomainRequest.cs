@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class GetDomainRequest : TeaModel {
         /// <summary>
-        /// my_app_group_name
+        /// The name or ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("appGroupIdentity")]
         [Validation(Required=false)]

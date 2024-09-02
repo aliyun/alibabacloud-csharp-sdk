@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ModifyScheduledTaskResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the scheduled task.
+        /// The information about the scheduled task.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

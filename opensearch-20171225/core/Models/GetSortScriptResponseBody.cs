@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class GetSortScriptResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the script
+        /// The details of the script.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -44,12 +44,15 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public string Scope { get; set; }
 
+            /// <summary>
+            /// The name of the script.
+            /// </summary>
             [NameInMap("scriptName")]
             [Validation(Required=false)]
             public string ScriptName { get; set; }
 
             /// <summary>
-            /// The status of the script. For more information, see the Script status table.
+            /// The status of the script. For more information, see the description of the status response parameter in the ListSortScripts topic.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

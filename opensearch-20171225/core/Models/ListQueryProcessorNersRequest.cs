@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListQueryProcessorNersRequest : TeaModel {
         /// <summary>
-        /// ECOMMERCE
+        /// The type of the industry.
+        /// 
+        /// *   ECOMMERCE
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]

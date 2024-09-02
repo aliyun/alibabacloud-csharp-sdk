@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result that was returned.
+        /// The results returned.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyResult> Result { get; set; }
         public class DescribeRegionsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The URL of the OpenSearch console.
+            /// The console URL.
             /// </summary>
             [NameInMap("consoleUrl")]
             [Validation(Required=false)]
             public string ConsoleUrl { get; set; }
 
             /// <summary>
-            /// The endpoint of the region.
+            /// The endpoint.
             /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// The name of the region.
+            /// The region name.
             /// </summary>
             [NameInMap("localName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The region ID.
             /// </summary>
             [NameInMap("regionId")]
             [Validation(Required=false)]

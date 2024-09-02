@@ -10,43 +10,43 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListAppGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about each application.
+        /// The information about the application.
         /// 
-        /// For more information, see [AppGroup](~~170000~~).
+        /// For more information, see [AppGroup](https://help.aliyun.com/document_detail/170000.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListAppGroupsResponseBodyResult> Result { get; set; }
         public class ListAppGroupsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The billing method of the application. Valid values:
+            /// The billing method. Valid values:
             /// 
-            /// *   POSTPAY: pay-as-you-go
-            /// *   PREPAY: subscription
+            /// *   POSTPAY: pay-as-you-go.
+            /// *   PREPAY: subscription.
             /// </summary>
             [NameInMap("chargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The billing model. Valid values:
+            /// The billable item. Valid values:
             /// 
-            /// *   1: computing resources
-            /// *   2: queries per second (QPS)
+            /// *   1: computing resources.
+            /// *   2: queries per second (QPS).
             /// </summary>
             [NameInMap("chargingWay")]
             [Validation(Required=false)]
             public int? ChargingWay { get; set; }
 
             /// <summary>
-            /// The code of the commodity.
+            /// The commodity code.
             /// </summary>
             [NameInMap("commodityCode")]
             [Validation(Required=false)]
@@ -74,54 +74,51 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// domain
+            /// The industry of the application.
             /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            [NameInMap("engineType")]
+            [Validation(Required=false)]
+            public string EngineType { get; set; }
+
             /// <summary>
-            /// The expiration time.
+            /// The time when the application expired.
             /// </summary>
             [NameInMap("expireOn")]
             [Validation(Required=false)]
             public string ExpireOn { get; set; }
 
             /// <summary>
-            /// The ID of the created rough sort expression.
-            /// </summary>
-            [NameInMap("firstRankAlgoDeploymentId")]
-            [Validation(Required=false)]
-            public int? FirstRankAlgoDeploymentId { get; set; }
-
-            /// <summary>
-            /// The approval status of the quotas. Valid values:
+            /// The approval state of the quotas. Valid values:
             /// 
-            /// *   0: The quotas are approved.
-            /// *   1: The quotas are being approved.
+            /// *   0: The application is in service.
+            /// *   1: The quotas are being reviewed.
             /// </summary>
             [NameInMap("hasPendingQuotaReviewTask")]
             [Validation(Required=false)]
             public int? HasPendingQuotaReviewTask { get; set; }
 
             /// <summary>
-            /// The ID of the application.
+            /// The application ID.
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The instance ID.
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The lock mode of the instance. Valid values:
+            /// The lock state. Valid values:
             /// 
-            /// *   Unlock: The instance is not locked.
+            /// *   Unlock: The instance is unlocked.
             /// *   LockByExpiration: The instance is automatically locked after it expires.
             /// *   ManualLock: The instance is manually locked.
             /// </summary>
@@ -137,31 +134,17 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public int? LockedByExpiration { get; set; }
 
             /// <summary>
-            /// The name of the application.
+            /// The application name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the fine sort expression that is being created.
-            /// </summary>
-            [NameInMap("pendingSecondRankAlgoDeploymentId")]
-            [Validation(Required=false)]
-            public int? PendingSecondRankAlgoDeploymentId { get; set; }
-
-            /// <summary>
-            /// The ID of the order that is not complete for the instance. For example, an order is one that is initiated to create the instance or change the quotas or billing method.
-            /// </summary>
-            [NameInMap("processingOrderId")]
-            [Validation(Required=false)]
-            public string ProcessingOrderId { get; set; }
-
-            /// <summary>
-            /// Indicates whether the order is complete. Valid values:
+            /// Indicates whether the application is created. Valid values:
             /// 
-            /// *   0: The order is in progress.
-            /// *   1: The order is complete.
+            /// *   0: The application is being created.
+            /// *   1: The application is created.
             /// </summary>
             [NameInMap("produced")]
             [Validation(Required=false)]
@@ -175,16 +158,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// The information about the quotas of the application.
-            /// 
-            /// For more information, see [Quota](https://www.alibabacloud.com/help/doc-detail/170001.htm).
+            /// The information about the quotas of the application. For more information, see [Quota](https://help.aliyun.com/document_detail/170001.html).
             /// </summary>
             [NameInMap("quota")]
             [Validation(Required=false)]
             public ListAppGroupsResponseBodyResultQuota Quota { get; set; }
             public class ListAppGroupsResponseBodyResultQuota : TeaModel {
                 /// <summary>
-                /// The computing resources. Unit: logical computing units (LCUs).
+                /// The computing resources. Unit: logical computing unit (LCU).
                 /// </summary>
                 [NameInMap("computeResource")]
                 [Validation(Required=false)]
@@ -198,15 +179,15 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 public int? DocSize { get; set; }
 
                 /// <summary>
-                /// The specifications of the application. Valid values:
+                /// The specifications. Valid values:
                 /// 
-                /// *   opensearch.share.junior: basic
-                /// *   opensearch.share.common: shared general-purpose
-                /// *   opensearch.share.compute: shared computing
-                /// *   opensearch.share.storage: shared storage
-                /// *   opensearch.private.common: exclusive general-purpose
-                /// *   opensearch.private.compute: exclusive computing
-                /// *   opensearch.private.storage: exclusive storage
+                /// *   opensearch.share.junior: basic.
+                /// *   opensearch.share.common: shared general-purpose.
+                /// *   opensearch.share.compute: shared computing.
+                /// *   opensearch.share.storage: shared storage.
+                /// *   opensearch.private.common: exclusive general-purpose.
+                /// *   opensearch.private.compute: exclusive computing.
+                /// *   opensearch.private.storage: exclusive storage.
                 /// </summary>
                 [NameInMap("spec")]
                 [Validation(Required=false)]
@@ -215,20 +196,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The ID of the created fine sort expression.
-            /// </summary>
-            [NameInMap("secondRankAlgoDeploymentId")]
-            [Validation(Required=false)]
-            public int? SecondRankAlgoDeploymentId { get; set; }
-
-            /// <summary>
-            /// The status of the application. Valid values:
+            /// The state of the application. Valid values:
             /// 
-            /// *   producing
-            /// *   review_pending
-            /// *   config_pending
-            /// *   normal
-            /// *   frozen
+            /// *   producing: The application is being created.
+            /// *   review_pending: The application is being reviewed.
+            /// *   config_pending: The application is to be configured.
+            /// *   normal: The application is in service.
+            /// *   frozen: The application is frozen.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
@@ -241,14 +215,23 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public int? SwitchedTime { get; set; }
 
+            /// <summary>
+            /// The application tags.
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListAppGroupsResponseBodyResultTags> Tags { get; set; }
             public class ListAppGroupsResponseBodyResultTags : TeaModel {
+                /// <summary>
+                /// The tag key.
+                /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value.
+                /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -258,9 +241,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             /// <summary>
             /// The type of the application. Valid values:
             /// 
-            /// *   standard: a standard application.
-            /// *   advance: an advanced application which is of an old application type. New applications cannot be of this type.
-            /// *   enhanced: an advanced application which is of a new application type.
+            /// *   standard: a High-performance Search Edition application.
+            /// *
+            /// *   enhanced: an Industry Algorithm Edition application.
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]

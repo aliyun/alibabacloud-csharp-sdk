@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
     public class ListQueryProcessorAnalyzerResultsRequest : TeaModel {
         /// <summary>
         /// The text to be tested.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("text")]
         [Validation(Required=false)]

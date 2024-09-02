@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// <summary>
         /// The custom analyzer.
         /// 
-        /// For more information, see [UserAnalyzer](~~178934~~).
+        /// For more information, see [UserAnalyzer](https://help.aliyun.com/document_detail/178934.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             /// <summary>
             /// The basic analyzer. Valid values:
             /// 
-            /// *   chn_standard: [a common analyzer in Chinese](~~179424~~)
+            /// *   chn_standard: [a common analyzer in Chinese](https://help.aliyun.com/document_detail/179424.html)
             /// *   chn_scene_name: an analyzer for person names in Chinese
-            /// *   chn_ecommerce: [an analyzer for E-commerce in Chinese](~~179424~~)
-            /// *   chn_it_content: [an analyzer for IT content in Chinese](~~179424~~)
+            /// *   chn_ecommerce: [an analyzer for E-commerce in Chinese](https://help.aliyun.com/document_detail/179424.html)
+            /// *   chn_it_content: [an analyzer for IT content in Chinese](https://help.aliyun.com/document_detail/179424.html)
             /// *   en_min: a small-granularity analyzer in English
             /// *   th_standard: a common analyzer in Thai
             /// *   th_ecommerce: an analyzer for E-commerce in Thai
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             /// <summary>
             /// The dictionaries that are used by the custom analyzer.
             /// 
-            /// For more information, see [UserDict](~~178933~~).
+            /// For more information, see [UserDict](https://help.aliyun.com/document_detail/178933.html).
             /// </summary>
             [NameInMap("dicts")]
             [Validation(Required=false)]

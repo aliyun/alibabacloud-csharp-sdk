@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// <summary>
         /// The information about each fine sort expression.
         /// 
-        /// For more information, see [SecondRank](~~170008~~).
+        /// For more information, see [SecondRank](https://help.aliyun.com/document_detail/170008.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

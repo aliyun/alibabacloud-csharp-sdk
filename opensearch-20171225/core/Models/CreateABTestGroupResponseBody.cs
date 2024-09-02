@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateABTestGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The return result.
+        /// The returned results.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the test group.
+            /// The alias of the test group.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The status of the test group. Valid values:
+            /// The status of the test group.
             /// 
             /// *   0: not in effect
             /// *   1: in effect
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// The time when the test group was last modified.
+            /// The time when the test group was last updated.
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class GetSortScriptFileResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The last time when the script was last modified.
+            /// The time when the script was last modified.
             /// </summary>
             [NameInMap("modifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// The version of the script.
+            /// The version of the script content.
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

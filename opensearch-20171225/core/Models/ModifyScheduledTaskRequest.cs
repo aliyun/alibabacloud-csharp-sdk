@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ModifyScheduledTaskRequest : TeaModel {
         /// <summary>
-        /// 请求参数。
+        /// The request parameters.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

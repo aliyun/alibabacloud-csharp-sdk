@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
-    public class ModifyQueryProcessorRequest : TeaModel {
-        /// <summary>
-        /// The request parameters.
-        /// </summary>
-        [NameInMap("body")]
+    public class CreateAppGroupCredentialsRequest : TeaModel {
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public object Body { get; set; }
+        public string Type { get; set; }
 
-        /// <summary>
-        /// Specifies whether the request is a dry run.
-        /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

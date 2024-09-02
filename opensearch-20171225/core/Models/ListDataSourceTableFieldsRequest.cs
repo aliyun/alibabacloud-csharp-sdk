@@ -14,18 +14,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// 
         /// Different types of data sources use different parameters. For more information, see the following sections of the "DataSource" topic:
         /// 
-        /// *   [rds](~~170005~~)
-        /// *   [polardb](~~170005~~)
-        /// *   [odps](~~170005~~)
-        /// *   [mysql](~~173627~~)
-        /// *   [drds](~~173627~~)
+        /// *   [rds](https://help.aliyun.com/document_detail/170005.html)
+        /// *   [polardb](https://help.aliyun.com/document_detail/170005.html)
+        /// *   [odps](https://help.aliyun.com/document_detail/170005.html)
+        /// *   [mysql](https://help.aliyun.com/document_detail/173627.html)
+        /// *   [drds](https://help.aliyun.com/document_detail/173627.html)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("params")]
         [Validation(Required=false)]
         public string Params { get; set; }
 
         /// <summary>
-        /// Whether to return the original field type of the data source
+        /// Specifies whether to return the original field types of the data source.
         /// </summary>
         [NameInMap("rawType")]
         [Validation(Required=false)]

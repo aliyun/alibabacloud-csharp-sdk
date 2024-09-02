@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListQueryProcessorNersResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// <summary>
         /// The priority settings of entity types.
         /// 
-        /// For more information, see [Priority settings of entity types](~~173616~~).
+        /// For more information, see [Priority settings of entity types](https://help.aliyun.com/document_detail/173616.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -33,16 +33,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string Label { get; set; }
 
             /// <summary>
-            /// The priority of an entity type among entity types that have the same priority level.
-            /// 
-            /// A smaller value indicates a higher priority. Default value: 0.
+            /// The priority of an entity type among entity types that have the same priority level. A smaller value indicates a higher priority. Default value: 0.
             /// </summary>
             [NameInMap("order")]
             [Validation(Required=false)]
             public int? Order { get; set; }
 
             /// <summary>
-            /// The priority level of the entity type.
+            /// The priority level of the entity type. Valid values:
             /// 
             /// *   HIGH
             /// *   MIDDLE

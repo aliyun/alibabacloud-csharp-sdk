@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListInterventionDictionaryEntriesRequest : TeaModel {
         /// <summary>
-        /// 1
+        /// The page number. Default value: 1.
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// 10
+        /// The number of entries returned per page. Default value: 10.
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Test
+        /// The intervention entry.
         /// </summary>
         [NameInMap("word")]
         [Validation(Required=false)]

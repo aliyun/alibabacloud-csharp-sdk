@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListScheduledTasksRequest : TeaModel {
         /// <summary>
-        /// 1
+        /// The page number. Default value: 1.
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// 10
+        /// The number of entries per page. Default value: 10.
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// wipe
+        /// The scheduled task type. Valid values:
+        /// 
+        /// *   wipe: data cleaning.
+        /// *   fork: reindexing.
+        /// *   check-status: application status check.
+        /// *   index: reindexing.
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

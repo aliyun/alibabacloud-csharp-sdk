@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// <summary>
         /// The NER result.
         /// 
-        /// For more information, see [InterventionDictionaryEntry](~~173606~~).
+        /// For more information, see [InterventionDictionaryEntry](https://help.aliyun.com/document_detail/173606.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

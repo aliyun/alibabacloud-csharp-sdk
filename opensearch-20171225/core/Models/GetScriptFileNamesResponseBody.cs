@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
+            /// <summary>
+            /// The path name of the script file.
+            /// </summary>
             [NameInMap("pathName")]
             [Validation(Required=false)]
             public string PathName { get; set; }

@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         /// <summary>
         /// The details of the data collection tasks.
         /// 
-        /// For more information, see [DataCollection](~~173605~~).
+        /// For more information, see [DataCollection](https://help.aliyun.com/document_detail/173605.html).
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

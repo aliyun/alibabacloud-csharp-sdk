@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
         /// <summary>
         /// The resource IDs. You can specify a maximum number of 50 IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
         /// <summary>
         /// The resource type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]

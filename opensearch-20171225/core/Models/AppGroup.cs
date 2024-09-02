@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
-        [NameInMap("chargingWay")]
-        [Validation(Required=false)]
-        public string ChargingWay { get; set; }
-
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -29,9 +25,31 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("order")]
+        [Validation(Required=false)]
+        public AppGroupOrder Order { get; set; }
+        public class AppGroupOrder : TeaModel {
+            [NameInMap("autoRenew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
+            [NameInMap("duration")]
+            [Validation(Required=false)]
+            public long? Duration { get; set; }
+
+            [NameInMap("pricingCycle")]
+            [Validation(Required=false)]
+            public string PricingCycle { get; set; }
+
+        }
+
         [NameInMap("quota")]
         [Validation(Required=false)]
         public Quota Quota { get; set; }
+
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("type")]
         [Validation(Required=false)]

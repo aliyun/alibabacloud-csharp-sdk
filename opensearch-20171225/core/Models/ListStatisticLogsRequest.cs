@@ -10,30 +10,30 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListStatisticLogsRequest : TeaModel {
         /// <summary>
-        /// The fields to query. Example: columns=wordsTopPv.
+        /// The fields to query. Format: columns=wordsTopPv.
         /// 
-        /// For more information, see [Metrics in statistical reports](https://www.alibabacloud.com/help/en/opensearch/latest/statistical-report).
+        /// For more information, see [Metrics in statistical reports](https://help.aliyun.com/document_detail/187665.html).
         /// </summary>
         [NameInMap("columns")]
         [Validation(Required=false)]
         public string Columns { get; set; }
 
         /// <summary>
-        /// The content of the query clause.
+        /// Specifies whether to use the distinct clause.
         /// </summary>
         [NameInMap("distinct")]
         [Validation(Required=false)]
         public bool? Distinct { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// The page number. Default value: 1.
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10.
+        /// The number of entries per page. Default value: 10.
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListQuotaReviewTasksRequest : TeaModel {
         /// <summary>
-        /// 1
+        /// The page number. Default value: 1.
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// 10
+        /// The number of entries to return on each page. Default value: 10.
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]

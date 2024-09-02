@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class DescribeDataCollctionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -24,18 +24,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         public DescribeDataCollctionResponseBodyResult Result { get; set; }
         public class DescribeDataCollctionResponseBodyResult : TeaModel {
             /// <summary>
-            /// The time when the data collection task was created.
+            /// The time when the task was created.
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public int? Created { get; set; }
 
             /// <summary>
-            /// The type of the data that is collected by the task. Valid values:
+            /// The type of data collected. Valid values:
             /// 
-            /// *   behavior: behavioral data
-            /// *   item_info: project data
-            /// *   industry_specific: industry-specific data
+            /// *   behavior: behavioral data.
+            /// *   item_info: project information.
+            /// *   industry_specific: industry-specific data.
             /// </summary>
             [NameInMap("dataCollectionType")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// The industry to which the data collection task applies. Valid values:
+            /// The industry name. Valid values:
             /// 
             /// *   general
             /// *   ecommerce
@@ -66,34 +66,30 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The status of the data collection task. Valid values:
+            /// The status of the data collection feature. Valid values:
             /// 
-            /// *   0: disabled
-            /// *   1: being enabled
-            /// *   2: enabled
-            /// *   3: failed to be enabled
+            /// *   0: The feature is disabled.
+            /// *   1: The feature is being enabled.
+            /// *   2: The feature is enabled.
+            /// *   3: The feature failed to be enabled.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The ID of the sundial.
+            /// The sundial ID.
             /// </summary>
             [NameInMap("sundialId")]
             [Validation(Required=false)]
             public string SundialId { get; set; }
 
             /// <summary>
-            /// The type of the data source. Valid values:
+            /// The type of the source from which data was collected. Valid values:
             /// 
             /// *   server
-            /// 
             /// *   web
-            /// 
-            /// *   app
-            /// 
-            ///     Note: Only server is supported.
+            /// *   app Note: Only server is supported.
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
