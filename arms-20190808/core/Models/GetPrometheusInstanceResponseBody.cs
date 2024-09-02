@@ -38,6 +38,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public int? ArchiveDuration { get; set; }
 
             /// <summary>
+            /// Read the whitelist policy for password-free addresses.
+            /// </summary>
+            [NameInMap("AuthFreeReadPolicy")]
+            [Validation(Required=false)]
+            public string AuthFreeReadPolicy { get; set; }
+
+            /// <summary>
+            /// Write exempt password address whitelist policy.
+            /// </summary>
+            [NameInMap("AuthFreeWritePolicy")]
+            [Validation(Required=false)]
+            public string AuthFreeWritePolicy { get; set; }
+
+            /// <summary>
             /// The authorization token.
             /// </summary>
             [NameInMap("AuthToken")]
@@ -76,6 +90,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("DbInstanceStatus")]
             [Validation(Required=false)]
             public string DbInstanceStatus { get; set; }
+
+            /// <summary>
+            /// Whether to enable password-free reading.
+            /// </summary>
+            [NameInMap("EnableAuthFreeRead")]
+            [Validation(Required=false)]
+            public bool? EnableAuthFreeRead { get; set; }
+
+            /// <summary>
+            /// Whether to enable write access without password.
+            /// </summary>
+            [NameInMap("EnableAuthFreeWrite")]
+            [Validation(Required=false)]
+            public bool? EnableAuthFreeWrite { get; set; }
 
             /// <summary>
             /// Indicates whether access token authentication is enabled.
@@ -206,6 +234,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string SubClustersJson { get; set; }
 
+            /// <summary>
+            /// Supported authentication types.
+            /// </summary>
             [NameInMap("SupportAuthTypes")]
             [Validation(Required=false)]
             public List<string> SupportAuthTypes { get; set; }

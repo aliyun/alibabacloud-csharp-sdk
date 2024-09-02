@@ -1,3 +1,15 @@
+2024-09-02 Version: 7.1.1
+- Update API CreateRumApp: add param RealRegionId.
+- Update API DeleteRumApp: add param RealRegionId.
+- Update API GetPrometheusInstance: update response param.
+- Update API UpdatePrometheusInstance: add param AuthFreeReadPolicy.
+- Update API UpdatePrometheusInstance: add param AuthFreeWritePolicy.
+- Update API UpdatePrometheusInstance: add param EnableAuthFreeRead.
+- Update API UpdatePrometheusInstance: add param EnableAuthFreeWrite.
+- Update API UpdatePrometheusInstance: add param EnableAuthToken.
+- Update API UpdateRumApp: add param RealRegionId.
+
+
 2024-08-30 Version: 7.1.0
 - Support API GetAgentDownloadUrlV2.
 - Update API ListActivatedAlerts: update response param.

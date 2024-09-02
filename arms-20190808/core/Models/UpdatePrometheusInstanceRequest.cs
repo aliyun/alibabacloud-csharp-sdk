@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public int? ArchiveDuration { get; set; }
 
+        [NameInMap("AuthFreeReadPolicy")]
+        [Validation(Required=false)]
+        public string AuthFreeReadPolicy { get; set; }
+
+        [NameInMap("AuthFreeWritePolicy")]
+        [Validation(Required=false)]
+        public string AuthFreeWritePolicy { get; set; }
+
         /// <summary>
         /// The ID of the Prometheus instance.
         /// 
@@ -24,6 +32,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        [NameInMap("EnableAuthFreeRead")]
+        [Validation(Required=false)]
+        public bool? EnableAuthFreeRead { get; set; }
+
+        [NameInMap("EnableAuthFreeWrite")]
+        [Validation(Required=false)]
+        public bool? EnableAuthFreeWrite { get; set; }
+
+        [NameInMap("EnableAuthToken")]
+        [Validation(Required=false)]
+        public bool? EnableAuthToken { get; set; }
 
         /// <summary>
         /// The region ID.

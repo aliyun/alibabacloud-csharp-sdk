@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Pid { get; set; }
 
+        [NameInMap("RealRegionId")]
+        [Validation(Required=false)]
+        public string RealRegionId { get; set; }
+
         /// <summary>
         /// The region ID.
         /// 
