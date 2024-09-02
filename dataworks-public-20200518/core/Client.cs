@@ -3587,6 +3587,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["AdvancedSettings"] = request.AdvancedSettings;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyScheduleImmediately))
+            {
+                body["ApplyScheduleImmediately"] = request.ApplyScheduleImmediately;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoParsing))
             {
                 body["AutoParsing"] = request.AutoParsing;
@@ -3740,6 +3744,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedSettings))
             {
                 body["AdvancedSettings"] = request.AdvancedSettings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyScheduleImmediately))
+            {
+                body["ApplyScheduleImmediately"] = request.ApplyScheduleImmediately;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoParsing))
             {
@@ -28557,6 +28565,114 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary 分页获取租户下面的数据源类型粒度的表名称
+         *
+         * @param request ListTablesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTablesResponse
+         */
+        public ListTablesResponse ListTablesWithOptions(ListTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
+            {
+                query["DataSourceType"] = request.DataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTables",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTablesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 分页获取租户下面的数据源类型粒度的表名称
+         *
+         * @param request ListTablesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTablesResponse
+         */
+        public async Task<ListTablesResponse> ListTablesWithOptionsAsync(ListTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
+            {
+                query["DataSourceType"] = request.DataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTables",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTablesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 分页获取租户下面的数据源类型粒度的表名称
+         *
+         * @param request ListTablesRequest
+         * @return ListTablesResponse
+         */
+        public ListTablesResponse ListTables(ListTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTablesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 分页获取租户下面的数据源类型粒度的表名称
+         *
+         * @param request ListTablesRequest
+         * @return ListTablesResponse
+         */
+        public async Task<ListTablesResponse> ListTablesAsync(ListTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTablesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries events.
          *
          * @param request ListTopicsRequest
@@ -35357,6 +35473,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["AdvancedSettings"] = request.AdvancedSettings;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyScheduleImmediately))
+            {
+                body["ApplyScheduleImmediately"] = request.ApplyScheduleImmediately;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoParsing))
             {
                 body["AutoParsing"] = request.AutoParsing;
@@ -35508,6 +35628,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedSettings))
             {
                 body["AdvancedSettings"] = request.AdvancedSettings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyScheduleImmediately))
+            {
+                body["ApplyScheduleImmediately"] = request.ApplyScheduleImmediately;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoParsing))
             {

@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string AdvancedSettings { get; set; }
 
+        [NameInMap("ApplyScheduleImmediately")]
+        [Validation(Required=false)]
+        public bool? ApplyScheduleImmediately { get; set; }
+
         /// <summary>
         /// Specifies whether the automatic parsing feature is enabled for the file. Valid values:
         /// 

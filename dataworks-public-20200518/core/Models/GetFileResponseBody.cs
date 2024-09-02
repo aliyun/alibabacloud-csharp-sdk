@@ -214,6 +214,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public GetFileResponseBodyDataNodeConfiguration NodeConfiguration { get; set; }
             public class GetFileResponseBodyDataNodeConfiguration : TeaModel {
+                [NameInMap("ApplyScheduleImmediately")]
+                [Validation(Required=false)]
+                public string ApplyScheduleImmediately { get; set; }
+
                 /// <summary>
                 /// The interval between automatic reruns after an error occurs. Unit: milliseconds.
                 /// 
