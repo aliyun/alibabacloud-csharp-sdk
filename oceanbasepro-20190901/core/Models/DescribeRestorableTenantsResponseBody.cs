@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
             [NameInMap("TenantMode")]
             [Validation(Required=false)]
-            public long? TenantMode { get; set; }
+            public string TenantMode { get; set; }
 
             [NameInMap("TenantName")]
             [Validation(Required=false)]
