@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// </summary>
         [NameInMap("keys")]
         [Validation(Required=false)]
-        public Dictionary<string, KeysValue> Keys { get; set; }
+        public Dictionary<string, IndexKey> Keys { get; set; }
 
         /// <summary>
         /// The time when the index configurations were last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
@@ -73,6 +73,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The delimiters.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("token")]
             [Validation(Required=false)]
@@ -117,6 +119,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The lifecycle of the index file. Valid values: 7, 30, and 90. Unit: day.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ttl")]
         [Validation(Required=false)]

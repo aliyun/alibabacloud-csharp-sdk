@@ -1644,40 +1644,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
-            {
-                body["keys"] = request.Keys;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
-            {
-                body["line"] = request.Line;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduce))
-            {
-                body["log_reduce"] = request.LogReduce;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceBlackList))
-            {
-                body["log_reduce_black_list"] = request.LogReduceBlackList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceWhiteList))
-            {
-                body["log_reduce_white_list"] = request.LogReduceWhiteList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTextLen))
-            {
-                body["max_text_len"] = request.MaxTextLen;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
-            {
-                body["ttl"] = request.Ttl;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1709,40 +1680,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
-            {
-                body["keys"] = request.Keys;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
-            {
-                body["line"] = request.Line;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduce))
-            {
-                body["log_reduce"] = request.LogReduce;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceBlackList))
-            {
-                body["log_reduce_black_list"] = request.LogReduceBlackList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceWhiteList))
-            {
-                body["log_reduce_white_list"] = request.LogReduceWhiteList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTextLen))
-            {
-                body["max_text_len"] = request.MaxTextLen;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
-            {
-                body["ttl"] = request.Ttl;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14978,118 +14920,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-         * @deprecated OpenAPI QueryMLServiceResults is deprecated
-         *
-         * @summary queryMLServiceResults
-         *
-         * @param request QueryMLServiceResultsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMLServiceResultsResponse
-         */
-        // Deprecated
-        public QueryMLServiceResultsResponse QueryMLServiceResultsWithOptions(string serviceName, QueryMLServiceResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowBuiltin))
-            {
-                query["allowBuiltin"] = request.AllowBuiltin;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryMLServiceResults",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/ml/service/" + serviceName + "/analysis",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryMLServiceResultsResponse>(Execute(params_, req, runtime));
-        }
-
-        /**
-         * @deprecated OpenAPI QueryMLServiceResults is deprecated
-         *
-         * @summary queryMLServiceResults
-         *
-         * @param request QueryMLServiceResultsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMLServiceResultsResponse
-         */
-        // Deprecated
-        public async Task<QueryMLServiceResultsResponse> QueryMLServiceResultsWithOptionsAsync(string serviceName, QueryMLServiceResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowBuiltin))
-            {
-                query["allowBuiltin"] = request.AllowBuiltin;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryMLServiceResults",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/ml/service/" + serviceName + "/analysis",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryMLServiceResultsResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        /**
-         * @deprecated OpenAPI QueryMLServiceResults is deprecated
-         *
-         * @summary queryMLServiceResults
-         *
-         * @param request QueryMLServiceResultsRequest
-         * @return QueryMLServiceResultsResponse
-         */
-        // Deprecated
-        public QueryMLServiceResultsResponse QueryMLServiceResults(string serviceName, QueryMLServiceResultsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return QueryMLServiceResultsWithOptions(serviceName, request, headers, runtime);
-        }
-
-        /**
-         * @deprecated OpenAPI QueryMLServiceResults is deprecated
-         *
-         * @summary queryMLServiceResults
-         *
-         * @param request QueryMLServiceResultsRequest
-         * @return QueryMLServiceResultsResponse
-         */
-        // Deprecated
-        public async Task<QueryMLServiceResultsResponse> QueryMLServiceResultsAsync(string serviceName, QueryMLServiceResultsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await QueryMLServiceResultsWithOptionsAsync(serviceName, request, headers, runtime);
-        }
-
-        /**
          * @summary 刷新token
          *
          * @param request RefreshTokenRequest
@@ -17279,40 +17109,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
-            {
-                body["keys"] = request.Keys;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
-            {
-                body["line"] = request.Line;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduce))
-            {
-                body["log_reduce"] = request.LogReduce;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceBlackList))
-            {
-                body["log_reduce_black_list"] = request.LogReduceBlackList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceWhiteList))
-            {
-                body["log_reduce_white_list"] = request.LogReduceWhiteList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTextLen))
-            {
-                body["max_text_len"] = request.MaxTextLen;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
-            {
-                body["ttl"] = request.Ttl;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -17345,40 +17146,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
-            {
-                body["keys"] = request.Keys;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
-            {
-                body["line"] = request.Line;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduce))
-            {
-                body["log_reduce"] = request.LogReduce;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceBlackList))
-            {
-                body["log_reduce_black_list"] = request.LogReduceBlackList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogReduceWhiteList))
-            {
-                body["log_reduce_white_list"] = request.LogReduceWhiteList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTextLen))
-            {
-                body["max_text_len"] = request.MaxTextLen;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
-            {
-                body["ttl"] = request.Ttl;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

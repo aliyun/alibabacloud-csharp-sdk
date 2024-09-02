@@ -11,11 +11,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class Index : TeaModel {
         [NameInMap("keys")]
         [Validation(Required=false)]
-        public Dictionary<string, IndexKeysValue> Keys { get; set; }
-
-        [NameInMap("lastModifyTime")]
-        [Validation(Required=false)]
-        public long? LastModifyTime { get; set; }
+        public Dictionary<string, IndexKey> Keys { get; set; }
 
         [NameInMap("line")]
         [Validation(Required=false)]
@@ -61,13 +57,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("max_text_len")]
         [Validation(Required=false)]
         public int? MaxTextLen { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("ttl")]
-        [Validation(Required=false)]
-        public int? Ttl { get; set; }
 
     }
 
