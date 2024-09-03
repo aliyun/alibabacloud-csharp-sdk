@@ -30290,7 +30290,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the details of the regions that are available for ApsaraDB RDS.
+         * @summary Queries the details of all regions and zones for ApsaraDB RDS. The regions that are no longer supported are also queried. Exercise caution when you call this operation.
          *
          * @description ### [](#)Supported database engines
          * *   MySQL
@@ -30334,7 +30334,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the details of the regions that are available for ApsaraDB RDS.
+         * @summary Queries the details of all regions and zones for ApsaraDB RDS. The regions that are no longer supported are also queried. Exercise caution when you call this operation.
          *
          * @description ### [](#)Supported database engines
          * *   MySQL
@@ -30378,7 +30378,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the details of the regions that are available for ApsaraDB RDS.
+         * @summary Queries the details of all regions and zones for ApsaraDB RDS. The regions that are no longer supported are also queried. Exercise caution when you call this operation.
          *
          * @description ### [](#)Supported database engines
          * *   MySQL
@@ -30396,7 +30396,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the details of the regions that are available for ApsaraDB RDS.
+         * @summary Queries the details of all regions and zones for ApsaraDB RDS. The regions that are no longer supported are also queried. Exercise caution when you call this operation.
          *
          * @description ### [](#)Supported database engines
          * *   MySQL

@@ -1,3 +1,7 @@
+2024-09-03 Version: 7.1.4
+- Update API DescribePostgresExtensions: update response param.
+
+
 2024-08-30 Version: 7.1.3
 - Update API DescribeBackupPolicy: update response param.
 - Update API DescribeDBInstanceAttribute: update response param.

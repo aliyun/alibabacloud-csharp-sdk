@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Requires { get; set; }
 
+            [NameInMap("Uid")]
+            [Validation(Required=false)]
+            public string Uid { get; set; }
+
         }
 
         /// <summary>
@@ -165,6 +169,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("Requires")]
             [Validation(Required=false)]
             public string Requires { get; set; }
+
+            [NameInMap("Uid")]
+            [Validation(Required=false)]
+            public string Uid { get; set; }
 
         }
 

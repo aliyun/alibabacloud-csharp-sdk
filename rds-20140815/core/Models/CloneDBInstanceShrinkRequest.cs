@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CloneDBInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the automatic payment feature. Valid values:
+        /// Specifies whether to enable the automatic payment feature for the new instance. Valid values:
         /// 
         /// 1.  **true**: enables the feature. You must make sure that your account balance is sufficient.
         /// 2.  **false**: disables the feature. An unpaid order is generated.
@@ -112,15 +112,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The storage type of the instance. Valid values:
+        /// The storage type of the new instance. Valid values:
         /// 
-        /// *   **local_ssd**: local SSDs
-        /// *   **cloud_ssd**: standard SSDs
-        /// *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
-        /// *   **cloud_essd2**: ESSDs of PL2
-        /// *   **cloud_essd3**: ESSD of PL3
+        /// *   **general_essd** (recommend): general Enterprise SSD (ESSD)
+        /// *   **local_ssd**: local SSD
+        /// *   **cloud_ssd**: standard SSD
+        /// *   **cloud_essd**: performance level 1 (PL1) ESSD
+        /// *   **cloud_essd2**: PL2 ESSD
+        /// *   **cloud_essd3**: PL3 ESSD
         /// 
-        /// > Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.
+        /// >  Serverless instances support only PL1 ESSDs and general ESSDs.
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
@@ -141,7 +142,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the release protection feature for the instance. Valid values:
+        /// Specifies whether to enable the release protection feature for the new instance. Valid values:
         /// 
         /// *   **true**
         /// *   **false** (default)
