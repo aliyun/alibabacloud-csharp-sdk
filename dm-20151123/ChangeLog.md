@@ -1,3 +1,6 @@
+2024-09-03 Version: 1.2.3
+- Generated csharp 2015-11-23 for Dm.
+
 2024-07-31 Version: 1.2.2
 - Update API DescAccountSummary: update response param.
 
