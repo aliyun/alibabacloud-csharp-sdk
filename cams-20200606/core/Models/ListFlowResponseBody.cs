@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// The name of the Flow.
+            /// The Flow name.
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]

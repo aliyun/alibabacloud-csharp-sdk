@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyFlowRequest : TeaModel {
         /// <summary>
-        /// The categories of the Flow.
+        /// The information about the categories of the Flow.
         /// 
         /// This parameter is required.
         /// </summary>

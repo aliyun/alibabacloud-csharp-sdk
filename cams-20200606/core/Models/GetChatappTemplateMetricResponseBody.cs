@@ -54,13 +54,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// <summary>
                 /// The button type.
                 /// 
-                /// >  Valid values:
-                /// 
-                /// *   url_button
-                /// 
-                /// *   quick_relpy_button
+                /// Valid values:
                 /// 
                 /// *   phone_number_button
+                /// *   url_button
+                /// *   quick_relpy_button
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateMetricRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user within the ISV account.
+        /// The space ID of the RAM user within the ISV account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -26,18 +26,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? End { get; set; }
 
         /// <summary>
-        /// The metric granularity.
+        /// The granularity of the metric.
         /// 
-        /// >  Valid values:
+        /// Valid values:
         /// 
         /// *   DAILY
+        /// *   HALF_HOUR
         /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }
 
         /// <summary>
-        /// The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.
+        /// The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
@@ -69,7 +70,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// The template type. Valid values: WHATSAPP and VIBER. If you do not specify this parameter, WHATSAPP is used by default.
+        /// The template type. If you do not specify this parameter, the default value WHATSAPP is used.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   VIBER
+        /// *   WHATSAPP
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

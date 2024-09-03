@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappPhoneNumberMetricRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user within the ISV account.
+        /// The space ID of the RAM user within the ISV account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -26,14 +26,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? End { get; set; }
 
         /// <summary>
-        /// The metric granularity.
+        /// The granularity of the metric.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   DAILY
+        /// *   HALF_HOUR
         /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }
 
         /// <summary>
-        /// The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.
+        /// The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]

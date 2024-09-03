@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteFlowRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user within the independent software vendor (ISV) account.
+        /// The space ID of the RAM user within the independent software vendor (ISV) account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]

@@ -13,12 +13,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateFlowJSONAssetResponseBodyData Data { get; set; }
         public class UpdateFlowJSONAssetResponseBodyData : TeaModel {
             /// <summary>
-            /// Flow ID。
+            /// The Flow ID.
             /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

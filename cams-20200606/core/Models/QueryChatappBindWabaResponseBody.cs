@@ -54,6 +54,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public Dictionary<string, object> AuthInternationalRateEligibility { get; set; }
 
+            [NameInMap("BusinessId")]
+            [Validation(Required=false)]
+            public string BusinessId { get; set; }
+
+            [NameInMap("BusinessName")]
+            [Validation(Required=false)]
+            public string BusinessName { get; set; }
+
             /// <summary>
             /// The currency.
             /// </summary>

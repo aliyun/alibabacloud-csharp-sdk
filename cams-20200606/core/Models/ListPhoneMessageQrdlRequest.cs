@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// The phone number. Add the country code before the phone number.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("PhoneNumber")]

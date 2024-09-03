@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreatePhoneMessageQrdlResponseBodyData Data { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string GenerateQrImage { get; set; }
 
+            /// <summary>
+            /// The phone number.
+            /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
@@ -48,7 +54,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

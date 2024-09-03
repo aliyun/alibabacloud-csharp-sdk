@@ -16,10 +16,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The space ID of the RAM user within the independent software vendor (ISV) account.
+        /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
+        /// <summary>
+        /// The permissions.
+        /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public string PermissionsShrink { get; set; }

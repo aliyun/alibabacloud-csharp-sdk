@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string EncryptionPublicKey { get; set; }
 
         /// <summary>
+        /// The phone number.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("PhoneNumber")]

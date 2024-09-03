@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappPhoneNumberDeregisterRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user within the independent software vendor (ISV) account.
+        /// The space ID of the RAM user within the independent software vendor (ISV) account.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The phone number.
+        /// The phone number that you want to deregister.
         /// 
         /// This parameter is required.
         /// </summary>

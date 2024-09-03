@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// Flow ID。
+        /// The Flow ID.
         /// 
         /// This parameter is required.
         /// </summary>

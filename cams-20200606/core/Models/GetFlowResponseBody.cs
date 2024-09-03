@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// The API version.
+            /// The version number of the API.
             /// </summary>
             [NameInMap("DataApiVersion")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// The name of the Flow.
+            /// The Flow name.
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]

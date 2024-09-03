@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListFlowRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user within the independent software vendor (ISV) account.
+        /// The space ID of the RAM user within the independent software vendor (ISV) account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The name of the Flow.
+        /// The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]

@@ -45,12 +45,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? End { get; set; }
 
             /// <summary>
-            /// The metric granularity.
+            /// The granularity of the metric.
             /// 
-            /// >  Valid values:
+            /// Valid values:
             /// 
             /// *   DAILY
-            /// 
             /// *   HALF_HOUR
             /// </summary>
             [NameInMap("Granularity")]
