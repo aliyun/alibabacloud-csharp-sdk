@@ -490,6 +490,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             }
 
+            [NameInMap("ResourceDownloadLink")]
+            [Validation(Required=false)]
+            public GetFileResponseBodyDataResourceDownloadLink ResourceDownloadLink { get; set; }
+            public class GetFileResponseBodyDataResourceDownloadLink : TeaModel {
+                [NameInMap("downloadLink")]
+                [Validation(Required=false)]
+                public string DownloadLink { get; set; }
+
+            }
+
         }
 
         /// <summary>
