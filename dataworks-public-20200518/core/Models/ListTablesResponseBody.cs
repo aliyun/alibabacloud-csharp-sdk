@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public ListTablesResponseBodyData Data { get; set; }
         public class ListTablesResponseBodyData : TeaModel {
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+
             [NameInMap("TableEntityList")]
             [Validation(Required=false)]
             public List<ListTablesResponseBodyDataTableEntityList> TableEntityList { get; set; }
