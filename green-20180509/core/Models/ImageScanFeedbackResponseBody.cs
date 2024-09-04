@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20180509.Models
 {
-    public class PostAsyncScanResultsResponse : TeaModel {
-        [NameInMap("headers")]
-        [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+    public class ImageScanFeedbackResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

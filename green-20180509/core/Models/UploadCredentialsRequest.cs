@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20180509.Models
 {
     public class UploadCredentialsRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClientInfo")]
         [Validation(Required=false)]
         public string ClientInfo { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

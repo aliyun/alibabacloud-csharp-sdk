@@ -10,8 +10,16 @@ namespace AlibabaCloud.SDK.Green20180509.Models
 {
     public class VideoAsyncManualScanResultsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
+
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public VideoAsyncManualScanResultsResponseBody Body { get; set; }
 
     }
 

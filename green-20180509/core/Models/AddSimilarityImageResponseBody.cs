@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20180509.Models
 {
-    public class PostAsyncScanRequest : TeaModel {
-        [NameInMap("ClientInfo")]
+    public class AddSimilarityImageResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ClientInfo { get; set; }
+        public string RequestId { get; set; }
 
     }
 

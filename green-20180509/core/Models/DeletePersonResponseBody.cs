@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20180509.Models
 {
-    public class SearchPersonResponse : TeaModel {
-        [NameInMap("headers")]
-        [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+    public class DeletePersonResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20180509.Models
 {
     public class VoiceSyncScanRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClientInfo")]
         [Validation(Required=false)]
         public string ClientInfo { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 
