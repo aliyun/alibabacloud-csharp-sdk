@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.BaasDis20200509.Models
 {
     public class CreatePersonalDIDResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CreatePersonalDIDResponseBody Body { get; set; }
 
     }

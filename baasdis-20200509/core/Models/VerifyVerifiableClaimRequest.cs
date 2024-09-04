@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BaasDis20200509.Models
 {
     public class VerifyVerifiableClaimRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VCContent")]
         [Validation(Required=false)]
         public string VCContent { get; set; }
