@@ -335,6 +335,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string KubernetesVersion { get; set; }
 
+        [NameInMap("load_balancer_id")]
+        [Validation(Required=false)]
+        public string LoadBalancerId { get; set; }
+
         /// <summary>
         /// The specification of the Server Load Balancer (SLB) instance. Valid values:
         /// 

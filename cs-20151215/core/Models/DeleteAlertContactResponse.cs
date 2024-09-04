@@ -19,19 +19,25 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public List<DeleteAlertContactResponseBody> Body { get; set; }
+        public DeleteAlertContactResponseBody Body { get; set; }
         public class DeleteAlertContactResponseBody : TeaModel {
-            [NameInMap("status")]
+            [NameInMap("result")]
             [Validation(Required=false)]
-            public bool? Status { get; set; }
+            public List<DeleteAlertContactResponseBodyResult> Result { get; set; }
+            public class DeleteAlertContactResponseBodyResult : TeaModel {
+                [NameInMap("status")]
+                [Validation(Required=false)]
+                public bool? Status { get; set; }
 
-            [NameInMap("msg")]
-            [Validation(Required=false)]
-            public string Msg { get; set; }
+                [NameInMap("msg")]
+                [Validation(Required=false)]
+                public string Msg { get; set; }
 
-            [NameInMap("contact_id")]
-            [Validation(Required=false)]
-            public string ContactId { get; set; }
+                [NameInMap("contact_id")]
+                [Validation(Required=false)]
+                public string ContactId { get; set; }
+
+            }
 
         }
 

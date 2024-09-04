@@ -1609,6 +1609,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["kubernetes_version"] = request.KubernetesVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                body["load_balancer_id"] = request.LoadBalancerId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerSpec))
             {
                 body["load_balancer_spec"] = request.LoadBalancerSpec;
@@ -2012,6 +2016,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesVersion))
             {
                 body["kubernetes_version"] = request.KubernetesVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                body["load_balancer_id"] = request.LoadBalancerId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerSpec))
             {
