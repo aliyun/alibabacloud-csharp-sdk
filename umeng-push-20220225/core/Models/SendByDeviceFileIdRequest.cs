@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
         public string FileId { get; set; }

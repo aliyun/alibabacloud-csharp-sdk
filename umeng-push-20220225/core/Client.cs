@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary 根据消息ID取消发送
+         *
+         * @param request CancelByMsgIdRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelByMsgIdResponse
+         */
         public CancelByMsgIdResponse CancelByMsgIdWithOptions(CancelByMsgIdRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -65,6 +73,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<CancelByMsgIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 根据消息ID取消发送
+         *
+         * @param request CancelByMsgIdRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelByMsgIdResponse
+         */
         public async Task<CancelByMsgIdResponse> CancelByMsgIdWithOptionsAsync(CancelByMsgIdRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -93,6 +109,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<CancelByMsgIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 根据消息ID取消发送
+         *
+         * @param request CancelByMsgIdRequest
+         * @return CancelByMsgIdResponse
+         */
         public CancelByMsgIdResponse CancelByMsgId(CancelByMsgIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -100,6 +122,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return CancelByMsgIdWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 根据消息ID取消发送
+         *
+         * @param request CancelByMsgIdRequest
+         * @return CancelByMsgIdResponse
+         */
         public async Task<CancelByMsgIdResponse> CancelByMsgIdAsync(CancelByMsgIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -107,6 +135,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return await CancelByMsgIdWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 消息状态查询
+         *
+         * @param request QueryMsgStatRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryMsgStatResponse
+         */
         public QueryMsgStatResponse QueryMsgStatWithOptions(QueryMsgStatRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -135,6 +171,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<QueryMsgStatResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 消息状态查询
+         *
+         * @param request QueryMsgStatRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryMsgStatResponse
+         */
         public async Task<QueryMsgStatResponse> QueryMsgStatWithOptionsAsync(QueryMsgStatRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -163,6 +207,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<QueryMsgStatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 消息状态查询
+         *
+         * @param request QueryMsgStatRequest
+         * @return QueryMsgStatResponse
+         */
         public QueryMsgStatResponse QueryMsgStat(QueryMsgStatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -170,6 +220,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return QueryMsgStatWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 消息状态查询
+         *
+         * @param request QueryMsgStatRequest
+         * @return QueryMsgStatResponse
+         */
         public async Task<QueryMsgStatResponse> QueryMsgStatAsync(QueryMsgStatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -177,6 +233,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return await QueryMsgStatWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 指定别名发送
+         *
+         * @param tmpReq SendByAliasRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByAliasResponse
+         */
         public SendByAliasResponse SendByAliasWithOptions(SendByAliasRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -263,6 +327,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByAliasResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定别名发送
+         *
+         * @param tmpReq SendByAliasRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByAliasResponse
+         */
         public async Task<SendByAliasResponse> SendByAliasWithOptionsAsync(SendByAliasRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -349,6 +421,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定别名发送
+         *
+         * @param request SendByAliasRequest
+         * @return SendByAliasResponse
+         */
         public SendByAliasResponse SendByAlias(SendByAliasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -356,6 +434,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return SendByAliasWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 指定别名发送
+         *
+         * @param request SendByAliasRequest
+         * @return SendByAliasResponse
+         */
         public async Task<SendByAliasResponse> SendByAliasAsync(SendByAliasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -363,6 +447,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return await SendByAliasWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 指定别名文件发送
+         *
+         * @param tmpReq SendByAliasFileIdRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByAliasFileIdResponse
+         */
         public SendByAliasFileIdResponse SendByAliasFileIdWithOptions(SendByAliasFileIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -449,6 +541,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByAliasFileIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定别名文件发送
+         *
+         * @param tmpReq SendByAliasFileIdRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByAliasFileIdResponse
+         */
         public async Task<SendByAliasFileIdResponse> SendByAliasFileIdWithOptionsAsync(SendByAliasFileIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -535,6 +635,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByAliasFileIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定别名文件发送
+         *
+         * @param request SendByAliasFileIdRequest
+         * @return SendByAliasFileIdResponse
+         */
         public SendByAliasFileIdResponse SendByAliasFileId(SendByAliasFileIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -542,6 +648,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return SendByAliasFileIdWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 指定别名文件发送
+         *
+         * @param request SendByAliasFileIdRequest
+         * @return SendByAliasFileIdResponse
+         */
         public async Task<SendByAliasFileIdResponse> SendByAliasFileIdAsync(SendByAliasFileIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -549,6 +661,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return await SendByAliasFileIdWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 广播
+         *
+         * @param tmpReq SendByAppRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByAppResponse
+         */
         public SendByAppResponse SendByAppWithOptions(SendByAppRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -627,6 +747,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByAppResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 广播
+         *
+         * @param tmpReq SendByAppRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByAppResponse
+         */
         public async Task<SendByAppResponse> SendByAppWithOptionsAsync(SendByAppRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -705,6 +833,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 广播
+         *
+         * @param request SendByAppRequest
+         * @return SendByAppResponse
+         */
         public SendByAppResponse SendByApp(SendByAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -712,6 +846,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return SendByAppWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 广播
+         *
+         * @param request SendByAppRequest
+         * @return SendByAppResponse
+         */
         public async Task<SendByAppResponse> SendByAppAsync(SendByAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -719,6 +859,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return await SendByAppWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 指定设备发送
+         *
+         * @param tmpReq SendByDeviceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByDeviceResponse
+         */
         public SendByDeviceResponse SendByDeviceWithOptions(SendByDeviceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -801,6 +949,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定设备发送
+         *
+         * @param tmpReq SendByDeviceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByDeviceResponse
+         */
         public async Task<SendByDeviceResponse> SendByDeviceWithOptionsAsync(SendByDeviceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -883,6 +1039,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定设备发送
+         *
+         * @param request SendByDeviceRequest
+         * @return SendByDeviceResponse
+         */
         public SendByDeviceResponse SendByDevice(SendByDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -890,6 +1052,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return SendByDeviceWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 指定设备发送
+         *
+         * @param request SendByDeviceRequest
+         * @return SendByDeviceResponse
+         */
         public async Task<SendByDeviceResponse> SendByDeviceAsync(SendByDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -897,6 +1065,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return await SendByDeviceWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 指定设备文件发送
+         *
+         * @param tmpReq SendByDeviceFileIdRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByDeviceFileIdResponse
+         */
         public SendByDeviceFileIdResponse SendByDeviceFileIdWithOptions(SendByDeviceFileIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -979,6 +1155,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByDeviceFileIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定设备文件发送
+         *
+         * @param tmpReq SendByDeviceFileIdRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByDeviceFileIdResponse
+         */
         public async Task<SendByDeviceFileIdResponse> SendByDeviceFileIdWithOptionsAsync(SendByDeviceFileIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1061,6 +1245,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByDeviceFileIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定设备文件发送
+         *
+         * @param request SendByDeviceFileIdRequest
+         * @return SendByDeviceFileIdResponse
+         */
         public SendByDeviceFileIdResponse SendByDeviceFileId(SendByDeviceFileIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1068,6 +1258,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return SendByDeviceFileIdWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 指定设备文件发送
+         *
+         * @param request SendByDeviceFileIdRequest
+         * @return SendByDeviceFileIdResponse
+         */
         public async Task<SendByDeviceFileIdResponse> SendByDeviceFileIdAsync(SendByDeviceFileIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1075,6 +1271,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return await SendByDeviceFileIdWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 根据筛选条件发送
+         *
+         * @param tmpReq SendByFilterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByFilterResponse
+         */
         public SendByFilterResponse SendByFilterWithOptions(SendByFilterRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1157,6 +1361,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByFilterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 根据筛选条件发送
+         *
+         * @param tmpReq SendByFilterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SendByFilterResponse
+         */
         public async Task<SendByFilterResponse> SendByFilterWithOptionsAsync(SendByFilterRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1239,6 +1451,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<SendByFilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 根据筛选条件发送
+         *
+         * @param request SendByFilterRequest
+         * @return SendByFilterResponse
+         */
         public SendByFilterResponse SendByFilter(SendByFilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1246,6 +1464,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return SendByFilterWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 根据筛选条件发送
+         *
+         * @param request SendByFilterRequest
+         * @return SendByFilterResponse
+         */
         public async Task<SendByFilterResponse> SendByFilterAsync(SendByFilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1253,6 +1477,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return await SendByFilterWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 上传设备列表创建设备文件
+         *
+         * @param request UploadDeviceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UploadDeviceResponse
+         */
         public UploadDeviceResponse UploadDeviceWithOptions(UploadDeviceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1281,6 +1513,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<UploadDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 上传设备列表创建设备文件
+         *
+         * @param request UploadDeviceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UploadDeviceResponse
+         */
         public async Task<UploadDeviceResponse> UploadDeviceWithOptionsAsync(UploadDeviceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1309,6 +1549,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return TeaModel.ToObject<UploadDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 上传设备列表创建设备文件
+         *
+         * @param request UploadDeviceRequest
+         * @return UploadDeviceResponse
+         */
         public UploadDeviceResponse UploadDevice(UploadDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1316,6 +1562,12 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             return UploadDeviceWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 上传设备列表创建设备文件
+         *
+         * @param request UploadDeviceRequest
+         * @return UploadDeviceResponse
+         */
         public async Task<UploadDeviceResponse> UploadDeviceAsync(UploadDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

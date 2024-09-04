@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Umeng_push20220225.Models
 {
     public class SendByAliasRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Alias")]
         [Validation(Required=false)]
         public string Alias { get; set; }
