@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<ElementContent> ElementContents { get; set; }
 
+        [NameInMap("ElementRelations")]
+        [Validation(Required=false)]
+        public List<ElementRelation> ElementRelations { get; set; }
+
+        [NameInMap("ElementType")]
+        [Validation(Required=false)]
+        public string ElementType { get; set; }
+
+        [NameInMap("ObjectId")]
+        [Validation(Required=false)]
+        public string ObjectId { get; set; }
+
+        [NameInMap("SemanticSimilarity")]
+        [Validation(Required=false)]
+        public float? SemanticSimilarity { get; set; }
+
     }
 
 }

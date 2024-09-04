@@ -1526,7 +1526,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         }
 
         /**
-         * @summary 创建绑定
+         * @summary 创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。
          *
          * @param request CreateBindingRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1568,7 +1568,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         }
 
         /**
-         * @summary 创建绑定
+         * @summary 创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。
          *
          * @param request CreateBindingRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1610,7 +1610,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         }
 
         /**
-         * @summary 创建绑定
+         * @summary 创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。
          *
          * @param request CreateBindingRequest
          * @return CreateBindingResponse
@@ -1622,7 +1622,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         }
 
         /**
-         * @summary 创建绑定
+         * @summary 创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。
          *
          * @param request CreateBindingRequest
          * @return CreateBindingResponse
@@ -8766,7 +8766,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         }
 
         /**
-         * @summary 获取绑定
+         * @summary 获取一个绑定任务的运行详情。
          *
          * @param request GetBindingRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8808,7 +8808,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         }
 
         /**
-         * @summary 获取绑定
+         * @summary 获取一个绑定任务的运行详情。
          *
          * @param request GetBindingRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8850,7 +8850,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         }
 
         /**
-         * @summary 获取绑定
+         * @summary 获取一个绑定任务的运行详情。
          *
          * @param request GetBindingRequest
          * @return GetBindingResponse
@@ -8862,7 +8862,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         }
 
         /**
-         * @summary 获取绑定
+         * @summary 获取一个绑定任务的运行详情。
          *
          * @param request GetBindingRequest
          * @return GetBindingResponse
@@ -12805,6 +12805,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.MediaTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MediaTypes, "MediaTypes", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SmartClusterIds))
+            {
+                request.SmartClusterIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SmartClusterIds, "SmartClusterIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WithFields))
             {
                 request.WithFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WithFields, "WithFields", "json");
@@ -12833,6 +12837,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartClusterIdsShrink))
+            {
+                query["SmartClusterIds"] = request.SmartClusterIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
             {
@@ -12873,6 +12881,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.MediaTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MediaTypes, "MediaTypes", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SmartClusterIds))
+            {
+                request.SmartClusterIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SmartClusterIds, "SmartClusterIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WithFields))
             {
                 request.WithFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WithFields, "WithFields", "json");
@@ -12901,6 +12913,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartClusterIdsShrink))
+            {
+                query["SmartClusterIds"] = request.SmartClusterIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
             {
