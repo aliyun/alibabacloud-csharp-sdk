@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string IdentifyNum { get; set; }
 
+        [NameInMap("IdentityType")]
+        [Validation(Required=false)]
+        public string IdentityType { get; set; }
+
         [NameInMap("Mobile")]
         [Validation(Required=false)]
         public string Mobile { get; set; }

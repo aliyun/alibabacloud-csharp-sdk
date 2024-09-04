@@ -200,6 +200,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["IdentifyNum"] = request.IdentifyNum;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                query["IdentityType"] = request.IdentityType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
             {
                 query["Mobile"] = request.Mobile;
@@ -257,6 +261,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
             {
                 query["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                query["IdentityType"] = request.IdentityType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
             {
