@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CreditLine { get; set; }
 
             /// <summary>
-            /// The Credit have been consumed by Sub Account, and haven\"t be paid.
+            /// The Credit have been consumed by Sub Account, and haven\\"t be paid.
             /// </summary>
             [NameInMap("OutstandingBalance")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             /// The systematic controlling policy for resource management, specifically when the available Credit of Sub Account falls to 0 or less.</br>
             /// 
             /// - 1: delayStop. The account have Shutdown-delay Privilege,  After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.</br>
-            /// - 2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource\"s life-circle of Sub Account.</br>
+            /// - 2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource\\"s life-circle of Sub Account.</br>
             /// - 3: immediatelyStop. Once valid quota of Sub Account falls below 0 and be identified as defaulting account, it will trigger the instance shutdown immediately.</br>
             /// </summary>
             [NameInMap("ZeroCreditShutdownPolicy")]

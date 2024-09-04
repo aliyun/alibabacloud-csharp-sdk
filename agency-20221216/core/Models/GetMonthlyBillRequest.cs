@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// Bill Owner type. Value Range:</br>
         /// 1: Master account</br>
         /// 2: Sub account</br>
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BillOwner")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// - MonthlyRefundAdjustInvoce 
         /// - MonthlyInstanceConsumeV2 
         /// - MarginReportV2
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BillType")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         /// <summary>
         /// Billing Month, Format is YYYY-MM
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Month")]
         [Validation(Required=false)]

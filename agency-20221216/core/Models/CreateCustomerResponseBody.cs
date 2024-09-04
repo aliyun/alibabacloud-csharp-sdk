@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// Data indicating whether a customer was successfully created. If it\"s "true", the Message contains CID.
+        /// Data indicating whether a customer was successfully created. If it\\"s "true", the Message contains CID.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

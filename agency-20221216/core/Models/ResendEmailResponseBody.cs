@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// * 1109: System error
         /// * 3058: Frequent sending, the limit is 10 emails in every 5 minutes.
         /// * 3057: InviteId is empty.
-        /// * 3060: Can\"t find sending record of given InviteId.
+        /// * 3060: Can\\"t find sending record of given InviteId.
         /// * 3061: Registration URL is expired, unable to resend.
         /// </summary>
         [NameInMap("Code")]

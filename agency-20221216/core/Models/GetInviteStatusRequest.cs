@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// <summary>
         /// inviteId list</br>
         /// `Sub-levels <= 5`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InviteStatusList")]
         [Validation(Required=false)]

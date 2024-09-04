@@ -8,24 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
-    public class SetCreditLineRequest : TeaModel {
-        /// <summary>
-        /// New Credit Line
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("CreditLine")]
+    public class IssueCouponForCustomerRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string CreditLine { get; set; }
+        public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The UID of Sub Account.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("Uid")]
+        [NameInMap("CouponTemplateId")]
         [Validation(Required=false)]
-        public long? Uid { get; set; }
+        public long? CouponTemplateId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Uidlist")]
+        [Validation(Required=false)]
+        public string Uidlist { get; set; }
 
     }
 

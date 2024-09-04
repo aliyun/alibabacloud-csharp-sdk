@@ -10,31 +10,37 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetAccountInfoRequest : TeaModel {
         /// <summary>
-        /// Pagination, current page.
+        /// Message
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// Pagination, record number on each page, maximum 20.
+        /// Success
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.
+        /// 10 (Value <= 20)
         /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]
         public long? Uid { get; set; }
 
         /// <summary>
-        /// Distribution Customer\"s Account Type:
-        /// - 1 End User
-        /// - 2 Enterprise
-        /// - 3 T2 Partner
+        /// Result Code - Error Code. Value Range:
+        /// - 200 OK
+        /// - 1109 System Error
+        /// - 3029: Invalid UID
+        /// - 3062: UID and UserType are both empty.
+        /// - 3063: UserType value out of range.
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                     public string AssociationSuccessTime { get; set; }
 
                     /// <summary>
-                    /// Distribution Customer\"s CID
+                    /// Distribution Customer\\"s CID
                     /// </summary>
                     [NameInMap("Cid")]
                     [Validation(Required=false)]
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
                     /// <summary>
                     /// Account Type:
-                    /// - 1 Agency\"s End User
-                    /// - 2 Reseller\"s End User
+                    /// - 1 Agency\\"s End User
+                    /// - 2 Reseller\\"s End User
                     /// - 5 T2 Reseller Partner
                     /// </summary>
                     [NameInMap("SubAccountType")]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                     public string SubAccountType { get; set; }
 
                     /// <summary>
-                    /// Distribution Customer\"s UID
+                    /// Distribution Customer\\"s UID
                     /// </summary>
                     [NameInMap("Uid")]
                     [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// Bill Owner type. Value Range:</br>
         /// 1: Master account</br>
         /// 2: Sub account</br>
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BillOwner")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// - DailyBill (Deprecated)
         /// - DailyInstanceBill (Deprecated)
         /// - DailyInstanceBillV2
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BillType")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         /// <summary>
         /// Billing date. Format YYYY-MM-DD
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Date")]
         [Validation(Required=false)]

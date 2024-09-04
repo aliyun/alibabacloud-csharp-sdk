@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
     public class GetUnassociatedCustomerRequest : TeaModel {
         /// <summary>
         /// Pagination, current page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         /// <summary>
         /// Pagination, record number on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

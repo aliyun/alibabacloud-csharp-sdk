@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
     public class CustomerQuotaRecordListRequest : TeaModel {
         /// <summary>
         /// End Date Format: yyyy-MM-dd
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         /// <summary>
         /// Customer UID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndUserPk")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// all All types</br>
         /// quota_create Create quota</br>
         /// quota_amount_adjust Adjust the amount of quota</br>
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperationType")]
         [Validation(Required=false)]
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         /// <summary>
         /// Pagination, current page number, starting from 1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         /// <summary>
         /// Pagination, record number on each page. Maximum 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -59,6 +69,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         /// <summary>
         /// Start Date Format: yyyy-MM-dd
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

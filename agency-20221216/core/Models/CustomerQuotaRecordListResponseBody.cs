@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string OperationTypeDesc { get; set; }
 
             /// <summary>
-            /// The UID of operator(Partner\"s UID).
+            /// The UID of operator(Partner\\"s UID).
             /// </summary>
             [NameInMap("OperationUid")]
             [Validation(Required=false)]

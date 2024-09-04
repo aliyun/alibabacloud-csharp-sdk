@@ -8,15 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
-    public class GetCreditInfoRequest : TeaModel {
+    public class GetCoupondeductProductCodeRequest : TeaModel {
         /// <summary>
-        /// Sub Account UID
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("Uid")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public long? Uid { get; set; }
+        public string AcceptLanguage { get; set; }
 
     }
 
