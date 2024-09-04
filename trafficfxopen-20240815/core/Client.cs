@@ -38,6 +38,186 @@ namespace AlibabaCloud.SDK.TrafficFxOpen20240815
         }
 
         /**
+         * @summary 转换联登链接
+         *
+         * @param request ConvertUrlRequest
+         * @param headers ConvertUrlHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConvertUrlResponse
+         */
+        public ConvertUrlResponse ConvertUrlWithOptions(ConvertUrlRequest request, ConvertUrlHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCallingCode))
+            {
+                body["countryCallingCode"] = request.CountryCallingCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JumpUrl))
+            {
+                body["jumpUrl"] = request.JumpUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdId))
+            {
+                body["thirdId"] = request.ThirdId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
+            {
+                body["uid"] = request.Uid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Xenv))
+            {
+                body["xenv"] = request.Xenv;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketAccessToken))
+            {
+                realHeaders["xAcsAirticketAccessToken"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketLanguage))
+            {
+                realHeaders["xAcsAirticketLanguage"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketLanguage);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConvertUrl",
+                Version = "2024-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/v1/distribution/trade/convertUrl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConvertUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 转换联登链接
+         *
+         * @param request ConvertUrlRequest
+         * @param headers ConvertUrlHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConvertUrlResponse
+         */
+        public async Task<ConvertUrlResponse> ConvertUrlWithOptionsAsync(ConvertUrlRequest request, ConvertUrlHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCallingCode))
+            {
+                body["countryCallingCode"] = request.CountryCallingCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JumpUrl))
+            {
+                body["jumpUrl"] = request.JumpUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdId))
+            {
+                body["thirdId"] = request.ThirdId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
+            {
+                body["uid"] = request.Uid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Xenv))
+            {
+                body["xenv"] = request.Xenv;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketAccessToken))
+            {
+                realHeaders["xAcsAirticketAccessToken"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketLanguage))
+            {
+                realHeaders["xAcsAirticketLanguage"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketLanguage);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConvertUrl",
+                Version = "2024-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/v1/distribution/trade/convertUrl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConvertUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 转换联登链接
+         *
+         * @param request ConvertUrlRequest
+         * @return ConvertUrlResponse
+         */
+        public ConvertUrlResponse ConvertUrl(ConvertUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ConvertUrlHeaders headers = new ConvertUrlHeaders();
+            return ConvertUrlWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 转换联登链接
+         *
+         * @param request ConvertUrlRequest
+         * @return ConvertUrlResponse
+         */
+        public async Task<ConvertUrlResponse> ConvertUrlAsync(ConvertUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ConvertUrlHeaders headers = new ConvertUrlHeaders();
+            return await ConvertUrlWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 创建token
          *
          * @param request GetTokenRequest
