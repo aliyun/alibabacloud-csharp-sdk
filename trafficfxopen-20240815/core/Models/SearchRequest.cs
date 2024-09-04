@@ -34,9 +34,6 @@ namespace AlibabaCloud.SDK.TrafficFxOpen20240815.Models
         [Validation(Required=false)]
         public string Terminal { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
