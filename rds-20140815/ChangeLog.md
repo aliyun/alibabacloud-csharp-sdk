@@ -1,3 +1,6 @@
+2024-09-04 Version: 7.1.5
+- Generated csharp 2014-08-15 for Rds.
+
 2024-09-03 Version: 7.1.4
 - Update API DescribePostgresExtensions: update response param.
 
