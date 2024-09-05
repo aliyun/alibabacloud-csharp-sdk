@@ -23,6 +23,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        [NameInMap("CardInstances")]
+        [Validation(Required=false)]
+        public List<CreateEventRequestCardInstances> CardInstances { get; set; }
+        public class CreateEventRequestCardInstances : TeaModel {
+            [NameInMap("OutTrackId")]
+            [Validation(Required=false)]
+            public string OutTrackId { get; set; }
+
+            [NameInMap("Scenario")]
+            [Validation(Required=false)]
+            public string Scenario { get; set; }
+
+        }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

@@ -3772,6 +3772,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 request.AttendeesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attendees, "Attendees", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CardInstances))
+            {
+                request.CardInstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CardInstances, "CardInstances", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.End))
             {
                 request.EndShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.End, "End", "json");
@@ -3812,6 +3816,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttendeesShrink))
             {
                 body["Attendees"] = request.AttendeesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardInstancesShrink))
+            {
+                body["CardInstances"] = request.CardInstancesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -3917,6 +3925,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 request.AttendeesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attendees, "Attendees", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CardInstances))
+            {
+                request.CardInstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CardInstances, "CardInstances", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.End))
             {
                 request.EndShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.End, "End", "json");
@@ -3957,6 +3969,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttendeesShrink))
             {
                 body["Attendees"] = request.AttendeesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardInstancesShrink))
+            {
+                body["CardInstances"] = request.CardInstancesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -16890,6 +16906,162 @@ namespace AlibabaCloud.SDK.Aliding20230426
         }
 
         /**
+         * @summary 获取表格文档内容jobId
+         *
+         * @param tmpReq GetSheetContentJobIdRequest
+         * @param tmpHeader GetSheetContentJobIdHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSheetContentJobIdResponse
+         */
+        public GetSheetContentJobIdResponse GetSheetContentJobIdWithOptions(GetSheetContentJobIdRequest tmpReq, GetSheetContentJobIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetSheetContentJobIdShrinkRequest request = new GetSheetContentJobIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetSheetContentJobIdShrinkHeaders headers = new GetSheetContentJobIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DentryUuid))
+            {
+                body["DentryUuid"] = request.DentryUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportType))
+            {
+                body["ExportType"] = request.ExportType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSheetContentJobId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v2/documents/getSheetContentJobId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSheetContentJobIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取表格文档内容jobId
+         *
+         * @param tmpReq GetSheetContentJobIdRequest
+         * @param tmpHeader GetSheetContentJobIdHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSheetContentJobIdResponse
+         */
+        public async Task<GetSheetContentJobIdResponse> GetSheetContentJobIdWithOptionsAsync(GetSheetContentJobIdRequest tmpReq, GetSheetContentJobIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetSheetContentJobIdShrinkRequest request = new GetSheetContentJobIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetSheetContentJobIdShrinkHeaders headers = new GetSheetContentJobIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DentryUuid))
+            {
+                body["DentryUuid"] = request.DentryUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportType))
+            {
+                body["ExportType"] = request.ExportType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSheetContentJobId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v2/documents/getSheetContentJobId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSheetContentJobIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取表格文档内容jobId
+         *
+         * @param request GetSheetContentJobIdRequest
+         * @return GetSheetContentJobIdResponse
+         */
+        public GetSheetContentJobIdResponse GetSheetContentJobId(GetSheetContentJobIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetSheetContentJobIdHeaders headers = new GetSheetContentJobIdHeaders();
+            return GetSheetContentJobIdWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取表格文档内容jobId
+         *
+         * @param request GetSheetContentJobIdRequest
+         * @return GetSheetContentJobIdResponse
+         */
+        public async Task<GetSheetContentJobIdResponse> GetSheetContentJobIdAsync(GetSheetContentJobIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetSheetContentJobIdHeaders headers = new GetSheetContentJobIdHeaders();
+            return await GetSheetContentJobIdWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 查询知识库下的目录结构
          *
          * @param tmpReq GetSpaceDirectoriesRequest
@@ -17683,6 +17855,154 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetUserHeaders headers = new GetUserHeaders();
             return await GetUserWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 根据unionId获取用户userId
+         *
+         * @param tmpReq GetUserIdRequest
+         * @param tmpHeader GetUserIdHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUserIdResponse
+         */
+        public GetUserIdResponse GetUserIdWithOptions(GetUserIdRequest tmpReq, GetUserIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetUserIdShrinkRequest request = new GetUserIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetUserIdShrinkHeaders headers = new GetUserIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnionId))
+            {
+                body["UnionId"] = request.UnionId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/im/getUserId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 根据unionId获取用户userId
+         *
+         * @param tmpReq GetUserIdRequest
+         * @param tmpHeader GetUserIdHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUserIdResponse
+         */
+        public async Task<GetUserIdResponse> GetUserIdWithOptionsAsync(GetUserIdRequest tmpReq, GetUserIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetUserIdShrinkRequest request = new GetUserIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetUserIdShrinkHeaders headers = new GetUserIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnionId))
+            {
+                body["UnionId"] = request.UnionId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/im/getUserId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 根据unionId获取用户userId
+         *
+         * @param request GetUserIdRequest
+         * @return GetUserIdResponse
+         */
+        public GetUserIdResponse GetUserId(GetUserIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetUserIdHeaders headers = new GetUserIdHeaders();
+            return GetUserIdWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 根据unionId获取用户userId
+         *
+         * @param request GetUserIdRequest
+         * @return GetUserIdResponse
+         */
+        public async Task<GetUserIdResponse> GetUserIdAsync(GetUserIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetUserIdHeaders headers = new GetUserIdHeaders();
+            return await GetUserIdWithOptionsAsync(request, headers, runtime);
         }
 
         /**
@@ -21324,6 +21644,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 request.AttendeesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attendees, "Attendees", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CardInstances))
+            {
+                request.CardInstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CardInstances, "CardInstances", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.End))
             {
                 request.EndShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.End, "End", "json");
@@ -21356,6 +21680,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarId))
             {
                 body["CalendarId"] = request.CalendarId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardInstancesShrink))
+            {
+                body["CardInstances"] = request.CardInstancesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -21449,6 +21777,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 request.AttendeesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attendees, "Attendees", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CardInstances))
+            {
+                request.CardInstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CardInstances, "CardInstances", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.End))
             {
                 request.EndShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.End, "End", "json");
@@ -21481,6 +21813,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarId))
             {
                 body["CalendarId"] = request.CalendarId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardInstancesShrink))
+            {
+                body["CardInstances"] = request.CardInstancesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {

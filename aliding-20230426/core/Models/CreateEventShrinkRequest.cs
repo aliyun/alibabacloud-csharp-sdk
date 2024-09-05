@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string AttendeesShrink { get; set; }
 
+        [NameInMap("CardInstances")]
+        [Validation(Required=false)]
+        public string CardInstancesShrink { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
