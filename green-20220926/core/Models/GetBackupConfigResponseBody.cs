@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        [NameInMap("EnableBackup")]
+        [Validation(Required=false)]
+        public bool? EnableBackup { get; set; }
+
+        [NameInMap("EnableBackupVoice")]
+        [Validation(Required=false)]
+        public bool? EnableBackupVoice { get; set; }
+
         [NameInMap("ExpireSeconds")]
         [Validation(Required=false)]
         public int? ExpireSeconds { get; set; }
@@ -32,6 +40,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [NameInMap("Path")]
         [Validation(Required=false)]
         public string Path { get; set; }
+
+        [NameInMap("PathVoice")]
+        [Validation(Required=false)]
+        public string PathVoice { get; set; }
 
         [NameInMap("Region")]
         [Validation(Required=false)]

@@ -1,3 +1,7 @@
+2024-09-05 Version: 1.0.2
+- Update API GetBackupConfig: update response param.
+
+
 2024-08-29 Version: 1.0.1
 - Generated csharp 2022-09-26 for Green.
 
