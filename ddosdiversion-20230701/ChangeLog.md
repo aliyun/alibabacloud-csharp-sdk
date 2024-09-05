@@ -1,3 +1,7 @@
+2024-09-05 Version: 1.0.4
+- Update API QueryNetList: update response param.
+
+
 2024-04-28 Version: 1.0.3
 - Update API ListInstance: update response param.
 - Update API QueryNetList: update response param.

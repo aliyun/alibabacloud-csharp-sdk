@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
         /// <summary>
         /// The scheduling mode. Valid values:
         /// 
-        /// *   manual: manual scheduling
-        /// *   netflow-auto: automatic scheduling
+        /// - manual: manual scheduling
+        /// - netflow-auto: automatic scheduling
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
@@ -29,7 +29,8 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
         /// <summary>
         /// The CIDR block of the anti-DDoS diversion instance.
         /// 
-        /// >  If no extended CIDR blocks are configured for the anti-DDoS diversion instance, this parameter specifies the CIDR block of the instance. If an extended CIDR block is configured for the anti-DDoS diversion instance, this parameter specifies the extended CIDR block that is configured for the instance. If this parameter is specified, the MainNet parameter is required.
+        /// 
+        /// > If no extended CIDR blocks are configured for the anti-DDoS diversion instance, this parameter specifies the CIDR block of the instance. If an extended CIDR block is configured for the anti-DDoS diversion instance, this parameter specifies the extended CIDR block that is configured for the instance. If this parameter is specified, the MainNet parameter is required.
         /// </summary>
         [NameInMap("Net")]
         [Validation(Required=false)]

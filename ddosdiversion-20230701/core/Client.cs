@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary Configures the advertising of a CIDR block.
+         *
+         * @param request ConfigNetStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigNetStatusResponse
+         */
         public ConfigNetStatusResponse ConfigNetStatusWithOptions(ConfigNetStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -80,6 +87,13 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701
             return TeaModel.ToObject<ConfigNetStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the advertising of a CIDR block.
+         *
+         * @param request ConfigNetStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigNetStatusResponse
+         */
         public async Task<ConfigNetStatusResponse> ConfigNetStatusWithOptionsAsync(ConfigNetStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -123,18 +137,37 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701
             return TeaModel.ToObject<ConfigNetStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the advertising of a CIDR block.
+         *
+         * @param request ConfigNetStatusRequest
+         * @return ConfigNetStatusResponse
+         */
         public ConfigNetStatusResponse ConfigNetStatus(ConfigNetStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigNetStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures the advertising of a CIDR block.
+         *
+         * @param request ConfigNetStatusRequest
+         * @return ConfigNetStatusResponse
+         */
         public async Task<ConfigNetStatusResponse> ConfigNetStatusAsync(ConfigNetStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigNetStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries anti-DDoS diversion instances.
+         *
+         * @param request ListInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListInstanceResponse
+         */
         public ListInstanceResponse ListInstanceWithOptions(ListInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -178,6 +211,13 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701
             return TeaModel.ToObject<ListInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries anti-DDoS diversion instances.
+         *
+         * @param request ListInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListInstanceResponse
+         */
         public async Task<ListInstanceResponse> ListInstanceWithOptionsAsync(ListInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -221,18 +261,37 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701
             return TeaModel.ToObject<ListInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries anti-DDoS diversion instances.
+         *
+         * @param request ListInstanceRequest
+         * @return ListInstanceResponse
+         */
         public ListInstanceResponse ListInstance(ListInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListInstanceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries anti-DDoS diversion instances.
+         *
+         * @param request ListInstanceRequest
+         * @return ListInstanceResponse
+         */
         public async Task<ListInstanceResponse> ListInstanceAsync(ListInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the CIDR blocks of an anti-DDoS diversion instance.
+         *
+         * @param request QueryNetListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryNetListResponse
+         */
         public QueryNetListResponse QueryNetListWithOptions(QueryNetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -280,6 +339,13 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701
             return TeaModel.ToObject<QueryNetListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the CIDR blocks of an anti-DDoS diversion instance.
+         *
+         * @param request QueryNetListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryNetListResponse
+         */
         public async Task<QueryNetListResponse> QueryNetListWithOptionsAsync(QueryNetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -327,12 +393,24 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701
             return TeaModel.ToObject<QueryNetListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the CIDR blocks of an anti-DDoS diversion instance.
+         *
+         * @param request QueryNetListRequest
+         * @return QueryNetListResponse
+         */
         public QueryNetListResponse QueryNetList(QueryNetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryNetListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the CIDR blocks of an anti-DDoS diversion instance.
+         *
+         * @param request QueryNetListRequest
+         * @return QueryNetListResponse
+         */
         public async Task<QueryNetListResponse> QueryNetListAsync(QueryNetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

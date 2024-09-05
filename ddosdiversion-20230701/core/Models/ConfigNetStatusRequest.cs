@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
     public class ConfigNetStatusRequest : TeaModel {
         /// <summary>
         /// The CIDR block of the anti-DDoS diversion instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Net")]
         [Validation(Required=false)]
@@ -22,7 +24,7 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
         /// <summary>
         /// The regions in which the CIDR block needs to be advertised or withdrawn from advertising. If you leave this parameter empty, the CIDR blocks in all regions are configured.
         /// 
-        /// >  You can call the [QueryNetList](~~2639086~~) operation to obtain the regions of the CIDR blocks.
+        /// >  You can call the [QueryNetList](https://help.aliyun.com/document_detail/2639086.html) operation to obtain the regions of the CIDR blocks.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
 
         /// <summary>
         /// The ID of the anti-DDoS diversion instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SaleId")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
         /// 
         /// *   enable: advertises the CIDR block.
         /// *   disable: withdraws the advertising of the CIDR block.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

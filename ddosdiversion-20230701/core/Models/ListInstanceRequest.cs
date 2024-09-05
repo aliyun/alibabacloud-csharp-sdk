@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
         /// <summary>
         /// The status of the instance. Valid values:
         /// 
-        /// *   normal
-        /// *   expired
-        /// *   deleting
-        /// *   stopped
+        /// - normal
+        /// - expired
+        /// - deleting
+        /// - stopped
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
