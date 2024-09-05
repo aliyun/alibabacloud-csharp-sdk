@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// 接口交互动态值
+        /// requestId
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

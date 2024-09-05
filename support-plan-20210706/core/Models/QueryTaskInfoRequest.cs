@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class QueryTaskInfoRequest : TeaModel {
         /// <summary>
-        /// 任务单ID
+        /// The ID of the order.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

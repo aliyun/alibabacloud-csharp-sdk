@@ -31,6 +31,20 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
         public long? CallerUid { get; set; }
 
         /// <summary>
+        /// createRealName
+        /// </summary>
+        [NameInMap("CreateRealName")]
+        [Validation(Required=false)]
+        public string CreateRealName { get; set; }
+
+        /// <summary>
+        /// endTime
+        /// </summary>
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        /// <summary>
         /// openGroupId
         /// </summary>
         [NameInMap("OpenGroupId")]
@@ -45,11 +59,32 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// pageNo
+        /// </summary>
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public string PageNo { get; set; }
+
+        /// <summary>
+        /// pageSize
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
+
+        /// <summary>
         /// requestId
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// startTime
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         /// <summary>
         /// taskStatus

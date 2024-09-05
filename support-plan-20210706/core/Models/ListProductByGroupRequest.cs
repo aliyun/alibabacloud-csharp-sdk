@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class ListProductByGroupRequest : TeaModel {
         /// <summary>
-        /// 主群关联Id
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OpenGroupId")]
         [Validation(Required=false)]

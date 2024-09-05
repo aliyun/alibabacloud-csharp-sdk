@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class EnterpriseDingtalkGroupMember : TeaModel {
         /// <summary>
-        /// 是否企业钉群管理员
+        /// 代表资源名称的资源属性字段
         /// </summary>
         [NameInMap("IsAdmin")]
         [Validation(Required=false)]
         public bool? IsAdmin { get; set; }
 
         /// <summary>
-        /// 成员手机号
+        /// 代表资源组的资源属性字段
         /// </summary>
         [NameInMap("Mobile")]
         [Validation(Required=false)]
         public string Mobile { get; set; }
 
         /// <summary>
-        /// 成员姓名
+        /// 代表创建时间的资源属性字段
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

@@ -10,35 +10,45 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class QueryTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// code
+        /// The status code or error code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// data
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public QueryTaskInfoResponseBodyData Data { get; set; }
+        public class QueryTaskInfoResponseBodyData : TeaModel {
+            [NameInMap("OrderId")]
+            [Validation(Required=false)]
+            public string OrderId { get; set; }
+
+            [NameInMap("TaskStatus")]
+            [Validation(Required=false)]
+            public string TaskStatus { get; set; }
+
+        }
 
         /// <summary>
-        /// msg
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// requestId
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// success
+        /// Indicates whether the request is successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

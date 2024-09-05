@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class DeleteEnterpriseDingtalkGroupCustomerMemberResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody Body { get; set; }
 
     }

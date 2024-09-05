@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class GetEnterpriseDingtalkGroupRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OpenGroupId")]
         [Validation(Required=false)]
         public string OpenGroupId { get; set; }

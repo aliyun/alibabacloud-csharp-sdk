@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// 返回信息
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
