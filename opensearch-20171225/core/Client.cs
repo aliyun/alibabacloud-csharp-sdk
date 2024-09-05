@@ -841,6 +841,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 body["resourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["type"] = request.Type;
@@ -892,6 +896,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {

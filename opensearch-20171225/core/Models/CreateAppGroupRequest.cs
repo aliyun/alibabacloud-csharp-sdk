@@ -39,6 +39,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<CreateAppGroupRequestTags> Tags { get; set; }
+        public class CreateAppGroupRequestTags : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
