@@ -203,12 +203,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The category of data disk N. Valid values:
             /// 
-            /// *   cloud: basic disk
-            /// *   cloud_efficiency: ultra disk
-            /// *   cloud_ssd: standard SSD
-            /// *   cloud_essd: ESSD
+            /// *   cloud: basic disk.
+            /// *   cloud_efficiency: ultra disk.
+            /// *   cloud_ssd: standard SSD.
+            /// *   cloud_essd: ESSD.
             /// *   cloud_auto: ESSD AutoPL disk
-            /// *   cloud_essd_entry: ESSD Entry disk
+            /// *   cloud_essd_entry: ESSD Entry disk.
             /// 
             /// For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
             /// </summary>
@@ -236,14 +236,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// >  This parameter will be removed in the future. We recommend that you do not use this parameter to ensure future compatibility.
+            /// The mount point of data disk N. The mount points are named based on the number of data disks:
+            /// 
+            /// *   1st to 25th data disks: /dev/xvd`[b-z]`.
+            /// *   From the 26th data disk on: /dev/xvd`[aa-zz]`. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.
+            /// 
+            /// >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify `DataDisk.N.Size` and `DataDisk.N.Category` to change the category and size of data disk N created based on the image.
             /// </summary>
             [NameInMap("Device")]
             [Validation(Required=false)]
             public string Device { get; set; }
 
             /// <summary>
-            /// The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
+            /// The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).
             /// </summary>
             [NameInMap("DiskName")]
             [Validation(Required=false)]
@@ -275,7 +280,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
             /// 
-            /// >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).
+            /// >  This parameter is available only if you set DiskCategory to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).
             /// </summary>
             [NameInMap("ProvisionedIops")]
             [Validation(Required=false)]
@@ -301,7 +306,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// *   Valid values if you set DataDisk.N.Category to cloud_essd_entry: 10 to 32768.
             /// 
-            /// The value of this parameter must be greater than or equal to the size of the snapshot specified by `DataDisk.N.SnapshotId`.
+            /// The value of this parameter must be greater than or equal to the size of the snapshot specified by `SnapshotId`.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]

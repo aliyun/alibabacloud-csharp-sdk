@@ -8,16 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
-    public class DeleteDeploymentSetRequest : TeaModel {
-        /// <summary>
-        /// The ID of the deployment set that you want to delete.
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("DeploymentSetId")]
-        [Validation(Required=false)]
-        public string DeploymentSetId { get; set; }
-
+    public class EnableDiskEncryptionByDefaultRequest : TeaModel {
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -27,8 +18,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the deployment set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

@@ -7428,7 +7428,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with \\`http://\\` or \\`https://\\`. It can contain letters, digits, colons (:), underscores (\\_), and hyphens (-).
+         * @summary Creates a deployment set in a region.
          *
          * @param request CreateDeploymentSetRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7510,7 +7510,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with \\`http://\\` or \\`https://\\`. It can contain letters, digits, colons (:), underscores (\\_), and hyphens (-).
+         * @summary Creates a deployment set in a region.
          *
          * @param request CreateDeploymentSetRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7592,7 +7592,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with \\`http://\\` or \\`https://\\`. It can contain letters, digits, colons (:), underscores (\\_), and hyphens (-).
+         * @summary Creates a deployment set in a region.
          *
          * @param request CreateDeploymentSetRequest
          * @return CreateDeploymentSetResponse
@@ -7604,7 +7604,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with \\`http://\\` or \\`https://\\`. It can contain letters, digits, colons (:), underscores (\\_), and hyphens (-).
+         * @summary Creates a deployment set in a region.
          *
          * @param request CreateDeploymentSetRequest
          * @return CreateDeploymentSetResponse
@@ -7864,7 +7864,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Creates a pay-as-you-go or subscription data disk.
+         * @summary Creates a pay-as-you-go or subscription data disk. When you call this operation, you can specify parameters, such as ZoneId, SnapshotId, Size, and DiskCategory, in the request.
          *
          * @description ## [](#)Usage notes
          * *   You can enable the multi-attach (`MultiAttach`) feature when you create a disk. Before you enable the multi-attach feature, we recommend that you familiarize yourself with the feature and its limits. For more information, see [NVMe disks](https://help.aliyun.com/document_detail/256487.html) and [Enable multi-attach](https://help.aliyun.com/document_detail/262105.html).
@@ -8011,7 +8011,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Creates a pay-as-you-go or subscription data disk.
+         * @summary Creates a pay-as-you-go or subscription data disk. When you call this operation, you can specify parameters, such as ZoneId, SnapshotId, Size, and DiskCategory, in the request.
          *
          * @description ## [](#)Usage notes
          * *   You can enable the multi-attach (`MultiAttach`) feature when you create a disk. Before you enable the multi-attach feature, we recommend that you familiarize yourself with the feature and its limits. For more information, see [NVMe disks](https://help.aliyun.com/document_detail/256487.html) and [Enable multi-attach](https://help.aliyun.com/document_detail/262105.html).
@@ -8158,7 +8158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Creates a pay-as-you-go or subscription data disk.
+         * @summary Creates a pay-as-you-go or subscription data disk. When you call this operation, you can specify parameters, such as ZoneId, SnapshotId, Size, and DiskCategory, in the request.
          *
          * @description ## [](#)Usage notes
          * *   You can enable the multi-attach (`MultiAttach`) feature when you create a disk. Before you enable the multi-attach feature, we recommend that you familiarize yourself with the feature and its limits. For more information, see [NVMe disks](https://help.aliyun.com/document_detail/256487.html) and [Enable multi-attach](https://help.aliyun.com/document_detail/262105.html).
@@ -8179,7 +8179,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Creates a pay-as-you-go or subscription data disk.
+         * @summary Creates a pay-as-you-go or subscription data disk. When you call this operation, you can specify parameters, such as ZoneId, SnapshotId, Size, and DiskCategory, in the request.
          *
          * @description ## [](#)Usage notes
          * *   You can enable the multi-attach (`MultiAttach`) feature when you create a disk. Before you enable the multi-attach feature, we recommend that you familiarize yourself with the feature and its limits. For more information, see [NVMe disks](https://help.aliyun.com/document_detail/256487.html) and [Enable multi-attach](https://help.aliyun.com/document_detail/262105.html).
@@ -9776,7 +9776,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance.
+         * @summary Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as ImageId, InstanceType, SecurityGroupId, and InternetChargeType, in the request.
          *
          * @description ## [](#)Usage notes
          * >  You can call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/66186.html) operation to query available resources in a specific region or zone. If you want to batch create instances that automatically enter the Running state after they are created, we recommend that you call the [RunInstances](https://help.aliyun.com/document_detail/63440.html) operation.
@@ -10089,7 +10089,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance.
+         * @summary Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as ImageId, InstanceType, SecurityGroupId, and InternetChargeType, in the request.
          *
          * @description ## [](#)Usage notes
          * >  You can call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/66186.html) operation to query available resources in a specific region or zone. If you want to batch create instances that automatically enter the Running state after they are created, we recommend that you call the [RunInstances](https://help.aliyun.com/document_detail/63440.html) operation.
@@ -10402,7 +10402,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance.
+         * @summary Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as ImageId, InstanceType, SecurityGroupId, and InternetChargeType, in the request.
          *
          * @description ## [](#)Usage notes
          * >  You can call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/66186.html) operation to query available resources in a specific region or zone. If you want to batch create instances that automatically enter the Running state after they are created, we recommend that you call the [RunInstances](https://help.aliyun.com/document_detail/63440.html) operation.
@@ -10453,7 +10453,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance.
+         * @summary Creates a subscription or pay-as-you-go Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as ImageId, InstanceType, SecurityGroupId, and InternetChargeType, in the request.
          *
          * @description ## [](#)Usage notes
          * >  You can call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/66186.html) operation to query available resources in a specific region or zone. If you want to batch create instances that automatically enter the Running state after they are created, we recommend that you call the [RunInstances](https://help.aliyun.com/document_detail/63440.html) operation.
@@ -16300,7 +16300,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Deletes a deployment set in a region. Make sure that no instances exist in the deployment set that you want to delete. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set.
+         * @summary Deletes a deployment set in a region. When you call this operation, specify parameters such as RegionId and DeploymentSetId in the request.
+         *
+         * @description Before you delete a deployment set, make sure that no instances exist in the deployment set. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set. For more information, see [Change the deployment set of an instance](https://help.aliyun.com/document_detail/108407.html) and [Release an ECS instance](https://help.aliyun.com/document_detail/25442.html).
          *
          * @param request DeleteDeploymentSetRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16354,7 +16356,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Deletes a deployment set in a region. Make sure that no instances exist in the deployment set that you want to delete. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set.
+         * @summary Deletes a deployment set in a region. When you call this operation, specify parameters such as RegionId and DeploymentSetId in the request.
+         *
+         * @description Before you delete a deployment set, make sure that no instances exist in the deployment set. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set. For more information, see [Change the deployment set of an instance](https://help.aliyun.com/document_detail/108407.html) and [Release an ECS instance](https://help.aliyun.com/document_detail/25442.html).
          *
          * @param request DeleteDeploymentSetRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16408,7 +16412,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Deletes a deployment set in a region. Make sure that no instances exist in the deployment set that you want to delete. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set.
+         * @summary Deletes a deployment set in a region. When you call this operation, specify parameters such as RegionId and DeploymentSetId in the request.
+         *
+         * @description Before you delete a deployment set, make sure that no instances exist in the deployment set. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set. For more information, see [Change the deployment set of an instance](https://help.aliyun.com/document_detail/108407.html) and [Release an ECS instance](https://help.aliyun.com/document_detail/25442.html).
          *
          * @param request DeleteDeploymentSetRequest
          * @return DeleteDeploymentSetResponse
@@ -16420,7 +16426,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Deletes a deployment set in a region. Make sure that no instances exist in the deployment set that you want to delete. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set.
+         * @summary Deletes a deployment set in a region. When you call this operation, specify parameters such as RegionId and DeploymentSetId in the request.
+         *
+         * @description Before you delete a deployment set, make sure that no instances exist in the deployment set. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set. For more information, see [Change the deployment set of an instance](https://help.aliyun.com/document_detail/108407.html) and [Release an ECS instance](https://help.aliyun.com/document_detail/25442.html).
          *
          * @param request DeleteDeploymentSetRequest
          * @return DeleteDeploymentSetResponse
@@ -24736,7 +24744,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the instance families that support deployment sets.
+         * @summary Queries the instance families that support different deployment strategies. When you call this operation, specify parameters, such as RegionId and Strategy, in the request.
          *
          * @description ## [](#)Usage notes
          * For information about instance families, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
@@ -24793,7 +24801,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the instance families that support deployment sets.
+         * @summary Queries the instance families that support different deployment strategies. When you call this operation, specify parameters, such as RegionId and Strategy, in the request.
          *
          * @description ## [](#)Usage notes
          * For information about instance families, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
@@ -24850,7 +24858,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the instance families that support deployment sets.
+         * @summary Queries the instance families that support different deployment strategies. When you call this operation, specify parameters, such as RegionId and Strategy, in the request.
          *
          * @description ## [](#)Usage notes
          * For information about instance families, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
@@ -24865,7 +24873,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the instance families that support deployment sets.
+         * @summary Queries the instance families that support different deployment strategies. When you call this operation, specify parameters, such as RegionId and Strategy, in the request.
          *
          * @description ## [](#)Usage notes
          * For information about instance families, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
@@ -24880,7 +24888,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the attributes of one or more deployment sets.
+         * @summary Queries the details of one or more deployment sets. When you call this operation, you can specify parameters, such as DeploymentSetIds, Strategy, and DeploymentSetName, in the request.
          *
          * @param request DescribeDeploymentSetsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24962,7 +24970,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the attributes of one or more deployment sets.
+         * @summary Queries the details of one or more deployment sets. When you call this operation, you can specify parameters, such as DeploymentSetIds, Strategy, and DeploymentSetName, in the request.
          *
          * @param request DescribeDeploymentSetsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -25044,7 +25052,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the attributes of one or more deployment sets.
+         * @summary Queries the details of one or more deployment sets. When you call this operation, you can specify parameters, such as DeploymentSetIds, Strategy, and DeploymentSetName, in the request.
          *
          * @param request DescribeDeploymentSetsRequest
          * @return DescribeDeploymentSetsResponse
@@ -25056,7 +25064,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the attributes of one or more deployment sets.
+         * @summary Queries the details of one or more deployment sets. When you call this operation, you can specify parameters, such as DeploymentSetIds, Strategy, and DeploymentSetName, in the request.
          *
          * @param request DescribeDeploymentSetsRequest
          * @return DescribeDeploymentSetsResponse
@@ -25564,14 +25572,214 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the monitoring data of a disk in a specific period of time.
+         * @summary 查询云盘默认加密加密密钥
+         *
+         * @param request DescribeDiskDefaultKMSKeyIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiskDefaultKMSKeyIdResponse
+         */
+        public DescribeDiskDefaultKMSKeyIdResponse DescribeDiskDefaultKMSKeyIdWithOptions(DescribeDiskDefaultKMSKeyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDiskDefaultKMSKeyId",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDiskDefaultKMSKeyIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询云盘默认加密加密密钥
+         *
+         * @param request DescribeDiskDefaultKMSKeyIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiskDefaultKMSKeyIdResponse
+         */
+        public async Task<DescribeDiskDefaultKMSKeyIdResponse> DescribeDiskDefaultKMSKeyIdWithOptionsAsync(DescribeDiskDefaultKMSKeyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDiskDefaultKMSKeyId",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDiskDefaultKMSKeyIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询云盘默认加密加密密钥
+         *
+         * @param request DescribeDiskDefaultKMSKeyIdRequest
+         * @return DescribeDiskDefaultKMSKeyIdResponse
+         */
+        public DescribeDiskDefaultKMSKeyIdResponse DescribeDiskDefaultKMSKeyId(DescribeDiskDefaultKMSKeyIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDiskDefaultKMSKeyIdWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询云盘默认加密加密密钥
+         *
+         * @param request DescribeDiskDefaultKMSKeyIdRequest
+         * @return DescribeDiskDefaultKMSKeyIdResponse
+         */
+        public async Task<DescribeDiskDefaultKMSKeyIdResponse> DescribeDiskDefaultKMSKeyIdAsync(DescribeDiskDefaultKMSKeyIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDiskDefaultKMSKeyIdWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 检查云盘默认加密开启状态
+         *
+         * @param request DescribeDiskEncryptionByDefaultStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiskEncryptionByDefaultStatusResponse
+         */
+        public DescribeDiskEncryptionByDefaultStatusResponse DescribeDiskEncryptionByDefaultStatusWithOptions(DescribeDiskEncryptionByDefaultStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDiskEncryptionByDefaultStatus",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDiskEncryptionByDefaultStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 检查云盘默认加密开启状态
+         *
+         * @param request DescribeDiskEncryptionByDefaultStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiskEncryptionByDefaultStatusResponse
+         */
+        public async Task<DescribeDiskEncryptionByDefaultStatusResponse> DescribeDiskEncryptionByDefaultStatusWithOptionsAsync(DescribeDiskEncryptionByDefaultStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDiskEncryptionByDefaultStatus",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDiskEncryptionByDefaultStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 检查云盘默认加密开启状态
+         *
+         * @param request DescribeDiskEncryptionByDefaultStatusRequest
+         * @return DescribeDiskEncryptionByDefaultStatusResponse
+         */
+        public DescribeDiskEncryptionByDefaultStatusResponse DescribeDiskEncryptionByDefaultStatus(DescribeDiskEncryptionByDefaultStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDiskEncryptionByDefaultStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 检查云盘默认加密开启状态
+         *
+         * @param request DescribeDiskEncryptionByDefaultStatusRequest
+         * @return DescribeDiskEncryptionByDefaultStatusResponse
+         */
+        public async Task<DescribeDiskEncryptionByDefaultStatusResponse> DescribeDiskEncryptionByDefaultStatusAsync(DescribeDiskEncryptionByDefaultStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDiskEncryptionByDefaultStatusWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Queries the monitoring data of a disk in a specific period of time. When you call this operation, you can specify parameters, such as DiskId, StartTime, and EndTime, in the request.
          *
          * @description ## [](#)Usage notes
          * You can query the following monitoring data of a disk: the read IOPS, write IOPS, read bandwidth (byte/s), write bandwidth (byte/s), read latency (microseconds), and write latency (microseconds).
          * Take note of the following items:
-         * *   You can query the monitoring data only of the disks that are in the In Use (`In_use`) state. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html).
+         * *   Monitoring data of only disks that are in the In Use (`In_use`) state can be queried. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html).
          *     **
-         *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use (`In_use`) state and the system cannot obtain the relevant information.
+         *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use `(In_use)` state and the system cannot obtain the relevant information.
          * *   Up to 400 monitoring data entries can be returned at a time. Make sure that the `TotalCount` value does not exceed 400. The value is calculated by using the following formula: `TotalCount = (EndTime - StartTime)/Period`. If the TotalCount value is greater than 400, the `InvalidParameter.TooManyDataQueried` error is returned.
          * *   You can query the monitoring data in the last 30 days. If the value of `StartTime` is more than 30 days earlier than the current time, an error is returned.
          *
@@ -25635,14 +25843,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the monitoring data of a disk in a specific period of time.
+         * @summary Queries the monitoring data of a disk in a specific period of time. When you call this operation, you can specify parameters, such as DiskId, StartTime, and EndTime, in the request.
          *
          * @description ## [](#)Usage notes
          * You can query the following monitoring data of a disk: the read IOPS, write IOPS, read bandwidth (byte/s), write bandwidth (byte/s), read latency (microseconds), and write latency (microseconds).
          * Take note of the following items:
-         * *   You can query the monitoring data only of the disks that are in the In Use (`In_use`) state. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html).
+         * *   Monitoring data of only disks that are in the In Use (`In_use`) state can be queried. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html).
          *     **
-         *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use (`In_use`) state and the system cannot obtain the relevant information.
+         *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use `(In_use)` state and the system cannot obtain the relevant information.
          * *   Up to 400 monitoring data entries can be returned at a time. Make sure that the `TotalCount` value does not exceed 400. The value is calculated by using the following formula: `TotalCount = (EndTime - StartTime)/Period`. If the TotalCount value is greater than 400, the `InvalidParameter.TooManyDataQueried` error is returned.
          * *   You can query the monitoring data in the last 30 days. If the value of `StartTime` is more than 30 days earlier than the current time, an error is returned.
          *
@@ -25706,14 +25914,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the monitoring data of a disk in a specific period of time.
+         * @summary Queries the monitoring data of a disk in a specific period of time. When you call this operation, you can specify parameters, such as DiskId, StartTime, and EndTime, in the request.
          *
          * @description ## [](#)Usage notes
          * You can query the following monitoring data of a disk: the read IOPS, write IOPS, read bandwidth (byte/s), write bandwidth (byte/s), read latency (microseconds), and write latency (microseconds).
          * Take note of the following items:
-         * *   You can query the monitoring data only of the disks that are in the In Use (`In_use`) state. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html).
+         * *   Monitoring data of only disks that are in the In Use (`In_use`) state can be queried. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html).
          *     **
-         *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use (`In_use`) state and the system cannot obtain the relevant information.
+         *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use `(In_use)` state and the system cannot obtain the relevant information.
          * *   Up to 400 monitoring data entries can be returned at a time. Make sure that the `TotalCount` value does not exceed 400. The value is calculated by using the following formula: `TotalCount = (EndTime - StartTime)/Period`. If the TotalCount value is greater than 400, the `InvalidParameter.TooManyDataQueried` error is returned.
          * *   You can query the monitoring data in the last 30 days. If the value of `StartTime` is more than 30 days earlier than the current time, an error is returned.
          *
@@ -25727,14 +25935,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the monitoring data of a disk in a specific period of time.
+         * @summary Queries the monitoring data of a disk in a specific period of time. When you call this operation, you can specify parameters, such as DiskId, StartTime, and EndTime, in the request.
          *
          * @description ## [](#)Usage notes
          * You can query the following monitoring data of a disk: the read IOPS, write IOPS, read bandwidth (byte/s), write bandwidth (byte/s), read latency (microseconds), and write latency (microseconds).
          * Take note of the following items:
-         * *   You can query the monitoring data only of the disks that are in the In Use (`In_use`) state. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html).
+         * *   Monitoring data of only disks that are in the In Use (`In_use`) state can be queried. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html).
          *     **
-         *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use (`In_use`) state and the system cannot obtain the relevant information.
+         *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use `(In_use)` state and the system cannot obtain the relevant information.
          * *   Up to 400 monitoring data entries can be returned at a time. Make sure that the `TotalCount` value does not exceed 400. The value is calculated by using the following formula: `TotalCount = (EndTime - StartTime)/Period`. If the TotalCount value is greater than 400, the `InvalidParameter.TooManyDataQueried` error is returned.
          * *   You can query the monitoring data in the last 30 days. If the value of `StartTime` is more than 30 days earlier than the current time, an error is returned.
          *
@@ -28788,7 +28996,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries available images.
+         * @summary Queries available images. When you call this operation, you can specify parameters, such as ImageId, ImageFamily, and InstanceType, in the request.
          *
          * @description ## [](#)Usage notes
          * *   You can query your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images from other Alibaba Cloud accounts.
@@ -28932,7 +29140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries available images.
+         * @summary Queries available images. When you call this operation, you can specify parameters, such as ImageId, ImageFamily, and InstanceType, in the request.
          *
          * @description ## [](#)Usage notes
          * *   You can query your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images from other Alibaba Cloud accounts.
@@ -29076,7 +29284,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries available images.
+         * @summary Queries available images. When you call this operation, you can specify parameters, such as ImageId, ImageFamily, and InstanceType, in the request.
          *
          * @description ## [](#)Usage notes
          * *   You can query your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images from other Alibaba Cloud accounts.
@@ -29094,7 +29302,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries available images.
+         * @summary Queries available images. When you call this operation, you can specify parameters, such as ImageId, ImageFamily, and InstanceType, in the request.
          *
          * @description ## [](#)Usage notes
          * *   You can query your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images from other Alibaba Cloud accounts.
@@ -29564,7 +29772,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the system events of Elastic Compute Service (ECS) instances. By default, non-active system events are queried.
+         * @summary Queries the system events of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as InstanceId and EventType, in the request. By default, non-active system events are queried.
          *
          * @description *   You can query system events that were completed within the last 30 days. No limits apply to the time range for querying uncompleted system events.
          * *   You can also specify InstanceEventCycleStatus to query the system events that are in the Scheduled, Executing, or Inquiring state.
@@ -29681,7 +29889,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the system events of Elastic Compute Service (ECS) instances. By default, non-active system events are queried.
+         * @summary Queries the system events of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as InstanceId and EventType, in the request. By default, non-active system events are queried.
          *
          * @description *   You can query system events that were completed within the last 30 days. No limits apply to the time range for querying uncompleted system events.
          * *   You can also specify InstanceEventCycleStatus to query the system events that are in the Scheduled, Executing, or Inquiring state.
@@ -29798,7 +30006,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the system events of Elastic Compute Service (ECS) instances. By default, non-active system events are queried.
+         * @summary Queries the system events of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as InstanceId and EventType, in the request. By default, non-active system events are queried.
          *
          * @description *   You can query system events that were completed within the last 30 days. No limits apply to the time range for querying uncompleted system events.
          * *   You can also specify InstanceEventCycleStatus to query the system events that are in the Scheduled, Executing, or Inquiring state.
@@ -29813,7 +30021,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the system events of Elastic Compute Service (ECS) instances. By default, non-active system events are queried.
+         * @summary Queries the system events of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as InstanceId and EventType, in the request. By default, non-active system events are queried.
          *
          * @description *   You can query system events that were completed within the last 30 days. No limits apply to the time range for querying uncompleted system events.
          * *   You can also specify InstanceEventCycleStatus to query the system events that are in the Scheduled, Executing, or Inquiring state.
@@ -30500,7 +30708,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the status information of multiple Elastic Compute Service (ECS) instances.
+         * @summary Queries the status information of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as RegionId, ZoneId, and InstanceId, in the request.
          *
          * @description *   For information about the lifecycle states of an ECS instance, see [Instance states](https://help.aliyun.com/document_detail/25687.html).
          * *   You can also call this operation to query the list of ECS instances.
@@ -30573,7 +30781,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the status information of multiple Elastic Compute Service (ECS) instances.
+         * @summary Queries the status information of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as RegionId, ZoneId, and InstanceId, in the request.
          *
          * @description *   For information about the lifecycle states of an ECS instance, see [Instance states](https://help.aliyun.com/document_detail/25687.html).
          * *   You can also call this operation to query the list of ECS instances.
@@ -30646,7 +30854,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the status information of multiple Elastic Compute Service (ECS) instances.
+         * @summary Queries the status information of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as RegionId, ZoneId, and InstanceId, in the request.
          *
          * @description *   For information about the lifecycle states of an ECS instance, see [Instance states](https://help.aliyun.com/document_detail/25687.html).
          * *   You can also call this operation to query the list of ECS instances.
@@ -30661,7 +30869,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the status information of multiple Elastic Compute Service (ECS) instances.
+         * @summary Queries the status information of Elastic Compute Service (ECS) instances. When you call this operation, you can specify parameters, such as RegionId, ZoneId, and InstanceId, in the request.
          *
          * @description *   For information about the lifecycle states of an ECS instance, see [Instance states](https://help.aliyun.com/document_detail/25687.html).
          * *   You can also call this operation to query the list of ECS instances.
@@ -43488,6 +43696,106 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary 关闭云盘默认加密
+         *
+         * @param request DisableDiskEncryptionByDefaultRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableDiskEncryptionByDefaultResponse
+         */
+        public DisableDiskEncryptionByDefaultResponse DisableDiskEncryptionByDefaultWithOptions(DisableDiskEncryptionByDefaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableDiskEncryptionByDefault",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableDiskEncryptionByDefaultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 关闭云盘默认加密
+         *
+         * @param request DisableDiskEncryptionByDefaultRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableDiskEncryptionByDefaultResponse
+         */
+        public async Task<DisableDiskEncryptionByDefaultResponse> DisableDiskEncryptionByDefaultWithOptionsAsync(DisableDiskEncryptionByDefaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableDiskEncryptionByDefault",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableDiskEncryptionByDefaultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 关闭云盘默认加密
+         *
+         * @param request DisableDiskEncryptionByDefaultRequest
+         * @return DisableDiskEncryptionByDefaultResponse
+         */
+        public DisableDiskEncryptionByDefaultResponse DisableDiskEncryptionByDefault(DisableDiskEncryptionByDefaultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableDiskEncryptionByDefaultWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 关闭云盘默认加密
+         *
+         * @param request DisableDiskEncryptionByDefaultRequest
+         * @return DisableDiskEncryptionByDefaultResponse
+         */
+        public async Task<DisableDiskEncryptionByDefaultResponse> DisableDiskEncryptionByDefaultAsync(DisableDiskEncryptionByDefaultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableDiskEncryptionByDefaultWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @deprecated OpenAPI EipFillParams is deprecated
          *
          * @param request EipFillParamsRequest
@@ -43920,6 +44228,130 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary 启用云盘默认加密
+         *
+         * @param request EnableDiskEncryptionByDefaultRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableDiskEncryptionByDefaultResponse
+         */
+        public EnableDiskEncryptionByDefaultResponse EnableDiskEncryptionByDefaultWithOptions(EnableDiskEncryptionByDefaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableDiskEncryptionByDefault",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableDiskEncryptionByDefaultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启用云盘默认加密
+         *
+         * @param request EnableDiskEncryptionByDefaultRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableDiskEncryptionByDefaultResponse
+         */
+        public async Task<EnableDiskEncryptionByDefaultResponse> EnableDiskEncryptionByDefaultWithOptionsAsync(EnableDiskEncryptionByDefaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableDiskEncryptionByDefault",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableDiskEncryptionByDefaultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启用云盘默认加密
+         *
+         * @param request EnableDiskEncryptionByDefaultRequest
+         * @return EnableDiskEncryptionByDefaultResponse
+         */
+        public EnableDiskEncryptionByDefaultResponse EnableDiskEncryptionByDefault(EnableDiskEncryptionByDefaultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableDiskEncryptionByDefaultWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 启用云盘默认加密
+         *
+         * @param request EnableDiskEncryptionByDefaultRequest
+         * @return EnableDiskEncryptionByDefaultResponse
+         */
+        public async Task<EnableDiskEncryptionByDefaultResponse> EnableDiskEncryptionByDefaultAsync(EnableDiskEncryptionByDefaultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableDiskEncryptionByDefaultWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @deprecated OpenAPI EnablePhysicalConnection is deprecated
          *
          * @param request EnablePhysicalConnectionRequest
@@ -44077,7 +44509,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @description ## [](#)Usage notes
          * Before you export images, take note of the following items:
          * *   Make sure that you are familiar with the prerequisites and considerations. For more information, see [Export a custom image](https://help.aliyun.com/document_detail/58181.html).
-         * *   The `ImageFormat` parameter is available only for the following regions: India (Mumbai) Closing Down, Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.
+         * *   The `ImageFormat` parameter is available only for the following regions: Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.
          * *   Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:
          *     *   Create a role named `AliyunECSImageExportDefaultRole` and attach the following policy to the role:
          *                {
@@ -44186,7 +44618,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @description ## [](#)Usage notes
          * Before you export images, take note of the following items:
          * *   Make sure that you are familiar with the prerequisites and considerations. For more information, see [Export a custom image](https://help.aliyun.com/document_detail/58181.html).
-         * *   The `ImageFormat` parameter is available only for the following regions: India (Mumbai) Closing Down, Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.
+         * *   The `ImageFormat` parameter is available only for the following regions: Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.
          * *   Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:
          *     *   Create a role named `AliyunECSImageExportDefaultRole` and attach the following policy to the role:
          *                {
@@ -44295,7 +44727,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @description ## [](#)Usage notes
          * Before you export images, take note of the following items:
          * *   Make sure that you are familiar with the prerequisites and considerations. For more information, see [Export a custom image](https://help.aliyun.com/document_detail/58181.html).
-         * *   The `ImageFormat` parameter is available only for the following regions: India (Mumbai) Closing Down, Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.
+         * *   The `ImageFormat` parameter is available only for the following regions: Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.
          * *   Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:
          *     *   Create a role named `AliyunECSImageExportDefaultRole` and attach the following policy to the role:
          *                {
@@ -44350,7 +44782,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @description ## [](#)Usage notes
          * Before you export images, take note of the following items:
          * *   Make sure that you are familiar with the prerequisites and considerations. For more information, see [Export a custom image](https://help.aliyun.com/document_detail/58181.html).
-         * *   The `ImageFormat` parameter is available only for the following regions: India (Mumbai) Closing Down, Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.
+         * *   The `ImageFormat` parameter is available only for the following regions: Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.
          * *   Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:
          *     *   Create a role named `AliyunECSImageExportDefaultRole` and attach the following policy to the role:
          *                {
@@ -46312,18 +46744,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group.
+         * @summary Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group. When you call this operation, you can specify parameters, such as SecurityGroupId, InstanceId, and NetworkInterfaceId, in the request.
          *
          * @description ## [](#)Usage notes
          * >  This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](https://help.aliyun.com/document_detail/25503.html) operation to add an instance to or remove an instance from a security group, and call the [ModifyNetworkInterfaceAttribute](https://help.aliyun.com/document_detail/58513.html) operation to add an ENI to or remove an ENI from a security group.
          * Take note of the following items:
          * *   Before you add an instance to a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
          * *   An instance can be added to up to five security groups by default.
-         * *   To add an instance to more security groups, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex). An instance can be added to up to 16 security groups.
+         * *   You can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to change the maximum number of security groups to which an instance can be added to 4 or 10.
          * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
          * *   The security group and the instance must reside in the same region.
-         * *   The security group and the instance must be of the same network type. If the network type is virtual private cloud (VPC), the security group and the instance must reside in the same VPC.
+         * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must reside in the same VPC.
          * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify `InstanceId` and `NetworkInterfaceId` at the same time in a request.
+         * For more information, see [Limits](https://help.aliyun.com/document_detail/25412.html).
          *
          * @param request JoinSecurityGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -46385,18 +46818,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group.
+         * @summary Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group. When you call this operation, you can specify parameters, such as SecurityGroupId, InstanceId, and NetworkInterfaceId, in the request.
          *
          * @description ## [](#)Usage notes
          * >  This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](https://help.aliyun.com/document_detail/25503.html) operation to add an instance to or remove an instance from a security group, and call the [ModifyNetworkInterfaceAttribute](https://help.aliyun.com/document_detail/58513.html) operation to add an ENI to or remove an ENI from a security group.
          * Take note of the following items:
          * *   Before you add an instance to a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
          * *   An instance can be added to up to five security groups by default.
-         * *   To add an instance to more security groups, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex). An instance can be added to up to 16 security groups.
+         * *   You can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to change the maximum number of security groups to which an instance can be added to 4 or 10.
          * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
          * *   The security group and the instance must reside in the same region.
-         * *   The security group and the instance must be of the same network type. If the network type is virtual private cloud (VPC), the security group and the instance must reside in the same VPC.
+         * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must reside in the same VPC.
          * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify `InstanceId` and `NetworkInterfaceId` at the same time in a request.
+         * For more information, see [Limits](https://help.aliyun.com/document_detail/25412.html).
          *
          * @param request JoinSecurityGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -46458,18 +46892,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group.
+         * @summary Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group. When you call this operation, you can specify parameters, such as SecurityGroupId, InstanceId, and NetworkInterfaceId, in the request.
          *
          * @description ## [](#)Usage notes
          * >  This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](https://help.aliyun.com/document_detail/25503.html) operation to add an instance to or remove an instance from a security group, and call the [ModifyNetworkInterfaceAttribute](https://help.aliyun.com/document_detail/58513.html) operation to add an ENI to or remove an ENI from a security group.
          * Take note of the following items:
          * *   Before you add an instance to a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
          * *   An instance can be added to up to five security groups by default.
-         * *   To add an instance to more security groups, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex). An instance can be added to up to 16 security groups.
+         * *   You can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to change the maximum number of security groups to which an instance can be added to 4 or 10.
          * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
          * *   The security group and the instance must reside in the same region.
-         * *   The security group and the instance must be of the same network type. If the network type is virtual private cloud (VPC), the security group and the instance must reside in the same VPC.
+         * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must reside in the same VPC.
          * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify `InstanceId` and `NetworkInterfaceId` at the same time in a request.
+         * For more information, see [Limits](https://help.aliyun.com/document_detail/25412.html).
          *
          * @param request JoinSecurityGroupRequest
          * @return JoinSecurityGroupResponse
@@ -46481,18 +46916,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group.
+         * @summary Adds an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) to a security group. When you call this operation, you can specify parameters, such as SecurityGroupId, InstanceId, and NetworkInterfaceId, in the request.
          *
          * @description ## [](#)Usage notes
          * >  This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](https://help.aliyun.com/document_detail/25503.html) operation to add an instance to or remove an instance from a security group, and call the [ModifyNetworkInterfaceAttribute](https://help.aliyun.com/document_detail/58513.html) operation to add an ENI to or remove an ENI from a security group.
          * Take note of the following items:
          * *   Before you add an instance to a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
          * *   An instance can be added to up to five security groups by default.
-         * *   To add an instance to more security groups, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex). An instance can be added to up to 16 security groups.
+         * *   You can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to change the maximum number of security groups to which an instance can be added to 4 or 10.
          * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
          * *   The security group and the instance must reside in the same region.
-         * *   The security group and the instance must be of the same network type. If the network type is virtual private cloud (VPC), the security group and the instance must reside in the same VPC.
+         * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must reside in the same VPC.
          * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify `InstanceId` and `NetworkInterfaceId` at the same time in a request.
+         * For more information, see [Limits](https://help.aliyun.com/document_detail/25412.html).
          *
          * @param request JoinSecurityGroupRequest
          * @return JoinSecurityGroupResponse
@@ -46504,7 +46940,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group.
+         * @summary Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group. To remove an ECS instance from a security group, specify SecurityGroupId and InstanceId in the request. To remove an ENI from a security group, specify SecurityGroupId and NetworkInterfaceId in the request.
          *
          * @description ## [](#)Usage notes
          * > 
@@ -46575,7 +47011,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group.
+         * @summary Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group. To remove an ECS instance from a security group, specify SecurityGroupId and InstanceId in the request. To remove an ENI from a security group, specify SecurityGroupId and NetworkInterfaceId in the request.
          *
          * @description ## [](#)Usage notes
          * > 
@@ -46646,7 +47082,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group.
+         * @summary Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group. To remove an ECS instance from a security group, specify SecurityGroupId and InstanceId in the request. To remove an ENI from a security group, specify SecurityGroupId and NetworkInterfaceId in the request.
          *
          * @description ## [](#)Usage notes
          * > 
@@ -46667,7 +47103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group.
+         * @summary Removes an Elastic Compute Service (ECS) instance or an elastic network interface (ENI) from a security group. To remove an ECS instance from a security group, specify SecurityGroupId and InstanceId in the request. To remove an ENI from a security group, specify SecurityGroupId and NetworkInterfaceId in the request.
          *
          * @description ## [](#)Usage notes
          * > 
@@ -49520,6 +49956,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary Modifies the name and description of a deployment set. When you call this operation, you can specify parameters, such as DeploymentSetId and DeploymentSetName, in the request.
+         *
          * @param request ModifyDeploymentSetAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyDeploymentSetAttributeResponse
@@ -49580,6 +50018,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary Modifies the name and description of a deployment set. When you call this operation, you can specify parameters, such as DeploymentSetId and DeploymentSetName, in the request.
+         *
          * @param request ModifyDeploymentSetAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyDeploymentSetAttributeResponse
@@ -49640,6 +50080,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary Modifies the name and description of a deployment set. When you call this operation, you can specify parameters, such as DeploymentSetId and DeploymentSetName, in the request.
+         *
          * @param request ModifyDeploymentSetAttributeRequest
          * @return ModifyDeploymentSetAttributeResponse
          */
@@ -49650,6 +50092,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary Modifies the name and description of a deployment set. When you call this operation, you can specify parameters, such as DeploymentSetId and DeploymentSetName, in the request.
+         *
          * @param request ModifyDeploymentSetAttributeRequest
          * @return ModifyDeploymentSetAttributeResponse
          */
@@ -50189,6 +50633,114 @@ namespace AlibabaCloud.SDK.Ecs20140526
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDiskChargeTypeWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 修改云盘默认加密加密密钥
+         *
+         * @param request ModifyDiskDefaultKMSKeyIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDiskDefaultKMSKeyIdResponse
+         */
+        public ModifyDiskDefaultKMSKeyIdResponse ModifyDiskDefaultKMSKeyIdWithOptions(ModifyDiskDefaultKMSKeyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KMSKeyId))
+            {
+                query["KMSKeyId"] = request.KMSKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDiskDefaultKMSKeyId",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDiskDefaultKMSKeyIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改云盘默认加密加密密钥
+         *
+         * @param request ModifyDiskDefaultKMSKeyIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDiskDefaultKMSKeyIdResponse
+         */
+        public async Task<ModifyDiskDefaultKMSKeyIdResponse> ModifyDiskDefaultKMSKeyIdWithOptionsAsync(ModifyDiskDefaultKMSKeyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KMSKeyId))
+            {
+                query["KMSKeyId"] = request.KMSKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDiskDefaultKMSKeyId",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDiskDefaultKMSKeyIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改云盘默认加密加密密钥
+         *
+         * @param request ModifyDiskDefaultKMSKeyIdRequest
+         * @return ModifyDiskDefaultKMSKeyIdResponse
+         */
+        public ModifyDiskDefaultKMSKeyIdResponse ModifyDiskDefaultKMSKeyId(ModifyDiskDefaultKMSKeyIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDiskDefaultKMSKeyIdWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改云盘默认加密加密密钥
+         *
+         * @param request ModifyDiskDefaultKMSKeyIdRequest
+         * @return ModifyDiskDefaultKMSKeyIdResponse
+         */
+        public async Task<ModifyDiskDefaultKMSKeyIdResponse> ModifyDiskDefaultKMSKeyIdAsync(ModifyDiskDefaultKMSKeyIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDiskDefaultKMSKeyIdWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -59180,7 +59732,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.
+         * @summary Purchases a reserved instance. When you call this operation, you can specify parameters, such as InstanceType and Scope, in the request. Reserved instances can be applied to automatically offset fees for pay-as-you-go Elastic Compute Service (ECS) instances.
          *
          * @description ## [](#)Usage notes
          * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
@@ -59298,7 +59850,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.
+         * @summary Purchases a reserved instance. When you call this operation, you can specify parameters, such as InstanceType and Scope, in the request. Reserved instances can be applied to automatically offset fees for pay-as-you-go Elastic Compute Service (ECS) instances.
          *
          * @description ## [](#)Usage notes
          * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
@@ -59416,7 +59968,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.
+         * @summary Purchases a reserved instance. When you call this operation, you can specify parameters, such as InstanceType and Scope, in the request. Reserved instances can be applied to automatically offset fees for pay-as-you-go Elastic Compute Service (ECS) instances.
          *
          * @description ## [](#)Usage notes
          * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
@@ -59432,7 +59984,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.
+         * @summary Purchases a reserved instance. When you call this operation, you can specify parameters, such as InstanceType and Scope, in the request. Reserved instances can be applied to automatically offset fees for pay-as-you-go Elastic Compute Service (ECS) instances.
          *
          * @description ## [](#)Usage notes
          * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
@@ -61868,7 +62420,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary 续费
+         * @summary Renews one or more elasticity assurances that you purchased. When you call this operation, you can specify parameters, such as PrivatePoolOptionsId and Period, in the request.
          *
          * @param request RenewElasticityAssurancesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -61938,7 +62490,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary 续费
+         * @summary Renews one or more elasticity assurances that you purchased. When you call this operation, you can specify parameters, such as PrivatePoolOptionsId and Period, in the request.
          *
          * @param request RenewElasticityAssurancesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -62008,7 +62560,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary 续费
+         * @summary Renews one or more elasticity assurances that you purchased. When you call this operation, you can specify parameters, such as PrivatePoolOptionsId and Period, in the request.
          *
          * @param request RenewElasticityAssurancesRequest
          * @return RenewElasticityAssurancesResponse
@@ -62020,7 +62572,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary 续费
+         * @summary Renews one or more elasticity assurances that you purchased. When you call this operation, you can specify parameters, such as PrivatePoolOptionsId and Period, in the request.
          *
          * @param request RenewElasticityAssurancesRequest
          * @return RenewElasticityAssurancesResponse
@@ -63049,6 +63601,106 @@ namespace AlibabaCloud.SDK.Ecs20140526
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetDiskWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 重置云盘默认加密加密密钥为服务密钥
+         *
+         * @param request ResetDiskDefaultKMSKeyIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetDiskDefaultKMSKeyIdResponse
+         */
+        public ResetDiskDefaultKMSKeyIdResponse ResetDiskDefaultKMSKeyIdWithOptions(ResetDiskDefaultKMSKeyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetDiskDefaultKMSKeyId",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetDiskDefaultKMSKeyIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重置云盘默认加密加密密钥为服务密钥
+         *
+         * @param request ResetDiskDefaultKMSKeyIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetDiskDefaultKMSKeyIdResponse
+         */
+        public async Task<ResetDiskDefaultKMSKeyIdResponse> ResetDiskDefaultKMSKeyIdWithOptionsAsync(ResetDiskDefaultKMSKeyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetDiskDefaultKMSKeyId",
+                Version = "2014-05-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetDiskDefaultKMSKeyIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重置云盘默认加密加密密钥为服务密钥
+         *
+         * @param request ResetDiskDefaultKMSKeyIdRequest
+         * @return ResetDiskDefaultKMSKeyIdResponse
+         */
+        public ResetDiskDefaultKMSKeyIdResponse ResetDiskDefaultKMSKeyId(ResetDiskDefaultKMSKeyIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResetDiskDefaultKMSKeyIdWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 重置云盘默认加密加密密钥为服务密钥
+         *
+         * @param request ResetDiskDefaultKMSKeyIdRequest
+         * @return ResetDiskDefaultKMSKeyIdResponse
+         */
+        public async Task<ResetDiskDefaultKMSKeyIdResponse> ResetDiskDefaultKMSKeyIdAsync(ResetDiskDefaultKMSKeyIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResetDiskDefaultKMSKeyIdWithOptionsAsync(request, runtime);
         }
 
         /**

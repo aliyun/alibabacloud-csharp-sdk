@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string HostType { get; set; }
 
                     /// <summary>
-                    /// The inactive disks that have been released and whose data must be cleared.
+                    /// The inactive disks that were released and whose data must be cleared.
                     /// </summary>
                     [NameInMap("InactiveDisks")]
                     [Validation(Required=false)]
@@ -283,12 +283,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string NotBefore { get; set; }
 
                 /// <summary>
-                /// The reason why the system event was scheduled.
+                /// The reason why the system event occurred.
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
 
+                /// <summary>
+                /// The reason code category for the system event.
+                /// </summary>
                 [NameInMap("ReasonCode")]
                 [Validation(Required=false)]
                 public string ReasonCode { get; set; }

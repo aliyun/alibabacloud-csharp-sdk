@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// Specifies whether cross-cluster instance type upgrades are supported.
+        /// Specifies whether cross-cluster instance type upgrades are supported. Valid values:
         /// 
         /// *   true
         /// *   false
         /// 
         /// Default value: false.
         /// 
-        /// When `AllowMigrateAcrossZone` is set to true and you upgrade the instance based on the returned information, take note of the following items:
+        /// When you set `AllowMigrateAcrossZone` to true and upgrade the instance based on the returned information, take note of the following items:
         /// 
         /// Instance that resides in the classic network:
         /// 
@@ -161,6 +161,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// >  This parameter is not publicly available.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   Online
+        /// *   Offline
         /// </summary>
         [NameInMap("ModifyMode")]
         [Validation(Required=false)]

@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class PurchaseReservedInstancesOfferingRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable auto-renewal for the reserved instance. Default value: false. Valid values:
+        /// Specifies whether to enable auto-renewal for the reserved instance. Valid values:
         /// 
-        /// true: enables auto-renewal for the reserved instance. false: does not enable auto-renewal for the reserved instance.
+        /// *   true
+        /// *   false (default)
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
@@ -161,6 +162,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Scope { get; set; }
 
+        /// <summary>
+        /// The time when the reserved instance takes effect. Specify the time in the [ISO 8601 standard](https://help.aliyun.com/document_detail/25696.html) in the `yyyy-MM-ddTHHZ` format. The time must be in UTC.
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

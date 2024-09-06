@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The category of data disk N. Valid values:
             /// 
-            /// *   cloud_efficiency: ultra disk.
+            /// *   cloud_efficiency: utra disk.
             /// 
             /// *   cloud_ssd: standard SSD.
             /// 
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The mount point of data disk N.
             /// 
-            /// >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify `DataDisk.N.Size` and `DataDisk.N.Category` to change the category and size of data disk N created based on the image.
+            /// >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set this parameter to the mount point of data disk N contained in the full image and modify the `DataDisk.N.Size` and `DataDisk.N.Category` parameters to change the category and size of data disk N created based on the image.
             /// </summary>
             [NameInMap("Device")]
             [Validation(Required=false)]
@@ -328,20 +328,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
             /// 
-            /// *   Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
+            /// *   Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.
             /// 
-            /// *   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
+            /// *   Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.
             /// 
-            /// *   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.
+            /// *   Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.
             /// 
-            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.
-            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
-            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
-            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
+            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 65536.
+            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 65536.
+            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 65536.
+            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 65536.
             /// 
-            /// *   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
+            /// *   Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.
             /// 
-            /// >  The value of this parameter must be greater than or equal to the size of the snapshot specified by `DataDisk.N.SnapshotId`.
+            /// >  The value of this parameter must be greater than or equal to the size of the snapshot specified by `SnapshotId`.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
@@ -351,14 +351,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
             /// 
             /// *   If `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created based on the size of the specified snapshot.
-            /// *   Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+            /// *   Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
             /// </summary>
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
             public string SnapshotId { get; set; }
 
             /// <summary>
-            /// The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, you must specify this parameter.
+            /// The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, specify this parameter.
             /// </summary>
             [NameInMap("StorageClusterId")]
             [Validation(Required=false)]
@@ -709,7 +709,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SpotDuration { get; set; }
 
         /// <summary>
-        /// The interruption mode of the preemptible instance. The value can only be Terminate, which specifies that the instance is released.
+        /// The interruption mode of the preemptible instance. Valid values:
+        /// 
+        /// *   Terminate: The instance is released.
+        /// 
+        /// *   Stop: The instance is stopped in economical mode.
+        /// 
+        ///     For information about the economical mode, see [Economical mode](https://help.aliyun.com/document_detail/63353.html).
+        /// 
+        /// Default value: Terminate.
         /// </summary>
         [NameInMap("SpotInterruptionBehavior")]
         [Validation(Required=false)]
@@ -748,21 +756,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? StorageSetPartitionNumber { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags to add to the instance.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateInstanceRequestTag> Tag { get; set; }
         public class CreateInstanceRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the instance, disks, and primary elastic network interface (ENI). Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+            /// The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

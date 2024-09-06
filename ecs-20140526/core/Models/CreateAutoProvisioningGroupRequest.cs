@@ -14,28 +14,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public CreateAutoProvisioningGroupRequestLaunchConfiguration LaunchConfiguration { get; set; }
         public class CreateAutoProvisioningGroupRequestLaunchConfiguration : TeaModel {
             /// <summary>
-            /// This parameter is unavailable for public use.
+            /// >  This parameter is in invitational preview and is not publicly available.
             /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> Arn { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationArn : TeaModel {
                 /// <summary>
-                /// This parameter is not publicly available.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("AssumeRoleFor")]
                 [Validation(Required=false)]
                 public long? AssumeRoleFor { get; set; }
 
                 /// <summary>
-                /// This parameter is not publicly available.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("RoleType")]
                 [Validation(Required=false)]
                 public string RoleType { get; set; }
 
                 /// <summary>
-                /// This parameter is not publicly available.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("Rolearn")]
                 [Validation(Required=false)]
@@ -75,6 +75,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> DataDisk { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk : TeaModel {
+                /// <summary>
+                /// Specifies whether to enable the performance burst feature for data disk N. Valid values:
+                /// 
+                /// *   true
+                /// *   false
+                /// 
+                /// >  This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
+                /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
@@ -82,10 +90,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The category of data disk N. Valid values of N: 1 to 16. Valid values:
                 /// 
-                /// *   cloud_efficiency: ultra disk
-                /// *   cloud_ssd: standard SSD
-                /// *   cloud_essd: ESSD
-                /// *   cloud: basic disk
+                /// *   cloud_efficiency: ultra disk.
+                /// *   cloud_ssd: standard SSD.
+                /// *   cloud_essd: ESSD.
+                /// *   cloud: basic disk.
                 /// 
                 /// For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
                 /// 
@@ -126,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).
                 /// 
-                /// By default, this parameter is left empty.
+                /// This parameter is left empty by default.
                 /// 
                 /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
@@ -134,6 +142,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string DiskName { get; set; }
 
+                /// <summary>
+                /// >  This parameter is not publicly available.
+                /// </summary>
                 [NameInMap("EncryptAlgorithm")]
                 [Validation(Required=false)]
                 public string EncryptAlgorithm { get; set; }
@@ -160,14 +171,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string KmsKeyId { get; set; }
 
                 /// <summary>
-                /// The performance level of the ESSD to use as data disk N. The value of N in this parameter must be the same as the value of N in `LaunchConfiguration.DataDisk.N.Category`. Valid values:
+                /// The performance level of the Enterprise SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in `LaunchConfiguration.DataDisk.N.Category`. Valid values:
                 /// 
                 /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
                 /// *   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.
                 /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
                 /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
                 /// 
-                /// For information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).
+                /// For more information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).
                 /// 
                 /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
@@ -175,6 +186,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string PerformanceLevel { get; set; }
 
+                /// <summary>
+                /// The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
+                /// 
+                /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
+                /// 
+                /// >  This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
+                /// </summary>
                 [NameInMap("ProvisionedIops")]
                 [Validation(Required=false)]
                 public long? ProvisionedIops { get; set; }
@@ -206,7 +224,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
                 /// 
-                /// After this parameter is specified, `LaunchConfiguration.DataDisk.N.Size` is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+                /// If you specify this parameter, `LaunchConfiguration.DataDisk.N.Size` is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
                 /// 
                 /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
@@ -416,12 +434,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk SystemDisk { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk : TeaModel {
+                /// <summary>
+                /// Specifies whether to enable the performance burst feature for the system disk. Valid values:
+                /// 
+                /// *   true
+                /// *   false
+                /// 
+                /// >  This parameter is available only if you set `LaunchConfiguration.SystemDisk.Category` to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
+                /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
 
                 /// <summary>
-                /// The algorithm to use to encrypt system disk N. Valid values:
+                /// The algorithm to use to encrypt the system disk. Valid values:
                 /// 
                 /// *   aes-256
                 /// *   sm4-128
@@ -429,13 +455,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// Default value: aes-256.
                 /// 
                 /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
+                /// 
+                /// >  This parameter is not publicly available.
                 /// </summary>
                 [NameInMap("EncryptAlgorithm")]
                 [Validation(Required=false)]
                 public string EncryptAlgorithm { get; set; }
 
                 /// <summary>
-                /// Specifies whether to encrypt system disk N. Valid values:
+                /// Specifies whether to encrypt the system disk. Valid values:
                 /// 
                 /// *   true
                 /// *   false
@@ -449,7 +477,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Encrypted { get; set; }
 
                 /// <summary>
-                /// The ID of the KMS key to use for system disk N.
+                /// The ID of the KMS key to use for the system disk.
                 /// 
                 /// When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.
                 /// </summary>
@@ -457,6 +485,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string KMSKeyId { get; set; }
 
+                /// <summary>
+                /// The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
+                /// 
+                /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
+                /// 
+                /// >  This parameter is available only if you set LaunchConfiguration.SystemDisk.Category to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
+                /// </summary>
                 [NameInMap("ProvisionedIops")]
                 [Validation(Required=false)]
                 public long? ProvisionedIops { get; set; }
@@ -917,7 +952,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The key of tag N to add to the auto provisioning group.
             /// 
-            /// Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+            /// Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet> DeploymentSet { get; set; }
             public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet : TeaModel {
                 /// <summary>
-                /// Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains Elastic Compute Service (ECS) instances. The value contains the capacities of the deployment set in different zones.
+                /// Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.
                 /// </summary>
                 [NameInMap("Capacities")]
                 [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public int? AvailableAmount { get; set; }
 
                         /// <summary>
-                        /// The number of ECS instances that belong to the zone in the deployment set.
+                        /// The number of ECS instances that reside in the zone in the deployment set.
                         /// </summary>
                         [NameInMap("UsedAmount")]
                         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string DeploymentSetName { get; set; }
 
                 /// <summary>
-                /// The deployment strategy. The value of this response parameter is that of the `Strategy` request parameter.
+                /// The deployment strategy. The return value of this parameter is the value of the `Strategy` request parameter.
                 /// </summary>
                 [NameInMap("DeploymentStrategy")]
                 [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? InstanceAmount { get; set; }
 
                 /// <summary>
-                /// The IDs of the instances in the deployment set.
+                /// The IDs of the Elastic Compute Service (ECS) instances in the deployment set.
                 /// </summary>
                 [NameInMap("InstanceIds")]
                 [Validation(Required=false)]
@@ -146,35 +146,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the deployment set.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of deployment sets returned.
+        /// The total number of queried deployment sets.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

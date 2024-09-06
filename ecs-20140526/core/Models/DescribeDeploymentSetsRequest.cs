@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDeploymentSetsRequest : TeaModel {
         /// <summary>
-        /// The IDs of deployment sets. The value can be a JSON array that consists of up to 100 deployment set IDs in the format of `["ds-xxxxxxxxx", "ds-yyyyyyyyy", … "ds-zzzzzzzzz"]`. Separate multiple deployment set IDs with commas (,).
+        /// The IDs of deployment sets. The value can be a JSON array that consists of deployment set IDs in the format of `["ds-xxxxxxxxx", "ds-yyyyyyyyy", ... "ds-zzzzzzzzz"]`. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).
         /// </summary>
         [NameInMap("DeploymentSetIds")]
         [Validation(Required=false)]
         public string DeploymentSetIds { get; set; }
 
         /// <summary>
-        /// The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
+        /// The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("DeploymentSetName")]
         [Validation(Required=false)]
         public string DeploymentSetName { get; set; }
 
         /// <summary>
-        /// > The parameter is deprecated.
+        /// >  This parameter is deprecated.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// > The parameter is deprecated.
+        /// >  This parameter is deprecated.
         /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }
 
         /// <summary>
-        /// > The parameter is deprecated.
+        /// >  This parameter is deprecated.
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Pages start from page 1.
         /// 
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// Maximum value: 50.
+        /// Valid values: 1 to 50.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -94,8 +94,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The deployment strategy. Valid values:
         /// 
-        /// *   Availability: high availability strategy.
-        /// *   AvailabilityGroup: high availability group strategy.
+        /// *   Availability: high availability strategy
+        /// *   AvailabilityGroup: high availability group strategy
         /// </summary>
         [NameInMap("Strategy")]
         [Validation(Required=false)]

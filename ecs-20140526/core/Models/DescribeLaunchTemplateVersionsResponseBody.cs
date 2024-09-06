@@ -188,9 +188,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// The device name of the data disk.
+                            /// The mount point of the data disk. The mount points are named based on the number of data disks:
                             /// 
-                            /// >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.
+                            /// *   1st to 25th data disks: /dev/xvd`[b-z]`.
+                            /// *   From the 26th data disk on: /dev/xvd`[aa-zz]`. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.
+                            /// 
+                            /// >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify `DataDisk.N.Size` and `DataDisk.N.Category` to change the category and size of data disk N created based on the image.
                             /// </summary>
                             [NameInMap("Device")]
                             [Validation(Required=false)]

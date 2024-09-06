@@ -223,12 +223,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// *   Valid values when DiskCategory is set to cloud_essd: vary based on the `PerformanceLevel` value.
         /// 
-        ///     *   Valid values when PerformanceLevel is set to PL0: 1 to 32768.
-        ///     *   Valid values when PerformanceLevel is set to PL1: 20 to 32768.
-        ///     *   Valid values when PerformanceLevel is set to PL2: 461 to 32768.
-        ///     *   Valid values when PerformanceLevel is set to PL3: 1261 to 32768.
+        ///     *   Valid values when PerformanceLevel is set to PL0: 1 to 65536.
+        ///     *   Valid values when PerformanceLevel is set to PL1: 20 to 65536.
+        ///     *   Valid values when PerformanceLevel is set to PL2: 461 to 65536.
+        ///     *   Valid values when PerformanceLevel is set to PL3: 1261 to 65536.
         /// 
-        /// *   Valid values when DiskCategory is set to cloud_auto: 1 to 32768.
+        /// *   Valid values when DiskCategory is set to cloud_auto: 1 to 65536.
         /// 
         /// *   Valid values when DiskCategory is set to cloud_essd_entry: 10 to 32768.
         /// 
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// If `SnapshotId` is specified, the following limits apply to `SnapshotId` and `Size`:
         /// 
-        /// *   If the size of the snapshot specified by `SnapshotId` is larger than the value of `Size`, the size of the created disk is equal to the specified snapshot size.
+        /// *   If the size of the snapshot specified by `SnapshotId` is larger than the value of `Size`, the size of the created disk is equal to the size of the snapshot.
         /// *   If the size of the snapshot specified by `SnapshotId` is smaller than the value of `Size`, the size of the created disk is equal to the value of `Size`.
         /// </summary>
         [NameInMap("Size")]

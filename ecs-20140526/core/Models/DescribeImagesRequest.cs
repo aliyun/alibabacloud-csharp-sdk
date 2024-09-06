@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageOwnerAlias { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.
+        /// The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only if you query shared images or community images.
         /// </summary>
         [NameInMap("ImageOwnerId")]
         [Validation(Required=false)]
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   Waiting: The image is waiting to be processed.
         /// *   Available: The image is available.
         /// *   UnAvailable: The image is unavailable.
-        /// *   CreateFailed: The image fails to be created.
+        /// *   CreateFailed: The image failed to be created.
         /// *   Deprecated: The image is deprecated.
         /// 
         /// Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).
