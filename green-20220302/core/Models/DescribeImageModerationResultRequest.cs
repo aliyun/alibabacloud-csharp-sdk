@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeImageModerationResultRequest : TeaModel {
         /// <summary>
-        /// The reqId field returned by the Image Async Moderation API.
+        /// The ReqId field returned by the asynchronous Image Moderation 2.0 API.
         /// </summary>
         [NameInMap("ReqId")]
         [Validation(Required=false)]

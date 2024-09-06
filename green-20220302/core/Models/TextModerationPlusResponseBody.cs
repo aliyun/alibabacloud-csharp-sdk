@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class TextModerationPlusResponseBody : TeaModel {
         /// <summary>
-        /// The returned HTTP status code.
+        /// The returned HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The moderation results.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TextModerationPlusResponseBodyData Data { get; set; }
         public class TextModerationPlusResponseBodyData : TeaModel {
             /// <summary>
-            /// Advice
+            /// The suggestion.
             /// </summary>
             [NameInMap("Advice")]
             [Validation(Required=false)]
             public List<TextModerationPlusResponseBodyDataAdvice> Advice { get; set; }
             public class TextModerationPlusResponseBodyDataAdvice : TeaModel {
                 /// <summary>
-                /// Answer
+                /// The answer.
                 /// </summary>
                 [NameInMap("Answer")]
                 [Validation(Required=false)]
@@ -54,35 +54,35 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// The moderation results.
+            /// The results.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<TextModerationPlusResponseBodyDataResult> Result { get; set; }
             public class TextModerationPlusResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// Confidence score, 0 to 100, reserved to 2 decimal places.
+                /// The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
                 /// </summary>
                 [NameInMap("Confidence")]
                 [Validation(Required=false)]
                 public float? Confidence { get; set; }
 
                 /// <summary>
-                /// Custom keyword hits
+                /// The custom term hit by the moderated content.
                 /// </summary>
                 [NameInMap("CustomizedHit")]
                 [Validation(Required=false)]
                 public List<TextModerationPlusResponseBodyDataResultCustomizedHit> CustomizedHit { get; set; }
                 public class TextModerationPlusResponseBodyDataResultCustomizedHit : TeaModel {
                     /// <summary>
-                    /// Hit keywords, comma separated.
+                    /// The terms that are hit. Multiple terms are separated by commas (,).
                     /// </summary>
                     [NameInMap("KeyWords")]
                     [Validation(Required=false)]
                     public string KeyWords { get; set; }
 
                     /// <summary>
-                    /// Library Name
+                    /// The library name.
                     /// </summary>
                     [NameInMap("LibName")]
                     [Validation(Required=false)]
@@ -91,14 +91,21 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// Labels.
+                /// The description of the label.
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// The label.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// Risk words
+                /// The term hit by the moderated content.
                 /// </summary>
                 [NameInMap("RiskWords")]
                 [Validation(Required=false)]
@@ -114,7 +121,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// Score.
+            /// The score.
             /// </summary>
             [NameInMap("Score")]
             [Validation(Required=false)]
@@ -130,7 +137,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

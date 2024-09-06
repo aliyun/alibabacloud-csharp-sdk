@@ -159,7 +159,10 @@ namespace AlibabaCloud.SDK.Green20220302
         }
 
         /**
-         * @summary 查询异步检测结果
+         * @summary Obtains the moderation results of an Image Moderation 2.0 task.
+         *
+         * @description *   Billing: This operation is free of charge.
+         * *   QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeImageModerationResultRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -193,7 +196,10 @@ namespace AlibabaCloud.SDK.Green20220302
         }
 
         /**
-         * @summary 查询异步检测结果
+         * @summary Obtains the moderation results of an Image Moderation 2.0 task.
+         *
+         * @description *   Billing: This operation is free of charge.
+         * *   QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeImageModerationResultRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -227,7 +233,10 @@ namespace AlibabaCloud.SDK.Green20220302
         }
 
         /**
-         * @summary 查询异步检测结果
+         * @summary Obtains the moderation results of an Image Moderation 2.0 task.
+         *
+         * @description *   Billing: This operation is free of charge.
+         * *   QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeImageModerationResultRequest
          * @return DescribeImageModerationResultResponse
@@ -239,7 +248,10 @@ namespace AlibabaCloud.SDK.Green20220302
         }
 
         /**
-         * @summary 查询异步检测结果
+         * @summary Obtains the moderation results of an Image Moderation 2.0 task.
+         *
+         * @description *   Billing: This operation is free of charge.
+         * *   QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          *
          * @param request DescribeImageModerationResultRequest
          * @return DescribeImageModerationResultResponse
@@ -939,7 +951,9 @@ namespace AlibabaCloud.SDK.Green20220302
         }
 
         /**
-         * @summary 文本检测Plus版
+         * @summary Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.
+         *
+         * @description Before you call this operation, make sure that you have [activated the Content Moderation 2.0 service](https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn) and are familiar with the [billing](https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n) of the Text Moderation 2.0 Plus service.
          *
          * @param request TextModerationPlusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -977,7 +991,9 @@ namespace AlibabaCloud.SDK.Green20220302
         }
 
         /**
-         * @summary 文本检测Plus版
+         * @summary Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.
+         *
+         * @description Before you call this operation, make sure that you have [activated the Content Moderation 2.0 service](https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn) and are familiar with the [billing](https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n) of the Text Moderation 2.0 Plus service.
          *
          * @param request TextModerationPlusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1015,7 +1031,9 @@ namespace AlibabaCloud.SDK.Green20220302
         }
 
         /**
-         * @summary 文本检测Plus版
+         * @summary Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.
+         *
+         * @description Before you call this operation, make sure that you have [activated the Content Moderation 2.0 service](https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn) and are familiar with the [billing](https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n) of the Text Moderation 2.0 Plus service.
          *
          * @param request TextModerationPlusRequest
          * @return TextModerationPlusResponse
@@ -1027,7 +1045,9 @@ namespace AlibabaCloud.SDK.Green20220302
         }
 
         /**
-         * @summary 文本检测Plus版
+         * @summary Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.
+         *
+         * @description Before you call this operation, make sure that you have [activated the Content Moderation 2.0 service](https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn) and are familiar with the [billing](https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n) of the Text Moderation 2.0 Plus service.
          *
          * @param request TextModerationPlusRequest
          * @return TextModerationPlusResponse

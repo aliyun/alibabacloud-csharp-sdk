@@ -396,6 +396,9 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public float? Confidence { get; set; }
 
+                /// <summary>
+                /// The description of the result.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }

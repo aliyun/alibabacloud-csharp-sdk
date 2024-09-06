@@ -17,28 +17,28 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The image moderation results.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeImageModerationResultResponseBodyData Data { get; set; }
         public class DescribeImageModerationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the moderated object.
+            /// The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.
             /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
 
             /// <summary>
-            /// Image frame information.
+            /// The information about the captured frames.
             /// </summary>
             [NameInMap("Frame")]
             [Validation(Required=false)]
             public string Frame { get; set; }
 
             /// <summary>
-            /// Number of result frames
+            /// The number of frames.
             /// </summary>
             [NameInMap("FrameNum")]
             [Validation(Required=false)]
@@ -59,12 +59,15 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public List<DescribeImageModerationResultResponseBodyDataResult> Result { get; set; }
             public class DescribeImageModerationResultResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
+                /// The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
                 /// </summary>
                 [NameInMap("Confidence")]
                 [Validation(Required=false)]
                 public float? Confidence { get; set; }
 
+                /// <summary>
+                /// The description of the result.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The request ID, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
