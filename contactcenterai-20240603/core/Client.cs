@@ -192,6 +192,298 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         }
 
         /**
+         * @summary 创建语音文件调用llm任务
+         *
+         * @param request CreateConversationAnalysisTaskRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateConversationAnalysisTaskResponse
+         */
+        public CreateConversationAnalysisTaskResponse CreateConversationAnalysisTaskWithOptions(string workspaceId, string appId, CreateConversationAnalysisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSplit))
+            {
+                body["autoSplit"] = request.AutoSplit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientChannel))
+            {
+                body["clientChannel"] = request.ClientChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Examples))
+            {
+                body["examples"] = request.Examples;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                body["modelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultTypes))
+            {
+                body["resultTypes"] = request.ResultTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneName))
+            {
+                body["sceneName"] = request.SceneName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceChannel))
+            {
+                body["serviceChannel"] = request.ServiceChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceChannelKeywords))
+            {
+                body["serviceChannelKeywords"] = request.ServiceChannelKeywords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInspection))
+            {
+                body["serviceInspection"] = request.ServiceInspection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                body["templateIds"] = request.TemplateIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceFileUrl))
+            {
+                body["voiceFileUrl"] = request.VoiceFileUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateConversationAnalysisTask",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ccai/app/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appId) + "/createConversationAnalysisTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateConversationAnalysisTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建语音文件调用llm任务
+         *
+         * @param request CreateConversationAnalysisTaskRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateConversationAnalysisTaskResponse
+         */
+        public async Task<CreateConversationAnalysisTaskResponse> CreateConversationAnalysisTaskWithOptionsAsync(string workspaceId, string appId, CreateConversationAnalysisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSplit))
+            {
+                body["autoSplit"] = request.AutoSplit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientChannel))
+            {
+                body["clientChannel"] = request.ClientChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Examples))
+            {
+                body["examples"] = request.Examples;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                body["modelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultTypes))
+            {
+                body["resultTypes"] = request.ResultTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneName))
+            {
+                body["sceneName"] = request.SceneName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceChannel))
+            {
+                body["serviceChannel"] = request.ServiceChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceChannelKeywords))
+            {
+                body["serviceChannelKeywords"] = request.ServiceChannelKeywords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInspection))
+            {
+                body["serviceInspection"] = request.ServiceInspection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                body["templateIds"] = request.TemplateIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceFileUrl))
+            {
+                body["voiceFileUrl"] = request.VoiceFileUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateConversationAnalysisTask",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ccai/app/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appId) + "/createConversationAnalysisTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateConversationAnalysisTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建语音文件调用llm任务
+         *
+         * @param request CreateConversationAnalysisTaskRequest
+         * @return CreateConversationAnalysisTaskResponse
+         */
+        public CreateConversationAnalysisTaskResponse CreateConversationAnalysisTask(string workspaceId, string appId, CreateConversationAnalysisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateConversationAnalysisTaskWithOptions(workspaceId, appId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建语音文件调用llm任务
+         *
+         * @param request CreateConversationAnalysisTaskRequest
+         * @return CreateConversationAnalysisTaskResponse
+         */
+        public async Task<CreateConversationAnalysisTaskResponse> CreateConversationAnalysisTaskAsync(string workspaceId, string appId, CreateConversationAnalysisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateConversationAnalysisTaskWithOptionsAsync(workspaceId, appId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 语音文件调用大模型获取结果
+         *
+         * @param request GetTaskResultRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTaskResultResponse
+         */
+        public GetTaskResultResponse GetTaskResultWithOptions(GetTaskResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTaskResult",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/ccai/app/getTaskResult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 语音文件调用大模型获取结果
+         *
+         * @param request GetTaskResultRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTaskResultResponse
+         */
+        public async Task<GetTaskResultResponse> GetTaskResultWithOptionsAsync(GetTaskResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTaskResult",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/ccai/app/getTaskResult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 语音文件调用大模型获取结果
+         *
+         * @param request GetTaskResultRequest
+         * @return GetTaskResultResponse
+         */
+        public GetTaskResultResponse GetTaskResult(GetTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetTaskResultWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 语音文件调用大模型获取结果
+         *
+         * @param request GetTaskResultRequest
+         * @return GetTaskResultResponse
+         */
+        public async Task<GetTaskResultResponse> GetTaskResultAsync(GetTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetTaskResultWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary CCAI服务面API
          *
          * @param request RunCompletionRequest
