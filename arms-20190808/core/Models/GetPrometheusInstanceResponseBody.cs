@@ -112,6 +112,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string EnableAuthToken { get; set; }
 
+            [NameInMap("ExtraInfo")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> ExtraInfo { get; set; }
+
             /// <summary>
             /// The ID of the Grafana workspace.
             /// </summary>

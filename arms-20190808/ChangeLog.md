@@ -1,3 +1,7 @@
+2024-09-06 Version: 7.1.3
+- Update API GetPrometheusInstance: update response param.
+
+
 2024-09-06 Version: 7.1.2
 - Generated csharp 2019-08-08 for ARMS.
 
