@@ -125,10 +125,20 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             {
                 query["workspaceId"] = request.WorkspaceId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskDefinitionJsonValue))
+            {
+                body["taskDefinitionJsonValue"] = request.TaskDefinitionJsonValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskRelationJsonValue))
+            {
+                body["taskRelationJsonValue"] = request.TaskRelationJsonValue;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -233,10 +243,20 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             {
                 query["workspaceId"] = request.WorkspaceId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskDefinitionJsonValue))
+            {
+                body["taskDefinitionJsonValue"] = request.TaskDefinitionJsonValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskRelationJsonValue))
+            {
+                body["taskRelationJsonValue"] = request.TaskRelationJsonValue;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2311,10 +2331,20 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             {
                 query["workspaceId"] = request.WorkspaceId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskDefinitionJsonValue))
+            {
+                body["taskDefinitionJsonValue"] = request.TaskDefinitionJsonValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskRelationJsonValue))
+            {
+                body["taskRelationJsonValue"] = request.TaskRelationJsonValue;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2419,10 +2449,20 @@ namespace AlibabaCloud.SDK.EmrStudio20240430
             {
                 query["workspaceId"] = request.WorkspaceId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskDefinitionJsonValue))
+            {
+                body["taskDefinitionJsonValue"] = request.TaskDefinitionJsonValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskRelationJsonValue))
+            {
+                body["taskRelationJsonValue"] = request.TaskRelationJsonValue;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

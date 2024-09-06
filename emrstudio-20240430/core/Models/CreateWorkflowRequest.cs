@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.EmrStudio20240430.Models
         [Validation(Required=false)]
         public string AlertStrategy { get; set; }
 
+        [NameInMap("taskDefinitionJsonValue")]
+        [Validation(Required=false)]
+        public string TaskDefinitionJsonValue { get; set; }
+
+        [NameInMap("taskRelationJsonValue")]
+        [Validation(Required=false)]
+        public string TaskRelationJsonValue { get; set; }
+
         [NameInMap("cronExpr")]
         [Validation(Required=false)]
         public string CronExpr { get; set; }
