@@ -5909,7 +5909,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @summary Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.
          *
-         * @description This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url).
+         * @description This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/document_detail/2579659.html).
          *
          * @param request CreateRumUploadFileUrlRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5973,7 +5973,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @summary Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.
          *
-         * @description This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url).
+         * @description This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/document_detail/2579659.html).
          *
          * @param request CreateRumUploadFileUrlRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6037,7 +6037,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @summary Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.
          *
-         * @description This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url).
+         * @description This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/document_detail/2579659.html).
          *
          * @param request CreateRumUploadFileUrlRequest
          * @return CreateRumUploadFileUrlResponse
@@ -6051,7 +6051,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /**
          * @summary Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.
          *
-         * @description This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url).
+         * @description This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/document_detail/2579659.html).
          *
          * @param request CreateRumUploadFileUrlRequest
          * @return CreateRumUploadFileUrlResponse

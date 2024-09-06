@@ -1,3 +1,6 @@
+2024-09-06 Version: 7.1.2
+- Generated csharp 2019-08-08 for ARMS.
+
 2024-09-02 Version: 7.1.1
 - Update API CreateRumApp: add param RealRegionId.
 - Update API DeleteRumApp: add param RealRegionId.
