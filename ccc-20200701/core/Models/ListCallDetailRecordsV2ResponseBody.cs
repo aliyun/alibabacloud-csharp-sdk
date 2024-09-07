@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string CallDuration { get; set; }
 
+                [NameInMap("CallIds")]
+                [Validation(Required=false)]
+                public string CallIds { get; set; }
+
                 [NameInMap("CalledNumber")]
                 [Validation(Required=false)]
                 public string CalledNumber { get; set; }

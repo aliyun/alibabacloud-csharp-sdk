@@ -86,6 +86,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ReleaseInitiatorList")]
+        [Validation(Required=false)]
+        public string ReleaseInitiatorList { get; set; }
+
+        [NameInMap("ReleaseReasonList")]
+        [Validation(Required=false)]
+        public string ReleaseReasonList { get; set; }
+
         [NameInMap("SatisfactionDescriptionList")]
         [Validation(Required=false)]
         public string SatisfactionDescriptionList { get; set; }

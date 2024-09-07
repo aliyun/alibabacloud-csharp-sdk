@@ -1,3 +1,9 @@
+2024-09-07 Version: 2.29.3
+- Update API ListCallDetailRecordsV2: add param ReleaseInitiatorList.
+- Update API ListCallDetailRecordsV2: add param ReleaseReasonList.
+- Update API ListCallDetailRecordsV2: update response param.
+
+
 2024-08-30 Version: 2.29.2
 - Update API MakeCall: add param FlashSmsVariables.
 
