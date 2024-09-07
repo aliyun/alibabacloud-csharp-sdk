@@ -1,3 +1,6 @@
+2024-09-07 Version: 4.3.1
+- Generated csharp 2014-05-26 for Ecs.
+
 2024-09-06 Version: 4.3.0
 - Support API DescribeDiskDefaultKMSKeyId.
 - Support API DescribeDiskEncryptionByDefaultStatus.
