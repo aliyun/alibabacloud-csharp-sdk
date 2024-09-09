@@ -1,3 +1,9 @@
+2024-09-09 Version: 6.12.1
+- Update API GetGatewayServiceDetail: update response param.
+- Update API ListEngineNamespaces: update response param.
+- Update API ListGateway: update response param.
+
+
 2024-08-15 Version: 6.12.0
 - Support API UpdateNacosGrayConfig.
 

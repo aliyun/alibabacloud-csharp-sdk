@@ -19,12 +19,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// The configuration items that you want to clone. The value of this parameter is the combination of the values of the dataId and group parameters. Separate multiple configuration items with commas (,).
+        /// </summary>
         [NameInMap("DataIds")]
         [Validation(Required=false)]
         public string DataIds { get; set; }
 
         /// <summary>
-        /// The data structure.
+        /// The list of configuration IDs.
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]

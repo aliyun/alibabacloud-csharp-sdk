@@ -116,6 +116,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public string ElasticType { get; set; }
 
+                    [NameInMap("EnableScaleTimePolicyList")]
+                    [Validation(Required=false)]
+                    public List<ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList> EnableScaleTimePolicyList { get; set; }
+                    public class ListGatewayResponseBodyDataResultElasticPolicyEnableScaleTimePolicyList : TeaModel {
+                        [NameInMap("EndTime")]
+                        [Validation(Required=false)]
+                        public string EndTime { get; set; }
+
+                        [NameInMap("StartTime")]
+                        [Validation(Required=false)]
+                        public string StartTime { get; set; }
+
+                    }
+
+                    [NameInMap("LoadWarningThreshold")]
+                    [Validation(Required=false)]
+                    public bool? LoadWarningThreshold { get; set; }
+
                     /// <summary>
                     /// The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.
                     /// </summary>

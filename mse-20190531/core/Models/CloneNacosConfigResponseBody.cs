@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The number of skipped operations.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CloneNacosConfigResponseBodyData Data { get; set; }
         public class CloneNacosConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the data.
+            /// The details of the failed configurations.
             /// </summary>
             [NameInMap("FailData")]
             [Validation(Required=false)]

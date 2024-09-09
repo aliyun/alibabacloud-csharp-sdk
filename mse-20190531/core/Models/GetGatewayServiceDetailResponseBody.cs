@@ -213,6 +213,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ServiceNameInRegistry { get; set; }
 
+            [NameInMap("ServicePort")]
+            [Validation(Required=false)]
+            public int? ServicePort { get; set; }
+
             /// <summary>
             /// The protocol of the service.
             /// </summary>

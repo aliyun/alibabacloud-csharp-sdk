@@ -6275,7 +6275,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 创建插件配置
+         * @summary Creates a plug-in configuration.
          *
          * @param tmpReq CreatePluginConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6339,7 +6339,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 创建插件配置
+         * @summary Creates a plug-in configuration.
          *
          * @param tmpReq CreatePluginConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6403,7 +6403,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 创建插件配置
+         * @summary Creates a plug-in configuration.
          *
          * @param request CreatePluginConfigRequest
          * @return CreatePluginConfigResponse
@@ -6415,7 +6415,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 创建插件配置
+         * @summary Creates a plug-in configuration.
          *
          * @param request CreatePluginConfigRequest
          * @return CreatePluginConfigResponse
@@ -9271,7 +9271,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 删除插件配置
+         * @summary Deletes a plug-in configuration.
          *
          * @param request DeletePluginConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9313,7 +9313,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 删除插件配置
+         * @summary Deletes a plug-in configuration.
          *
          * @param request DeletePluginConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -9355,7 +9355,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 删除插件配置
+         * @summary Deletes a plug-in configuration.
          *
          * @param request DeletePluginConfigRequest
          * @return DeletePluginConfigResponse
@@ -9367,7 +9367,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 删除插件配置
+         * @summary Deletes a plug-in configuration.
          *
          * @param request DeletePluginConfigRequest
          * @return DeletePluginConfigResponse
@@ -10595,7 +10595,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 黑白名单列表
+         * @summary Queries a list of blacklists and whitelists of a gateway.
          *
          * @param tmpReq GatewayBlackWhiteListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10655,7 +10655,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 黑白名单列表
+         * @summary Queries a list of blacklists and whitelists of a gateway.
          *
          * @param tmpReq GatewayBlackWhiteListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10715,7 +10715,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 黑白名单列表
+         * @summary Queries a list of blacklists and whitelists of a gateway.
          *
          * @param request GatewayBlackWhiteListRequest
          * @return GatewayBlackWhiteListResponse
@@ -10727,7 +10727,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
-         * @summary 黑白名单列表
+         * @summary Queries a list of blacklists and whitelists of a gateway.
          *
          * @param request GatewayBlackWhiteListRequest
          * @return GatewayBlackWhiteListResponse
