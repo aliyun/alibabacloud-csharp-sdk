@@ -87,6 +87,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Requires { get; set; }
 
+            /// <summary>
+            /// Alibaba Cloud account ID.
+            /// 
+            /// > Only exclusive plug-ins (plug-ins written by users) will return this parameter. Each Alibaba Cloud account only displays its own exclusive plug-ins.
+            /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
             public string Uid { get; set; }
@@ -170,6 +175,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Requires { get; set; }
 
+            /// <summary>
+            /// Alibaba Cloud account ID.
+            /// 
+            /// > Only exclusive plug-ins (plug-ins written by users) will return this parameter. Each Alibaba Cloud account only displays its own exclusive plug-ins.
+            /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
             public string Uid { get; set; }

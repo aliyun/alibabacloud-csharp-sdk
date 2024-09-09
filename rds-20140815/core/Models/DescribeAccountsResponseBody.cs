@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string BypassRLS { get; set; }
 
+                [NameInMap("CheckPolicy")]
+                [Validation(Required=false)]
+                public bool? CheckPolicy { get; set; }
+
                 /// <summary>
                 /// Indicates whether the account has the permissions to create databases. Valid values:
                 /// 
@@ -139,6 +143,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
+
+                [NameInMap("PasswordExpireTime")]
+                [Validation(Required=false)]
+                public string PasswordExpireTime { get; set; }
 
                 /// <summary>
                 /// Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:

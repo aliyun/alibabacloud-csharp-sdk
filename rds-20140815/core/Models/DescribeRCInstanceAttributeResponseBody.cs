@@ -171,6 +171,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string IoOptimized { get; set; }
 
+        [NameInMap("KeyPairName")]
+        [Validation(Required=false)]
+        public string KeyPairName { get; set; }
+
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }

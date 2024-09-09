@@ -3256,6 +3256,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["AccountType"] = request.AccountType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckPolicy))
+            {
+                query["CheckPolicy"] = request.CheckPolicy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
@@ -3333,6 +3337,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
             {
                 query["AccountType"] = request.AccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckPolicy))
+            {
+                query["CheckPolicy"] = request.CheckPolicy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
@@ -24990,7 +24998,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 任务中心任务统计
+         * @summary Collects tasks in the task center.
          *
          * @param request DescribeHistoryTasksStatRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -25076,7 +25084,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 任务中心任务统计
+         * @summary Collects tasks in the task center.
          *
          * @param request DescribeHistoryTasksStatRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -25162,7 +25170,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 任务中心任务统计
+         * @summary Collects tasks in the task center.
          *
          * @param request DescribeHistoryTasksStatRequest
          * @return DescribeHistoryTasksStatResponse
@@ -25174,7 +25182,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary 任务中心任务统计
+         * @summary Collects tasks in the task center.
          *
          * @param request DescribeHistoryTasksStatRequest
          * @return DescribeHistoryTasksStatResponse
@@ -33802,7 +33810,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the details of VSwitch that are available in a virtual private cloud (VPC).
+         * @summary Queries the details of vSwitch that are available in a virtual private cloud (VPC).
          *
          * @description ### Supported database engines
          * *   MySQL
@@ -33886,7 +33894,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the details of VSwitch that are available in a virtual private cloud (VPC).
+         * @summary Queries the details of vSwitch that are available in a virtual private cloud (VPC).
          *
          * @description ### Supported database engines
          * *   MySQL
@@ -33970,7 +33978,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the details of VSwitch that are available in a virtual private cloud (VPC).
+         * @summary Queries the details of vSwitch that are available in a virtual private cloud (VPC).
          *
          * @description ### Supported database engines
          * *   MySQL
@@ -33988,7 +33996,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the details of VSwitch that are available in a virtual private cloud (VPC).
+         * @summary Queries the details of vSwitch that are available in a virtual private cloud (VPC).
          *
          * @description ### Supported database engines
          * *   MySQL
@@ -41850,6 +41858,10 @@ namespace AlibabaCloud.SDK.Rds20140815
                 request.ServerlessConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfiguration, "ServerlessConfiguration", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowMajorVersionUpgrade))
+            {
+                query["AllowMajorVersionUpgrade"] = request.AllowMajorVersionUpgrade;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
             {
                 query["AutoUseCoupon"] = request.AutoUseCoupon;
@@ -41946,9 +41958,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["UsedTime"] = request.UsedTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
                 query["ZoneId"] = request.ZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave1))
+            {
+                query["ZoneIdSlave1"] = request.ZoneIdSlave1;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -41998,6 +42018,10 @@ namespace AlibabaCloud.SDK.Rds20140815
                 request.ServerlessConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfiguration, "ServerlessConfiguration", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowMajorVersionUpgrade))
+            {
+                query["AllowMajorVersionUpgrade"] = request.AllowMajorVersionUpgrade;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
             {
                 query["AutoUseCoupon"] = request.AutoUseCoupon;
@@ -42094,9 +42118,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["UsedTime"] = request.UsedTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
                 query["ZoneId"] = request.ZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave1))
+            {
+                query["ZoneIdSlave1"] = request.ZoneIdSlave1;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -51546,6 +51578,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
@@ -51681,6 +51717,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {

@@ -271,6 +271,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? SupportVolumeShadowCopy { get; set; }
 
+        /// <summary>
+        /// Whether to support 5-minute log backup of SQL Server.
+        /// - 0 : Not Support
+        /// - 1 : Support
+        /// </summary>
         [NameInMap("SupportsHighFrequencyBackup")]
         [Validation(Required=false)]
         public long? SupportsHighFrequencyBackup { get; set; }

@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
+        [NameInMap("CheckPolicy")]
+        [Validation(Required=false)]
+        public bool? CheckPolicy { get; set; }
+
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 

@@ -1,3 +1,13 @@
+2024-09-09 Version: 7.1.6
+- Update API CreateAccount: add param CheckPolicy.
+- Update API DescribeAccounts: update response param.
+- Update API DescribeRCInstanceAttribute: update response param.
+- Update API ModifyDBInstanceSpec: add param AllowMajorVersionUpgrade.
+- Update API ModifyDBInstanceSpec: add param VSwitchId.
+- Update API ModifyDBInstanceSpec: add param ZoneIdSlave1.
+- Update API RunRCInstances: add param DryRun.
+
+
 2024-09-04 Version: 7.1.5
 - Generated csharp 2014-08-15 for Rds.
 

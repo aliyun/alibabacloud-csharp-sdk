@@ -396,10 +396,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public bool? DeletionProtection { get; set; }
 
+                /// <summary>
+                /// Disaster recovery source instance information.
+                /// </summary>
                 [NameInMap("DisasterRecoveryInfo")]
                 [Validation(Required=false)]
                 public string DisasterRecoveryInfo { get; set; }
 
+                /// <summary>
+                /// All disaster recovery instances of the current instance.
+                /// </summary>
                 [NameInMap("DisasterRecoveryInstances")]
                 [Validation(Required=false)]
                 public string DisasterRecoveryInstances { get; set; }
@@ -439,6 +445,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra Extra { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra : TeaModel {
+                    /// <summary>
+                    /// Instance account group policy.
+                    /// - MaximumPasswordAge: Maximum usage time
+                    /// - MinimumPasswordAge: Minimum usage time
+                    /// </summary>
                     [NameInMap("AccountSecurityPolicy")]
                     [Validation(Required=false)]
                     public string AccountSecurityPolicy { get; set; }

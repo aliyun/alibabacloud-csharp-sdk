@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }

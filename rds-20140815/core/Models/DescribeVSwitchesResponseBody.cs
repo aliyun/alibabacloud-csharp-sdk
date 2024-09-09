@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the vSwitch.
+        /// Details of the vSwitches.
         /// </summary>
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]

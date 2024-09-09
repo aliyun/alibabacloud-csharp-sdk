@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceSpecRequest : TeaModel {
+        [NameInMap("AllowMajorVersionUpgrade")]
+        [Validation(Required=false)]
+        public bool? AllowMajorVersionUpgrade { get; set; }
+
         /// <summary>
         /// Specifies whether to use vouchers to offset fees. Valid values:
         /// 
@@ -301,6 +305,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? UsedTime { get; set; }
 
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
         /// <summary>
         /// The RDS edition of the instance. Valid values:
         /// 
@@ -314,6 +322,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
+
+        [NameInMap("ZoneIdSlave1")]
+        [Validation(Required=false)]
+        public string ZoneIdSlave1 { get; set; }
 
     }
 
