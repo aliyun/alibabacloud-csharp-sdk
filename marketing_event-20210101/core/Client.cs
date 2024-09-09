@@ -56,6 +56,14 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             {
                 query["DateTimeString"] = request.DateTimeString;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDateTime))
+            {
+                query["EndDateTime"] = request.EndDateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDateTime))
+            {
+                query["StartDateTime"] = request.StartDateTime;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -93,6 +101,14 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateTimeString))
             {
                 query["DateTimeString"] = request.DateTimeString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDateTime))
+            {
+                query["EndDateTime"] = request.EndDateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDateTime))
+            {
+                query["StartDateTime"] = request.StartDateTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -156,6 +172,14 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             {
                 query["DateTimeString"] = request.DateTimeString;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDateTime))
+            {
+                query["EndDateTime"] = request.EndDateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDateTime))
+            {
+                query["StartDateTime"] = request.StartDateTime;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -193,6 +217,14 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateTimeString))
             {
                 query["DateTimeString"] = request.DateTimeString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDateTime))
+            {
+                query["EndDateTime"] = request.EndDateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDateTime))
+            {
+                query["StartDateTime"] = request.StartDateTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

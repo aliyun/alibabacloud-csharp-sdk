@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
         [Validation(Required=false)]
         public string DateTimeString { get; set; }
 
+        [NameInMap("EndDateTime")]
+        [Validation(Required=false)]
+        public string EndDateTime { get; set; }
+
+        [NameInMap("StartDateTime")]
+        [Validation(Required=false)]
+        public string StartDateTime { get; set; }
+
     }
 
 }
