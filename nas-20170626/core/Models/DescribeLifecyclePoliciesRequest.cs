@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The storage class.
+        /// 
+        /// *   InfrequentAccess: the Infrequent Access (IA) storage class.
+        /// *   Archive: the Archive storage class.
+        /// 
+        /// >  If the StorageType parameter is not specified, data retrieval tasks of all types are returned.
+        /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }

@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
+        /// The details about the tags.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
@@ -26,14 +28,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<AddTagsRequestTag> Tag { get; set; }
         public class AddTagsRequestTag : TeaModel {
             /// <summary>
-            /// The key of each tag. The tag includes a TagKey and TagValue. You can add a maximum of 10 tags at a time. You must specify a TagKey. You can leave a TagValue empty.
+            /// The key of each tag. A tag consists of a tag key and a tag value. You can add a maximum of 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of each tag. The tag includes a TagKey and TagValue. You can add a maximum of 10 tags at a time. You must specify a TagKey. You can leave a TagValue empty.
+            /// The value of each tag. A tag consists of a tag key and a tag value. You can add a maximum of 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -36,10 +36,21 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        /// <summary>
+        /// The options.
+        /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public ModifyFileSystemRequestOptions Options { get; set; }
         public class ModifyFileSystemRequestOptions : TeaModel {
+            /// <summary>
+            /// Specifies whether to enable the oplock feature. Valid values:
+            /// 
+            /// *   true: enables the feature.
+            /// *   false: disables the feature.
+            /// 
+            /// >  Only Server Message Block (SMB) file systems support this feature.
+            /// </summary>
             [NameInMap("EnableOplock")]
             [Validation(Required=false)]
             public bool? EnableOplock { get; set; }

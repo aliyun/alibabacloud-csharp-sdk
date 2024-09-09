@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the [DeleteFileset](https://help.aliyun.com/document_detail/2402263.html) operation.
+        /// 
+        /// *   true: enables release protection.
+        /// *   false (default): disables release protection.
+        /// 
+        /// >  This parameter can protect filesets only against manual releases, but not against automatic releases.
+        /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// 
         /// Valid values:
         /// 
-        /// *   true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FsetId parameter.
+        /// *   true: performs a dry run. The system checks the required parameters, request syntax, service limits, and available Apsara File Storage NAS (NAS) resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FsetId parameter.
         /// *   false (default): performs a dry run and sends the request. If the request passes the dry run, a fileset is created.
         /// </summary>
         [NameInMap("DryRun")]

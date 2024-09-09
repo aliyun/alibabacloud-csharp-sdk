@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The status of the job. Valid values:
+        /// The job status. Valid values:
         /// 
         /// *   Running: The job is running.
         /// *   Defragmenting: The job is defragmenting data.
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// *   Success: The job is completed.
         /// *   Fail: The job failed.
         /// *   Cancelled: The job is canceled.
-        /// *   All: all.Default value:All.
+        /// *   all (default)
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

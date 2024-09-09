@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public long? SizeReal { get; set; }
 
+                /// <summary>
+                /// The total size of files that a user has created in the directory. Unit: bytes.
+                /// </summary>
                 [NameInMap("SizeRealInByte")]
                 [Validation(Required=false)]
                 public long? SizeRealInByte { get; set; }
@@ -91,10 +94,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// The type of the user ID. Valid values: Uid, Gid, and AllUsers.
+                /// The type of user. Valid values: Uid, Gid, and AllUsers.
                 /// 
-                /// *   If the parameter is set to Uid or Gid, the value of the UserId parameter is returned.
-                /// *   If the parameter is set to AllUsers, the value of the UserID parameter is empty.
+                /// *   If Uid or Gid is returned, a value is returned for UserId.
+                /// *   If AllUsers is returned, UserId is empty.
                 /// </summary>
                 [NameInMap("UserType")]
                 [Validation(Required=false)]

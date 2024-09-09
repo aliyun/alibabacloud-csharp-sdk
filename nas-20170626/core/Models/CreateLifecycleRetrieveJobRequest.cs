@@ -27,6 +27,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public List<string> Paths { get; set; }
 
+        /// <summary>
+        /// The storage class.
+        /// 
+        /// *   InfrequentAccess (default): the Infrequent Access (IA) storage class.
+        /// *   Archive: the Archive storage class.
+        /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }

@@ -60,6 +60,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string Path { get; set; }
 
+            /// <summary>
+            /// The absolute paths to multiple directories associated with the lifecycle policy.
+            /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public List<string> Paths { get; set; }

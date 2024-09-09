@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                /// <summary>
+                /// Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the [DeleteFileset](https://help.aliyun.com/document_detail/2402263.html) operation. Valid values:
+                /// 
+                /// *   true
+                /// *   false
+                /// 
+                /// >  This parameter can protect filesets only against manual releases, but not against automatic releases.
+                /// </summary>
                 [NameInMap("DeletionProtection")]
                 [Validation(Required=false)]
                 public bool? DeletionProtection { get; set; }

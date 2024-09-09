@@ -14,8 +14,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// 
         /// Valid values:
         /// 
-        /// *   false (default): queries both directories and files
-        /// *   true: queries only directories
+        /// *   false (default): queries both directories and files.
+        /// *   true: queries only directories.
+        /// 
+        /// >  If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.
         /// </summary>
         [NameInMap("DirectoryOnly")]
         [Validation(Required=false)]
@@ -60,9 +62,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// The storage type of the files.
+        /// The storage class.
         /// 
-        /// Default value: InfrequentAccess (IA).
+        /// *   InfrequentAccess: the Infrequent Access (IA) storage class.
+        /// *   Archive: the Archive storage class.
+        /// *   All: all stored data.
+        /// 
+        /// >  If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.
         /// 
         /// This parameter is required.
         /// </summary>

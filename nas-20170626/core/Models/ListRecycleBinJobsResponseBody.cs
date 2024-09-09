@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The error code.
+            /// The error code returned.
             /// 
             /// A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.
             /// </summary>

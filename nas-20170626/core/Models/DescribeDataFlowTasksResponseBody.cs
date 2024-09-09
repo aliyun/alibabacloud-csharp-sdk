@@ -55,12 +55,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string Directory { get; set; }
 
+                [NameInMap("DstDirectory")]
+                [Validation(Required=false)]
+                public string DstDirectory { get; set; }
+
                 /// <summary>
                 /// The time when the task ended.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("ErrorMsg")]
+                [Validation(Required=false)]
+                public string ErrorMsg { get; set; }
 
                 /// <summary>
                 /// *
@@ -100,6 +108,44 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public long? Progress { get; set; }
 
+                [NameInMap("ProgressStats")]
+                [Validation(Required=false)]
+                public DescribeDataFlowTasksResponseBodyTaskInfoTaskProgressStats ProgressStats { get; set; }
+                public class DescribeDataFlowTasksResponseBodyTaskInfoTaskProgressStats : TeaModel {
+                    [NameInMap("ActualBytes")]
+                    [Validation(Required=false)]
+                    public long? ActualBytes { get; set; }
+
+                    [NameInMap("ActualFiles")]
+                    [Validation(Required=false)]
+                    public long? ActualFiles { get; set; }
+
+                    [NameInMap("AverageSpeed")]
+                    [Validation(Required=false)]
+                    public long? AverageSpeed { get; set; }
+
+                    [NameInMap("BytesDone")]
+                    [Validation(Required=false)]
+                    public long? BytesDone { get; set; }
+
+                    [NameInMap("BytesTotal")]
+                    [Validation(Required=false)]
+                    public long? BytesTotal { get; set; }
+
+                    [NameInMap("FilesDone")]
+                    [Validation(Required=false)]
+                    public long? FilesDone { get; set; }
+
+                    [NameInMap("FilesTotal")]
+                    [Validation(Required=false)]
+                    public long? FilesTotal { get; set; }
+
+                    [NameInMap("RemainTime")]
+                    [Validation(Required=false)]
+                    public long? RemainTime { get; set; }
+
+                }
+
                 /// <summary>
                 /// null
                 /// 
@@ -112,7 +158,28 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// </summary>
                 [NameInMap("ReportPath")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string ReportPath { get; set; }
+
+                [NameInMap("Reports")]
+                [Validation(Required=false)]
+                public DescribeDataFlowTasksResponseBodyTaskInfoTaskReports Reports { get; set; }
+                public class DescribeDataFlowTasksResponseBodyTaskInfoTaskReports : TeaModel {
+                    [NameInMap("Report")]
+                    [Validation(Required=false)]
+                    public List<DescribeDataFlowTasksResponseBodyTaskInfoTaskReportsReport> Report { get; set; }
+                    public class DescribeDataFlowTasksResponseBodyTaskInfoTaskReportsReport : TeaModel {
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("Path")]
+                        [Validation(Required=false)]
+                        public string Path { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// ://

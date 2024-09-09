@@ -12,10 +12,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// The ID of the file system.
         /// 
-        /// *   Sample ID of a General-purpose NAS file system: 31a8e4\\*\\*\\*\\*.
-        /// *   The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015\\*\\*\\*\\*.
-        /// *   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487\\*\\*\\*\\*.
-        /// 
+        /// - Sample ID of a General-purpose NAS file system: 31a8e4****.
+        /// - The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015****.
+        /// - The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487****.
         /// > CPFS file systems are available only on the China site (aliyun.com).
         /// </summary>
         [NameInMap("FileSystemId")]
@@ -26,12 +25,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// The type of the file system.
         /// 
         /// Valid values:
-        /// 
-        /// *   all (default): all types
-        /// *   standard: General-purpose NAS file system
-        /// *   extreme: Extreme NAS file system
-        /// *   cpfs: CPFS file system
-        /// 
+        /// - all (default): all types
+        /// - standard: General-purpose NAS file system
+        /// - extreme: Extreme NAS file system
+        /// - cpfs: CPFS file system
         /// > CPFS file systems are available only on the China site (aliyun.com).
         /// </summary>
         [NameInMap("FileSystemType")]
@@ -58,6 +55,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The resource group ID.
+        /// 
+        /// You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -73,11 +75,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// The key of tag N to add to the resource.
             /// 
             /// Limits:
-            /// 
-            /// *   Valid values of N: 1 to 20.
-            /// *   The tag key must be 1 to 128 characters in length.
-            /// *   The tag key cannot start with `aliyun` or `acs:`.
-            /// *   The tag key cannot contain `http://` or `https://`.
+            /// - Valid values of N: 1 to 20.
+            /// - The tag key must be 1 to 128 characters in length.
+            /// - The tag key cannot start with aliyun or acs:.
+            /// - The tag key cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -87,11 +88,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// The value of tag N to add to the resource.
             /// 
             /// Limits:
-            /// 
-            /// *   Valid values of N: 1 to 20.
-            /// *   The tag value must be 1 to 128 characters in length.
-            /// *   The tag value cannot start with `aliyun` or `acs:`.
-            /// *   The tag value cannot contain `http://` or `https://`.
+            /// - Valid values of N: 1 to 20.
+            /// - The tag value must be 1 to 128 characters in length.
+            /// - The tag value cannot start with aliyun or acs:.
+            /// - The tag value cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

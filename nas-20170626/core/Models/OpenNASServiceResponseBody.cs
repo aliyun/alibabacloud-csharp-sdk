@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class OpenNASServiceResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// The order ID.
         /// </summary>

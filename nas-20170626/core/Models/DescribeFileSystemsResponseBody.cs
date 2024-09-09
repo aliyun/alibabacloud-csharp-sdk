@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeFileSystemsResponseBodyFileSystemsFileSystem> FileSystem { get; set; }
             public class DescribeFileSystemsResponseBodyFileSystemsFileSystem : TeaModel {
+                /// <summary>
+                /// Number of access points.
+                /// </summary>
                 [NameInMap("AccessPointCount")]
                 [Validation(Required=false)]
                 public string AccessPointCount { get; set; }
@@ -46,10 +49,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// The billing method.
                 /// 
                 /// Valid values:
-                /// 
-                /// *   Subscription: The subscription billing method is used.
-                /// *   PayAsYouGo: The pay-as-you-go billing method is used.
-                /// *   Package: A storage plan is attached to the file system.
+                /// - Subscription: The subscription billing method is used.
+                /// - PayAsYouGo: The pay-as-you-go billing method is used.
+                /// - Package: A storage plan is attached to the file system.
                 /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
@@ -100,11 +102,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// The type of the file system.
                 /// 
                 /// Valid values:
-                /// 
-                /// *   standard: General-purpose NAS file system
-                /// *   extreme: Extreme NAS file system
-                /// *   cpfs: CPFS file system
-                /// 
+                /// - standard: General-purpose NAS file system
+                /// - extreme: Extreme NAS file system
+                /// - cpfs: CPFS file system
                 /// > CPFS file systems are available only on the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("FileSystemType")]
@@ -150,6 +150,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 }
 
+                /// <summary>
+                /// Archive storage usage.
+                /// 
+                /// Unit: Byte.
+                /// </summary>
                 [NameInMap("MeteredArchiveSize")]
                 [Validation(Required=false)]
                 public long? MeteredArchiveSize { get; set; }
@@ -230,7 +235,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                         /// <summary>
                         /// The dual-stack (IPv4 and IPv6) domain name of the mount target.
-                        /// 
                         /// > Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
                         /// </summary>
                         [NameInMap("DualStackMountTargetDomain")]
@@ -258,7 +262,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         /// 
                         /// *   Active: The mount target is available.
                         /// *   Inactive: The mount target is unavailable.
-                        /// *   Pending: The mount target is being created or modified.
+                        /// *   Pending: The mount target is being processed.
                         /// *   Deleting: The mount target is being deleted.
                         /// *   Hibernating: The mount target is being hibernated.
                         /// *   Hibernated: The mount target is hibernated.
@@ -314,10 +318,21 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 }
 
+                /// <summary>
+                /// The options.
+                /// </summary>
                 [NameInMap("Options")]
                 [Validation(Required=false)]
                 public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions Options { get; set; }
                 public class DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions : TeaModel {
+                    /// <summary>
+                    /// Specifies whether to enable the oplock feature. Valid values:
+                    /// 
+                    /// *   true: enables the feature.
+                    /// *   false: disables the feature.
+                    /// 
+                    /// >  Only Server Message Block (SMB) file systems support this feature.
+                    /// </summary>
                     [NameInMap("EnableOplock")]
                     [Validation(Required=false)]
                     public bool? EnableOplock { get; set; }
@@ -353,9 +368,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         /// The type of the storage plan.
                         /// 
                         /// Valid values:
-                        /// 
-                        /// *   ssd: the storage plan for Performance NAS file systems
-                        /// *   hybrid: the storage plan for Capacity NAS file systems
+                        /// - ssd: the storage plan for Performance NAS file systems.
+                        /// - hybrid: the storage plan for Capacity NAS file systems.
                         /// </summary>
                         [NameInMap("PackageType")]
                         [Validation(Required=false)]
@@ -401,19 +415,23 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// The resource group ID.
+                /// 
+                /// You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
                 /// The status of the file system. Valid values:
-                /// 
-                /// *   Pending: The file system is being created or modified.
-                /// *   Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.
-                /// *   Stopped: The file system is unavailable.
-                /// *   Extending: The file system is being scaled up.
-                /// *   Stopping: The file system is being stopped.
-                /// *   Deleting: The file system is being deleted.
+                /// - Pending: The file system is being created or modified.
+                /// - Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.
+                /// - Stopped: The file system is unavailable.
+                /// - Extending: The file system is being scaled up.
+                /// - Stopping: The file system is being stopped.
+                /// - Deleting: The file system is being deleted.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -423,12 +441,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// The storage type.
                 /// 
                 /// Valid values:
-                /// 
-                /// *   Valid values for General-purpose NAS file systems: Capacity and Performance.
-                /// *   Valid values for Extreme NAS file systems: standard and advance.
-                /// *   Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).
-                /// 
-                /// > CPFS file systems are available only on the China site (aliyun.com).
+                /// - Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.
+                /// - Valid values for Extreme NAS file systems: standard and advance.
+                /// - Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).
+                ///  > CPFS file systems are available only on the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
@@ -479,7 +495,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <summary>
                 /// The version number of the file system.
                 /// 
-                /// This parameter is available only for Extreme NAS file systems.
+                /// This parameter is available only for Extreme NAS file systems and CPFS file systems.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]

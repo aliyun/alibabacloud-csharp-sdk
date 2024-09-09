@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public GetRecycleBinAttributeResponseBodyRecycleBinAttribute RecycleBinAttribute { get; set; }
         public class GetRecycleBinAttributeResponseBodyRecycleBinAttribute : TeaModel {
+            [NameInMap("ArchiveSize")]
+            [Validation(Required=false)]
+            public long? ArchiveSize { get; set; }
+
             /// <summary>
             /// The time at which the recycle bin was enabled.
             /// </summary>

@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the [DeleteFileset](https://help.aliyun.com/document_detail/2402263.html) operation.
+        /// 
+        /// *   true: enables release protection.
+        /// *   false: disables release protection.
+        /// 
+        /// >  This parameter can protect filesets only against manual releases, but not against automatic releases.
+        /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
@@ -32,14 +40,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request. 
+        /// Specifies whether to perform only a dry run, without performing the actual request.
         /// 
-        /// During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.
+        /// During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no fileset is modified and no fees incurred.
         /// 
         /// Valid values:
         /// 
-        /// *   true: performs only a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.
-        /// *   false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.
+        /// *   true: performs only a dry run. The system checks the required parameters, request syntax, service limits, and Apsara File Storage NAS (NAS) inventory data. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.
+        /// *   false (default): performs a dry run and sends the request. If the request passes the dry run, the specified fileset is modified.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

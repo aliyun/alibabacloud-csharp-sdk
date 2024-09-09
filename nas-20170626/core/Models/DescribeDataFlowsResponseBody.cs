@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeDataFlowsResponseBody : TeaModel {
         /// <summary>
-        /// The details about dataflows.
+        /// The details about data flows.
         /// </summary>
         [NameInMap("DataFlowInfo")]
         [Validation(Required=false)]
@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public class DescribeDataFlowsResponseBodyDataFlowInfoDataFlow : TeaModel {
                 /// <summary>
                 /// The details about automatic update policies.
+                /// 
+                /// >  Only CPFS supports this parameter.
                 /// </summary>
                 [NameInMap("AutoRefresh")]
                 [Validation(Required=false)]
@@ -54,6 +56,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minutes.
                 /// 
                 /// Valid values: 5 to 526600. Default value: 10.
+                /// 
+                /// >  Only CPFS supports this parameter.
                 /// </summary>
                 [NameInMap("AutoRefreshInterval")]
                 [Validation(Required=false)]
@@ -62,8 +66,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <summary>
                 /// The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:
                 /// 
-                /// *   None: Updated data in the source storage is not automatically imported to the CPFS file system. You can run a dataflow task to import the updated data from the source storage.
-                /// *   ImportChanged: Updated data in the source storage is automatically imported to the CPFS file system.
+                /// *   None: Updated data in the source storage is not automatically imported into the CPFS file system. You can run a data flow task to import the updated data from the source storage.
+                /// *   ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.
+                /// 
+                /// >  Only CPFS supports this parameter.
                 /// </summary>
                 [NameInMap("AutoRefreshPolicy")]
                 [Validation(Required=false)]
@@ -125,6 +131,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// *   The directory must be encoded in UTF-8.
                 /// *   The directory must start and end with a forward slash (/).
                 /// *   The directory must be a fileset directory in the CPFS file system.
+                /// 
+                /// >  Only CPFS supports this parameter.
                 /// </summary>
                 [NameInMap("FileSystemPath")]
                 [Validation(Required=false)]
@@ -132,6 +140,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 /// <summary>
                 /// The description of the automatic update.
+                /// 
+                /// >  Only CPFS supports this parameter.
                 /// </summary>
                 [NameInMap("FsetDescription")]
                 [Validation(Required=false)]
@@ -155,11 +165,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string SourceSecurityType { get; set; }
 
                 /// <summary>
-                /// The access path of the source storage. Format:://.
+                /// The access path of the source storage. Format: `<storage type>://<path>`.
                 /// 
                 /// Parameters:
                 /// 
-                /// *   storage type: Only OSS is supported.
+                /// *   storage type: Only Object Storage Service (OSS) is supported.
                 /// 
                 /// *   path: the name of the OSS bucket.
                 /// 
@@ -175,7 +185,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string SourceStorage { get; set; }
 
                 /// <summary>
-                /// 源端存储内的访问路径。
+                /// The access path in the bucket of the source storage.
+                /// 
+                /// >  Only CPFS for LINGJUN supports this parameter.
                 /// </summary>
                 [NameInMap("SourceStoragePath")]
                 [Validation(Required=false)]

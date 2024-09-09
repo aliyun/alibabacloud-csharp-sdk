@@ -66,13 +66,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The maximum transmission bandwidth for a dataflow. Unit: MB/s. Valid values:
+        /// The maximum data flow throughput. Unit: MB/s. Valid values:
         /// 
         /// *   600
-        /// *   1,200
-        /// *   1,500
+        /// *   1200
+        /// *   1500
         /// 
-        /// >  The dataflow throughput must be less than the I/O throughput of the file system.
+        /// >  The data flow throughput must be less than the I/O throughput of the file system.
         /// </summary>
         [NameInMap("Throughput")]
         [Validation(Required=false)]

@@ -45,19 +45,29 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string FileId { get; set; }
 
-            [NameInMap("HasArchiveFile")]
-            [Validation(Required=false)]
-            public string HasArchiveFile { get; set; }
-
             /// <summary>
-            /// Indicates whether the directory contains files stored in the IA storage medium.
+            /// Indicates whether the directory contains files stored in the Archive storage class.
             /// 
             /// This parameter is returned and valid only if the value of the Type parameter is Directory.
             /// 
             /// Valid values:
             /// 
-            /// *   true: The directory contains files stored in the IA storage medium.
-            /// *   false: The directory does not contain files stored in the IA storage medium.
+            /// *   true: The directory contains files stored in the Archive storage class.
+            /// *   false: The directory does not contain files stored in the Archive storage class.
+            /// </summary>
+            [NameInMap("HasArchiveFile")]
+            [Validation(Required=false)]
+            public string HasArchiveFile { get; set; }
+
+            /// <summary>
+            /// Indicates whether the directory contains files stored in the IA storage class.
+            /// 
+            /// This parameter is returned and valid only if the value of the Type parameter is Directory.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   true: The directory contains files stored in the IA storage class.
+            /// *   false: The directory does not contain files stored in the IA storage class.
             /// </summary>
             [NameInMap("HasInfrequentAccessFile")]
             [Validation(Required=false)]
@@ -118,13 +128,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// The storage type of the file.
+            /// The storage class.
             /// 
             /// This parameter is returned and valid only if the value of the Type parameter is File.
             /// 
             /// Valid values:
             /// 
-            /// *   InfrequentAccess: IA storage medium
+            /// *   InfrequentAccess: the IA storage class.
+            /// *   Archive: the Archive storage class.
             /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]

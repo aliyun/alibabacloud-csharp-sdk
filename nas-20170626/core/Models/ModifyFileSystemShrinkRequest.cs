@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        /// <summary>
+        /// The options.
+        /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public string OptionsShrink { get; set; }

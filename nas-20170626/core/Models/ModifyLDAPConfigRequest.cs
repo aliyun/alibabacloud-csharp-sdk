@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyLDAPConfigRequest : TeaModel {
+        /// <summary>
+        /// The LDAP entry.
+        /// </summary>
         [NameInMap("BindDN")]
         [Validation(Required=false)]
         public string BindDN { get; set; }
 
         /// <summary>
+        /// The ID of the file system.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
@@ -21,6 +26,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
+        /// The LDAP search base.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("SearchBase")]
@@ -28,6 +35,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SearchBase { get; set; }
 
         /// <summary>
+        /// The LDAP service address.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("URI")]
