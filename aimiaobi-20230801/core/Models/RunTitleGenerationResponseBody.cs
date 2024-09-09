@@ -1,0 +1,102 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
+{
+    public class RunTitleGenerationResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Header")]
+        [Validation(Required=false)]
+        public RunTitleGenerationResponseBodyHeader Header { get; set; }
+        public class RunTitleGenerationResponseBodyHeader : TeaModel {
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            [NameInMap("Event")]
+            [Validation(Required=false)]
+            public string Event { get; set; }
+
+            [NameInMap("SessionId")]
+            [Validation(Required=false)]
+            public string SessionId { get; set; }
+
+            [NameInMap("StatusCode")]
+            [Validation(Required=false)]
+            public int? StatusCode { get; set; }
+
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+
+            [NameInMap("TraceId")]
+            [Validation(Required=false)]
+            public string TraceId { get; set; }
+
+        }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public string HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("Payload")]
+        [Validation(Required=false)]
+        public RunTitleGenerationResponseBodyPayload Payload { get; set; }
+        public class RunTitleGenerationResponseBodyPayload : TeaModel {
+            [NameInMap("Output")]
+            [Validation(Required=false)]
+            public RunTitleGenerationResponseBodyPayloadOutput Output { get; set; }
+            public class RunTitleGenerationResponseBodyPayloadOutput : TeaModel {
+                [NameInMap("Text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+            }
+
+            [NameInMap("Usage")]
+            [Validation(Required=false)]
+            public RunTitleGenerationResponseBodyPayloadUsage Usage { get; set; }
+            public class RunTitleGenerationResponseBodyPayloadUsage : TeaModel {
+                [NameInMap("InputTokens")]
+                [Validation(Required=false)]
+                public long? InputTokens { get; set; }
+
+                [NameInMap("OutputTokens")]
+                [Validation(Required=false)]
+                public long? OutputTokens { get; set; }
+
+                [NameInMap("TotalTokens")]
+                [Validation(Required=false)]
+                public long? TotalTokens { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+    }
+
+}
