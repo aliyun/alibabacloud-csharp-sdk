@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public long? RealTimeIterateInterval { get; set; }
 
+        [NameInMap("RealTimePartitionCountValue")]
+        [Validation(Required=false)]
+        public long? RealTimePartitionCountValue { get; set; }
+
         [NameInMap("TrainingSetConfig")]
         [Validation(Required=false)]
         public ExportModelFeatureTrainingSetTableRequestTrainingSetConfig TrainingSetConfig { get; set; }

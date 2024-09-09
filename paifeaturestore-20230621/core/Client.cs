@@ -38,104 +38,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
         }
 
         /**
-         * @summary 切换生效的热点数据的版本。
-         *
-         * @param request ChangeProjectFeatureEntityHotIdVersionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeProjectFeatureEntityHotIdVersionResponse
-         */
-        public ChangeProjectFeatureEntityHotIdVersionResponse ChangeProjectFeatureEntityHotIdVersionWithOptions(string InstanceId, string ProjectId, string FeatureEntityName, ChangeProjectFeatureEntityHotIdVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
-            {
-                body["Version"] = request.Version;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ChangeProjectFeatureEntityHotIdVersion",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureentities/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureEntityName) + "/action/changehotidversion",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ChangeProjectFeatureEntityHotIdVersionResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary 切换生效的热点数据的版本。
-         *
-         * @param request ChangeProjectFeatureEntityHotIdVersionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeProjectFeatureEntityHotIdVersionResponse
-         */
-        public async Task<ChangeProjectFeatureEntityHotIdVersionResponse> ChangeProjectFeatureEntityHotIdVersionWithOptionsAsync(string InstanceId, string ProjectId, string FeatureEntityName, ChangeProjectFeatureEntityHotIdVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
-            {
-                body["Version"] = request.Version;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ChangeProjectFeatureEntityHotIdVersion",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureentities/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureEntityName) + "/action/changehotidversion",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ChangeProjectFeatureEntityHotIdVersionResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary 切换生效的热点数据的版本。
-         *
-         * @param request ChangeProjectFeatureEntityHotIdVersionRequest
-         * @return ChangeProjectFeatureEntityHotIdVersionResponse
-         */
-        public ChangeProjectFeatureEntityHotIdVersionResponse ChangeProjectFeatureEntityHotIdVersion(string InstanceId, string ProjectId, string FeatureEntityName, ChangeProjectFeatureEntityHotIdVersionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ChangeProjectFeatureEntityHotIdVersionWithOptions(InstanceId, ProjectId, FeatureEntityName, request, headers, runtime);
-        }
-
-        /**
-         * @summary 切换生效的热点数据的版本。
-         *
-         * @param request ChangeProjectFeatureEntityHotIdVersionRequest
-         * @return ChangeProjectFeatureEntityHotIdVersionResponse
-         */
-        public async Task<ChangeProjectFeatureEntityHotIdVersionResponse> ChangeProjectFeatureEntityHotIdVersionAsync(string InstanceId, string ProjectId, string FeatureEntityName, ChangeProjectFeatureEntityHotIdVersionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ChangeProjectFeatureEntityHotIdVersionWithOptionsAsync(InstanceId, ProjectId, FeatureEntityName, request, headers, runtime);
-        }
-
-        /**
          * @summary 检测资源连接状态。
          *
          * @param request CheckInstanceDatasourceRequest
@@ -923,6 +825,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["Features"] = request.Features;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelPriorityLevel))
+            {
+                body["LabelPriorityLevel"] = request.LabelPriorityLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelTableId))
             {
                 body["LabelTableId"] = request.LabelTableId;
@@ -974,6 +880,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Features))
             {
                 body["Features"] = request.Features;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelPriorityLevel))
+            {
+                body["LabelPriorityLevel"] = request.LabelPriorityLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelTableId))
             {
@@ -1955,6 +1865,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["RealTimeIterateInterval"] = request.RealTimeIterateInterval;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealTimePartitionCountValue))
+            {
+                body["RealTimePartitionCountValue"] = request.RealTimePartitionCountValue;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingSetConfig))
             {
                 body["TrainingSetConfig"] = request.TrainingSetConfig;
@@ -2002,6 +1916,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealTimeIterateInterval))
             {
                 body["RealTimeIterateInterval"] = request.RealTimeIterateInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealTimePartitionCountValue))
+            {
+                body["RealTimePartitionCountValue"] = request.RealTimePartitionCountValue;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingSetConfig))
             {
@@ -2931,246 +2849,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetProjectFeatureEntityWithOptionsAsync(InstanceId, ProjectId, FeatureEntityName, headers, runtime);
-        }
-
-        /**
-         * @summary 获取项目下，指定特征实体指定的热点数据。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetProjectFeatureEntityHotIdsResponse
-         */
-        public GetProjectFeatureEntityHotIdsResponse GetProjectFeatureEntityHotIdsWithOptions(string InstanceId, string ProjectId, string NextSeqNumber, string FeatureEntityName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProjectFeatureEntityHotIds",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureentities/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureEntityName) + "/hotids/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NextSeqNumber),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProjectFeatureEntityHotIdsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下，指定特征实体指定的热点数据。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetProjectFeatureEntityHotIdsResponse
-         */
-        public async Task<GetProjectFeatureEntityHotIdsResponse> GetProjectFeatureEntityHotIdsWithOptionsAsync(string InstanceId, string ProjectId, string NextSeqNumber, string FeatureEntityName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProjectFeatureEntityHotIds",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureentities/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureEntityName) + "/hotids/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NextSeqNumber),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProjectFeatureEntityHotIdsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下，指定特征实体指定的热点数据。
-         *
-         * @return GetProjectFeatureEntityHotIdsResponse
-         */
-        public GetProjectFeatureEntityHotIdsResponse GetProjectFeatureEntityHotIds(string InstanceId, string ProjectId, string NextSeqNumber, string FeatureEntityName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetProjectFeatureEntityHotIdsWithOptions(InstanceId, ProjectId, NextSeqNumber, FeatureEntityName, headers, runtime);
-        }
-
-        /**
-         * @summary 获取项目下，指定特征实体指定的热点数据。
-         *
-         * @return GetProjectFeatureEntityHotIdsResponse
-         */
-        public async Task<GetProjectFeatureEntityHotIdsResponse> GetProjectFeatureEntityHotIdsAsync(string InstanceId, string ProjectId, string NextSeqNumber, string FeatureEntityName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetProjectFeatureEntityHotIdsWithOptionsAsync(InstanceId, ProjectId, NextSeqNumber, FeatureEntityName, headers, runtime);
-        }
-
-        /**
-         * @summary 获取项目下特征视图详细信息。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetProjectFeatureViewResponse
-         */
-        public GetProjectFeatureViewResponse GetProjectFeatureViewWithOptions(string InstanceId, string ProjectId, string FeatureViewName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProjectFeatureView",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureviews/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureViewName),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProjectFeatureViewResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下特征视图详细信息。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetProjectFeatureViewResponse
-         */
-        public async Task<GetProjectFeatureViewResponse> GetProjectFeatureViewWithOptionsAsync(string InstanceId, string ProjectId, string FeatureViewName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProjectFeatureView",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureviews/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureViewName),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProjectFeatureViewResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下特征视图详细信息。
-         *
-         * @return GetProjectFeatureViewResponse
-         */
-        public GetProjectFeatureViewResponse GetProjectFeatureView(string InstanceId, string ProjectId, string FeatureViewName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetProjectFeatureViewWithOptions(InstanceId, ProjectId, FeatureViewName, headers, runtime);
-        }
-
-        /**
-         * @summary 获取项目下特征视图详细信息。
-         *
-         * @return GetProjectFeatureViewResponse
-         */
-        public async Task<GetProjectFeatureViewResponse> GetProjectFeatureViewAsync(string InstanceId, string ProjectId, string FeatureViewName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetProjectFeatureViewWithOptionsAsync(InstanceId, ProjectId, FeatureViewName, headers, runtime);
-        }
-
-        /**
-         * @summary 获取项目下指定模型特征的详细信息。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetProjectModelFeatureResponse
-         */
-        public GetProjectModelFeatureResponse GetProjectModelFeatureWithOptions(string InstanceId, string ProjectId, string ModelFeatureName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProjectModelFeature",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureName),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProjectModelFeatureResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下指定模型特征的详细信息。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetProjectModelFeatureResponse
-         */
-        public async Task<GetProjectModelFeatureResponse> GetProjectModelFeatureWithOptionsAsync(string InstanceId, string ProjectId, string ModelFeatureName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetProjectModelFeature",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureName),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetProjectModelFeatureResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下指定模型特征的详细信息。
-         *
-         * @return GetProjectModelFeatureResponse
-         */
-        public GetProjectModelFeatureResponse GetProjectModelFeature(string InstanceId, string ProjectId, string ModelFeatureName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetProjectModelFeatureWithOptions(InstanceId, ProjectId, ModelFeatureName, headers, runtime);
-        }
-
-        /**
-         * @summary 获取项目下指定模型特征的详细信息。
-         *
-         * @return GetProjectModelFeatureResponse
-         */
-        public async Task<GetProjectModelFeatureResponse> GetProjectModelFeatureAsync(string InstanceId, string ProjectId, string ModelFeatureName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetProjectModelFeatureWithOptionsAsync(InstanceId, ProjectId, ModelFeatureName, headers, runtime);
         }
 
         /**
@@ -4764,166 +4442,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
         }
 
         /**
-         * @summary 获取项目下特征视图的所有创建人。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProjectFeatureViewOwnersResponse
-         */
-        public ListProjectFeatureViewOwnersResponse ListProjectFeatureViewOwnersWithOptions(string InstanceId, string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListProjectFeatureViewOwners",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureviewowners",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListProjectFeatureViewOwnersResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下特征视图的所有创建人。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProjectFeatureViewOwnersResponse
-         */
-        public async Task<ListProjectFeatureViewOwnersResponse> ListProjectFeatureViewOwnersWithOptionsAsync(string InstanceId, string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListProjectFeatureViewOwners",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureviewowners",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListProjectFeatureViewOwnersResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下特征视图的所有创建人。
-         *
-         * @return ListProjectFeatureViewOwnersResponse
-         */
-        public ListProjectFeatureViewOwnersResponse ListProjectFeatureViewOwners(string InstanceId, string ProjectId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListProjectFeatureViewOwnersWithOptions(InstanceId, ProjectId, headers, runtime);
-        }
-
-        /**
-         * @summary 获取项目下特征视图的所有创建人。
-         *
-         * @return ListProjectFeatureViewOwnersResponse
-         */
-        public async Task<ListProjectFeatureViewOwnersResponse> ListProjectFeatureViewOwnersAsync(string InstanceId, string ProjectId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListProjectFeatureViewOwnersWithOptionsAsync(InstanceId, ProjectId, headers, runtime);
-        }
-
-        /**
-         * @summary 获取项目下特征视图的所有标签。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProjectFeatureViewTagsResponse
-         */
-        public ListProjectFeatureViewTagsResponse ListProjectFeatureViewTagsWithOptions(string InstanceId, string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListProjectFeatureViewTags",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureviewtags",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListProjectFeatureViewTagsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下特征视图的所有标签。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProjectFeatureViewTagsResponse
-         */
-        public async Task<ListProjectFeatureViewTagsResponse> ListProjectFeatureViewTagsWithOptionsAsync(string InstanceId, string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListProjectFeatureViewTags",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureviewtags",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListProjectFeatureViewTagsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary 获取项目下特征视图的所有标签。
-         *
-         * @return ListProjectFeatureViewTagsResponse
-         */
-        public ListProjectFeatureViewTagsResponse ListProjectFeatureViewTags(string InstanceId, string ProjectId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListProjectFeatureViewTagsWithOptions(InstanceId, ProjectId, headers, runtime);
-        }
-
-        /**
-         * @summary 获取项目下特征视图的所有标签。
-         *
-         * @return ListProjectFeatureViewTagsResponse
-         */
-        public async Task<ListProjectFeatureViewTagsResponse> ListProjectFeatureViewTagsAsync(string InstanceId, string ProjectId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListProjectFeatureViewTagsWithOptionsAsync(InstanceId, ProjectId, headers, runtime);
-        }
-
-        /**
          * @summary 获取项目下的所有特征视图、特征信息。
          *
          * @param headers map
@@ -6351,112 +5869,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await WriteFeatureViewTableWithOptionsAsync(InstanceId, FeatureViewId, request, headers, runtime);
-        }
-
-        /**
-         * @summary 向指定项目下的特征实体写入热点数据。
-         *
-         * @param request WriteProjectFeatureEntityHotIdsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return WriteProjectFeatureEntityHotIdsResponse
-         */
-        public WriteProjectFeatureEntityHotIdsResponse WriteProjectFeatureEntityHotIdsWithOptions(string InstanceId, string ProjectId, string FeatureEntityName, WriteProjectFeatureEntityHotIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotIds))
-            {
-                body["HotIds"] = request.HotIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
-            {
-                body["Version"] = request.Version;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "WriteProjectFeatureEntityHotIds",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureentities/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureEntityName) + "/action/writehotids",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<WriteProjectFeatureEntityHotIdsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary 向指定项目下的特征实体写入热点数据。
-         *
-         * @param request WriteProjectFeatureEntityHotIdsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return WriteProjectFeatureEntityHotIdsResponse
-         */
-        public async Task<WriteProjectFeatureEntityHotIdsResponse> WriteProjectFeatureEntityHotIdsWithOptionsAsync(string InstanceId, string ProjectId, string FeatureEntityName, WriteProjectFeatureEntityHotIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotIds))
-            {
-                body["HotIds"] = request.HotIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
-            {
-                body["Version"] = request.Version;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "WriteProjectFeatureEntityHotIds",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ProjectId) + "/featureentities/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureEntityName) + "/action/writehotids",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<WriteProjectFeatureEntityHotIdsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary 向指定项目下的特征实体写入热点数据。
-         *
-         * @param request WriteProjectFeatureEntityHotIdsRequest
-         * @return WriteProjectFeatureEntityHotIdsResponse
-         */
-        public WriteProjectFeatureEntityHotIdsResponse WriteProjectFeatureEntityHotIds(string InstanceId, string ProjectId, string FeatureEntityName, WriteProjectFeatureEntityHotIdsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return WriteProjectFeatureEntityHotIdsWithOptions(InstanceId, ProjectId, FeatureEntityName, request, headers, runtime);
-        }
-
-        /**
-         * @summary 向指定项目下的特征实体写入热点数据。
-         *
-         * @param request WriteProjectFeatureEntityHotIdsRequest
-         * @return WriteProjectFeatureEntityHotIdsResponse
-         */
-        public async Task<WriteProjectFeatureEntityHotIdsResponse> WriteProjectFeatureEntityHotIdsAsync(string InstanceId, string ProjectId, string FeatureEntityName, WriteProjectFeatureEntityHotIdsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await WriteProjectFeatureEntityHotIdsWithOptionsAsync(InstanceId, ProjectId, FeatureEntityName, request, headers, runtime);
         }
 
     }

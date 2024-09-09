@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         }
 
+        [NameInMap("LabelPriorityLevel")]
+        [Validation(Required=false)]
+        public long? LabelPriorityLevel { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

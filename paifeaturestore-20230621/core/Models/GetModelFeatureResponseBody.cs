@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
+        [NameInMap("LabelPriorityLevel")]
+        [Validation(Required=false)]
+        public long? LabelPriorityLevel { get; set; }
+
         [NameInMap("LabelTableId")]
         [Validation(Required=false)]
         public string LabelTableId { get; set; }
