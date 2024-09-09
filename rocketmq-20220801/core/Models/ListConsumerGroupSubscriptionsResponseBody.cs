@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListConsumerGroupSubscriptionsResponseBody : TeaModel {
         /// <summary>
-        /// The returned error code.
+        /// The error code.
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -23,12 +23,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public List<ListConsumerGroupSubscriptionsResponseBodyData> Data { get; set; }
         public class ListConsumerGroupSubscriptionsResponseBodyData : TeaModel {
+            /// <summary>
+            /// Indicates whether message consumption is consistent. Valid values:
+            /// 
+            /// *   false: Unconsumed messages exist in the consumer group.
+            /// *   true: No unconsumed message exists in the consumer group.
+            /// </summary>
             [NameInMap("consistency")]
             [Validation(Required=false)]
             public bool? Consistency { get; set; }
 
             /// <summary>
-            /// The consumer group ID.
+            /// The ID of the consumer group.
             /// </summary>
             [NameInMap("consumerGroupId")]
             [Validation(Required=false)]
@@ -42,21 +48,30 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string FilterExpression { get; set; }
 
             /// <summary>
-            /// The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED.
+            /// The type of the filter expression. Valid values:
+            /// 
+            /// *   SQL: filters messages by using SQL expressions.
+            /// *   TAG: filters messages by using tags.
             /// </summary>
             [NameInMap("filterExpressionType")]
             [Validation(Required=false)]
             public string FilterExpressionType { get; set; }
 
             /// <summary>
-            /// The consumption mode. Valid values: BROADCASTING and CLUSTERING.
+            /// The consumption mode of the consumer group. Valid values:
+            /// 
+            /// *   BROADCASTING: broadcasting consumption
+            /// *   CLUSTERING: clustering consumption
             /// </summary>
             [NameInMap("messageModel")]
             [Validation(Required=false)]
             public string MessageModel { get; set; }
 
             /// <summary>
-            /// The subscription status. Valid values: ONLINE and OFFLINE.
+            /// The subscription status. Valid values:
+            /// 
+            /// *   ONLINE: The consumer group is online. If the consumer group contains multiple consumers, this value is returned as long as one of the consumers is online.
+            /// *   OFFLINE: The consumer group is offline. If the consumer group contains multiple consumers, this value is returned only if all consumers are offline.
             /// </summary>
             [NameInMap("subscriptionStatus")]
             [Validation(Required=false)]
@@ -79,28 +94,28 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// The returned dynamic error code.
+        /// The dynamic error code.
         /// </summary>
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// The returned dynamic error message.
+        /// The dynamic error message.
         /// </summary>
         [NameInMap("dynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The returned HTTP status code.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned error message.
+        /// The error message.
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
@@ -114,7 +129,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

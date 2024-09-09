@@ -415,14 +415,23 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     [Obsolete]
                     public string VSwitchId { get; set; }
 
+                    /// <summary>
+                    /// The vSwitches.
+                    /// </summary>
                     [NameInMap("vSwitches")]
                     [Validation(Required=false)]
                     public List<GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches> VSwitches { get; set; }
                     public class GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches : TeaModel {
+                        /// <summary>
+                        /// The vSwitch ID.
+                        /// </summary>
                         [NameInMap("vSwitchId")]
                         [Validation(Required=false)]
                         public string VSwitchId { get; set; }
 
+                        /// <summary>
+                        /// The zone ID.
+                        /// </summary>
                         [NameInMap("zoneId")]
                         [Validation(Required=false)]
                         public string ZoneId { get; set; }

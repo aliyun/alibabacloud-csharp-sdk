@@ -17,22 +17,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Valid values: 1 to 100000000.
         /// 
-        /// If the value that you specify for this parameter is less than 1, the system uses 1 as the value. If the value that you specify for this parameter is greater than 100000000, the system uses 100000000 as the value.
+        /// If you set this parameter to a value smaller than 1, the system uses 1 as the value. If you set this parameter to a value greater than 100000000, the system uses 100000000 as the value.
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries per page.
         /// 
-        /// Valid values: 10 to 200.
+        /// Value values: 10 to 200.
         /// 
-        /// If the value that you specify for this parameter is less than 10, the system uses 10 as the value. If the value that you specify for this parameter is greater than 200, the system uses 200 as the value.
+        /// If you set this parameter to a value smaller than 10, the system uses 10 as the value. If you set this parameter to a value greater than 200, the system uses 200 as the value.
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
@@ -45,6 +45,15 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The primary edition of the instance.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   standard: Standard Edition
+        /// *   ultimate: Enterprise Platinum Edition
+        /// *   professional: Professional Edition
+        /// </summary>
         [NameInMap("seriesCodes")]
         [Validation(Required=false)]
         public List<string> SeriesCodes { get; set; }

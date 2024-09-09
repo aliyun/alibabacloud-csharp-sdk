@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public ListInstancesResponseBodyData Data { get; set; }
         public class ListInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// The paginated data.
+            /// The pagination information.
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The time when the instance was created.
+                /// The time when the version of the instance was updated.
                 /// </summary>
                 [NameInMap("createTime")]
                 [Validation(Required=false)]
@@ -85,14 +85,19 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string PaymentType { get; set; }
 
                 /// <summary>
-                /// The product information of instance.
+                /// The product information.
                 /// </summary>
                 [NameInMap("productInfo")]
                 [Validation(Required=false)]
                 public ListInstancesResponseBodyDataListProductInfo ProductInfo { get; set; }
                 public class ListInstancesResponseBodyDataListProductInfo : TeaModel {
                     /// <summary>
-                    /// Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.
+                    /// Indicates whether the message trace feature is enabled. Valid values:
+                    /// 
+                    /// *   true
+                    /// *   false
+                    /// 
+                    /// This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.
                     /// </summary>
                     [NameInMap("traceOn")]
                     [Validation(Required=false)]
@@ -149,7 +154,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ServiceCode { get; set; }
 
                 /// <summary>
-                /// The time when the instance was started.
+                /// The time when the instance was created.
                 /// </summary>
                 [NameInMap("startTime")]
                 [Validation(Required=false)]

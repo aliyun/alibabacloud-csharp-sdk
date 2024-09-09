@@ -147,10 +147,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Obsolete]
                 public string VSwitchId { get; set; }
 
+                /// <summary>
+                /// The vSwitches.
+                /// </summary>
                 [NameInMap("vSwitches")]
                 [Validation(Required=false)]
                 public List<CreateInstanceRequestNetworkInfoVpcInfoVSwitches> VSwitches { get; set; }
                 public class CreateInstanceRequestNetworkInfoVpcInfoVSwitches : TeaModel {
+                    /// <summary>
+                    /// The ID of the vSwitch with which the instance is associated.
+                    /// </summary>
                     [NameInMap("vSwitchId")]
                     [Validation(Required=false)]
                     public string VSwitchId { get; set; }
