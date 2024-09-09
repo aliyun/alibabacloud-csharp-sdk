@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                     [Validation(Required=false)]
                     public string Url { get; set; }
 
+                    [NameInMap("volume")]
+                    [Validation(Required=false)]
+                    public int? Volume { get; set; }
+
                 }
 
                 [NameInMap("positionX")]

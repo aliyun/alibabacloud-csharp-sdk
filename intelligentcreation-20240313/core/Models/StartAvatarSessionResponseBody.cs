@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        [NameInMap("token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
+
+        [NameInMap("webSocketUrl")]
+        [Validation(Required=false)]
+        public string WebSocketUrl { get; set; }
+
     }
 
 }

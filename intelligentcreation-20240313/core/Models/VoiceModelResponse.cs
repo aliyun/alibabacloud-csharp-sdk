@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string ResourceTypeDesc { get; set; }
 
+        [NameInMap("ttsVersion")]
+        [Validation(Required=false)]
+        public int? TtsVersion { get; set; }
+
         [NameInMap("useScene")]
         [Validation(Required=false)]
         public string UseScene { get; set; }

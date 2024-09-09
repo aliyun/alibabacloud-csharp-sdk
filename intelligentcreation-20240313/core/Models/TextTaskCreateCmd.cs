@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<long?> RelatedRagIds { get; set; }
 
+        [NameInMap("streamApi")]
+        [Validation(Required=false)]
+        public bool? StreamApi { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

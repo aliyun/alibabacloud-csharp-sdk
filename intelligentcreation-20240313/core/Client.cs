@@ -578,6 +578,208 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         }
 
         /**
+         * @summary 写实人像创作
+         *
+         * @param request CreateRealisticPortraitRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRealisticPortraitResponse
+         */
+        public CreateRealisticPortraitResponse CreateRealisticPortraitWithOptions(CreateRealisticPortraitRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ages))
+            {
+                body["ages"] = request.Ages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cloth))
+            {
+                body["cloth"] = request.Cloth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Color))
+            {
+                body["color"] = request.Color;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Custom))
+            {
+                body["custom"] = request.Custom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Face))
+            {
+                body["face"] = request.Face;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Figure))
+            {
+                body["figure"] = request.Figure;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HairColor))
+            {
+                body["hairColor"] = request.HairColor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hairstyle))
+            {
+                body["hairstyle"] = request.Hairstyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
+            {
+                body["height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                body["imageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numbers))
+            {
+                body["numbers"] = request.Numbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ratio))
+            {
+                body["ratio"] = request.Ratio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Width))
+            {
+                body["width"] = request.Width;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRealisticPortrait",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/images/portrait/realistic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRealisticPortraitResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 写实人像创作
+         *
+         * @param request CreateRealisticPortraitRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRealisticPortraitResponse
+         */
+        public async Task<CreateRealisticPortraitResponse> CreateRealisticPortraitWithOptionsAsync(CreateRealisticPortraitRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ages))
+            {
+                body["ages"] = request.Ages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cloth))
+            {
+                body["cloth"] = request.Cloth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Color))
+            {
+                body["color"] = request.Color;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Custom))
+            {
+                body["custom"] = request.Custom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Face))
+            {
+                body["face"] = request.Face;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Figure))
+            {
+                body["figure"] = request.Figure;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HairColor))
+            {
+                body["hairColor"] = request.HairColor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hairstyle))
+            {
+                body["hairstyle"] = request.Hairstyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
+            {
+                body["height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                body["imageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numbers))
+            {
+                body["numbers"] = request.Numbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ratio))
+            {
+                body["ratio"] = request.Ratio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Width))
+            {
+                body["width"] = request.Width;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRealisticPortrait",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/images/portrait/realistic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRealisticPortraitResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 写实人像创作
+         *
+         * @param request CreateRealisticPortraitRequest
+         * @return CreateRealisticPortraitResponse
+         */
+        public CreateRealisticPortraitResponse CreateRealisticPortrait(CreateRealisticPortraitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRealisticPortraitWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 写实人像创作
+         *
+         * @param request CreateRealisticPortraitRequest
+         * @return CreateRealisticPortraitResponse
+         */
+        public async Task<CreateRealisticPortraitResponse> CreateRealisticPortraitAsync(CreateRealisticPortraitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRealisticPortraitWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 创建文案生成任务
          *
          * @param request CreateTextTaskRequest
@@ -2004,6 +2206,166 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         }
 
         /**
+         * @summary 流式输出文案
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTextStreamResponse
+         */
+        public QueryTextStreamResponse QueryTextStreamWithOptions(string textId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTextStream",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/stream/queryTextStream/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(textId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTextStreamResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 流式输出文案
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTextStreamResponse
+         */
+        public async Task<QueryTextStreamResponse> QueryTextStreamWithOptionsAsync(string textId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTextStream",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/stream/queryTextStream/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(textId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTextStreamResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 流式输出文案
+         *
+         * @return QueryTextStreamResponse
+         */
+        public QueryTextStreamResponse QueryTextStream(string textId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryTextStreamWithOptions(textId, headers, runtime);
+        }
+
+        /**
+         * @summary 流式输出文案
+         *
+         * @return QueryTextStreamResponse
+         */
+        public async Task<QueryTextStreamResponse> QueryTextStreamAsync(string textId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryTextStreamWithOptionsAsync(textId, headers, runtime);
+        }
+
+        /**
+         * @summary 查询图片任务
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SelectImageTaskResponse
+         */
+        public SelectImageTaskResponse SelectImageTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SelectImageTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/images/portrait/select/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SelectImageTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询图片任务
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SelectImageTaskResponse
+         */
+        public async Task<SelectImageTaskResponse> SelectImageTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SelectImageTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/images/portrait/select/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SelectImageTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询图片任务
+         *
+         * @return SelectImageTaskResponse
+         */
+        public SelectImageTaskResponse SelectImageTask(string taskId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SelectImageTaskWithOptions(taskId, headers, runtime);
+        }
+
+        /**
+         * @summary 查询图片任务
+         *
+         * @return SelectImageTaskResponse
+         */
+        public async Task<SelectImageTaskResponse> SelectImageTaskAsync(string taskId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SelectImageTaskWithOptionsAsync(taskId, headers, runtime);
+        }
+
+        /**
          * @summary 查询离线数字人剩余资源
          *
          * @param request SelectResourceRequest
@@ -2661,6 +3023,144 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SubmitProjectTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 人像风格变化
+         *
+         * @param request TransferPortraitStyleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TransferPortraitStyleResponse
+         */
+        public TransferPortraitStyleResponse TransferPortraitStyleWithOptions(TransferPortraitStyleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
+            {
+                body["height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                body["imageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numbers))
+            {
+                body["numbers"] = request.Numbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedrawAmplitude))
+            {
+                body["redrawAmplitude"] = request.RedrawAmplitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Style))
+            {
+                body["style"] = request.Style;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Width))
+            {
+                body["width"] = request.Width;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransferPortraitStyle",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/images/portrait/transferPortraitStyle",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransferPortraitStyleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 人像风格变化
+         *
+         * @param request TransferPortraitStyleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TransferPortraitStyleResponse
+         */
+        public async Task<TransferPortraitStyleResponse> TransferPortraitStyleWithOptionsAsync(TransferPortraitStyleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
+            {
+                body["height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                body["imageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numbers))
+            {
+                body["numbers"] = request.Numbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedrawAmplitude))
+            {
+                body["redrawAmplitude"] = request.RedrawAmplitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Style))
+            {
+                body["style"] = request.Style;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Width))
+            {
+                body["width"] = request.Width;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransferPortraitStyle",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/images/portrait/transferPortraitStyle",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransferPortraitStyleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 人像风格变化
+         *
+         * @param request TransferPortraitStyleRequest
+         * @return TransferPortraitStyleResponse
+         */
+        public TransferPortraitStyleResponse TransferPortraitStyle(TransferPortraitStyleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TransferPortraitStyleWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 人像风格变化
+         *
+         * @param request TransferPortraitStyleRequest
+         * @return TransferPortraitStyleResponse
+         */
+        public async Task<TransferPortraitStyleResponse> TransferPortraitStyleAsync(TransferPortraitStyleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TransferPortraitStyleWithOptionsAsync(request, headers, runtime);
         }
 
     }
