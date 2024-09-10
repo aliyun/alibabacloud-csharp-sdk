@@ -44,10 +44,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public List<string> CpuArchitectures { get; set; }
 
+            /// <summary>
+            /// The version number.
+            /// </summary>
             [NameInMap("displayReleaseVersion")]
             [Validation(Required=false)]
             public string DisplayReleaseVersion { get; set; }
 
+            /// <summary>
+            /// Indicates whether the Fusion engine is used for acceleration.
+            /// </summary>
             [NameInMap("fusion")]
             [Validation(Required=false)]
             public bool? Fusion { get; set; }
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string IaasType { get; set; }
 
             /// <summary>
-            /// The version.
+            /// The version number.
             /// </summary>
             [NameInMap("releaseVersion")]
             [Validation(Required=false)]

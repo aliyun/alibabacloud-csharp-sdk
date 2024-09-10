@@ -1,3 +1,7 @@
+2024-09-10 Version: 1.4.4
+- Update API ListReleaseVersions: add param workspaceId.
+
+
 2024-08-22 Version: 1.4.3
 - Update API GetJobRun: update response param.
 

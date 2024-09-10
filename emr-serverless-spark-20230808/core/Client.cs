@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 使用session运行SQL
+         * @summary Creates an SQL query task.
          *
          * @param request CreateSqlStatementRequest
          * @param headers map
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 使用session运行SQL
+         * @summary Creates an SQL query task.
          *
          * @param request CreateSqlStatementRequest
          * @param headers map
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 使用session运行SQL
+         * @summary Creates an SQL query task.
          *
          * @param request CreateSqlStatementRequest
          * @return CreateSqlStatementResponse
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 使用session运行SQL
+         * @summary Creates an SQL query task.
          *
          * @param request CreateSqlStatementRequest
          * @return CreateSqlStatementResponse
@@ -494,7 +494,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取Sql Statement状态
+         * @summary Queries the status of an SQL query task.
          *
          * @param request GetSqlStatementRequest
          * @param headers map
@@ -530,7 +530,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取Sql Statement状态
+         * @summary Queries the status of an SQL query task.
          *
          * @param request GetSqlStatementRequest
          * @param headers map
@@ -566,7 +566,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取Sql Statement状态
+         * @summary Queries the status of an SQL query task.
          *
          * @param request GetSqlStatementRequest
          * @return GetSqlStatementResponse
@@ -579,7 +579,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取Sql Statement状态
+         * @summary Queries the status of an SQL query task.
          *
          * @param request GetSqlStatementRequest
          * @return GetSqlStatementResponse
@@ -932,7 +932,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取发布版本列表
+         * @summary Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.
          *
          * @param request ListReleaseVersionsRequest
          * @param headers map
@@ -959,6 +959,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["releaseVersionStatus"] = request.ReleaseVersionStatus;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -980,7 +984,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取发布版本列表
+         * @summary Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.
          *
          * @param request ListReleaseVersionsRequest
          * @param headers map
@@ -1007,6 +1011,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["releaseVersionStatus"] = request.ReleaseVersionStatus;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1028,7 +1036,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取发布版本列表
+         * @summary Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.
          *
          * @param request ListReleaseVersionsRequest
          * @return ListReleaseVersionsResponse
@@ -1041,7 +1049,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 获取发布版本列表
+         * @summary Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.
          *
          * @param request ListReleaseVersionsRequest
          * @return ListReleaseVersionsResponse
@@ -1626,7 +1634,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 终止 session statement
+         * @summary Terminates an SQL query task.
          *
          * @param request TerminateSqlStatementRequest
          * @param headers map
@@ -1662,7 +1670,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 终止 session statement
+         * @summary Terminates an SQL query task.
          *
          * @param request TerminateSqlStatementRequest
          * @param headers map
@@ -1698,7 +1706,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 终止 session statement
+         * @summary Terminates an SQL query task.
          *
          * @param request TerminateSqlStatementRequest
          * @return TerminateSqlStatementResponse
@@ -1711,7 +1719,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
-         * @summary 终止 session statement
+         * @summary Terminates an SQL query task.
          *
          * @param request TerminateSqlStatementRequest
          * @return TerminateSqlStatementResponse

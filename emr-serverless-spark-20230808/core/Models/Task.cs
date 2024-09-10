@@ -199,6 +199,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
 
+        [NameInMap("timeout")]
+        [Validation(Required=false)]
+        public int? Timeout { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
