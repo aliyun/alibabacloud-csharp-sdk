@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
             }
 
+            [NameInMap("CredentialConfig")]
+            [Validation(Required=false)]
+            public CredentialConfig CredentialConfig { get; set; }
+
             [NameInMap("Datasets")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyInstancesDatasets> Datasets { get; set; }
