@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.AiMiaoBi20230801</AssemblyName>
-    <Version>1.7.0</Version>
+    <Version>1.8.0</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud AiMiaoBi (20230801) SDK Library for .NET</Description>
