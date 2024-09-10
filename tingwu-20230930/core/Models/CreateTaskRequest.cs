@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public string Format { get; set; }
 
+            [NameInMap("LanguageHints")]
+            [Validation(Required=false)]
+            public List<string> LanguageHints { get; set; }
+
             [NameInMap("MultipleStreamsEnabled")]
             [Validation(Required=false)]
             public bool? MultipleStreamsEnabled { get; set; }
