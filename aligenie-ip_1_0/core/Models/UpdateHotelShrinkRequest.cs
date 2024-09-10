@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class UpdateHotelShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string HotelEmail { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
@@ -49,6 +55,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public int? RoomNum { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TbOpenId")]
         [Validation(Required=false)]
         public string TbOpenId { get; set; }

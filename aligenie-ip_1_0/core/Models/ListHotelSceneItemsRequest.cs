@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
     public class ListHotelSceneItemsRequest : TeaModel {
         /// <summary>
         /// hotelID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         /// <summary>
         /// ListHotelSceneReq
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListHotelSceneReq")]
         [Validation(Required=false)]
@@ -31,6 +35,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public string Keywords { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Page")]
             [Validation(Required=false)]
             public ListHotelSceneItemsRequestListHotelSceneReqPage Page { get; set; }
@@ -49,6 +56,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

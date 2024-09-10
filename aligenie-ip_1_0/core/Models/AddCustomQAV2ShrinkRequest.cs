@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class AddCustomQAV2ShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Answers")]
         [Validation(Required=false)]
         public string AnswersShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }

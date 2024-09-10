@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string Brand { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string City { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }

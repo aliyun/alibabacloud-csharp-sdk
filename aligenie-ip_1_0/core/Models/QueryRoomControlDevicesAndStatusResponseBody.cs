@@ -8,29 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
-    public class ImportRoomControlDevicesRequest : TeaModel {
-        [NameInMap("EnableInfraredDeviceImport")]
+    public class QueryRoomControlDevicesAndStatusResponseBody : TeaModel {
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string EnableInfraredDeviceImport { get; set; }
+        public int? Code { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("HotelId")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string HotelId { get; set; }
+        public string Message { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("LocationDevices")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<ImportRoomControlDevicesRequestLocationDevices> LocationDevices { get; set; }
-        public class ImportRoomControlDevicesRequestLocationDevices : TeaModel {
+        public string RequestId { get; set; }
+
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public List<QueryRoomControlDevicesAndStatusResponseBodyResult> Result { get; set; }
+        public class QueryRoomControlDevicesAndStatusResponseBodyResult : TeaModel {
             [NameInMap("Devices")]
             [Validation(Required=false)]
-            public List<ImportRoomControlDevicesRequestLocationDevicesDevices> Devices { get; set; }
-            public class ImportRoomControlDevicesRequestLocationDevicesDevices : TeaModel {
+            public List<QueryRoomControlDevicesAndStatusResponseBodyResultDevices> Devices { get; set; }
+            public class QueryRoomControlDevicesAndStatusResponseBodyResultDevices : TeaModel {
                 [NameInMap("AliasList")]
                 [Validation(Required=false)]
                 public List<string> AliasList { get; set; }
@@ -47,12 +45,13 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [Validation(Required=false)]
                 public string ConnectType { get; set; }
 
-                /// <summary>
-                /// This parameter is required.
-                /// </summary>
                 [NameInMap("DeviceName")]
                 [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("DeviceStatus")]
+                [Validation(Required=false)]
+                public string DeviceStatus { get; set; }
 
                 [NameInMap("Dn")]
                 [Validation(Required=false)]
@@ -72,12 +71,12 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
                 [NameInMap("MultiKeySwitchExt")]
                 [Validation(Required=false)]
-                public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt MultiKeySwitchExt { get; set; }
-                public class ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt : TeaModel {
+                public QueryRoomControlDevicesAndStatusResponseBodyResultDevicesMultiKeySwitchExt MultiKeySwitchExt { get; set; }
+                public class QueryRoomControlDevicesAndStatusResponseBodyResultDevicesMultiKeySwitchExt : TeaModel {
                     [NameInMap("SwitchList")]
                     [Validation(Required=false)]
-                    public List<ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList> SwitchList { get; set; }
-                    public class ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList : TeaModel {
+                    public List<QueryRoomControlDevicesAndStatusResponseBodyResultDevicesMultiKeySwitchExtSwitchList> SwitchList { get; set; }
+                    public class QueryRoomControlDevicesAndStatusResponseBodyResultDevicesMultiKeySwitchExtSwitchList : TeaModel {
                         [NameInMap("AliasList")]
                         [Validation(Required=false)]
                         public List<string> AliasList { get; set; }
@@ -94,17 +93,30 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                         [Validation(Required=false)]
                         public string DeviceName { get; set; }
 
+                        [NameInMap("DeviceStatus")]
+                        [Validation(Required=false)]
+                        public string DeviceStatus { get; set; }
+
+                        [NameInMap("ElementCode")]
+                        [Validation(Required=false)]
+                        public string ElementCode { get; set; }
+
                         [NameInMap("Location")]
                         [Validation(Required=false)]
                         public string Location { get; set; }
+
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, string> Status { get; set; }
+
+                        [NameInMap("Tags")]
+                        [Validation(Required=false)]
+                        public List<string> Tags { get; set; }
 
                     }
 
                 }
 
-                /// <summary>
-                /// This parameter is required.
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -125,11 +137,12 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [Validation(Required=false)]
                 public string ServiceProvider { get; set; }
 
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> Status { get; set; }
+
             }
 
-            /// <summary>
-            /// This parameter is required.
-            /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
             public string Location { get; set; }
@@ -138,14 +151,15 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public string LocationName { get; set; }
 
+            [NameInMap("RoomNo")]
+            [Validation(Required=false)]
+            public string RoomNo { get; set; }
+
         }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("RoomNo")]
+        [NameInMap("StatusCode")]
         [Validation(Required=false)]
-        public string RoomNo { get; set; }
+        public int? StatusCode { get; set; }
 
     }
 

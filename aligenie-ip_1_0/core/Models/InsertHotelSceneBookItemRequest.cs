@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
     public class InsertHotelSceneBookItemRequest : TeaModel {
         /// <summary>
         /// addHotelSceneItemReq
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddHotelSceneItemReq")]
         [Validation(Required=false)]
@@ -18,19 +20,30 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public class InsertHotelSceneBookItemRequestAddHotelSceneItemReq : TeaModel {
             /// <summary>
             /// icon
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Icon")]
             [Validation(Required=false)]
             public string Icon { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public long? Price { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -39,6 +52,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         /// <summary>
         /// hotelID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]

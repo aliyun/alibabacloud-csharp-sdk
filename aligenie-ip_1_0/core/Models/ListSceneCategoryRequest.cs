@@ -11,11 +11,16 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
     public class ListSceneCategoryRequest : TeaModel {
         /// <summary>
         /// hotelId
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string CategoryCnName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CategoryEnName")]
         [Validation(Required=false)]
         public string CategoryEnName { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string DeviceName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
@@ -33,14 +42,23 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string LocationCnName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Number")]
         [Validation(Required=false)]
         public string Number { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RoomNo")]
         [Validation(Required=false)]
         public string RoomNo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Switch")]
         [Validation(Required=false)]
         public int? Switch { get; set; }

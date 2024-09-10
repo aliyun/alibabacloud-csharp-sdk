@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string HotelRequestShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public string PageShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }

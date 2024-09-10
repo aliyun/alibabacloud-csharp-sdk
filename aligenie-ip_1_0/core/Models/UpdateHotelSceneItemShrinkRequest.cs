@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
     public class UpdateHotelSceneItemShrinkRequest : TeaModel {
         /// <summary>
         /// hotelID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         /// <summary>
         /// updateHotelSceneReq
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UpdateHotelSceneOperateReq")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         /// <summary>
         /// UpdateHotelSceneReq
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UpdateHotelSceneReq")]
         [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class CreateHotelAlarmRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string MusicType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Rooms")]
         [Validation(Required=false)]
         public List<string> Rooms { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ScheduleInfo")]
         [Validation(Required=false)]
         public CreateHotelAlarmRequestScheduleInfo ScheduleInfo { get; set; }
@@ -53,6 +62,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
             /// <summary>
             /// ONCE, WEEKLY
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

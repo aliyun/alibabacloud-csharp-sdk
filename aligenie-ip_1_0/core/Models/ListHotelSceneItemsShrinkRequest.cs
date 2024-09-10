@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
     public class ListHotelSceneItemsShrinkRequest : TeaModel {
         /// <summary>
         /// hotelID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         /// <summary>
         /// ListHotelSceneReq
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListHotelSceneReq")]
         [Validation(Required=false)]

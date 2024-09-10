@@ -1,3 +1,8 @@
+2024-09-10 Version: 2.8.0
+- Support API PmsEventReport.
+- Support API QueryRoomControlDevicesAndStatus.
+
+
 2024-02-29 Version: 2.7.0
 - Support API PmsEventReport.
 

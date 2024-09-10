@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class GetHotelNoticeV2Request : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public GetHotelNoticeV2RequestUserInfo UserInfo { get; set; }

@@ -8,17 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
-    public class DeleteCustomQARequest : TeaModel {
-        [NameInMap("CustomQAIds")]
-        [Validation(Required=false)]
-        public List<string> CustomQAIds { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
+    public class QueryRoomControlDevicesAndStatusRequest : TeaModel {
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
+
+        [NameInMap("RoomNo")]
+        [Validation(Required=false)]
+        public string RoomNo { get; set; }
 
     }
 

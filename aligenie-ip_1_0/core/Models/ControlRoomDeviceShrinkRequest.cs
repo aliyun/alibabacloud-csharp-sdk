@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ControlRoomDeviceShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Cmd")]
         [Validation(Required=false)]
         public string Cmd { get; set; }
@@ -17,18 +20,30 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public int? DeviceIndex { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DeviceNumber")]
         [Validation(Required=false)]
         public string DeviceNumber { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public string PropertiesShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RoomNo")]
         [Validation(Required=false)]
         public string RoomNo { get; set; }

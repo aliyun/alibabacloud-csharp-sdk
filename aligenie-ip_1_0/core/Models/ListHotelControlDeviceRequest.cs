@@ -13,18 +13,30 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public ListHotelControlDeviceRequestUserInfo UserInfo { get; set; }
         public class ListHotelControlDeviceRequestUserInfo : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("EncodeKey")]
             [Validation(Required=false)]
             public string EncodeKey { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("EncodeType")]
             [Validation(Required=false)]
             public string EncodeType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("IdType")]
             [Validation(Required=false)]
             public string IdType { get; set; }

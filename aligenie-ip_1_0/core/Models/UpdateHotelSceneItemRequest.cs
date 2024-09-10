@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
     public class UpdateHotelSceneItemRequest : TeaModel {
         /// <summary>
         /// hotelID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
@@ -18,15 +20,23 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         /// <summary>
         /// updateHotelSceneReq
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UpdateHotelSceneOperateReq")]
         [Validation(Required=false)]
         public UpdateHotelSceneItemRequestUpdateHotelSceneOperateReq UpdateHotelSceneOperateReq { get; set; }
         public class UpdateHotelSceneItemRequestUpdateHotelSceneOperateReq : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("IsUseTemplateAnswer")]
             [Validation(Required=false)]
             public bool? IsUseTemplateAnswer { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("OperateType")]
             [Validation(Required=false)]
             public string OperateType { get; set; }
@@ -35,6 +45,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         /// <summary>
         /// UpdateHotelSceneReq
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UpdateHotelSceneReq")]
         [Validation(Required=false)]
@@ -48,6 +60,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public string DeliveryMethod { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("DialogueList")]
             [Validation(Required=false)]
             public List<UpdateHotelSceneItemRequestUpdateHotelSceneReqDialogueList> DialogueList { get; set; }
@@ -91,6 +106,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
             /// <summary>
             /// icon
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Icon")]
             [Validation(Required=false)]
@@ -119,6 +136,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public string PaymentMethod { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public long? Price { get; set; }
@@ -127,6 +147,9 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public string RobotName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

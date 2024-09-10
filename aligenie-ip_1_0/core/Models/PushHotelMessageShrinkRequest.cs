@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
     public class PushHotelMessageShrinkRequest : TeaModel {
         /// <summary>
         /// pushHotelMessageReq
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PushHotelMessageReq")]
         [Validation(Required=false)]
