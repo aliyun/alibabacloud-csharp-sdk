@@ -64,23 +64,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The name of the source instance.
         /// 
-        /// >  You must specify this parameter if **SourceCategory** is set to **aliyunRDS**.
+        /// >  This parameter is required when you set the **SourceCategory** parameter to **aliyunRDS**.
         /// </summary>
         [NameInMap("SourceInstanceName")]
         [Validation(Required=false)]
         public string SourceInstanceName { get; set; }
 
         /// <summary>
-        /// The ID of the region where the source instance is located.
+        /// The region ID of the source instance.
         /// 
-        /// >  You must specify this parameter if **SourceCategory** is set to **aliyunRDS**.
+        /// >  This parameter is required when you set the **SourceCategory** parameter to **aliyunRDS**.
         /// </summary>
         [NameInMap("SourceInstanceRegionId")]
         [Validation(Required=false)]
         public string SourceInstanceRegionId { get; set; }
 
         /// <summary>
-        /// The port number of the source instance.
+        /// The port of the source instance.
         /// </summary>
         [NameInMap("SourcePort")]
         [Validation(Required=false)]

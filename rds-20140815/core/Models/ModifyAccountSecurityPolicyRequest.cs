@@ -8,35 +8,33 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class CopyDatabaseRequest : TeaModel {
-        /// <summary>
-        /// The instance name.
-        /// </summary>
-        [NameInMap("DBInstanceName")]
+    public class ModifyAccountSecurityPolicyRequest : TeaModel {
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
-        /// Destination database name.
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("DstDBName")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string DstDBName { get; set; }
+        public string DBInstanceId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("GroupPolicy")]
+        [Validation(Required=false)]
+        public string GroupPolicy { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// Reserve account.
-        /// </summary>
-        [NameInMap("ReserveAccount")]
-        [Validation(Required=false)]
-        public int? ReserveAccount { get; set; }
-
-        /// <summary>
-        /// The ID of the resource group.
-        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -48,13 +46,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        /// <summary>
-        /// Source database name.
-        /// </summary>
-        [NameInMap("SrcDBName")]
-        [Validation(Required=false)]
-        public string SrcDBName { get; set; }
 
     }
 

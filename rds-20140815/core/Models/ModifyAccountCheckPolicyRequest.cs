@@ -8,35 +8,40 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class CopyDatabaseRequest : TeaModel {
+    public class ModifyAccountCheckPolicyRequest : TeaModel {
         /// <summary>
-        /// The instance name.
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("DBInstanceName")]
+        [NameInMap("AccountName")]
         [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
+        public string AccountName { get; set; }
 
         /// <summary>
-        /// Destination database name.
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("DstDBName")]
+        [NameInMap("CheckPolicy")]
         [Validation(Required=false)]
-        public string DstDBName { get; set; }
+        public bool? CheckPolicy { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// Reserve account.
-        /// </summary>
-        [NameInMap("ReserveAccount")]
-        [Validation(Required=false)]
-        public int? ReserveAccount { get; set; }
-
-        /// <summary>
-        /// The ID of the resource group.
-        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -48,13 +53,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        /// <summary>
-        /// Source database name.
-        /// </summary>
-        [NameInMap("SrcDBName")]
-        [Validation(Required=false)]
-        public string SrcDBName { get; set; }
 
     }
 

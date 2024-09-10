@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyTaskInfoRequest : TeaModel {
         /// <summary>
-        /// The action parameter.
+        /// The action-related parameters. You can add action-related parameters based on your business requirements. If you set the TaskAction parameter to modifySwitchTime, you must set this parameter to `{"recoverMode": "xxx", "recoverTime": "xxx"}`.
+        /// 
+        /// The recoverMode field specifies the task restoration mode. valid values:
+        /// 
+        /// *   **timePoint**: The task is executed at a specified point in time.
+        /// *   **Immediate**: The task is executed immediately.
+        /// *   **maintainTime**: The task is executed based on the O\\&M time.
+        /// 
+        /// The recoverTime field specifies restoration time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If you set the recoverMode field to timePoint, you must also specify the recoverTime field.
         /// </summary>
         [NameInMap("ActionParams")]
         [Validation(Required=false)]
@@ -45,19 +53,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string StepName { get; set; }
 
         /// <summary>
-        /// The name of the operation that you can call to execute the task. Valid values:
-        /// 
-        /// *   ImportImage
-        /// *   ExportImage
-        /// *   RedeployInstance
-        /// *   ModifyDiskSpec
+        /// The task action. Set the value to modifySwitchTime. The value specifies that you want to change the switching time or restoration time.
         /// </summary>
         [NameInMap("TaskAction")]
         [Validation(Required=false)]
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// The task ID.
+        /// The task ID. You can call the DescribeTasks operation to query task IDs.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The details about the account.
+        /// The details of the account.
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
