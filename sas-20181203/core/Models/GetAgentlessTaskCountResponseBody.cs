@@ -66,6 +66,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ScanMachine { get; set; }
 
         /// <summary>
+        /// The total number of sensitive files.
+        /// </summary>
+        [NameInMap("SensitiveFileCount")]
+        [Validation(Required=false)]
+        public int? SensitiveFileCount { get; set; }
+
+        /// <summary>
         /// The total number of Windows system vulnerabilities.
         /// </summary>
         [NameInMap("SysVulCount")]

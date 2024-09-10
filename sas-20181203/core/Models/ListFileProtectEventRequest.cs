@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The end of the time range to query.
+        /// The end timestamp of the query.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The public IP address of the asset that you want to query.
+        /// The public IP address of the server.
         /// </summary>
         [NameInMap("InternetIp")]
         [Validation(Required=false)]
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// The private IP address of the asset that you want to query.
+        /// The private IP address of the server.
         /// </summary>
         [NameInMap("IntranetIp")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The start of the time range to query.
+        /// The start timestamp of the query.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -98,15 +98,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   0: unhandled
         /// *   1: handled
         /// *   2: added to the whitelist
+        /// *   3: ignored
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The server UUID.
+        /// The UUID of the server.
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.
+        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUID of the server.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

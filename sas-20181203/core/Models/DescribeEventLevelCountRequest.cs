@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string From { get; set; }
 
+        [NameInMap("MultiAccountActionType")]
+        [Validation(Required=false)]
+        public int? MultiAccountActionType { get; set; }
+
         /// <summary>
         /// The type of the query condition. Valid values:
         /// 

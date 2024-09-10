@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageInstancesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the image.
+        /// The information about the images.
         /// </summary>
         [NameInMap("ImageInstanceList")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HcCount { get; set; }
 
             /// <summary>
-            /// Indicates whether the baseline risks exist. Valid values:
+            /// Indicates whether baseline risks exist. Valid values:
             /// 
             /// *   **NO**
             /// *   **YES**
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageCreate { get; set; }
 
             /// <summary>
-            /// The image ID.
+            /// The ID of the image.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
@@ -103,14 +103,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageUpdate { get; set; }
 
             /// <summary>
-            /// The ID of the image.
+            /// The instance ID of the image.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the image resides.
+            /// The timestamp when the last scan was performed. Unit: milliseconds.
+            /// </summary>
+            [NameInMap("LastScanTime")]
+            [Validation(Required=false)]
+            public long? LastScanTime { get; set; }
+
+            /// <summary>
+            /// The region ID of the image.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -196,8 +203,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **START_RUN**: The image analysis task is started.
             /// *   **DOWNLOAD**: The image scan result is downloaded.
             /// *   **PRE_ANALYZER**: The image pre-analysis is started.
-            /// *   **WEB_SHELL_ANALYZER**: The WebShell analysis is complete.
-            /// *   **CVE_ANALYZER**: The Common Vulnerabilities and Exposures (CVE) analysis is complete.
+            /// *   **WEB_SHELL_ANALYZER**: The WebShell analysis of the image is complete.
+            /// *   **CVE_ANALYZER**: The Common Vulnerabilities and Exposures (CVE) analysis of the image is complete.
             /// *   **BIN_ANALYZER**: The binary analysis of the image is complete.
             /// *   **OTHER_ANALYZER**: The extended analysis of the image is complete.
             /// *   **SUCCESS**: The image scan task is complete.
@@ -210,7 +217,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ScaStatus { get; set; }
 
             /// <summary>
-            /// The status of the image. Valid value:
+            /// The status of the image. Valid values:
             /// 
             /// *   **NORMAL**
             /// </summary>
@@ -248,10 +255,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("VulStatus")]
             [Validation(Required=false)]
             public string VulStatus { get; set; }
-
-            [NameInMap("lastScanTime")]
-            [Validation(Required=false)]
-            public long? LastScanTime { get; set; }
 
         }
 

@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Levels { get; set; }
 
+        [NameInMap("MultiAccountActionType")]
+        [Validation(Required=false)]
+        public int? MultiAccountActionType { get; set; }
+
         /// <summary>
         /// The name of the asset that is affected by the alert event.
         /// </summary>
@@ -240,6 +244,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        [NameInMap("SourceAliUids")]
+        [Validation(Required=false)]
+        public List<long?> SourceAliUids { get; set; }
+
         /// <summary>
         /// The source IP address of the request.
         /// </summary>
@@ -267,9 +275,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// Whether it is strictly a mode flag.
-        /// - N: No
-        /// - Y: Yes
+        /// Specifies whether to enable the strict alerting mode.
+        /// 
+        /// *   N: no
+        /// *   Y: Yes
         /// </summary>
         [NameInMap("StrictMode")]
         [Validation(Required=false)]

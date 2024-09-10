@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }
 
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
+        [NameInMap("RuleType")]
+        [Validation(Required=false)]
+        public string RuleType { get; set; }
+
     }
 
 }

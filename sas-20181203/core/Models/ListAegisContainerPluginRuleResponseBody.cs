@@ -78,6 +78,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Mode { get; set; }
 
             /// <summary>
+            /// An array that consists of policies.
+            /// </summary>
+            [NameInMap("Policies")]
+            [Validation(Required=false)]
+            public List<ListAegisContainerPluginRuleResponseBodyRuleListPolicies> Policies { get; set; }
+            public class ListAegisContainerPluginRuleResponseBodyRuleListPolicies : TeaModel {
+                /// <summary>
+                /// The policy key.
+                /// </summary>
+                [NameInMap("PolicyKey")]
+                [Validation(Required=false)]
+                public string PolicyKey { get; set; }
+
+                /// <summary>
+                /// The name of the policy.
+                /// </summary>
+                [NameInMap("PolicyName")]
+                [Validation(Required=false)]
+                public string PolicyName { get; set; }
+
+            }
+
+            /// <summary>
             /// The description of the rule.
             /// </summary>
             [NameInMap("RuleDescription")]

@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AzureInstanceCount { get; set; }
 
+            /// <summary>
+            /// The number of cores of exposed assets.
+            /// </summary>
             [NameInMap("ExposedInstanceCoreCount")]
             [Validation(Required=false)]
             public long? ExposedInstanceCoreCount { get; set; }
@@ -83,6 +86,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ImportantAssetCount { get; set; }
 
+            /// <summary>
+            /// The number of cores of assets in the specified asset type. If the asset type is not specified, the value of this parameter indicates the total number of cores of servers and Alibaba Cloud services within your account.
+            /// </summary>
             [NameInMap("InstanceCoreCount")]
             [Validation(Required=false)]
             public long? InstanceCoreCount { get; set; }
@@ -101,6 +107,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? InstanceSyncTaskCount { get; set; }
 
+            /// <summary>
+            /// The number of cores of new servers.
+            /// </summary>
             [NameInMap("NewInstanceCoreCount")]
             [Validation(Required=false)]
             public long? NewInstanceCoreCount { get; set; }
@@ -119,6 +128,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? NoRiskInstanceCount { get; set; }
 
+            [NameInMap("NotBindMachineInstanceCount")]
+            [Validation(Required=false)]
+            public int? NotBindMachineInstanceCount { get; set; }
+
+            /// <summary>
+            /// The number of cores of servers that are not started.
+            /// </summary>
             [NameInMap("NotRunningStatusCoreCount")]
             [Validation(Required=false)]
             public long? NotRunningStatusCoreCount { get; set; }
@@ -158,6 +174,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? RegionCount { get; set; }
 
+            /// <summary>
+            /// The number of cores of vulnerable assets.
+            /// </summary>
             [NameInMap("RiskInstanceCoreCount")]
             [Validation(Required=false)]
             public long? RiskInstanceCoreCount { get; set; }
@@ -197,6 +216,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? UnKnowStatusInstanceCount { get; set; }
 
+            /// <summary>
+            /// The number of cores of unprotected assets.
+            /// </summary>
             [NameInMap("UnprotectedInstanceCoreCount")]
             [Validation(Required=false)]
             public long? UnprotectedInstanceCoreCount { get; set; }

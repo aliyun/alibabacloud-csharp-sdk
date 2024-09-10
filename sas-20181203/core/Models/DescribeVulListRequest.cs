@@ -165,6 +165,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUIDs of the servers on which you want to query the vulnerabilities. Separate multiple UUIDs with commas (,).
+        /// 
+        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to obtain the UUIDs.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

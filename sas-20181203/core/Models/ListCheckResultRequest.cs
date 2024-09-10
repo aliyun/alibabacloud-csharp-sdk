@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckResultRequest : TeaModel {
+        [NameInMap("CheckIds")]
+        [Validation(Required=false)]
+        public List<long?> CheckIds { get; set; }
+
         /// <summary>
         /// The key that you want to use to search for check items in fuzzy match mode.
         /// </summary>

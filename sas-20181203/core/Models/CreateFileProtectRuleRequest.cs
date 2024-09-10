@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> FilePaths { get; set; }
 
         /// <summary>
+        /// The type of the operating system. Valid values:
+        /// 
+        /// *   **windows**: Windows
+        /// *   **linux**: Linux
+        /// </summary>
+        [NameInMap("Platform")]
+        [Validation(Required=false)]
+        public string Platform { get; set; }
+
+        /// <summary>
         /// The paths to the processes that you want to monitor. Wildcard characters are supported.
         /// 
         /// This parameter is required.

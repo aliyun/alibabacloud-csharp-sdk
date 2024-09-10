@@ -106,6 +106,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
+            /// The type of the operating system. Valid values:
+            /// 
+            /// *   **windows**: Windows
+            /// *   **linux**: Linux
+            /// </summary>
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
+
+            /// <summary>
             /// The path to the process.
             /// </summary>
             [NameInMap("ProcPath")]

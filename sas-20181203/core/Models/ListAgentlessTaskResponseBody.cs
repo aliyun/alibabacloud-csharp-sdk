@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EndTime { get; set; }
 
             /// <summary>
+            /// The instance ID of the asset.
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            /// <summary>
             /// The name of the asset.
             /// </summary>
             [NameInMap("InstanceName")]
@@ -45,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The volume of detection data, in MB.
+            /// The amount of data detected. Unit: MB.
             /// </summary>
             [NameInMap("MeasureSpace")]
             [Validation(Required=false)]
@@ -59,27 +66,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// The execution progress of the inspection items.
+            /// The execution progress of the check items.
             /// </summary>
             [NameInMap("ProgressByProject")]
             [Validation(Required=false)]
             public string ProgressByProject { get; set; }
 
             /// <summary>
-            /// The download link for the report.
+            /// The download URL of the report.
             /// </summary>
             [NameInMap("ReportDownloadUrl")]
             [Validation(Required=false)]
             public string ReportDownloadUrl { get; set; }
 
             /// <summary>
-            /// The status of the report. Possible values:
+            /// The status of the report. Valid values:
             /// 
-            /// *   **PREPARED**: In preparation.
-            /// *   **RUNNING**: In progress.
-            /// *   **SUCCESS**: Successful.
-            /// *   **TIMEOUT**: Timeout.
-            /// *   **FAILED**: Failed.
+            /// *   **PREPARED**: preparing
+            /// *   **RUNNING**: running
+            /// *   **SUCCESS**: succeeded
+            /// *   **TIMEOUT**: timed out
+            /// *   **FAILED**: failed
             /// </summary>
             [NameInMap("ReportStatus")]
             [Validation(Required=false)]

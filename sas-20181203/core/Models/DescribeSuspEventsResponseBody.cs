@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the alert event.
+        /// The information about the alert events.
         /// </summary>
         [NameInMap("SuspEvents")]
         [Validation(Required=false)]
@@ -138,14 +138,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// The ID of the image to which the container belongs.
+            /// The ID of the container image.
             /// </summary>
             [NameInMap("ContainerImageId")]
             [Validation(Required=false)]
             public string ContainerImageId { get; set; }
 
             /// <summary>
-            /// The name of the image to which the container belongs.
+            /// The name of the container image.
             /// </summary>
             [NameInMap("ContainerImageName")]
             [Validation(Required=false)]
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageUuid { get; set; }
 
             /// <summary>
-            /// The ID of the affected asset.
+            /// The instance ID of the affected asset.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The public IP address that is associated with instance.
+            /// The public IP address of the associated instance.
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -403,6 +403,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string MaliciousRuleStatus { get; set; }
 
+            /// <summary>
+            /// The labels of alarm event.
+            /// </summary>
             [NameInMap("MarkList")]
             [Validation(Required=false)]
             public List<string> MarkList { get; set; }
@@ -473,6 +476,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string SecurityEventIds { get; set; }
 
+            [NameInMap("SourceAliUid")]
+            [Validation(Required=false)]
+            public long? SourceAliUid { get; set; }
+
             /// <summary>
             /// The stage at which the attack is detected.
             /// </summary>
@@ -488,14 +495,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<DescribeSuspEventsResponseBodySuspEventsTacticItems> TacticItems { get; set; }
             public class DescribeSuspEventsResponseBodySuspEventsTacticItems : TeaModel {
                 /// <summary>
-                /// The ATT\\&CK tactic name.
+                /// The tactic name of ATT\\&CK.
                 /// </summary>
                 [NameInMap("TacticDisplayName")]
                 [Validation(Required=false)]
                 public string TacticDisplayName { get; set; }
 
                 /// <summary>
-                /// The ATT\\&CK stage information.
+                /// The stage information about ATT\\&CK.
                 /// </summary>
                 [NameInMap("TacticId")]
                 [Validation(Required=false)]

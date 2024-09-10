@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BaselineCount { get; set; }
 
             /// <summary>
+            /// The instance ID of the asset.
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            /// <summary>
             /// The instance name of the asset.
             /// </summary>
             [NameInMap("InstanceName")]

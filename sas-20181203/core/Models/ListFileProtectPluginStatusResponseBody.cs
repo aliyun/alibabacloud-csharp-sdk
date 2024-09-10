@@ -79,6 +79,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Online { get; set; }
 
             /// <summary>
+            /// The type of the operating system. Valid values:
+            /// 
+            /// *   **windows**: Windows
+            /// *   **linux**: Linux
+            /// </summary>
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
+
+            /// <summary>
             /// Indicates whether the core file monitoring file is supported.
             /// </summary>
             [NameInMap("SupportFile")]

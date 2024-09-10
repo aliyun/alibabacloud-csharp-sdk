@@ -58,6 +58,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string ShowName { get; set; }
 
+                /// <summary>
+                /// The priority field indicates the level of prominence.
+                /// </summary>
+                [NameInMap("ShowPriorityLevel")]
+                [Validation(Required=false)]
+                public int? ShowPriorityLevel { get; set; }
+
             }
 
             /// <summary>
@@ -66,6 +73,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ShowName")]
             [Validation(Required=false)]
             public string ShowName { get; set; }
+
+            /// <summary>
+            /// The priority field indicates the level of prominence.
+            /// </summary>
+            [NameInMap("ShowPriorityLevel")]
+            [Validation(Required=false)]
+            public int? ShowPriorityLevel { get; set; }
 
             /// <summary>
             /// The type of the check item.

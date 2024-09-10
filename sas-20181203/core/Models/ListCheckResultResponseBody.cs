@@ -16,6 +16,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListCheckResultResponseBodyChecks> Checks { get; set; }
         public class ListCheckResultResponseBodyChecks : TeaModel {
+            [NameInMap("AssetSubType")]
+            [Validation(Required=false)]
+            public int? AssetSubType { get; set; }
+
+            [NameInMap("AssetType")]
+            [Validation(Required=false)]
+            public int? AssetType { get; set; }
+
+            [NameInMap("AssetVendor")]
+            [Validation(Required=false)]
+            public int? AssetVendor { get; set; }
+
             /// <summary>
             /// The ID of the check item.
             /// </summary>

@@ -524,6 +524,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RaspStatus { get; set; }
 
             /// <summary>
+            /// Indicates whether the vulnerability is easily exploited. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
+            /// </summary>
+            [NameInMap("RealRisk")]
+            [Validation(Required=false)]
+            public bool? RealRisk { get; set; }
+
+            /// <summary>
             /// The region ID of the asset.
             /// </summary>
             [NameInMap("RegionId")]

@@ -26,6 +26,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AlarmStatus { get; set; }
 
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+
             /// <summary>
             /// The type of the asset. Valid values:
             /// 
@@ -41,6 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("AssetType")]
             [Validation(Required=false)]
             public string AssetType { get; set; }
+
+            [NameInMap("AssetTypeName")]
+            [Validation(Required=false)]
+            public string AssetTypeName { get; set; }
 
             /// <summary>
             /// The timestamp when Security Center is authorized to scan the asset.
@@ -152,6 +164,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Flag")]
             [Validation(Required=false)]
             public int? Flag { get; set; }
+
+            [NameInMap("FlagName")]
+            [Validation(Required=false)]
+            public string FlagName { get; set; }
 
             /// <summary>
             /// The ID of the asset group to which the asset belongs.

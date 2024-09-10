@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExportFileType { get; set; }
 
         /// <summary>
-        /// The type of the check result list to export. Valid values:
+        /// The type of the check result list that you want to export. Valid values:
         /// 
         /// *   **assetInstance**: the list of servers displayed on the Host page
         /// *   **user**: the list of fingerprints for accounts
@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **baselineCspm**: the list of check results for configuration assessment
         /// *   **attack**: the list of alert events for attack analysis
         /// *   **accessKey**: the list of alerts that are generated for AccessKey pair leaks
+        /// *   **exportObjectScanEvents**: the list of alerts generated for malicious files
         /// 
         /// This parameter is required.
         /// </summary>

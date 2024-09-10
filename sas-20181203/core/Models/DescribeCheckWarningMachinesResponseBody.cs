@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
+        /// The number of the page to return. Default value: **1**.
+        /// </summary>
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        /// <summary>
         /// The servers on which the same risk item is detected.
         /// </summary>
         [NameInMap("Machines")]
@@ -76,6 +83,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
         }
+
+        /// <summary>
+        /// The number of entries returned per page.
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// The ID of the request, which is used to locate and troubleshoot issues.

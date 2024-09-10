@@ -30,6 +30,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        [NameInMap("InstanceList")]
+        [Validation(Required=false)]
+        public List<AddCheckInstanceResultWhiteListRequestInstanceList> InstanceList { get; set; }
+        public class AddCheckInstanceResultWhiteListRequestInstanceList : TeaModel {
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+        }
+
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
+        [NameInMap("RuleType")]
+        [Validation(Required=false)]
+        public string RuleType { get; set; }
+
     }
 
 }

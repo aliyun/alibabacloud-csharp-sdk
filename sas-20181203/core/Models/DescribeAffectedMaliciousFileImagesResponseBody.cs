@@ -72,6 +72,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string HighLight { get; set; }
 
+            /// <summary>
+            /// The ID of alert event.
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
@@ -229,6 +232,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// The object type. Valid value:
             /// 
             /// *   **ECS_IMAGE**
+            /// *   **ECS_SNAPSHOT**
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]

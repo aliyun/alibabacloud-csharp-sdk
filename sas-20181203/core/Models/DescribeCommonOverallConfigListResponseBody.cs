@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCommonOverallConfigListResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the configurations of features.
+        /// The information about the configuration items.
         /// </summary>
         [NameInMap("OverallList")]
         [Validation(Required=false)]
         public List<DescribeCommonOverallConfigListResponseBodyOverallList> OverallList { get; set; }
         public class DescribeCommonOverallConfigListResponseBodyOverallList : TeaModel {
+            /// <summary>
+            /// The editions of Security Center.
+            /// </summary>
             [NameInMap("AuthVersionList")]
             [Validation(Required=false)]
             public List<string> AuthVersionList { get; set; }

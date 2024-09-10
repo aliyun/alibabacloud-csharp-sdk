@@ -81,6 +81,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// The type of the operating system. Valid values:
+            /// 
+            /// *   **windows**: Windows
+            /// *   **linux**: Linux
+            /// </summary>
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
+
+            /// <summary>
             /// The paths to the monitored processes. Wildcard characters are supported.
             /// </summary>
             [NameInMap("ProcPaths")]

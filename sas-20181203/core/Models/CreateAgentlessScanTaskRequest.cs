@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateAgentlessScanTaskRequest : TeaModel {
         /// <summary>
+        /// Identification of asset selection.
+        /// </summary>
+        [NameInMap("AssetSelectionType")]
+        [Validation(Required=false)]
+        public string AssetSelectionType { get; set; }
+
+        /// <summary>
         /// The retention period of images. Unit: days.
         /// </summary>
         [NameInMap("AutoDeleteDays")]
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The type of the detection object. Valid values:
         /// 
         /// *   **2**: image
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]
@@ -49,8 +58,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The UUIDs of the assets on which you want to run the detection task.
         /// 
         /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

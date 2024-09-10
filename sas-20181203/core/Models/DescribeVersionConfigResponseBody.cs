@@ -133,6 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **false**: no
         /// *   **true**: yes
+        /// >Notice: This parameter is deprecated. You can ignore it.
         /// </summary>
         [NameInMap("IsOverBalance")]
         [Validation(Required=false)]

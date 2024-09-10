@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// The instance ID of the asset.
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// The instance name of the asset.
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        /// <summary>
         /// The public IP address of the asset that you want to query.
         /// </summary>
         [NameInMap("InternetIp")]
@@ -60,6 +74,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("TargetName")]
         [Validation(Required=false)]
         public string TargetName { get; set; }
+
+        /// <summary>
+        /// Specifies the type of the object being inspected. Valid values:
+        /// 
+        /// *   **1**: Host Snapshot.
+        /// *   **2**: Host Image.
+        /// *   **3**: User Snapshot.
+        /// *   **4**: User Image.
+        /// </summary>
+        [NameInMap("TargetType")]
+        [Validation(Required=false)]
+        public int? TargetType { get; set; }
 
     }
 

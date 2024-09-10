@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("MultiAccountActionType")]
+        [Validation(Required=false)]
+        public int? MultiAccountActionType { get; set; }
+
         /// <summary>
         /// The name of the alert type.
         /// </summary>

@@ -108,6 +108,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// The source of the malicious file.
+        /// </summary>
+        [NameInMap("ScanRange")]
+        [Validation(Required=false)]
+        public List<string> ScanRange { get; set; }
+
+        /// <summary>
         /// The UUID of the asset.
         /// </summary>
         [NameInMap("Uuid")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedInstancesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the assets.
+        /// The information about the assets.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -47,6 +47,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? GroupFlag { get; set; }
 
+            /// <summary>
+            /// The number of cores of assets in the specified asset type.
+            /// 
+            /// >  If the **MachineTypes** request parameter is not specified, the value of the InstanceCoreCount parameter indicates the total number of cores of assets within your account.
+            /// </summary>
             [NameInMap("InstanceCoreCount")]
             [Validation(Required=false)]
             public long? InstanceCoreCount { get; set; }

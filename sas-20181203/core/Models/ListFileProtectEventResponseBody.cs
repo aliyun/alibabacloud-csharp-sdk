@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The severity of the alert. Valid values:
             /// 
-            /// *   0: does not generate alerts
-            /// *   1: sends notifications
+            /// *   0: no alerts
+            /// *   1: reminder
             /// *   2: suspicious
             /// *   3: high-risk
             /// </summary>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CmdLine { get; set; }
 
             /// <summary>
-            /// The path to the file.
+            /// The path to the file that is managed by the process.
             /// </summary>
             [NameInMap("FilePath")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// The instance name of the server.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// The private IP address of the asset.
+            /// The private IP address of the server.
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
@@ -92,6 +92,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
+            /// The type of the operating system. Valid values:
+            /// 
+            /// *   **windows**: Windows
+            /// *   **linux**: Linux
+            /// </summary>
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
+
+            /// <summary>
             /// The path to the process.
             /// </summary>
             [NameInMap("ProcPath")]
@@ -106,14 +116,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProcPermission { get; set; }
 
             /// <summary>
-            /// The process ID (PID) of the event process.
+            /// The ID of the process.
             /// </summary>
             [NameInMap("ProcessId")]
             [Validation(Required=false)]
             public string ProcessId { get; set; }
 
             /// <summary>
-            /// The remarks.
+            /// The description.
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -132,6 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   0: unhandled
             /// *   1: handled
             /// *   2: added to the whitelist
+            /// *   3: ignored
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

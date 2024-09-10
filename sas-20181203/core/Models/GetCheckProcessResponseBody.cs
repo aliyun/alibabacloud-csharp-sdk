@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("StatusCode")]
+        [Validation(Required=false)]
+        public string StatusCode { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
+
         /// <summary>
         /// The total number of assets on which the task is performed.
         /// </summary>

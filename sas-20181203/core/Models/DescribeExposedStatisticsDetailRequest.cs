@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The Alibaba Cloud account ID of the member in the resource directory.
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the ID.
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

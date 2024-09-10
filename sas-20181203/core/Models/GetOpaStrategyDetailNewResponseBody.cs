@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         /// <summary>
                         /// The name of the sensitive files.
                         /// 
-                        /// >  You can call the [GetSensitiveDefineRuleConfig](https://help.aliyun.com/document_detail/4576877.html) operation to query the ID of the malicious sample.
+                        /// >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]

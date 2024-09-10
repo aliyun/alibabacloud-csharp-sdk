@@ -37,6 +37,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BuyStatus { get; set; }
 
             /// <summary>
+            /// The version of the log analysis field. Valid values:
+            /// - SAS_V1
+            /// - SAS_V2
+            /// </summary>
+            [NameInMap("EtlMetaVersion")]
+            [Validation(Required=false)]
+            public string EtlMetaVersion { get; set; }
+
+            /// <summary>
             /// The status of the log analysis feature. Valid values:
             /// 
             /// *   **yes**: enabled

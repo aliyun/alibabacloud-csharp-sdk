@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the virus. Valid values:
             /// 
-            /// *   **Trojan**: self-mutating trojan
+            /// *   **Trojan**: trojan horse
             /// *   **WebShell**: webshell
             /// *   **Backdoor**: backdoor program
             /// *   **RansomWare**: ransomware
@@ -98,7 +98,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **Worm**: worm
             /// *   **DDoS**: DDoS trojan
             /// *   **Malware**: malicious program
-            /// *   **Backdoor**: reverse shell
             /// *   **RiskWare**: software that has risks
             /// *   **Proxytool**: proxy
             /// *   **Suspicious**: suspicious program

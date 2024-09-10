@@ -182,6 +182,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? StartTime { get; set; }
 
+        [NameInMap("SystemConfig")]
+        [Validation(Required=false)]
+        public bool? SystemConfig { get; set; }
+
         /// <summary>
         /// The service provider (SP) of the cloud asset.
         /// </summary>

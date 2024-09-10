@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? DecompressMaxLayer { get; set; }
 
+        [NameInMap("DecryptionList")]
+        [Validation(Required=false)]
+        public List<string> DecryptionList { get; set; }
+
         /// <summary>
         /// Specifies whether to enable the bucket check policy. Valid values:
         /// 
@@ -74,6 +78,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("KeySuffixList")]
         [Validation(Required=false)]
         public List<string> KeySuffixList { get; set; }
+
+        [NameInMap("LastModifiedStartTime")]
+        [Validation(Required=false)]
+        public long? LastModifiedStartTime { get; set; }
 
         /// <summary>
         /// The name of the policy.

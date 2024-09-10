@@ -118,10 +118,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the system defense rule. Valid values:
             /// 
-            /// *   **1**: alihips
-            /// *   **2**: alinet
-            /// *   **3**: alidetect
-            /// *   **4**: alisecguard
+            /// *   **1**: alihips, process-specific defense
+            /// *   **2**: alinet, network-specific defense
             /// </summary>
             [NameInMap("RuleType")]
             [Validation(Required=false)]

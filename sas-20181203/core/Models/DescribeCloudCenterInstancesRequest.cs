@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("Flags")]
+        [Validation(Required=false)]
+        public string Flags { get; set; }
+
         /// <summary>
         /// The importance of the asset. Valid values:
         /// 

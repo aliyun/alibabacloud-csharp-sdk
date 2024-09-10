@@ -30,6 +30,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// Indicates whether the application protection feature is supported. Valid values:
+        /// 
+        /// - **0**: no.
+        /// 
+        /// - **1**: yes.
+        /// </summary>
         [NameInMap("RaspDefend")]
         [Validation(Required=false)]
         public int? RaspDefend { get; set; }
@@ -41,6 +48,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string VulNameLike { get; set; }
 
+        /// <summary>
+        /// The type of the vulnerabilities. Valid values:
+        /// 
+        /// *   **cve**: Linux software vulnerability.
+        /// *   **sys**: Windows system vulnerability.
+        /// *   **app**: Application vulnerability that is detected by using web scanner.
+        /// </summary>
         [NameInMap("VulType")]
         [Validation(Required=false)]
         public string VulType { get; set; }

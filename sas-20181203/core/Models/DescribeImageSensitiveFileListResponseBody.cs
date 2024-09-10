@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeImageSensitiveFileListResponseBodySensitiveFileList> SensitiveFileList { get; set; }
         public class DescribeImageSensitiveFileListResponseBodySensitiveFileList : TeaModel {
+            /// <summary>
+            /// The suggestion.
+            /// </summary>
             [NameInMap("Advice")]
             [Validation(Required=false)]
             public string Advice { get; set; }
@@ -113,6 +116,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Count { get; set; }
 
+            /// <summary>
+            /// The description of the sensitive file.
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
