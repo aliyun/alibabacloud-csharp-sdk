@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class UpdateTransitRouterVpcAttachmentAttributeRequest : TeaModel {
+    public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest : TeaModel {
         /// <summary>
         /// Specifies whether to allow the Enterprise Edition transit router to advertise routes to the VPC. Valid values:
         /// 
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         [NameInMap("TransitRouterVPCAttachmentOptions")]
         [Validation(Required=false)]
-        public Dictionary<string, string> TransitRouterVPCAttachmentOptions { get; set; }
+        public string TransitRouterVPCAttachmentOptionsShrink { get; set; }
 
     }
 

@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules> AddTrafficMatchRules { get; set; }
         public class UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules : TeaModel {
+            [NameInMap("AddressFamily")]
+            [Validation(Required=false)]
+            public string AddressFamily { get; set; }
+
             /// <summary>
             /// The destination CIDR block that is used to match packets.
             /// 
@@ -155,6 +159,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules> DeleteTrafficMatchRules { get; set; }
         public class UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules : TeaModel {
+            [NameInMap("AddressFamily")]
+            [Validation(Required=false)]
+            public string AddressFamily { get; set; }
+
             /// <summary>
             /// The destination CIDR block that is used to match packets.
             /// </summary>

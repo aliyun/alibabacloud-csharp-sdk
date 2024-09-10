@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class CreateTransitRouterVpcAttachmentRequest : TeaModel {
+    public class CreateTransitRouterVpcAttachmentShrinkRequest : TeaModel {
         /// <summary>
         /// Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to VPCs. Valid values:
         /// 
@@ -86,8 +86,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateTransitRouterVpcAttachmentRequestTag> Tag { get; set; }
-        public class CreateTransitRouterVpcAttachmentRequestTag : TeaModel {
+        public List<CreateTransitRouterVpcAttachmentShrinkRequestTag> Tag { get; set; }
+        public class CreateTransitRouterVpcAttachmentShrinkRequestTag : TeaModel {
             /// <summary>
             /// The tag key.
             /// 
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         [NameInMap("TransitRouterVPCAttachmentOptions")]
         [Validation(Required=false)]
-        public Dictionary<string, string> TransitRouterVPCAttachmentOptions { get; set; }
+        public string TransitRouterVPCAttachmentOptionsShrink { get; set; }
 
         /// <summary>
         /// The VPC ID.
@@ -168,8 +168,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
-        public List<CreateTransitRouterVpcAttachmentRequestZoneMappings> ZoneMappings { get; set; }
-        public class CreateTransitRouterVpcAttachmentRequestZoneMappings : TeaModel {
+        public List<CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings> ZoneMappings { get; set; }
+        public class CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings : TeaModel {
             /// <summary>
             /// A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.
             /// 

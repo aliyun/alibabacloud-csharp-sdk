@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<AddTrafficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules> TrafficMatchRules { get; set; }
         public class AddTrafficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules : TeaModel {
+            [NameInMap("AddressFamily")]
+            [Validation(Required=false)]
+            public string AddressFamily { get; set; }
+
             /// <summary>
             /// The destination CIDR block that is used to match packets.
             /// 

@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        [NameInMap("EnabledIpv6")]
+        [Validation(Required=false)]
+        public bool? EnabledIpv6 { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

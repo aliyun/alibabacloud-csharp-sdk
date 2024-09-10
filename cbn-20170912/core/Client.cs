@@ -5593,13 +5593,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
          * *   To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the required permissions from the account. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](https://help.aliyun.com/document_detail/181553.html).
          * *   VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see [Billing](https://help.aliyun.com/document_detail/189836.html).
          *
-         * @param request CreateTransitRouterVpcAttachmentRequest
+         * @param tmpReq CreateTransitRouterVpcAttachmentRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateTransitRouterVpcAttachmentResponse
          */
-        public CreateTransitRouterVpcAttachmentResponse CreateTransitRouterVpcAttachmentWithOptions(CreateTransitRouterVpcAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateTransitRouterVpcAttachmentResponse CreateTransitRouterVpcAttachmentWithOptions(CreateTransitRouterVpcAttachmentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateTransitRouterVpcAttachmentShrinkRequest request = new CreateTransitRouterVpcAttachmentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransitRouterVPCAttachmentOptions))
+            {
+                request.TransitRouterVPCAttachmentOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPublishRouteEnabled))
             {
@@ -5656,6 +5662,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
             {
                 query["TransitRouterId"] = request.TransitRouterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterVPCAttachmentOptionsShrink))
+            {
+                query["TransitRouterVPCAttachmentOptions"] = request.TransitRouterVPCAttachmentOptionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -5704,13 +5714,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
          * *   To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the required permissions from the account. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](https://help.aliyun.com/document_detail/181553.html).
          * *   VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see [Billing](https://help.aliyun.com/document_detail/189836.html).
          *
-         * @param request CreateTransitRouterVpcAttachmentRequest
+         * @param tmpReq CreateTransitRouterVpcAttachmentRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateTransitRouterVpcAttachmentResponse
          */
-        public async Task<CreateTransitRouterVpcAttachmentResponse> CreateTransitRouterVpcAttachmentWithOptionsAsync(CreateTransitRouterVpcAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateTransitRouterVpcAttachmentResponse> CreateTransitRouterVpcAttachmentWithOptionsAsync(CreateTransitRouterVpcAttachmentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateTransitRouterVpcAttachmentShrinkRequest request = new CreateTransitRouterVpcAttachmentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransitRouterVPCAttachmentOptions))
+            {
+                request.TransitRouterVPCAttachmentOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPublishRouteEnabled))
             {
@@ -5767,6 +5783,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
             {
                 query["TransitRouterId"] = request.TransitRouterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterVPCAttachmentOptionsShrink))
+            {
+                query["TransitRouterVPCAttachmentOptions"] = request.TransitRouterVPCAttachmentOptionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -12818,6 +12838,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ChildInstanceOwnerId"] = request.ChildInstanceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnabledIpv6))
+            {
+                query["EnabledIpv6"] = request.EnabledIpv6;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -12893,6 +12917,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChildInstanceOwnerId))
             {
                 query["ChildInstanceOwnerId"] = request.ChildInstanceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnabledIpv6))
+            {
+                query["EnabledIpv6"] = request.EnabledIpv6;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -16150,6 +16178,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["CenId"] = request.CenId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnabledIpv6))
+            {
+                query["EnabledIpv6"] = request.EnabledIpv6;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -16225,6 +16257,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
                 query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnabledIpv6))
+            {
+                query["EnabledIpv6"] = request.EnabledIpv6;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -26180,13 +26216,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
          * *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
          * *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
          *
-         * @param request UpdateTransitRouterVpcAttachmentAttributeRequest
+         * @param tmpReq UpdateTransitRouterVpcAttachmentAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateTransitRouterVpcAttachmentAttributeResponse
          */
-        public UpdateTransitRouterVpcAttachmentAttributeResponse UpdateTransitRouterVpcAttachmentAttributeWithOptions(UpdateTransitRouterVpcAttachmentAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateTransitRouterVpcAttachmentAttributeResponse UpdateTransitRouterVpcAttachmentAttributeWithOptions(UpdateTransitRouterVpcAttachmentAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateTransitRouterVpcAttachmentAttributeShrinkRequest request = new UpdateTransitRouterVpcAttachmentAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransitRouterVPCAttachmentOptions))
+            {
+                request.TransitRouterVPCAttachmentOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPublishRouteEnabled))
             {
@@ -26227,6 +26269,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentName))
             {
                 query["TransitRouterAttachmentName"] = request.TransitRouterAttachmentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterVPCAttachmentOptionsShrink))
+            {
+                query["TransitRouterVPCAttachmentOptions"] = request.TransitRouterVPCAttachmentOptionsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -26254,13 +26300,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
          * *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
          * *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
          *
-         * @param request UpdateTransitRouterVpcAttachmentAttributeRequest
+         * @param tmpReq UpdateTransitRouterVpcAttachmentAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateTransitRouterVpcAttachmentAttributeResponse
          */
-        public async Task<UpdateTransitRouterVpcAttachmentAttributeResponse> UpdateTransitRouterVpcAttachmentAttributeWithOptionsAsync(UpdateTransitRouterVpcAttachmentAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateTransitRouterVpcAttachmentAttributeResponse> UpdateTransitRouterVpcAttachmentAttributeWithOptionsAsync(UpdateTransitRouterVpcAttachmentAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateTransitRouterVpcAttachmentAttributeShrinkRequest request = new UpdateTransitRouterVpcAttachmentAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransitRouterVPCAttachmentOptions))
+            {
+                request.TransitRouterVPCAttachmentOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPublishRouteEnabled))
             {
@@ -26301,6 +26353,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentName))
             {
                 query["TransitRouterAttachmentName"] = request.TransitRouterAttachmentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterVPCAttachmentOptionsShrink))
+            {
+                query["TransitRouterVPCAttachmentOptions"] = request.TransitRouterVPCAttachmentOptionsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
