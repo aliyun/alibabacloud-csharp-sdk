@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EventPattern")]
         [Validation(Required=false)]
         public List<PutEventRuleRequestEventPattern> EventPattern { get; set; }
@@ -42,7 +45,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The type of the cloud service. Valid values of N: 1 to 50.
             /// 
-            /// >  You can call the DescribeSystemEventMetaList operation to query the cloud services that support event-triggered alerts. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+            /// >  You can call the DescribeSystemEventMetaList operation to query the cloud services that support event-triggered alerts. For more information, see [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Product")]
             [Validation(Required=false)]
@@ -86,6 +91,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the event-triggered alert rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

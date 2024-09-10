@@ -34,7 +34,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The key of the tag whose values you want to query.
         /// 
-        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](https://help.aliyun.com/document_detail/145558.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

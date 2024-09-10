@@ -111,14 +111,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The extended field. The extended field allows you to perform basic operations on the aggregation results.
             /// 
-            /// Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
+            /// Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\\*100.
             /// </summary>
             [NameInMap("MetricExpress")]
             [Validation(Required=false)]
             public string MetricExpress { get; set; }
 
             /// <summary>
-            /// The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+            /// The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]

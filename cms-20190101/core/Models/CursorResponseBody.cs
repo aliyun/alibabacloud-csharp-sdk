@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// Cursor is used as an input parameter for data export in the [BatchExport](~~2329847~~) operation.
+        /// Cursor is used as an input parameter for data export in the [BatchExport](https://help.aliyun.com/document_detail/2329847.html) operation.
         /// </summary>
         [NameInMap("Cursor")]
         [Validation(Required=false)]

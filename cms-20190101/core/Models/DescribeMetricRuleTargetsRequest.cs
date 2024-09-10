@@ -16,7 +16,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the alert rule.
         /// 
-        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

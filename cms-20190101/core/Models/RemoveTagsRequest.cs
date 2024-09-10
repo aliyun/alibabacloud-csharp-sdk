@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class RemoveTagsRequest : TeaModel {
         /// <summary>
         /// The IDs of the application groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The tag key.
             /// 
             /// > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The tag value.
             /// 
             /// > The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

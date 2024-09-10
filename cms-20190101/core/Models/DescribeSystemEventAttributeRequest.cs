@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The type of the system event.
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the types of system events.
+        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the types of system events.
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the system event.
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the names of system events.
+        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the names of system events.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The abbreviation of the service name.
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the abbreviations of service names.
+        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the abbreviations of service names.
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The status of the system event.
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the statuses of system events.
+        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the statuses of system events.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   Availability
         /// *   ErrorRate
         /// *   ResponseTime
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -36,7 +38,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the site monitoring task.
         /// 
-        /// For more information about how to obtain the ID of a site monitoring task, see [DescribeSiteMonitorList](~~115052~~).
+        /// For more information about how to obtain the ID of a site monitoring task, see [DescribeSiteMonitorList](https://help.aliyun.com/document_detail/115052.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

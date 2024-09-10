@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the metric import task.
         /// 
-        /// For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).
+        /// For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](https://help.aliyun.com/document_detail/428624.html).
         /// 
         /// > This parameter is required only if you call this operation to delete metrics for the logs that are imported from Log Service. In this case, the `TaskType` parameter is set to `aliyun_sls`.
         /// </summary>

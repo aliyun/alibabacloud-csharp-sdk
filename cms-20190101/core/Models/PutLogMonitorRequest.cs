@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutLogMonitorRequest : TeaModel {
+        /// <summary>
+        /// The aggregation logic.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Aggregates")]
         [Validation(Required=false)]
         public List<PutLogMonitorRequestAggregates> Aggregates { get; set; }
         public class PutLogMonitorRequestAggregates : TeaModel {
             /// <summary>
             /// The alias of the aggregate function. Valid values of N: 1 to 10.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Alias")]
             [Validation(Required=false)]
@@ -22,22 +29,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// The name of the field to be aggregated. Valid values of N: 1 to 10.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("FieldName")]
             [Validation(Required=false)]
             public string FieldName { get; set; }
 
             /// <summary>
-            /// The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values of N: 1 to 10. Valid values:
+            /// The function that is used to aggregate log data within a statistical period. Valid values of N: 1 to 10. Valid values:
             /// 
             /// *   count: counts the number.
             /// *   sum: calculates the total value.
             /// *   avg: calculates the average value.
-            /// *   max: selects the maximum value.
-            /// *   min: selects the minimum value.
-            /// *   countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.
-            /// *   sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.
-            /// *   distinct: counts the number of logs where the specified field appears within the aggregation period.
+            /// *   max: calculates the maximum value.
+            /// *   min: calculates the minimum value.
+            /// *   countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.
+            /// *   sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.
+            /// *   distinct: calculates the number of unique values of the specified field within a statistical period.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Function")]
             [Validation(Required=false)]
@@ -52,6 +63,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.
+        /// </summary>
         [NameInMap("Groupbys")]
         [Validation(Required=false)]
         public List<PutLogMonitorRequestGroupbys> Groupbys { get; set; }
@@ -82,20 +96,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The extended field. The extended field allows you to perform basic operations on the aggregation results.
         /// 
-        /// For example, if you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
+        /// For example, you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\\*100.
         /// 
-        /// JSON format: {"extend":{"errorPercent":"5XXNumber/TotalNumber\*100"}}. Description:
+        /// JSON format: {"extend":{"errorPercent":"5XXNumber/TotalNumber\\*100"}}. Description:
         /// 
         /// *   extend: required.
         /// *   errorPercent: the alias of the field generated in the calculation result. You can specify the alias as needed.
-        /// *   5XXNumber/TotalNumber\*100: the calculation expression.
+        /// *   5XXNumber/TotalNumber\\*100: the calculation expression.
         /// </summary>
         [NameInMap("MetricExpress")]
         [Validation(Required=false)]
         public string MetricExpress { get; set; }
 
         /// <summary>
-        /// The name of the metric. For more information about the metrics for cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// The metric name. For more information about the metrics for cloud services, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -106,21 +122,27 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the Log Service Logstore.
+        /// The name of the Simple Log Service Logstore.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SlsLogstore")]
         [Validation(Required=false)]
         public string SlsLogstore { get; set; }
 
         /// <summary>
-        /// The name of the Log Service project.
+        /// The name of the Simple Log Service project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SlsProject")]
         [Validation(Required=false)]
         public string SlsProject { get; set; }
 
         /// <summary>
-        /// The region in which the Log Service project resides.
+        /// The region in which the Simple Log Service project resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SlsRegionId")]
         [Validation(Required=false)]
@@ -140,6 +162,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Unit { get; set; }
 
+        /// <summary>
+        /// The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements. If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
+        /// </summary>
         [NameInMap("ValueFilter")]
         [Validation(Required=false)]
         public List<PutLogMonitorRequestValueFilter> ValueFilter { get; set; }
@@ -156,10 +181,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// *   `contain`: contains
             /// *   `notContain`: does not contain
-            /// *   `>`: be greater than
-            /// *   `<`: be less than
-            /// *   `>=`: be greater than or equal to
-            /// *   `<=`: be less than or equal to
+            /// *   `>`: greater than
+            /// *   `<`: less than
+            /// *   `>=`: greater than or equal to
+            /// *   `<=`: less than or equal to
             /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
@@ -181,6 +206,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   or
         /// 
         /// >  The ValueFilterRelation and `ValueFilter.N.Key` parameters must be used in pair.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ValueFilterRelation")]
         [Validation(Required=false)]

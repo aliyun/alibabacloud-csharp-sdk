@@ -10,43 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupInstancesRequest : TeaModel {
         /// <summary>
-        /// The abbreviation of the service name. Valid values:
+        /// The abbreviation of the cloud service name.
         /// 
-        /// *   ECS: Elastic Compute Service (ECS) instances provided by Alibaba Cloud and hosts not provided by Alibaba Cloud
-        /// *   RDS: ApsaraDB for RDS
-        /// *   ADS: AnalyticDB
-        /// *   SLB: Server Load Balancer (SLB)
-        /// *   VPC: Virtual Private Cloud (VPC)
-        /// *   APIGATEWAY: API Gateway
-        /// *   CDN: Alibaba Cloud Content Delivery Network (CDN)
-        /// *   CS: Container Service for Swarm
-        /// *   DCDN: Dynamic Route for CDN
-        /// *   DDoS: Anti-DDoS Pro
-        /// *   EIP: Elastic IP Address (EIP)
-        /// *   ELASTICSEARCH: Elasticsearch
-        /// *   EMR: E-MapReduce
-        /// *   ESS: Auto Scaling
-        /// *   HBASE: ApsaraDB for Hbase
-        /// *   IOT_EDGE: IoT Edge
-        /// *   K8S_POD: pods in Container Service for Kubernetes
-        /// *   KVSTORE_SHARDING: ApsaraDB for Redis of the cluster architecture
-        /// *   KVSTORE_SPLITRW: ApsaraDB for Redis of the read/write splitting architecture
-        /// *   KVSTORE_STANDARD: ApsaraDB for Redis of the standard architecture
-        /// *   MEMCACHE: ApsaraDB for Memcache
-        /// *   MNS: Message Service (MNS)
-        /// *   MONGODB: ApsaraDB for MongoDB of the replica set architecture
-        /// *   MONGODB_CLUSTER: ApsaraDB for MongoDB of the cluster architecture
-        /// *   MONGODB_SHARDING: ApsaraDB for MongoDB of the sharded cluster architecture
-        /// *   MQ_TOPIC: MNS topics
-        /// *   OCS: ApsaraDB for Memcache of earlier versions
-        /// *   OPENSEARCH: Open Search
-        /// *   OSS: Object Storage Service (OSS)
-        /// *   POLARDB: PolarDB
-        /// *   PETADATA: HybridDB for MySQL
-        /// *   SCDN: Secure Content Delivery Network (SCDN)
-        /// *   SHAREBANDWIDTHPACKAGES: EIP Bandwidth Plan
-        /// *   SLS: Log Service
-        /// *   VPN: VPN Gateway
+        /// >  For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](https://help.aliyun.com/document_detail/114916.html) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -54,6 +22,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -61,6 +31,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIdList")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The alert rule configurations.
         /// 
         /// Valid values of N: 1 to 3.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlertConfig")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
             /// 
             /// Valid values of N: 1 to 3.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ComparisonOperator")]
             [Validation(Required=false)]
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   info: information
             /// 
             /// Valid values of N: 1 to 3.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("EscalationsLevel")]
             [Validation(Required=false)]
@@ -85,6 +91,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// Valid values of N: 1 to 3.
             /// 
             /// >  Set the value to Average.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
@@ -100,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The Alibaba Cloud Resource Name (ARN) of the resource.
                 /// 
-                /// For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).
+                /// For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](https://help.aliyun.com/document_detail/121592.html).
                 /// 
                 /// Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
                 /// 
@@ -127,7 +135,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The ID of the resource for which alerts are triggered.
                 /// 
-                /// For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).
+                /// For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](https://help.aliyun.com/document_detail/121592.html).
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -159,6 +167,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// Valid values of N: 1 to 3.
             /// 
             /// Unit: cores.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Threshold")]
             [Validation(Required=false)]
@@ -170,6 +180,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// Valid values of N: 1 to 3.
             /// 
             /// >  An alert is triggered only if the number of times for which the threshold can be consecutively exceeded is reached.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Times")]
             [Validation(Required=false)]
@@ -189,7 +201,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the application group.
         /// 
-        /// For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -255,6 +269,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The process name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public PutResourceMetricRuleShrinkRequestEscalationsCritical Critical { get; set; }
             public class PutResourceMetricRuleShrinkRequestEscalationsCritical : TeaModel {
                 /// <summary>
-                /// The operator that is used to compare the metric value with the threshold. Valid values:
+                /// The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid value:
                 /// 
                 /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
                 /// *   GreaterThanThreshold: greater than the threshold
@@ -32,21 +32,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
                 /// *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("ComparisonOperator")]
                 [Validation(Required=false)]
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// The statistical methods for Critical-level alerts. Valid values:
+                /// The statistical methods for Critical-level alerts.
                 /// 
-                /// *   Maximum: the maximum value
-                /// *   Minimum: the minimum value
-                /// *   Average: the average value
-                /// *   Availability: the availability rate
+                /// The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]
@@ -55,16 +52,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The threshold for Critical-level alerts.
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("Threshold")]
                 [Validation(Required=false)]
                 public string Threshold { get; set; }
 
                 /// <summary>
-                /// The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered.
+                /// The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public PutResourceMetricRuleShrinkRequestEscalationsInfo Info { get; set; }
             public class PutResourceMetricRuleShrinkRequestEscalationsInfo : TeaModel {
                 /// <summary>
-                /// The operator that is used to compare the metric value with the threshold. Valid values:
+                /// The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid value:
                 /// 
                 /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
                 /// *   GreaterThanThreshold: greater than the threshold
@@ -91,21 +88,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
                 /// *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("ComparisonOperator")]
                 [Validation(Required=false)]
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// The statistical methods for Info-level alerts. Valid values:
+                /// The statistical methods for Info-level alerts.
                 /// 
-                /// *   Maximum: the maximum value
-                /// *   Minimum: the minimum value
-                /// *   Average: the average value
-                /// *   Availability: the availability rate
+                /// The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]
@@ -114,16 +108,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The threshold for Info-level alerts.
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("Threshold")]
                 [Validation(Required=false)]
                 public string Threshold { get; set; }
 
                 /// <summary>
-                /// The consecutive number of times for which the metric value meets the trigger condition before an Info-level alert is triggered.
+                /// The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -136,7 +130,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public PutResourceMetricRuleShrinkRequestEscalationsWarn Warn { get; set; }
             public class PutResourceMetricRuleShrinkRequestEscalationsWarn : TeaModel {
                 /// <summary>
-                /// The operator that is used to compare the metric value with the threshold. Valid values:
+                /// The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid value:
                 /// 
                 /// *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
                 /// *   GreaterThanThreshold: greater than the threshold
@@ -150,21 +144,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
                 /// *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("ComparisonOperator")]
                 [Validation(Required=false)]
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// The statistical methods for Warn-level alerts. Valid values:
+                /// The statistical methods for Warn-level alerts.
                 /// 
-                /// *   Maximum: the maximum value
-                /// *   Minimum: the minimum value
-                /// *   Average: the average value
-                /// *   Availability: the availability rate
+                /// The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]
@@ -173,16 +164,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The threshold for Warn-level alerts.
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("Threshold")]
                 [Validation(Required=false)]
                 public string Threshold { get; set; }
 
                 /// <summary>
-                /// The consecutive number of times for which the metric value meets the trigger condition before a Warn-level alert is triggered.
+                /// The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.
                 /// 
-                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.
+                /// >  You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -202,16 +193,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string CompositeExpressionShrink { get; set; }
 
         /// <summary>
-        /// The alert contact group. The alert notifications are sent to the contacts that belong to the alert contact group.
+        /// The alert contact groups. Alert notifications are sent to the alert contacts in the alert contact group.
         /// 
-        /// >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).
+        /// >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](https://help.aliyun.com/document_detail/114923.html) and [PutContactGroup](https://help.aliyun.com/document_detail/114929.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactGroups")]
         [Validation(Required=false)]
         public string ContactGroups { get; set; }
 
         /// <summary>
-        /// The time period during which the alert rule is effective.
+        /// The period of time during which the alert rule is effective.
         /// </summary>
         [NameInMap("EffectiveInterval")]
         [Validation(Required=false)]
@@ -225,30 +218,32 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EmailSubject { get; set; }
 
         /// <summary>
-        /// The interval at which the alert is triggered. Unit: seconds.
+        /// The interval at which alerts are triggered based on the alert rule. Unit: seconds.
         /// 
-        /// >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
+        /// >  For more information about how to query the statistical periods of metrics, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.
+        /// 
+        /// >  This parameter is equivalent to the Label parameter of Prometheus alerts.
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<PutResourceMetricRuleShrinkRequestLabels> Labels { get; set; }
         public class PutResourceMetricRuleShrinkRequestLabels : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// The tag key.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The tag value.
             /// 
             /// >  You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.
             /// </summary>
@@ -259,27 +254,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The name of the metric. For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).
+        /// The metric name. For more information about how to query metric names, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// 
-        /// >  If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to the name of the namespace. For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+        /// >  If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to the name of the namespace. For more information about how to query the names of namespaces, see [DescribeHybridMonitorNamespaceList](https://help.aliyun.com/document_detail/428880.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The namespace of the cloud service. For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).
+        /// The namespace of the cloud service. For more information about how to query the namespaces of cloud services, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// 
         /// >  If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to `acs_prometheus`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The processing method of alerts when no monitoring data is found. Valid values:
+        /// The method that is used to handle alerts when no monitoring data is found. Valid value:
         /// 
-        /// *   KEEP_LAST_STATE (default value): No operation is performed.
+        /// *   KEEP_LAST_STATE (default): No operation is performed.
         /// *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
         /// *   OK: The status is considered normal.
         /// </summary>
@@ -288,7 +287,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string NoDataPolicy { get; set; }
 
         /// <summary>
-        /// The time period during which the alert rule is ineffective.
+        /// The period of time during which the alert rule is ineffective.
         /// </summary>
         [NameInMap("NoEffectiveInterval")]
         [Validation(Required=false)]
@@ -297,25 +296,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The statistical period of the metric. Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.
         /// 
-        /// >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
+        /// >  For more information about how to query the statistical periods of metrics, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// The Prometheus alert rule.
+        /// Prometheus alerts.
         /// 
-        /// >  This parameter is required only when you create a Prometheus alert rule for Hybrid Cloud Monitoring.
+        /// >  This parameter is required only if you create a Prometheus alert rule for Hybrid Cloud Monitoring.
         /// </summary>
         [NameInMap("Prometheus")]
         [Validation(Required=false)]
         public string PrometheusShrink { get; set; }
 
         /// <summary>
-        /// The information about the resource. Examples: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` and `[{"userId":"100931896542****"}]`.
+        /// The resource information. Examples: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` and `[{"userId":"100931896542****"}]`.
         /// 
-        /// For information about the supported dimensions that are used to query resources, see [Appendix 1: Metrics](~~163515~~).
+        /// For more information about the supported dimensions that are used to query resources, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -324,9 +323,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the alert rule.
         /// 
-        /// You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// You can specify a new ID or the ID of an existing alert rule. For more information about how to query the IDs of alert rules, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
         /// 
         /// >  If you specify a new ID, a threshold-triggered alert rule is created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -335,18 +336,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the alert rule.
         /// 
-        /// You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// You can specify a new name or the name of an existing alert rule. For more information about how to query the names of alert rules, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
         /// 
         /// >  If you specify a new name, a threshold-triggered alert rule is created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
+        /// The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
         /// 
-        /// >  If an alert is not cleared within the mute period, a new alert notification is sent when the mute period ends.
+        /// >  If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.
         /// </summary>
         [NameInMap("SilenceTime")]
         [Validation(Required=false)]

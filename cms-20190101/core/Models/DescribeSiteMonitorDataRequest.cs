@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// *   Availability
         /// *   ResponseTime
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -68,6 +70,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the site monitoring task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

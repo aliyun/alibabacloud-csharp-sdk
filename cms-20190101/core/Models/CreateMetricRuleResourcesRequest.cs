@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The resources to be associated with the alert rule. The value is a JSON array.
         /// 
         /// >  You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

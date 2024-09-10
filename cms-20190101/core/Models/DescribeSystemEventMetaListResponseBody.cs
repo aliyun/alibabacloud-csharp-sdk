@@ -94,6 +94,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// The returned message.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

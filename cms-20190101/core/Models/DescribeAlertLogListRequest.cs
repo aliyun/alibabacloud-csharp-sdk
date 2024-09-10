@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The metric name.
         /// 
-        /// > For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// > For more information about the metrics of different cloud services, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The namespace of the cloud service.
         /// 
-        /// >  For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).
+        /// >  For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The abbreviation of the service name.
         /// 
-        /// For information about how to obtain the abbreviation of a cloud service name, see [DescribeProductsOfActiveMetricRule](~~114930~~).
+        /// For information about how to obtain the abbreviation of a cloud service name, see [DescribeProductsOfActiveMetricRule](https://help.aliyun.com/document_detail/114930.html).
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the alert rule.
         /// 
-        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

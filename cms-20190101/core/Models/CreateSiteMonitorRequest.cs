@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class CreateSiteMonitorRequest : TeaModel {
         /// <summary>
         /// The URL or IP address that is monitored by the task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the alert rule.
         /// 
-        /// For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
         /// </summary>
         [NameInMap("AlertIds")]
         [Validation(Required=false)]
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// The value is a JSON array. Example: `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`. The values of the city field indicate Beijing, Hangzhou, and Qingdao.
         /// 
-        /// For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).
+        /// For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](https://help.aliyun.com/document_detail/115045.html).
         /// </summary>
         [NameInMap("IspCities")]
         [Validation(Required=false)]
@@ -68,7 +70,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the site monitoring task.
         /// 
-        /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+        /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -78,10 +82,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The type of the site monitoring task.
         /// 
         /// Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
+
+        [NameInMap("VpcConfig")]
+        [Validation(Required=false)]
+        public string VpcConfig { get; set; }
 
     }
 

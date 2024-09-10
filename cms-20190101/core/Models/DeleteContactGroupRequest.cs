@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class DeleteContactGroupRequest : TeaModel {
         /// <summary>
         /// The name of the alert group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]

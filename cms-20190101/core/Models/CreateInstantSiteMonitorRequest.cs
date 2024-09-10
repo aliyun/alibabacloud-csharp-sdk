@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class CreateInstantSiteMonitorRequest : TeaModel {
         /// <summary>
         /// The URL or IP address that you want to test.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// The value is a `JSON array`. Example: {"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}. The values of the city field indicate Beijing, Hangzhou, and Qingdao.
         /// 
-        /// For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).
+        /// For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](https://help.aliyun.com/document_detail/115045.html).
         /// 
         /// > You must specify one of the `IspCities` and `RandomIspCity` parameters.
         /// </summary>
@@ -54,7 +56,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the instant test task.
         /// 
-        /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+        /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -62,6 +66,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The type of the instant test task. Valid values: HTTP, PING, TCP, UDP, and DNS.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

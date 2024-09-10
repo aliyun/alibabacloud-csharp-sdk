@@ -12,21 +12,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The HTTP status code.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The list of resources that failed to be created or modified.
+        /// The failed data.
         /// </summary>
         [NameInMap("FailData")]
         [Validation(Required=false)]
         public PutMetricRuleTargetsResponseBodyFailData FailData { get; set; }
         public class PutMetricRuleTargetsResponseBodyFailData : TeaModel {
             /// <summary>
-            /// The information about the resource for which alerts are triggered.
+            /// The information about the resources for which alerts are triggered.
             /// </summary>
             [NameInMap("Targets")]
             [Validation(Required=false)]
@@ -37,14 +37,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public List<PutMetricRuleTargetsResponseBodyFailDataTargetsTarget> Target { get; set; }
                 public class PutMetricRuleTargetsResponseBodyFailDataTargetsTarget : TeaModel {
                     /// <summary>
-                    /// The ARN of the resource.
+                    /// The ARN of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. MNS, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. The following part describes the ARN of MNS and the parameters in the ARN:
                     /// 
-                    /// Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
+                    /// *   {Service name abbreviation}: mns.
                     /// 
-                    /// *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
                     /// *   {userId}: the ID of the Alibaba Cloud account.
+                    /// 
                     /// *   {regionId}: the region ID of the message queue or topic.
-                    /// *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
+                    /// 
+                    /// *   {Resource type}: the type of the resource for which alerts are triggered. Valid values:
+                    /// 
+                    ///     *   **queues**
+                    ///     *   **topics**
+                    /// 
+                    /// *   {Resource name}: the resource name.
+                    /// 
+                    ///     *   If the resource type is **queues**, the resource name is the queue name.
+                    ///     *   If the resource type is **topics**, the resource name is the topic name.
                     /// </summary>
                     [NameInMap("Arn")]
                     [Validation(Required=false)]
@@ -58,11 +67,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// The level of the alert. Valid values:
+                    /// The alert level. Valid values:
                     /// 
-                    /// *   INFO: information
-                    /// *   WARN: warning
-                    /// *   CRITICAL: critical
+                    /// *   INFO
+                    /// *   WARN
+                    /// *   CRITICAL
                     /// </summary>
                     [NameInMap("Level")]
                     [Validation(Required=false)]
@@ -75,24 +84,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// *   true: The request was successful.
+        /// *   false: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

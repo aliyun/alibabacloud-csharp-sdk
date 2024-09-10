@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventHistogramRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query.
+        /// The end time.
         /// 
-        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The type of the system event.
+        /// The event type.
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the types of system events.
+        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the types of system events.
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The level of the system event. Valid values:
+        /// The level of the event. Valid values:
         /// 
         /// *   CRITICAL
         /// *   WARN
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// The name of the system event.
+        /// The event name.
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the names of system events.
+        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the names of system events.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The abbreviation of the service name.
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the abbreviations of service names.
+        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the abbreviations of service names.
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]
@@ -68,28 +68,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The keywords contained in the content of the system event to query. You can use a logical operator between keywords. Examples:
+        /// The keywords that are used to search for the system event. Valid values:
         /// 
-        /// *   If you need to query the system event whose content contains a and b, set the value to `a and b`.
-        /// *   If you need to query the system event whose content contains a or b, set the value to `a or b`.
+        /// *   If you want to search for the system event whose content contains a and b, set the value to `a and b`.
+        /// *   If you want to search for the system event whose content contains a or b, set the value to `a or b`.
         /// </summary>
         [NameInMap("SearchKeywords")]
         [Validation(Required=false)]
         public string SearchKeywords { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// The start time.
         /// 
-        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The status of the system event.
+        /// The event status.
         /// 
-        /// >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the statuses of system events.
+        /// >  You can call the [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html) operation to query the status of system events.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

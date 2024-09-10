@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class DeleteCustomMetricRequest : TeaModel {
         /// <summary>
         /// The ID of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the metric.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorDataListRequest : TeaModel {
         /// <summary>
-        /// The timestamp that specifies the end of the time range to query.
+        /// The end of the time range to query.
         /// 
         /// Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("End")]
         [Validation(Required=false)]
@@ -21,14 +23,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the namespace.
         /// 
-        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+        /// For more information about how to query the names of namespaces, see [DescribeHybridMonitorNamespaceList](https://help.aliyun.com/document_detail/428880.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The interval at which monitoring data is collected.
+        /// The statistical period of the monitoring data.
         /// 
         /// Unit: seconds.
         /// </summary>
@@ -37,9 +41,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// The name of the metric.
+        /// The metric name.
         /// 
         /// >  PromQL statements are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PromSQL")]
         [Validation(Required=false)]
@@ -50,9 +56,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The timestamp that specifies the beginning of the time range to query.
+        /// The start of the time range to query.
         /// 
         /// Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]

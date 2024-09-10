@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMetricRuleBlackListRequest : TeaModel {
         /// <summary>
-        /// The category of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+        /// The category of the cloud service. For example, ApsaraDB for Redis supports the standard architecture, the cluster architecture, and the read/write splitting architecture. In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -51,7 +53,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the blacklist policy.
         /// 
-        /// For information about how to obtain the ID of a blacklist policy, see [DescribeMetricRuleBlackList](~~457257~~).
+        /// For information about how to obtain the ID of a blacklist policy, see [DescribeMetricRuleBlackList](https://help.aliyun.com/document_detail/457257.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -59,6 +63,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The IDs of the instances that belong to the specified cloud service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -78,6 +84,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The name of the metric.
             /// 
             /// Valid values of N: 1 to 10.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -96,6 +104,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the blacklist policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -104,7 +114,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The namespace of the cloud service.
         /// 
-        /// For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// For more information about the namespaces of cloud services, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -118,16 +130,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The effective scope of the blacklist policy. Valid values:
         /// 
         /// *   USER: The blacklist policy takes effect only within the current Alibaba Cloud account.
-        /// *   GROUP (default): The blacklist policy takes effect only within the specified application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// *   GROUP (default): The blacklist policy takes effect only within the specified application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
         /// </summary>
         [NameInMap("ScopeType")]
         [Validation(Required=false)]
         public string ScopeType { get; set; }
 
         /// <summary>
-        /// The IDs of the application groups. Specify a JSON array.
+        /// The IDs of the application groups.
         /// 
-        /// > This parameter must be specified when `ScopeType` is set to `GROUP`.
+        /// >  This parameter is required only when `ScopeType` is set to `GROUP`.
         /// </summary>
         [NameInMap("ScopeValue")]
         [Validation(Required=false)]

@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the namespace.
         /// 
-        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](https://help.aliyun.com/document_detail/428880.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

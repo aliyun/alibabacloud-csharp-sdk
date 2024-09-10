@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 200.
             /// 
-            /// For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](~~114916~~) operation.
+            /// For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](https://help.aliyun.com/document_detail/114916.html) operation.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 200.
             /// 
-            /// For information about how to obtain metrics, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
+            /// For information about how to obtain metrics, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 200.
             /// 
-            /// For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
+            /// For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// For example, an alert template is applied to an application group, this parameter is set to `{"disk":"/"}`, and the MetricName parameter is set to `DiskUtilization`. In this case, the generated alert rule is applied to the root disk partition (`"/"`) of all instances in the application group to which the alert template is applied.
             /// 
-            /// > For more information about the values of extended fields, see [DescribeMetricRuleTemplateAttribute](~~114979~~).
+            /// > For more information about the values of extended fields, see [DescribeMetricRuleTemplateAttribute](https://help.aliyun.com/document_detail/114979.html).
             /// </summary>
             [NameInMap("Selector")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the alert template.
         /// 
-        /// For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).
+        /// For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -202,7 +202,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The version of the alert template. The version changes with the number of times that the alert template is modified.
         /// 
-        /// For information about how to obtain the version of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).
+        /// For information about how to obtain the version of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RestVersion")]
         [Validation(Required=false)]
@@ -211,7 +213,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the alert template.
         /// 
-        /// For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).
+        /// For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

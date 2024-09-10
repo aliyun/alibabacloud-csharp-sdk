@@ -234,21 +234,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS SMS { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS : TeaModel {
                 /// <summary>
-                /// The total quota of alert text messages.
+                /// The total quota of alert text messages. Unit: messages.
                 /// </summary>
                 [NameInMap("QuotaLimit")]
                 [Validation(Required=false)]
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// The quota of alert text messages in your resource plan.
+                /// The quota of alert text messages in your resource plan. Unit: messages.
                 /// </summary>
                 [NameInMap("QuotaPackage")]
                 [Validation(Required=false)]
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// The used quota of alert text messages in your resource plan.
+                /// The used quota of alert text messages in your resource plan. Unit: messages.
                 /// </summary>
                 [NameInMap("QuotaUsed")]
                 [Validation(Required=false)]

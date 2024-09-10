@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the site monitoring task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

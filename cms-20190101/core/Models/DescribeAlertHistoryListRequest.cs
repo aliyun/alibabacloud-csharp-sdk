@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the application group.
         /// 
-        /// For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The metric that is used to monitor the cloud service.
         /// 
-        /// For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).
+        /// For information about how to query the name of a metric, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The namespace of the cloud service.
         /// 
-        /// For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).
+        /// For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the alert rule.
         /// 
-        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the alert rule.
         /// 
-        /// For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// For information about how to query the name of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

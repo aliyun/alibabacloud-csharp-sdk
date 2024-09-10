@@ -16,7 +16,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the event-triggered alert rule.
         /// 
-        /// For information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).
+        /// For information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](https://help.aliyun.com/document_detail/114996.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

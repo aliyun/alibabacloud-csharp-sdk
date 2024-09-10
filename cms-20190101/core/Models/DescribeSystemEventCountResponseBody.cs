@@ -10,30 +10,35 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventCountResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status codes.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The returned message.
+        /// 
+        /// If the request was successful, a success message is returned. If the request failed, an error message is returned.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -90,7 +95,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The number of times that the system event occurred.
+                /// The number of times that the system event has occurred.
                 /// </summary>
                 [NameInMap("Num")]
                 [Validation(Required=false)]
@@ -104,14 +109,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Product { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource.
+                /// The resource ID.
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
@@ -125,7 +130,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The timestamp when the system event occurred. Unit: milliseconds.
+                /// The time when the system event occurred. The value is a timestamp. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("Time")]
                 [Validation(Required=false)]

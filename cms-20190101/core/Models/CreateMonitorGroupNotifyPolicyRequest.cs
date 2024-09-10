@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The timestamp that indicates the end time of the validity period for the policy.
         /// 
         /// This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The type of the policy. Valid value: PauseNotify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The timestamp that indicates the start time of the validity period for the policy.
         /// 
         /// This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

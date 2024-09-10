@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).
+            /// The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](https://help.aliyun.com/document_detail/115048.html).
             /// </summary>
             [NameInMap("OptionJson")]
             [Validation(Required=false)]
@@ -451,6 +451,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string DnsType { get; set; }
 
+                [NameInMap("empty_message")]
+                [Validation(Required=false)]
+                public bool? EmptyMessage { get; set; }
+
                 [NameInMap("expect_exist_string")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString ExpectExistString { get; set; }
@@ -507,6 +511,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string HttpMethod { get; set; }
 
+                [NameInMap("ip_network")]
+                [Validation(Required=false)]
+                public string IpNetwork { get; set; }
+
                 [NameInMap("isBase64Encode")]
                 [Validation(Required=false)]
                 public string IsBase64Encode { get; set; }
@@ -560,6 +568,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [NameInMap("protocol")]
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
+
+                [NameInMap("quic_enabled")]
+                [Validation(Required=false)]
+                public bool? QuicEnabled { get; set; }
+
+                [NameInMap("quic_target")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonQuicTarget QuicTarget { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonQuicTarget : TeaModel {
+                    [NameInMap("quic_target")]
+                    [Validation(Required=false)]
+                    public List<string> QuicTarget { get; set; }
+
+                }
 
                 /// <summary>
                 /// The content of the HTTP request.
@@ -677,6 +699,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
+
+            [NameInMap("VpcConfig")]
+            [Validation(Required=false)]
+            public DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig VpcConfig { get; set; }
+            public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig : TeaModel {
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("VswitchId")]
+                [Validation(Required=false)]
+                public string VswitchId { get; set; }
+
+            }
 
         }
 

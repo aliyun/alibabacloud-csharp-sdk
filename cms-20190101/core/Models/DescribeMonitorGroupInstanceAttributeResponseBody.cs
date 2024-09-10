@@ -10,37 +10,37 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The responses code.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The total number of returned pages.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The description of the resource.
+                /// The resource description.
                 /// </summary>
                 [NameInMap("Desc")]
                 [Validation(Required=false)]
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Dimension { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// The instance name.
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
@@ -99,14 +99,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
+                /// <summary>
+                /// The region.
+                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceRegion Region { get; set; }
                 public class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceRegion : TeaModel {
+                    /// <summary>
+                    /// The zone.
+                    /// </summary>
                     [NameInMap("AvailabilityZone")]
                     [Validation(Required=false)]
                     public string AvailabilityZone { get; set; }
 
+                    /// <summary>
+                    /// The region ID.
+                    /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
@@ -114,7 +123,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The tags of the resource.
+                /// The tag of the resource.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -143,21 +152,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// The information about the virtual private cloud (VPC).
+                /// The VPC description.
                 /// </summary>
                 [NameInMap("Vpc")]
                 [Validation(Required=false)]
                 public DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceVpc Vpc { get; set; }
                 public class DescribeMonitorGroupInstanceAttributeResponseBodyResourcesResourceVpc : TeaModel {
                     /// <summary>
-                    /// The ID of the VPC.
+                    /// The VPC ID.
                     /// </summary>
                     [NameInMap("VpcInstanceId")]
                     [Validation(Required=false)]
                     public string VpcInstanceId { get; set; }
 
                     /// <summary>
-                    /// The ID of the vSwitch to which the instance belongs.
+                    /// The vSwitch ID.
                     /// </summary>
                     [NameInMap("VswitchInstanceId")]
                     [Validation(Required=false)]
@@ -170,17 +179,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The status information.
+        /// The host status information.
         /// </summary>
         [NameInMap("NodeStatusList")]
         [Validation(Required=false)]
@@ -36,6 +36,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus> NodeStatus { get; set; }
             public class DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus : TeaModel {
+                /// <summary>
+                /// The error code returned when the CloudMonitor agent is installed. Valid values:
+                /// 
+                /// *   Common.Timeout: The installation timed out.
+                /// *   Common.SLR: The service-linked role for CloudMonitor is unauthorized.
+                /// *   Common.OS: The operating system is not supported.
+                /// *   Assist.Invalid: Cloud Assistant is not running.
+                /// *   Assist.Invoke: An error occurred when the installation program is started.
+                /// *   Assist.Execute: An error occurred when the installation program is running.
+                /// </summary>
                 [NameInMap("AgentInstallErrorCode")]
                 [Validation(Required=false)]
                 public string AgentInstallErrorCode { get; set; }
@@ -58,11 +68,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// SysOM插件的配置信息`sysak`是否开启监控。取值：
+                /// Indicates whether the SysAK monitoring feature is enabled.`` Valid values:
                 /// 
-                /// - true：`sysak`开启监控。
-                /// 
-                /// - false：`sysak`未开启监控。
+                /// *   `true`: The SysAK monitoring feature is enabled.
+                /// *   `false`: the SysAK monitoring feature is disabled.
                 /// </summary>
                 [NameInMap("OsMonitorConfig")]
                 [Validation(Required=false)]
@@ -108,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string OsMonitorStatus { get; set; }
 
                 /// <summary>
-                /// SysOM监控的插件版本。
+                /// The SysOM version.
                 /// </summary>
                 [NameInMap("OsMonitorVersion")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorNamespaceListRequest : TeaModel {
         /// <summary>
-        /// The keyword that is used to search for namespaces.
+        /// The search keyword.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -19,25 +19,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the namespace.
         /// 
-        /// The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).
+        /// The name can contain letters, digits, and hyphens (-).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// Page numbers start from 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// A minimum of 1 entry can be returned on each page. Default value: 10.
+        /// Page numbers start from 1. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:
         /// 
         /// *   true
-        /// *   false (default value)
+        /// *   false (default)
         /// </summary>
         [NameInMap("ShowTaskStatistic")]
         [Validation(Required=false)]

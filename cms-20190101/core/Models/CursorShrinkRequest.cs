@@ -35,7 +35,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The metric that is used to monitor the cloud service.
         /// 
-        /// For more information about the metrics of cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// For more information about the metrics of cloud services, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Metric")]
         [Validation(Required=false)]
@@ -44,7 +46,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The namespace of the cloud service.
         /// 
-        /// For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// For more information about the namespaces of cloud services, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -55,7 +59,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// Unit: seconds.
         /// 
-        /// >  Generally, the time interval is 60 seconds. For more information about specific values, see the `Period` parameter in [Appendix 1: Metrics](~~163515~~).
+        /// >  Generally, the time interval is 60 seconds. For more information about specific values, see the `Period` parameter in [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -67,6 +73,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For example, 2023-01-01T00:00:00Z indicates January 1, 2023, 00:00:00 UTC.
         /// 
         /// >  In CloudMonitor, the TTL of monitoring data varies with the time granularity. Specify a proper time interval based on the TTL corresponding to the value of the `Period` parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

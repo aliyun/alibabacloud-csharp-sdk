@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the tag rule.
         /// 
-        /// For information about how to obtain the ID of a tag rule, see [DescribeDynamicTagRuleList](~~150126~~).
+        /// For information about how to obtain the ID of a tag rule, see [DescribeDynamicTagRuleList](https://help.aliyun.com/document_detail/150126.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DynamicTagRuleId")]
         [Validation(Required=false)]

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateDynamicTagGroupResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// The HTTP status code.
         /// 
-        /// > The status code 200 indicates that the request was successful.
+        /// >  The status code 200 indicates that the call is successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// Indicates whether the call is successful. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   true: The call is successful.
+        /// *   false: The call fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

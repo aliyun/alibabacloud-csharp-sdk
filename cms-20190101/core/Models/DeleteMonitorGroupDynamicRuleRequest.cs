@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class DeleteMonitorGroupDynamicRuleRequest : TeaModel {
         /// <summary>
         /// The service to which the rule applies. Valid values: ecs, rds, and slb.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

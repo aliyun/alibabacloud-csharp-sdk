@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class CreateMetricRuleBlackListRequest : TeaModel {
         /// <summary>
         /// The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -49,7 +51,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EnableStartTime { get; set; }
 
         /// <summary>
-        /// The IDs of instances that belong to the specified cloud service.
+        /// The IDs of the instances that belong to the specified cloud service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -69,6 +73,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The metric name.
             /// 
             /// Valid values of N: 1 to 10.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -87,6 +93,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the blacklist policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -95,7 +103,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The namespace of the cloud service.
         /// 
-        /// For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -108,8 +118,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The effective scope of the blacklist policy. Valid values:
         /// 
-        /// *   USER: The blacklist policy takes effect only for the current Alibaba Cloud account.
-        /// *   GROUP (default): The blacklist policy takes effect only for the specified application group. For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// *   USER (default): The blacklist policy takes effect only for the current Alibaba Cloud account.
+        /// *   GROUP: The blacklist policy takes effect only for the specified application group. For information about how to query the IDs of application groups, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
         /// </summary>
         [NameInMap("ScopeType")]
         [Validation(Required=false)]

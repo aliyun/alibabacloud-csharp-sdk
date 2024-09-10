@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorNamespaceListResponseBody : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// The response code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricList> AliyunProductMetricList { get; set; }
             public class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricList : TeaModel {
                 /// <summary>
-                /// The list of namespaces.
+                /// The namespaces.
                 /// </summary>
                 [NameInMap("NamespaceList")]
                 [Validation(Required=false)]
                 public List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceList> NamespaceList { get; set; }
                 public class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceList : TeaModel {
                     /// <summary>
-                    /// The list of metrics for the Alibaba Cloud service.
+                    /// The metrics for the Alibaba Cloud service.
                     /// </summary>
                     [NameInMap("MetricList")]
                     [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public List<string> List { get; set; }
 
                         /// <summary>
-                        /// The interval at which metrics are collected.
+                        /// The collection period of the metric.
                         /// 
                         /// Unit: seconds.
                         /// </summary>
@@ -78,6 +78,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public long? UserId { get; set; }
 
+                /// <summary>
+                /// The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.
+                /// 
+                /// *   namespace: the namespace of the Alibaba Cloud service.
+                /// *   metric_list: the metrics of the Alibaba Cloud service.
+                /// *   dimension: the resources of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring. If you do not specify a dimension, all resources of the Alibaba Cloud service are monitored.
+                /// </summary>
                 [NameInMap("YAMLConfig")]
                 [Validation(Required=false)]
                 public string YAMLConfig { get; set; }
@@ -107,10 +114,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail Detail { get; set; }
             public class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail : TeaModel {
+                /// <summary>
+                /// The region where the metric data is stored.
+                /// 
+                /// >  This parameter is returned if you select `m_prom_user` for `NamespaceType` when you create a namespace.
+                /// </summary>
                 [NameInMap("NamespaceRegion")]
                 [Validation(Required=false)]
                 public string NamespaceRegion { get; set; }
 
+                /// <summary>
+                /// The project where the metric data is located.
+                /// 
+                /// >  This parameter is returned if you select `m_prom_user` for `NamespaceType` when you create a namespace.
+                /// </summary>
                 [NameInMap("SLSProject")]
                 [Validation(Required=false)]
                 public string SLSProject { get; set; }
@@ -118,12 +135,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The data retention period. Valid values:
                 /// 
-                /// *   cms.s1.large: Data is stored for 15 days.
-                /// *   cms.s1.xlarge: Data is stored for 32 days.
-                /// *   cms.s1.2xlarge: Data is stored for 63 days.
-                /// *   cms.s1.3xlarge: Data is stored for 93 days.
-                /// *   cms.s1.6xlarge: Data is stored for 185 days.
-                /// *   cms.s1.12xlarge: Data is stored for 376 days.
+                /// *   cms.s1.large (Retention Period 15 Days)
+                /// *   cms.s1.xlarge (Retention Period 32 Days)
+                /// *   cms.s1.2xlarge (Retention Period 63 Days)
+                /// *   cms.s1.3xlarge (Retention Period 93 Days)
+                /// *   cms.s1.6xlarge (Retention Period 185 Days)
+                /// *   cms.s1.12xlarge (Retention Period 367 Days)
                 /// </summary>
                 [NameInMap("Spec")]
                 [Validation(Required=false)]
@@ -162,6 +179,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            /// <summary>
+            /// The storage scheme of metric data. Valid values:
+            /// 
+            /// *   m_prom_user: The metric data is stored in Simple Log Service.
+            /// *   m_prom_pool: The metric data is stored in the storage space provided by CloudMonitor.
+            /// </summary>
             [NameInMap("NamespaceType")]
             [Validation(Required=false)]
             public string NamespaceType { get; set; }
@@ -176,45 +199,45 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// The error message.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

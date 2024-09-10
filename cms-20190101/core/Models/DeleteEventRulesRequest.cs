@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteEventRulesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RuleNames")]
         [Validation(Required=false)]
         public List<string> RuleNames { get; set; }

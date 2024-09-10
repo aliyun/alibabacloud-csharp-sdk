@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Interval { get; set; }
 
                 /// <summary>
-                /// The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).
+                /// The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](https://help.aliyun.com/document_detail/115048.html).
                 /// </summary>
                 [NameInMap("OptionsJson")]
                 [Validation(Required=false)]

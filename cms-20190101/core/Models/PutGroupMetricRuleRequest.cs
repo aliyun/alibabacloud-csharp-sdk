@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The statistical methods for Critical-level alerts. Separate multiple statistical methods with commas (,).
                 /// 
-                /// The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).
+                /// The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                 /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,).
                 /// 
-                /// The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).
+                /// The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                 /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The statistical methods for Warn-level alerts. Separate multiple statistical methods with commas (,).
                 /// 
-                /// The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](~~163515~~).
+                /// The value of this parameter is determined by the `Statistics` column corresponding to the `MetricName` parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                 /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The abbreviation of the cloud service name.
         /// 
-        /// For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](~~114916~~) operation.
+        /// For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](https://help.aliyun.com/document_detail/114916.html) operation.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -212,7 +212,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The application group ID.
         /// 
-        /// For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -255,7 +257,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The metric name.
         /// 
-        /// For more information about how to obtain the name of a metric, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
+        /// For more information about how to obtain the name of a metric, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -264,7 +268,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The namespace of the cloud service.
         /// 
-        /// For more information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
+        /// For more information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -305,7 +311,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The ID of the alert rule.
         /// 
         /// *   When you create an alert rule for the application group, enter the ID of the alert rule.
-        /// *   When you modify a specified alert rule in the application group, you must obtain the ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// *   When you modify a specified alert rule in the application group, you must obtain the ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -315,7 +323,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The name of the alert rule.
         /// 
         /// *   When you create an alert rule for the application group, enter the name of the alert rule.
-        /// *   When you modify a specified alert rule in the application group, you must obtain the name of the alert rule. For more information about how to obtain the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// *   When you modify a specified alert rule in the application group, you must obtain the name of the alert rule. For more information about how to obtain the name of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

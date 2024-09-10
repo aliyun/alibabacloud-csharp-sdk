@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The alert notification methods. Valid values:
             /// 
             /// 0: Alert notifications are sent by using emails and DingTalk chatbots.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("NotifyType")]
             [Validation(Required=false)]
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   POST
             /// *   HEAD
             /// 
-            /// > This parameter must be specified when TaskType is set to HTTP. For more information about how to configure the TaskType parameter, see [CreateHostAvailability](~~115317~~).
+            /// > This parameter must be specified when TaskType is set to HTTP. For more information about how to configure the TaskType parameter, see [CreateHostAvailability](https://help.aliyun.com/document_detail/115317.html).
             /// </summary>
             [NameInMap("HttpMethod")]
             [Validation(Required=false)]
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   true: If the HTTP response body includes the alert rule, an alert is triggered.
             /// *   false: If the HTTP response does not include the alert rule, an alert is triggered.
             /// 
-            /// > This parameter must be specified when TaskType is set to HTTP. For more information about how to configure the TaskType parameter, see [CreateHostAvailability](~~115317~~).
+            /// > This parameter must be specified when TaskType is set to HTTP. For more information about how to configure the TaskType parameter, see [CreateHostAvailability](https://help.aliyun.com/document_detail/115317.html).
             /// </summary>
             [NameInMap("HttpNegative")]
             [Validation(Required=false)]
@@ -141,7 +143,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The domain name or IP address that you want to monitor.
             /// 
-            /// > This parameter must be specified when TaskType is set to PING or TELNET. For more information about how to configure the TaskType parameter, see [CreateHostAvailability](~~115317~~).
+            /// > This parameter must be specified when TaskType is set to PING or TELNET. For more information about how to configure the TaskType parameter, see [CreateHostAvailability](https://help.aliyun.com/document_detail/115317.html).
             /// </summary>
             [NameInMap("TelnetOrPingHost")]
             [Validation(Required=false)]
@@ -151,6 +153,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The alert configurations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlertConfigEscalationList")]
         [Validation(Required=false)]
@@ -179,6 +183,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   TelnetStatus: Telnet status code
             /// *   TelnetLatency: Telnet response time
             /// *   PingLostRate: Ping packet loss rate
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -274,6 +280,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -281,6 +289,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the availability monitoring task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -301,6 +311,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the availability monitoring task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

@@ -21,7 +21,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the system event.
         /// 
-        /// >  For more information, see [DescribeSystemEventMetaList](~~114972~~).
+        /// >  For more information, see [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
@@ -37,7 +39,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the cloud service.
         /// 
-        /// >  For information about the system events supported by Cloud Monitor for Alibaba Cloud services, see [System events](~~167388~~).
+        /// >  For information about the system events supported by Cloud Monitor for Alibaba Cloud services, see [System events](https://help.aliyun.com/document_detail/167388.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]

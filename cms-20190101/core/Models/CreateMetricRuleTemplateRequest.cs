@@ -100,7 +100,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The abbreviation of the Alibaba Cloud service name.
             /// 
-            /// To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
+            /// To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](https://help.aliyun.com/document_detail/114916.html) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -109,7 +111,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The name of the metric. Valid values of N: 1 to 200.
             /// 
-            /// >  For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).
+            /// >  For more information, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/28619.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -118,7 +122,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The namespace of the cloud service. Valid values of N: 1 to 200.
             /// 
-            /// >  For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).
+            /// >  For more information, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/28619.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -137,6 +143,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// The name of the alert rule. Valid values of N: 1 to 200.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
@@ -167,6 +175,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the alert template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

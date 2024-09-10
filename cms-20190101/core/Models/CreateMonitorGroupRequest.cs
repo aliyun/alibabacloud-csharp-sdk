@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupRequest : TeaModel {
         /// <summary>
-        /// The alert groups that receive alert notifications for the application group. The alarm notifications for the application group are sent to the alert contacts in the alarm groups.
+        /// The alert contact group. The alert notifications of the application group are sent to the alert contacts that belong to the alert contact group.
         /// 
-        /// >  An alert group is a group of one or more alert contacts. For more information about how to create alert contacts and alert groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).
+        /// >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~PutContact~~) and [PutContactGroup](~~PutContactGroup~~).
         /// </summary>
         [NameInMap("ContactGroups")]
         [Validation(Required=false)]
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

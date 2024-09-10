@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the log monitoring metric. Exact match is supported.
         /// 
-        /// For more information, see [Appendix 1: Metrics](~~163515~~).
+        /// For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]

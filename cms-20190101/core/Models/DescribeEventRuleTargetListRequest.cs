@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the event-triggered alert rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

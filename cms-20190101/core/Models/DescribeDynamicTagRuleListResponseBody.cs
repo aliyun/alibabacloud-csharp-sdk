@@ -168,6 +168,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                [NameInMap("TagValueBlacklist")]
+                [Validation(Required=false)]
+                public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTagValueBlacklist TagValueBlacklist { get; set; }
+                public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTagValueBlacklist : TeaModel {
+                    [NameInMap("TagValueBlacklist")]
+                    [Validation(Required=false)]
+                    public List<string> TagValueBlacklist { get; set; }
+
+                }
+
                 /// <summary>
                 /// The IDs of the alert templates.
                 /// </summary>

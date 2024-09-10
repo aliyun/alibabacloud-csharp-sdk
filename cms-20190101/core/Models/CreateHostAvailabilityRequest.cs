@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The alert notification methods. Valid values:
             /// 
             /// 0: Alert notifications are sent by using emails and DingTalk chatbots.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("NotifyType")]
             [Validation(Required=false)]
@@ -151,6 +153,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// None
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlertConfigEscalationList")]
         [Validation(Required=false)]
@@ -179,6 +183,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   TelnetStatus: Telnet status code
             /// *   TelnetLatency: Telnet response time
             /// *   PingLostRate: Ping packet loss rate
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -272,6 +278,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -291,7 +299,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+        /// The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -313,6 +323,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   PING
         /// *   TELNET
         /// *   HTTP
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

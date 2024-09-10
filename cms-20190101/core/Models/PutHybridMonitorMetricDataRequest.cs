@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The monitoring data.
         /// 
         /// Valid values of N: 1 to 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricList")]
         [Validation(Required=false)]
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// 
                 /// Valid values of N: 1 to 100.
                 /// 
-                /// The key can contain letters, digits, and underscores (*). The key must start with a letter or an underscore (*).
+                /// The key can contain letters, digits, and underscores (_). The key must start with a letter or an underscore (_).
                 /// 
                 /// >  You must specify both the Key and Value parameters.
                 /// </summary>
@@ -58,18 +60,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 100.
             /// 
-            /// The name can contain letters, digits, and underscores (\_). The name must start with a letter.
+            /// The name can contain letters, digits, and underscores (_). The name must start with a letter.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The timestamp when the monitoring data is imported.
+            /// The time when the monitoring data is imported. The value is a timestamp.
             /// 
             /// Valid values of N: 1 to 100.
             /// 
-            /// Unit: milliseconds. By default, the current timestamp is used.
+            /// Unit: milliseconds. By default, the current time is used.
             /// </summary>
             [NameInMap("TS")]
             [Validation(Required=false)]
@@ -81,6 +85,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// Valid values of N: 1 to 100.
             /// 
             /// The value must be an integer or a floating-point number.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -91,7 +97,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the namespace.
         /// 
-        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](https://help.aliyun.com/document_detail/428880.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

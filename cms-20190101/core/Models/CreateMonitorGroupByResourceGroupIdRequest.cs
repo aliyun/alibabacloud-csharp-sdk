@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The alert contact groups. The alert notifications of the application group are sent to the alert contacts that belong to the specified alert contact groups.
         /// 
-        /// An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~). For information about how to obtain alert contact groups, see [DescribeContactGroupList](~~114922~~).
+        /// An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](https://help.aliyun.com/document_detail/114923.html) and [PutContactGroup](https://help.aliyun.com/document_detail/114929.html). For information about how to obtain alert contact groups, see [DescribeContactGroupList](https://help.aliyun.com/document_detail/114922.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactGroupList")]
         [Validation(Required=false)]
@@ -41,7 +43,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the region where the resource group resides.
         /// 
-        /// For information about how to obtain the ID of the region where a resource group resides, see [GetResourceGroup](~~158866~~).
+        /// For information about how to obtain the ID of the region where a resource group resides, see [GetResourceGroup](https://help.aliyun.com/document_detail/158866.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,7 +54,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the resource group.
         /// 
-        /// For information about how to obtain the ID of a resource group, see [ListResourceGroups](~~158855~~).
+        /// For information about how to obtain the ID of a resource group, see [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -59,7 +65,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the resource group.
         /// 
-        /// For information about how to obtain the name of a resource group, see [ListResourceGroups](~~158855~~).
+        /// For information about how to obtain the name of a resource group, see [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]

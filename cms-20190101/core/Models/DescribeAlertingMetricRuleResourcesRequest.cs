@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Dimensions { get; set; }
 
         /// <summary>
-        /// The ID of the application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// The ID of the application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The namespace of the cloud service.
         /// 
-        /// For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// For more information about the namespaces of cloud services, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// The ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

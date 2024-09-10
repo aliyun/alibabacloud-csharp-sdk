@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The tag key.
         /// 
-        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
+        /// For more information about how to obtain a tag key, see [DescribeTagKeyList](https://help.aliyun.com/document_detail/145558.html).
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The tag value.
         /// 
-        /// For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
+        /// For more information about how to obtain a tag value, see [DescribeTagKeyList](https://help.aliyun.com/document_detail/145557.html).
         /// </summary>
         [NameInMap("TagValue")]
         [Validation(Required=false)]

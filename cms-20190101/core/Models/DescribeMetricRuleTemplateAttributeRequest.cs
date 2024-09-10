@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
         /// 
-        /// For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).
+        /// For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
         /// 
-        /// For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).
+        /// For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

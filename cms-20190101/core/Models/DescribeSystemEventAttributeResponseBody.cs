@@ -64,6 +64,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
+                /// <summary>
+                /// The event ID.
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The severity level of the alert. Valid values:
+                /// The level of the event. Valid values:
                 /// 
                 /// *   CRITICAL
                 /// *   WARN

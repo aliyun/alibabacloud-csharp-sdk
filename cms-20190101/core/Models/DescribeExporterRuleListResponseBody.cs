@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The name of the metric.
                 /// 
-                /// > For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).
+                /// > For more information, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/28619.html).
                 /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The namespace of the service.
                 /// 
-                /// > For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).
+                /// > For more information, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/28619.html).
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// The time window of the exported data.\
+                /// The time window of the exported data.\\
                 /// Multiple windows are separated with commas (,).
                 /// 
                 /// > Data in a time window of less than 60 seconds cannot be exported.

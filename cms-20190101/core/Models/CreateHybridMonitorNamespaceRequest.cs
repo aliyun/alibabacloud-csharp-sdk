@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The name of the namespace.
         /// 
         /// The name can contain lowercase letters, digits, and hyphens (-).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -35,10 +37,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The storage scheme of metric data. Valid values:
         /// 
-        /// *   m_prom_pool: The metric data is stored in Simple Log Service.
-        /// *   m_prometheus: The metric data is stored in the storage space provided by CloudMonitor.
+        /// *   m_prom_user: The metric data is stored in Simple Log Service.
+        /// *   m_prom_pool: The metric data is stored in the private storage space provided by CloudMonitor.
         /// 
-        /// >  For more information about the storage schemes of metric data, see [Storage schemes of metric data in Hybrid Cloud Monitoring](~~2594921~~).
+        /// >  For more information about the storage schemes of metric data, see [Data storage schemes for Hybrid Cloud Monitoring](https://help.aliyun.com/document_detail/2594921.html).
         /// </summary>
         [NameInMap("NamespaceType")]
         [Validation(Required=false)]
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   cms.s1.6xlarge (Retention Period 185 Days)
         /// *   cms.s1.12xlarge (Retention Period 367 Days)
         /// 
-        /// For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).
+        /// For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](https://help.aliyun.com/document_detail/223532.html).
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

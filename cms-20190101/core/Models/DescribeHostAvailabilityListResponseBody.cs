@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The HTTP status code.
         /// 
-        /// >  The value 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -26,17 +26,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -98,11 +98,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                             /// <summary>
                             /// The name of the metric. Valid values:
                             /// 
-                            /// *   HttpStatus: HTTP status code
-                            /// *   HttpLatency: HTTP response time
-                            /// *   TelnetStatus: Telnet status code
-                            /// *   TelnetLatency: Telnet response time
-                            /// *   PingLostRate: Ping packet loss rate
+                            /// *   HttpStatus
+                            /// *   HttpLatency
+                            /// *   TelnetStatus
+                            /// *   TelnetLatency
+                            /// *   PingLostRate
                             /// </summary>
                             [NameInMap("MetricName")]
                             [Validation(Required=false)]
@@ -142,7 +142,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// The alert notification methods. Valid values:
                     /// 
-                    /// 0: Alert notifications are sent by using emails and DingTalk chatbots.
+                    /// *   2: Alert notifications are sent by using emails and DingTalk chatbots.
+                    /// *   1: Alert notifications are sent by using emails and DingTalk chatbots.
+                    /// *   0: Alert notifications are sent by using emails and DingTalk chatbots.
                     /// </summary>
                     [NameInMap("NotifyType")]
                     [Validation(Required=false)]
@@ -166,6 +168,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public int? StartTime { get; set; }
 
+                    /// <summary>
+                    /// The monitored resources.
+                    /// </summary>
                     [NameInMap("TargetList")]
                     [Validation(Required=false)]
                     public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetList TargetList { get; set; }
@@ -174,18 +179,42 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         [Validation(Required=false)]
                         public List<DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget> Target { get; set; }
                         public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigTargetListTarget : TeaModel {
+                            /// <summary>
+                            /// The Alibaba Cloud Resource Name (ARN) of the function.
+                            /// 
+                            /// Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
+                            /// 
+                            /// *   Service: the service code
+                            /// *   Region: the region ID
+                            /// *   Account: the ID of the Alibaba Cloud account
+                            /// *   ResourceType: the resource type
+                            /// *   ResourceId: the resource ID.
+                            /// </summary>
                             [NameInMap("Arn")]
                             [Validation(Required=false)]
                             public string Arn { get; set; }
 
+                            /// <summary>
+                            /// The ID of the resource that triggers the alert.
+                            /// </summary>
                             [NameInMap("Id")]
                             [Validation(Required=false)]
                             public string Id { get; set; }
 
+                            /// <summary>
+                            /// The JSON-formatted parameters of the alert callback.
+                            /// </summary>
                             [NameInMap("JsonParams")]
                             [Validation(Required=false)]
                             public string JsonParams { get; set; }
 
+                            /// <summary>
+                            /// The alert level. Valid values:
+                            /// 
+                            /// *   INFO
+                            /// *   WARN
+                            /// *   CRITICAL
+                            /// </summary>
                             [NameInMap("Level")]
                             [Validation(Required=false)]
                             public string Level { get; set; }
@@ -339,7 +368,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string TaskScope { get; set; }
 
                 /// <summary>
-                /// The type of the availability monitoring task. Valid values:
+                /// The task type. Valid values:
                 /// 
                 /// *   PING
                 /// *   TELNET

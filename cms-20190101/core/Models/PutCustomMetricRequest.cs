@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomMetricRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MetricList")]
         [Validation(Required=false)]
         public List<PutCustomMetricRequestMetricList> MetricList { get; set; }
@@ -20,9 +23,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// The key or value must be 1 to 64 bytes in length. Excessive characters are truncated.
             /// 
-            /// The key or value can contain letters, digits, periods (.), hyphens (-), underscores (\_), forward slashes (/), and backslashes (\\).
+            /// The key or value can contain letters, digits, periods (.), hyphens (-), underscores (_), forward slashes (/), and backslashes (\\\\).
             /// 
             /// >  Dimensions must be formatted as a JSON string in a specified order.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
@@ -32,13 +37,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The ID of the application group. Valid values of N: 1 to 21.
             /// 
             /// >  If the metric does not belong to any application group, enter 0.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
             /// <summary>
-            /// The name of the metric. Valid values of N: 1 to 21. For more information, see [Appendix 1: Metrics](~~163515~~).
+            /// The name of the metric. Valid values of N: 1 to 21. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -70,6 +79,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   1: reports aggregate data
             /// 
             /// >  We recommend that you report aggregate data in both the aggregation periods of 60s and 300s. Otherwise, you cannot query monitoring data in a time span that is more than seven days.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -79,6 +90,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The collection of metric values. Valid values of N: 1 to 21.
             /// 
             /// >  If the MetricList.N.Type parameter is set to 0, the keys in this parameter must be set to the specified value. CloudMonitor aggregates raw data in each aggregation period to generate multiple statistical values, such as the maximum value, the count, and the total value.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]

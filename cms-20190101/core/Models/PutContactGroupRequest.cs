@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the alert contact group.
         /// 
-        /// For information about how to obtain the name of an alert contact group, see [DescribeContactGroupList](~~114922~~).
+        /// For information about how to obtain the name of an alert contact group, see [DescribeContactGroupList](https://help.aliyun.com/document_detail/114922.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]

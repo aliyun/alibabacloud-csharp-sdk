@@ -13,6 +13,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The site monitoring tasks.
+        /// 
+        /// >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
         public List<BatchCreateInstantSiteMonitorRequestTaskList> TaskList { get; set; }
@@ -31,7 +38,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// The value is a `JSON array`. Example: `{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}`. The values of the city field indicate Beijing, Hangzhou, and Qingdao.
             /// 
-            /// For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).
+            /// For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](https://help.aliyun.com/document_detail/115045.html).
             /// </summary>
             [NameInMap("IspCities")]
             [Validation(Required=false)]
@@ -47,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The name of the site monitoring task.
             /// 
-            /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+            /// The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).
             /// 
             /// >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
             /// </summary>

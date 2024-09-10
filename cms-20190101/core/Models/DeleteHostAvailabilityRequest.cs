@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteHostAvailabilityRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public List<long?> Id { get; set; }

@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// *   If the `TaskType` parameter is set to `aliyun_fc`, enter `aliyun_fc`.
         /// *   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the Logstore group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CollectTargetType")]
         [Validation(Required=false)]
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the application group.
         /// 
-        /// For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
         /// 
         /// >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
         /// </summary>
@@ -83,7 +85,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the namespace.
         /// 
-        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+        /// For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](https://help.aliyun.com/document_detail/428880.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -304,6 +308,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// *   aliyun_fc: metric import tasks for Alibaba Cloud services.
         /// *   aliyun_sls: metrics for logs imported from Simple Log Service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
@@ -312,8 +318,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.
         /// 
-        /// *   namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).
-        /// *   metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).
+        /// *   namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html).
+        /// *   metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html).
         /// 
         /// The following code shows a sample configuration file:
         /// 

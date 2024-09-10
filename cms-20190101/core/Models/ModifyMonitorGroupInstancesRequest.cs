@@ -11,11 +11,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class ModifyMonitorGroupInstancesRequest : TeaModel {
         /// <summary>
         /// The ID of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ModifyMonitorGroupInstancesRequestInstances> Instances { get; set; }
@@ -94,6 +99,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   VPN: VPN Gateway
             /// 
             ///     Valid values of N: 1 to 2000.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -101,6 +108,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// The ID of the instance. Valid values of N: 1 to 2000.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -108,6 +117,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// The name of the instance. Valid values of N: 1 to 2000.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -115,6 +126,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// The ID of the region where the instance resides. Valid values of N: 1 to 2000.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The destination to which the data is exported. Valid values of N: 1 to 20.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DstNames")]
         [Validation(Required=false)]
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// > 
         /// 
-        /// For more information, see [Appendix 1: Metrics](~~163515~~).
+        /// For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The namespace of the cloud service.
         /// 
-        /// > For more information, see [Appendix 1: Metrics](~~163515~~).
+        /// > For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

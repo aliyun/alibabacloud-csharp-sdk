@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resources to which the alert rule is applied.
+        /// The resources that are associated with the alert rule.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeAlertingMetricRuleResourcesResponseBodyResourcesResource> Resource { get; set; }
             public class DescribeAlertingMetricRuleResourcesResponseBodyResourcesResource : TeaModel {
                 /// <summary>
-                /// The dimensions that specify the resources whose monitoring data you want to query.
+                /// The dimensions based on which the resources are queried.
                 /// </summary>
                 [NameInMap("Dimensions")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         /// <summary>
                         /// The description of the alert rule.
                         /// 
-                        /// > The content of the alert rule. If the metric value meets the alert condition, an alert is triggered.
+                        /// >  This parameter indicates the content of the alert rule. If the metric value meets the alert condition, an alert is triggered.
                         /// </summary>
                         [NameInMap("Expression")]
                         [Validation(Required=false)]
@@ -178,9 +178,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         /// <summary>
                         /// The trigger conditions that are created by using expressions. You can use expressions to create trigger conditions in the following scenarios:
                         /// 
-                        /// *   Set an alert blacklist for specific resources. For example, if you specify `$instanceId != \"i-io8kfvcpp7x5****\" ``&&`` $Average > 50`, no alert is triggered when the `average metric value` of the `i-io8kfvcpp7x5****` instance exceeds 50.
-                        /// *   Set a special alert threshold for a specified instance in the rule. For example, if you specify `$Average > ($instanceId == \"i-io8kfvcpp7x5****\"? 80: 50)`, an alert is triggered when the `average metric value` of the `i-io8kfvcpp7x5****` instance exceeds 80 or the `average metric value` of other instances exceeds 50.
-                        /// *   Limit the number of instances whose metric values exceed the threshold. For example, if you specify `count($Average > 20) > 3`, an alert is triggered only when the number of instances whose `average metric value` exceeds 20 exceeds three.
+                        /// *   Set an alert blacklist for specific resources. For example, if you specify `$instanceId != \\"i-io8kfvcpp7x5****\\" ``&&`` $Average > 50`, no alert is triggered when the `average metric value` of the `i-io8kfvcpp7x5****` instance exceeds 50.
+                        /// *   Set a special alert threshold for a specified instance in the rule. For example, if you specify `$Average > ($instanceId == \\"i-io8kfvcpp7x5****\\"? 80: 50)`, an alert is triggered when the `average metric value` of the `i-io8kfvcpp7x5****` instance exceeds 80 or the `average metric value` of other instances exceeds 50.
+                        /// *   Limit the number of instances whose metric values exceed the threshold. For example, if you specify `count($Average > 20) > 3`, an alert is triggered only when the `average metric value` of more than three instances exceeds 20.
                         /// </summary>
                         [NameInMap("ExpressionRaw")]
                         [Validation(Required=false)]
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string PreCondition { get; set; }
 
                         /// <summary>
-                        /// The instance tag.
+                        /// This parameter is deprecated.
                         /// </summary>
                         [NameInMap("Tag")]
                         [Validation(Required=false)]
@@ -238,14 +238,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The ID of the application group.
                 /// 
-                /// > If the alert rule is associated with an application group, the ID of the application group is returned in this parameter.
+                /// >  If the alert rule is associated with an application group, the ID of the application group is returned in this parameter.
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The timestamp when the last alert was triggered for the resource based on the alert rule.
+                /// The time when the last alert was triggered for the resource based on the alert rule. The value is a timestamp.
                 /// 
                 /// Unit: milliseconds.
                 /// </summary>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string LastAlertTime { get; set; }
 
                 /// <summary>
-                /// The timestamp when the alert rule was last modified.
+                /// The time when the alert rule was last modified. The value is a timestamp.
                 /// 
                 /// Unit: milliseconds.
                 /// </summary>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// The timestamp when the resource was associated with the alert rule.
+                /// The time when the resource was associated with the alert rule. The value is a timestamp.
                 /// 
                 /// Unit: milliseconds.
                 /// </summary>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The method used to calculate metric values that trigger alerts.
+                /// The method used to calculate the metric values that trigger alerts.
                 /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]

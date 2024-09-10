@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   hbase: ApsaraDB for HBase
         /// *   elasticsearch: Elasticsearch
         /// *   opensearch: OpenSearch
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]

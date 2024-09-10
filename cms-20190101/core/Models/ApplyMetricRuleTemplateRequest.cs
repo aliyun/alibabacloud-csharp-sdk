@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ApplyMetricRuleTemplateRequest : TeaModel {
         /// <summary>
+        /// The template application policy. Valid values:
+        /// 
+        /// *   all (default): deletes all the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the template.
+        /// *   append: deletes the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the existing template.
+        /// </summary>
+        [NameInMap("AppendMode")]
+        [Validation(Required=false)]
+        public string AppendMode { get; set; }
+
+        /// <summary>
         /// The mode in which the alert template is applied. Valid values:
         /// 
         /// *   GROUP_INSTANCE_FIRST: The metrics in the application group take precedence. If a metric specified in the alert template does not exist in the application group, the system does not generate an alert rule for the metric based on the alert template.
@@ -36,7 +46,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the application group to which the alert template is applied.
         /// 
-        /// For more information about how to query the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// For more information about how to query the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -63,7 +75,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the alert template.
         /// 
-        /// For more information about how to query the IDs of alert templates, see [DescribeMetricRuleTemplateList](~~114982~~).
+        /// For more information about how to query the IDs of alert templates, see [DescribeMetricRuleTemplateList](https://help.aliyun.com/document_detail/114982.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateIds")]
         [Validation(Required=false)]

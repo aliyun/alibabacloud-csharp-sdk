@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The IDs of the site monitoring tasks. Separate multiple IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

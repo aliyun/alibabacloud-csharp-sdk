@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   logstore: the Log Service Logstore to which the monitoring data is exported.
         /// *   ak: the AccessKey ID.
         /// *   as: the AccessKey secret.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigJson")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the configuration set.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestName")]
         [Validation(Required=false)]

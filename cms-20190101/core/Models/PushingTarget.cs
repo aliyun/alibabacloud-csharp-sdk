@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

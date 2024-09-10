@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// 过滤关键词。
+                /// The keyword for filtering.
                 /// </summary>
                 [NameInMap("KeywordFilterObj")]
                 [Validation(Required=false)]
                 public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj KeywordFilterObj { get; set; }
                 public class DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj : TeaModel {
                     /// <summary>
-                    /// 事件匹配的关键字列表。
+                    /// The keywords that are used to match events.
                     /// </summary>
                     [NameInMap("Keywords")]
                     [Validation(Required=false)]
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                     /// <summary>
-                    /// 多个关键字的条件。取值：
+                    /// The relationship between multiple keywords in a condition. Valid values:
                     /// 
-                    /// - OR： 多个关键字之间或的关系。
-                    /// - NOT：不包含关键字。表示匹配非关键字列表中的所有事件。
+                    /// *   OR: The relationship between keywords is OR.
+                    /// *   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.
                     /// </summary>
                     [NameInMap("Relation")]
                     [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Product { get; set; }
 
                 /// <summary>
-                /// 按照SQL过滤日志。如果符合条件，则触发报警。
+                /// Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.
                 /// </summary>
                 [NameInMap("SQLFilter")]
                 [Validation(Required=false)]

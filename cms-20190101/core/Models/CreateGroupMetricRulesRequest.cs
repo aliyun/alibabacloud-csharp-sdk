@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the application group.
         /// 
-        /// For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+        /// For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -248,6 +250,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   BMS: Bare Metal Management Service
             /// *   swas: Simple Application Server
             /// *   AvailabilityMonitoring: Availability Monitoring of CloudMonitor
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -256,7 +260,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The alert contact groups. Valid values of N: 1 to 200.
             /// 
-            /// For information about how to obtain alert contact groups, see [DescribeContactGroupList](~~114922~~).
+            /// For information about how to obtain alert contact groups, see [DescribeContactGroupList](https://help.aliyun.com/document_detail/114922.html).
             /// </summary>
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
@@ -323,7 +327,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The name of the metric. Valid values of N: 1 to 200.
             /// 
-            /// For information about how to obtain the name of a metric, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
+            /// For information about how to obtain the name of a metric, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -332,7 +338,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The namespace of the cloud service. Valid values of N: 1 to 200.
             /// 
-            /// For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~163515~~).
+            /// For information about how to obtain the namespace of a cloud service, see [DescribeMetricMetaList](https://help.aliyun.com/document_detail/98846.html) or [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -371,6 +379,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// The ID of the alert rule. Valid values of N: 1 to 200.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
@@ -378,6 +388,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// The name of the alert rule. Valid values of N: 1 to 200.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]

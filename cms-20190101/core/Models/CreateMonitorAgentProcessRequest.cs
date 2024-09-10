@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class CreateMonitorAgentProcessRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the process.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]

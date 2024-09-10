@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventCountRequest : TeaModel {
         /// <summary>
-        /// The timestamp that specifies the end of the time range to query. Unit: milliseconds.
+        /// The end of the time range to query. Unit: milliseconds.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The type of the system event.
         /// 
-        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `EventType`. The value of the EventType parameter indicates the types of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `EventType`. The value of the EventType parameter indicates the types of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html).
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   Warn
         /// *   Info
         /// 
-        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Level`. The value of the Level parameter indicates the levels of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Level`. The value of the Level parameter indicates the levels of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html).
         /// </summary>
         [NameInMap("Level")]
         [Validation(Required=false)]
@@ -48,16 +48,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the system event.
         /// 
-        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Name`. The value of the Name parameter indicates the names of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Name`. The value of the Name parameter indicates the names of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The name of the cloud service in which the system event occurred.
+        /// The name of the cloud service.
         /// 
-        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Product`. The value of the Product parameter indicates the names of all cloud services in which the system events of your Alibaba Cloud account occurred. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Product`. The value of the Product parameter indicates the names of all cloud services in which the system events of your Alibaba Cloud account occurred. For more information, see [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html).
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The keywords that are used to search for the system event. You can use a logical operator to connect keywords. Valid values:
+        /// The keywords that are used to search for the system event. Valid values:
         /// 
         /// *   If you want to search for the system event whose content contains a and b, set the value to `a and b`.
         /// *   If you want to search for the system event whose content contains a or b, set the value to `a or b`.
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string SearchKeywords { get; set; }
 
         /// <summary>
-        /// The timestamp that specifies the start of the time range to query. Unit: milliseconds.
+        /// The beginning of the time range to query. Unit: milliseconds.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The status of the system event.
         /// 
-        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Status`. The value of the Status parameter indicates the status of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+        /// You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Status`. The value of the Status parameter indicates the status of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see [DescribeSystemEventMetaList](https://help.aliyun.com/document_detail/114972.html).
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

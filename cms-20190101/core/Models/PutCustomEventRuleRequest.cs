@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class PutCustomEventRuleRequest : TeaModel {
         /// <summary>
         /// The alert contact group that receives alert notifications. Separate multiple contact groups with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactGroups")]
         [Validation(Required=false)]
@@ -31,16 +33,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EmailSubject { get; set; }
 
         /// <summary>
-        /// The name of the custom event. For more information about how to obtain the event name, see [DescribeCustomEventAttribute](~~115262~~).
+        /// The name of the custom event. For more information about how to obtain the event name, see [DescribeCustomEventAttribute](https://help.aliyun.com/document_detail/115262.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// The ID of the application group. For more information about how to obtain the group ID, see [DescribeCustomEventAttribute](~~115262~~).
+        /// The ID of the application group. For more information about how to obtain the group ID, see [DescribeCustomEventAttribute](https://help.aliyun.com/document_detail/115262.html).
         /// 
         /// >  The value 0 indicates that the reported custom event does not belong to any application Group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// *   CRITICAL: critical issue
         /// *   WARN: warning
         /// *   INFO: information
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Level")]
         [Validation(Required=false)]
@@ -68,6 +76,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The ID of the alert rule.
         /// 
         /// >  You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -75,6 +85,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the alert rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -82,6 +94,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The alert threshold.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]

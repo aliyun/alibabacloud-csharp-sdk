@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// > 
         /// 
-        /// *   The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.\
+        /// *   The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.\\
         ///     We recommend that you use UNIX timestamps to prevent time zone-related issues.
         /// </summary>
         [NameInMap("StartTime")]
@@ -109,6 +109,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The IDs of the instant test tasks. Separate multiple task IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the alert rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The resource IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetIds")]
         [Validation(Required=false)]

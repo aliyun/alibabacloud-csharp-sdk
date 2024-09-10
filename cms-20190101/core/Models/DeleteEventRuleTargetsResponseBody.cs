@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteEventRuleTargetsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The response code.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -26,14 +26,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID. You can use the request ID to query logs and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`
+        /// *   `false`
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

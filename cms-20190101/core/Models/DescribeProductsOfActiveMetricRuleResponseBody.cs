@@ -103,28 +103,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string Level { get; set; }
 
                         /// <summary>
-                        /// The metric name. For more information, see [Appendix 1: Metrics](~~163515~~).
+                        /// The metric name. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                         /// </summary>
                         [NameInMap("MetricName")]
                         [Validation(Required=false)]
                         public string MetricName { get; set; }
 
                         /// <summary>
-                        /// The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).
+                        /// The namespace of the service. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                         /// </summary>
                         [NameInMap("Namespace")]
                         [Validation(Required=false)]
                         public string Namespace { get; set; }
 
                         /// <summary>
-                        /// The aggregation period of monitoring data. Unit: minutes. For more information, see [Appendix 1: Metrics](~~163515~~).
+                        /// The aggregation period of monitoring data. Unit: minutes. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                         /// </summary>
                         [NameInMap("Period")]
                         [Validation(Required=false)]
                         public string Period { get; set; }
 
                         /// <summary>
-                        /// The method used to calculate metric values that trigger alerts. For more information, see [Appendix 1: Metrics](~~163515~~).
+                        /// The method used to calculate metric values that trigger alerts. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
                         /// </summary>
                         [NameInMap("Statistics")]
                         [Validation(Required=false)]

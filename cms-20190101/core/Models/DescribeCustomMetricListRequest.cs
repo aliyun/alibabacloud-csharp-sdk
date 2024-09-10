@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the application group.
         /// 
-        /// For more information, see [DescribeMonitorGroups](~~115032~~).
+        /// For more information, see [DescribeMonitorGroups](https://help.aliyun.com/document_detail/115032.html).
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

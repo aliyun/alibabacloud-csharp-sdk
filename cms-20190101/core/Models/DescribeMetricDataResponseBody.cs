@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The HTTP status code.
         /// 
-        /// >  The status code 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The monitoring data. The value includes the following fields:
         /// 
-        /// *   `timestamp`: the timestamp when the alert was triggered.
+        /// *   `timestamp`: the time when the alert was triggered.
         /// *   `userId`: the ID of the user for which the alert was triggered.
         /// *   `instanceId`: the ID of the instance for which the alert was triggered.
         /// *   `Minimum`, `Average`, and `Maximum`: the aggregation methods.
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Datapoints { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

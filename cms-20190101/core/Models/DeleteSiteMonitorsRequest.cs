@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

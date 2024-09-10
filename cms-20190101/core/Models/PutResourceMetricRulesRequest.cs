@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The threshold-triggered alert rules.
         /// 
         /// Valid values of N: 1 to 500.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -119,7 +121,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 500.
             /// 
-            /// >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).
+            /// >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](https://help.aliyun.com/document_detail/114923.html) and [PutContactGroup](https://help.aliyun.com/document_detail/114929.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
@@ -150,7 +154,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 500.
             /// 
-            /// >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
+            /// >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
             /// </summary>
             [NameInMap("Interval")]
             [Validation(Required=false)]
@@ -186,7 +190,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 500.
             /// 
-            /// For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).
+            /// For information about how to query the name of a metric, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -197,7 +201,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 500.
             /// 
-            /// For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).
+            /// For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -232,7 +238,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 500.
             /// 
-            /// >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
+            /// >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
             /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
@@ -243,7 +249,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 500.
             /// 
-            /// For more information about the supported dimensions that are used to query resources, see [Appendix 1: Metrics](~~163515~~).
+            /// For more information about the supported dimensions that are used to query resources, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Resources")]
             [Validation(Required=false)]
@@ -254,9 +262,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 500.
             /// 
-            /// You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+            /// You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
             /// 
             /// >  If you specify a new ID, a threshold-triggered alert rule is created.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
@@ -267,9 +277,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// Valid values of N: 1 to 500.
             /// 
-            /// You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+            /// You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](https://help.aliyun.com/document_detail/114941.html).
             /// 
             /// >  If you specify a new name, a threshold-triggered alert rule is created.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]

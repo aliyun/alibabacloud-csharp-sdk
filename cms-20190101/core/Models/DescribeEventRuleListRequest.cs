@@ -19,9 +19,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// Specifies whether to enable the event-triggered alert rule. Valid values:
         /// 
-        /// true (default)
-        /// 
-        /// false
+        /// - true (default)
+        /// - false
         /// </summary>
         [NameInMap("IsEnable")]
         [Validation(Required=false)]

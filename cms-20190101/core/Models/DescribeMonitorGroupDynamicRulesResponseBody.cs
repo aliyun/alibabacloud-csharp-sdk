@@ -10,30 +10,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupDynamicRulesResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The responses code.
         /// 
-        /// >  The value 200 indicates that the call was successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resources that is associated with the application group.
+        /// The resources that are associated with the application group.
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The filtering condition. Valid values:
+                /// The filter condition. Valid values:
                 /// 
-                /// *   and: queries the instances that meet all alert rules
-                /// *   or: queries the instances that meet any alert rule
+                /// *   and: queries the instances that meet all alert rules.
+                /// *   or: queries the instances that meet any alert rule.
                 /// </summary>
                 [NameInMap("FilterRelation")]
                 [Validation(Required=false)]
@@ -78,16 +78,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         /// <summary>
                         /// The method that is used to filter the instances. Valid values:
                         /// 
-                        /// *   contains: includes a specified element
-                        /// *   startWith: specifies a prefix
-                        /// *   endWith: specifies a suffix
+                        /// *   contains: contains
+                        /// *   startWith: starts with a prefix
+                        /// *   endWith: ends with a suffix
                         /// </summary>
                         [NameInMap("Function")]
                         [Validation(Required=false)]
                         public string Function { get; set; }
 
                         /// <summary>
-                        /// The name of the instance.
+                        /// The instance name.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -108,6 +108,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

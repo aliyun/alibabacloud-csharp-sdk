@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class PutMonitorGroupDynamicRuleRequest : TeaModel {
         /// <summary>
         /// The ID of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// None.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupRules")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   ecs: Elastic Compute Service (ECS)
             /// *   rds: ApsaraDB RDS
             /// *   slb: Server Load Balancer (SLB)
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -39,6 +45,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// *   and: The instances that meet all the conditional expressions are automatically added to the application group.
             /// *   or: The instances that meet one of the conditional expressions are automatically added to the application group.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("FilterRelation")]
             [Validation(Required=false)]
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// None.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Filters")]
             [Validation(Required=false)]
@@ -58,6 +68,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// *   notContains: does not contain
                 /// *   startWith: starts with a prefix
                 /// *   endWith: ends with a suffix
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Function")]
                 [Validation(Required=false)]
@@ -67,6 +79,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// The name of the field based on which instances are filtered. Valid values of N: 1 to 3.
                 /// 
                 /// Only hostnames are supported. Example: hostName.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -74,6 +88,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 /// <summary>
                 /// The value to be matched with the specified field. Valid values of N: 1 to 3.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The HTTP status code.
         /// 
-        /// >  The status code 200 indicates that the call is successful.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -28,25 +28,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The returned message.
         /// 
-        /// *   If the call is successful, the value `successful` is returned.
-        /// *   If the call fails, an error message is returned. Example: `alias of aggreate must be set value.`
+        /// *   If the request was successful, `successful` is returned.
+        /// *   If the request failed, an error message is returned. Example: `alias of aggreate must be set value.`
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call is successful.
-        /// *   false: The call fails.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

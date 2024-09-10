@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The policy type.
         /// 
         /// Valid value: PauseNotify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

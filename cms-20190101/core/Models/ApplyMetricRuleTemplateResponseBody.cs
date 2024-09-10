@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ApplyMetricRuleTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// The responses code.
         /// 
-        /// >  The HTTP status code 200 indicates that the call succeeds.
+        /// >  The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -47,16 +47,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<ApplyMetricRuleTemplateResponseBodyResourceAlertResults> AlertResults { get; set; }
             public class ApplyMetricRuleTemplateResponseBodyResourceAlertResults : TeaModel {
                 /// <summary>
-                /// The response code.
+                /// The responses code.
                 /// 
-                /// >  The HTTP status code 200 indicates that the call succeeds.
+                /// >  The status code 200 indicates that the request was successful.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The returned information.
+                /// The returned message.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the call succeeds. Valid values:
+                /// Indicates whether the request was successful. Valid values:
                 /// 
-                /// *   true: The call succeeds.
-                /// *   false: The call fails.
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The ID of the application group to which the alert template is applied.
+            /// The ID of the application group.
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// Indicates whether the call succeeds. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call succeeds.
-        /// *   false: The call fails.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

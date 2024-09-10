@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyGroupMonitoringAgentProcessRequest : TeaModel {
+        /// <summary>
+        /// The alert rule configurations.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AlertConfig")]
         [Validation(Required=false)]
         public List<ModifyGroupMonitoringAgentProcessRequestAlertConfig> AlertConfig { get; set; }
@@ -27,6 +32,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   LessThanLastWeek: less than the metric value at the same time last week
             /// *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
             /// *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ComparisonOperator")]
             [Validation(Required=false)]
@@ -45,6 +52,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// *   critical (default value): critical
             /// *   warn: warning
             /// *   info: information
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("EscalationsLevel")]
             [Validation(Required=false)]
@@ -77,6 +86,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Statistics { get; set; }
 
+            /// <summary>
+            /// The alert trigger.
+            /// </summary>
             [NameInMap("TargetList")]
             [Validation(Required=false)]
             public List<ModifyGroupMonitoringAgentProcessRequestAlertConfigTargetList> TargetList { get; set; }
@@ -84,14 +96,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The Alibaba Cloud Resource Name (ARN) of the resource.
                 /// 
-                /// For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).
+                /// For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](https://help.aliyun.com/document_detail/121592.html).
                 /// 
                 /// Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
                 /// 
-                /// *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
-                /// *   {userId}: the ID of the Alibaba Cloud account.
-                /// *   {regionId}: the region ID of the message queue or topic.
-                /// *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
+                /// - {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
+                /// - {userId}: the ID of the Alibaba Cloud account.
+                /// - {regionId}: the region ID of the message queue or topic.
+                /// - {Resource type}: the type of the resource for which alerts are triggered. Valid values: 
+                ///     - **queues** 
+                ///     - **topics** 
+                /// - {Resourcename}: the name of the resource. 
+                ///   - If the resource type is set to **queues**, the resource name is the name of the message queue. 
+                ///   - If the resource type is set to **topics**, the resource name is the name of the topic.`
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
@@ -100,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The ID of the resource for which alerts are triggered.
                 /// 
-                /// For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).
+                /// For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](https://help.aliyun.com/document_detail/121592.html).
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -128,6 +145,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// The alert threshold. Valid values of N: 1 to 200.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Threshold")]
             [Validation(Required=false)]
@@ -137,6 +156,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.
             /// 
             /// >  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Times")]
             [Validation(Required=false)]
@@ -153,6 +174,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the application group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -160,6 +183,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the process monitoring task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

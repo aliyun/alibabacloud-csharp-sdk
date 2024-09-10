@@ -16,7 +16,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The name of the Logstore group.
         /// 
-        /// For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](~~429526~~).
+        /// For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](https://help.aliyun.com/document_detail/429526.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SLSGroupName")]
         [Validation(Required=false)]

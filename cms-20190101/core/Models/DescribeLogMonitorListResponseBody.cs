@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public long? LogId { get; set; }
 
             /// <summary>
-            /// The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+            /// The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]

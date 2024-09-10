@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The ID of the alert template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

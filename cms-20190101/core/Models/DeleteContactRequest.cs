@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class DeleteContactRequest : TeaModel {
         /// <summary>
         /// The name of the alert contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]

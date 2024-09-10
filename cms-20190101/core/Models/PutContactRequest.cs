@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The name of the alert contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// The description of the alert contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Describe")]
         [Validation(Required=false)]

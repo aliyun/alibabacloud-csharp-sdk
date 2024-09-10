@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<NotificationStrategyEscalationSettingCustomChannels> CustomChannels { get; set; }
             public class NotificationStrategyEscalationSettingCustomChannels : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("ChannelType")]
                 [Validation(Required=false)]
                 public string ChannelType { get; set; }
@@ -69,14 +72,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<List<NotificationStrategyFilterSettingBlackList>> BlackList { get; set; }
             public class NotificationStrategyFilterSettingBlackList : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Field")]
                 [Validation(Required=false)]
                 public string Field { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Op")]
                 [Validation(Required=false)]
                 public string Op { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -87,14 +99,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<List<NotificationStrategyFilterSettingWhiteList>> WhiteList { get; set; }
             public class NotificationStrategyFilterSettingWhiteList : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Field")]
                 [Validation(Required=false)]
                 public string Field { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Op")]
                 [Validation(Required=false)]
                 public string Op { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -139,6 +160,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -166,6 +190,40 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("TemplateUuid")]
             [Validation(Required=false)]
             public string TemplateUuid { get; set; }
+
+        }
+
+        [NameInMap("RouteSetting")]
+        [Validation(Required=false)]
+        public NotificationStrategyRouteSetting RouteSetting { get; set; }
+        public class NotificationStrategyRouteSetting : TeaModel {
+            [NameInMap("Routes")]
+            [Validation(Required=false)]
+            public List<NotificationStrategyRouteSettingRoutes> Routes { get; set; }
+            public class NotificationStrategyRouteSettingRoutes : TeaModel {
+                [NameInMap("Conditions")]
+                [Validation(Required=false)]
+                public List<NotificationStrategyRouteSettingRoutesConditions> Conditions { get; set; }
+                public class NotificationStrategyRouteSettingRoutesConditions : TeaModel {
+                    [NameInMap("Field")]
+                    [Validation(Required=false)]
+                    public string Field { get; set; }
+
+                    [NameInMap("Op")]
+                    [Validation(Required=false)]
+                    public string Op { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("EscalationUuid")]
+                [Validation(Required=false)]
+                public string EscalationUuid { get; set; }
+
+            }
 
         }
 

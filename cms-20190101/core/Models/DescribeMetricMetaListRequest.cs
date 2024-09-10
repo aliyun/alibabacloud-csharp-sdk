@@ -12,13 +12,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The tags for filtering metrics. Specify a JSON string.
         /// 
-        /// Format:`[{"name":"tag name","value":"tag value"},{"name":"tag name","value":"tag value"}]`. The following tags are available:
+        /// Format: ` [{"name":"tag key","value":"tag value"},{"name":"tag key","value":"tag value"}]  `. The following tags are available:
         /// 
         /// *   metricCategory: the category of the metric.
         /// *   alertEnable: specifies whether to report alerts for the metric.
-        /// *   alertUnit: the suggested unit of the metric value in alerts.
+        /// *   alertUnit: the unit of the metric in the alerts.
         /// *   unitFactor: the factor for metric unit conversion.
-        /// *   minAlertPeriod: the minimum time interval to report a new alert.
+        /// *   minAlertPeriod: the minimum interval at which the alert is reported.
         /// *   productCategory: the category of the service.
         /// </summary>
         [NameInMap("Labels")]
@@ -26,30 +26,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+        /// The metric name. For more information, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The namespace of the service.
+        /// The namespace of the cloud service.
         /// 
-        /// For more information, see [Appendix 1: Metrics](~~163515~~).
+        /// For more information about the namespaces of cloud services, see [Appendix 1: Metrics](https://help.aliyun.com/document_detail/163515.html).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The page to return. Default value: 1
+        /// The page number. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 30.
+        /// The number of entries per page. Default value: 30.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
