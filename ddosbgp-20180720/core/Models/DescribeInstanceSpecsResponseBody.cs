@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public int? DefenseTimesPercent { get; set; }
 
+            [NameInMap("DowngradeStatus")]
+            [Validation(Required=false)]
+            public int? DowngradeStatus { get; set; }
+
             /// <summary>
             /// The region ID of the Anti-DDoS Origin Enterprise instance.
             /// </summary>
@@ -74,6 +78,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 [NameInMap("BindIpCount")]
                 [Validation(Required=false)]
                 public int? BindIpCount { get; set; }
+
+                [NameInMap("ElasticBwMbps")]
+                [Validation(Required=false)]
+                public int? ElasticBwMbps { get; set; }
+
+                [NameInMap("ElasticBwMode")]
+                [Validation(Required=false)]
+                public string ElasticBwMode { get; set; }
 
                 /// <summary>
                 /// The burstable protection bandwidth of each protected IP address. Unit: Gbit/s.
