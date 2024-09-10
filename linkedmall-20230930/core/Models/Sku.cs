@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string SkuStatus { get; set; }
 
+        [NameInMap("suggestedRetailPrice")]
+        [Validation(Required=false)]
+        public long? SuggestedRetailPrice { get; set; }
+
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
