@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EntityItems")]
         [Validation(Required=false)]
         public List<CreateEntityRequestEntityItems> EntityItems { get; set; }
@@ -27,10 +30,16 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class ListPublicDatasetEntityItemsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }

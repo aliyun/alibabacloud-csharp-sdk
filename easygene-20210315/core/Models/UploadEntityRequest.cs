@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class UploadEntityRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EntityCSVFile")]
         [Validation(Required=false)]
         public string EntityCSVFile { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }

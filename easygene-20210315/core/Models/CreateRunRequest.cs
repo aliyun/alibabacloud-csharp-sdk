@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class CreateRunRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
@@ -41,6 +44,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public bool? CallCaching { get; set; }
 
+            [NameInMap("DataLoader")]
+            [Validation(Required=false)]
+            public string DataLoader { get; set; }
+
             [NameInMap("DeleteIntermediateResults")]
             [Validation(Required=false)]
             public bool? DeleteIntermediateResults { get; set; }
@@ -55,6 +62,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
         public string Inputs { get; set; }
@@ -79,6 +89,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string RunName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }

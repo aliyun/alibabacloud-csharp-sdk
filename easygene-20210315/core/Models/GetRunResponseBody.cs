@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public bool? CallCaching { get; set; }
 
+            [NameInMap("DataLoader")]
+            [Validation(Required=false)]
+            public string DataLoader { get; set; }
+
             [NameInMap("DeleteIntermediateResults")]
             [Validation(Required=false)]
             public bool? DeleteIntermediateResults { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class CreateTemplateShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputsExpression")]
         [Validation(Required=false)]
         public string InputsExpressionShrink { get; set; }
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string Labels { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OutputsExpression")]
         [Validation(Required=false)]
         public string OutputsExpressionShrink { get; set; }
@@ -45,10 +54,16 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string RootEntity { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }

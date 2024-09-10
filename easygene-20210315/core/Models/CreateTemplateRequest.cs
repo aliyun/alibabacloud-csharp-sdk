@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class CreateTemplateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputsExpression")]
         [Validation(Required=false)]
         public List<CreateTemplateRequestInputsExpression> InputsExpression { get; set; }
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public string Help { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Required")]
             [Validation(Required=false)]
             public bool? Required { get; set; }
@@ -41,18 +50,30 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public int? StepOrder { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("VariableName")]
             [Validation(Required=false)]
             public string VariableName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("VariableType")]
             [Validation(Required=false)]
             public string VariableType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("VariableValue")]
             [Validation(Required=false)]
             public string VariableValue { get; set; }
@@ -63,6 +84,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string Labels { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OutputsExpression")]
         [Validation(Required=false)]
         public List<CreateTemplateRequestOutputsExpression> OutputsExpression { get; set; }
@@ -71,6 +95,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public string Help { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Required")]
             [Validation(Required=false)]
             public bool? Required { get; set; }
@@ -79,18 +106,30 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public int? StepOrder { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("VariableName")]
             [Validation(Required=false)]
             public string VariableName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("VariableType")]
             [Validation(Required=false)]
             public string VariableType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("VariableValue")]
             [Validation(Required=false)]
             public string VariableValue { get; set; }
@@ -105,10 +144,16 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string RootEntity { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }
