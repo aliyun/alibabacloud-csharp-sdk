@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically create a proxy. Valid values:
+        /// Specifies whether to automatically create a database proxy. Valid values:
         /// 
-        /// *   **true**: automatically creates a proxy. By default, general-purpose proxies are enabled.
-        /// *   **false**: does not automatically create a proxy.
+        /// *   **true**: automatically creates a database proxy. By default, a general-purpose database proxy is created.
+        /// *   **false**: does not automatically create a database proxy.
         /// </summary>
         [NameInMap("AutoCreateProxy")]
         [Validation(Required=false)]
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// Specifies whether to enable the automatic payment feature. Valid values:
         /// 
-        /// *   **true**: enables the feature. Make sure that your account balance is sufficient.
+        /// *   **true**: enables the feature. You must make sure that your account balance is sufficient.
         /// *   **false**: disables the feature. An unpaid order is generated.
         /// 
-        /// >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+        /// >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -379,9 +379,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **VPC**: virtual private cloud (VPC)
         /// *   **Classic**: the classic network
         /// 
-        /// > *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
-        /// > *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
-        /// > *   If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to **VPC**.
+        /// > 
+        /// 
+        /// *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
+        /// 
+        /// *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
+        /// 
+        /// *   If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to **VPC**.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -420,7 +424,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Year**
         /// *   **Month**
         /// 
-        /// >  If you set the PayType parameter to **Prepaid**, you must specify this parameter.
+        /// >  If you set the PayType parameter to **Prepaid**, you must also specify this parameter.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -492,7 +496,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if the instance runs MySQL or PostgreSQL. Valid values:
+        /// Specifies whether to enable the automatic storage expansion feature for the instance. If the instance runs MySQL or PostgreSQL, this feature is supported. Valid values:
         /// 
         /// *   **Enable**
         /// *   **Disable** (default)
@@ -512,7 +516,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **40**
         /// *   **50**
         /// 
-        /// >  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.
+        /// >  If you set the **StorageAutoScale** parameter to **Enable**, you must also specify this parameter.
         /// </summary>
         [NameInMap("StorageThreshold")]
         [Validation(Required=false)]
@@ -626,12 +630,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// The subscription duration of the instance.
+        /// The subscription duration of the instance. Valid values:
         /// 
         /// *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1 to 5**.
         /// *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1 to 11**.
         /// 
-        /// >  If you set the PayType parameter to **Prepaid**, you must specify this parameter.
+        /// >  If you set the PayType parameter to **Prepaid**, you must also specify this parameter.
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]

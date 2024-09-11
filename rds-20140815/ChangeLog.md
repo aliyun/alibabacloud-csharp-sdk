@@ -1,3 +1,6 @@
+2024-09-11 Version: 7.2.1
+- Generated csharp 2014-08-15 for Rds.
+
 2024-09-10 Version: 7.2.0
 - Support API ModifyAccountCheckPolicy.
 - Support API ModifyAccountSecurityPolicy.
