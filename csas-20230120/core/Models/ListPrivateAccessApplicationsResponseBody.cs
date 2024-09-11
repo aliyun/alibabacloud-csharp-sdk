@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string ApplicationId { get; set; }
 
+            [NameInMap("BrowserAccessStatus")]
+            [Validation(Required=false)]
+            public string BrowserAccessStatus { get; set; }
+
             [NameInMap("ConnectorIds")]
             [Validation(Required=false)]
             public List<string> ConnectorIds { get; set; }
@@ -32,6 +36,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("L7ProxyDomainAutomatic")]
+            [Validation(Required=false)]
+            public string L7ProxyDomainAutomatic { get; set; }
+
+            [NameInMap("L7ProxyDomainCustom")]
+            [Validation(Required=false)]
+            public string L7ProxyDomainCustom { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]

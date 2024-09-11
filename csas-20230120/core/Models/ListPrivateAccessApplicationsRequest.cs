@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPrivateAccessApplicationsRequest : TeaModel {
+        [NameInMap("AccessModes")]
+        [Validation(Required=false)]
+        public string AccessModes { get; set; }
+
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }

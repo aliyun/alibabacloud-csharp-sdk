@@ -16,9 +16,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> Addresses { get; set; }
 
+        [NameInMap("BrowserAccessStatus")]
+        [Validation(Required=false)]
+        public string BrowserAccessStatus { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("L7ProxyDomainAutomaticPrefix")]
+        [Validation(Required=false)]
+        public string L7ProxyDomainAutomaticPrefix { get; set; }
+
+        [NameInMap("L7ProxyDomainCustom")]
+        [Validation(Required=false)]
+        public string L7ProxyDomainCustom { get; set; }
 
         /// <summary>
         /// This parameter is required.

@@ -581,9 +581,21 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 bodyFlat["Addresses"] = request.Addresses;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserAccessStatus))
+            {
+                body["BrowserAccessStatus"] = request.BrowserAccessStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainAutomaticPrefix))
+            {
+                body["L7ProxyDomainAutomaticPrefix"] = request.L7ProxyDomainAutomaticPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainCustom))
+            {
+                body["L7ProxyDomainCustom"] = request.L7ProxyDomainCustom;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -645,9 +657,21 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 bodyFlat["Addresses"] = request.Addresses;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserAccessStatus))
+            {
+                body["BrowserAccessStatus"] = request.BrowserAccessStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainAutomaticPrefix))
+            {
+                body["L7ProxyDomainAutomaticPrefix"] = request.L7ProxyDomainAutomaticPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainCustom))
+            {
+                body["L7ProxyDomainCustom"] = request.L7ProxyDomainCustom;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -7573,6 +7597,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainAutomaticPrefix))
+            {
+                body["L7ProxyDomainAutomaticPrefix"] = request.L7ProxyDomainAutomaticPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainCustom))
+            {
+                body["L7ProxyDomainCustom"] = request.L7ProxyDomainCustom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainPrivate))
+            {
+                body["L7ProxyDomainPrivate"] = request.L7ProxyDomainPrivate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {
                 body["ModifyType"] = request.ModifyType;
@@ -7640,6 +7676,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainAutomaticPrefix))
+            {
+                body["L7ProxyDomainAutomaticPrefix"] = request.L7ProxyDomainAutomaticPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainCustom))
+            {
+                body["L7ProxyDomainCustom"] = request.L7ProxyDomainCustom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L7ProxyDomainPrivate))
+            {
+                body["L7ProxyDomainPrivate"] = request.L7ProxyDomainPrivate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {

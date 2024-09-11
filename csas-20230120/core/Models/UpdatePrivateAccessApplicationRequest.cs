@@ -24,6 +24,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("L7ProxyDomainAutomaticPrefix")]
+        [Validation(Required=false)]
+        public string L7ProxyDomainAutomaticPrefix { get; set; }
+
+        [NameInMap("L7ProxyDomainCustom")]
+        [Validation(Required=false)]
+        public string L7ProxyDomainCustom { get; set; }
+
+        [NameInMap("L7ProxyDomainPrivate")]
+        [Validation(Required=false)]
+        public string L7ProxyDomainPrivate { get; set; }
+
         [NameInMap("ModifyType")]
         [Validation(Required=false)]
         public string ModifyType { get; set; }
