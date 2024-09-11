@@ -1,3 +1,6 @@
+2024-09-11 Version: 1.8.1
+- Generated csharp 2023-08-01 for AiMiaoBi.
+
 2024-09-10 Version: 1.8.0
 - Support API DeleteCustomTopicByTopic.
 - Support API DeleteCustomTopicViewPointById.
