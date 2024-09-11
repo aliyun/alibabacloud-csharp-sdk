@@ -3874,6 +3874,602 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         }
 
         /**
+         * @summary 车五项信息识别
+         *
+         * @param request Vehicle5ItemQueryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return Vehicle5ItemQueryResponse
+         */
+        public Vehicle5ItemQueryResponse Vehicle5ItemQueryWithOptions(Vehicle5ItemQueryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Vehicle5ItemQuery",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Vehicle5ItemQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车五项信息识别
+         *
+         * @param request Vehicle5ItemQueryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return Vehicle5ItemQueryResponse
+         */
+        public async Task<Vehicle5ItemQueryResponse> Vehicle5ItemQueryWithOptionsAsync(Vehicle5ItemQueryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Vehicle5ItemQuery",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Vehicle5ItemQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车五项信息识别
+         *
+         * @param request Vehicle5ItemQueryRequest
+         * @return Vehicle5ItemQueryResponse
+         */
+        public Vehicle5ItemQueryResponse Vehicle5ItemQuery(Vehicle5ItemQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return Vehicle5ItemQueryWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 车五项信息识别
+         *
+         * @param request Vehicle5ItemQueryRequest
+         * @return Vehicle5ItemQueryResponse
+         */
+        public async Task<Vehicle5ItemQueryResponse> Vehicle5ItemQueryAsync(Vehicle5ItemQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await Vehicle5ItemQueryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 车辆投保日期查询
+         *
+         * @param request VehicleInsureQueryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VehicleInsureQueryResponse
+         */
+        public VehicleInsureQueryResponse VehicleInsureQueryWithOptions(VehicleInsureQueryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vin))
+            {
+                query["Vin"] = request.Vin;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VehicleInsureQuery",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VehicleInsureQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车辆投保日期查询
+         *
+         * @param request VehicleInsureQueryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VehicleInsureQueryResponse
+         */
+        public async Task<VehicleInsureQueryResponse> VehicleInsureQueryWithOptionsAsync(VehicleInsureQueryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vin))
+            {
+                query["Vin"] = request.Vin;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VehicleInsureQuery",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VehicleInsureQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车辆投保日期查询
+         *
+         * @param request VehicleInsureQueryRequest
+         * @return VehicleInsureQueryResponse
+         */
+        public VehicleInsureQueryResponse VehicleInsureQuery(VehicleInsureQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VehicleInsureQueryWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 车辆投保日期查询
+         *
+         * @param request VehicleInsureQueryRequest
+         * @return VehicleInsureQueryResponse
+         */
+        public async Task<VehicleInsureQueryResponse> VehicleInsureQueryAsync(VehicleInsureQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VehicleInsureQueryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 车辆要素核验
+         *
+         * @param request VehicleMetaVerifyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VehicleMetaVerifyResponse
+         */
+        public VehicleMetaVerifyResponse VehicleMetaVerifyWithOptions(VehicleMetaVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                query["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyMetaType))
+            {
+                query["VerifyMetaType"] = request.VerifyMetaType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VehicleMetaVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VehicleMetaVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车辆要素核验
+         *
+         * @param request VehicleMetaVerifyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VehicleMetaVerifyResponse
+         */
+        public async Task<VehicleMetaVerifyResponse> VehicleMetaVerifyWithOptionsAsync(VehicleMetaVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                query["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyMetaType))
+            {
+                query["VerifyMetaType"] = request.VerifyMetaType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VehicleMetaVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VehicleMetaVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车辆要素核验
+         *
+         * @param request VehicleMetaVerifyRequest
+         * @return VehicleMetaVerifyResponse
+         */
+        public VehicleMetaVerifyResponse VehicleMetaVerify(VehicleMetaVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VehicleMetaVerifyWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 车辆要素核验
+         *
+         * @param request VehicleMetaVerifyRequest
+         * @return VehicleMetaVerifyResponse
+         */
+        public async Task<VehicleMetaVerifyResponse> VehicleMetaVerifyAsync(VehicleMetaVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VehicleMetaVerifyWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 车辆要素核验增强版
+         *
+         * @param request VehicleMetaVerifyV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VehicleMetaVerifyV2Response
+         */
+        public VehicleMetaVerifyV2Response VehicleMetaVerifyV2WithOptions(VehicleMetaVerifyV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                query["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyMetaType))
+            {
+                query["VerifyMetaType"] = request.VerifyMetaType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VehicleMetaVerifyV2",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VehicleMetaVerifyV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车辆要素核验增强版
+         *
+         * @param request VehicleMetaVerifyV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VehicleMetaVerifyV2Response
+         */
+        public async Task<VehicleMetaVerifyV2Response> VehicleMetaVerifyV2WithOptionsAsync(VehicleMetaVerifyV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                query["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyMetaType))
+            {
+                query["VerifyMetaType"] = request.VerifyMetaType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VehicleMetaVerifyV2",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VehicleMetaVerifyV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车辆要素核验增强版
+         *
+         * @param request VehicleMetaVerifyV2Request
+         * @return VehicleMetaVerifyV2Response
+         */
+        public VehicleMetaVerifyV2Response VehicleMetaVerifyV2(VehicleMetaVerifyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VehicleMetaVerifyV2WithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 车辆要素核验增强版
+         *
+         * @param request VehicleMetaVerifyV2Request
+         * @return VehicleMetaVerifyV2Response
+         */
+        public async Task<VehicleMetaVerifyV2Response> VehicleMetaVerifyV2Async(VehicleMetaVerifyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VehicleMetaVerifyV2WithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 车辆信息识别
+         *
+         * @param request VehicleQueryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VehicleQueryResponse
+         */
+        public VehicleQueryResponse VehicleQueryWithOptions(VehicleQueryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VehicleQuery",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VehicleQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车辆信息识别
+         *
+         * @param request VehicleQueryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VehicleQueryResponse
+         */
+        public async Task<VehicleQueryResponse> VehicleQueryWithOptionsAsync(VehicleQueryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleNum))
+            {
+                query["VehicleNum"] = request.VehicleNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VehicleType))
+            {
+                query["VehicleType"] = request.VehicleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VehicleQuery",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VehicleQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 车辆信息识别
+         *
+         * @param request VehicleQueryRequest
+         * @return VehicleQueryResponse
+         */
+        public VehicleQueryResponse VehicleQuery(VehicleQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VehicleQueryWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 车辆信息识别
+         *
+         * @param request VehicleQueryRequest
+         * @return VehicleQueryResponse
+         */
+        public async Task<VehicleQueryResponse> VehicleQueryAsync(VehicleQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VehicleQueryWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @param request VerifyMaterialRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return VerifyMaterialResponse
