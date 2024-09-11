@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateConfigMapRequest : TeaModel {
         /// <summary>
-        /// The key-value pairs of the ConfigMap in the JSON format. Format:
-        /// 
-        /// {"Data":"{"k1":"v1", "k2":"v2"}"}
-        /// 
-        /// k specifies a key and v specifies a value. For more information, see [Manage a Kubernetes ConfigMap](https://help.aliyun.com/document_detail/171326.html).
+        /// The ConfigMap data.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -23,7 +19,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// The description. The description must be 1 to 255 characters in length, and cannot contain spaces.
+        /// The key-value pairs of the ConfigMap in the JSON format. Format:
+        /// 
+        /// {"Data":"{"k1":"v1", "k2":"v2"}"}
+        /// 
+        /// k specifies a key and v specifies a value. For more information, see [Manage a Kubernetes ConfigMap](https://help.aliyun.com/document_detail/171326.html).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

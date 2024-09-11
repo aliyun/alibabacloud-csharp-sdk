@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
 
+        [NameInMap("enableAppMetric")]
+        [Validation(Required=false)]
+        public bool? EnableAppMetric { get; set; }
+
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
@@ -132,6 +136,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("ossMountConfig")]
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
+
+        [NameInMap("programmingLanguage")]
+        [Validation(Required=false)]
+        public string ProgrammingLanguage { get; set; }
 
         [NameInMap("runtime")]
         [Validation(Required=false)]

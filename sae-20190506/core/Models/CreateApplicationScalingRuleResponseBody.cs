@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            [NameInMap("EnableIdle")]
+            [Validation(Required=false)]
+            public bool? EnableIdle { get; set; }
+
             [NameInMap("LastDisableTime")]
             [Validation(Required=false)]
             public long? LastDisableTime { get; set; }

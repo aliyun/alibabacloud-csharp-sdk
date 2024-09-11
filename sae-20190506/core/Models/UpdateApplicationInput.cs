@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
+        [NameInMap("namespaceID")]
+        [Validation(Required=false)]
+        public string NamespaceID { get; set; }
+
         [NameInMap("nasConfig")]
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }
@@ -132,6 +136,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("ossMountConfig")]
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
+
+        [NameInMap("programmingLanguage")]
+        [Validation(Required=false)]
+        public string ProgrammingLanguage { get; set; }
 
         [NameInMap("runtime")]
         [Validation(Required=false)]

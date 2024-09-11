@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            [NameInMap("EnableIdle")]
+            [Validation(Required=false)]
+            public bool? EnableIdle { get; set; }
+
             /// <summary>
             /// The time when the auto scaling policy was last disabled.
             /// </summary>

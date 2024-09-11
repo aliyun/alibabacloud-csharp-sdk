@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("EnableIdle")]
+        [Validation(Required=false)]
+        public bool? EnableIdle { get; set; }
+
         /// <summary>
         /// The percentage of the minimum number of available instances. Take note of the following rules:
         /// 

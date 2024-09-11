@@ -1293,6 +1293,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIdle))
+            {
+                query["EnableIdle"] = request.EnableIdle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
             {
                 query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
@@ -1362,6 +1366,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIdle))
+            {
+                query["EnableIdle"] = request.EnableIdle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
             {
@@ -1749,6 +1757,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                query["IdleTimeout"] = request.IdleTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerPort))
             {
                 query["ListenerPort"] = request.ListenerPort;
@@ -1830,6 +1842,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                query["IdleTimeout"] = request.IdleTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerPort))
             {
@@ -13694,6 +13710,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIdle))
+            {
+                query["EnableIdle"] = request.EnableIdle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
             {
                 query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
@@ -13752,6 +13772,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIdle))
+            {
+                query["EnableIdle"] = request.EnableIdle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
             {
@@ -14197,6 +14221,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                query["IdleTimeout"] = request.IdleTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressId))
             {
                 query["IngressId"] = request.IngressId;
@@ -14272,6 +14300,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                query["IdleTimeout"] = request.IdleTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressId))
             {

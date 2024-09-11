@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("IdleTimeout")]
+        [Validation(Required=false)]
+        public int? IdleTimeout { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

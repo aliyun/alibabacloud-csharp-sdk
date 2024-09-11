@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("EnableIdle")]
+        [Validation(Required=false)]
+        public bool? EnableIdle { get; set; }
+
         [NameInMap("MinReadyInstanceRatio")]
         [Validation(Required=false)]
         public int? MinReadyInstanceRatio { get; set; }
