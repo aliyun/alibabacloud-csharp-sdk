@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public ModifyNodePoolAttributeRequestNodePoolStrategy NodePoolStrategy { get; set; }
         public class ModifyNodePoolAttributeRequestNodePoolStrategy : TeaModel {
+            [NameInMap("MaxIdleAppInstanceAmount")]
+            [Validation(Required=false)]
+            public int? MaxIdleAppInstanceAmount { get; set; }
+
             [NameInMap("MaxScalingAmount")]
             [Validation(Required=false)]
             public int? MaxScalingAmount { get; set; }

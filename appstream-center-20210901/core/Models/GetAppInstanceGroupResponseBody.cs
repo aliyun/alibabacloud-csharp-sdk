@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public int? Amount { get; set; }
 
+                [NameInMap("MaxIdleAppInstanceAmount")]
+                [Validation(Required=false)]
+                public int? MaxIdleAppInstanceAmount { get; set; }
+
                 [NameInMap("MaxScalingAmount")]
                 [Validation(Required=false)]
                 public int? MaxScalingAmount { get; set; }
