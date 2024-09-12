@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchplat20240529.Models
 {
     public class GetQueryAnalysisRequest : TeaModel {
+        [NameInMap("functions")]
+        [Validation(Required=false)]
+        public List<GetQueryAnalysisRequestFunctions> Functions { get; set; }
+        public class GetQueryAnalysisRequestFunctions : TeaModel {
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("parameters")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Parameters { get; set; }
+
+        }
+
         [NameInMap("history")]
         [Validation(Required=false)]
         public List<GetQueryAnalysisRequestHistory> History { get; set; }

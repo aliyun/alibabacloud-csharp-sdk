@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
             [Validation(Required=false)]
             public string Query { get; set; }
 
+            [NameInMap("sql")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Sql { get; set; }
+
         }
 
         [NameInMap("usage")]

@@ -648,6 +648,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Functions))
+            {
+                body["functions"] = request.Functions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
             {
                 body["history"] = request.History;
@@ -688,6 +692,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Functions))
+            {
+                body["functions"] = request.Functions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
             {
                 body["history"] = request.History;
