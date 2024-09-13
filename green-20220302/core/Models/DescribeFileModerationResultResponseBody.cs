@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         [Validation(Required=false)]
                         public float? Confidence { get; set; }
 
+                        [NameInMap("Description")]
+                        [Validation(Required=false)]
+                        public string Description { get; set; }
+
                         /// <summary>
                         /// The details of the labels.
                         /// </summary>
@@ -118,6 +122,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                     }
 
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public string RiskLevel { get; set; }
+
                     /// <summary>
                     /// The moderation service.
                     /// </summary>
@@ -161,6 +169,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [NameInMap("Labels")]
                     [Validation(Required=false)]
                     public string Labels { get; set; }
+
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public string RiskLevel { get; set; }
 
                     /// <summary>
                     /// The risk details that are hit.
@@ -207,6 +219,72 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string TextUrl { get; set; }
 
             }
+
+            [NameInMap("PageSummary")]
+            [Validation(Required=false)]
+            public DescribeFileModerationResultResponseBodyDataPageSummary PageSummary { get; set; }
+            public class DescribeFileModerationResultResponseBodyDataPageSummary : TeaModel {
+                [NameInMap("ImageSummary")]
+                [Validation(Required=false)]
+                public DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary ImageSummary { get; set; }
+                public class DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary : TeaModel {
+                    [NameInMap("ImageLabels")]
+                    [Validation(Required=false)]
+                    public List<DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels> ImageLabels { get; set; }
+                    public class DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels : TeaModel {
+                        [NameInMap("Description")]
+                        [Validation(Required=false)]
+                        public string Description { get; set; }
+
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        [NameInMap("LabelSum")]
+                        [Validation(Required=false)]
+                        public int? LabelSum { get; set; }
+
+                    }
+
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public string RiskLevel { get; set; }
+
+                }
+
+                [NameInMap("PageSum")]
+                [Validation(Required=false)]
+                public int? PageSum { get; set; }
+
+                [NameInMap("TextSummary")]
+                [Validation(Required=false)]
+                public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary TextSummary { get; set; }
+                public class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary : TeaModel {
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public string RiskLevel { get; set; }
+
+                    [NameInMap("TextLabels")]
+                    [Validation(Required=false)]
+                    public List<DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels> TextLabels { get; set; }
+                    public class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels : TeaModel {
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        [NameInMap("LabelSum")]
+                        [Validation(Required=false)]
+                        public int? LabelSum { get; set; }
+
+                    }
+
+                }
+
+            }
+
+            [NameInMap("RiskLevel")]
+            [Validation(Required=false)]
+            public string RiskLevel { get; set; }
 
             /// <summary>
             /// The URL of the moderation object.

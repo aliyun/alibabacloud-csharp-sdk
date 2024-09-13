@@ -69,6 +69,156 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                 }
 
+                [NameInMap("FaceData")]
+                [Validation(Required=false)]
+                public List<ImageModerationResponseBodyDataExtFaceData> FaceData { get; set; }
+                public class ImageModerationResponseBodyDataExtFaceData : TeaModel {
+                    [NameInMap("Age")]
+                    [Validation(Required=false)]
+                    public int? Age { get; set; }
+
+                    [NameInMap("Bang")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtFaceDataBang Bang { get; set; }
+                    public class ImageModerationResponseBodyDataExtFaceDataBang : TeaModel {
+                        [NameInMap("Confidence")]
+                        [Validation(Required=false)]
+                        public float? Confidence { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Gender")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtFaceDataGender Gender { get; set; }
+                    public class ImageModerationResponseBodyDataExtFaceDataGender : TeaModel {
+                        [NameInMap("Confidence")]
+                        [Validation(Required=false)]
+                        public float? Confidence { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Glasses")]
+                    [Validation(Required=false)]
+                    public string Glasses { get; set; }
+
+                    [NameInMap("Hairstyle")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtFaceDataHairstyle Hairstyle { get; set; }
+                    public class ImageModerationResponseBodyDataExtFaceDataHairstyle : TeaModel {
+                        [NameInMap("Confidence")]
+                        [Validation(Required=false)]
+                        public float? Confidence { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Hat")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtFaceDataHat Hat { get; set; }
+                    public class ImageModerationResponseBodyDataExtFaceDataHat : TeaModel {
+                        [NameInMap("Confidence")]
+                        [Validation(Required=false)]
+                        public float? Confidence { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Location")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtFaceDataLocation Location { get; set; }
+                    public class ImageModerationResponseBodyDataExtFaceDataLocation : TeaModel {
+                        [NameInMap("H")]
+                        [Validation(Required=false)]
+                        public int? H { get; set; }
+
+                        [NameInMap("W")]
+                        [Validation(Required=false)]
+                        public int? W { get; set; }
+
+                        [NameInMap("X")]
+                        [Validation(Required=false)]
+                        public int? X { get; set; }
+
+                        [NameInMap("Y")]
+                        [Validation(Required=false)]
+                        public int? Y { get; set; }
+
+                    }
+
+                    [NameInMap("Mask")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtFaceDataMask Mask { get; set; }
+                    public class ImageModerationResponseBodyDataExtFaceDataMask : TeaModel {
+                        [NameInMap("Confidence")]
+                        [Validation(Required=false)]
+                        public float? Confidence { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Mustache")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtFaceDataMustache Mustache { get; set; }
+                    public class ImageModerationResponseBodyDataExtFaceDataMustache : TeaModel {
+                        [NameInMap("Confidence")]
+                        [Validation(Required=false)]
+                        public float? Confidence { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Quality")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtFaceDataQuality Quality { get; set; }
+                    public class ImageModerationResponseBodyDataExtFaceDataQuality : TeaModel {
+                        [NameInMap("Blur")]
+                        [Validation(Required=false)]
+                        public float? Blur { get; set; }
+
+                        [NameInMap("Integrity")]
+                        [Validation(Required=false)]
+                        public float? Integrity { get; set; }
+
+                        [NameInMap("Pitch")]
+                        [Validation(Required=false)]
+                        public float? Pitch { get; set; }
+
+                        [NameInMap("Roll")]
+                        [Validation(Required=false)]
+                        public float? Roll { get; set; }
+
+                        [NameInMap("Yaw")]
+                        [Validation(Required=false)]
+                        public float? Yaw { get; set; }
+
+                    }
+
+                    [NameInMap("Smile")]
+                    [Validation(Required=false)]
+                    public float? Smile { get; set; }
+
+                }
+
                 /// <summary>
                 /// Logo information.
                 /// </summary>
