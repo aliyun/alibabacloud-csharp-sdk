@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the snapshot.
+        /// The IDs of the snapshots.
         /// </summary>
         [NameInMap("SnapShotId")]
         [Validation(Required=false)]

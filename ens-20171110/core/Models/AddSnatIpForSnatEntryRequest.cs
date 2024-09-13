@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SnatEntryId { get; set; }
 
         /// <summary>
-        /// The EIP that you want to add to the SNAT entry.
+        /// The EIP specified in the SNAT entry.
         /// 
         /// This parameter is required.
         /// </summary>

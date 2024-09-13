@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnassignPrivateIpAddressesResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

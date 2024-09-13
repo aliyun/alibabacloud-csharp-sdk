@@ -48,6 +48,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("Ipv6Sets")]
+                [Validation(Required=false)]
+                public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets Ipv6Sets { get; set; }
+                public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets : TeaModel {
+                    [NameInMap("Ipv6Set")]
+                    [Validation(Required=false)]
+                    public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set> Ipv6Set { get; set; }
+                    public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set : TeaModel {
+                        [NameInMap("Ipv6Address")]
+                        [Validation(Required=false)]
+                        public string Ipv6Address { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// The MAC address of the ENI.
                 /// </summary>

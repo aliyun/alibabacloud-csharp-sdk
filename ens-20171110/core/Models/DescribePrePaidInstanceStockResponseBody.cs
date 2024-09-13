@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? AvaliableCount { get; set; }
 
         /// <summary>
-        /// The number of vCPUs.
+        /// The number of CPU cores.
         /// </summary>
         [NameInMap("Cores")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// The instance type.
+        /// The specification of the instance.
         /// </summary>
         [NameInMap("InstanceSpec")]
         [Validation(Required=false)]
@@ -52,21 +52,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Memory { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The reasons for resource scarcity
+        /// The reason why resources are insufficient.
         /// </summary>
         [NameInMap("ResourceGap")]
         [Validation(Required=false)]
         public string ResourceGap { get; set; }
 
         /// <summary>
-        /// The size of the system disk. Unit: GB.
+        /// The size of the system disk.
         /// </summary>
         [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]

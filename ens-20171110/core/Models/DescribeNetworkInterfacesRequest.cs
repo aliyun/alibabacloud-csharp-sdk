@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Ipv6Address")]
+        [Validation(Required=false)]
+        public List<string> Ipv6Address { get; set; }
+
         /// <summary>
         /// The ID of the network.
         /// </summary>

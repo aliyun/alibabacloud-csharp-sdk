@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The status of the ELB instance. Valid values:
+        /// The status of the listener after the modification. Valid values:
         /// 
-        /// *   **Active** (default): The listener for the instance can forward the received traffic based on the rule.
+        /// *   **Active**: The listener for the instance can forward the received traffic based on forwarding rules.
         /// *   **InActive**: The listener for the instance does not forward the received traffic.
         /// 
         /// This parameter is required.

@@ -9,19 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGDeploymentStatusRequest : TeaModel {
+        [NameInMap("DeploymentType")]
+        [Validation(Required=false)]
+        public string DeploymentType { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
         /// <summary>
         /// The number of the page to return. Pages start from page **1**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionIds")]
+        [Validation(Required=false)]
+        public List<string> RegionIds { get; set; }
 
         /// <summary>
         /// The ID of the SDG.
@@ -31,6 +43,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("SDGId")]
         [Validation(Required=false)]
         public string SDGId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

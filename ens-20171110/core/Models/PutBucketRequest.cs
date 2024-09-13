@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PutBucketRequest : TeaModel {
         /// <summary>
-        /// The access control list (ACL) of the bucket.
+        /// The access control list (ACL) of the bucket. Valid values:
         /// 
         /// *   **private** (default)
         /// *   **public-read-write**
@@ -37,25 +37,27 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// Scheduling Scope, this parameter is only effective for globally scheduled Buckets.
+        /// The scheduling scope. This parameter takes effect only when the value of the LogicalBucketType parameter is standard. Valid values:
         /// 
-        /// - domestic
-        /// 
-        /// - oversea
+        /// *   **domestic**: Chinese mainland.
+        /// *   **oversea**: outside the Chinese mainland.
         /// </summary>
         [NameInMap("DispatchScope")]
         [Validation(Required=false)]
         public string DispatchScope { get; set; }
 
         /// <summary>
-        /// The ID of the region where the node is located. If this parameter is not specified, the node is the global default node.
+        /// The region ID of the node. This parameter is required if the value of the LogicalBucketType parameter is sink.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// Single-node storage. Set the value to sink.
+        /// The type of the bucket. Valid values:
+        /// 
+        /// *   **sink**: single-node bucket.
+        /// *   **standard**: bucket for global scheduling.
         /// </summary>
         [NameInMap("LogicalBucketType")]
         [Validation(Required=false)]

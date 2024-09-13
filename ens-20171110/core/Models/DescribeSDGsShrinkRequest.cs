@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGsShrinkRequest : TeaModel {
         /// <summary>
-        /// The IDs of instances that you want to query. By default, all instances are queried.
-        /// 
-        /// >  If you specify the **SDGIds** and **InstanceIds** parameters at the same time, the query result is the intersection of the two conditions.
+        /// The AIC instance ID to be queried.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

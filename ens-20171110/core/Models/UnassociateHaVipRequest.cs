@@ -8,22 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeEipAddressesRequest : TeaModel {
+    public class UnassociateHaVipRequest : TeaModel {
         /// <summary>
-        /// The information about the EIPs.
-        /// </summary>
-        [NameInMap("Eips")]
-        [Validation(Required=false)]
-        public string Eips { get; set; }
-
-        /// <summary>
-        /// The ID of the Edge Node Service (ENS) node.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("EnsRegionId")]
+        [NameInMap("HaVipId")]
         [Validation(Required=false)]
-        public string EnsRegionId { get; set; }
+        public string HaVipId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
     }
 

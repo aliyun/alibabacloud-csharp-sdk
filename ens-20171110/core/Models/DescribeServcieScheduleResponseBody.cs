@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The IP address of the scheduled instance.
+        /// The ID of the scheduled instance.
         /// </summary>
         [NameInMap("InstanceIp")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CopySnapshotRequest : TeaModel {
         /// <summary>
-        /// The destination nodes.
+        /// The IDs of destination nodes.
         /// 
         /// This parameter is required.
         /// </summary>

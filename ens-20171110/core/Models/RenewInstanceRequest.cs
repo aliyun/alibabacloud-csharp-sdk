@@ -21,19 +21,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The renewal duration of the subscription instance.
         /// 
-        /// Valid values:
-        /// 
-        /// *   1
-        /// *   2
-        /// *   3
-        /// *   4
-        /// *   5
-        /// *   6
-        /// *   7
-        /// *   8
-        /// *   9
-        /// *   12
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]

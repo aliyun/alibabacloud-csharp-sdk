@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The ID of the edge node.
         /// 
         /// This parameter is required.
         /// </summary>

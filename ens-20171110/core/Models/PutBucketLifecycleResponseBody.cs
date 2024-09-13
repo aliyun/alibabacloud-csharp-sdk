@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("RuleId")]
+        [Validation(Required=false)]
+        public string RuleId { get; set; }
+
     }
 
 }

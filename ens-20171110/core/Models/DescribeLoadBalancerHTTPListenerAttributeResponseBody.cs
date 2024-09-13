@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerHTTPListenerAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The maximum bandwidth of the EIP.
-        /// 
-        /// *   Default value: 5.
-        /// *   Valid values: **5** to **10000**.
-        /// *   Unit: Mbit/s.
+        /// The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// </summary>
+        [NameInMap("BackendServerPort")]
+        [Validation(Required=false)]
+        public int? BackendServerPort { get; set; }
+
+        /// <summary>
+        /// The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -100,24 +103,30 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HealthCheckMethod { get; set; }
 
         /// <summary>
-        /// The timeout period of a health check. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+        /// The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
         /// 
         /// *   Default value: 5.
         /// *   Valid values: **1** to **300**.
         /// *   Unit: seconds.
         /// 
-        /// >*   This parameter is returned only if you set HealthCheck to on.
-        /// >*   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+        /// > 
+        /// 
+        /// *   This parameter takes effect only if the HealthCheck parameter is set to on.
+        /// 
+        /// *   If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
         /// </summary>
         [NameInMap("HealthCheckTimeout")]
         [Validation(Required=false)]
         public int? HealthCheckTimeout { get; set; }
 
         /// <summary>
-        /// The Uniform Resource Identifier (URI) that is used for health checks. The URI must be **1** to **80** characters in length.
+        /// The URI used for health checks. The URI must be **1** to **80** characters in length.
         /// 
-        /// >*   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
-        /// >*   This parameter is returned only if you set HealthCheck to on.
+        /// > 
+        /// 
+        /// *   A URL must start with a forward slash (`/`) but cannot contain only forward slashes (`/`).
+        /// 
+        /// *   This parameter takes effect only if the HealthCheck parameter is set to on.
         /// </summary>
         [NameInMap("HealthCheckURI")]
         [Validation(Required=false)]
@@ -152,7 +161,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ListenerForward { get; set; }
 
         /// <summary>
-        /// The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// The listener port.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -218,10 +227,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? UnhealthyThreshold { get; set; }
 
         /// <summary>
-        /// Specifies whether to use the X-Forwarded-For header to obtain the real IP address of the client. Valid values:
+        /// Indicates whether the X-Forwarded-For header is used to obtain the real IP address of the client. Valid values:
         /// 
-        /// *   **on**
-        /// *   **off** (default)
+        /// *   **on** (default)
+        /// *   **off**
         /// </summary>
         [NameInMap("XForwardedFor")]
         [Validation(Required=false)]

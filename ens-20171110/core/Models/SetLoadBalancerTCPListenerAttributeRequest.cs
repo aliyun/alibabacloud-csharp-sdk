@@ -43,13 +43,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckConnectPort { get; set; }
 
         /// <summary>
-        /// The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+        /// The timeout period for a health check response. If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
         /// 
         /// *   Default value: 5.
         /// *   Valid values: **1** to **300**.
         /// *   Unit: seconds.
         /// 
-        /// >  If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.
+        /// >  If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter is ignored and the period of time specified by the HealthCheckInterval parameter is used as the timeout period.
         /// </summary>
         [NameInMap("HealthCheckConnectTimeout")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthyThreshold { get; set; }
 
         /// <summary>
-        /// The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// The listener port whose attributes are to be modified. Valid values: **1** to **65535**.
         /// 
         /// This parameter is required.
         /// </summary>

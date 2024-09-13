@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The ID of the edge node.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]

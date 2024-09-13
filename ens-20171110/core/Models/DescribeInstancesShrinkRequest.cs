@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags that are added to the resource.
+        /// The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

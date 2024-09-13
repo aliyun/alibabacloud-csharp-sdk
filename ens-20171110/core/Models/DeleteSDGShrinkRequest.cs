@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSDGShrinkRequest : TeaModel {
         /// <summary>
-        /// IDs of SDGs that you want to delete. You can delete a maximum of 10 SDGs at a time.
+        /// The IDs of the SDGs that you want to delete.
         /// 
         /// This parameter is required.
         /// </summary>

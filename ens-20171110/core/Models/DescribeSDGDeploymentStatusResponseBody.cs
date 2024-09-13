@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DescribeSDGDeploymentStatusResponseBodyDeploymentStatus> DeploymentStatus { get; set; }
         public class DescribeSDGDeploymentStatusResponseBodyDeploymentStatus : TeaModel {
             /// <summary>
-            /// The ID of the instance
+            /// The ID of the AIC instance.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -28,73 +28,28 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// 
             /// Valid values:
             /// 
-            /// *   overlay
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     read/write splitting
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
-            /// *   common
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     common deployment
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
+            /// *   overlay: read/write splitting.
+            /// *   common: common deployment.
             /// </summary>
             [NameInMap("MountType")]
             [Validation(Required=false)]
             public string MountType { get; set; }
 
             /// <summary>
-            /// The ID of the node.
+            /// The ID of the edge node.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The deployment status of the SDG.
+            /// the deployment status of the shared data group SDG.
             /// 
             /// Valid values:
             /// 
             /// *   sdg_deploying
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   success
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   failed
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

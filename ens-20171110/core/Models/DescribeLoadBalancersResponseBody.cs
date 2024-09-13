@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancersResponseBody : TeaModel {
         /// <summary>
-        /// The returned ELB instances.
+        /// An array of ELB instances.
         /// </summary>
         [NameInMap("LoadBalancers")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Address { get; set; }
 
                 /// <summary>
-                /// The version of the IP address. Valid values: ipv4 and ipv6.
+                /// The IP version. Valid values: ipv4 and ipv6.
                 /// </summary>
                 [NameInMap("AddressIPVersion")]
                 [Validation(Required=false)]
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string LoadBalancerName { get; set; }
 
                 /// <summary>
-                /// The status of the ELB instance. Valid values:
+                /// The status of the listener for the ELB instance. Valid values:
                 /// 
-                /// *   **Active** (default): The listener for the instance can forward the received traffic based on the rule.
+                /// *   **Active**: The listener for the instance can forward the received traffic based on forwarding rules.
                 /// *   **InActive**: The listener for the instance does not forward the received traffic.
                 /// </summary>
                 [NameInMap("LoadBalancerStatus")]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

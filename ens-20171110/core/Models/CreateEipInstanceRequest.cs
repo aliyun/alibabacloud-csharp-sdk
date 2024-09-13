@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEipInstanceRequest : TeaModel {
         /// <summary>
-        /// The peak bandwidth of the EIP. Default value: 5. Valid values: 5 to 10000. Unit: Mbit/s.
+        /// The maximum bandwidth of the EIP. Default value: 5. Valid values: 5 to 10000. Unit: Mbit/s.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The Internet service provider. Valid values:
         /// 
-        /// *   **cmcc**: China Mobile
-        /// *   **unicom**: China Unicom
-        /// *   **telecom**: China Telecom
+        /// *   **cmcc**: China Mobile.
+        /// *   **unicom**: China Unicom.
+        /// *   **telecom**: China Telecom.
         /// </summary>
         [NameInMap("Isp")]
         [Validation(Required=false)]

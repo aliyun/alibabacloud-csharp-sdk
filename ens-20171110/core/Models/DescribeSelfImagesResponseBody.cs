@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// The source of the image. Valid values:
                 /// 
-                /// *   **system**: public images
-                /// *   **self**: your custom images
+                /// *   **others**: a custom image that is shared by other Alibaba Cloud accounts.
+                /// *   **self**: your own custom image.
                 /// </summary>
                 [NameInMap("ImageOwnerAlias")]
                 [Validation(Required=false)]
@@ -82,8 +82,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string ImageSize { get; set; }
 
+                [NameInMap("ImageStorageSize")]
+                [Validation(Required=false)]
+                public string ImageStorageSize { get; set; }
+
                 /// <summary>
-                /// The instance ID.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -111,7 +115,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Platform { get; set; }
 
                 /// <summary>
-                /// The ID of the snapshot.
+                /// The snapshot ID.
                 /// </summary>
                 [NameInMap("SnapshotId")]
                 [Validation(Required=false)]

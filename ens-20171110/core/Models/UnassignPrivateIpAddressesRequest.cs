@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// The secondary private IP addresses that you want to unassign.
+        /// The secondary private IP addresses to unassign.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RenewARMServerInstanceRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable auto-renewal for the subscription. Valid values:
+        /// 
+        /// *   true
+        /// *   false (default)
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }

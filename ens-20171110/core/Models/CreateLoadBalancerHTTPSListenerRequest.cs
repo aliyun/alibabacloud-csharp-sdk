@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateLoadBalancerHTTPSListenerRequest : TeaModel {
         /// <summary>
+        /// The listening port that is used by the backend instances. Valid values: 1 to 65535.
+        /// </summary>
+        [NameInMap("BackendServerPort")]
+        [Validation(Required=false)]
+        public int? BackendServerPort { get; set; }
+
+        /// <summary>
         /// The cookie that is configured on the server. The cookie must be **1** to **200** characters in length and contain only ASCII characters and digits.
         /// 
         /// >  This parameter is required if you set StickySession to on and StickySessionType to server.
@@ -117,20 +124,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// > 
         /// 
-        /// *   This parameter takes effect only if you set HealthCheck to on.
+        /// *   This parameter takes effect only if the HealthCheck parameter is set to on.
         /// 
-        /// *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+        /// *   If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
         /// </summary>
         [NameInMap("HealthCheckTimeout")]
         [Validation(Required=false)]
         public int? HealthCheckTimeout { get; set; }
 
         /// <summary>
-        /// The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be **1** to **80** characters in length.
+        /// The URI used for health checks. The URI must be **1** to **80** characters in length.
         /// 
-        /// > 
-        /// 
-        /// *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
+        /// >  A URL must start with a forward slash (`/`) but cannot contain only forward slashes (`/`).
         /// </summary>
         [NameInMap("HealthCheckURI")]
         [Validation(Required=false)]
@@ -165,7 +170,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ListenerForward { get; set; }
 
         /// <summary>
-        /// The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// The listening port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: **1** to **65535**.
+        /// 
+        /// >  We recommend that you use port 443 for HTTPS.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteFileSystemRequest : TeaModel {
         /// <summary>
-        /// The ID of the node.
+        /// The ID of the edge node.
         /// 
         /// This parameter is required.
         /// </summary>

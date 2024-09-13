@@ -790,6 +790,114 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
+         * @summary 调用AssociateHaVip接口将高可用VIP绑定到同地域的云产品实例上。
+         *
+         * @param request AssociateHaVipRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AssociateHaVipResponse
+         */
+        public AssociateHaVipResponse AssociateHaVipWithOptions(AssociateHaVipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVipId))
+            {
+                query["HaVipId"] = request.HaVipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateHaVip",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateHaVipResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 调用AssociateHaVip接口将高可用VIP绑定到同地域的云产品实例上。
+         *
+         * @param request AssociateHaVipRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AssociateHaVipResponse
+         */
+        public async Task<AssociateHaVipResponse> AssociateHaVipWithOptionsAsync(AssociateHaVipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVipId))
+            {
+                query["HaVipId"] = request.HaVipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateHaVip",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateHaVipResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 调用AssociateHaVip接口将高可用VIP绑定到同地域的云产品实例上。
+         *
+         * @param request AssociateHaVipRequest
+         * @return AssociateHaVipResponse
+         */
+        public AssociateHaVipResponse AssociateHaVip(AssociateHaVipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssociateHaVipWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 调用AssociateHaVip接口将高可用VIP绑定到同地域的云产品实例上。
+         *
+         * @param request AssociateHaVipRequest
+         * @return AssociateHaVipResponse
+         */
+        public async Task<AssociateHaVipResponse> AssociateHaVipAsync(AssociateHaVipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssociateHaVipWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Attaches a disk to an Edge Node Service (ENS) instance.
          *
          * @param request AttachDiskRequest
@@ -1518,7 +1626,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Copies a snapshot.
+         * @summary Copies a snapshot across nodes.
          *
          * @param tmpReq CopySnapshotRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1570,7 +1678,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Copies a snapshot.
+         * @summary Copies a snapshot across nodes.
          *
          * @param tmpReq CopySnapshotRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1622,7 +1730,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Copies a snapshot.
+         * @summary Copies a snapshot across nodes.
          *
          * @param request CopySnapshotRequest
          * @return CopySnapshotResponse
@@ -1634,7 +1742,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Copies a snapshot.
+         * @summary Copies a snapshot across nodes.
          *
          * @param request CopySnapshotRequest
          * @return CopySnapshotResponse
@@ -2850,7 +2958,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates a Network Attached Storage (NAS) file system.
+         * @summary Creates a NAS file system.
          *
          * @param tmpReq CreateFileSystemRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2886,7 +2994,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates a Network Attached Storage (NAS) file system.
+         * @summary Creates a NAS file system.
          *
          * @param tmpReq CreateFileSystemRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2922,7 +3030,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates a Network Attached Storage (NAS) file system.
+         * @summary Creates a NAS file system.
          *
          * @param request CreateFileSystemRequest
          * @return CreateFileSystemResponse
@@ -2934,7 +3042,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates a Network Attached Storage (NAS) file system.
+         * @summary Creates a NAS file system.
          *
          * @param request CreateFileSystemRequest
          * @return CreateFileSystemResponse
@@ -3863,6 +3971,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackendServerPort))
+            {
+                query["BackendServerPort"] = request.BackendServerPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -3972,6 +4084,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackendServerPort))
+            {
+                query["BackendServerPort"] = request.BackendServerPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -4111,6 +4227,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackendServerPort))
+            {
+                query["BackendServerPort"] = request.BackendServerPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookie))
             {
                 query["Cookie"] = request.Cookie;
@@ -4232,6 +4352,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackendServerPort))
+            {
+                query["BackendServerPort"] = request.BackendServerPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookie))
             {
                 query["Cookie"] = request.Cookie;
@@ -4627,6 +4751,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["EipTransmit"] = request.EipTransmit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EstablishedTimeout))
+            {
+                query["EstablishedTimeout"] = request.EstablishedTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConnectPort))
             {
                 query["HealthCheckConnectPort"] = request.HealthCheckConnectPort;
@@ -4711,6 +4839,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipTransmit))
             {
                 query["EipTransmit"] = request.EipTransmit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EstablishedTimeout))
+            {
+                query["EstablishedTimeout"] = request.EstablishedTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConnectPort))
             {
@@ -5438,10 +5570,13 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates a shared data group (SDG) by using a specific device.
+         * @summary Creates a shared data group (SDG) on an Android in Container (AIC) instance.
          *
-         * @description ## [](#)
-         * After you create an SDG, you must call the [SaveSDG](https://help.aliyun.com/document_detail/608126.html) operation to save the SDG. Otherwise, the SDG is unavailable.
+         * @description A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:
+         * *   Call the [CreateSDG](~~CreateSDG~~) operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).
+         * *   Install applications on and deliver files to AIC Instance A (InstanceId).
+         * *   Call the [SaveSDG](~~SaveSDG~~) operation to save the data disk of AIC instance A as SDG A.
+         * *   Call the [DeploySDG](~~DeploySDG~~) operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the [DescribeARMServerInstances](~~DescribeARMServerInstances~~) operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.
          *
          * @param request CreateSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5471,10 +5606,13 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates a shared data group (SDG) by using a specific device.
+         * @summary Creates a shared data group (SDG) on an Android in Container (AIC) instance.
          *
-         * @description ## [](#)
-         * After you create an SDG, you must call the [SaveSDG](https://help.aliyun.com/document_detail/608126.html) operation to save the SDG. Otherwise, the SDG is unavailable.
+         * @description A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:
+         * *   Call the [CreateSDG](~~CreateSDG~~) operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).
+         * *   Install applications on and deliver files to AIC Instance A (InstanceId).
+         * *   Call the [SaveSDG](~~SaveSDG~~) operation to save the data disk of AIC instance A as SDG A.
+         * *   Call the [DeploySDG](~~DeploySDG~~) operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the [DescribeARMServerInstances](~~DescribeARMServerInstances~~) operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.
          *
          * @param request CreateSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5504,10 +5642,13 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates a shared data group (SDG) by using a specific device.
+         * @summary Creates a shared data group (SDG) on an Android in Container (AIC) instance.
          *
-         * @description ## [](#)
-         * After you create an SDG, you must call the [SaveSDG](https://help.aliyun.com/document_detail/608126.html) operation to save the SDG. Otherwise, the SDG is unavailable.
+         * @description A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:
+         * *   Call the [CreateSDG](~~CreateSDG~~) operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).
+         * *   Install applications on and deliver files to AIC Instance A (InstanceId).
+         * *   Call the [SaveSDG](~~SaveSDG~~) operation to save the data disk of AIC instance A as SDG A.
+         * *   Call the [DeploySDG](~~DeploySDG~~) operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the [DescribeARMServerInstances](~~DescribeARMServerInstances~~) operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.
          *
          * @param request CreateSDGRequest
          * @return CreateSDGResponse
@@ -5519,10 +5660,13 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates a shared data group (SDG) by using a specific device.
+         * @summary Creates a shared data group (SDG) on an Android in Container (AIC) instance.
          *
-         * @description ## [](#)
-         * After you create an SDG, you must call the [SaveSDG](https://help.aliyun.com/document_detail/608126.html) operation to save the SDG. Otherwise, the SDG is unavailable.
+         * @description A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:
+         * *   Call the [CreateSDG](~~CreateSDG~~) operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).
+         * *   Install applications on and deliver files to AIC Instance A (InstanceId).
+         * *   Call the [SaveSDG](~~SaveSDG~~) operation to save the data disk of AIC instance A as SDG A.
+         * *   Call the [DeploySDG](~~DeploySDG~~) operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the [DescribeARMServerInstances](~~DescribeARMServerInstances~~) operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.
          *
          * @param request CreateSDGRequest
          * @return CreateSDGResponse
@@ -5991,6 +6135,170 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateStorageGatewayWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Creates a storage volume.
+         *
+         * @param request CreateStorageVolumeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateStorageVolumeResponse
+         */
+        public CreateStorageVolumeResponse CreateStorageVolumeWithOptions(CreateStorageVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPassword))
+            {
+                query["AuthPassword"] = request.AuthPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthProtocol))
+            {
+                query["AuthProtocol"] = request.AuthProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthUser))
+            {
+                query["AuthUser"] = request.AuthUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["GatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAuth))
+            {
+                query["IsAuth"] = request.IsAuth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnable))
+            {
+                query["IsEnable"] = request.IsEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageId))
+            {
+                query["StorageId"] = request.StorageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeName))
+            {
+                query["VolumeName"] = request.VolumeName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateStorageVolume",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateStorageVolumeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Creates a storage volume.
+         *
+         * @param request CreateStorageVolumeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateStorageVolumeResponse
+         */
+        public async Task<CreateStorageVolumeResponse> CreateStorageVolumeWithOptionsAsync(CreateStorageVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPassword))
+            {
+                query["AuthPassword"] = request.AuthPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthProtocol))
+            {
+                query["AuthProtocol"] = request.AuthProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthUser))
+            {
+                query["AuthUser"] = request.AuthUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["GatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAuth))
+            {
+                query["IsAuth"] = request.IsAuth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnable))
+            {
+                query["IsEnable"] = request.IsEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageId))
+            {
+                query["StorageId"] = request.StorageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeName))
+            {
+                query["VolumeName"] = request.VolumeName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateStorageVolume",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateStorageVolumeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Creates a storage volume.
+         *
+         * @param request CreateStorageVolumeRequest
+         * @return CreateStorageVolumeResponse
+         */
+        public CreateStorageVolumeResponse CreateStorageVolume(CreateStorageVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateStorageVolumeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Creates a storage volume.
+         *
+         * @param request CreateStorageVolumeRequest
+         * @return CreateStorageVolumeResponse
+         */
+        public async Task<CreateStorageVolumeResponse> CreateStorageVolumeAsync(CreateStorageVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateStorageVolumeWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -8140,8 +8448,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Deletes a shared data group (SDG).
          *
-         * @description ## [](#)
-         * If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
+         * @description If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
          *
          * @param tmpReq DeleteSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8183,8 +8490,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Deletes a shared data group (SDG).
          *
-         * @description ## [](#)
-         * If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
+         * @description If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
          *
          * @param tmpReq DeleteSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8226,8 +8532,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Deletes a shared data group (SDG).
          *
-         * @description ## [](#)
-         * If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
+         * @description If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
          *
          * @param request DeleteSDGRequest
          * @return DeleteSDGResponse
@@ -8241,8 +8546,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Deletes a shared data group (SDG).
          *
-         * @description ## [](#)
-         * If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
+         * @description If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
          *
          * @param request DeleteSDGRequest
          * @return DeleteSDGResponse
@@ -8730,6 +9034,98 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
+         * @summary Deletes a storage volume.
+         *
+         * @param request DeleteStorageVolumeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteStorageVolumeResponse
+         */
+        public DeleteStorageVolumeResponse DeleteStorageVolumeWithOptions(DeleteStorageVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeId))
+            {
+                query["VolumeId"] = request.VolumeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteStorageVolume",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteStorageVolumeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Deletes a storage volume.
+         *
+         * @param request DeleteStorageVolumeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteStorageVolumeResponse
+         */
+        public async Task<DeleteStorageVolumeResponse> DeleteStorageVolumeWithOptionsAsync(DeleteStorageVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeId))
+            {
+                query["VolumeId"] = request.VolumeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteStorageVolume",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteStorageVolumeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Deletes a storage volume.
+         *
+         * @param request DeleteStorageVolumeRequest
+         * @return DeleteStorageVolumeResponse
+         */
+        public DeleteStorageVolumeResponse DeleteStorageVolume(DeleteStorageVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteStorageVolumeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Deletes a storage volume.
+         *
+         * @param request DeleteStorageVolumeRequest
+         * @return DeleteStorageVolumeResponse
+         */
+        public async Task<DeleteStorageVolumeResponse> DeleteStorageVolumeAsync(DeleteStorageVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteStorageVolumeWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Deletes a vSwitch.
          *
          * @description Before you delete a vSwitch, make sure that no instances exist in the vSwitch.
@@ -8830,7 +9226,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 部署SDG到计算实例
+         * @summary Deploys a shared data group (SDG) to compute instances.
          *
          * @param tmpReq DeployInstanceSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8878,7 +9274,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 部署SDG到计算实例
+         * @summary Deploys a shared data group (SDG) to compute instances.
          *
          * @param tmpReq DeployInstanceSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8926,7 +9322,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 部署SDG到计算实例
+         * @summary Deploys a shared data group (SDG) to compute instances.
          *
          * @param request DeployInstanceSDGRequest
          * @return DeployInstanceSDGResponse
@@ -8938,7 +9334,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 部署SDG到计算实例
+         * @summary Deploys a shared data group (SDG) to compute instances.
          *
          * @param request DeployInstanceSDGRequest
          * @return DeployInstanceSDGResponse
@@ -9451,106 +9847,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApplicationWithOptionsAsync(request, runtime);
-        }
-
-        /**
-         * @summary Queries the total quota of resources and the resource usage in different region levels. You can perform resource scale-out based on this information.
-         *
-         * @param request DescribeApplicationResourceSummaryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApplicationResourceSummaryResponse
-         */
-        public DescribeApplicationResourceSummaryResponse DescribeApplicationResourceSummaryWithOptions(DescribeApplicationResourceSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
-            {
-                query["Level"] = request.Level;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                query["ResourceType"] = request.ResourceType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeApplicationResourceSummary",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeApplicationResourceSummaryResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries the total quota of resources and the resource usage in different region levels. You can perform resource scale-out based on this information.
-         *
-         * @param request DescribeApplicationResourceSummaryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeApplicationResourceSummaryResponse
-         */
-        public async Task<DescribeApplicationResourceSummaryResponse> DescribeApplicationResourceSummaryWithOptionsAsync(DescribeApplicationResourceSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
-            {
-                query["Level"] = request.Level;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                query["ResourceType"] = request.ResourceType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeApplicationResourceSummary",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeApplicationResourceSummaryResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries the total quota of resources and the resource usage in different region levels. You can perform resource scale-out based on this information.
-         *
-         * @param request DescribeApplicationResourceSummaryRequest
-         * @return DescribeApplicationResourceSummaryResponse
-         */
-        public DescribeApplicationResourceSummaryResponse DescribeApplicationResourceSummary(DescribeApplicationResourceSummaryRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeApplicationResourceSummaryWithOptions(request, runtime);
-        }
-
-        /**
-         * @summary Queries the total quota of resources and the resource usage in different region levels. You can perform resource scale-out based on this information.
-         *
-         * @param request DescribeApplicationResourceSummaryRequest
-         * @return DescribeApplicationResourceSummaryResponse
-         */
-        public async Task<DescribeApplicationResourceSummaryResponse> DescribeApplicationResourceSummaryAsync(DescribeApplicationResourceSummaryRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeApplicationResourceSummaryWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -10822,106 +11118,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries the properties of elastic IP addresses (EIPs).
-         *
-         * @param request DescribeEipAddressesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeEipAddressesResponse
-         */
-        public DescribeEipAddressesResponse DescribeEipAddressesWithOptions(DescribeEipAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Eips))
-            {
-                query["Eips"] = request.Eips;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
-            {
-                query["EnsRegionId"] = request.EnsRegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeEipAddresses",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeEipAddressesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries the properties of elastic IP addresses (EIPs).
-         *
-         * @param request DescribeEipAddressesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeEipAddressesResponse
-         */
-        public async Task<DescribeEipAddressesResponse> DescribeEipAddressesWithOptionsAsync(DescribeEipAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Eips))
-            {
-                query["Eips"] = request.Eips;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
-            {
-                query["EnsRegionId"] = request.EnsRegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeEipAddresses",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeEipAddressesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary Queries the properties of elastic IP addresses (EIPs).
-         *
-         * @param request DescribeEipAddressesRequest
-         * @return DescribeEipAddressesResponse
-         */
-        public DescribeEipAddressesResponse DescribeEipAddresses(DescribeEipAddressesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeEipAddressesWithOptions(request, runtime);
-        }
-
-        /**
-         * @summary Queries the properties of elastic IP addresses (EIPs).
-         *
-         * @param request DescribeEipAddressesRequest
-         * @return DescribeEipAddressesResponse
-         */
-        public async Task<DescribeEipAddressesResponse> DescribeEipAddressesAsync(DescribeEipAddressesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeEipAddressesWithOptionsAsync(request, runtime);
-        }
-
-        /**
          * @summary Queries the specifications of resources that you can purchase when you create an instance.
          *
          * @param request DescribeElbAvailableResourceInfoRequest
@@ -11614,7 +11810,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries whether an edge node supports IPv6.
+         * @summary Queries whether a node supports IPv6.
          *
          * @param request DescribeEnsRegionIdIpv6InfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -11648,7 +11844,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries whether an edge node supports IPv6.
+         * @summary Queries whether a node supports IPv6.
          *
          * @param request DescribeEnsRegionIdIpv6InfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -11682,7 +11878,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries whether an edge node supports IPv6.
+         * @summary Queries whether a node supports IPv6.
          *
          * @param request DescribeEnsRegionIdIpv6InfoRequest
          * @return DescribeEnsRegionIdIpv6InfoResponse
@@ -11694,7 +11890,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries whether an edge node supports IPv6.
+         * @summary Queries whether a node supports IPv6.
          *
          * @param request DescribeEnsRegionIdIpv6InfoRequest
          * @return DescribeEnsRegionIdIpv6InfoResponse
@@ -13578,6 +13774,90 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
+         * @summary 查询高可用VIP
+         *
+         * @param request DescribeHaVipsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHaVipsResponse
+         */
+        public DescribeHaVipsResponse DescribeHaVipsWithOptions(DescribeHaVipsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHaVips",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHaVipsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询高可用VIP
+         *
+         * @param request DescribeHaVipsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHaVipsResponse
+         */
+        public async Task<DescribeHaVipsResponse> DescribeHaVipsWithOptionsAsync(DescribeHaVipsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHaVips",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHaVipsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询高可用VIP
+         *
+         * @param request DescribeHaVipsRequest
+         * @return DescribeHaVipsResponse
+         */
+        public DescribeHaVipsResponse DescribeHaVips(DescribeHaVipsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHaVipsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询高可用VIP
+         *
+         * @param request DescribeHaVipsRequest
+         * @return DescribeHaVipsResponse
+         */
+        public async Task<DescribeHaVipsResponse> DescribeHaVipsAsync(DescribeHaVipsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHaVipsWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries available images.
          *
          * @param request DescribeImageInfosRequest
@@ -14760,9 +15040,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Queries detailed information about an Edge Load Balancer (ELB) instance.
          *
-         * @description > 
-         * *   You can call this operation up to 100 times per second per account.
-         * *   You can call this operation up to 10 times per second per user.
+         * @description *   You can call this operation up to 100 times per second.
+         * *   You can call this operation up to 10 times per second per account.
          *
          * @param request DescribeLoadBalancerAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14798,9 +15077,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Queries detailed information about an Edge Load Balancer (ELB) instance.
          *
-         * @description > 
-         * *   You can call this operation up to 100 times per second per account.
-         * *   You can call this operation up to 10 times per second per user.
+         * @description *   You can call this operation up to 100 times per second.
+         * *   You can call this operation up to 10 times per second per account.
          *
          * @param request DescribeLoadBalancerAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14836,9 +15114,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Queries detailed information about an Edge Load Balancer (ELB) instance.
          *
-         * @description > 
-         * *   You can call this operation up to 100 times per second per account.
-         * *   You can call this operation up to 10 times per second per user.
+         * @description *   You can call this operation up to 100 times per second.
+         * *   You can call this operation up to 10 times per second per account.
          *
          * @param request DescribeLoadBalancerAttributeRequest
          * @return DescribeLoadBalancerAttributeResponse
@@ -14852,9 +15129,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Queries detailed information about an Edge Load Balancer (ELB) instance.
          *
-         * @description > 
-         * *   You can call this operation up to 100 times per second per account.
-         * *   You can call this operation up to 10 times per second per user.
+         * @description *   You can call this operation up to 100 times per second.
+         * *   You can call this operation up to 10 times per second per account.
          *
          * @param request DescribeLoadBalancerAttributeRequest
          * @return DescribeLoadBalancerAttributeResponse
@@ -15398,7 +15674,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries Edge Load Balancer (ELB) instances.
+         * @summary Queries the Edge Load Balance (ELB) instances that you have created.
          *
          * @description *   You can call this operation up to 100 times per second per account.
          * *   You can call this operation up to 10 times per second per user.
@@ -15431,7 +15707,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries Edge Load Balancer (ELB) instances.
+         * @summary Queries the Edge Load Balance (ELB) instances that you have created.
          *
          * @description *   You can call this operation up to 100 times per second per account.
          * *   You can call this operation up to 10 times per second per user.
@@ -15464,7 +15740,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries Edge Load Balancer (ELB) instances.
+         * @summary Queries the Edge Load Balance (ELB) instances that you have created.
          *
          * @description *   You can call this operation up to 100 times per second per account.
          * *   You can call this operation up to 10 times per second per user.
@@ -15479,7 +15755,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries Edge Load Balancer (ELB) instances.
+         * @summary Queries the Edge Load Balance (ELB) instances that you have created.
          *
          * @description *   You can call this operation up to 100 times per second per account.
          * *   You can call this operation up to 10 times per second per user.
@@ -16076,13 +16352,19 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Queries Elastic Network Interfaces (ENIs).
          *
-         * @param request DescribeNetworkInterfacesRequest
+         * @param tmpReq DescribeNetworkInterfacesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeNetworkInterfacesResponse
          */
-        public DescribeNetworkInterfacesResponse DescribeNetworkInterfacesWithOptions(DescribeNetworkInterfacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeNetworkInterfacesResponse DescribeNetworkInterfacesWithOptions(DescribeNetworkInterfacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeNetworkInterfacesShrinkRequest request = new DescribeNetworkInterfacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6Address))
+            {
+                request.Ipv6AddressShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6Address, "Ipv6Address", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
@@ -16091,6 +16373,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6AddressShrink))
+            {
+                query["Ipv6Address"] = request.Ipv6AddressShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
             {
@@ -16154,13 +16440,19 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Queries Elastic Network Interfaces (ENIs).
          *
-         * @param request DescribeNetworkInterfacesRequest
+         * @param tmpReq DescribeNetworkInterfacesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeNetworkInterfacesResponse
          */
-        public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfacesWithOptionsAsync(DescribeNetworkInterfacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfacesWithOptionsAsync(DescribeNetworkInterfacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeNetworkInterfacesShrinkRequest request = new DescribeNetworkInterfacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6Address))
+            {
+                request.Ipv6AddressShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6Address, "Ipv6Address", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
@@ -16169,6 +16461,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6AddressShrink))
+            {
+                query["Ipv6Address"] = request.Ipv6AddressShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
             {
@@ -16390,7 +16686,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries the specifications of resources that you can purchase.
+         * @summary The specifications of resources that can be purchased in subscription billing mode are queried.
          *
          * @param request DescribePrePaidInstanceStockRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16436,7 +16732,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries the specifications of resources that you can purchase.
+         * @summary The specifications of resources that can be purchased in subscription billing mode are queried.
          *
          * @param request DescribePrePaidInstanceStockRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16482,7 +16778,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries the specifications of resources that you can purchase.
+         * @summary The specifications of resources that can be purchased in subscription billing mode are queried.
          *
          * @param request DescribePrePaidInstanceStockRequest
          * @return DescribePrePaidInstanceStockResponse
@@ -16494,7 +16790,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Queries the specifications of resources that you can purchase.
+         * @summary The specifications of resources that can be purchased in subscription billing mode are queried.
          *
          * @param request DescribePrePaidInstanceStockRequest
          * @return DescribePrePaidInstanceStockResponse
@@ -16998,7 +17294,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 查询SDG信息
+         * @summary Queries basic information about shared data groups (SDGs), including node preload information.
          *
          * @param tmpReq DescribeSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17046,7 +17342,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 查询SDG信息
+         * @summary Queries basic information about shared data groups (SDGs), including node preload information.
          *
          * @param tmpReq DescribeSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17094,7 +17390,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 查询SDG信息
+         * @summary Queries basic information about shared data groups (SDGs), including node preload information.
          *
          * @param request DescribeSDGRequest
          * @return DescribeSDGResponse
@@ -17106,7 +17402,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 查询SDG信息
+         * @summary Queries basic information about shared data groups (SDGs), including node preload information.
          *
          * @param request DescribeSDGRequest
          * @return DescribeSDGResponse
@@ -17120,14 +17416,52 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Queries the deployment status of the shared data group (SDG).
          *
-         * @param request DescribeSDGDeploymentStatusRequest
+         * @param tmpReq DescribeSDGDeploymentStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeSDGDeploymentStatusResponse
          */
-        public DescribeSDGDeploymentStatusResponse DescribeSDGDeploymentStatusWithOptions(DescribeSDGDeploymentStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeSDGDeploymentStatusResponse DescribeSDGDeploymentStatusWithOptions(DescribeSDGDeploymentStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSDGDeploymentStatusShrinkRequest request = new DescribeSDGDeploymentStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RegionIds))
+            {
+                request.RegionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RegionIds, "RegionIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentType))
+            {
+                query["DeploymentType"] = request.DeploymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsShrink))
+            {
+                query["RegionIds"] = request.RegionIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SDGId))
+            {
+                query["SDGId"] = request.SDGId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -17138,7 +17472,7 @@ namespace AlibabaCloud.SDK.Ens20171110
                 Version = "2017-11-10",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -17150,14 +17484,52 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Queries the deployment status of the shared data group (SDG).
          *
-         * @param request DescribeSDGDeploymentStatusRequest
+         * @param tmpReq DescribeSDGDeploymentStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeSDGDeploymentStatusResponse
          */
-        public async Task<DescribeSDGDeploymentStatusResponse> DescribeSDGDeploymentStatusWithOptionsAsync(DescribeSDGDeploymentStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeSDGDeploymentStatusResponse> DescribeSDGDeploymentStatusWithOptionsAsync(DescribeSDGDeploymentStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSDGDeploymentStatusShrinkRequest request = new DescribeSDGDeploymentStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RegionIds))
+            {
+                request.RegionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RegionIds, "RegionIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentType))
+            {
+                query["DeploymentType"] = request.DeploymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsShrink))
+            {
+                query["RegionIds"] = request.RegionIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SDGId))
+            {
+                query["SDGId"] = request.SDGId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -17168,7 +17540,7 @@ namespace AlibabaCloud.SDK.Ens20171110
                 Version = "2017-11-10",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -18070,6 +18442,278 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
+         * @summary 查询存储网关
+         *
+         * @param request DescribeStorageGatewayRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStorageGatewayResponse
+         */
+        public DescribeStorageGatewayResponse DescribeStorageGatewayWithOptions(DescribeStorageGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["GatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["GatewayType"] = request.GatewayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeStorageGateway",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeStorageGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询存储网关
+         *
+         * @param request DescribeStorageGatewayRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStorageGatewayResponse
+         */
+        public async Task<DescribeStorageGatewayResponse> DescribeStorageGatewayWithOptionsAsync(DescribeStorageGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["GatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["GatewayType"] = request.GatewayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeStorageGateway",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeStorageGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询存储网关
+         *
+         * @param request DescribeStorageGatewayRequest
+         * @return DescribeStorageGatewayResponse
+         */
+        public DescribeStorageGatewayResponse DescribeStorageGateway(DescribeStorageGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeStorageGatewayWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询存储网关
+         *
+         * @param request DescribeStorageGatewayRequest
+         * @return DescribeStorageGatewayResponse
+         */
+        public async Task<DescribeStorageGatewayResponse> DescribeStorageGatewayAsync(DescribeStorageGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeStorageGatewayWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询存储卷
+         *
+         * @param request DescribeStorageVolumeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStorageVolumeResponse
+         */
+        public DescribeStorageVolumeResponse DescribeStorageVolumeWithOptions(DescribeStorageVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["GatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnable))
+            {
+                query["IsEnable"] = request.IsEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageId))
+            {
+                query["StorageId"] = request.StorageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeId))
+            {
+                query["VolumeId"] = request.VolumeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeStorageVolume",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeStorageVolumeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询存储卷
+         *
+         * @param request DescribeStorageVolumeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStorageVolumeResponse
+         */
+        public async Task<DescribeStorageVolumeResponse> DescribeStorageVolumeWithOptionsAsync(DescribeStorageVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["GatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnable))
+            {
+                query["IsEnable"] = request.IsEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageId))
+            {
+                query["StorageId"] = request.StorageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeId))
+            {
+                query["VolumeId"] = request.VolumeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeStorageVolume",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeStorageVolumeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询存储卷
+         *
+         * @param request DescribeStorageVolumeRequest
+         * @return DescribeStorageVolumeResponse
+         */
+        public DescribeStorageVolumeResponse DescribeStorageVolume(DescribeStorageVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeStorageVolumeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询存储卷
+         *
+         * @param request DescribeStorageVolumeRequest
+         * @return DescribeStorageVolumeResponse
+         */
+        public async Task<DescribeStorageVolumeResponse> DescribeStorageVolumeAsync(DescribeStorageVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeStorageVolumeWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the bandwidth that you use within a specified period of time.
          *
          * @param request DescribeUserBandWidthDataRequest
@@ -18342,7 +18986,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Detaches a pay-as-you-go data disk or a system disk from an Elastic Compute Service (ECS) instance.
+         * @summary Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.
          *
          * @param request DetachDiskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18380,7 +19024,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Detaches a pay-as-you-go data disk or a system disk from an Elastic Compute Service (ECS) instance.
+         * @summary Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.
          *
          * @param request DetachDiskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18418,7 +19062,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Detaches a pay-as-you-go data disk or a system disk from an Elastic Compute Service (ECS) instance.
+         * @summary Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.
          *
          * @param request DetachDiskRequest
          * @return DetachDiskResponse
@@ -18430,7 +19074,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Detaches a pay-as-you-go data disk or a system disk from an Elastic Compute Service (ECS) instance.
+         * @summary Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.
          *
          * @param request DetachDiskRequest
          * @return DetachDiskResponse
@@ -20350,7 +20994,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 查询资源标签
+         * @summary Queries tags that are added to Edge Node Service (ENS) instances.
          *
          * @param request ListTagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20396,7 +21040,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 查询资源标签
+         * @summary Queries tags that are added to Edge Node Service (ENS) instances.
          *
          * @param request ListTagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20442,7 +21086,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 查询资源标签
+         * @summary Queries tags that are added to Edge Node Service (ENS) instances.
          *
          * @param request ListTagResourcesRequest
          * @return ListTagResourcesResponse
@@ -20454,7 +21098,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 查询资源标签
+         * @summary Queries tags that are added to Edge Node Service (ENS) instances.
          *
          * @param request ListTagResourcesRequest
          * @return ListTagResourcesResponse
@@ -20698,7 +21342,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Modifies the description of a file system.
+         * @summary Modifies the description of a NAS file system.
          *
          * @param request ModifyFileSystemRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20740,7 +21384,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Modifies the description of a file system.
+         * @summary Modifies the description of a NAS file system.
          *
          * @param request ModifyFileSystemRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20782,7 +21426,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Modifies the description of a file system.
+         * @summary Modifies the description of a NAS file system.
          *
          * @param request ModifyFileSystemRequest
          * @return ModifyFileSystemResponse
@@ -20794,7 +21438,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Modifies the description of a file system.
+         * @summary Modifies the description of a NAS file system.
          *
          * @param request ModifyFileSystemRequest
          * @return ModifyFileSystemResponse
@@ -20911,6 +21555,106 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyForwardEntryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 调用ModifyHaVipAttribute接口更新高可用VIP的名称和描述。
+         *
+         * @param request ModifyHaVipAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyHaVipAttributeResponse
+         */
+        public ModifyHaVipAttributeResponse ModifyHaVipAttributeWithOptions(ModifyHaVipAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVipId))
+            {
+                query["HaVipId"] = request.HaVipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyHaVipAttribute",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyHaVipAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 调用ModifyHaVipAttribute接口更新高可用VIP的名称和描述。
+         *
+         * @param request ModifyHaVipAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyHaVipAttributeResponse
+         */
+        public async Task<ModifyHaVipAttributeResponse> ModifyHaVipAttributeWithOptionsAsync(ModifyHaVipAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVipId))
+            {
+                query["HaVipId"] = request.HaVipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyHaVipAttribute",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyHaVipAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 调用ModifyHaVipAttribute接口更新高可用VIP的名称和描述。
+         *
+         * @param request ModifyHaVipAttributeRequest
+         * @return ModifyHaVipAttributeResponse
+         */
+        public ModifyHaVipAttributeResponse ModifyHaVipAttribute(ModifyHaVipAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyHaVipAttributeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 调用ModifyHaVipAttribute接口更新高可用VIP的名称和描述。
+         *
+         * @param request ModifyHaVipAttributeRequest
+         * @return ModifyHaVipAttributeResponse
+         */
+        public async Task<ModifyHaVipAttributeResponse> ModifyHaVipAttributeAsync(ModifyHaVipAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyHaVipAttributeWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -22230,7 +22974,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 节点及AIC的命名空间粒度预热SDG
+         * @summary Preloads a shared data group (SDG).
          *
          * @param tmpReq PreloadRegionSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -22286,7 +23030,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 节点及AIC的命名空间粒度预热SDG
+         * @summary Preloads a shared data group (SDG).
          *
          * @param tmpReq PreloadRegionSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -22342,7 +23086,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 节点及AIC的命名空间粒度预热SDG
+         * @summary Preloads a shared data group (SDG).
          *
          * @param request PreloadRegionSDGRequest
          * @return PreloadRegionSDGResponse
@@ -22354,7 +23098,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 节点及AIC的命名空间粒度预热SDG
+         * @summary Preloads a shared data group (SDG).
          *
          * @param request PreloadRegionSDGRequest
          * @return PreloadRegionSDGResponse
@@ -22363,6 +23107,106 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PreloadRegionSDGWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Prepares the upload and obtains the location of the bucket.
+         *
+         * @param request PrepareUploadRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PrepareUploadResponse
+         */
+        public PrepareUploadResponse PrepareUploadWithOptions(PrepareUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
+            {
+                query["ClientIp"] = request.ClientIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrepareUpload",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrepareUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Prepares the upload and obtains the location of the bucket.
+         *
+         * @param request PrepareUploadRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PrepareUploadResponse
+         */
+        public async Task<PrepareUploadResponse> PrepareUploadWithOptionsAsync(PrepareUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
+            {
+                query["ClientIp"] = request.ClientIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrepareUpload",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrepareUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Prepares the upload and obtains the location of the bucket.
+         *
+         * @param request PrepareUploadRequest
+         * @return PrepareUploadResponse
+         */
+        public PrepareUploadResponse PrepareUpload(PrepareUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PrepareUploadWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Prepares the upload and obtains the location of the bucket.
+         *
+         * @param request PrepareUploadRequest
+         * @return PrepareUploadResponse
+         */
+        public async Task<PrepareUploadResponse> PrepareUploadAsync(PrepareUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PrepareUploadWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -22482,7 +23326,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates an EOS bucket.
+         * @summary Creates an Edge Object Storage (EOS) bucket.
          *
          * @param request PutBucketRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -22536,7 +23380,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates an EOS bucket.
+         * @summary Creates an Edge Object Storage (EOS) bucket.
          *
          * @param request PutBucketRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -22590,7 +23434,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates an EOS bucket.
+         * @summary Creates an Edge Object Storage (EOS) bucket.
          *
          * @param request PutBucketRequest
          * @return PutBucketResponse
@@ -22602,7 +23446,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Creates an EOS bucket.
+         * @summary Creates an Edge Object Storage (EOS) bucket.
          *
          * @param request PutBucketRequest
          * @return PutBucketResponse
@@ -23858,7 +24702,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Releases an instance.
+         * @summary Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.
          *
          * @description *   You can call this operation up to 10,000 times per second per account.
          * *   The maximum number of times that each user can call this operation per second is 50.
@@ -23895,7 +24739,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Releases an instance.
+         * @summary Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.
          *
          * @description *   You can call this operation up to 10,000 times per second per account.
          * *   The maximum number of times that each user can call this operation per second is 50.
@@ -23932,7 +24776,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Releases an instance.
+         * @summary Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.
          *
          * @description *   You can call this operation up to 10,000 times per second per account.
          * *   The maximum number of times that each user can call this operation per second is 50.
@@ -23947,7 +24791,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Releases an instance.
+         * @summary Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.
          *
          * @description *   You can call this operation up to 10,000 times per second per account.
          * *   The maximum number of times that each user can call this operation per second is 50.
@@ -24270,7 +25114,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 移除计算实例上已挂载的SDG
+         * @summary Removes a deployed shared data group (SDG) on compute instances.
          *
          * @param tmpReq RemoveInstanceSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24310,7 +25154,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 移除计算实例上已挂载的SDG
+         * @summary Removes a deployed shared data group (SDG) on compute instances.
          *
          * @param tmpReq RemoveInstanceSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24350,7 +25194,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 移除计算实例上已挂载的SDG
+         * @summary Removes a deployed shared data group (SDG) on compute instances.
          *
          * @param request RemoveInstanceSDGRequest
          * @return RemoveInstanceSDGResponse
@@ -24362,7 +25206,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 移除计算实例上已挂载的SDG
+         * @summary Removes a deployed shared data group (SDG) on compute instances.
          *
          * @param request RemoveInstanceSDGRequest
          * @return RemoveInstanceSDGResponse
@@ -26206,6 +27050,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["SecurityId"] = request.SecurityId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotDuration))
+            {
+                query["SpotDuration"] = request.SpotDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotStrategy))
             {
                 query["SpotStrategy"] = request.SpotStrategy;
@@ -26389,6 +27237,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityId))
             {
                 query["SecurityId"] = request.SecurityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotDuration))
+            {
+                query["SpotDuration"] = request.SpotDuration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotStrategy))
             {
@@ -27286,7 +28138,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Modifies the status of an Edge Load Balancer (ELB) instance.
+         * @summary Modifies the status of the listener for an Edge Load Balancer (ELB) instance.
          *
          * @description *   You can call this operation up to 100 times per second per account.
          * *   You can call this operation up to 10 times per second per user.
@@ -27327,7 +28179,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Modifies the status of an Edge Load Balancer (ELB) instance.
+         * @summary Modifies the status of the listener for an Edge Load Balancer (ELB) instance.
          *
          * @description *   You can call this operation up to 100 times per second per account.
          * *   You can call this operation up to 10 times per second per user.
@@ -27368,7 +28220,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Modifies the status of an Edge Load Balancer (ELB) instance.
+         * @summary Modifies the status of the listener for an Edge Load Balancer (ELB) instance.
          *
          * @description *   You can call this operation up to 100 times per second per account.
          * *   You can call this operation up to 10 times per second per user.
@@ -27383,7 +28235,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary Modifies the status of an Edge Load Balancer (ELB) instance.
+         * @summary Modifies the status of the listener for an Edge Load Balancer (ELB) instance.
          *
          * @description *   You can call this operation up to 100 times per second per account.
          * *   You can call this operation up to 10 times per second per user.
@@ -27624,9 +28476,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Modifies the configurations of a UDP listener.
          *
-         * @description > 
-         * *   You can call this operation up to 100 times per second per account.
-         * *   You can call this operation up to 10 times per second per user.
+         * @description *   You can call this operation up to 100 times per second.
+         * *   You can call this operation up to 10 times per second per account.
          *
          * @param request SetLoadBalancerUDPListenerAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -27643,6 +28494,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipTransmit))
             {
                 query["EipTransmit"] = request.EipTransmit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EstablishedTimeout))
+            {
+                query["EstablishedTimeout"] = request.EstablishedTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConnectPort))
             {
@@ -27706,9 +28561,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Modifies the configurations of a UDP listener.
          *
-         * @description > 
-         * *   You can call this operation up to 100 times per second per account.
-         * *   You can call this operation up to 10 times per second per user.
+         * @description *   You can call this operation up to 100 times per second.
+         * *   You can call this operation up to 10 times per second per account.
          *
          * @param request SetLoadBalancerUDPListenerAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -27725,6 +28579,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipTransmit))
             {
                 query["EipTransmit"] = request.EipTransmit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EstablishedTimeout))
+            {
+                query["EstablishedTimeout"] = request.EstablishedTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConnectPort))
             {
@@ -27788,9 +28646,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Modifies the configurations of a UDP listener.
          *
-         * @description > 
-         * *   You can call this operation up to 100 times per second per account.
-         * *   You can call this operation up to 10 times per second per user.
+         * @description *   You can call this operation up to 100 times per second.
+         * *   You can call this operation up to 10 times per second per account.
          *
          * @param request SetLoadBalancerUDPListenerAttributeRequest
          * @return SetLoadBalancerUDPListenerAttributeResponse
@@ -27804,9 +28661,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /**
          * @summary Modifies the configurations of a UDP listener.
          *
-         * @description > 
-         * *   You can call this operation up to 100 times per second per account.
-         * *   You can call this operation up to 10 times per second per user.
+         * @description *   You can call this operation up to 100 times per second.
+         * *   You can call this operation up to 10 times per second per account.
          *
          * @param request SetLoadBalancerUDPListenerAttributeRequest
          * @return SetLoadBalancerUDPListenerAttributeResponse
@@ -28874,7 +29730,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 资源打用户标签
+         * @summary Creates and adds tags to specific Edge Node Service (ENS) resources.
+         *
+         * @description Before you add tags to a resource, Alibaba Cloud checks the number of existing tags on the resource. If the number exceeds the upper limit, an error message is returned. Only instance resources, such as virtual machines and bare machines, are supported.
          *
          * @param request TagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -28916,7 +29774,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 资源打用户标签
+         * @summary Creates and adds tags to specific Edge Node Service (ENS) resources.
+         *
+         * @description Before you add tags to a resource, Alibaba Cloud checks the number of existing tags on the resource. If the number exceeds the upper limit, an error message is returned. Only instance resources, such as virtual machines and bare machines, are supported.
          *
          * @param request TagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -28958,7 +29818,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 资源打用户标签
+         * @summary Creates and adds tags to specific Edge Node Service (ENS) resources.
+         *
+         * @description Before you add tags to a resource, Alibaba Cloud checks the number of existing tags on the resource. If the number exceeds the upper limit, an error message is returned. Only instance resources, such as virtual machines and bare machines, are supported.
          *
          * @param request TagResourcesRequest
          * @return TagResourcesResponse
@@ -28970,7 +29832,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 资源打用户标签
+         * @summary Creates and adds tags to specific Edge Node Service (ENS) resources.
+         *
+         * @description Before you add tags to a resource, Alibaba Cloud checks the number of existing tags on the resource. If the number exceeds the upper limit, an error message is returned. Only instance resources, such as virtual machines and bare machines, are supported.
          *
          * @param request TagResourcesRequest
          * @return TagResourcesResponse
@@ -29174,6 +30038,106 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
+         * @summary 调用UnassociateHaVip接口将高可用VIP从云产品实例上解绑。
+         *
+         * @param request UnassociateHaVipRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnassociateHaVipResponse
+         */
+        public UnassociateHaVipResponse UnassociateHaVipWithOptions(UnassociateHaVipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVipId))
+            {
+                query["HaVipId"] = request.HaVipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnassociateHaVip",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnassociateHaVipResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 调用UnassociateHaVip接口将高可用VIP从云产品实例上解绑。
+         *
+         * @param request UnassociateHaVipRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnassociateHaVipResponse
+         */
+        public async Task<UnassociateHaVipResponse> UnassociateHaVipWithOptionsAsync(UnassociateHaVipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVipId))
+            {
+                query["HaVipId"] = request.HaVipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnassociateHaVip",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnassociateHaVipResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 调用UnassociateHaVip接口将高可用VIP从云产品实例上解绑。
+         *
+         * @param request UnassociateHaVipRequest
+         * @return UnassociateHaVipResponse
+         */
+        public UnassociateHaVipResponse UnassociateHaVip(UnassociateHaVipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnassociateHaVipWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 调用UnassociateHaVip接口将高可用VIP从云产品实例上解绑。
+         *
+         * @param request UnassociateHaVipRequest
+         * @return UnassociateHaVipResponse
+         */
+        public async Task<UnassociateHaVipResponse> UnassociateHaVipAsync(UnassociateHaVipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnassociateHaVipWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Disassociates a network access control list (ACL) from a network.
          *
          * @param request UnassociateNetworkAclRequest
@@ -29274,7 +30238,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 释放预热的节点及AIC的命名空间粒度SDG
+         * @summary Deletes preloaded data.
          *
          * @param tmpReq UnloadRegionSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -29326,7 +30290,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 释放预热的节点及AIC的命名空间粒度SDG
+         * @summary Deletes preloaded data.
          *
          * @param tmpReq UnloadRegionSDGRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -29378,7 +30342,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 释放预热的节点及AIC的命名空间粒度SDG
+         * @summary Deletes preloaded data.
          *
          * @param request UnloadRegionSDGRequest
          * @return UnloadRegionSDGResponse
@@ -29390,7 +30354,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 释放预热的节点及AIC的命名空间粒度SDG
+         * @summary Deletes preloaded data.
          *
          * @param request UnloadRegionSDGRequest
          * @return UnloadRegionSDGResponse
@@ -29402,7 +30366,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 资源去除用户标签
+         * @summary Removes tags from specific Edge Node Service (ENS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.
          *
          * @param request UntagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -29448,7 +30412,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 资源去除用户标签
+         * @summary Removes tags from specific Edge Node Service (ENS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.
          *
          * @param request UntagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -29494,7 +30458,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 资源去除用户标签
+         * @summary Removes tags from specific Edge Node Service (ENS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.
          *
          * @param request UntagResourcesRequest
          * @return UntagResourcesResponse
@@ -29506,7 +30470,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
-         * @summary 资源去除用户标签
+         * @summary Removes tags from specific Edge Node Service (ENS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.
          *
          * @param request UntagResourcesRequest
          * @return UntagResourcesResponse

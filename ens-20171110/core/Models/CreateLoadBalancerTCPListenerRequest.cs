@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateLoadBalancerTCPListenerRequest : TeaModel {
         /// <summary>
-        /// The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// The port used by the backend ELB server of the ELB instance. Valid values: **1** to **65535**.
         /// </summary>
         [NameInMap("BackendServerPort")]
         [Validation(Required=false)]
         public int? BackendServerPort { get; set; }
 
         /// <summary>
-        /// The description of the listener. The description must be **1** to **80** characters in length.
+        /// The name of the listener. The value must be **1** to **80** characters in length.
         /// 
         /// >  The value cannot start with `http://` or `https://`.
         /// </summary>
@@ -50,13 +50,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckConnectPort { get; set; }
 
         /// <summary>
-        /// The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+        /// The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
         /// 
         /// *   Default value: 5.
         /// *   Valid values: **1** to **300**.
         /// *   Unit: seconds.
         /// 
-        /// >  If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.
+        /// >  If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter is ignored and the period of time specified by the HealthCheckInterval parameter is used as the timeout period.
         /// </summary>
         [NameInMap("HealthCheckConnectTimeout")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthyThreshold { get; set; }
 
         /// <summary>
-        /// The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: **1** to **65535**.
         /// 
         /// This parameter is required.
         /// </summary>

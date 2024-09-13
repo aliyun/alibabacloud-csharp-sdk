@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The ID of the node.
+            /// The ID of the edge node.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// The name of the file system.
+            /// The name of the file system. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).
             /// 
             /// This parameter is required.
             /// </summary>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string FileSystemName { get; set; }
 
             /// <summary>
-            /// The name of the mount target.
+            /// The name of the mount target. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).
             /// 
             /// This parameter is required.
             /// </summary>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string NetworkId { get; set; }
 
             /// <summary>
-            /// The type of the order.
+            /// The type of the order. Set the value to BUY.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -85,7 +85,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The type of the storage. Set the value to capacity.
+            /// The storage type. Valid values:
+            /// 
+            /// *   Capacity.
+            /// *   Performance.
             /// 
             /// This parameter is required.
             /// </summary>

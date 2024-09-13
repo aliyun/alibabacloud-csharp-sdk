@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// Specifies whether to enable auto-renewal. Valid values:
         /// 
-        /// *   **true**
-        /// *   **false** (default)
+        /// *   **true**.
+        /// *   **false** (default).
         /// 
         /// >  This parameter is not available when InstanceChargeType is set to PostPaid.
         /// </summary>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The billing cycle of computing resources of the instance. Only pay-as-you-go instances are supported. Valid values:
         /// 
-        /// *   **Day**
-        /// *   **Month**
+        /// *   **Day**.
+        /// *   **Month**.
         /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Carrier { get; set; }
 
         /// <summary>
-        /// The specifications of the data disk.
+        /// The specifications of data disks.
         /// </summary>
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// Specifies whether to encrypt the disk. Valid values:
+            /// Indicates whether the cloud disk is encrypted. Valid values:
             /// 
-            /// *   true
-            /// *   false (default)
+            /// *   true.
+            /// *   false (default).
             /// </summary>
             [NameInMap("Encrypted")]
             [Validation(Required=false)]
@@ -100,8 +100,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// The ID of the Key Management Service (KMS) key that is used for the disk. Valid values:
             /// 
-            /// *   true
-            /// *   false (default)
+            /// *   true.
+            /// *   false (default).
             /// 
             /// >  If you set the Encrypted parameter to true, the default service key is used when the KMSKeyId parameter is empty.
             /// </summary>
@@ -205,9 +205,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The type of the IP address. Valid values:
         /// 
-        /// *   **ipv4** (default)
-        /// *   **ipv6**
-        /// *   **ipv4Andipv6**
+        /// *   **ipv4** (default).
+        /// *   **ipv6**.
+        /// *   **ipv4Andipv6**.
         /// </summary>
         [NameInMap("IpType")]
         [Validation(Required=false)]
@@ -272,10 +272,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? Period { get; set; }
 
         /// <summary>
-        /// The unit of the subscription duration. Valid values:
+        /// The unit of the subscription period. Valid values:
         /// 
-        /// *   **Month** (default)
-        /// *   **Day**
+        /// *   **Month** (default).
+        /// *   **Day**.
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
@@ -339,6 +339,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("SecurityId")]
         [Validation(Required=false)]
         public string SecurityId { get; set; }
+
+        [NameInMap("SpotDuration")]
+        [Validation(Required=false)]
+        public int? SpotDuration { get; set; }
 
         /// <summary>
         /// The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Valid values:

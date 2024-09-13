@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// Specifies whether to enable auto-renewal when you change the billing method from pay-as-you-go to subscription. Valid values:
         /// 
-        /// true
+        /// true: enables auto-renewal for the instance.
         /// 
         /// false
         /// </summary>
@@ -76,17 +76,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Examples:
+        /// The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:
         /// 
         /// Month
         /// 
         /// Day
-        /// 
-        /// Valid values:
-        /// 
-        /// *   Year
-        /// *   Month
-        /// *   Day
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]

@@ -144,21 +144,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags that are added to the resource.
+        /// The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeInstancesRequestTags> Tags { get; set; }
         public class DescribeInstancesRequestTags : TeaModel {
             /// <summary>
-            /// The tag key. Valid values: 1 to 20.
+            /// The key of the tag that are to add to the instance. Valid values: 1 to 20.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value. Valid values: 1 to 20.
+            /// The tag value of the instance. Valid values: 1 to 20.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

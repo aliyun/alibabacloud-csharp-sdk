@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class StopLoadBalancerListenerRequest : TeaModel {
         /// <summary>
-        /// The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.
+        /// The listener port that you want to disable. Valid values: **1** to **65535**.
         /// 
         /// This parameter is required.
         /// </summary>

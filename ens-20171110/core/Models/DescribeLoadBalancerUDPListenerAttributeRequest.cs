@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerUDPListenerAttributeRequest : TeaModel {
         /// <summary>
-        /// The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.
+        /// The listening port that you want to query. Valid values: **1** to **65535**.
         /// 
         /// This parameter is required.
         /// </summary>

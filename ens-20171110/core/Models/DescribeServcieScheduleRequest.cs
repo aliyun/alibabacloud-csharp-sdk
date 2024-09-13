@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PodConfigName { get; set; }
 
         /// <summary>
-        /// The UUID of the device.
+        /// The unique ID of the device.
         /// 
         /// This parameter is required.
         /// </summary>

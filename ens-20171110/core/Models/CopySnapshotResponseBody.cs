@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// An array of instance IDs.
+            /// The IDs of the instances.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// Success status code.
+        /// The success status code.
         /// 
         /// *   **PartSuccess**: partially succeeded.
         /// *   **AllSuccess**: all succeeded.

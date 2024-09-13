@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateLoadBalancerHTTPListenerRequest : TeaModel {
         /// <summary>
-        /// The description of the listener. The description must be **1** to **80** characters in length.
+        /// 负载均衡实例后端服务器使用的端口，取值：**1**~**65535**。
+        /// </summary>
+        [NameInMap("BackendServerPort")]
+        [Validation(Required=false)]
+        public int? BackendServerPort { get; set; }
+
+        /// <summary>
+        /// The name of the listener. The value must be **1** to **80** characters in length.
         /// 
         /// >  The value cannot start with `http://` or `https://`.
         /// </summary>
@@ -91,7 +98,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HealthCheckMethod { get; set; }
 
         /// <summary>
-        /// The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+        /// The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
         /// 
         /// *   Default value: 5.
         /// *   Valid values: **1** to **300**.
@@ -99,22 +106,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// > 
         /// 
-        /// *   This parameter takes effect only if you set HealthCheck to on.
+        /// *   This parameter takes effect only if the HealthCheck parameter is set to on.
         /// 
-        /// *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+        /// *   If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
         /// </summary>
         [NameInMap("HealthCheckTimeout")]
         [Validation(Required=false)]
         public int? HealthCheckTimeout { get; set; }
 
         /// <summary>
-        /// The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be **1** to **80** characters in length.
+        /// The URI used for health checks. The URI must be **1** to **80** characters in length.
         /// 
         /// > 
         /// 
-        /// *   The URL must start with `/` and contain characters other than `/`.
+        /// *   A URL must start with a forward slash (`/`) but cannot contain only forward slashes (`/`).
         /// 
-        /// *   This parameter takes effect only if you set HealthCheck to on.
+        /// *   This parameter takes effect only if the HealthCheck parameter is set to on.
         /// </summary>
         [NameInMap("HealthCheckURI")]
         [Validation(Required=false)]
@@ -149,7 +156,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ListenerForward { get; set; }
 
         /// <summary>
-        /// The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: **1** to **65535**.
+        /// 
+        /// >  We recommend that you use port 80 for HTTP.
         /// 
         /// This parameter is required.
         /// </summary>

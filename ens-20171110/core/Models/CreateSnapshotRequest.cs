@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The ID of the edge node.
+        /// The ID of the ENS node.
         /// 
         /// This parameter is required.
         /// </summary>

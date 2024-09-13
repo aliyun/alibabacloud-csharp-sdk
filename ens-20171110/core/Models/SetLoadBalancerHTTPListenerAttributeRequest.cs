@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class SetLoadBalancerHTTPListenerAttributeRequest : TeaModel {
         /// <summary>
-        /// The description of the listener. The description must be **1** to **80** characters in length.
+        /// The name of the listener. The value must be **1** to **80** characters in length.
         /// 
         /// >  The value cannot start with `http://` or `https://`.
         /// </summary>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckInterval { get; set; }
 
         /// <summary>
-        /// The HTTP request method for health checks. Examples:
+        /// The HTTP request method for health checks. Valid values:
         /// 
         /// *   **head**
         /// *   **get**
@@ -88,18 +88,24 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   Valid values: **1** to **300**.
         /// *   Unit: seconds.
         /// 
-        /// > *   This parameter takes effect only if you set HealthCheck to on.
-        /// >*   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+        /// > 
+        /// 
+        /// *   This parameter takes effect only if the HealthCheck parameter is set to on.
+        /// 
+        /// *   If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
         /// </summary>
         [NameInMap("HealthCheckTimeout")]
         [Validation(Required=false)]
         public int? HealthCheckTimeout { get; set; }
 
         /// <summary>
-        /// The Uniform Resource Identifier (URI) that is used for health checks. The URI must be **1** to **80** characters in length.
+        /// The URI used for health checks. The URI must be **1** to **80** characters in length.
         /// 
-        /// > *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
-        /// >*   This parameter takes effect only if you set HealthCheck to on.
+        /// > 
+        /// 
+        /// *   A URL must start with a forward slash (`/`) but cannot contain only forward slashes (`/`).
+        /// 
+        /// *   This parameter takes effect only if the HealthCheck parameter is set to on.
         /// </summary>
         [NameInMap("HealthCheckURI")]
         [Validation(Required=false)]
@@ -124,7 +130,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? IdleTimeout { get; set; }
 
         /// <summary>
-        /// The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// The listener port whose attributes are to be modified. Valid values: **1** to **65535**.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? RequestTimeout { get; set; }
 
         /// <summary>
-        /// The scheduling algorithm. Examples:
+        /// The scheduling algorithm. Valid values:
         /// 
         /// *   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.
         /// *   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.
@@ -176,8 +182,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// Specifies whether to use the X-Forwarded-For header to obtain the real IP address of the client. Valid values:
         /// 
-        /// *   **on**
-        /// *   **off** (default)
+        /// *   **on** (default)
+        /// *   **off**
         /// </summary>
         [NameInMap("XForwardedFor")]
         [Validation(Required=false)]

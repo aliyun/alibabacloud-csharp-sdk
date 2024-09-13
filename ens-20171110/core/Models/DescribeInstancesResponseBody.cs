@@ -91,6 +91,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         [Validation(Required=false)]
                         public int? DiskSize { get; set; }
 
+                        [NameInMap("EncryptKeyId")]
+                        [Validation(Required=false)]
+                        public string EncryptKeyId { get; set; }
+
+                        [NameInMap("Encrypted")]
+                        [Validation(Required=false)]
+                        public bool? Encrypted { get; set; }
+
                         /// <summary>
                         /// The size of the disk. Unit: MiB.
                         /// </summary>
@@ -250,6 +258,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public int? InternetMaxBandwidthOut { get; set; }
 
+                [NameInMap("KeyPairName")]
+                [Validation(Required=false)]
+                public string KeyPairName { get; set; }
+
                 /// <summary>
                 /// The memory size. Unit: MB.
                 /// </summary>
@@ -399,7 +411,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// The code of the instance type.
+                /// The instance type.
                 /// </summary>
                 [NameInMap("SpecName")]
                 [Validation(Required=false)]

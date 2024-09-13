@@ -63,6 +63,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource : TeaModel {
+                /// <summary>
+                /// Bandwidth billing method.
+                /// </summary>
                 [NameInMap("BandwidthTypes")]
                 [Validation(Required=false)]
                 public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceBandwidthTypes BandwidthTypes { get; set; }
@@ -87,6 +90,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public int? DataDiskMinSize { get; set; }
 
+                /// <summary>
+                /// node ID
+                /// </summary>
                 [NameInMap("EnsRegionIds")]
                 [Validation(Required=false)]
                 public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIds EnsRegionIds { get; set; }
@@ -164,6 +170,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 }
 
+                /// <summary>
+                /// Operator
+                /// </summary>
                 [NameInMap("Isp")]
                 [Validation(Required=false)]
                 public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp Isp { get; set; }

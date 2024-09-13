@@ -10,25 +10,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerUDPListenerAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// The port used by the backend ELB server of the ELB instance. Valid values: **1** to **65535**.
         /// </summary>
         [NameInMap("BackendServerPort")]
         [Validation(Required=false)]
         public int? BackendServerPort { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth of the elastic IP address (EIP).
-        /// 
-        /// *   Default value: 5.
-        /// *   Valid values: **5** to **10000**.
-        /// *   Unit: Mbit/s.
+        /// The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The description of the listener.
+        /// The name of the listener.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -43,6 +39,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("EipTransmit")]
         [Validation(Required=false)]
         public string EipTransmit { get; set; }
+
+        /// <summary>
+        /// The timeout period of a connection. Valid values: **10** to **900**. Unit: seconds.
+        /// </summary>
+        [NameInMap("EstablishedTimeout")]
+        [Validation(Required=false)]
+        public int? EstablishedTimeout { get; set; }
 
         /// <summary>
         /// Specifies whether to enable the health check feature. Valid values:
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckConnectPort { get; set; }
 
         /// <summary>
-        /// The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+        /// The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
         /// 
         /// *   Default value: 5.
         /// *   Valid values: **1** to **300**.
@@ -70,9 +73,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// > 
         /// 
-        /// *   This parameter takes effect only if you set HealthCheck to on.
+        /// *   This parameter takes effect only if the HealthCheck parameter is set to on.
         /// 
-        /// *   If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+        /// *   If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.
         /// </summary>
         [NameInMap("HealthCheckConnectTimeout")]
         [Validation(Required=false)]
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthyThreshold { get; set; }
 
         /// <summary>
-        /// The frontend port that is used by the ELB instance.
+        /// The listener port.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]

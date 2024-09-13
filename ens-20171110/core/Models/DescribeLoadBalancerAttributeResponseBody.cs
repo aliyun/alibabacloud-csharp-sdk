@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The IP address that the ELB instance uses to provide services.
+        /// The IP address that the Edge Load Balancer (ELB) instance uses to provide services.
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AddressIPVersion { get; set; }
 
         /// <summary>
-        /// The backend servers.
+        /// The list of backend servers.
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// The type of the backend server.
+            /// The type of backend server.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: **5** to **10000**. Unit: Mbit/s.
+        /// The peak bandwidth of the ELB. The default value is -1, which indicates that the bandwidth is unlimited.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? ListenerPort { get; set; }
 
             /// <summary>
-            /// The listener protocol.
+            /// The listener protocol of the instance.
             /// </summary>
             [NameInMap("ListenerProtocol")]
             [Validation(Required=false)]
