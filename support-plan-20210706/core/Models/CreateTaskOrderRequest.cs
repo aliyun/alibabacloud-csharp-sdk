@@ -9,24 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class CreateTaskOrderRequest : TeaModel {
-        [NameInMap("CustomerRealName")]
-        [Validation(Required=false)]
-        public string CustomerRealName { get; set; }
-
-        [NameInMap("CustomerUserId")]
-        [Validation(Required=false)]
-        public string CustomerUserId { get; set; }
-
-        [NameInMap("ImportantDescription")]
-        [Validation(Required=false)]
-        public string ImportantDescription { get; set; }
-
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("IsImportant")]
+        [NameInMap("CreateUserId")]
         [Validation(Required=false)]
-        public string IsImportant { get; set; }
+        public string CreateUserId { get; set; }
+
+        [NameInMap("IsUrgent")]
+        [Validation(Required=false)]
+        public bool? IsUrgent { get; set; }
 
         /// <summary>
         /// This parameter is required.
@@ -36,26 +28,22 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
         public string OpenGroupId { get; set; }
 
         /// <summary>
-        /// productType
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("ProductType")]
+        [NameInMap("Overview")]
         [Validation(Required=false)]
-        public string ProductType { get; set; }
-
-        [NameInMap("ProductTypeName")]
-        [Validation(Required=false)]
-        public string ProductTypeName { get; set; }
+        public string Overview { get; set; }
 
         /// <summary>
-        /// taskTitle
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("TaskTitle")]
+        [NameInMap("ProductCode")]
         [Validation(Required=false)]
-        public string TaskTitle { get; set; }
+        public string ProductCode { get; set; }
+
+        [NameInMap("UrgentDescription")]
+        [Validation(Required=false)]
+        public string UrgentDescription { get; set; }
 
     }
 

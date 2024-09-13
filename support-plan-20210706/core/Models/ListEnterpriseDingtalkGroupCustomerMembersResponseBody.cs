@@ -15,7 +15,21 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<EnterpriseDingtalkGroupMember> Data { get; set; }
+        public List<ListEnterpriseDingtalkGroupCustomerMembersResponseBodyData> Data { get; set; }
+        public class ListEnterpriseDingtalkGroupCustomerMembersResponseBodyData : TeaModel {
+            [NameInMap("IsAdmin")]
+            [Validation(Required=false)]
+            public bool? IsAdmin { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

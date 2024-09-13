@@ -148,37 +148,29 @@ namespace AlibabaCloud.SDK.Support_plan20210706
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerRealName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateUserId))
             {
-                query["CustomerRealName"] = request.CustomerRealName;
+                query["CreateUserId"] = request.CreateUserId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUserId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsUrgent))
             {
-                query["CustomerUserId"] = request.CustomerUserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportantDescription))
-            {
-                query["ImportantDescription"] = request.ImportantDescription;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsImportant))
-            {
-                query["IsImportant"] = request.IsImportant;
+                query["IsUrgent"] = request.IsUrgent;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenGroupId))
             {
                 query["OpenGroupId"] = request.OpenGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overview))
             {
-                query["ProductType"] = request.ProductType;
+                query["Overview"] = request.Overview;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductTypeName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
-                query["ProductTypeName"] = request.ProductTypeName;
+                query["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskTitle))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrgentDescription))
             {
-                query["TaskTitle"] = request.TaskTitle;
+                query["UrgentDescription"] = request.UrgentDescription;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -210,37 +202,29 @@ namespace AlibabaCloud.SDK.Support_plan20210706
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerRealName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateUserId))
             {
-                query["CustomerRealName"] = request.CustomerRealName;
+                query["CreateUserId"] = request.CreateUserId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUserId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsUrgent))
             {
-                query["CustomerUserId"] = request.CustomerUserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportantDescription))
-            {
-                query["ImportantDescription"] = request.ImportantDescription;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsImportant))
-            {
-                query["IsImportant"] = request.IsImportant;
+                query["IsUrgent"] = request.IsUrgent;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenGroupId))
             {
                 query["OpenGroupId"] = request.OpenGroupId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overview))
             {
-                query["ProductType"] = request.ProductType;
+                query["Overview"] = request.Overview;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductTypeName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
-                query["ProductTypeName"] = request.ProductTypeName;
+                query["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskTitle))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrgentDescription))
             {
-                query["TaskTitle"] = request.TaskTitle;
+                query["UrgentDescription"] = request.UrgentDescription;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -784,18 +768,6 @@ namespace AlibabaCloud.SDK.Support_plan20210706
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerParentId))
-            {
-                query["CallerParentId"] = request.CallerParentId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerType))
-            {
-                query["CallerType"] = request.CallerType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUid))
-            {
-                query["CallerUid"] = request.CallerUid;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateRealName))
             {
                 query["CreateRealName"] = request.CreateRealName;
@@ -804,13 +776,13 @@ namespace AlibabaCloud.SDK.Support_plan20210706
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsUrgent))
+            {
+                query["IsUrgent"] = request.IsUrgent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenGroupId))
             {
                 query["OpenGroupId"] = request.OpenGroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
-            {
-                query["OrderId"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -819,10 +791,6 @@ namespace AlibabaCloud.SDK.Support_plan20210706
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -862,18 +830,6 @@ namespace AlibabaCloud.SDK.Support_plan20210706
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerParentId))
-            {
-                query["CallerParentId"] = request.CallerParentId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerType))
-            {
-                query["CallerType"] = request.CallerType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUid))
-            {
-                query["CallerUid"] = request.CallerUid;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateRealName))
             {
                 query["CreateRealName"] = request.CreateRealName;
@@ -882,13 +838,13 @@ namespace AlibabaCloud.SDK.Support_plan20210706
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsUrgent))
+            {
+                query["IsUrgent"] = request.IsUrgent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenGroupId))
             {
                 query["OpenGroupId"] = request.OpenGroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
-            {
-                query["OrderId"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -897,10 +853,6 @@ namespace AlibabaCloud.SDK.Support_plan20210706
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -963,14 +915,14 @@ namespace AlibabaCloud.SDK.Support_plan20210706
         public ListEnterpriseDingtalkGroupCustomerMembersResponse ListEnterpriseDingtalkGroupCustomerMembersWithOptions(ListEnterpriseDingtalkGroupCustomerMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenGroupId))
             {
-                body["OpenGroupId"] = request.OpenGroupId;
+                query["OpenGroupId"] = request.OpenGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -997,14 +949,14 @@ namespace AlibabaCloud.SDK.Support_plan20210706
         public async Task<ListEnterpriseDingtalkGroupCustomerMembersResponse> ListEnterpriseDingtalkGroupCustomerMembersWithOptionsAsync(ListEnterpriseDingtalkGroupCustomerMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenGroupId))
             {
-                body["OpenGroupId"] = request.OpenGroupId;
+                query["OpenGroupId"] = request.OpenGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
