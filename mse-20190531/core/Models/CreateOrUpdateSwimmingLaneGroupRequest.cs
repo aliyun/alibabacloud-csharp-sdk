@@ -110,6 +110,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        [NameInMap("SwimVersion")]
+        [Validation(Required=false)]
+        public int? SwimVersion { get; set; }
+
     }
 
 }

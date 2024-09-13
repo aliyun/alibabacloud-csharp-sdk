@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public int? CanaryModel { get; set; }
 
+            [NameInMap("Condition")]
+            [Validation(Required=false)]
+            public string Condition { get; set; }
+
             /// <summary>
             /// The matching conditions.
             /// </summary>

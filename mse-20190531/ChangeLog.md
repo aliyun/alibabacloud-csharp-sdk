@@ -1,3 +1,12 @@
+2024-09-13 Version: 6.13.0
+- Support API ChangeResourceGroup.
+- Update API CreateOrUpdateSwimmingLane: update param GatewaySwimmingLaneRouteJson.
+- Update API CreateOrUpdateSwimmingLaneGroup: add param SwimVersion.
+- Update API ListGatewayRoute: update response param.
+- Update API QueryAllSwimmingLane: update response param.
+- Update API QueryAllSwimmingLaneGroup: update response param.
+
+
 2024-09-09 Version: 6.12.1
 - Update API GetGatewayServiceDetail: update response param.
 - Update API ListEngineNamespaces: update response param.

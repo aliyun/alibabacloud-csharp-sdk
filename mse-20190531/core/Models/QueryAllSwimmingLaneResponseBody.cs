@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    [NameInMap("NameList")]
+                    [Validation(Required=false)]
+                    public List<string> NameList { get; set; }
+
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }

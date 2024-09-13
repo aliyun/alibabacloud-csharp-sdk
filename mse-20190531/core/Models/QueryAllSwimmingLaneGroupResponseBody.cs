@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Region { get; set; }
 
+            [NameInMap("SwimVersion")]
+            [Validation(Required=false)]
+            public int? SwimVersion { get; set; }
+
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }

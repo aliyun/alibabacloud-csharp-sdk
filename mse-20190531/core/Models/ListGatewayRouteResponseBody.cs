@@ -132,6 +132,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public List<string> DomainNameList { get; set; }
 
+                [NameInMap("DynamicRoute")]
+                [Validation(Required=false)]
+                public bool? DynamicRoute { get; set; }
+
                 /// <summary>
                 /// Indicates whether Web Application Firewall (WAF) is activated.
                 /// </summary>
