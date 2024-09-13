@@ -15702,6 +15702,114 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary 备实例解耦
+         *
+         * @param request RemoveStandbyInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveStandbyInstanceResponse
+         */
+        public RemoveStandbyInstanceResponse RemoveStandbyInstanceWithOptions(RemoveStandbyInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Forced))
+            {
+                body["Forced"] = request.Forced;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                body["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveStandbyInstance",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveStandbyInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 备实例解耦
+         *
+         * @param request RemoveStandbyInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveStandbyInstanceResponse
+         */
+        public async Task<RemoveStandbyInstanceResponse> RemoveStandbyInstanceWithOptionsAsync(RemoveStandbyInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Forced))
+            {
+                body["Forced"] = request.Forced;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInstanceId))
+            {
+                body["TargetInstanceId"] = request.TargetInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveStandbyInstance",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveStandbyInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 备实例解耦
+         *
+         * @param request RemoveStandbyInstanceRequest
+         * @return RemoveStandbyInstanceResponse
+         */
+        public RemoveStandbyInstanceResponse RemoveStandbyInstance(RemoveStandbyInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveStandbyInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 备实例解耦
+         *
+         * @param request RemoveStandbyInstanceRequest
+         * @return RemoveStandbyInstanceResponse
+         */
+        public async Task<RemoveStandbyInstanceResponse> RemoveStandbyInstanceAsync(RemoveStandbyInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveStandbyInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 恢复项目
          *
          * @param request ResumeProjectRequest
