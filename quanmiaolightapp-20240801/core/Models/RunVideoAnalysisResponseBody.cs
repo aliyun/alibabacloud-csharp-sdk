@@ -265,6 +265,24 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
             }
 
+            [NameInMap("usage")]
+            [Validation(Required=false)]
+            public RunVideoAnalysisResponseBodyPayloadUsage Usage { get; set; }
+            public class RunVideoAnalysisResponseBodyPayloadUsage : TeaModel {
+                [NameInMap("inputTokens")]
+                [Validation(Required=false)]
+                public long? InputTokens { get; set; }
+
+                [NameInMap("outputTokens")]
+                [Validation(Required=false)]
+                public long? OutputTokens { get; set; }
+
+                [NameInMap("totalTokens")]
+                [Validation(Required=false)]
+                public long? TotalTokens { get; set; }
+
+            }
+
         }
 
         [NameInMap("requestId")]

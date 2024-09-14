@@ -38,6 +38,136 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         }
 
         /**
+         * @summary 轻应用-新闻播报-获取热点话题摘要列表
+         *
+         * @param request ListHotTopicSummariesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListHotTopicSummariesResponse
+         */
+        public ListHotTopicSummariesResponse ListHotTopicSummariesWithOptions(string workspaceId, ListHotTopicSummariesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                body["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopic))
+            {
+                body["hotTopic"] = request.HotTopic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopicVersion))
+            {
+                body["hotTopicVersion"] = request.HotTopicVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHotTopicSummaries",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/listHotTopicSummaries",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHotTopicSummariesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 轻应用-新闻播报-获取热点话题摘要列表
+         *
+         * @param request ListHotTopicSummariesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListHotTopicSummariesResponse
+         */
+        public async Task<ListHotTopicSummariesResponse> ListHotTopicSummariesWithOptionsAsync(string workspaceId, ListHotTopicSummariesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                body["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopic))
+            {
+                body["hotTopic"] = request.HotTopic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotTopicVersion))
+            {
+                body["hotTopicVersion"] = request.HotTopicVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHotTopicSummaries",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/listHotTopicSummaries",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHotTopicSummariesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 轻应用-新闻播报-获取热点话题摘要列表
+         *
+         * @param request ListHotTopicSummariesRequest
+         * @return ListHotTopicSummariesResponse
+         */
+        public ListHotTopicSummariesResponse ListHotTopicSummaries(string workspaceId, ListHotTopicSummariesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListHotTopicSummariesWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 轻应用-新闻播报-获取热点话题摘要列表
+         *
+         * @param request ListHotTopicSummariesRequest
+         * @return ListHotTopicSummariesResponse
+         */
+        public async Task<ListHotTopicSummariesResponse> ListHotTopicSummariesAsync(string workspaceId, ListHotTopicSummariesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListHotTopicSummariesWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 营销信息抽取服务
          *
          * @param tmpReq RunMarketingInformationExtractRequest
