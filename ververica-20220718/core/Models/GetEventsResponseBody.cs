@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class GetFolderResponseBody : TeaModel {
-        /// <summary>
-        /// The data structure of the folder.
-        /// </summary>
+    public class GetEventsResponseBody : TeaModel {
         [NameInMap("data")]
         [Validation(Required=false)]
-        public Folder Data { get; set; }
+        public List<Event> Data { get; set; }
 
         [NameInMap("errorCode")]
         [Validation(Required=false)]
@@ -28,6 +25,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public int? HttpCode { get; set; }
 
+        [NameInMap("pageIndex")]
+        [Validation(Required=false)]
+        public int? PageIndex { get; set; }
+
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -35,6 +40,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("totalSize")]
+        [Validation(Required=false)]
+        public int? TotalSize { get; set; }
 
     }
 

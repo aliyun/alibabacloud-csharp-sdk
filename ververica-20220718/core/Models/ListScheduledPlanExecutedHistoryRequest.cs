@@ -8,15 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class RegisterCustomConnectorRequest : TeaModel {
+    public class ListScheduledPlanExecutedHistoryRequest : TeaModel {
         /// <summary>
-        /// The URL in which the JAR package of the custom connector is stored. The platform must be able to access this address.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("jarUrl")]
+        [NameInMap("deploymentId")]
         [Validation(Required=false)]
-        public string JarUrl { get; set; }
+        public string DeploymentId { get; set; }
+
+        [NameInMap("origin")]
+        [Validation(Required=false)]
+        public string Origin { get; set; }
 
     }
 

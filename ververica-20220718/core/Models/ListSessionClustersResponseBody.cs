@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class GetFolderResponseBody : TeaModel {
-        /// <summary>
-        /// The data structure of the folder.
-        /// </summary>
+    public class ListSessionClustersResponseBody : TeaModel {
         [NameInMap("data")]
         [Validation(Required=false)]
-        public Folder Data { get; set; }
+        public List<SessionCluster> Data { get; set; }
 
         [NameInMap("errorCode")]
         [Validation(Required=false)]

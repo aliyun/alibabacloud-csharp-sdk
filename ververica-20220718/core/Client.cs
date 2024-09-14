@@ -38,6 +38,104 @@ namespace AlibabaCloud.SDK.Ververica20220718
         }
 
         /**
+         * @summary 执行定时计划
+         *
+         * @param headers ApplyScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyScheduledPlanResponse
+         */
+        public ApplyScheduledPlanResponse ApplyScheduledPlanWithOptions(string namespace_, string scheduledPlanId, ApplyScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scheduledPlanId) + "%3Aapply",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyScheduledPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 执行定时计划
+         *
+         * @param headers ApplyScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyScheduledPlanResponse
+         */
+        public async Task<ApplyScheduledPlanResponse> ApplyScheduledPlanWithOptionsAsync(string namespace_, string scheduledPlanId, ApplyScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scheduledPlanId) + "%3Aapply",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyScheduledPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 执行定时计划
+         *
+         * @return ApplyScheduledPlanResponse
+         */
+        public ApplyScheduledPlanResponse ApplyScheduledPlan(string namespace_, string scheduledPlanId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ApplyScheduledPlanHeaders headers = new ApplyScheduledPlanHeaders();
+            return ApplyScheduledPlanWithOptions(namespace_, scheduledPlanId, headers, runtime);
+        }
+
+        /**
+         * @summary 执行定时计划
+         *
+         * @return ApplyScheduledPlanResponse
+         */
+        public async Task<ApplyScheduledPlanResponse> ApplyScheduledPlanAsync(string namespace_, string scheduledPlanId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ApplyScheduledPlanHeaders headers = new ApplyScheduledPlanHeaders();
+            return await ApplyScheduledPlanWithOptionsAsync(namespace_, scheduledPlanId, headers, runtime);
+        }
+
+        /**
          * @summary Creates a deployment.
          *
          * @param request CreateDeploymentRequest
@@ -247,6 +345,124 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             CreateDeploymentDraftHeaders headers = new CreateDeploymentDraftHeaders();
             return await CreateDeploymentDraftWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建deploymentTarget
+         *
+         * @param request CreateDeploymentTargetRequest
+         * @param headers CreateDeploymentTargetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDeploymentTargetResponse
+         */
+        public CreateDeploymentTargetResponse CreateDeploymentTargetWithOptions(string namespace_, CreateDeploymentTargetRequest request, CreateDeploymentTargetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentTargetName))
+            {
+                query["deploymentTargetName"] = request.DeploymentTargetName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeploymentTarget",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-targets",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeploymentTargetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建deploymentTarget
+         *
+         * @param request CreateDeploymentTargetRequest
+         * @param headers CreateDeploymentTargetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDeploymentTargetResponse
+         */
+        public async Task<CreateDeploymentTargetResponse> CreateDeploymentTargetWithOptionsAsync(string namespace_, CreateDeploymentTargetRequest request, CreateDeploymentTargetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentTargetName))
+            {
+                query["deploymentTargetName"] = request.DeploymentTargetName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeploymentTarget",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-targets",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeploymentTargetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建deploymentTarget
+         *
+         * @param request CreateDeploymentTargetRequest
+         * @return CreateDeploymentTargetResponse
+         */
+        public CreateDeploymentTargetResponse CreateDeploymentTarget(string namespace_, CreateDeploymentTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateDeploymentTargetHeaders headers = new CreateDeploymentTargetHeaders();
+            return CreateDeploymentTargetWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建deploymentTarget
+         *
+         * @param request CreateDeploymentTargetRequest
+         * @return CreateDeploymentTargetResponse
+         */
+        public async Task<CreateDeploymentTargetResponse> CreateDeploymentTargetAsync(string namespace_, CreateDeploymentTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateDeploymentTargetHeaders headers = new CreateDeploymentTargetHeaders();
+            return await CreateDeploymentTargetWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
         /**
@@ -591,6 +807,218 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             CreateSavepointHeaders headers = new CreateSavepointHeaders();
             return await CreateSavepointWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建定时执行计划
+         *
+         * @param request CreateScheduledPlanRequest
+         * @param headers CreateScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateScheduledPlanResponse
+         */
+        public CreateScheduledPlanResponse CreateScheduledPlanWithOptions(string namespace_, CreateScheduledPlanRequest request, CreateScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateScheduledPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建定时执行计划
+         *
+         * @param request CreateScheduledPlanRequest
+         * @param headers CreateScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateScheduledPlanResponse
+         */
+        public async Task<CreateScheduledPlanResponse> CreateScheduledPlanWithOptionsAsync(string namespace_, CreateScheduledPlanRequest request, CreateScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateScheduledPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建定时执行计划
+         *
+         * @param request CreateScheduledPlanRequest
+         * @return CreateScheduledPlanResponse
+         */
+        public CreateScheduledPlanResponse CreateScheduledPlan(string namespace_, CreateScheduledPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateScheduledPlanHeaders headers = new CreateScheduledPlanHeaders();
+            return CreateScheduledPlanWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建定时执行计划
+         *
+         * @param request CreateScheduledPlanRequest
+         * @return CreateScheduledPlanResponse
+         */
+        public async Task<CreateScheduledPlanResponse> CreateScheduledPlanAsync(string namespace_, CreateScheduledPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateScheduledPlanHeaders headers = new CreateScheduledPlanHeaders();
+            return await CreateScheduledPlanWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建session集群
+         *
+         * @param request CreateSessionClusterRequest
+         * @param headers CreateSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSessionClusterResponse
+         */
+        public CreateSessionClusterResponse CreateSessionClusterWithOptions(string namespace_, CreateSessionClusterRequest request, CreateSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSessionClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建session集群
+         *
+         * @param request CreateSessionClusterRequest
+         * @param headers CreateSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSessionClusterResponse
+         */
+        public async Task<CreateSessionClusterResponse> CreateSessionClusterWithOptionsAsync(string namespace_, CreateSessionClusterRequest request, CreateSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSessionClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建session集群
+         *
+         * @param request CreateSessionClusterRequest
+         * @return CreateSessionClusterResponse
+         */
+        public CreateSessionClusterResponse CreateSessionCluster(string namespace_, CreateSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateSessionClusterHeaders headers = new CreateSessionClusterHeaders();
+            return CreateSessionClusterWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建session集群
+         *
+         * @param request CreateSessionClusterRequest
+         * @return CreateSessionClusterResponse
+         */
+        public async Task<CreateSessionClusterResponse> CreateSessionClusterAsync(string namespace_, CreateSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateSessionClusterHeaders headers = new CreateSessionClusterHeaders();
+            return await CreateSessionClusterWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
         /**
@@ -1100,6 +1528,104 @@ namespace AlibabaCloud.SDK.Ververica20220718
         }
 
         /**
+         * @summary 删除deploymentTarget
+         *
+         * @param headers DeleteDeploymentTargetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDeploymentTargetResponse
+         */
+        public DeleteDeploymentTargetResponse DeleteDeploymentTargetWithOptions(string namespace_, string deploymentTargetName, DeleteDeploymentTargetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeploymentTarget",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-targets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentTargetName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeploymentTargetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除deploymentTarget
+         *
+         * @param headers DeleteDeploymentTargetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDeploymentTargetResponse
+         */
+        public async Task<DeleteDeploymentTargetResponse> DeleteDeploymentTargetWithOptionsAsync(string namespace_, string deploymentTargetName, DeleteDeploymentTargetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeploymentTarget",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-targets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentTargetName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeploymentTargetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除deploymentTarget
+         *
+         * @return DeleteDeploymentTargetResponse
+         */
+        public DeleteDeploymentTargetResponse DeleteDeploymentTarget(string namespace_, string deploymentTargetName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteDeploymentTargetHeaders headers = new DeleteDeploymentTargetHeaders();
+            return DeleteDeploymentTargetWithOptions(namespace_, deploymentTargetName, headers, runtime);
+        }
+
+        /**
+         * @summary 删除deploymentTarget
+         *
+         * @return DeleteDeploymentTargetResponse
+         */
+        public async Task<DeleteDeploymentTargetResponse> DeleteDeploymentTargetAsync(string namespace_, string deploymentTargetName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteDeploymentTargetHeaders headers = new DeleteDeploymentTargetHeaders();
+            return await DeleteDeploymentTargetWithOptionsAsync(namespace_, deploymentTargetName, headers, runtime);
+        }
+
+        /**
          * @summary delete a folder
          *
          * @param headers DeleteFolderHeaders
@@ -1489,6 +2015,202 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DeleteSavepointHeaders headers = new DeleteSavepointHeaders();
             return await DeleteSavepointWithOptionsAsync(namespace_, savepointId, headers, runtime);
+        }
+
+        /**
+         * @summary 删除定时执行计划
+         *
+         * @param headers DeleteScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteScheduledPlanResponse
+         */
+        public DeleteScheduledPlanResponse DeleteScheduledPlanWithOptions(string namespace_, string scheduledPlanId, DeleteScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scheduledPlanId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteScheduledPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除定时执行计划
+         *
+         * @param headers DeleteScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteScheduledPlanResponse
+         */
+        public async Task<DeleteScheduledPlanResponse> DeleteScheduledPlanWithOptionsAsync(string namespace_, string scheduledPlanId, DeleteScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scheduledPlanId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteScheduledPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除定时执行计划
+         *
+         * @return DeleteScheduledPlanResponse
+         */
+        public DeleteScheduledPlanResponse DeleteScheduledPlan(string namespace_, string scheduledPlanId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteScheduledPlanHeaders headers = new DeleteScheduledPlanHeaders();
+            return DeleteScheduledPlanWithOptions(namespace_, scheduledPlanId, headers, runtime);
+        }
+
+        /**
+         * @summary 删除定时执行计划
+         *
+         * @return DeleteScheduledPlanResponse
+         */
+        public async Task<DeleteScheduledPlanResponse> DeleteScheduledPlanAsync(string namespace_, string scheduledPlanId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteScheduledPlanHeaders headers = new DeleteScheduledPlanHeaders();
+            return await DeleteScheduledPlanWithOptionsAsync(namespace_, scheduledPlanId, headers, runtime);
+        }
+
+        /**
+         * @summary 删除session集群
+         *
+         * @param headers DeleteSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSessionClusterResponse
+         */
+        public DeleteSessionClusterResponse DeleteSessionClusterWithOptions(string namespace_, string sessionClusterName, DeleteSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSessionClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除session集群
+         *
+         * @param headers DeleteSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSessionClusterResponse
+         */
+        public async Task<DeleteSessionClusterResponse> DeleteSessionClusterWithOptionsAsync(string namespace_, string sessionClusterName, DeleteSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSessionClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除session集群
+         *
+         * @return DeleteSessionClusterResponse
+         */
+        public DeleteSessionClusterResponse DeleteSessionCluster(string namespace_, string sessionClusterName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteSessionClusterHeaders headers = new DeleteSessionClusterHeaders();
+            return DeleteSessionClusterWithOptions(namespace_, sessionClusterName, headers, runtime);
+        }
+
+        /**
+         * @summary 删除session集群
+         *
+         * @return DeleteSessionClusterResponse
+         */
+        public async Task<DeleteSessionClusterResponse> DeleteSessionClusterAsync(string namespace_, string sessionClusterName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteSessionClusterHeaders headers = new DeleteSessionClusterHeaders();
+            return await DeleteSessionClusterWithOptionsAsync(namespace_, sessionClusterName, headers, runtime);
         }
 
         /**
@@ -2270,6 +2992,122 @@ namespace AlibabaCloud.SDK.Ververica20220718
         }
 
         /**
+         * @summary 获取应用中的执行定时计划
+         *
+         * @param request GetAppliedScheduledPlanRequest
+         * @param headers GetAppliedScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAppliedScheduledPlanResponse
+         */
+        public GetAppliedScheduledPlanResponse GetAppliedScheduledPlanWithOptions(string namespace_, GetAppliedScheduledPlanRequest request, GetAppliedScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentId))
+            {
+                query["deploymentId"] = request.DeploymentId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppliedScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans%3AgetExecutedScheduledPlan",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppliedScheduledPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取应用中的执行定时计划
+         *
+         * @param request GetAppliedScheduledPlanRequest
+         * @param headers GetAppliedScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAppliedScheduledPlanResponse
+         */
+        public async Task<GetAppliedScheduledPlanResponse> GetAppliedScheduledPlanWithOptionsAsync(string namespace_, GetAppliedScheduledPlanRequest request, GetAppliedScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentId))
+            {
+                query["deploymentId"] = request.DeploymentId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppliedScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans%3AgetExecutedScheduledPlan",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppliedScheduledPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取应用中的执行定时计划
+         *
+         * @param request GetAppliedScheduledPlanRequest
+         * @return GetAppliedScheduledPlanResponse
+         */
+        public GetAppliedScheduledPlanResponse GetAppliedScheduledPlan(string namespace_, GetAppliedScheduledPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetAppliedScheduledPlanHeaders headers = new GetAppliedScheduledPlanHeaders();
+            return GetAppliedScheduledPlanWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取应用中的执行定时计划
+         *
+         * @param request GetAppliedScheduledPlanRequest
+         * @return GetAppliedScheduledPlanResponse
+         */
+        public async Task<GetAppliedScheduledPlanResponse> GetAppliedScheduledPlanAsync(string namespace_, GetAppliedScheduledPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetAppliedScheduledPlanHeaders headers = new GetAppliedScheduledPlanHeaders();
+            return await GetAppliedScheduledPlanWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /**
          * @summary 获取catalog
          *
          * @param request GetCatalogsRequest
@@ -2909,6 +3747,138 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetDeploymentDraftLockHeaders headers = new GetDeploymentDraftLockHeaders();
             return await GetDeploymentDraftLockWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取运行事件
+         *
+         * @param request GetEventsRequest
+         * @param headers GetEventsHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetEventsResponse
+         */
+        public GetEventsResponse GetEventsWithOptions(string namespace_, GetEventsRequest request, GetEventsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentId))
+            {
+                query["deploymentId"] = request.DeploymentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEvents",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/events",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取运行事件
+         *
+         * @param request GetEventsRequest
+         * @param headers GetEventsHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetEventsResponse
+         */
+        public async Task<GetEventsResponse> GetEventsWithOptionsAsync(string namespace_, GetEventsRequest request, GetEventsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentId))
+            {
+                query["deploymentId"] = request.DeploymentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEvents",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/events",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取运行事件
+         *
+         * @param request GetEventsRequest
+         * @return GetEventsResponse
+         */
+        public GetEventsResponse GetEvents(string namespace_, GetEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetEventsHeaders headers = new GetEventsHeaders();
+            return GetEventsWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取运行事件
+         *
+         * @param request GetEventsRequest
+         * @return GetEventsResponse
+         */
+        public async Task<GetEventsResponse> GetEventsAsync(string namespace_, GetEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetEventsHeaders headers = new GetEventsHeaders();
+            return await GetEventsWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
         /**
@@ -3719,6 +4689,104 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetSavepointHeaders headers = new GetSavepointHeaders();
             return await GetSavepointWithOptionsAsync(namespace_, savepointId, headers, runtime);
+        }
+
+        /**
+         * @summary 获取session集群
+         *
+         * @param headers GetSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSessionClusterResponse
+         */
+        public GetSessionClusterResponse GetSessionClusterWithOptions(string namespace_, string sessionClusterName, GetSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSessionClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取session集群
+         *
+         * @param headers GetSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSessionClusterResponse
+         */
+        public async Task<GetSessionClusterResponse> GetSessionClusterWithOptionsAsync(string namespace_, string sessionClusterName, GetSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSessionClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取session集群
+         *
+         * @return GetSessionClusterResponse
+         */
+        public GetSessionClusterResponse GetSessionCluster(string namespace_, string sessionClusterName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetSessionClusterHeaders headers = new GetSessionClusterHeaders();
+            return GetSessionClusterWithOptions(namespace_, sessionClusterName, headers, runtime);
+        }
+
+        /**
+         * @summary 获取session集群
+         *
+         * @return GetSessionClusterResponse
+         */
+        public async Task<GetSessionClusterResponse> GetSessionClusterAsync(string namespace_, string sessionClusterName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetSessionClusterHeaders headers = new GetSessionClusterHeaders();
+            return await GetSessionClusterWithOptionsAsync(namespace_, sessionClusterName, headers, runtime);
         }
 
         /**
@@ -5210,6 +6278,360 @@ namespace AlibabaCloud.SDK.Ververica20220718
         }
 
         /**
+         * @summary 列表定时执行计划
+         *
+         * @param request ListScheduledPlanRequest
+         * @param headers ListScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListScheduledPlanResponse
+         */
+        public ListScheduledPlanResponse ListScheduledPlanWithOptions(string namespace_, ListScheduledPlanRequest request, ListScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentId))
+            {
+                query["deploymentId"] = request.DeploymentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListScheduledPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列表定时执行计划
+         *
+         * @param request ListScheduledPlanRequest
+         * @param headers ListScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListScheduledPlanResponse
+         */
+        public async Task<ListScheduledPlanResponse> ListScheduledPlanWithOptionsAsync(string namespace_, ListScheduledPlanRequest request, ListScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentId))
+            {
+                query["deploymentId"] = request.DeploymentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListScheduledPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列表定时执行计划
+         *
+         * @param request ListScheduledPlanRequest
+         * @return ListScheduledPlanResponse
+         */
+        public ListScheduledPlanResponse ListScheduledPlan(string namespace_, ListScheduledPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListScheduledPlanHeaders headers = new ListScheduledPlanHeaders();
+            return ListScheduledPlanWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 列表定时执行计划
+         *
+         * @param request ListScheduledPlanRequest
+         * @return ListScheduledPlanResponse
+         */
+        public async Task<ListScheduledPlanResponse> ListScheduledPlanAsync(string namespace_, ListScheduledPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListScheduledPlanHeaders headers = new ListScheduledPlanHeaders();
+            return await ListScheduledPlanWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取作业资源变更历史
+         *
+         * @param request ListScheduledPlanExecutedHistoryRequest
+         * @param headers ListScheduledPlanExecutedHistoryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListScheduledPlanExecutedHistoryResponse
+         */
+        public ListScheduledPlanExecutedHistoryResponse ListScheduledPlanExecutedHistoryWithOptions(string namespace_, ListScheduledPlanExecutedHistoryRequest request, ListScheduledPlanExecutedHistoryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentId))
+            {
+                query["deploymentId"] = request.DeploymentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["origin"] = request.Origin;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListScheduledPlanExecutedHistory",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/job-resource-upgradings",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListScheduledPlanExecutedHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取作业资源变更历史
+         *
+         * @param request ListScheduledPlanExecutedHistoryRequest
+         * @param headers ListScheduledPlanExecutedHistoryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListScheduledPlanExecutedHistoryResponse
+         */
+        public async Task<ListScheduledPlanExecutedHistoryResponse> ListScheduledPlanExecutedHistoryWithOptionsAsync(string namespace_, ListScheduledPlanExecutedHistoryRequest request, ListScheduledPlanExecutedHistoryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentId))
+            {
+                query["deploymentId"] = request.DeploymentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["origin"] = request.Origin;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListScheduledPlanExecutedHistory",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/job-resource-upgradings",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListScheduledPlanExecutedHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取作业资源变更历史
+         *
+         * @param request ListScheduledPlanExecutedHistoryRequest
+         * @return ListScheduledPlanExecutedHistoryResponse
+         */
+        public ListScheduledPlanExecutedHistoryResponse ListScheduledPlanExecutedHistory(string namespace_, ListScheduledPlanExecutedHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListScheduledPlanExecutedHistoryHeaders headers = new ListScheduledPlanExecutedHistoryHeaders();
+            return ListScheduledPlanExecutedHistoryWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取作业资源变更历史
+         *
+         * @param request ListScheduledPlanExecutedHistoryRequest
+         * @return ListScheduledPlanExecutedHistoryResponse
+         */
+        public async Task<ListScheduledPlanExecutedHistoryResponse> ListScheduledPlanExecutedHistoryAsync(string namespace_, ListScheduledPlanExecutedHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListScheduledPlanExecutedHistoryHeaders headers = new ListScheduledPlanExecutedHistoryHeaders();
+            return await ListScheduledPlanExecutedHistoryWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 列举session集群
+         *
+         * @param headers ListSessionClustersHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSessionClustersResponse
+         */
+        public ListSessionClustersResponse ListSessionClustersWithOptions(string namespace_, ListSessionClustersHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSessionClusters",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSessionClustersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列举session集群
+         *
+         * @param headers ListSessionClustersHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSessionClustersResponse
+         */
+        public async Task<ListSessionClustersResponse> ListSessionClustersWithOptionsAsync(string namespace_, ListSessionClustersHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSessionClusters",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSessionClustersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列举session集群
+         *
+         * @return ListSessionClustersResponse
+         */
+        public ListSessionClustersResponse ListSessionClusters(string namespace_)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListSessionClustersHeaders headers = new ListSessionClustersHeaders();
+            return ListSessionClustersWithOptions(namespace_, headers, runtime);
+        }
+
+        /**
+         * @summary 列举session集群
+         *
+         * @return ListSessionClustersResponse
+         */
+        public async Task<ListSessionClustersResponse> ListSessionClustersAsync(string namespace_)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListSessionClustersHeaders headers = new ListSessionClustersHeaders();
+            return await ListSessionClustersWithOptionsAsync(namespace_, headers, runtime);
+        }
+
+        /**
          * @summary Obtains a list of variables.
          *
          * @param request ListVariablesRequest
@@ -5806,6 +7228,202 @@ namespace AlibabaCloud.SDK.Ververica20220718
         }
 
         /**
+         * @summary 启动session集群
+         *
+         * @param headers StartSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartSessionClusterResponse
+         */
+        public StartSessionClusterResponse StartSessionClusterWithOptions(string namespace_, string sessionClusterName, StartSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName) + "%3Astart",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartSessionClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启动session集群
+         *
+         * @param headers StartSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartSessionClusterResponse
+         */
+        public async Task<StartSessionClusterResponse> StartSessionClusterWithOptionsAsync(string namespace_, string sessionClusterName, StartSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName) + "%3Astart",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartSessionClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启动session集群
+         *
+         * @return StartSessionClusterResponse
+         */
+        public StartSessionClusterResponse StartSessionCluster(string namespace_, string sessionClusterName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StartSessionClusterHeaders headers = new StartSessionClusterHeaders();
+            return StartSessionClusterWithOptions(namespace_, sessionClusterName, headers, runtime);
+        }
+
+        /**
+         * @summary 启动session集群
+         *
+         * @return StartSessionClusterResponse
+         */
+        public async Task<StartSessionClusterResponse> StartSessionClusterAsync(string namespace_, string sessionClusterName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StartSessionClusterHeaders headers = new StartSessionClusterHeaders();
+            return await StartSessionClusterWithOptionsAsync(namespace_, sessionClusterName, headers, runtime);
+        }
+
+        /**
+         * @summary 停止应用执行定时计划
+         *
+         * @param headers StopApplyScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopApplyScheduledPlanResponse
+         */
+        public StopApplyScheduledPlanResponse StopApplyScheduledPlanWithOptions(string namespace_, string scheduledPlanId, StopApplyScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopApplyScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scheduledPlanId) + "%3Astop",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopApplyScheduledPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止应用执行定时计划
+         *
+         * @param headers StopApplyScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopApplyScheduledPlanResponse
+         */
+        public async Task<StopApplyScheduledPlanResponse> StopApplyScheduledPlanWithOptionsAsync(string namespace_, string scheduledPlanId, StopApplyScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopApplyScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scheduledPlanId) + "%3Astop",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopApplyScheduledPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止应用执行定时计划
+         *
+         * @return StopApplyScheduledPlanResponse
+         */
+        public StopApplyScheduledPlanResponse StopApplyScheduledPlan(string namespace_, string scheduledPlanId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StopApplyScheduledPlanHeaders headers = new StopApplyScheduledPlanHeaders();
+            return StopApplyScheduledPlanWithOptions(namespace_, scheduledPlanId, headers, runtime);
+        }
+
+        /**
+         * @summary 停止应用执行定时计划
+         *
+         * @return StopApplyScheduledPlanResponse
+         */
+        public async Task<StopApplyScheduledPlanResponse> StopApplyScheduledPlanAsync(string namespace_, string scheduledPlanId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StopApplyScheduledPlanHeaders headers = new StopApplyScheduledPlanHeaders();
+            return await StopApplyScheduledPlanWithOptionsAsync(namespace_, scheduledPlanId, headers, runtime);
+        }
+
+        /**
          * @summary Stops a job.
          *
          * @param request StopJobRequest
@@ -5909,6 +7527,104 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             StopJobHeaders headers = new StopJobHeaders();
             return await StopJobWithOptionsAsync(namespace_, jobId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 停止session集群
+         *
+         * @param headers StopSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopSessionClusterResponse
+         */
+        public StopSessionClusterResponse StopSessionClusterWithOptions(string namespace_, string sessionClusterName, StopSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName) + "%3Astop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopSessionClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止session集群
+         *
+         * @param headers StopSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopSessionClusterResponse
+         */
+        public async Task<StopSessionClusterResponse> StopSessionClusterWithOptionsAsync(string namespace_, string sessionClusterName, StopSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName) + "%3Astop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopSessionClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止session集群
+         *
+         * @return StopSessionClusterResponse
+         */
+        public StopSessionClusterResponse StopSessionCluster(string namespace_, string sessionClusterName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StopSessionClusterHeaders headers = new StopSessionClusterHeaders();
+            return StopSessionClusterWithOptions(namespace_, sessionClusterName, headers, runtime);
+        }
+
+        /**
+         * @summary 停止session集群
+         *
+         * @return StopSessionClusterResponse
+         */
+        public async Task<StopSessionClusterResponse> StopSessionClusterAsync(string namespace_, string sessionClusterName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StopSessionClusterHeaders headers = new StopSessionClusterHeaders();
+            return await StopSessionClusterWithOptionsAsync(namespace_, sessionClusterName, headers, runtime);
         }
 
         /**
@@ -6124,6 +7840,112 @@ namespace AlibabaCloud.SDK.Ververica20220718
         }
 
         /**
+         * @summary 修改deploymentTarget
+         *
+         * @param request UpdateDeploymentTargetRequest
+         * @param headers UpdateDeploymentTargetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateDeploymentTargetResponse
+         */
+        public UpdateDeploymentTargetResponse UpdateDeploymentTargetWithOptions(string namespace_, string deploymentTargetName, UpdateDeploymentTargetRequest request, UpdateDeploymentTargetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDeploymentTarget",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-targets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentTargetName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDeploymentTargetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改deploymentTarget
+         *
+         * @param request UpdateDeploymentTargetRequest
+         * @param headers UpdateDeploymentTargetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateDeploymentTargetResponse
+         */
+        public async Task<UpdateDeploymentTargetResponse> UpdateDeploymentTargetWithOptionsAsync(string namespace_, string deploymentTargetName, UpdateDeploymentTargetRequest request, UpdateDeploymentTargetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDeploymentTarget",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-targets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentTargetName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDeploymentTargetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改deploymentTarget
+         *
+         * @param request UpdateDeploymentTargetRequest
+         * @return UpdateDeploymentTargetResponse
+         */
+        public UpdateDeploymentTargetResponse UpdateDeploymentTarget(string namespace_, string deploymentTargetName, UpdateDeploymentTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateDeploymentTargetHeaders headers = new UpdateDeploymentTargetHeaders();
+            return UpdateDeploymentTargetWithOptions(namespace_, deploymentTargetName, request, headers, runtime);
+        }
+
+        /**
+         * @summary 修改deploymentTarget
+         *
+         * @param request UpdateDeploymentTargetRequest
+         * @return UpdateDeploymentTargetResponse
+         */
+        public async Task<UpdateDeploymentTargetResponse> UpdateDeploymentTargetAsync(string namespace_, string deploymentTargetName, UpdateDeploymentTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateDeploymentTargetHeaders headers = new UpdateDeploymentTargetHeaders();
+            return await UpdateDeploymentTargetWithOptionsAsync(namespace_, deploymentTargetName, request, headers, runtime);
+        }
+
+        /**
          * @summary update a folder
          *
          * @param request UpdateFolderRequest
@@ -6333,6 +8155,218 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateMemberHeaders headers = new UpdateMemberHeaders();
             return await UpdateMemberWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新定时执行计划
+         *
+         * @param request UpdateScheduledPlanRequest
+         * @param headers UpdateScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateScheduledPlanResponse
+         */
+        public UpdateScheduledPlanResponse UpdateScheduledPlanWithOptions(string namespace_, string scheduledPlanId, UpdateScheduledPlanRequest request, UpdateScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scheduledPlanId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateScheduledPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新定时执行计划
+         *
+         * @param request UpdateScheduledPlanRequest
+         * @param headers UpdateScheduledPlanHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateScheduledPlanResponse
+         */
+        public async Task<UpdateScheduledPlanResponse> UpdateScheduledPlanWithOptionsAsync(string namespace_, string scheduledPlanId, UpdateScheduledPlanRequest request, UpdateScheduledPlanHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateScheduledPlan",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/scheduled-plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scheduledPlanId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateScheduledPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新定时执行计划
+         *
+         * @param request UpdateScheduledPlanRequest
+         * @return UpdateScheduledPlanResponse
+         */
+        public UpdateScheduledPlanResponse UpdateScheduledPlan(string namespace_, string scheduledPlanId, UpdateScheduledPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateScheduledPlanHeaders headers = new UpdateScheduledPlanHeaders();
+            return UpdateScheduledPlanWithOptions(namespace_, scheduledPlanId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新定时执行计划
+         *
+         * @param request UpdateScheduledPlanRequest
+         * @return UpdateScheduledPlanResponse
+         */
+        public async Task<UpdateScheduledPlanResponse> UpdateScheduledPlanAsync(string namespace_, string scheduledPlanId, UpdateScheduledPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateScheduledPlanHeaders headers = new UpdateScheduledPlanHeaders();
+            return await UpdateScheduledPlanWithOptionsAsync(namespace_, scheduledPlanId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新session集群
+         *
+         * @param request UpdateSessionClusterRequest
+         * @param headers UpdateSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSessionClusterResponse
+         */
+        public UpdateSessionClusterResponse UpdateSessionClusterWithOptions(string namespace_, string sessionClusterName, UpdateSessionClusterRequest request, UpdateSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSessionClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新session集群
+         *
+         * @param request UpdateSessionClusterRequest
+         * @param headers UpdateSessionClusterHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSessionClusterResponse
+         */
+        public async Task<UpdateSessionClusterResponse> UpdateSessionClusterWithOptionsAsync(string namespace_, string sessionClusterName, UpdateSessionClusterRequest request, UpdateSessionClusterHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSessionCluster",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sessionclusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionClusterName),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSessionClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新session集群
+         *
+         * @param request UpdateSessionClusterRequest
+         * @return UpdateSessionClusterResponse
+         */
+        public UpdateSessionClusterResponse UpdateSessionCluster(string namespace_, string sessionClusterName, UpdateSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateSessionClusterHeaders headers = new UpdateSessionClusterHeaders();
+            return UpdateSessionClusterWithOptions(namespace_, sessionClusterName, request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新session集群
+         *
+         * @param request UpdateSessionClusterRequest
+         * @return UpdateSessionClusterResponse
+         */
+        public async Task<UpdateSessionClusterResponse> UpdateSessionClusterAsync(string namespace_, string sessionClusterName, UpdateSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateSessionClusterHeaders headers = new UpdateSessionClusterHeaders();
+            return await UpdateSessionClusterWithOptionsAsync(namespace_, sessionClusterName, request, headers, runtime);
         }
 
         /**

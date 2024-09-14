@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class RescaleJobParam : TeaModel {
-        [NameInMap("jobParallelism")]
+    public class ResourceQuota : TeaModel {
+        [NameInMap("limit")]
         [Validation(Required=false)]
-        public long? JobParallelism { get; set; }
+        public ResourceSpec Limit { get; set; }
+
+        [NameInMap("used")]
+        [Validation(Required=false)]
+        public ResourceSpec Used { get; set; }
 
     }
 

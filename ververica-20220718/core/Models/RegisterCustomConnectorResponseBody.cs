@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class RegisterCustomConnectorResponseBody : TeaModel {
         /// <summary>
-        /// If the value of success was true, a list of deployments in which custom connectors were registered was returned. If the value of success was false, a null value was returned.
+        /// If the value of success was true, a list of deployments in which custom connectors were deleted was returned. If the value of success was false, a null value was returned.
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

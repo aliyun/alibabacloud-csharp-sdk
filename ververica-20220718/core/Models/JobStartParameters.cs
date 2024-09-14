@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string DeploymentId { get; set; }
 
+        [NameInMap("jobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
         [NameInMap("localVariables")]
         [Validation(Required=false)]
         public List<LocalVariable> LocalVariables { get; set; }

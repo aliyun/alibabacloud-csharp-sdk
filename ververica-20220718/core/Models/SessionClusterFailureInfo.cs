@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class Schema : TeaModel {
-        [NameInMap("columns")]
+    public class SessionClusterFailureInfo : TeaModel {
+        [NameInMap("failedAt")]
         [Validation(Required=false)]
-        public List<TableColumn> Columns { get; set; }
+        public long? FailedAt { get; set; }
 
-        [NameInMap("primaryKey")]
+        [NameInMap("message")]
         [Validation(Required=false)]
-        public PrimaryKey PrimaryKey { get; set; }
+        public string Message { get; set; }
 
-        [NameInMap("watermarkSpecs")]
+        [NameInMap("reason")]
         [Validation(Required=false)]
-        public List<WatermarkSpec> WatermarkSpecs { get; set; }
+        public string Reason { get; set; }
 
     }
 

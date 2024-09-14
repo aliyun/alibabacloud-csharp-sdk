@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetTablesResponseBody : TeaModel {
+        /// <summary>
+        /// If the value of success was true, the list and details of tables that meet the condition were returned. If the value of success was false, a null value was returned.
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<Table> Data { get; set; }

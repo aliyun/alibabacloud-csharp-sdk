@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        [NameInMap("quota")]
+        [Validation(Required=false)]
+        public ResourceQuota Quota { get; set; }
+
     }
 
 }

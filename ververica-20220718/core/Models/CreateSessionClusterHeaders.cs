@@ -8,15 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class RegisterCustomConnectorRequest : TeaModel {
+    public class CreateSessionClusterHeaders : TeaModel {
+        [NameInMap("commonHeaders")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> CommonHeaders { get; set; }
+
         /// <summary>
-        /// The URL in which the JAR package of the custom connector is stored. The platform must be able to access this address.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("jarUrl")]
+        [NameInMap("workspace")]
         [Validation(Required=false)]
-        public string JarUrl { get; set; }
+        public string Workspace { get; set; }
 
     }
 
