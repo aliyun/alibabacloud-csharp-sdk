@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string PublishStatus { get; set; }
 
+                [NameInMap("PublishTargetInstanceId")]
+                [Validation(Required=false)]
+                public string PublishTargetInstanceId { get; set; }
+
                 [NameInMap("PublishTargetType")]
                 [Validation(Required=false)]
                 public string PublishTargetType { get; set; }
