@@ -8,34 +8,35 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
-    public class ConfigClusterSubnetRequest : TeaModel {
+    public class ConfigBackupTaskRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("ClusterId")]
+        [NameInMap("BackupHourInDay")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public long? BackupHourInDay { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("BackupId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string BackupId { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("VSwitchIds")]
+        [NameInMap("BackupPeriod")]
         [Validation(Required=false)]
-        public List<string> VSwitchIds { get; set; }
+        public long? BackupPeriod { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("VpcId")]
+        [NameInMap("Manual2PeriodicList")]
         [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public List<string> Manual2PeriodicList { get; set; }
+
+        [NameInMap("Periodic2ManualList")]
+        [Validation(Required=false)]
+        public List<string> Periodic2ManualList { get; set; }
 
     }
 

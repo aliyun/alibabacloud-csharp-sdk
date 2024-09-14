@@ -8,13 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
-    public class ConfigClusterSubnetRequest : TeaModel {
+    public class CreateClusterRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("ClusterId")]
+        [NameInMap("ClusterName")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string ClusterName { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("MasterInstanceId")]
+        [Validation(Required=false)]
+        public string MasterInstanceId { get; set; }
 
         /// <summary>
         /// This parameter is required.
@@ -22,20 +29,6 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("VSwitchIds")]
-        [Validation(Required=false)]
-        public List<string> VSwitchIds { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
 
     }
 

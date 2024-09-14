@@ -8,13 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
-    public class ConfigClusterSubnetRequest : TeaModel {
+    public class ListBackupsRequest : TeaModel {
+        [NameInMap("BackupId")]
+        [Validation(Required=false)]
+        public string BackupId { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("ClusterId")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public long? CurrentPage { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
         /// <summary>
         /// This parameter is required.
@@ -22,20 +41,6 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("VSwitchIds")]
-        [Validation(Required=false)]
-        public List<string> VSwitchIds { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
 
     }
 

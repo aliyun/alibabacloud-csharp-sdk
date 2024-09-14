@@ -8,7 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
-    public class ConfigClusterSubnetRequest : TeaModel {
+    public class ConfigClusterCertificateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ClusterCertificate")]
+        [Validation(Required=false)]
+        public string ClusterCertificate { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -19,23 +26,9 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("IssuerCertificate")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("VSwitchIds")]
-        [Validation(Required=false)]
-        public List<string> VSwitchIds { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public string IssuerCertificate { get; set; }
 
     }
 

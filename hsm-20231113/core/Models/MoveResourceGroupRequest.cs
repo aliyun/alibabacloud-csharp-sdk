@@ -8,14 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
-    public class ConfigClusterSubnetRequest : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
+    public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -26,16 +19,23 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("VSwitchIds")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public List<string> VSwitchIds { get; set; }
+        public string ResourceGroupId { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("VpcId")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public string ResourceId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
     }
 
