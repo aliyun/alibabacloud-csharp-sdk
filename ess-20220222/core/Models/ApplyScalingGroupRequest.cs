@@ -18,10 +18,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        /// <summary>
+        /// Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.
+        /// </summary>
         [NameInMap("Format")]
         [Validation(Required=false)]
         public string Format { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

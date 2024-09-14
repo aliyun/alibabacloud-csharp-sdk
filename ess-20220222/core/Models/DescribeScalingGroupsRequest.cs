@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The type of instances that are managed by the scaling group. Valid values:
         /// 
-        /// *   ECS: ECS instances
-        /// *   ECI: elastic container instances
+        /// *   ECS: Elastic Compute Service (ECS) instances.
+        /// *   ECI: elastic container instances.
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
@@ -46,12 +46,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// The region ID of the scaling group.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the scaling group that you want to query belongs.
+        /// 
+        /// >  If no scaling group belongs to the specified resource group, the query result is empty and no error is reported.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -64,26 +71,48 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The IDs of the scaling groups that you want to query.
+        /// 
+        /// The IDs of inactive scaling groups are not included in the query results, and no error is returned.
+        /// </summary>
         [NameInMap("ScalingGroupIds")]
         [Validation(Required=false)]
         public List<string> ScalingGroupIds { get; set; }
 
+        /// <summary>
+        /// The name of the scaling group.
+        /// </summary>
         [NameInMap("ScalingGroupName")]
         [Validation(Required=false)]
         public string ScalingGroupName { get; set; }
 
+        /// <summary>
+        /// The names of the scaling groups that you want to query.
+        /// 
+        /// The names of inactive scaling groups are not displayed in the query results, and no error is reported.
+        /// </summary>
         [NameInMap("ScalingGroupNames")]
         [Validation(Required=false)]
         public List<string> ScalingGroupNames { get; set; }
 
+        /// <summary>
+        /// The tags of the scaling group.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeScalingGroupsRequestTags> Tags { get; set; }
         public class DescribeScalingGroupsRequestTags : TeaModel {
+            /// <summary>
+            /// The tag key of the scaling group.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the scaling group.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

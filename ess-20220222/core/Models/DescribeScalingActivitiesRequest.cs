@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivitiesRequest : TeaModel {
+        [NameInMap("InstanceRefreshTaskId")]
+        [Validation(Required=false)]
+        public string InstanceRefreshTaskId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
+            [NameInMap("InstanceRefreshTaskId")]
+            [Validation(Required=false)]
+            public string InstanceRefreshTaskId { get; set; }
+
             /// <summary>
             /// The context of the lifecycle hook.
             /// </summary>

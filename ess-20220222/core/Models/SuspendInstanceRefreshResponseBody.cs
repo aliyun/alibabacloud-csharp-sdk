@@ -8,10 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
-    public class ModifyEciScalingConfigurationResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
+    public class SuspendInstanceRefreshResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

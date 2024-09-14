@@ -85,6 +85,46 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? EstimatedInstanceWarmup { get; set; }
 
+        [NameInMap("HybridMetrics")]
+        [Validation(Required=false)]
+        public List<CreateScalingRuleRequestHybridMetrics> HybridMetrics { get; set; }
+        public class CreateScalingRuleRequestHybridMetrics : TeaModel {
+            [NameInMap("Dimensions")]
+            [Validation(Required=false)]
+            public List<CreateScalingRuleRequestHybridMetricsDimensions> Dimensions { get; set; }
+            public class CreateScalingRuleRequestHybridMetricsDimensions : TeaModel {
+                [NameInMap("DimensionKey")]
+                [Validation(Required=false)]
+                public string DimensionKey { get; set; }
+
+                [NameInMap("DimensionValue")]
+                [Validation(Required=false)]
+                public string DimensionValue { get; set; }
+
+            }
+
+            [NameInMap("Expression")]
+            [Validation(Required=false)]
+            public string Expression { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("MetricName")]
+            [Validation(Required=false)]
+            public string MetricName { get; set; }
+
+            [NameInMap("Statistic")]
+            [Validation(Required=false)]
+            public string Statistic { get; set; }
+
+        }
+
+        [NameInMap("HybridMonitorNamespace")]
+        [Validation(Required=false)]
+        public string HybridMonitorNamespace { get; set; }
+
         /// <summary>
         /// The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify `PredictiveValueBehavior`.
         /// 
@@ -99,12 +139,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// 
         /// Valid values if you set ScalingRuleType to TargetTrackingScalingRule:
         /// 
+        /// *   CpuUtilizationAgent (recommended): the CPU utilization.
+        /// *   MemoryUtilization (recommended): the memory usage.
         /// *   CpuUtilization: the average CPU utilization.
         /// *   IntranetTx: the outbound traffic over an internal network.
         /// *   IntranetRx: the inbound traffic over an internal network.
         /// *   VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.
         /// *   VpcInternetRx: the inbound traffic from the Internet to a VPC.
-        /// *   MemoryUtilization: the memory usage.
         /// *   LoadBalancerRealServerAverageQps:the queries per second (QPS) per Application Load Balancer (ALB) server group.
         /// 
         /// Valid values if you set ScalingRuleType to PredictiveScalingRule:
@@ -112,10 +153,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// *   CpuUtilization: the average CPU utilization.
         /// *   IntranetRx: the inbound traffic over an internal network.
         /// *   IntranetTx: the outbound traffic over an internal network.
+        /// 
+        /// For more information, see [Event-triggered tasks of the system monitoring type](https://www.alibabacloud.com/help/zh/auto-scaling/user-guide/event-triggered-tasks-of-the-system-monitoring-type).
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
+
+        [NameInMap("MetricType")]
+        [Validation(Required=false)]
+        public string MetricType { get; set; }
 
         /// <summary>
         /// The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.

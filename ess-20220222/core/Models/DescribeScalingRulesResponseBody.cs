@@ -205,6 +205,46 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? EstimatedInstanceWarmup { get; set; }
 
+            [NameInMap("HybridMetrics")]
+            [Validation(Required=false)]
+            public List<DescribeScalingRulesResponseBodyScalingRulesHybridMetrics> HybridMetrics { get; set; }
+            public class DescribeScalingRulesResponseBodyScalingRulesHybridMetrics : TeaModel {
+                [NameInMap("Dimensions")]
+                [Validation(Required=false)]
+                public List<DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions> Dimensions { get; set; }
+                public class DescribeScalingRulesResponseBodyScalingRulesHybridMetricsDimensions : TeaModel {
+                    [NameInMap("DimensionKey")]
+                    [Validation(Required=false)]
+                    public string DimensionKey { get; set; }
+
+                    [NameInMap("DimensionValue")]
+                    [Validation(Required=false)]
+                    public string DimensionValue { get; set; }
+
+                }
+
+                [NameInMap("Expression")]
+                [Validation(Required=false)]
+                public string Expression { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("MetricName")]
+                [Validation(Required=false)]
+                public string MetricName { get; set; }
+
+                [NameInMap("Statistic")]
+                [Validation(Required=false)]
+                public string Statistic { get; set; }
+
+            }
+
+            [NameInMap("HybridMonitorNamespace")]
+            [Validation(Required=false)]
+            public string HybridMonitorNamespace { get; set; }
+
             /// <summary>
             /// The maximum number of ECS instances that can be contained in the scaling group. If you specify this parameter, you must also specify PredictiveValueBehavior.
             /// </summary>
@@ -225,6 +265,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
+
+            [NameInMap("MetricType")]
+            [Validation(Required=false)]
+            public string MetricType { get; set; }
 
             /// <summary>
             /// The minimum number of instances that must be scaled. This parameter takes effect only if you set ScalingRuleType to SimpleScalingRule or StepScalingRule and set AdjustmentType to PercentChangeInCapacity.

@@ -214,6 +214,46 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ExpressionsLogicOperator { get; set; }
 
+            [NameInMap("HybridMetrics")]
+            [Validation(Required=false)]
+            public List<DescribeAlarmsResponseBodyAlarmListHybridMetrics> HybridMetrics { get; set; }
+            public class DescribeAlarmsResponseBodyAlarmListHybridMetrics : TeaModel {
+                [NameInMap("Dimensions")]
+                [Validation(Required=false)]
+                public List<DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions> Dimensions { get; set; }
+                public class DescribeAlarmsResponseBodyAlarmListHybridMetricsDimensions : TeaModel {
+                    [NameInMap("DimensionKey")]
+                    [Validation(Required=false)]
+                    public string DimensionKey { get; set; }
+
+                    [NameInMap("DimensionValue")]
+                    [Validation(Required=false)]
+                    public string DimensionValue { get; set; }
+
+                }
+
+                [NameInMap("Expression")]
+                [Validation(Required=false)]
+                public string Expression { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("MetricName")]
+                [Validation(Required=false)]
+                public string MetricName { get; set; }
+
+                [NameInMap("Statistic")]
+                [Validation(Required=false)]
+                public string Statistic { get; set; }
+
+            }
+
+            [NameInMap("HybridMonitorNamespace")]
+            [Validation(Required=false)]
+            public string HybridMonitorNamespace { get; set; }
+
             /// <summary>
             /// The metric name. Valid values:
             /// 
@@ -280,6 +320,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("Period")]
             [Validation(Required=false)]
             public int? Period { get; set; }
+
+            [NameInMap("PromQL")]
+            [Validation(Required=false)]
+            public string PromQL { get; set; }
 
             /// <summary>
             /// The ID of the scaling group to which the event-triggered task is associated.

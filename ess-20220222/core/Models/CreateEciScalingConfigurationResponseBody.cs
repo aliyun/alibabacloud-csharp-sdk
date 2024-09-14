@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateEciScalingConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the elastic container instance.
+        /// The ID of the elastic container instance (container group).
         /// </summary>
         [NameInMap("ScalingConfigurationId")]
         [Validation(Required=false)]

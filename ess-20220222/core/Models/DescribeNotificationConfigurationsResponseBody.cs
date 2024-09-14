@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeNotificationConfigurationsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the notifications.
+        /// The notification settings.
         /// </summary>
         [NameInMap("NotificationConfigurationModels")]
         [Validation(Required=false)]
@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ScalingGroupId { get; set; }
 
+            /// <summary>
+            /// The time zone of the notification. The value must be in UTC. For example, a value of UTC+8 indicates that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 indicates that the time is 7 hours behind Coordinated Universal Time.
+            /// </summary>
             [NameInMap("TimeZone")]
             [Validation(Required=false)]
             public string TimeZone { get; set; }
