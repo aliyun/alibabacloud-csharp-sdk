@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string ColumnsShrink { get; set; }
 
+        [NameInMap("DataSource")]
+        [Validation(Required=false)]
+        public string DataSourceShrink { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

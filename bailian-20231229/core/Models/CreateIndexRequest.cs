@@ -43,6 +43,52 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         }
 
+        [NameInMap("DataSource")]
+        [Validation(Required=false)]
+        public CreateIndexRequestDataSource DataSource { get; set; }
+        public class CreateIndexRequestDataSource : TeaModel {
+            [NameInMap("CredentialId")]
+            [Validation(Required=false)]
+            public string CredentialId { get; set; }
+
+            [NameInMap("CredentialKey")]
+            [Validation(Required=false)]
+            public string CredentialKey { get; set; }
+
+            [NameInMap("Database")]
+            [Validation(Required=false)]
+            public string Database { get; set; }
+
+            [NameInMap("Endpoint")]
+            [Validation(Required=false)]
+            public string Endpoint { get; set; }
+
+            [NameInMap("IsPrivateLink")]
+            [Validation(Required=false)]
+            public bool? IsPrivateLink { get; set; }
+
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
+
+            [NameInMap("SubPath")]
+            [Validation(Required=false)]
+            public string SubPath { get; set; }
+
+            [NameInMap("SubType")]
+            [Validation(Required=false)]
+            public string SubType { get; set; }
+
+            [NameInMap("Table")]
+            [Validation(Required=false)]
+            public string Table { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
