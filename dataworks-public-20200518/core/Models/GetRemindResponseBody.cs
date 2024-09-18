@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string AlertUnit { get; set; }
 
+            [NameInMap("AllowNodes")]
+            [Validation(Required=false)]
+            public List<long?> AllowNodes { get; set; }
+
             /// <summary>
             /// The baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.
             /// </summary>
@@ -173,6 +177,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
                 public long? ProjectId { get; set; }
+
+            }
+
+            [NameInMap("Receivers")]
+            [Validation(Required=false)]
+            public List<GetRemindResponseBodyDataReceivers> Receivers { get; set; }
+            public class GetRemindResponseBodyDataReceivers : TeaModel {
+                [NameInMap("AlertTargets")]
+                [Validation(Required=false)]
+                public List<string> AlertTargets { get; set; }
+
+                [NameInMap("AlertUnit")]
+                [Validation(Required=false)]
+                public string AlertUnit { get; set; }
 
             }
 

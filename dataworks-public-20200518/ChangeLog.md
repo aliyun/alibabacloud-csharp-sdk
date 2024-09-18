@@ -1,3 +1,7 @@
+2024-09-18 Version: 6.1.3
+- Update API GetRemind: update response param.
+
+
 2024-09-03 Version: 6.1.2
 - Update API GetFile: update response param.
 
