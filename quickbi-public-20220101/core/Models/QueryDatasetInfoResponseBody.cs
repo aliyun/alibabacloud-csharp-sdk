@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string FactColumn { get; set; }
 
+                [NameInMap("FieldDescription")]
+                [Validation(Required=false)]
+                public string FieldDescription { get; set; }
+
                 /// <summary>
                 /// The type of the dimension. Valid values:
                 /// 
@@ -324,6 +328,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [NameInMap("FactColumn")]
                 [Validation(Required=false)]
                 public string FactColumn { get; set; }
+
+                [NameInMap("FieldDescription")]
+                [Validation(Required=false)]
+                public string FieldDescription { get; set; }
 
                 /// <summary>
                 /// An expression that calculates a measure; valid only for calculated measures.
