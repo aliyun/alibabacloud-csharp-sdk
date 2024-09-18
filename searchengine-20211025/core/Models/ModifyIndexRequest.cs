@@ -100,6 +100,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
+                [NameInMap("catalog")]
+                [Validation(Required=false)]
+                public string Catalog { get; set; }
+
+                [NameInMap("database")]
+                [Validation(Required=false)]
+                public string Database { get; set; }
+
                 /// <summary>
                 /// The endpoint of the MaxCompute data source.
                 /// </summary>
@@ -148,6 +156,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [NameInMap("table")]
                 [Validation(Required=false)]
                 public string Table { get; set; }
+
+                [NameInMap("tag")]
+                [Validation(Required=false)]
+                public string Tag { get; set; }
 
             }
 
@@ -238,6 +250,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
+
+        [NameInMap("extend")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Extend { get; set; }
 
         /// <summary>
         /// The maximum number of full indexes that can be concurrently merged.

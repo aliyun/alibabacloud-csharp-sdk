@@ -44,6 +44,74 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("dataSourceDetails")]
+            [Validation(Required=false)]
+            public List<ListInstancesResponseBodyResultDataSourceDetails> DataSourceDetails { get; set; }
+            public class ListInstancesResponseBodyResultDataSourceDetails : TeaModel {
+                [NameInMap("config")]
+                [Validation(Required=false)]
+                public ListInstancesResponseBodyResultDataSourceDetailsConfig Config { get; set; }
+                public class ListInstancesResponseBodyResultDataSourceDetailsConfig : TeaModel {
+                    [NameInMap("accessKey")]
+                    [Validation(Required=false)]
+                    public string AccessKey { get; set; }
+
+                    [NameInMap("bucket")]
+                    [Validation(Required=false)]
+                    public string Bucket { get; set; }
+
+                    [NameInMap("catalog")]
+                    [Validation(Required=false)]
+                    public string Catalog { get; set; }
+
+                    [NameInMap("database")]
+                    [Validation(Required=false)]
+                    public string Database { get; set; }
+
+                    [NameInMap("endpoint")]
+                    [Validation(Required=false)]
+                    public string Endpoint { get; set; }
+
+                    [NameInMap("namespace")]
+                    [Validation(Required=false)]
+                    public string Namespace { get; set; }
+
+                    [NameInMap("ossPath")]
+                    [Validation(Required=false)]
+                    public string OssPath { get; set; }
+
+                    [NameInMap("partition")]
+                    [Validation(Required=false)]
+                    public string Partition { get; set; }
+
+                    [NameInMap("path")]
+                    [Validation(Required=false)]
+                    public string Path { get; set; }
+
+                    [NameInMap("project")]
+                    [Validation(Required=false)]
+                    public string Project { get; set; }
+
+                    [NameInMap("table")]
+                    [Validation(Required=false)]
+                    public string Table { get; set; }
+
+                    [NameInMap("tag")]
+                    [Validation(Required=false)]
+                    public string Tag { get; set; }
+
+                }
+
+                [NameInMap("indexName")]
+                [Validation(Required=false)]
+                public string IndexName { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// The description of the instance.
             /// </summary>

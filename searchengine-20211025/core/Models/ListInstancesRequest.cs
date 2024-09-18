@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListInstancesRequest : TeaModel {
+        [NameInMap("catalog")]
+        [Validation(Required=false)]
+        public string Catalog { get; set; }
+
+        [NameInMap("dataSourceType")]
+        [Validation(Required=false)]
+        public string DataSourceType { get; set; }
+
+        [NameInMap("database")]
+        [Validation(Required=false)]
+        public string Database { get; set; }
+
         /// <summary>
         /// The description of the instance. You can use this description to filter instances. Fuzzy match is supported.
         /// </summary>
@@ -50,6 +62,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("table")]
+        [Validation(Required=false)]
+        public string Table { get; set; }
 
         /// <summary>
         /// The tags of the instance.

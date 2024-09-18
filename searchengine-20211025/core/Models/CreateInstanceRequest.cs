@@ -69,6 +69,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
         }
 
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<CreateInstanceRequestTags> Tags { get; set; }
+        public class CreateInstanceRequestTags : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }
