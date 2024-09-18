@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? OrderAmount { get; set; }
 
+        [NameInMap("orderClosedReason")]
+        [Validation(Required=false)]
+        public string OrderClosedReason { get; set; }
+
         [NameInMap("orderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
