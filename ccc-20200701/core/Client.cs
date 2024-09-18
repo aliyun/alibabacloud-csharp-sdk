@@ -7183,6 +7183,90 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @param request GetChatRoutingProfileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetChatRoutingProfileResponse
+         */
+        public GetChatRoutingProfileResponse GetChatRoutingProfileWithOptions(GetChatRoutingProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatRoutingProfile",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatRoutingProfileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request GetChatRoutingProfileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetChatRoutingProfileResponse
+         */
+        public async Task<GetChatRoutingProfileResponse> GetChatRoutingProfileWithOptionsAsync(GetChatRoutingProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatRoutingProfile",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatRoutingProfileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request GetChatRoutingProfileRequest
+         * @return GetChatRoutingProfileResponse
+         */
+        public GetChatRoutingProfileResponse GetChatRoutingProfile(GetChatRoutingProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetChatRoutingProfileWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request GetChatRoutingProfileRequest
+         * @return GetChatRoutingProfileResponse
+         */
+        public async Task<GetChatRoutingProfileResponse> GetChatRoutingProfileAsync(GetChatRoutingProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetChatRoutingProfileWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @param request GetContactFlowRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetContactFlowResponse
@@ -25788,6 +25872,98 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCampaignWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @param request UpdateChatRoutingProfileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateChatRoutingProfileResponse
+         */
+        public UpdateChatRoutingProfileResponse UpdateChatRoutingProfileWithOptions(UpdateChatRoutingProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutingProfiles))
+            {
+                query["RoutingProfiles"] = request.RoutingProfiles;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChatRoutingProfile",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateChatRoutingProfileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateChatRoutingProfileResponse
+         */
+        public async Task<UpdateChatRoutingProfileResponse> UpdateChatRoutingProfileWithOptionsAsync(UpdateChatRoutingProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutingProfiles))
+            {
+                query["RoutingProfiles"] = request.RoutingProfiles;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChatRoutingProfile",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateChatRoutingProfileRequest
+         * @return UpdateChatRoutingProfileResponse
+         */
+        public UpdateChatRoutingProfileResponse UpdateChatRoutingProfile(UpdateChatRoutingProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateChatRoutingProfileWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request UpdateChatRoutingProfileRequest
+         * @return UpdateChatRoutingProfileResponse
+         */
+        public async Task<UpdateChatRoutingProfileResponse> UpdateChatRoutingProfileAsync(UpdateChatRoutingProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateChatRoutingProfileWithOptionsAsync(request, runtime);
         }
 
         /**
