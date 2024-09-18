@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
                 /// </summary>
                 [NameInMap("NetMain")]
                 [Validation(Required=false)]
-                public long? NetMain { get; set; }
+                public string NetMain { get; set; }
 
                 /// <summary>
                 /// The type of the CIDR block.
