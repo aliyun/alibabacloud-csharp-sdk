@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<string> Tags { get; set; }
+
         }
 
         [NameInMap("Message")]

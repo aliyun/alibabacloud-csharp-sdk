@@ -146,14 +146,20 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /**
          * @summary 将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。
          *
-         * @param request AddFileRequest
+         * @param tmpReq AddFileRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return AddFileResponse
          */
-        public AddFileResponse AddFileWithOptions(string WorkspaceId, AddFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AddFileResponse AddFileWithOptions(string WorkspaceId, AddFileRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddFileShrinkRequest request = new AddFileShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
@@ -166,6 +172,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
             {
                 body["Parser"] = request.Parser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                body["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -190,14 +200,20 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /**
          * @summary 将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。
          *
-         * @param request AddFileRequest
+         * @param tmpReq AddFileRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return AddFileResponse
          */
-        public async Task<AddFileResponse> AddFileWithOptionsAsync(string WorkspaceId, AddFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AddFileResponse> AddFileWithOptionsAsync(string WorkspaceId, AddFileRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddFileShrinkRequest request = new AddFileShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
@@ -210,6 +226,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
             {
                 body["Parser"] = request.Parser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                body["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

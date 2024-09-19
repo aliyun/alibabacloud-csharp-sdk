@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class AddFileRequest : TeaModel {
+    public class AddFileShrinkRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<string> Tags { get; set; }
+        public string TagsShrink { get; set; }
 
     }
 
