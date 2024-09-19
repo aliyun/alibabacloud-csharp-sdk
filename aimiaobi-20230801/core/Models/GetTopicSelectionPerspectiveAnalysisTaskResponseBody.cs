@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     [Validation(Required=false)]
                     public List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews> News { get; set; }
                     public class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews : TeaModel {
+                        [NameInMap("Content")]
+                        [Validation(Required=false)]
+                        public string Content { get; set; }
+
                         [NameInMap("DocId")]
                         [Validation(Required=false)]
                         public string DocId { get; set; }
@@ -105,13 +109,29 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                         [Validation(Required=false)]
                         public List<string> ImageUrls { get; set; }
 
+                        [NameInMap("Source")]
+                        [Validation(Required=false)]
+                        public string Source { get; set; }
+
+                        [NameInMap("Summary")]
+                        [Validation(Required=false)]
+                        public string Summary { get; set; }
+
                         [NameInMap("Tags")]
                         [Validation(Required=false)]
                         public List<string> Tags { get; set; }
 
+                        [NameInMap("Title")]
+                        [Validation(Required=false)]
+                        public string Title { get; set; }
+
                         [NameInMap("Topic")]
                         [Validation(Required=false)]
                         public string Topic { get; set; }
+
+                        [NameInMap("Url")]
+                        [Validation(Required=false)]
+                        public string Url { get; set; }
 
                     }
 
