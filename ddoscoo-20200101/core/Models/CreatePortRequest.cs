@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string FrontendPort { get; set; }
 
         /// <summary>
-        /// The type of the protocol. Valid values:
+        /// The type of the forwarding protocol. Valid values:
         /// 
         /// *   **tcp**
         /// *   **udp**

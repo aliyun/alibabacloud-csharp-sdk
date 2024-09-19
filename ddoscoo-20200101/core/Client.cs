@@ -275,11 +275,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         public AssociateWebCertResponse AssociateWebCertWithOptions(AssociateWebCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["ResourceGroupId"] = request.ResourceGroupId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cert))
             {
@@ -311,7 +306,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -339,11 +333,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         public async Task<AssociateWebCertResponse> AssociateWebCertWithOptionsAsync(AssociateWebCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["ResourceGroupId"] = request.ResourceGroupId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cert))
             {
@@ -375,7 +364,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -15150,9 +15138,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.
-         * *   0: no
-         * *   1: yes
+         * @summary Query Configuration of Website Business Forwarding Rules.
+         *
+         * @description This interface is used for paginated querying of the configurations of website business forwarding rules you have created, such as forwarding protocol types, source server addresses, HTTPS configurations, IP blacklist configurations, and more.
+         * Before calling this interface, you must have already called [CreateWebRule](~~CreateWebRule~~) to create website business forwarding rules.
+         * ### QPS Limit
+         * The per-user QPS limit for this interface is 50 times/second. Exceeding this limit will result in API calls being throttled, which may impact your business; please use it reasonably.
          *
          * @param request DescribeWebRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15210,9 +15201,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.
-         * *   0: no
-         * *   1: yes
+         * @summary Query Configuration of Website Business Forwarding Rules.
+         *
+         * @description This interface is used for paginated querying of the configurations of website business forwarding rules you have created, such as forwarding protocol types, source server addresses, HTTPS configurations, IP blacklist configurations, and more.
+         * Before calling this interface, you must have already called [CreateWebRule](~~CreateWebRule~~) to create website business forwarding rules.
+         * ### QPS Limit
+         * The per-user QPS limit for this interface is 50 times/second. Exceeding this limit will result in API calls being throttled, which may impact your business; please use it reasonably.
          *
          * @param request DescribeWebRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15270,9 +15264,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.
-         * *   0: no
-         * *   1: yes
+         * @summary Query Configuration of Website Business Forwarding Rules.
+         *
+         * @description This interface is used for paginated querying of the configurations of website business forwarding rules you have created, such as forwarding protocol types, source server addresses, HTTPS configurations, IP blacklist configurations, and more.
+         * Before calling this interface, you must have already called [CreateWebRule](~~CreateWebRule~~) to create website business forwarding rules.
+         * ### QPS Limit
+         * The per-user QPS limit for this interface is 50 times/second. Exceeding this limit will result in API calls being throttled, which may impact your business; please use it reasonably.
          *
          * @param request DescribeWebRulesRequest
          * @return DescribeWebRulesResponse
@@ -15284,9 +15281,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.
-         * *   0: no
-         * *   1: yes
+         * @summary Query Configuration of Website Business Forwarding Rules.
+         *
+         * @description This interface is used for paginated querying of the configurations of website business forwarding rules you have created, such as forwarding protocol types, source server addresses, HTTPS configurations, IP blacklist configurations, and more.
+         * Before calling this interface, you must have already called [CreateWebRule](~~CreateWebRule~~) to create website business forwarding rules.
+         * ### QPS Limit
+         * The per-user QPS limit for this interface is 50 times/second. Exceeding this limit will result in API calls being throttled, which may impact your business; please use it reasonably.
          *
          * @param request DescribeWebRulesRequest
          * @return DescribeWebRulesResponse
@@ -17934,7 +17934,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Modifies the session persistence settings of a port forwarding rule.
+         * @summary Modifies the session persistence and DDoS mitigation policy settings of a port forwarding rule.
          *
          * @param request ModifyNetworkRuleAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17980,7 +17980,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Modifies the session persistence settings of a port forwarding rule.
+         * @summary Modifies the session persistence and DDoS mitigation policy settings of a port forwarding rule.
          *
          * @param request ModifyNetworkRuleAttributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18026,7 +18026,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Modifies the session persistence settings of a port forwarding rule.
+         * @summary Modifies the session persistence and DDoS mitigation policy settings of a port forwarding rule.
          *
          * @param request ModifyNetworkRuleAttributeRequest
          * @return ModifyNetworkRuleAttributeResponse
@@ -18038,7 +18038,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Modifies the session persistence settings of a port forwarding rule.
+         * @summary Modifies the session persistence and DDoS mitigation policy settings of a port forwarding rule.
          *
          * @param request ModifyNetworkRuleAttributeRequest
          * @return ModifyNetworkRuleAttributeResponse
@@ -20126,7 +20126,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Modifies the accurate access control rule of a website.
+         * @summary Creates or modifies an accurate access control rule of a website.
          *
          * @param request ModifyWebPreciseAccessRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20172,7 +20172,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Modifies the accurate access control rule of a website.
+         * @summary Creates or modifies an accurate access control rule of a website.
          *
          * @param request ModifyWebPreciseAccessRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20218,7 +20218,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Modifies the accurate access control rule of a website.
+         * @summary Creates or modifies an accurate access control rule of a website.
          *
          * @param request ModifyWebPreciseAccessRuleRequest
          * @return ModifyWebPreciseAccessRuleResponse
@@ -20230,7 +20230,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-         * @summary Modifies the accurate access control rule of a website.
+         * @summary Creates or modifies an accurate access control rule of a website.
          *
          * @param request ModifyWebPreciseAccessRuleRequest
          * @return ModifyWebPreciseAccessRuleResponse

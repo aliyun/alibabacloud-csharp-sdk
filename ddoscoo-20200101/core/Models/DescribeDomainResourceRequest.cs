@@ -24,16 +24,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
-        /// 
-        /// This parameter is required.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

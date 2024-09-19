@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DeleteSceneDefensePolicyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

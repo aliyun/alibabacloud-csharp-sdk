@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The address type of the origin server. Valid values:
         /// 
-        /// *   **0**: IP address
+        /// *   **0**: IP address.
         /// 
-        /// *   **1**: domain name
+        /// *   **1**: domain name.
         /// 
-        ///     This parameter is suitable for scenarios where another proxy service, such as Web Application Firewall (WAF), is deployed between the origin server and Anti-DDoS Pro or Anti-DDoS Premium. The address is the jump address of the proxy service, such as the CNAME address of WAF.
+        ///     This parameter is suitable for scenarios in which another proxy service, such as Web Application Firewall (WAF), is deployed between the origin server and Anti-DDoS Proxy. The address is the redirection address of the proxy service, such as the CNAME of WAF.
         /// 
         /// This parameter is required.
         /// </summary>

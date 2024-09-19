@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 /// <summary>
                 /// The domain name.
                 /// 
-                /// > This parameter is returned only when the Layer 7 health check configuration is queried.
+                /// >  This parameter is returned only when the Layer 7 health check configuration is queried.
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 /// <summary>
                 /// The check path.
                 /// 
-                /// > This parameter is returned only when the Layer 7 health check configuration is queried.
+                /// >  This parameter is returned only when the Layer 7 health check configuration is queried.
                 /// </summary>
                 [NameInMap("Uri")]
                 [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

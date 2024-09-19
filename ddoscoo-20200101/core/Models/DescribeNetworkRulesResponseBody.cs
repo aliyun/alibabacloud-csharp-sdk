@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeNetworkRulesResponseBody : TeaModel {
         /// <summary>
-        /// The details of a port forwarding rule.
+        /// The details of the port forwarding rule.
         /// </summary>
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]

@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("RsAttrRwTimeoutMax")]
+        [Validation(Required=false)]
+        public long? RsAttrRwTimeoutMax { get; set; }
+
         /// <summary>
         /// The back-to-origin retry switch. Valid values:
         /// 
