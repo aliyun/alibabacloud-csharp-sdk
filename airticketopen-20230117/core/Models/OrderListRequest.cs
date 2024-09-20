@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class OrderListRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("book_time_end")]
         [Validation(Required=false)]
         public long? BookTimeEnd { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("book_time_start")]
         [Validation(Required=false)]
         public long? BookTimeStart { get; set; }

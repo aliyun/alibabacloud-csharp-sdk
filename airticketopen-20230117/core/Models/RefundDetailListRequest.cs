@@ -21,10 +21,16 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("refund_create_begin_time")]
         [Validation(Required=false)]
         public long? RefundCreateBeginTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("refund_create_end_time")]
         [Validation(Required=false)]
         public long? RefundCreateEndTime { get; set; }

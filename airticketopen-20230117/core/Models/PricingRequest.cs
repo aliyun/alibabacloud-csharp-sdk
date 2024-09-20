@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
     public class PricingRequest : TeaModel {
         /// <summary>
         /// solution_id
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("solution_id")]
         [Validation(Required=false)]

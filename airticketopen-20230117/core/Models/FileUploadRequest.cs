@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class FileUploadRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("file_content")]
         [Validation(Required=false)]
         public string FileContent { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("order_num")]
         [Validation(Required=false)]
         public long? OrderNum { get; set; }

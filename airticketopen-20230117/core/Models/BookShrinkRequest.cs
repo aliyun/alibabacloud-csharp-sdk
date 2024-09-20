@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class BookShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("contact")]
         [Validation(Required=false)]
         public string ContactShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("out_order_num")]
         [Validation(Required=false)]
         public string OutOrderNum { get; set; }
@@ -21,12 +27,17 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public string PassengerAncillaryPurchaseMapListShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("passenger_list")]
         [Validation(Required=false)]
         public string PassengerListShrink { get; set; }
 
         /// <summary>
         /// solution_id
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("solution_id")]
         [Validation(Required=false)]

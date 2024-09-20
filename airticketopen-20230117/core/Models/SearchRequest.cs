@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public int? Adults { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("air_legs")]
         [Validation(Required=false)]
         public List<SearchRequestAirLegs> AirLegs { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             [Validation(Required=false)]
             public List<string> ArrivalAirportList { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("arrival_city")]
             [Validation(Required=false)]
             public string ArrivalCity { get; set; }
@@ -29,10 +35,16 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             [Validation(Required=false)]
             public List<string> DepartureAirportList { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("departure_city")]
             [Validation(Required=false)]
             public string DepartureCity { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("departure_date")]
             [Validation(Required=false)]
             public string DepartureDate { get; set; }
@@ -50,6 +62,20 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [NameInMap("infants")]
         [Validation(Required=false)]
         public int? Infants { get; set; }
+
+        [NameInMap("search_control_options")]
+        [Validation(Required=false)]
+        public SearchRequestSearchControlOptions SearchControlOptions { get; set; }
+        public class SearchRequestSearchControlOptions : TeaModel {
+            [NameInMap("airline_excluded_list")]
+            [Validation(Required=false)]
+            public List<string> AirlineExcludedList { get; set; }
+
+            [NameInMap("airline_prefer_list")]
+            [Validation(Required=false)]
+            public List<string> AirlinePreferList { get; set; }
+
+        }
 
     }
 

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class BookRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("contact")]
         [Validation(Required=false)]
         public BookRequestContact Contact { get; set; }
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("out_order_num")]
         [Validation(Required=false)]
         public string OutOrderNum { get; set; }
@@ -77,6 +83,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     [Validation(Required=false)]
                     public string CredentialNum { get; set; }
 
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("credential_type")]
                     [Validation(Required=false)]
                     public int? CredentialType { get; set; }
@@ -87,6 +96,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("first_name")]
                 [Validation(Required=false)]
                 public string FirstName { get; set; }
@@ -95,14 +107,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public int? Gender { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("last_name")]
                 [Validation(Required=false)]
                 public string LastName { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("mobile_country_code")]
                 [Validation(Required=false)]
                 public string MobileCountryCode { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("mobile_phone_number")]
                 [Validation(Required=false)]
                 public string MobilePhoneNumber { get; set; }
@@ -111,6 +132,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public string Nationality { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public int? Type { get; set; }
@@ -119,6 +143,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("passenger_list")]
         [Validation(Required=false)]
         public List<BookRequestPassengerList> PassengerList { get; set; }
@@ -139,6 +166,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public string CredentialNum { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("credential_type")]
                 [Validation(Required=false)]
                 public int? CredentialType { get; set; }
@@ -149,6 +179,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("first_name")]
             [Validation(Required=false)]
             public string FirstName { get; set; }
@@ -157,14 +190,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             [Validation(Required=false)]
             public int? Gender { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("last_name")]
             [Validation(Required=false)]
             public string LastName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("mobile_country_code")]
             [Validation(Required=false)]
             public string MobileCountryCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("mobile_phone_number")]
             [Validation(Required=false)]
             public string MobilePhoneNumber { get; set; }
@@ -173,6 +215,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             [Validation(Required=false)]
             public string Nationality { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public int? Type { get; set; }
@@ -181,6 +226,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
         /// <summary>
         /// solution_id
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("solution_id")]
         [Validation(Required=false)]

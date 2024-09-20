@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class AccountFlowListRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("day_num")]
         [Validation(Required=false)]
         public int? DayNum { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("utc_begin_time")]
         [Validation(Required=false)]
         public long? UtcBeginTime { get; set; }

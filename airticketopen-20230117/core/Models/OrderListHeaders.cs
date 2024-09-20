@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
         /// <summary>
         /// access_token
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("x-acs-airticket-access-token")]
         [Validation(Required=false)]

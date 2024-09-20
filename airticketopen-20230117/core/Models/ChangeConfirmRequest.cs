@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class ChangeConfirmRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("change_order_num")]
         [Validation(Required=false)]
         public long? ChangeOrderNum { get; set; }

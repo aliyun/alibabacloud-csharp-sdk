@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class ChangeApplyRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("change_passenger_list")]
         [Validation(Required=false)]
         public List<ChangeApplyRequestChangePassengerList> ChangePassengerList { get; set; }
@@ -17,16 +20,25 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             [Validation(Required=false)]
             public string Document { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("first_name")]
             [Validation(Required=false)]
             public string FirstName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("last_name")]
             [Validation(Required=false)]
             public string LastName { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("changed_journeys")]
         [Validation(Required=false)]
         public List<ChangeApplyRequestChangedJourneys> ChangedJourneys { get; set; }
@@ -39,6 +51,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public string ArrivalAirport { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("arrival_city")]
                 [Validation(Required=false)]
                 public string ArrivalCity { get; set; }
@@ -59,10 +74,16 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public string DepartureAirport { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("departure_city")]
                 [Validation(Required=false)]
                 public string DepartureCity { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("departure_date")]
                 [Validation(Required=false)]
                 public string DepartureDate { get; set; }
@@ -75,6 +96,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public long? DepartureTime { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("marketing_flight_no")]
                 [Validation(Required=false)]
                 public string MarketingFlightNo { get; set; }
@@ -87,6 +111,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("contact")]
         [Validation(Required=false)]
         public ChangeApplyRequestContact Contact { get; set; }
@@ -105,6 +132,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("order_num")]
         [Validation(Required=false)]
         public long? OrderNum { get; set; }
@@ -113,6 +143,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public string Remark { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }

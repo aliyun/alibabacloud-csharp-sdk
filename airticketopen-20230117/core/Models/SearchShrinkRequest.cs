@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public int? Adults { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("air_legs")]
         [Validation(Required=false)]
         public string AirLegsShrink { get; set; }
@@ -28,6 +31,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [NameInMap("infants")]
         [Validation(Required=false)]
         public int? Infants { get; set; }
+
+        [NameInMap("search_control_options")]
+        [Validation(Required=false)]
+        public string SearchControlOptionsShrink { get; set; }
 
     }
 

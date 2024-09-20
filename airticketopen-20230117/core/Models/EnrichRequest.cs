@@ -29,22 +29,37 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public List<EnrichRequestJourneyParamList> JourneyParamList { get; set; }
         public class EnrichRequestJourneyParamList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("arrival_city")]
             [Validation(Required=false)]
             public string ArrivalCity { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("departure_city")]
             [Validation(Required=false)]
             public string DepartureCity { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("departure_date")]
             [Validation(Required=false)]
             public string DepartureDate { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("segment_param_list")]
             [Validation(Required=false)]
             public List<EnrichRequestJourneyParamListSegmentParamList> SegmentParamList { get; set; }
             public class EnrichRequestJourneyParamListSegmentParamList : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("arrival_airport")]
                 [Validation(Required=false)]
                 public string ArrivalAirport { get; set; }
@@ -61,6 +76,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public string ChildCabin { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("departure_airport")]
                 [Validation(Required=false)]
                 public string DepartureAirport { get; set; }
@@ -69,10 +87,16 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public string DepartureCity { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("departure_time")]
                 [Validation(Required=false)]
                 public string DepartureTime { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("marketing_flight_no")]
                 [Validation(Required=false)]
                 public string MarketingFlightNo { get; set; }

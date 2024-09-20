@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
     public class GetTokenRequest : TeaModel {
         /// <summary>
         /// appKey
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("app_key")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
         /// <summary>
         /// appSecret
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("app_secret")]
         [Validation(Required=false)]
