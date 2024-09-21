@@ -41,7 +41,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public string Group { get; set; }
 
         /// <summary>
-        /// The type of the obtained environmental impact: gwp indicates the carbon footprint of climate change. For more information, see the type value of the enumerated values.
+        /// The type of the obtained environmental impact: gwp indicates the carbon footprint of climate change. 
+        /// <props="intl">[For more information, see the environment impact category enumeration.](https://www.alibabacloud.com/help/en/energy-expert/developer-reference/enumerated-values-of-energy-expert#RhGn7)
         /// 
         /// This parameter is required.
         /// </summary>

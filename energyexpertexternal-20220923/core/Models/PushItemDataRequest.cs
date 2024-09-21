@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// Push data list.
+        /// List of data to be pushed.
         /// 
         /// This parameter is required.
         /// </summary>

@@ -38,6 +38,550 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         }
 
         /**
+         * @summary 策略执行状态反馈
+         *
+         * @param request BatchSaveInstructionStatusRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchSaveInstructionStatusResponse
+         */
+        public BatchSaveInstructionStatusResponse BatchSaveInstructionStatusWithOptions(BatchSaveInstructionStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PKey))
+            {
+                body["pKey"] = request.PKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                body["statusList"] = request.StatusList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchSaveInstructionStatus",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/batchSaveInstructionStatus",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchSaveInstructionStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 策略执行状态反馈
+         *
+         * @param request BatchSaveInstructionStatusRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchSaveInstructionStatusResponse
+         */
+        public async Task<BatchSaveInstructionStatusResponse> BatchSaveInstructionStatusWithOptionsAsync(BatchSaveInstructionStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PKey))
+            {
+                body["pKey"] = request.PKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                body["statusList"] = request.StatusList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchSaveInstructionStatus",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/batchSaveInstructionStatus",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchSaveInstructionStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 策略执行状态反馈
+         *
+         * @param request BatchSaveInstructionStatusRequest
+         * @return BatchSaveInstructionStatusResponse
+         */
+        public BatchSaveInstructionStatusResponse BatchSaveInstructionStatus(BatchSaveInstructionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchSaveInstructionStatusWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 策略执行状态反馈
+         *
+         * @param request BatchSaveInstructionStatusRequest
+         * @return BatchSaveInstructionStatusResponse
+         */
+        public async Task<BatchSaveInstructionStatusResponse> BatchSaveInstructionStatusAsync(BatchSaveInstructionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchSaveInstructionStatusWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 批量设置空调站点运行计划
+         *
+         * @param request BatchUpdateSystemRunningPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchUpdateSystemRunningPlanResponse
+         */
+        public BatchUpdateSystemRunningPlanResponse BatchUpdateSystemRunningPlanWithOptions(BatchUpdateSystemRunningPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlType))
+            {
+                body["controlType"] = request.ControlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateType))
+            {
+                body["dateType"] = request.DateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EarliestStartupTime))
+            {
+                body["earliestStartupTime"] = request.EarliestStartupTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LatestShutdownTime))
+            {
+                body["latestShutdownTime"] = request.LatestShutdownTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCarbonDioxide))
+            {
+                body["maxCarbonDioxide"] = request.MaxCarbonDioxide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTem))
+            {
+                body["maxTem"] = request.MaxTem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinTem))
+            {
+                body["minTem"] = request.MinTem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeasonMode))
+            {
+                body["seasonMode"] = request.SeasonMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemId))
+            {
+                body["systemId"] = request.SystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkingEndTime))
+            {
+                body["workingEndTime"] = request.WorkingEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkingStartTime))
+            {
+                body["workingStartTime"] = request.WorkingStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUpdateSystemRunningPlan",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/batchUpdateSystemRunningPlan",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUpdateSystemRunningPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量设置空调站点运行计划
+         *
+         * @param request BatchUpdateSystemRunningPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchUpdateSystemRunningPlanResponse
+         */
+        public async Task<BatchUpdateSystemRunningPlanResponse> BatchUpdateSystemRunningPlanWithOptionsAsync(BatchUpdateSystemRunningPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlType))
+            {
+                body["controlType"] = request.ControlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateType))
+            {
+                body["dateType"] = request.DateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EarliestStartupTime))
+            {
+                body["earliestStartupTime"] = request.EarliestStartupTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LatestShutdownTime))
+            {
+                body["latestShutdownTime"] = request.LatestShutdownTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCarbonDioxide))
+            {
+                body["maxCarbonDioxide"] = request.MaxCarbonDioxide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTem))
+            {
+                body["maxTem"] = request.MaxTem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinTem))
+            {
+                body["minTem"] = request.MinTem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeasonMode))
+            {
+                body["seasonMode"] = request.SeasonMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemId))
+            {
+                body["systemId"] = request.SystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkingEndTime))
+            {
+                body["workingEndTime"] = request.WorkingEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkingStartTime))
+            {
+                body["workingStartTime"] = request.WorkingStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUpdateSystemRunningPlan",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/batchUpdateSystemRunningPlan",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUpdateSystemRunningPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量设置空调站点运行计划
+         *
+         * @param request BatchUpdateSystemRunningPlanRequest
+         * @return BatchUpdateSystemRunningPlanResponse
+         */
+        public BatchUpdateSystemRunningPlanResponse BatchUpdateSystemRunningPlan(BatchUpdateSystemRunningPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchUpdateSystemRunningPlanWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 批量设置空调站点运行计划
+         *
+         * @param request BatchUpdateSystemRunningPlanRequest
+         * @return BatchUpdateSystemRunningPlanResponse
+         */
+        public async Task<BatchUpdateSystemRunningPlanResponse> BatchUpdateSystemRunningPlanAsync(BatchUpdateSystemRunningPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchUpdateSystemRunningPlanWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 编辑禁用设备
+         *
+         * @param request EditProhibitedDevicesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EditProhibitedDevicesResponse
+         */
+        public EditProhibitedDevicesResponse EditProhibitedDevicesWithOptions(EditProhibitedDevicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HvacDeviceConfigVOList))
+            {
+                body["hvacDeviceConfigVOList"] = request.HvacDeviceConfigVOList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemId))
+            {
+                body["systemId"] = request.SystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditProhibitedDevices",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/editProhibitedDevices",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditProhibitedDevicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 编辑禁用设备
+         *
+         * @param request EditProhibitedDevicesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EditProhibitedDevicesResponse
+         */
+        public async Task<EditProhibitedDevicesResponse> EditProhibitedDevicesWithOptionsAsync(EditProhibitedDevicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HvacDeviceConfigVOList))
+            {
+                body["hvacDeviceConfigVOList"] = request.HvacDeviceConfigVOList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemId))
+            {
+                body["systemId"] = request.SystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditProhibitedDevices",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/editProhibitedDevices",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditProhibitedDevicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 编辑禁用设备
+         *
+         * @param request EditProhibitedDevicesRequest
+         * @return EditProhibitedDevicesResponse
+         */
+        public EditProhibitedDevicesResponse EditProhibitedDevices(EditProhibitedDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EditProhibitedDevicesWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 编辑禁用设备
+         *
+         * @param request EditProhibitedDevicesRequest
+         * @return EditProhibitedDevicesResponse
+         */
+        public async Task<EditProhibitedDevicesResponse> EditProhibitedDevicesAsync(EditProhibitedDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EditProhibitedDevicesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 编辑不利区设备
+         *
+         * @param request EditUnfavorableAreaDevicesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EditUnfavorableAreaDevicesResponse
+         */
+        public EditUnfavorableAreaDevicesResponse EditUnfavorableAreaDevicesWithOptions(EditUnfavorableAreaDevicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HvacDeviceConfigVOList))
+            {
+                body["hvacDeviceConfigVOList"] = request.HvacDeviceConfigVOList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemId))
+            {
+                body["systemId"] = request.SystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditUnfavorableAreaDevices",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/editUnfavorableAreaDevices",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditUnfavorableAreaDevicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 编辑不利区设备
+         *
+         * @param request EditUnfavorableAreaDevicesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EditUnfavorableAreaDevicesResponse
+         */
+        public async Task<EditUnfavorableAreaDevicesResponse> EditUnfavorableAreaDevicesWithOptionsAsync(EditUnfavorableAreaDevicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HvacDeviceConfigVOList))
+            {
+                body["hvacDeviceConfigVOList"] = request.HvacDeviceConfigVOList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemId))
+            {
+                body["systemId"] = request.SystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditUnfavorableAreaDevices",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/editUnfavorableAreaDevices",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditUnfavorableAreaDevicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 编辑不利区设备
+         *
+         * @param request EditUnfavorableAreaDevicesRequest
+         * @return EditUnfavorableAreaDevicesResponse
+         */
+        public EditUnfavorableAreaDevicesResponse EditUnfavorableAreaDevices(EditUnfavorableAreaDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EditUnfavorableAreaDevicesWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 编辑不利区设备
+         *
+         * @param request EditUnfavorableAreaDevicesRequest
+         * @return EditUnfavorableAreaDevicesResponse
+         */
+        public async Task<EditUnfavorableAreaDevicesResponse> EditUnfavorableAreaDevicesAsync(EditUnfavorableAreaDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EditUnfavorableAreaDevicesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary Generate a report of the specified carbon footprint.
          *
          * @description Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\\"s status can be checked using the `IsCompleted` API. Following the generation of results, other result inquiry APIs can be accessed for display content.
@@ -637,8 +1181,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          * @description *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
          * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param request GetDeviceInfoRequest
          * @param headers map
@@ -687,8 +1231,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          * @description *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
          * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param request GetDeviceInfoRequest
          * @param headers map
@@ -737,8 +1281,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          * @description *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
          * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param request GetDeviceInfoRequest
          * @return GetDeviceInfoResponse
@@ -756,8 +1300,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          * @description *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
          * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param request GetDeviceInfoRequest
          * @return GetDeviceInfoResponse
@@ -775,8 +1319,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          * @description *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
          * *   Virtual meters at the site are not returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param request GetDeviceListRequest
          * @param headers map
@@ -817,8 +1361,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          * @description *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
          * *   Virtual meters at the site are not returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param request GetDeviceListRequest
          * @param headers map
@@ -859,8 +1403,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          * @description *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
          * *   Virtual meters at the site are not returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param request GetDeviceListRequest
          * @return GetDeviceListResponse
@@ -878,8 +1422,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          * @description *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
          * *   Virtual meters at the site are not returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param request GetDeviceListRequest
          * @return GetDeviceListResponse
@@ -2580,8 +3124,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          *
          * @description *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2613,8 +3157,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          *
          * @description *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
@@ -2646,8 +3190,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          *
          * @description *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @return GetOrgAndFactoryResponse
          */
@@ -2663,8 +3207,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
          *
          * @description *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
          * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-         * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
-         * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
+         * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89) 
+         * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en) to apply for whitelist activation.
          *
          * @return GetOrgAndFactoryResponse
          */
@@ -3633,6 +4177,224 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SendDocumentAskQuestionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 设置运行计划
+         *
+         * @param request SetRunningPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetRunningPlanResponse
+         */
+        public SetRunningPlanResponse SetRunningPlanWithOptions(SetRunningPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlType))
+            {
+                body["controlType"] = request.ControlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateType))
+            {
+                body["dateType"] = request.DateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EarliestStartupTime))
+            {
+                body["earliestStartupTime"] = request.EarliestStartupTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LatestShutdownTime))
+            {
+                body["latestShutdownTime"] = request.LatestShutdownTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCarbonDioxide))
+            {
+                body["maxCarbonDioxide"] = request.MaxCarbonDioxide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTem))
+            {
+                body["maxTem"] = request.MaxTem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinTem))
+            {
+                body["minTem"] = request.MinTem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PKey))
+            {
+                body["pKey"] = request.PKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeasonMode))
+            {
+                body["seasonMode"] = request.SeasonMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticsTime))
+            {
+                body["statisticsTime"] = request.StatisticsTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemId))
+            {
+                body["systemId"] = request.SystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkingEndTime))
+            {
+                body["workingEndTime"] = request.WorkingEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkingStartTime))
+            {
+                body["workingStartTime"] = request.WorkingStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetRunningPlan",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/setRunningPlan",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetRunningPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 设置运行计划
+         *
+         * @param request SetRunningPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetRunningPlanResponse
+         */
+        public async Task<SetRunningPlanResponse> SetRunningPlanWithOptionsAsync(SetRunningPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlType))
+            {
+                body["controlType"] = request.ControlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateType))
+            {
+                body["dateType"] = request.DateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EarliestStartupTime))
+            {
+                body["earliestStartupTime"] = request.EarliestStartupTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FactoryId))
+            {
+                body["factoryId"] = request.FactoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LatestShutdownTime))
+            {
+                body["latestShutdownTime"] = request.LatestShutdownTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCarbonDioxide))
+            {
+                body["maxCarbonDioxide"] = request.MaxCarbonDioxide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTem))
+            {
+                body["maxTem"] = request.MaxTem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinTem))
+            {
+                body["minTem"] = request.MinTem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PKey))
+            {
+                body["pKey"] = request.PKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeasonMode))
+            {
+                body["seasonMode"] = request.SeasonMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticsTime))
+            {
+                body["statisticsTime"] = request.StatisticsTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemId))
+            {
+                body["systemId"] = request.SystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkingEndTime))
+            {
+                body["workingEndTime"] = request.WorkingEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkingStartTime))
+            {
+                body["workingStartTime"] = request.WorkingStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetRunningPlan",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/carbon/hvac/setRunningPlan",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetRunningPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 设置运行计划
+         *
+         * @param request SetRunningPlanRequest
+         * @return SetRunningPlanResponse
+         */
+        public SetRunningPlanResponse SetRunningPlan(SetRunningPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SetRunningPlanWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 设置运行计划
+         *
+         * @param request SetRunningPlanRequest
+         * @return SetRunningPlanResponse
+         */
+        public async Task<SetRunningPlanResponse> SetRunningPlanAsync(SetRunningPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SetRunningPlanWithOptionsAsync(request, headers, runtime);
         }
 
         /**
