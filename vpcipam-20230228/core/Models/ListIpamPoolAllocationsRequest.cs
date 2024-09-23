@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public List<string> IpamPoolAllocationIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("IpamPoolId")]
         [Validation(Required=false)]
         public string IpamPoolId { get; set; }

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public string IpamScopeId { get; set; }
 
+        [NameInMap("IsShared")]
+        [Validation(Required=false)]
+        public bool? IsShared { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }

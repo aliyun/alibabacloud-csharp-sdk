@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class ListIpamPoolsResponseBody : TeaModel {
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public long? Count { get; set; }
+
         [NameInMap("IpamPools")]
         [Validation(Required=false)]
         public List<ListIpamPoolsResponseBodyIpamPools> IpamPools { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             [NameInMap("AllocationMinCidrMask")]
             [Validation(Required=false)]
             public int? AllocationMinCidrMask { get; set; }
+
+            [NameInMap("AutoImport")]
+            [Validation(Required=false)]
+            public bool? AutoImport { get; set; }
 
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -64,6 +72,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             [NameInMap("IpamScopeType")]
             [Validation(Required=false)]
             public string IpamScopeType { get; set; }
+
+            [NameInMap("IsShared")]
+            [Validation(Required=false)]
+            public bool? IsShared { get; set; }
 
             [NameInMap("OwnerId")]
             [Validation(Required=false)]

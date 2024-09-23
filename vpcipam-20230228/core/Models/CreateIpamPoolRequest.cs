@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public int? AllocationMinCidrMask { get; set; }
 
+        [NameInMap("AutoImport")]
+        [Validation(Required=false)]
+        public bool? AutoImport { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -78,6 +82,20 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [NameInMap("SourceIpamPoolId")]
         [Validation(Required=false)]
         public string SourceIpamPoolId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateIpamPoolRequestTag> Tag { get; set; }
+        public class CreateIpamPoolRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

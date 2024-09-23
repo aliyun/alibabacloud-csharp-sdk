@@ -59,6 +59,20 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateIpamRequestTag> Tag { get; set; }
+        public class CreateIpamRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

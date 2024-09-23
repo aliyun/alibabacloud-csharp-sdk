@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public int? AllocationMinCidrMask { get; set; }
 
+        [NameInMap("AutoImport")]
+        [Validation(Required=false)]
+        public bool? AutoImport { get; set; }
+
         [NameInMap("ClearAllocationDefaultCidrMask")]
         [Validation(Required=false)]
         public bool? ClearAllocationDefaultCidrMask { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class ListIpamPoolAllocationsResponseBody : TeaModel {
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public long? Count { get; set; }
+
         [NameInMap("IpamPoolAllocations")]
         [Validation(Required=false)]
         public List<ListIpamPoolAllocationsResponseBodyIpamPoolAllocations> IpamPoolAllocations { get; set; }
