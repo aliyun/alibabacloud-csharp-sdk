@@ -69,150 +69,281 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                 }
 
+                /// <summary>
+                /// The returned face attribute information
+                /// </summary>
                 [NameInMap("FaceData")]
                 [Validation(Required=false)]
                 public List<ImageModerationResponseBodyDataExtFaceData> FaceData { get; set; }
                 public class ImageModerationResponseBodyDataExtFaceData : TeaModel {
+                    /// <summary>
+                    /// The age recognition result.
+                    /// </summary>
                     [NameInMap("Age")]
                     [Validation(Required=false)]
                     public int? Age { get; set; }
 
+                    /// <summary>
+                    /// Indicates whether the recognition result of bangs is available.
+                    /// </summary>
                     [NameInMap("Bang")]
                     [Validation(Required=false)]
                     public ImageModerationResponseBodyDataExtFaceDataBang Bang { get; set; }
                     public class ImageModerationResponseBodyDataExtFaceDataBang : TeaModel {
+                        /// <summary>
+                        /// The confidence level of the bang recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.
+                        /// </summary>
                         [NameInMap("Confidence")]
                         [Validation(Required=false)]
                         public float? Confidence { get; set; }
 
+                        /// <summary>
+                        /// Indicates whether the recognition result of bangs is available.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The gender recognition result.
+                    /// </summary>
                     [NameInMap("Gender")]
                     [Validation(Required=false)]
                     public ImageModerationResponseBodyDataExtFaceDataGender Gender { get; set; }
                     public class ImageModerationResponseBodyDataExtFaceDataGender : TeaModel {
+                        /// <summary>
+                        /// The confidence level of the gender recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.
+                        /// </summary>
                         [NameInMap("Confidence")]
                         [Validation(Required=false)]
                         public float? Confidence { get; set; }
 
+                        /// <summary>
+                        /// The gender recognition result. Valid values:
+                        /// 
+                        /// - Male
+                        /// 
+                        /// - FeMale
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The recognition result of whether to wear glasses.
+                    /// 
+                    /// - None: No glasses.
+                    /// 
+                    /// - Wear: Wear glasses.
+                    /// 
+                    /// - Sunglass: Wear sunglasses.
+                    /// </summary>
                     [NameInMap("Glasses")]
                     [Validation(Required=false)]
                     public string Glasses { get; set; }
 
+                    /// <summary>
+                    /// The hairstyle recognition result.
+                    /// </summary>
                     [NameInMap("Hairstyle")]
                     [Validation(Required=false)]
                     public ImageModerationResponseBodyDataExtFaceDataHairstyle Hairstyle { get; set; }
                     public class ImageModerationResponseBodyDataExtFaceDataHairstyle : TeaModel {
+                        /// <summary>
+                        /// The confidence level of the hairstyle recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.
+                        /// </summary>
                         [NameInMap("Confidence")]
                         [Validation(Required=false)]
                         public float? Confidence { get; set; }
 
+                        /// <summary>
+                        /// The hairstyle recognition result. Valid values:
+                        /// 
+                        /// - Bald: bald head.
+                        /// 
+                        /// - Long: Long hair.
+                        /// 
+                        /// - Short: Short hair.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The recognition result of whether to wear a hat.
+                    /// </summary>
                     [NameInMap("Hat")]
                     [Validation(Required=false)]
                     public ImageModerationResponseBodyDataExtFaceDataHat Hat { get; set; }
                     public class ImageModerationResponseBodyDataExtFaceDataHat : TeaModel {
+                        /// <summary>
+                        /// The confidence level of the result of wearing the hat. Valid values: 0 to 100. A higher value indicates a more credible result.
+                        /// </summary>
                         [NameInMap("Confidence")]
                         [Validation(Required=false)]
                         public float? Confidence { get; set; }
 
+                        /// <summary>
+                        /// The recognition result of whether to wear the hat. Valid values:
+                        /// 
+                        /// - Wear: Wear a hat.
+                        /// 
+                        /// - None: No hat.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The location of the face.
+                    /// </summary>
                     [NameInMap("Location")]
                     [Validation(Required=false)]
                     public ImageModerationResponseBodyDataExtFaceDataLocation Location { get; set; }
                     public class ImageModerationResponseBodyDataExtFaceDataLocation : TeaModel {
+                        /// <summary>
+                        /// The height of the face area. Unit: pixels.
+                        /// </summary>
                         [NameInMap("H")]
                         [Validation(Required=false)]
                         public int? H { get; set; }
 
+                        /// <summary>
+                        /// The width of the face area. Unit: pixels.
+                        /// </summary>
                         [NameInMap("W")]
                         [Validation(Required=false)]
                         public int? W { get; set; }
 
+                        /// <summary>
+                        /// The distance from the upper-left corner of the face area to the y-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.
+                        /// </summary>
                         [NameInMap("X")]
                         [Validation(Required=false)]
                         public int? X { get; set; }
 
+                        /// <summary>
+                        /// The distance from the upper-left corner of the face area to the x-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.
+                        /// </summary>
                         [NameInMap("Y")]
                         [Validation(Required=false)]
                         public int? Y { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The recognition result of whether to wear a mask.
+                    /// </summary>
                     [NameInMap("Mask")]
                     [Validation(Required=false)]
                     public ImageModerationResponseBodyDataExtFaceDataMask Mask { get; set; }
                     public class ImageModerationResponseBodyDataExtFaceDataMask : TeaModel {
+                        /// <summary>
+                        /// The confidence level of the result of wearing the mask. Valid values: 0 to 100. A higher value indicates a more credible result.
+                        /// </summary>
                         [NameInMap("Confidence")]
                         [Validation(Required=false)]
                         public float? Confidence { get; set; }
 
+                        /// <summary>
+                        /// The recognition result of whether to wear a mask. Valid values:
+                        /// 
+                        /// - Wear a mask.
+                        /// 
+                        ///  - None: No mask.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The identification result of whether there is a beard.
+                    /// </summary>
                     [NameInMap("Mustache")]
                     [Validation(Required=false)]
                     public ImageModerationResponseBodyDataExtFaceDataMustache Mustache { get; set; }
                     public class ImageModerationResponseBodyDataExtFaceDataMustache : TeaModel {
+                        /// <summary>
+                        /// The confidence level of the result of the beard. Valid values: 0 to 100. A higher value indicates a more credible result.
+                        /// </summary>
                         [NameInMap("Confidence")]
                         [Validation(Required=false)]
                         public float? Confidence { get; set; }
 
+                        /// <summary>
+                        /// The identification result of whether there is a beard.Valid values:
+                        /// 
+                        /// - Has:have a beard.
+                        /// 
+                        /// - None:No beard.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The quality information of the face image.
+                    /// </summary>
                     [NameInMap("Quality")]
                     [Validation(Required=false)]
                     public ImageModerationResponseBodyDataExtFaceDataQuality Quality { get; set; }
                     public class ImageModerationResponseBodyDataExtFaceDataQuality : TeaModel {
+                        /// <summary>
+                        /// The blur of the face image. Valid values: 0 to 100. The higher the score, the more fuzzy it is.
+                        /// Recommended values: 0 to 25.
+                        /// </summary>
                         [NameInMap("Blur")]
                         [Validation(Required=false)]
                         public float? Blur { get; set; }
 
+                        /// <summary>
+                        /// The integrity of the human face. Recommended values:80 to 100.
+                        /// </summary>
                         [NameInMap("Integrity")]
                         [Validation(Required=false)]
                         public float? Integrity { get; set; }
 
+                        /// <summary>
+                        /// The head-up or head-down angle of the face.
+                        /// Recommended values:-30 to 30.
+                        /// </summary>
                         [NameInMap("Pitch")]
                         [Validation(Required=false)]
                         public float? Pitch { get; set; }
 
+                        /// <summary>
+                        /// The plane rotation angle of the face.
+                        /// Recommended values:-30 to 30.
+                        /// </summary>
                         [NameInMap("Roll")]
                         [Validation(Required=false)]
                         public float? Roll { get; set; }
 
+                        /// <summary>
+                        /// The left and right shaking angle of the human face.
+                        /// Recommended values:-30 to 30.
+                        /// </summary>
                         [NameInMap("Yaw")]
                         [Validation(Required=false)]
                         public float? Yaw { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// The smiling degree of the face.
+                    /// </summary>
                     [NameInMap("Smile")]
                     [Validation(Required=false)]
                     public float? Smile { get; set; }

@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                 }
 
+                [NameInMap("RiskLevel")]
+                [Validation(Required=false)]
+                public string RiskLevel { get; set; }
+
                 /// <summary>
                 /// The details about the text in the moderated voice. The value is a JSON array that contains one or more elements. Each element corresponds to a text entry.
                 /// </summary>
@@ -87,6 +91,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [NameInMap("Labels")]
                     [Validation(Required=false)]
                     public string Labels { get; set; }
+
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public string RiskLevel { get; set; }
 
                     /// <summary>
                     /// Subcategory labels. Multiple labels are separated by commas (,).
@@ -169,6 +177,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataFrameResultFrameSummarys> FrameSummarys { get; set; }
                 public class VideoModerationResultResponseBodyDataFrameResultFrameSummarys : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
                     /// <summary>
                     /// The label against which a captured frame is matched.
                     /// </summary>
@@ -259,6 +271,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             [Validation(Required=false)]
                             public float? Confidence { get; set; }
 
+                            [NameInMap("Description")]
+                            [Validation(Required=false)]
+                            public string Description { get; set; }
+
                             /// <summary>
                             /// The label returned after a frame is moderated. Multiple risk labels and the corresponding scores of confidence levels may be returned for a frame.
                             /// </summary>
@@ -284,6 +300,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                     }
 
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public string RiskLevel { get; set; }
+
                     /// <summary>
                     /// The temporary URL of a captured frame. This URL is valid for 30 minutes.
                     /// </summary>
@@ -300,6 +320,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                 }
 
+                [NameInMap("RiskLevel")]
+                [Validation(Required=false)]
+                public string RiskLevel { get; set; }
+
             }
 
             /// <summary>
@@ -308,6 +332,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [NameInMap("LiveId")]
             [Validation(Required=false)]
             public string LiveId { get; set; }
+
+            [NameInMap("RiskLevel")]
+            [Validation(Required=false)]
+            public string RiskLevel { get; set; }
 
             /// <summary>
             /// The task ID.

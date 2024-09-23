@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
         /// <summary>
         /// The parameters required by the moderation service. The value is a JSON string.
+        /// 
+        /// *   taskId: required. The URL of the object that you want to moderate. Make sure that the URL can be accessed over the Internet.
         /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
