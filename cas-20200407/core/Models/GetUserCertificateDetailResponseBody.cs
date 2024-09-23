@@ -34,6 +34,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Cert { get; set; }
 
         /// <summary>
+        /// The unique identifier of the certificate. The value of this parameter must be in the {Certificate ID}-cn-hangzhou format.
+        /// </summary>
+        [NameInMap("CertIdentifier")]
+        [Validation(Required=false)]
+        public string CertIdentifier { get; set; }
+
+        /// <summary>
         /// The city of the company or organization to which the certificate purchaser belongs.
         /// </summary>
         [NameInMap("City")]
